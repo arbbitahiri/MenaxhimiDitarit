@@ -11,6 +11,10 @@ namespace MenaxhimiDitarit.BO.Interface
         bool Add(T model);
         bool Update(T model);
         bool Remove(T model);
+        bool Remove(int id);
+
         List<T> GetAll();
+        T Get(int id);
+        T Get(T model);
     }
 }
