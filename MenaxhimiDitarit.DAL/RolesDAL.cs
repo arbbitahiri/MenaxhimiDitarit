@@ -34,7 +34,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -61,7 +61,7 @@ namespace MenaxhimiDitarit.DAL
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -83,7 +83,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -112,7 +112,7 @@ namespace MenaxhimiDitarit.DAL
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -147,7 +147,7 @@ namespace MenaxhimiDitarit.DAL
 
                 return roles;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

@@ -33,7 +33,7 @@ namespace MenaxhimiDitarit.DAL
                 connection.Open();
                 return connection;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

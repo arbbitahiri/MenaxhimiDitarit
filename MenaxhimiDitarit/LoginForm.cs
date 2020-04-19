@@ -48,7 +48,10 @@ namespace MenaxhimiDitarit
                 {
                     UserSession.GetUser = user;
 
-                    //forma HOME
+                    AdminForm adminForm = new AdminForm();
+                    this.Hide();
+                    adminForm.ShowDialog();
+                    this.Close();
                 }
                 else
                     MessageBox.Show("Username ose Password jane gabim!!");

@@ -27,7 +27,7 @@ namespace MenaxhimiDitarit.DAL
                         using (var reader = command.ExecuteReader())
                         {
                             Users result = null;
-                            if (reader.Read())
+                            while (reader.Read())
                                 result = ToObject(reader);
 
                             return result;
@@ -35,7 +35,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -69,7 +69,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -96,7 +96,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -125,7 +125,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -150,8 +150,8 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["UserName"] != DBNull.Value)
                     user.UserName = reader["UserName"].ToString();
 
-                if (reader["UserPassword"] != DBNull.Value)
-                    user.UserPassword = reader["UserPassword"].ToString();
+                if (reader["UserPass"] != DBNull.Value)
+                    user.UserPassword = reader["UserPass"].ToString();
 
                 if (reader["ExpiresDate"] != DBNull.Value)
                     user.ExpiresDate = DateTime.Parse(reader["ExpiresDate"].ToString());
@@ -176,7 +176,7 @@ namespace MenaxhimiDitarit.DAL
 
                 return user;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -200,7 +200,7 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
