@@ -62,5 +62,23 @@ namespace MenaxhimiDitarit.DAL
             parameter.Value = value ?? DBNull.Value;
             command.Parameters.Add(parameter);
         }
+
+        public static void AddParameter(SqlCommand command, string parameterName, object value, ParameterDirection direction)
+        {
+            SqlParameter parameter = command.CreateParameter();
+            parameter.ParameterName = parameterName;
+            parameter.Direction = direction;
+            if (value != null)
+            {
+                if (value is DateTime)
+                {
+                    if (DateTime.Parse(value.ToString()) <= DateTime.Parse("1/01/1950 12:00:00"))
+                        value = null;
+                }
+            }
+
+            parameter.Value = value ?? DBNull.Value;
+            command.Parameters.Add(parameter);
+        }
     }
 }

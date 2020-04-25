@@ -34,7 +34,7 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbGender = new System.Windows.Forms.GroupBox();
             this.rbtnFemale = new System.Windows.Forms.RadioButton();
             this.rbtnMale = new System.Windows.Forms.RadioButton();
             this.lblCity = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.grbGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -120,18 +120,18 @@
             this.lblLastName.TabIndex = 8;
             this.lblLastName.Text = "Last Name";
             // 
-            // groupBox1
+            // grbGender
             // 
-            this.groupBox1.Controls.Add(this.rbtnFemale);
-            this.groupBox1.Controls.Add(this.rbtnMale);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(205, 180);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 61);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Gender";
+            this.grbGender.Controls.Add(this.rbtnFemale);
+            this.grbGender.Controls.Add(this.rbtnMale);
+            this.grbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbGender.ForeColor = System.Drawing.Color.White;
+            this.grbGender.Location = new System.Drawing.Point(205, 180);
+            this.grbGender.Name = "grbGender";
+            this.grbGender.Size = new System.Drawing.Size(257, 61);
+            this.grbGender.TabIndex = 9;
+            this.grbGender.TabStop = false;
+            this.grbGender.Text = "Gender";
             // 
             // rbtnFemale
             // 
@@ -238,7 +238,7 @@
             // 
             this.dtpBirthday.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthday.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dtpBirthday.CustomFormat = "dd - MMMM - yyyy";
+            this.dtpBirthday.CustomFormat = "dd MMMM  yyyy";
             this.dtpBirthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBirthday.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -337,6 +337,7 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
             this.txtID.TabIndex = 26;
+            this.txtID.Text = "-1";
             // 
             // btnCancel
             // 
@@ -352,6 +353,7 @@
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -367,6 +369,7 @@
             this.btnSubmit.TabIndex = 29;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // TeacherCreateForm
             // 
@@ -394,7 +397,7 @@
             this.Controls.Add(this.lblCity);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbGender);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblEmri);
             this.Controls.Add(this.panel2);
@@ -404,8 +407,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherCreateForm";
             this.Text = "TeacherCreateForm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbGender.ResumeLayout(false);
+            this.grbGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +422,7 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbGender;
         private System.Windows.Forms.RadioButton rbtnFemale;
         private System.Windows.Forms.RadioButton rbtnMale;
         private System.Windows.Forms.Label lblCity;

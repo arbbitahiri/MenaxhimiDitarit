@@ -9,7 +9,7 @@ using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
 {
-    class UsersBLL : IBaseCRUD<Users>
+    public class UsersBLL : IBaseCRUD<Users>
     {
         private UsersDAL dal;
 

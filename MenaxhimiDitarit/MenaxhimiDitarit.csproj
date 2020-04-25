@@ -54,6 +54,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.SpellChecker, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -63,11 +64,11 @@
     <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForms\AdminForm.cs">
+    <Compile Include="AdminForms\AdminMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="AdminForms\AdminMainForm.Designer.cs">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminForms\ClassCreateForm.cs">
       <SubType>Form</SubType>
@@ -75,12 +76,66 @@
     <Compile Include="AdminForms\ClassCreateForm.Designer.cs">
       <DependentUpon>ClassCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\ClassScheduleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ClassScheduleList.Designer.cs">
+      <DependentUpon>ClassScheduleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\RoomListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\RoomListForm.Designer.cs">
+      <DependentUpon>RoomListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\UserSession.cs" />
     <Compile Include="AdminForms\ClassListForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForms\ClassListForm.Designer.cs">
       <DependentUpon>ClassListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\DirectorMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\DirectorMainForm.Designer.cs">
+      <DependentUpon>DirectorMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\DirectorTeacherListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\DirectorTeacherListForm.Designer.cs">
+      <DependentUpon>DirectorTeacherListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\ReviewCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\ReviewCommentForm.Designer.cs">
+      <DependentUpon>ReviewCommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\RoleCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\RoleCreateForm.Designer.cs">
+      <DependentUpon>RoleCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\RoleListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\RoleListForm.Designer.cs">
+      <DependentUpon>RoleListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\UserCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\UserCreateForm.Designer.cs">
+      <DependentUpon>UserCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectorForms\UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectorForms\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -120,14 +175,83 @@
     <Compile Include="AdminForms\TeacherListForm.Designer.cs">
       <DependentUpon>TeacherListForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForms\AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="TeacherForms\AbsenceCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\AbsenceCreateForm.Designer.cs">
+      <DependentUpon>AbsenceCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\AbsenceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\AbsenceListForm.Designer.cs">
+      <DependentUpon>AbsenceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\CommentCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\CommentCreateForm.Designer.cs">
+      <DependentUpon>CommentCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\CommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\CommentListForm.Designer.cs">
+      <DependentUpon>CommentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\TeacherMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\TeacherMainForm.Designer.cs">
+      <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\TopicCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\TopicCreateForm.Designer.cs">
+      <DependentUpon>TopicCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForms\TopicListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForms\TopicListForm.Designer.cs">
+      <DependentUpon>TopicListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForms\AdminMainForm.resx">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ClassCreateForm.resx">
       <DependentUpon>ClassCreateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ClassListForm.resx">
       <DependentUpon>ClassListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ClassScheduleList.resx">
+      <DependentUpon>ClassScheduleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\RoomListForm.resx">
+      <DependentUpon>RoomListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\DirectorMainForm.resx">
+      <DependentUpon>DirectorMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\DirectorTeacherListForm.resx">
+      <DependentUpon>DirectorTeacherListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\ReviewCommentForm.resx">
+      <DependentUpon>ReviewCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\RoleCreateForm.resx">
+      <DependentUpon>RoleCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\RoleListForm.resx">
+      <DependentUpon>RoleListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\UserCreateForm.resx">
+      <DependentUpon>UserCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectorForms\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -157,6 +281,32 @@
     <EmbeddedResource Include="AdminForms\TeacherListForm.resx">
       <DependentUpon>TeacherListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\AbsenceCreateForm.resx">
+      <DependentUpon>AbsenceCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\AbsenceListForm.resx">
+      <DependentUpon>AbsenceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\CommentCreateForm.resx">
+      <DependentUpon>CommentCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\CommentListForm.resx">
+      <DependentUpon>CommentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\TeacherMainForm.resx">
+      <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\TopicCreateForm.resx">
+      <DependentUpon>TopicCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForms\TopicListForm.resx">
+      <DependentUpon>TopicListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Roles.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Room.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Subject.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Teacher.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Users.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

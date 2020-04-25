@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arsimtaret.cs" />
+    <Compile Include="Teacher.cs" />
     <Compile Include="BaseAuditObject.cs" />
-    <Compile Include="DitariMungesa.cs" />
-    <Compile Include="DitariTema.cs" />
-    <Compile Include="DitariVerejtet.cs" />
+    <Compile Include="Absences.cs" />
+    <Compile Include="Topics.cs" />
+    <Compile Include="Comments.cs" />
     <Compile Include="Interface\IBaseConvert.cs" />
     <Compile Include="Interface\IBaseCRUD.cs" />
-    <Compile Include="Klasa.cs" />
-    <Compile Include="KlasaOrari.cs" />
-    <Compile Include="Lendet.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="ClassSchedule.cs" />
+    <Compile Include="Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles.cs" />
-    <Compile Include="Salla.cs" />
+    <Compile Include="Room.cs" />
     <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup />

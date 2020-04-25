@@ -18,24 +18,26 @@ namespace MenaxhimiDitarit.DAL
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    string sqlproc = "dbo.usp_Roles_Create";
+                    string sqlproc = "dbo.usp_Role_Create";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "RoleID", model.RoleID);
-                        DataConnection.AddParameter(command, "RoleName", model.RoleName);
-                        DataConnection.AddParameter(command, "InsertBy", model.InsertBy);
-                        DataConnection.AddParameter(command, "InsertDate", model.InsertDate);
-                        DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
-                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "@roleID", model.RoleID);
+                        DataConnection.AddParameter(command, "@rolename", model.RoleName);
+                        DataConnection.AddParameter(command, "@insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "@insertdate", model.InsertDate);
+                        DataConnection.AddParameter(command, "@LUB", model.LUB);
+                        DataConnection.AddParameter(command, "@LUD", model.LUD);
+                        DataConnection.AddParameter(command, "@LUN", model.LUN);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                string error = e.Message;
+
                 return false;
             }
         }
@@ -76,7 +78,7 @@ namespace MenaxhimiDitarit.DAL
                     string sqlproc = "dbo.usp_Roles_Delete";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "RoleID", id);
+                        DataConnection.AddParameter(command, "@roleID", id);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
@@ -100,7 +102,7 @@ namespace MenaxhimiDitarit.DAL
                     string sqlproc = "dbo.usp_Roles_ViewByID";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "RoleID", id);
+                        DataConnection.AddParameter(command, "@roleID", id);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

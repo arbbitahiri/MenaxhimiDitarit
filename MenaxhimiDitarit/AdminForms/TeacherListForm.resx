@@ -132,4 +132,25 @@
         1g5aaV89EvRPA/4mFjsFN6IZvOUaQikAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cmsTeacherContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>309, 17</value>
+  </metadata>
+  <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAV5JREFUOE+9
+        1M0rBGEAx/GJJCQHF4RydCE5OCjKUUQpFyV5CSdRlKQlDs6cOGxeLw6SJDeiSJG8nP0nyvf3PDNPa83O
+        7G6bb33a55nDs/vsMzPef9eAAUxgCM3Iq37c4QoJzGIZp3jx58WIrQzH2EedLoRUhXXcolYXMqVvvMCU
+        mcXXhSdUm1lIS9D2ckn/74kdesNwi2sb+m9KzCy3ztCJN5TqgprEgh1m3SVWMIIvbMF1iFY7zDod4Dge
+        8Y0muHRiFXaYVzX+p+se5XZYmA7QYoeFSYeyaIexaSer2E2zgzaYKvEKd+wRabFNtKfpwTtc89iww8j0
+        a7RAavXoxrOZ+enRO4ce/KiCBYvMzO7uAR34taDSlnVPHqFRF0IKFtzDNPT8D0L9WTCoDze4xhpmoKdi
+        FMGCurGTmENQxgWD9ArTu3EMvdALdxs6gLA+/M+c0q2h09SvSfXpeV7iBxBtPDjBRxgIAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="bsrcTeacherList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>467, 17</value>
+  </metadata>
 </root>

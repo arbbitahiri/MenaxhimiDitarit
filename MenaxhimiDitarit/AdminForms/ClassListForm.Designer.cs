@@ -59,9 +59,9 @@
             this.grbSearchClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearchClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearchClass.ForeColor = System.Drawing.Color.White;
-            this.grbSearchClass.Location = new System.Drawing.Point(12, 12);
+            this.grbSearchClass.Location = new System.Drawing.Point(120, 12);
             this.grbSearchClass.Name = "grbSearchClass";
-            this.grbSearchClass.Size = new System.Drawing.Size(649, 111);
+            this.grbSearchClass.Size = new System.Drawing.Size(432, 111);
             this.grbSearchClass.TabIndex = 11;
             this.grbSearchClass.TabStop = false;
             this.grbSearchClass.Text = "Search";
@@ -72,7 +72,7 @@
             this.btnSearchClass.FlatAppearance.BorderSize = 0;
             this.btnSearchClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearchClass.Location = new System.Drawing.Point(471, 68);
+            this.btnSearchClass.Location = new System.Drawing.Point(246, 68);
             this.btnSearchClass.Name = "btnSearchClass";
             this.btnSearchClass.Size = new System.Drawing.Size(172, 32);
             this.btnSearchClass.TabIndex = 9;
@@ -106,7 +106,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Location = new System.Drawing.Point(17, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 1);
+            this.panel1.Size = new System.Drawing.Size(401, 1);
             this.panel1.TabIndex = 7;
             // 
             // txtSearchClass
@@ -117,7 +117,7 @@
             this.txtSearchClass.ForeColor = System.Drawing.Color.White;
             this.txtSearchClass.Location = new System.Drawing.Point(47, 30);
             this.txtSearchClass.Name = "txtSearchClass";
-            this.txtSearchClass.Size = new System.Drawing.Size(596, 15);
+            this.txtSearchClass.Size = new System.Drawing.Size(371, 15);
             this.txtSearchClass.TabIndex = 5;
             this.txtSearchClass.Text = "Search by Name";
             // 

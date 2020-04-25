@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.BO;
 using MenaxhimiDitarit.BLL;
+using MenaxhimiDitarit.TeacherForms;
+using MenaxhimiDitarit.DirectorForms;
 
 namespace MenaxhimiDitarit
 {
@@ -27,12 +29,13 @@ namespace MenaxhimiDitarit
         private void txtPassword_Click(object sender, EventArgs e)
         {
             txtPassword.Clear();
-            txtPassword.PasswordChar = '*';
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            //this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -40,24 +43,55 @@ namespace MenaxhimiDitarit
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            if (username.Trim() != "" && password != "")
-            {
+            if (username.Trim() != "" && password != "") {
                 Users user = AdministrationBLL.Login(username, password);
 
-                if (user != null)
-                {
+                if (user != null) {
                     UserSession.GetUser = user;
 
-                    AdminForm adminForm = new AdminForm();
-                    this.Hide();
-                    adminForm.ShowDialog();
-                    this.Close();
+                    if (user.UserName == "admin") {
+                        AdminMainForm adminForm = new AdminMainForm();
+                        this.Hide();
+                        adminForm.ShowDialog();
+                        //this.Close();
+                    }
+                    else if (user.UserName == "teacher") {
+                        TeacherMainForm teacherForm = new TeacherMainForm();
+                        this.Hide();
+                        teacherForm.ShowDialog();
+                        //this.Close();
+                    }
+                    else if (user.UserName == "director") {
+                        DirectorMainForm directorForm = new DirectorMainForm();
+                        this.Hide();
+                        directorForm.ShowDialog();
+                        //this.Close();
+                    }
+                    else
+                        MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Username ose Password jane gabim!!");
+                    MessageBox.Show("Username or Passwod is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("Ju lutem mbushni te dhenat!!");
+                MessageBox.Show("Please fill your credentials", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbShowPassword.Checked)
+                txtPassword.UseSystemPasswordChar = false;
+            else
+                txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLogin_Click(this, new EventArgs());
+
+            if (e.KeyCode == Keys.Tab)
+                txtPassword_Click(this, new EventArgs());
         }
     }
 }

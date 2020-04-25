@@ -51,26 +51,28 @@ namespace MenaxhimiDitarit.DAL
                     string sqlproc = "dbo.usp_User_Create";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "UserID", model.UserID);
-                        DataConnection.AddParameter(command, "Emri", model.Emri);
-                        DataConnection.AddParameter(command, "Mbiemri", model.Mbiemri);
-                        DataConnection.AddParameter(command, "UserName", model.UserName);
-                        DataConnection.AddParameter(command, "UserPassword", model.UserPassword);
-                        DataConnection.AddParameter(command, "ExpiresDate", model.ExpiresDate);
-                        DataConnection.AddParameter(command, "RoleId", model.RoleID);
-                        DataConnection.AddParameter(command, "InsertBy", model.InsertBy);
-                        DataConnection.AddParameter(command, "InsertDate", model.InsertDate);
-                        DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
-                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "@userID", model.UserID);
+                        DataConnection.AddParameter(command, "@username", model.UserName);
+                        DataConnection.AddParameter(command, "@userpassword", model.UserPassword);
+                        DataConnection.AddParameter(command, "@expiresdate", model.ExpiresDate);
+                        DataConnection.AddParameter(command, "@roleID", model.RoleID);
+                        DataConnection.AddParameter(command, "@insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "@insertdate", model.InsertDate);
+                        DataConnection.AddParameter(command, "@LUB", model.LUB);
+                        DataConnection.AddParameter(command, "@LUD", model.LUD);
+                        DataConnection.AddParameter(command, "@LUN", model.LUN);
+                        DataConnection.AddParameter(command, "@firstname", model.FirstName);
+                        DataConnection.AddParameter(command, "@lastname", model.LastName);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                string error = ex.Message;
+
                 return false;
             }
         }
@@ -141,12 +143,6 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["UserID"] != DBNull.Value)
                     user.UserID = int.Parse(reader["UserID"].ToString());
 
-                if (reader["Emri"] != DBNull.Value)
-                    user.Emri = reader["Emri"].ToString();
-
-                if (reader["Mbiemri"] != DBNull.Value)
-                    user.Mbiemri = reader["Mbiemri"].ToString();
-
                 if (reader["UserName"] != DBNull.Value)
                     user.UserName = reader["UserName"].ToString();
 
@@ -173,6 +169,12 @@ namespace MenaxhimiDitarit.DAL
 
                 if (reader["LUN"] != DBNull.Value)
                     user.LUN = int.Parse(reader["LUN"].ToString());
+
+                if (reader["First_Name"] != DBNull.Value)
+                    user.FirstName = reader["First_Name"].ToString();
+
+                if (reader["Last_Name"] != DBNull.Value)
+                    user.LastName = reader["Last_Name"].ToString();
 
                 return user;
             }
@@ -208,7 +210,31 @@ namespace MenaxhimiDitarit.DAL
 
         public Users Get(Users model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    Users users = null;
+                    string sqlproc = "dbo.usp_Users_ViewBy_UserName";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "UserName", model);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                                users = ToObject(reader);
+                        }
+
+                        return users;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Update(Users model)

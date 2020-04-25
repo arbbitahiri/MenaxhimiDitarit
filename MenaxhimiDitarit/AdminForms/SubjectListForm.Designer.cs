@@ -28,28 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectListForm));
-            this.dgvSubjectList = new System.Windows.Forms.DataGridView();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearchSubject = new System.Windows.Forms.Button();
             this.btnViewAllSubjects = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearchNameSubject = new System.Windows.Forms.TextBox();
-            this.btnDeleteSubject = new System.Windows.Forms.Button();
-            this.btnUpdateSubject = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).BeginInit();
+            this.txtSearchSubject = new System.Windows.Forms.TextBox();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.cmsSubjectContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsrcSubjectList = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvSubjectList = new Telerik.WinControls.UI.RadGridView();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cmsSubjectContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubjectList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvSubjectList
-            // 
-            this.dgvSubjectList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubjectList.Location = new System.Drawing.Point(12, 129);
-            this.dgvSubjectList.Name = "dgvSubjectList";
-            this.dgvSubjectList.Size = new System.Drawing.Size(649, 422);
-            this.dgvSubjectList.TabIndex = 14;
             // 
             // grbSearch
             // 
@@ -57,11 +66,11 @@
             this.grbSearch.Controls.Add(this.btnViewAllSubjects);
             this.grbSearch.Controls.Add(this.pictureBox1);
             this.grbSearch.Controls.Add(this.panel1);
-            this.grbSearch.Controls.Add(this.txtSearchNameSubject);
+            this.grbSearch.Controls.Add(this.txtSearchSubject);
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(20, 12);
+            this.grbSearch.Location = new System.Drawing.Point(113, 12);
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.Size = new System.Drawing.Size(446, 111);
             this.grbSearch.TabIndex = 11;
@@ -80,6 +89,7 @@
             this.btnSearchSubject.TabIndex = 9;
             this.btnSearchSubject.Text = "Search";
             this.btnSearchSubject.UseVisualStyleBackColor = false;
+            this.btnSearchSubject.Click += new System.EventHandler(this.btnSearchSubject_Click);
             // 
             // btnViewAllSubjects
             // 
@@ -93,6 +103,7 @@
             this.btnViewAllSubjects.TabIndex = 9;
             this.btnViewAllSubjects.Text = "View All Subjects";
             this.btnViewAllSubjects.UseVisualStyleBackColor = false;
+            this.btnViewAllSubjects.Click += new System.EventHandler(this.btnViewAllSubjects_Click);
             // 
             // pictureBox1
             // 
@@ -111,45 +122,137 @@
             this.panel1.Size = new System.Drawing.Size(423, 1);
             this.panel1.TabIndex = 7;
             // 
-            // txtSearchNameSubject
+            // txtSearchSubject
             // 
-            this.txtSearchNameSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtSearchNameSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchNameSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchNameSubject.ForeColor = System.Drawing.Color.White;
-            this.txtSearchNameSubject.Location = new System.Drawing.Point(47, 30);
-            this.txtSearchNameSubject.Name = "txtSearchNameSubject";
-            this.txtSearchNameSubject.Size = new System.Drawing.Size(393, 15);
-            this.txtSearchNameSubject.TabIndex = 5;
-            this.txtSearchNameSubject.Text = "Search by Name";
+            this.txtSearchSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtSearchSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchSubject.ForeColor = System.Drawing.Color.White;
+            this.txtSearchSubject.Location = new System.Drawing.Point(47, 30);
+            this.txtSearchSubject.Name = "txtSearchSubject";
+            this.txtSearchSubject.Size = new System.Drawing.Size(393, 15);
+            this.txtSearchSubject.TabIndex = 5;
+            this.txtSearchSubject.Text = "Search by Subject Title, Book or Book Author";
+            this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchNameSubject_Click);
             // 
-            // btnDeleteSubject
+            // cmsSubjectContext
             // 
-            this.btnDeleteSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnDeleteSubject.FlatAppearance.BorderSize = 0;
-            this.btnDeleteSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnDeleteSubject.Location = new System.Drawing.Point(485, 81);
-            this.btnDeleteSubject.Name = "btnDeleteSubject";
-            this.btnDeleteSubject.Size = new System.Drawing.Size(168, 42);
-            this.btnDeleteSubject.TabIndex = 12;
-            this.btnDeleteSubject.Text = "Delete Subject";
-            this.btnDeleteSubject.UseVisualStyleBackColor = false;
+            this.cmsSubjectContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsSubjectContext.Name = "cmsSubjectContext";
+            this.cmsSubjectContext.Size = new System.Drawing.Size(113, 48);
             // 
-            // btnUpdateSubject
+            // updateToolStripMenuItem
             // 
-            this.btnUpdateSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnUpdateSubject.FlatAppearance.BorderSize = 0;
-            this.btnUpdateSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnUpdateSubject.Location = new System.Drawing.Point(485, 19);
-            this.btnUpdateSubject.Name = "btnUpdateSubject";
-            this.btnUpdateSubject.Size = new System.Drawing.Size(168, 42);
-            this.btnUpdateSubject.TabIndex = 13;
-            this.btnUpdateSubject.Text = "Update Subject";
-            this.btnUpdateSubject.UseVisualStyleBackColor = false;
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // bsrcSubjectList
+            // 
+            this.bsrcSubjectList.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
+            // 
+            // dgvSubjectList
+            // 
+            this.dgvSubjectList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.dgvSubjectList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dgvSubjectList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvSubjectList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dgvSubjectList.ForeColor = System.Drawing.Color.White;
+            this.dgvSubjectList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgvSubjectList.Location = new System.Drawing.Point(0, 129);
+            // 
+            // 
+            // 
+            this.dgvSubjectList.MasterTemplate.AllowAddNewRow = false;
+            this.dgvSubjectList.MasterTemplate.AllowCellContextMenu = false;
+            this.dgvSubjectList.MasterTemplate.AllowColumnReorder = false;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "SubjectID";
+            gridViewDecimalColumn1.HeaderText = "SubjectID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "SubjectID";
+            gridViewDecimalColumn1.Width = 75;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "SubjectTitle";
+            gridViewTextBoxColumn1.HeaderText = "Subject Title";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "SubjectTitle";
+            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Book";
+            gridViewTextBoxColumn2.HeaderText = "Book";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "Book";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Book_Author";
+            gridViewTextBoxColumn3.HeaderText = "Book Author";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Book_Author";
+            gridViewTextBoxColumn3.Width = 100;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "InsertBy";
+            gridViewTextBoxColumn4.HeaderText = "InsertBy";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "InsertBy";
+            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn4.Width = 85;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "InsertDate";
+            gridViewDateTimeColumn1.HeaderText = "InsertDate";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "InsertDate";
+            gridViewDateTimeColumn1.Width = 100;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "LUB";
+            gridViewTextBoxColumn5.HeaderText = "LUB";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "LUB";
+            gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn5.Width = 85;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "LUD";
+            gridViewDateTimeColumn2.HeaderText = "LUD";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "LUD";
+            gridViewDateTimeColumn2.Width = 100;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "LUN";
+            gridViewDecimalColumn2.HeaderText = "LUN";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "LUN";
+            this.dgvSubjectList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn2,
+            gridViewDecimalColumn2});
+            this.dgvSubjectList.MasterTemplate.DataSource = this.bsrcSubjectList;
+            this.dgvSubjectList.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgvSubjectList.Name = "dgvSubjectList";
+            this.dgvSubjectList.ReadOnly = true;
+            this.dgvSubjectList.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvSubjectList.Size = new System.Drawing.Size(673, 434);
+            this.dgvSubjectList.TabIndex = 14;
+            this.dgvSubjectList.ThemeName = "CrystalDark";
             // 
             // SubjectListForm
             // 
@@ -159,29 +262,33 @@
             this.ClientSize = new System.Drawing.Size(673, 563);
             this.Controls.Add(this.dgvSubjectList);
             this.Controls.Add(this.grbSearch);
-            this.Controls.Add(this.btnDeleteSubject);
-            this.Controls.Add(this.btnUpdateSubject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SubjectListForm";
             this.Text = "SubjectListForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).EndInit();
+            this.Load += new System.EventHandler(this.SubjectListForm_Load);
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cmsSubjectContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubjectList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvSubjectList;
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnSearchSubject;
         private System.Windows.Forms.Button btnViewAllSubjects;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtSearchNameSubject;
-        private System.Windows.Forms.Button btnDeleteSubject;
-        private System.Windows.Forms.Button btnUpdateSubject;
+        private System.Windows.Forms.TextBox txtSearchSubject;
+        private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
+        private System.Windows.Forms.ContextMenuStrip cmsSubjectContext;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.BindingSource bsrcSubjectList;
+        private Telerik.WinControls.UI.RadGridView dgvSubjectList;
     }
 }
