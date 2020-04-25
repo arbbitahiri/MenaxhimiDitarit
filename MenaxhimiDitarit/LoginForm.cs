@@ -19,6 +19,8 @@ namespace MenaxhimiDitarit
         public LoginForm()
         {
             InitializeComponent();
+
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void txtUsername_Click(object sender, EventArgs e)

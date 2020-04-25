@@ -17,5 +17,11 @@ namespace MenaxhimiDitarit.BO
         public DateTime DayofBirth { get; set; }
         public string Email { get; set; }
         public string PhoneNo { get; set; }
+
+        public string FullName {
+            get {
+                return FirstName + " " + LastName;
+            }
+        }
     }
 }

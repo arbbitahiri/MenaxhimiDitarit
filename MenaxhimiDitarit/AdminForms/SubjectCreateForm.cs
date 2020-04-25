@@ -18,11 +18,19 @@ namespace MenaxhimiDitarit
         private Subject _subject;
         private readonly bool update = false;
 
+        private readonly TeacherBLL _teacherBLL;
+        private List<Teacher> _teacher;
+
         public SubjectCreateForm()
         {
             InitializeComponent();
 
             _subjectBLL = new SubjectBLL();
+            _teacherBLL = new TeacherBLL();
+
+            _teacher = _teacherBLL.GetAll();
+            cmbTeacher.DataSource = _teacher;
+
             update = false;
         }
 
@@ -31,7 +39,13 @@ namespace MenaxhimiDitarit
             InitializeComponent();
 
             _subjectBLL = new SubjectBLL();
+            _teacherBLL = new TeacherBLL();
+
+            _teacher = _teacherBLL.GetAll();
+            cmbTeacher.DataSource = _teacher;
+
             _subject = subject;
+            update = this._subject != null;
             PopulateForm(_subject);
         }
 
@@ -41,6 +55,7 @@ namespace MenaxhimiDitarit
             txtSubjectTitle.Text = subject.SubjectTitle;
             txtSubjectBook.Text = subject.Book;
             txtBookAuthor.Text = subject.Book_Author;
+            cmbTeacher.SelectedItem = _teacher.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -55,6 +70,7 @@ namespace MenaxhimiDitarit
             subject.InsertDate = DateTime.Now;
             subject.LUB = UserSession.GetUser.UserName;
             subject.LUD = DateTime.Now;
+            subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
 
             if (!update)
                 subject.LUN++;

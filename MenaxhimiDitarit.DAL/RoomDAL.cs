@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,32 @@ namespace MenaxhimiDitarit.DAL
     {
         public bool Add(Room model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Room_Create";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "roomID", model.RoomID);
+                        DataConnection.AddParameter(command, "roomno", model.RoomNo);
+                        DataConnection.AddParameter(command, "roomtype", model.RoomType);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "LUD", model.LUD);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public Room Get(int id)
@@ -28,7 +54,30 @@ namespace MenaxhimiDitarit.DAL
 
         public List<Room> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    List<Room> room = null;
+                    string sqlproc = "dbo.usp_Rooms_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            room = new List<Room>();
+                            while (reader.Read())
+                                room.Add(ToObject(reader));
+                        }
+
+                        return room;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Remove(Room model)
@@ -38,12 +87,64 @@ namespace MenaxhimiDitarit.DAL
 
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Room_Delete";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "roomID", id);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public Room ToObject(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var room = new Room();
+
+                if (reader["RoomID"] != DBNull.Value)
+                    room.RoomID = int.Parse(reader["RoomID"].ToString());
+
+                if (reader["Room_No"] != DBNull.Value)
+                    room.RoomNo = int.Parse(reader["Room_No"].ToString());
+
+                if (reader["Room_Type"] != DBNull.Value)
+                    room.RoomType = reader["Room_Type"].ToString();
+
+                if (reader["InsertBy"] != DBNull.Value)
+                    room.InsertBy = reader["InsertBy"].ToString();
+
+                if (reader["InsertDate"] != DBNull.Value)
+                    room.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+
+                if (reader["LUB"] != DBNull.Value)
+                    room.LUB = reader["LUB"].ToString();
+
+                if (reader["LUD"] != DBNull.Value)
+                    room.LUD = DateTime.Parse(reader["LUD"].ToString());
+
+                if (reader["LUN"] != DBNull.Value)
+                    room.LUN = int.Parse(reader["LUN"].ToString());
+
+                return room;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Update(Room model)

@@ -27,6 +27,7 @@ namespace MenaxhimiDitarit
             pnlTeachers.Visible = false;
             pnlClassR.Visible = false;
             pnlSubjects.Visible = false;
+            pnlRoom.Visible = false;
         }
 
         private void HideSubMenu()
@@ -39,6 +40,9 @@ namespace MenaxhimiDitarit
 
             if (pnlSubjects.Visible == true)
                 pnlSubjects.Visible = false;
+
+            if (pnlRoom.Visible == true)
+                pnlRoom.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)

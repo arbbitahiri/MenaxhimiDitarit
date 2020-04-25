@@ -84,7 +84,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(220, 15);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.Text = "Username";
+            this.txtUsername.Text = "username";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // txtPassword
@@ -97,7 +97,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(220, 15);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "Password";
+            this.txtPassword.Text = "password";
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 

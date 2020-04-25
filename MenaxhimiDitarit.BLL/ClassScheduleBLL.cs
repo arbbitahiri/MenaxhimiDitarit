@@ -11,9 +11,16 @@ namespace MenaxhimiDitarit.BLL
 {
     public class ClassScheduleBLL : IBaseCRUD<ClassSchedule>
     {
+        public ClassScheduleDAL scheduleDAL;
+
+        public ClassScheduleBLL()
+        {
+            scheduleDAL = new ClassScheduleDAL();
+        }
+
         public bool Add(ClassSchedule model)
         {
-            throw new NotImplementedException();
+            return scheduleDAL.Add(model);
         }
 
         public ClassSchedule Get(int id)
@@ -28,7 +35,7 @@ namespace MenaxhimiDitarit.BLL
 
         public List<ClassSchedule> GetAll()
         {
-            throw new NotImplementedException();
+            return scheduleDAL.GetAll();
         }
 
         public bool Remove(ClassSchedule model)
@@ -38,7 +45,7 @@ namespace MenaxhimiDitarit.BLL
 
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            return scheduleDAL.Remove(id);
         }
 
         public bool Update(ClassSchedule model)

@@ -12,5 +12,6 @@ namespace MenaxhimiDitarit.BO
         public string SubjectTitle { get; set; }
         public string Book { get; set; }
         public string Book_Author { get; set; }
+        public int TeacherID { get; set; }
     }
 }

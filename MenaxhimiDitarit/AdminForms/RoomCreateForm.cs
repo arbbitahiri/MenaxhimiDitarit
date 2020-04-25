@@ -65,7 +65,7 @@ namespace MenaxhimiDitarit
 
                 if (isRegistred)
                 {
-                    MessageBox.Show("Subject registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
@@ -73,7 +73,7 @@ namespace MenaxhimiDitarit
             }
             else
             {
-                MessageBox.Show("Subject Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Room Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

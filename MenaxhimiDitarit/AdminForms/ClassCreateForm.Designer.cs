@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSubmitClass = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblSelectRoom = new System.Windows.Forms.Label();
@@ -42,6 +43,10 @@
             this.cmbMainTeacher = new System.Windows.Forms.ComboBox();
             this.cmbSelectClass = new System.Windows.Forms.ComboBox();
             this.cmbSelectRoom = new System.Windows.Forms.ComboBox();
+            this.bsrcRoom = new System.Windows.Forms.BindingSource(this.components);
+            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmitClass
@@ -52,12 +57,13 @@
             this.btnSubmitClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmitClass.Location = new System.Drawing.Point(339, 347);
+            this.btnSubmitClass.Location = new System.Drawing.Point(339, 326);
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
             this.btnSubmitClass.TabIndex = 55;
             this.btnSubmitClass.Text = "Submit";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
+            this.btnSubmitClass.Click += new System.EventHandler(this.btnSubmitClass_Click);
             // 
             // btnCancel
             // 
@@ -67,19 +73,20 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 347);
+            this.btnCancel.Location = new System.Drawing.Point(164, 326);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
             this.btnCancel.TabIndex = 56;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblSelectRoom
             // 
             this.lblSelectRoom.AutoSize = true;
             this.lblSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectRoom.ForeColor = System.Drawing.Color.White;
-            this.lblSelectRoom.Location = new System.Drawing.Point(198, 285);
+            this.lblSelectRoom.Location = new System.Drawing.Point(198, 279);
             this.lblSelectRoom.Name = "lblSelectRoom";
             this.lblSelectRoom.Size = new System.Drawing.Size(86, 16);
             this.lblSelectRoom.TabIndex = 54;
@@ -123,13 +130,14 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
             this.txtID.TabIndex = 49;
+            this.txtID.Text = "-1";
             // 
             // lblClass
             // 
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.Color.White;
-            this.lblClass.Location = new System.Drawing.Point(201, 247);
+            this.lblClass.Location = new System.Drawing.Point(201, 241);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(83, 16);
             this.lblClass.TabIndex = 47;
@@ -140,7 +148,7 @@
             this.lblMainTeacher.AutoSize = true;
             this.lblMainTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblMainTeacher.Location = new System.Drawing.Point(193, 210);
+            this.lblMainTeacher.Location = new System.Drawing.Point(193, 204);
             this.lblMainTeacher.Name = "lblMainTeacher";
             this.lblMainTeacher.Size = new System.Drawing.Size(91, 16);
             this.lblMainTeacher.TabIndex = 48;
@@ -165,6 +173,8 @@
             // cmbMainTeacher
             // 
             this.cmbMainTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbMainTeacher.DataSource = this.bsrcTeacher;
+            this.cmbMainTeacher.DisplayMember = "FullName";
             this.cmbMainTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMainTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMainTeacher.ForeColor = System.Drawing.Color.White;
@@ -173,6 +183,7 @@
             this.cmbMainTeacher.Name = "cmbMainTeacher";
             this.cmbMainTeacher.Size = new System.Drawing.Size(181, 24);
             this.cmbMainTeacher.TabIndex = 57;
+            this.cmbMainTeacher.ValueMember = "TeacherID";
             // 
             // cmbSelectClass
             // 
@@ -199,6 +210,8 @@
             // cmbSelectRoom
             // 
             this.cmbSelectRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectRoom.DataSource = this.bsrcRoom;
+            this.cmbSelectRoom.DisplayMember = "RoomType";
             this.cmbSelectRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectRoom.ForeColor = System.Drawing.Color.White;
@@ -207,6 +220,15 @@
             this.cmbSelectRoom.Name = "cmbSelectRoom";
             this.cmbSelectRoom.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectRoom.TabIndex = 57;
+            this.cmbSelectRoom.ValueMember = "RoomID";
+            // 
+            // bsrcRoom
+            // 
+            this.bsrcRoom.DataSource = typeof(MenaxhimiDitarit.BO.Room);
+            // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
             // ClassCreateForm
             // 
@@ -231,6 +253,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassCreateForm";
             this.Text = "ClassCreateForm";
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +276,7 @@
         private System.Windows.Forms.ComboBox cmbMainTeacher;
         private System.Windows.Forms.ComboBox cmbSelectClass;
         private System.Windows.Forms.ComboBox cmbSelectRoom;
+        private System.Windows.Forms.BindingSource bsrcRoom;
+        private System.Windows.Forms.BindingSource bsrcTeacher;
     }
 }

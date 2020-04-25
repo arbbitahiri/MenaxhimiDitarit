@@ -10,28 +10,28 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class SubjectDAL : IBaseConvert<Subject>, IBaseCRUD<Subject>
+    public class ClassScheduleDAL : IBaseCRUD<ClassSchedule>, IBaseConvert<ClassSchedule>
     {
-        public bool Add(Subject model)
+        public bool Add(ClassSchedule model)
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    string sqlproc = "dbo.usp_Subject_Create";
+                    string sqlproc = "dbo.usp_ClassSchedule_Create";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "subjectID", model.SubjectID);
-                        DataConnection.AddParameter(command, "subjecttitle", model.SubjectTitle);
-                        DataConnection.AddParameter(command, "book", model.Book);
-                        DataConnection.AddParameter(command, "bookauthor", model.Book_Author);
+                        DataConnection.AddParameter(command, "scheduleID", model.ScheduleID);
+                        DataConnection.AddParameter(command, "classID", model.ClassID);
+                        DataConnection.AddParameter(command, "subjectID", model.ScheduleID);
+                        DataConnection.AddParameter(command, "time", model.Time);
+                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "year", model.Year);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
                         DataConnection.AddParameter(command, "insertdate", model.InsertDate);
-                        DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
-                        DataConnection.AddParameter(command, "LUN", model.LUN);
-                        DataConnection.AddParameter(command, "teacherID", model.TeacherID);
-
+                        DataConnection.AddParameter(command, "LUB", model.LUN);
+                        DataConnection.AddParameter(command, "LUN", model.LUD);
+                        DataConnection.AddParameter(command, "LUD", model.LUB);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
@@ -44,34 +44,34 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Subject Get(int id)
+        public ClassSchedule Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Subject Get(Subject model)
+        public ClassSchedule Get(ClassSchedule model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Subject> GetAll()
+        public List<ClassSchedule> GetAll()
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Subject> subject = null;
-                    string sqlproc = "dbo.usp_Subject_ViewAll";
+                    List<ClassSchedule> schedule = null;
+                    string sqlproc = "dbo.usp_ClassSchedule_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            subject = new List<Subject>();
+                            schedule = new List<ClassSchedule>();
                             while (reader.Read())
-                                subject.Add(ToObject(reader));
+                                schedule.Add(ToObject(reader));
                         }
 
-                        return subject;
+                        return schedule;
                     }
                 }
             }
@@ -82,7 +82,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(Subject model)
+        public bool Remove(ClassSchedule model)
         {
             throw new NotImplementedException();
         }
@@ -93,10 +93,10 @@ namespace MenaxhimiDitarit.DAL
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    string sqlproc = "dbo.usp_Subject_Delete";
+                    string sqlproc = "dbo.usp_ClassSchedule_Delete";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "subjectID", id);
+                        DataConnection.AddParameter(command, "scheduleID", id);
 
                         int result = command.ExecuteNonQuery();
 
@@ -110,40 +110,46 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Subject ToObject(SqlDataReader reader)
+        public ClassSchedule ToObject(SqlDataReader reader)
         {
             try
             {
-                var subject = new Subject();
+                var schedule = new ClassSchedule();
+
+                if (reader["ScheduleID"] != DBNull.Value)
+                    schedule.ScheduleID = int.Parse(reader["ScheduleID"].ToString());
+
+                if (reader["ClassID"] != DBNull.Value)
+                    schedule.ClassID = int.Parse(reader["ClassID"].ToString());
 
                 if (reader["SubjectID"] != DBNull.Value)
-                    subject.SubjectID = int.Parse(reader["SubjectID"].ToString());
+                    schedule.SubjectID = int.Parse(reader["SubjectID"].ToString());
 
-                if (reader["Subject_Title"] != DBNull.Value)
-                    subject.SubjectTitle = reader["Subject_Title"].ToString();
+                if (reader["Time"] != DBNull.Value)
+                    schedule.Time = int.Parse(reader["Time"].ToString());
 
-                if (reader["Book"] != DBNull.Value)
-                    subject.Book = reader["Book"].ToString();
+                if (reader["Date"] != DBNull.Value)
+                    schedule.Date = reader["Date"].ToString();
 
-                if (reader["Book_Author"] != DBNull.Value)
-                    subject.Book_Author = reader["Book_Author"].ToString();
+                if (reader["Year"] != DBNull.Value)
+                    schedule.Year = int.Parse(reader["Year"].ToString());
 
                 if (reader["InsertBy"] != DBNull.Value)
-                    subject.InsertBy = reader["InsertBy"].ToString();
+                    schedule.InsertBy = reader["InsertBy"].ToString();
 
                 if (reader["InsertDate"] != DBNull.Value)
-                    subject.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+                    schedule.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
 
                 if (reader["LUB"] != DBNull.Value)
-                    subject.LUB = reader["LUB"].ToString();
+                    schedule.LUB = reader["LUB"].ToString();
 
                 if (reader["LUD"] != DBNull.Value)
-                    subject.LUD = DateTime.Parse(reader["LUD"].ToString());
+                    schedule.LUD = DateTime.Parse(reader["LUD"].ToString());
 
                 if (reader["LUN"] != DBNull.Value)
-                    subject.LUN = int.Parse(reader["LUN"].ToString());
+                    schedule.LUN = int.Parse(reader["LUN"].ToString());
 
-                return subject;
+                return schedule;
             }
             catch (Exception)
             {
@@ -152,7 +158,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Update(Subject model)
+        public bool Update(ClassSchedule model)
         {
             throw new NotImplementedException();
         }

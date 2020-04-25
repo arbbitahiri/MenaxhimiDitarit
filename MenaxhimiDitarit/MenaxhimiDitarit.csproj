@@ -76,6 +76,12 @@
     <Compile Include="AdminForms\ClassCreateForm.Designer.cs">
       <DependentUpon>ClassCreateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForms\ClassScheduleCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\ClassScheduleCreateForm.Designer.cs">
+      <DependentUpon>ClassScheduleCreateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForms\ClassScheduleList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="AdminForms\ClassListForm.resx">
       <DependentUpon>ClassListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\ClassScheduleCreateForm.resx">
+      <DependentUpon>ClassScheduleCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForms\ClassScheduleList.resx">
       <DependentUpon>ClassScheduleList.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +311,8 @@
     <EmbeddedResource Include="TeacherForms\TopicListForm.resx">
       <DependentUpon>TopicListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Class.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.ClassSchedule.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Roles.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Room.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Subject.datasource" />

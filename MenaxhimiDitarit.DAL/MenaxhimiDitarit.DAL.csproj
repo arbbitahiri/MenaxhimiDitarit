@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="AbsencesDAL.cs" />
     <Compile Include="ClassDAL.cs" />
-    <Compile Include="ClassSchedule.cs" />
+    <Compile Include="ClassScheduleDAL.cs" />
     <Compile Include="CommentsDAL.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,39 +11,46 @@ namespace MenaxhimiDitarit.BLL
 {
     public class ClassBLL : IBaseCRUD<Class>
     {
+        private ClassDAL classDAL;
+
+        public ClassBLL()
+        {
+            classDAL = new ClassDAL();
+        }
+
         public bool Add(Class model)
         {
-            throw new NotImplementedException();
+            return classDAL.Add(model);
         }
 
         public Class Get(int id)
         {
-            throw new NotImplementedException();
+            return classDAL.Get(id);
         }
 
         public Class Get(Class model)
         {
-            throw new NotImplementedException();
+            return classDAL.Get(model);
         }
 
         public List<Class> GetAll()
         {
-            throw new NotImplementedException();
+            return classDAL.GetAll();
         }
 
         public bool Remove(Class model)
         {
-            throw new NotImplementedException();
+            return classDAL.Remove(model);
         }
 
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            return classDAL.Remove(id);
         }
 
         public bool Update(Class model)
         {
-            throw new NotImplementedException();
+            return classDAL.Update(model);
         }
     }
 }

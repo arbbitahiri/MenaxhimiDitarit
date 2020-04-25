@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MenaxhimiDitarit.BO
 {
-    class ClassSchedule:BaseAuditObject
+    public class ClassSchedule:BaseAuditObject
     {
         public int ScheduleID { get; set; }
         public int ClassID { get; set; }
         public int SubjectID { get; set; }
         public int Time { get; set; }
-        public DateTime Date { get; set; }
-        public DateTime Year { get; set; }
+        public string Date { get; set; }
+        public int Year { get; set; }
     }
 }
