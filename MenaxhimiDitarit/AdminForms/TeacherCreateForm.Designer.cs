@@ -246,6 +246,7 @@
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(181, 22);
             this.dtpBirthday.TabIndex = 19;
+            this.dtpBirthday.CloseUp += new System.EventHandler(this.dtpBirthday_CloseUp);
             // 
             // lblEmail
             // 
@@ -306,6 +307,7 @@
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(181, 15);
             this.txtPhoneNo.TabIndex = 23;
+            this.txtPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // lblID
             // 
