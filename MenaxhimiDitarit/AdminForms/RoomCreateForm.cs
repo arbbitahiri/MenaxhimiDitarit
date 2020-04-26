@@ -16,6 +16,7 @@ namespace MenaxhimiDitarit
     {
         private readonly RoomBLL _roomBLL;
         private Room _room;
+        private List<Room> MyRooms;
         private readonly bool update = false;
 
         public RoomCreateForm()
@@ -23,6 +24,7 @@ namespace MenaxhimiDitarit
             InitializeComponent();
 
             _roomBLL = new RoomBLL();
+            MyRooms = _roomBLL.GetAll();
             update = false;
         }
 
@@ -61,19 +63,26 @@ namespace MenaxhimiDitarit
 
             if (!update)
             {
-                bool isRegistred = _roomBLL.Add(room);
+                var temp = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
 
-                if (isRegistred)
-                {
-                    MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _roomBLL.Add(room);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Room Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Room updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

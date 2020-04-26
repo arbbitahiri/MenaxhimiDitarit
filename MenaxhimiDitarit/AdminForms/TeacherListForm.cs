@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit
     public partial class TeacherListForm : Form
     {
         private readonly TeacherBLL _teacherBLL;
-        private List<Teacher> _teacher;
+        private List<Teacher> MyTeachers;
 
         public TeacherListForm()
         {
@@ -27,8 +27,8 @@ namespace MenaxhimiDitarit
 
         private void RefreshList()
         {
-            _teacher = _teacherBLL.GetAll();
-            dgvTeacherList.DataSource = _teacher;
+            MyTeachers = _teacherBLL.GetAll();
+            dgvTeacherList.DataSource = MyTeachers;
         }
 
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
@@ -55,9 +55,8 @@ namespace MenaxhimiDitarit
 
                 return teacher;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                string error = e.Message;
                 return null;
             }
         }
@@ -67,11 +66,6 @@ namespace MenaxhimiDitarit
             txtSearchName.Clear();
         }
 
-        private void btnCloseForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void TeacherListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
@@ -79,7 +73,7 @@ namespace MenaxhimiDitarit
 
         private void btnViewAllTeachers_Click(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshList();
         }
 
         private void btnSearchTeachers_Click(object sender, EventArgs e)
@@ -88,7 +82,7 @@ namespace MenaxhimiDitarit
             {
                 if (txtSearchName.Text.Trim().Length > 0)
                 {
-                    var findTeacher = _teacher.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
+                    var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
 
                     dgvTeacherList.DataSource = findTeacher;
                 }
@@ -109,32 +103,9 @@ namespace MenaxhimiDitarit
                     var teacher = GetTeacher(dgvTeacherList.Rows[row]);
                     if (teacher != null)
                     {
-                        TeacherCreateForm teacherCreate = new TeacherCreateForm(teacher);
-                        teacherCreate.ShowDialog();
-                    }
-                }
-            }
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvTeacherList.SelectedRows.Count > 0)
-            {
-                var row = dgvTeacherList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var teacher = GetTeacher(dgvTeacherList.Rows[row]);
-                    if (teacher != null)
-                    {
-                        if (MessageBox.Show($"Are you sure you want to delete {teacher.FirstName}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
-                        {
-                            _teacherBLL.Remove(teacher.TeacherID);
-                            MessageBox.Show("The selected User has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            RefreshList();
-                        }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        TeacherCreateForm teacherUpdate = new TeacherCreateForm(teacher);
+                        teacherUpdate.StartPosition = FormStartPosition.CenterParent;
+                        teacherUpdate.ShowDialog();
                     }
                 }
             }

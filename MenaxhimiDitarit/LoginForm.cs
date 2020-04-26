@@ -45,13 +45,15 @@ namespace MenaxhimiDitarit
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
+            //expiresdate
+
             if (username.Trim() != "" && password != "") {
                 Users user = AdministrationBLL.Login(username, password);
 
                 if (user != null) {
                     UserSession.GetUser = user;
 
-                    if (user.UserName == "admin") {
+                    if (user.RoleID == 1) {
                         AdminMainForm adminForm = new AdminMainForm();
                         this.Hide();
                         adminForm.ShowDialog();

@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.DirectorForms
     public partial class UserListForm : Form
     {
         private readonly UsersBLL _usersBLL;
-        private List<Users> _users = null;
+        private List<Users> MyUsers = null;
 
         public UserListForm()
         {
@@ -27,8 +27,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void RefreshList()
         {
-            _users = _usersBLL.GetAll();
-            dgvUserList.DataSource = _users;
+            MyUsers = _usersBLL.GetAll();
+            dgvUserList.DataSource = MyUsers;
         }
 
         private Users GetUser(GridViewRowInfo userRow)
@@ -75,7 +75,7 @@ namespace MenaxhimiDitarit.DirectorForms
             {
                 if (txtSearchUserByNU.Text.Trim().Length > 0)
                 {
-                    var findUsersByNU = _users.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text) || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
+                    var findUsersByNU = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text) || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
 
                     dgvUserList.DataSource = findUsersByNU;
                 }
@@ -96,8 +96,9 @@ namespace MenaxhimiDitarit.DirectorForms
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
                     {
-                        UserCreateForm userCreate = new UserCreateForm(user);
-                        userCreate.ShowDialog();
+                        UserCreateForm userUpdate = new UserCreateForm(user);
+                        userUpdate.StartPosition = FormStartPosition.CenterParent;
+                        userUpdate.ShowDialog();
                     }
                 }
             }
@@ -121,7 +122,7 @@ namespace MenaxhimiDitarit.DirectorForms
                             == DialogResult.OK)
                         {
                             _usersBLL.Remove(user.UserID);
-                            MessageBox.Show("The selected User has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"User: {user.UserName} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

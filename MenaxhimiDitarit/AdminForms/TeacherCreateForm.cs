@@ -17,14 +17,17 @@ namespace MenaxhimiDitarit
     {
         private readonly TeacherBLL _teacherBLL;
         private Teacher _teacher;
-        private readonly bool update = false;
+        private List<Teacher> MyTeachers;
+        private bool update = false;
 
         public TeacherCreateForm()
         {
             InitializeComponent();
 
             _teacherBLL = new TeacherBLL();
+            MyTeachers = _teacherBLL.GetAll();
             update = false;
+            rbtnMale.Checked = true;
         }
 
         public TeacherCreateForm(Teacher teacher)
@@ -34,8 +37,10 @@ namespace MenaxhimiDitarit
             _teacherBLL = new TeacherBLL();
             this._teacher = teacher;
             PopulateForm(this._teacher);
+            rbtnMale.Checked = true;
         }
 
+        #region Methods
         private void PopulateForm(Teacher teacher)
         {
             txtID.Text = teacher.TeacherID.ToString();
@@ -67,7 +72,21 @@ namespace MenaxhimiDitarit
             return age;
         }
 
-        private bool CheckTextBox(string reg, TextBox textBox)
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
+        private bool CheckEmail(string reg, TextBox textBox)
         {
             Regex regex = new Regex(reg);
 
@@ -76,11 +95,12 @@ namespace MenaxhimiDitarit
             else
                 return false;
         }
+        #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            bool isEmail = CheckTextBox(@"^([\w]+)@([\w]+)\.([\w]+)$", txtEmail);
-            if (isEmail)
+            bool isEmail = CheckEmail(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+            if (isEmail && CheckTextbox())
             {
                 Teacher teacher = new Teacher();
 
@@ -105,24 +125,51 @@ namespace MenaxhimiDitarit
 
                 if (!update)
                 {
-                    bool isRegistred = _teacherBLL.Add(teacher);
+                    var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
 
-                    if (isRegistred)
+                    if (temp.Count > 0)
                     {
-                        MessageBox.Show("Teacher registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
+                            "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            teacher = null;
+                            update = false;
+                            txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = ""; txtPhoneNo.Text = ""; txtQualification.Text = "";
+                        }
+                        else
+                        {
+                            bool isRegistred = _teacherBLL.Add(teacher);
+
+                            if (isRegistred)
+                            {
+                                MessageBox.Show($"Teacher {teacher.FirstName} {teacher.LastName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        bool isRegistred = _teacherBLL.Add(teacher);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Teacher registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Teacher Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Teacher updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
             else
-                MessageBox.Show("Please write a valid e-mail", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

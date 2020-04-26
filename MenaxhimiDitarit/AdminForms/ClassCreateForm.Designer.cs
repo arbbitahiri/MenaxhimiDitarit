@@ -41,12 +41,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbMainTeacher = new System.Windows.Forms.ComboBox();
+            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
             this.cmbSelectClass = new System.Windows.Forms.ComboBox();
             this.cmbSelectRoom = new System.Windows.Forms.ComboBox();
             this.bsrcRoom = new System.Windows.Forms.BindingSource(this.components);
-            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmitClass
@@ -185,6 +185,10 @@
             this.cmbMainTeacher.TabIndex = 57;
             this.cmbMainTeacher.ValueMember = "TeacherID";
             // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
+            // 
             // cmbSelectClass
             // 
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
@@ -193,15 +197,15 @@
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
             this.cmbSelectClass.Items.AddRange(new object[] {
-            "Class 1",
-            "Class 2",
-            "Class 3",
-            "Class 4",
-            "Class 5",
-            "Class 6",
-            "Class 7",
-            "Class 8",
-            "Class 9"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
             this.cmbSelectClass.Location = new System.Drawing.Point(290, 238);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
@@ -226,10 +230,6 @@
             // 
             this.bsrcRoom.DataSource = typeof(MenaxhimiDitarit.BO.Room);
             // 
-            // bsrcTeacher
-            // 
-            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
-            // 
             // ClassCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,8 +253,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassCreateForm";
             this.Text = "ClassCreateForm";
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

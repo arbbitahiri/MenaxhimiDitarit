@@ -16,6 +16,7 @@ namespace MenaxhimiDitarit.DirectorForms
     {
         private readonly RoleBLL _rolesBLL;
         private Roles _role;
+        private List<Roles> MyRoles;
         private bool update = false;
 
         public RoleCreateForm()
@@ -23,6 +24,7 @@ namespace MenaxhimiDitarit.DirectorForms
             InitializeComponent();
 
             _rolesBLL = new RoleBLL();
+            MyRoles = _rolesBLL.GetAll();
             update = false;
         }
 
@@ -31,9 +33,10 @@ namespace MenaxhimiDitarit.DirectorForms
             InitializeComponent();
 
             _rolesBLL = new RoleBLL();
-            this._role = role;
-            update = this._role != null;
-            PopulateForm(this._role);
+            MyRoles = _rolesBLL.GetAll();
+            _role = role;
+            update = _role != null;
+            PopulateForm(_role);
         }
 
         private void PopulateForm(Roles role)
@@ -56,23 +59,30 @@ namespace MenaxhimiDitarit.DirectorForms
             if (!update)
                 role.LUN++;
             else if (update)
-                role.LUN = ++this._role.LUN;
+                role.LUN = ++_role.LUN;
 
             if (!update)
             {
-                bool isRegistred = _rolesBLL.Add(role);
+                var temp = MyRoles.Where(t => t.RoleName == txtRoleName.Text).ToList();
 
-                if (isRegistred)
-                {
-                    MessageBox.Show("Role registered successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Role exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _rolesBLL.Add(role);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("Role registered successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Role Updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Role updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

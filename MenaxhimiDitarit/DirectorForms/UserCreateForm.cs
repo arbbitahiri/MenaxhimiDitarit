@@ -16,20 +16,24 @@ namespace MenaxhimiDitarit.DirectorForms
     {
         private readonly UsersBLL _usersBLL;
         private Users _user;
-        private readonly bool update = false;
+        private List<Users> MyUsers;
+        private bool update = false;
 
         private readonly RoleBLL _roleBLL;
-        private readonly List<Roles> roles;
+        private readonly List<Roles> MyRoles;
 
         public UserCreateForm()
         {
             InitializeComponent();
 
             _usersBLL = new UsersBLL();
-            update = false;
             _roleBLL = new RoleBLL();
-            roles = _roleBLL.GetAll();
-            cmbRoles.DataSource = roles;
+
+            MyUsers = _usersBLL.GetAll();
+            MyRoles = _roleBLL.GetAll();
+            cmbRoles.DataSource = MyRoles;
+
+            update = false;
         }
 
         public UserCreateForm(Users user)
@@ -37,13 +41,13 @@ namespace MenaxhimiDitarit.DirectorForms
             InitializeComponent();
 
             _usersBLL = new UsersBLL();
-            this._user = user;
+            _user = user;
             _roleBLL = new RoleBLL();
-            roles = _roleBLL.GetAll();
-            cmbRoles.DataSource = roles;
+            MyRoles = _roleBLL.GetAll();
+            cmbRoles.DataSource = MyRoles;
 
-            update = this._user != null;
-            PopulateForm(this._user);
+            update = _user != null;
+            PopulateForm(_user);
         }
 
         private void PopulateForm(Users user)
@@ -53,7 +57,7 @@ namespace MenaxhimiDitarit.DirectorForms
             txtLastName.Text = user.LastName;
             txtUsername.Text = user.UserName;
             txtPassword.Text = user.UserPassword;
-            cmbRoles.SelectedItem = roles.FirstOrDefault(f => f.RoleID == user.RoleID);
+            cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -83,18 +87,26 @@ namespace MenaxhimiDitarit.DirectorForms
             if (!update)
                 user.LUN++;
             else if (update)
-                user.LUN = ++this._user.LUN;
+                user.LUN = ++_user.LUN;
 
             if (!update)
             {
-                bool isRegistred = _usersBLL.Add(user);
+                var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
-                if (isRegistred) {
-                    MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _usersBLL.Add(user);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else {
                 MessageBox.Show("User Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

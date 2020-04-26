@@ -16,10 +16,11 @@ namespace MenaxhimiDitarit
     {
         private readonly SubjectBLL _subjectBLL;
         private Subject _subject;
+        private List<Subject> MySubjects;
         private readonly bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
-        private List<Teacher> _teacher;
+        private List<Teacher> MyTeachers;
 
         public SubjectCreateForm()
         {
@@ -28,8 +29,9 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
-            _teacher = _teacherBLL.GetAll();
-            cmbTeacher.DataSource = _teacher;
+            MySubjects = _subjectBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+            cmbTeacher.DataSource = MyTeachers;
 
             update = false;
         }
@@ -41,8 +43,8 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
-            _teacher = _teacherBLL.GetAll();
-            cmbTeacher.DataSource = _teacher;
+            MyTeachers = _teacherBLL.GetAll();
+            cmbTeacher.DataSource = MyTeachers;
 
             _subject = subject;
             update = this._subject != null;
@@ -55,7 +57,7 @@ namespace MenaxhimiDitarit
             txtSubjectTitle.Text = subject.SubjectTitle;
             txtSubjectBook.Text = subject.Book;
             txtBookAuthor.Text = subject.Book_Author;
-            cmbTeacher.SelectedItem = _teacher.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
+            cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -79,19 +81,26 @@ namespace MenaxhimiDitarit
 
             if (!update)
             {
-                bool isRegistred = _subjectBLL.Add(subject);
+                var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
-                if (isRegistred)
-                {
-                    MessageBox.Show("Subject registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _subjectBLL.Add(subject);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Subject Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subject updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }

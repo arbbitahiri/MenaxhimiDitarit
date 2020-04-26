@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit
     public partial class SubjectListForm : Form
     {
         private readonly SubjectBLL _subjectBLL;
-        private List<Subject> _subject;
+        private List<Subject> MySubjects;
 
         public SubjectListForm()
         {
@@ -27,8 +27,8 @@ namespace MenaxhimiDitarit
 
         private void RefreshList()
         {
-            _subject = _subjectBLL.GetAll();
-            dgvSubjectList.DataSource = _subject;
+            MySubjects = _subjectBLL.GetAll();
+            dgvSubjectList.DataSource = MySubjects;
         }
 
         private Subject GetSubject(GridViewRowInfo subjectRow)
@@ -77,7 +77,7 @@ namespace MenaxhimiDitarit
             {
                 if (txtSearchSubject.Text.Trim().Length > 0)
                 {
-                    var findSubject = _subject.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Book.Contains(txtSearchSubject.Text) || f.Book_Author.Contains(txtSearchSubject.Text)).ToList();
+                    var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Book.Contains(txtSearchSubject.Text) || f.Book_Author.Contains(txtSearchSubject.Text)).ToList();
 
                     dgvSubjectList.DataSource = findSubject;
                 }
@@ -99,6 +99,7 @@ namespace MenaxhimiDitarit
                     if (subject != null)
                     {
                         SubjectCreateForm subjectUpdate = new SubjectCreateForm(subject);
+                        subjectUpdate.StartPosition = FormStartPosition.CenterParent;
                         subjectUpdate.ShowDialog();
                     }
                 }
@@ -119,7 +120,7 @@ namespace MenaxhimiDitarit
                             == DialogResult.OK)
                         {
                             _subjectBLL.Remove(subject.SubjectID);
-                            MessageBox.Show("The selected Subject has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbSelectTime = new System.Windows.Forms.ComboBox();
             this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
             this.cmbSelectClass = new System.Windows.Forms.ComboBox();
@@ -48,6 +49,10 @@
             this.txtYear = new System.Windows.Forms.TextBox();
             this.btnSubmitClass = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
+            this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSelectTime
@@ -61,7 +66,10 @@
             this.cmbSelectTime.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
+            "3",
+            "4",
+            "5",
+            "6"});
             this.cmbSelectTime.Location = new System.Drawing.Point(296, 247);
             this.cmbSelectTime.Name = "cmbSelectTime";
             this.cmbSelectTime.Size = new System.Drawing.Size(181, 24);
@@ -71,48 +79,32 @@
             // cmbSelectSubject
             // 
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectSubject.DataSource = this.bsrcSubject;
+            this.cmbSelectSubject.DisplayMember = "SubjectTitle";
             this.cmbSelectSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSelectSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
-            this.cmbSelectSubject.Items.AddRange(new object[] {
-            "Class 1",
-            "Class 2",
-            "Class 3",
-            "Class 4",
-            "Class 5",
-            "Class 6",
-            "Class 7",
-            "Class 8",
-            "Class 9"});
             this.cmbSelectSubject.Location = new System.Drawing.Point(296, 209);
             this.cmbSelectSubject.Name = "cmbSelectSubject";
             this.cmbSelectSubject.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectSubject.TabIndex = 68;
+            this.cmbSelectSubject.ValueMember = "SubjectID";
             // 
             // cmbSelectClass
             // 
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbSelectClass.DisplayMember = "FullName";
+            this.cmbSelectClass.DataSource = this.bsrcClass;
+            this.cmbSelectClass.DisplayMember = "ClassNo";
             this.cmbSelectClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSelectClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
-            this.cmbSelectClass.Items.AddRange(new object[] {
-            "Class 1",
-            "Class 2",
-            "Class 3",
-            "Class 4",
-            "Class 5",
-            "Class 6",
-            "Class 7",
-            "Class 8",
-            "Class 9"});
             this.cmbSelectClass.Location = new System.Drawing.Point(296, 172);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectClass.TabIndex = 69;
-            this.cmbSelectClass.ValueMember = "TeacherID";
+            this.cmbSelectClass.ValueMember = "ClassID";
             // 
             // lblTime
             // 
@@ -304,7 +296,15 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ClassScheduleCreateForm
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
+            // 
+            // bsrcClass
+            // 
+            this.bsrcClass.DataSource = typeof(MenaxhimiDitarit.BO.Class);
+            // 
+            // ClassScheduleUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,8 +331,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ClassScheduleCreateForm";
+            this.Name = "ClassScheduleUpdateForm";
             this.Text = "ClassScheduleCreateForm";
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +362,7 @@
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.Button btnSubmitClass;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.BindingSource bsrcSubject;
+        private System.Windows.Forms.BindingSource bsrcClass;
     }
 }

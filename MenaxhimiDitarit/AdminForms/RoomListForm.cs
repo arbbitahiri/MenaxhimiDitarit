@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.AdminForms
     public partial class RoomListForm : Form
     {
         private readonly RoomBLL _roomBLL;
-        private List<Room> _room;
+        private List<Room> MyRooms;
 
         public RoomListForm()
         {
@@ -27,8 +27,8 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void RefreshList()
         {
-            _room = _roomBLL.GetAll();
-            dgvRoomList.DataSource = _room;
+            MyRooms = _roomBLL.GetAll();
+            dgvRoomList.DataSource = MyRooms;
         }
 
         private Room GetRoom(GridViewRowInfo roomRow)
@@ -76,7 +76,7 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 if (txtSearchSubject.Text.Trim().Length > 0)
                 {
-                    var findRoom = _room.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
+                    var findRoom = MyRooms.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
 
                     dgvRoomList.DataSource = findRoom;
                 }
@@ -98,6 +98,7 @@ namespace MenaxhimiDitarit.AdminForms
                     if (room != null)
                     {
                         RoomCreateForm roomUpdate = new RoomCreateForm(room);
+                        roomUpdate.StartPosition = FormStartPosition.CenterParent;
                         roomUpdate.ShowDialog();
                     }
                 }
@@ -114,11 +115,11 @@ namespace MenaxhimiDitarit.AdminForms
                     var room = GetRoom(dgvRoomList.Rows[row]);
                     if (room != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {room.RoomID}. {room.RoomType}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                        if (MessageBox.Show($"Are you sure you want to delete {room.RoomID}. {room.RoomNo} - {room.RoomType}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                             == DialogResult.OK)
                         {
                             _roomBLL.Remove(room.RoomID);
-                            MessageBox.Show("The selected Subject has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Room: {room.RoomNo} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

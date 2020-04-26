@@ -37,6 +37,7 @@
             this.lblRole = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.bsrcRole = new System.Windows.Forms.BindingSource(this.components);
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,8 +54,7 @@
             this.lblExpireDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dtpExpireDate = new System.Windows.Forms.DateTimePicker();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -143,7 +143,7 @@
             // cmbRoles
             // 
             this.cmbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbRoles.DataSource = this.roleBindingSource;
+            this.cmbRoles.DataSource = this.bsrcRole;
             this.cmbRoles.DisplayMember = "RoleName";
             this.cmbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,6 +154,10 @@
             this.cmbRoles.Size = new System.Drawing.Size(181, 24);
             this.cmbRoles.TabIndex = 6;
             this.cmbRoles.ValueMember = "RoleID";
+            // 
+            // bsrcRole
+            // 
+            this.bsrcRole.DataSource = typeof(MenaxhimiDitarit.BO.Roles);
             // 
             // txtFirstName
             // 
@@ -317,10 +321,6 @@
             this.dtpExpireDate.Size = new System.Drawing.Size(180, 22);
             this.dtpExpireDate.TabIndex = 5;
             // 
-            // roleBindingSource
-            // 
-            this.roleBindingSource.DataSource = typeof(MenaxhimiDitarit.BO.Roles);
-            // 
             // UserCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +354,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserCreateForm";
             this.Text = "UserCreateForm";
-            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,6 +386,6 @@
         private System.Windows.Forms.Label lblExpireDate;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DateTimePicker dtpExpireDate;
-        private System.Windows.Forms.BindingSource roleBindingSource;
+        private System.Windows.Forms.BindingSource bsrcRole;
     }
 }

@@ -16,6 +16,7 @@ namespace MenaxhimiDitarit.AdminForms
     {
         private readonly ClassBLL _classBLL;
         private Class _class;
+        private List<Class> MyClass;
         private readonly bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
@@ -34,6 +35,7 @@ namespace MenaxhimiDitarit.AdminForms
 
             _teacher = _teacherBLL.GetAll();
             _room = _roomBLL.GetAll();
+            MyClass = _classBLL.GetAll();
 
             cmbMainTeacher.DataSource = _teacher;
             cmbSelectRoom.DataSource = _room;
@@ -75,7 +77,7 @@ namespace MenaxhimiDitarit.AdminForms
 
             classes.ClassID = int.Parse(txtID.Text);
             classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
-            classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedIndex + 1);
+            classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
             classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
             classes.InsertBy = UserSession.GetUser.UserName;
             classes.InsertDate = DateTime.Now;
@@ -89,15 +91,22 @@ namespace MenaxhimiDitarit.AdminForms
 
             if (!update)
             {
-                bool isRegistred = _classBLL.Add(classes);
+                var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
-                if (isRegistred)
-                {
-                    MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _classBLL.Add(classes);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

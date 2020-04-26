@@ -36,10 +36,8 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                string r = e.Message;
-
                 return false;
             }
         }

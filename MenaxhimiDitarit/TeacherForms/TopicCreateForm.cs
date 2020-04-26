@@ -16,13 +16,14 @@ namespace MenaxhimiDitarit.TeacherForms
     {
         private readonly TopicBLL _topicBLL;
         private Topics _topics;
-        private readonly bool update = false;
+        private List<Topics> MyTopics;
+        private bool update = false;
 
         private readonly SubjectBLL _subjectBLL;
-        private readonly List<Subject> _subject;
+        private readonly List<Subject> MySubjects;
 
         private readonly ClassBLL _classBLL;
-        private readonly List<Class> _class;
+        private readonly List<Class> MyClasses;
 
         public TopicCreateForm()
         {
@@ -34,11 +35,13 @@ namespace MenaxhimiDitarit.TeacherForms
 
             update = false;
 
-            _subject = _subjectBLL.GetAll();
-            _class = _classBLL.GetAll();
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
 
-            cmbSelectClass.DataSource = _class;
-            cmbSelectSubject.DataSource = _subject;
+            cmbSelectClass.DataSource = MyClasses;
+            cmbSelectSubject.DataSource = MySubjects;
+
+            dtpSelectDate.Enabled = false;
         }
 
         public TopicCreateForm(Topics topic)
@@ -51,21 +54,22 @@ namespace MenaxhimiDitarit.TeacherForms
 
             _topics = topic;
 
-            _subject = _subjectBLL.GetAll();
-            _class = _classBLL.GetAll();
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
 
-            cmbSelectClass.DataSource = _class;
-            cmbSelectSubject.DataSource = _subject;
+            cmbSelectClass.DataSource = MyClasses;
+            cmbSelectSubject.DataSource = MySubjects;
 
             update = _topics != null;
+            dtpSelectDate.Enabled = false;
             PopulateForm(topic);
         }
 
         private void PopulateForm(Topics topic)
         {
             txtID.Text = topic.TopicID.ToString();
-            cmbSelectClass.SelectedItem = _class.FirstOrDefault(f => f.ClassID == topic.ClassID);
-            cmbSelectSubject.SelectedItem = _subject.FirstOrDefault(f => f.SubjectID == topic.SubjectID);
+            cmbSelectClass.SelectedItem = MyClasses.FirstOrDefault(f => f.ClassID == topic.ClassID);
+            cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == topic.SubjectID);
             dtpSelectDate.Value = topic.Date;
             cmbSelectTime.SelectedItem = topic.Time;
             txtContent.Text = topic.Content;
@@ -93,15 +97,24 @@ namespace MenaxhimiDitarit.TeacherForms
 
             if (!update)
             {
-                bool isRegistred = _topicBLL.Add(topic);
+                var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
+                && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
-                if (isRegistred)
-                {
-                    MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+                if (temp.Count > 0)
+                    MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    bool isRegistred = _topicBLL.Add(topic);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

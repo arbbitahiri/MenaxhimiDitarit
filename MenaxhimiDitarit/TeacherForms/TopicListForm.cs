@@ -16,13 +16,13 @@ namespace MenaxhimiDitarit.TeacherForms
     public partial class TopicListForm : Form
     {
         private readonly TopicBLL _topicBLL;
-        private List<Topics> _topic;
+        private List<Topics> MyTopics;
 
         private readonly SubjectBLL _subjectBLL;
-        private readonly List<Subject> _subject;
+        private readonly List<Subject> MySubjects;
 
         private readonly ClassBLL _classBLL;
-        private readonly List<Class> _class;
+        private readonly List<Class> MyClasses;
 
         public TopicListForm()
         {
@@ -32,17 +32,17 @@ namespace MenaxhimiDitarit.TeacherForms
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
-            _subject = _subjectBLL.GetAll();
-            cmbSelectSubject.DataSource = _subject;
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
 
-            _class = _classBLL.GetAll();
-            cmbSelectClass.DataSource = _class;
+            MyClasses = _classBLL.GetAll();
+            cmbSelectClass.DataSource = MyClasses;
         }
 
         private void RefreshList()
         {
-            _topic = _topicBLL.GetAll();
-            dgvTopicList.DataSource = _topic;
+            MyTopics = _topicBLL.GetAll();
+            dgvTopicList.DataSource = MyTopics;
         }
 
         private Topics GetTopic(GridViewRowInfo topicRow)
@@ -88,7 +88,7 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
                 {
-                    var findTopic = _topic.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
+                    var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
 
                     dgvTopicList.DataSource = findTopic;
                 }
@@ -110,6 +110,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     if (topic != null)
                     {
                         TopicCreateForm updateTopic = new TopicCreateForm(topic);
+                        updateTopic.StartPosition = FormStartPosition.CenterParent;
                         updateTopic.ShowDialog();
                     }
                 }
@@ -130,7 +131,7 @@ namespace MenaxhimiDitarit.TeacherForms
                             == DialogResult.OK)
                         {
                             _topicBLL.Remove(topic.TopicID);
-                            MessageBox.Show("The selected Topic has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("The selected topic has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

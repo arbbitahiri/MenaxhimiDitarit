@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassScheduletList));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn11 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn12 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn13 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn14 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn9 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn10 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn11 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn12 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn15 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn7 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn8 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn9 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn5 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn6 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn7 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn8 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn10 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.bsrcScheduleList = new System.Windows.Forms.BindingSource(this.components);
             this.cmsScheduleContext = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -56,11 +56,13 @@
             this.cmbSelectClass = new System.Windows.Forms.ComboBox();
             this.lblSelectClass = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).BeginInit();
             this.cmsScheduleContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList.MasterTemplate)).BeginInit();
             this.grbSearchSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
             this.SuspendLayout();
             // 
             // bsrcScheduleList
@@ -98,91 +100,91 @@
             this.dgvScheduleList.MasterTemplate.AllowAddNewRow = false;
             this.dgvScheduleList.MasterTemplate.AllowCellContextMenu = false;
             this.dgvScheduleList.MasterTemplate.AllowColumnReorder = false;
-            gridViewDecimalColumn11.DataType = typeof(int);
-            gridViewDecimalColumn11.EnableExpressionEditor = false;
-            gridViewDecimalColumn11.FieldName = "ScheduleID";
-            gridViewDecimalColumn11.HeaderText = "ScheduleID";
-            gridViewDecimalColumn11.IsAutoGenerated = true;
-            gridViewDecimalColumn11.Name = "ScheduleID";
-            gridViewDecimalColumn11.Width = 75;
-            gridViewDecimalColumn12.DataType = typeof(int);
-            gridViewDecimalColumn12.EnableExpressionEditor = false;
-            gridViewDecimalColumn12.FieldName = "ClassID";
-            gridViewDecimalColumn12.HeaderText = "ClassID";
-            gridViewDecimalColumn12.IsAutoGenerated = true;
-            gridViewDecimalColumn12.Name = "ClassID";
-            gridViewDecimalColumn12.Width = 75;
-            gridViewDecimalColumn13.DataType = typeof(int);
-            gridViewDecimalColumn13.EnableExpressionEditor = false;
-            gridViewDecimalColumn13.FieldName = "SubjectID";
-            gridViewDecimalColumn13.HeaderText = "SubjectID";
-            gridViewDecimalColumn13.IsAutoGenerated = true;
-            gridViewDecimalColumn13.Name = "SubjectID";
-            gridViewDecimalColumn13.Width = 75;
-            gridViewDecimalColumn14.DataType = typeof(int);
-            gridViewDecimalColumn14.EnableExpressionEditor = false;
-            gridViewDecimalColumn14.FieldName = "Time";
-            gridViewDecimalColumn14.HeaderText = "Time";
-            gridViewDecimalColumn14.IsAutoGenerated = true;
-            gridViewDecimalColumn14.Name = "Time";
-            gridViewDateTimeColumn9.DataType = typeof(string);
-            gridViewDateTimeColumn9.EnableExpressionEditor = false;
-            gridViewDateTimeColumn9.FieldName = "Date";
-            gridViewDateTimeColumn9.HeaderText = "Date";
-            gridViewDateTimeColumn9.IsAutoGenerated = true;
-            gridViewDateTimeColumn9.Name = "Date";
-            gridViewDateTimeColumn9.Width = 100;
-            gridViewDateTimeColumn10.DataType = typeof(int);
-            gridViewDateTimeColumn10.EnableExpressionEditor = false;
-            gridViewDateTimeColumn10.FieldName = "Year";
-            gridViewDateTimeColumn10.HeaderText = "Year";
-            gridViewDateTimeColumn10.IsAutoGenerated = true;
-            gridViewDateTimeColumn10.Name = "Year";
-            gridViewDateTimeColumn10.Width = 75;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "InsertBy";
-            gridViewTextBoxColumn5.HeaderText = "InsertBy";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "InsertBy";
-            gridViewTextBoxColumn5.Width = 85;
-            gridViewDateTimeColumn11.EnableExpressionEditor = false;
-            gridViewDateTimeColumn11.FieldName = "InsertDate";
-            gridViewDateTimeColumn11.HeaderText = "InsertDate";
-            gridViewDateTimeColumn11.IsAutoGenerated = true;
-            gridViewDateTimeColumn11.Name = "InsertDate";
-            gridViewDateTimeColumn11.Width = 100;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "LUB";
-            gridViewTextBoxColumn6.HeaderText = "LUB";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "LUB";
-            gridViewTextBoxColumn6.Width = 85;
-            gridViewDateTimeColumn12.EnableExpressionEditor = false;
-            gridViewDateTimeColumn12.FieldName = "LUD";
-            gridViewDateTimeColumn12.HeaderText = "LUD";
-            gridViewDateTimeColumn12.IsAutoGenerated = true;
-            gridViewDateTimeColumn12.Name = "LUD";
-            gridViewDateTimeColumn12.Width = 100;
-            gridViewDecimalColumn15.DataType = typeof(int);
-            gridViewDecimalColumn15.EnableExpressionEditor = false;
-            gridViewDecimalColumn15.FieldName = "LUN";
-            gridViewDecimalColumn15.HeaderText = "LUN";
-            gridViewDecimalColumn15.IsAutoGenerated = true;
-            gridViewDecimalColumn15.Name = "LUN";
+            gridViewDecimalColumn6.DataType = typeof(int);
+            gridViewDecimalColumn6.EnableExpressionEditor = false;
+            gridViewDecimalColumn6.FieldName = "ScheduleID";
+            gridViewDecimalColumn6.HeaderText = "ScheduleID";
+            gridViewDecimalColumn6.IsAutoGenerated = true;
+            gridViewDecimalColumn6.Name = "ScheduleID";
+            gridViewDecimalColumn6.Width = 75;
+            gridViewDecimalColumn7.DataType = typeof(int);
+            gridViewDecimalColumn7.EnableExpressionEditor = false;
+            gridViewDecimalColumn7.FieldName = "ClassID";
+            gridViewDecimalColumn7.HeaderText = "ClassID";
+            gridViewDecimalColumn7.IsAutoGenerated = true;
+            gridViewDecimalColumn7.Name = "ClassID";
+            gridViewDecimalColumn7.Width = 75;
+            gridViewDecimalColumn8.DataType = typeof(int);
+            gridViewDecimalColumn8.EnableExpressionEditor = false;
+            gridViewDecimalColumn8.FieldName = "SubjectID";
+            gridViewDecimalColumn8.HeaderText = "SubjectID";
+            gridViewDecimalColumn8.IsAutoGenerated = true;
+            gridViewDecimalColumn8.Name = "SubjectID";
+            gridViewDecimalColumn8.Width = 75;
+            gridViewDecimalColumn9.DataType = typeof(int);
+            gridViewDecimalColumn9.EnableExpressionEditor = false;
+            gridViewDecimalColumn9.FieldName = "Time";
+            gridViewDecimalColumn9.HeaderText = "Time";
+            gridViewDecimalColumn9.IsAutoGenerated = true;
+            gridViewDecimalColumn9.Name = "Time";
+            gridViewDateTimeColumn5.DataType = typeof(string);
+            gridViewDateTimeColumn5.EnableExpressionEditor = false;
+            gridViewDateTimeColumn5.FieldName = "Date";
+            gridViewDateTimeColumn5.HeaderText = "Date";
+            gridViewDateTimeColumn5.IsAutoGenerated = true;
+            gridViewDateTimeColumn5.Name = "Date";
+            gridViewDateTimeColumn5.Width = 100;
+            gridViewDateTimeColumn6.DataType = typeof(int);
+            gridViewDateTimeColumn6.EnableExpressionEditor = false;
+            gridViewDateTimeColumn6.FieldName = "Year";
+            gridViewDateTimeColumn6.HeaderText = "Year";
+            gridViewDateTimeColumn6.IsAutoGenerated = true;
+            gridViewDateTimeColumn6.Name = "Year";
+            gridViewDateTimeColumn6.Width = 75;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "InsertBy";
+            gridViewTextBoxColumn3.HeaderText = "InsertBy";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "InsertBy";
+            gridViewTextBoxColumn3.Width = 85;
+            gridViewDateTimeColumn7.EnableExpressionEditor = false;
+            gridViewDateTimeColumn7.FieldName = "InsertDate";
+            gridViewDateTimeColumn7.HeaderText = "InsertDate";
+            gridViewDateTimeColumn7.IsAutoGenerated = true;
+            gridViewDateTimeColumn7.Name = "InsertDate";
+            gridViewDateTimeColumn7.Width = 100;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "LUB";
+            gridViewTextBoxColumn4.HeaderText = "LUB";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "LUB";
+            gridViewTextBoxColumn4.Width = 85;
+            gridViewDateTimeColumn8.EnableExpressionEditor = false;
+            gridViewDateTimeColumn8.FieldName = "LUD";
+            gridViewDateTimeColumn8.HeaderText = "LUD";
+            gridViewDateTimeColumn8.IsAutoGenerated = true;
+            gridViewDateTimeColumn8.Name = "LUD";
+            gridViewDateTimeColumn8.Width = 100;
+            gridViewDecimalColumn10.DataType = typeof(int);
+            gridViewDecimalColumn10.EnableExpressionEditor = false;
+            gridViewDecimalColumn10.FieldName = "LUN";
+            gridViewDecimalColumn10.HeaderText = "LUN";
+            gridViewDecimalColumn10.IsAutoGenerated = true;
+            gridViewDecimalColumn10.Name = "LUN";
             this.dgvScheduleList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn11,
-            gridViewDecimalColumn12,
-            gridViewDecimalColumn13,
-            gridViewDecimalColumn14,
-            gridViewDateTimeColumn9,
-            gridViewDateTimeColumn10,
-            gridViewTextBoxColumn5,
-            gridViewDateTimeColumn11,
-            gridViewTextBoxColumn6,
-            gridViewDateTimeColumn12,
-            gridViewDecimalColumn15});
+            gridViewDecimalColumn6,
+            gridViewDecimalColumn7,
+            gridViewDecimalColumn8,
+            gridViewDecimalColumn9,
+            gridViewDateTimeColumn5,
+            gridViewDateTimeColumn6,
+            gridViewTextBoxColumn3,
+            gridViewDateTimeColumn7,
+            gridViewTextBoxColumn4,
+            gridViewDateTimeColumn8,
+            gridViewDecimalColumn10});
             this.dgvScheduleList.MasterTemplate.DataSource = this.bsrcScheduleList;
-            this.dgvScheduleList.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dgvScheduleList.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dgvScheduleList.Name = "dgvScheduleList";
             this.dgvScheduleList.ReadOnly = true;
             this.dgvScheduleList.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -281,24 +283,17 @@
             // cmbSelectClass
             // 
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectClass.DataSource = this.bsrcClass;
+            this.cmbSelectClass.DisplayMember = "ClassNo";
             this.cmbSelectClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSelectClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
-            this.cmbSelectClass.Items.AddRange(new object[] {
-            "Class 1",
-            "Class 2",
-            "Class 3",
-            "Class 4",
-            "Class 5",
-            "Class 6",
-            "Class 7",
-            "Class 8",
-            "Class 9"});
             this.cmbSelectClass.Location = new System.Drawing.Point(125, 27);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectClass.TabIndex = 0;
+            this.cmbSelectClass.ValueMember = "ClassID";
             // 
             // lblSelectClass
             // 
@@ -319,6 +314,10 @@
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 58;
             // 
+            // bsrcClass
+            // 
+            this.bsrcClass.DataSource = typeof(MenaxhimiDitarit.BO.Class);
+            // 
             // ClassScheduletList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).EndInit();
             this.grbSearchSchedule.ResumeLayout(false);
             this.grbSearchSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,5 +356,6 @@
         private System.Windows.Forms.ComboBox cmbSelectClass;
         private System.Windows.Forms.Label lblSelectClass;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.BindingSource bsrcClass;
     }
 }

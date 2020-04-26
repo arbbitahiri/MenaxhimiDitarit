@@ -19,7 +19,7 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly bool update = false;
 
         private readonly SubjectBLL _subjectBLL;
-        private List<Subject> _subject;
+        private List<Subject> MySubjects;
 
         public ClassScheduleUpdateForm()
         {
@@ -28,8 +28,8 @@ namespace MenaxhimiDitarit.AdminForms
             _scheduleBLL = new ClassScheduleBLL();
             _subjectBLL = new SubjectBLL();
 
-            _subject = _subjectBLL.GetAll();
-            cmbSelectSubject.DataSource = _subject;
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
 
             update = false;
         }
@@ -43,8 +43,8 @@ namespace MenaxhimiDitarit.AdminForms
 
             _schedule = schedule;
 
-            _subject = _subjectBLL.GetAll();
-            cmbSelectSubject.DataSource = _subject;
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
 
             update = _schedule != null;
 
@@ -55,47 +55,66 @@ namespace MenaxhimiDitarit.AdminForms
         {
             txtID.Text = schedule.ScheduleID.ToString();
             cmbSelectClass.SelectedItem = schedule.ClassID;
-            cmbSelectSubject.SelectedItem = _subject.FirstOrDefault(f => f.SubjectID == schedule.SubjectID);
+            cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == schedule.SubjectID);
             cmbSelectTime.SelectedItem = schedule.Time;
             cmbSelectDate.SelectedItem = schedule.Date;
         }
 
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
-            ClassSchedule schedule = new ClassSchedule();
-
-            schedule.ScheduleID = int.Parse(txtID.Text);
-            schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedIndex + 1);
-            schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedIndex + 1);
-            schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedValue.ToString());
-            schedule.Date = cmbSelectTime.SelectedValue.ToString();
-            //schedule.InsertBy = UserSession.GetUser.UserName;
-            //schedule.InsertDate = DateTime.Now;
-            schedule.LUB = UserSession.GetUser.UserName;
-            schedule.LUD = DateTime.Now;
-
-            if (!update)
-                schedule.LUN++;
-            else if (update)
-                schedule.LUN = ++_schedule.LUN;
-
-            if (!update)
+            if (CheckTextbox())
             {
-                bool isRegistred = _scheduleBLL.Add(schedule);
+                ClassSchedule schedule = new ClassSchedule();
 
-                if (isRegistred)
+                schedule.ScheduleID = int.Parse(txtID.Text);
+                schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedIndex + 1);
+                schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedIndex + 1);
+                schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedValue.ToString());
+                schedule.Date = cmbSelectTime.SelectedValue.ToString();
+                //schedule.InsertBy = UserSession.GetUser.UserName;
+                //schedule.InsertDate = DateTime.Now;
+                schedule.LUB = UserSession.GetUser.UserName;
+                schedule.LUD = DateTime.Now;
+
+                if (!update)
+                    schedule.LUN++;
+                else if (update)
+                    schedule.LUN = ++_schedule.LUN;
+
+                if (!update)
                 {
-                    MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    bool isRegistred = _scheduleBLL.Add(schedule);
+
+                    if (isRegistred)
+                    {
+                        MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show("Schedule updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
             }
             else
-            {
-                MessageBox.Show("Schedule Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+                MessageBox.Show("Plesae fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

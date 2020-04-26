@@ -17,7 +17,7 @@ namespace MenaxhimiDitarit
     public partial class ClassListForm : Form
     {
         private readonly ClassBLL _classBLL;
-        private List<Class> _class;
+        private List<Class> MyClasses;
 
         public ClassListForm()
         {
@@ -28,8 +28,8 @@ namespace MenaxhimiDitarit
 
         private void RefreshList()
         {
-            _class = _classBLL.GetAll();
-            dgvClassesList.DataSource = _class;
+            MyClasses = _classBLL.GetAll();
+            dgvClassesList.DataSource = MyClasses;
         }
 
         private Class GetClass(GridViewRowInfo classRow)
@@ -78,7 +78,7 @@ namespace MenaxhimiDitarit
             {
                 if (txtSearchClass.Text.Trim().Length > 0)
                 {
-                    var findClass = _class.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
+                    var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
 
                     dgvClassesList.DataSource = findClass;
                 }
@@ -100,6 +100,7 @@ namespace MenaxhimiDitarit
                     if (classes != null)
                     {
                         ClassCreateForm classUpdate = new ClassCreateForm(classes);
+                        classUpdate.StartPosition = FormStartPosition.CenterParent;
                         classUpdate.ShowDialog();
                     }
                 }
@@ -116,11 +117,11 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {classes.ClassNo}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                        if (MessageBox.Show($"Are you sure you want to delete class: {classes.ClassNo}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                             == DialogResult.OK)
                         {
                             _classBLL.Remove(classes.ClassID);
-                            MessageBox.Show("The selected Subject has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Class: {classes.ClassNo} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

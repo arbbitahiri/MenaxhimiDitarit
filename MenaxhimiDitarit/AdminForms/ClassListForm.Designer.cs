@@ -46,18 +46,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchClass = new System.Windows.Forms.TextBox();
-            this.dgvClassesList = new Telerik.WinControls.UI.RadGridView();
-            this.bsrcClassesList = new System.Windows.Forms.BindingSource(this.components);
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsClassContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.dgvClassesList = new Telerik.WinControls.UI.RadGridView();
+            this.bsrcClassList = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearchClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.cmsClassContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassesList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassesList.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcClassesList)).BeginInit();
-            this.cmsClassContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClassList)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearchClass
@@ -134,6 +134,30 @@
             this.txtSearchClass.TabIndex = 5;
             this.txtSearchClass.Text = "Search by ClassNo.";
             this.txtSearchClass.Click += new System.EventHandler(this.txtSearchClass_Click);
+            // 
+            // cmsClassContext
+            // 
+            this.cmsClassContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsClassContext.Name = "cmsClassContext";
+            this.cmsClassContext.Size = new System.Drawing.Size(113, 48);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // dgvClassesList
             // 
@@ -221,7 +245,7 @@
             gridViewTextBoxColumn2,
             gridViewDateTimeColumn2,
             gridViewDecimalColumn5});
-            this.dgvClassesList.MasterTemplate.DataSource = this.bsrcClassesList;
+            this.dgvClassesList.MasterTemplate.DataSource = this.bsrcClassList;
             this.dgvClassesList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvClassesList.Name = "dgvClassesList";
             this.dgvClassesList.ReadOnly = true;
@@ -230,33 +254,9 @@
             this.dgvClassesList.TabIndex = 12;
             this.dgvClassesList.ThemeName = "CrystalDark";
             // 
-            // bsrcClassesList
+            // bsrcClassList
             // 
-            this.bsrcClassesList.DataSource = typeof(MenaxhimiDitarit.BO.Class);
-            // 
-            // cmsClassContext
-            // 
-            this.cmsClassContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.cmsClassContext.Name = "cmsClassContext";
-            this.cmsClassContext.Size = new System.Drawing.Size(181, 70);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.bsrcClassList.DataSource = typeof(MenaxhimiDitarit.BO.Class);
             // 
             // ClassListForm
             // 
@@ -273,10 +273,10 @@
             this.grbSearchClass.ResumeLayout(false);
             this.grbSearchClass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.cmsClassContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassesList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClassesList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcClassesList)).EndInit();
-            this.cmsClassContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcClassList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,11 +288,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearchClass;
-        private Telerik.WinControls.UI.RadGridView dgvClassesList;
         private System.Windows.Forms.ContextMenuStrip cmsClassContext;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.BindingSource bsrcClassesList;
         private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
+        private Telerik.WinControls.UI.RadGridView dgvClassesList;
+        private System.Windows.Forms.BindingSource bsrcClassList;
     }
 }

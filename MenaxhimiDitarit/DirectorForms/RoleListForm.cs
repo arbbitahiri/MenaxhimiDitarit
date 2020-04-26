@@ -16,19 +16,20 @@ namespace MenaxhimiDitarit.DirectorForms
     public partial class RoleListForm : Form
     {
         private readonly RoleBLL _rolesBLL;
-        private List<Roles> _roles = null;
+        private List<Roles> MyRoles = null;
 
         public RoleListForm()
         {
             InitializeComponent();
 
             _rolesBLL = new RoleBLL();
+            MyRoles = _rolesBLL.GetAll();
         }
 
         private void RefreshList()
         {
-            _roles = _rolesBLL.GetAll();
-            dgvRoleList.DataSource = _roles;
+            MyRoles = _rolesBLL.GetAll();
+            dgvRoleList.DataSource = MyRoles;
         }
 
         private Roles GetRole(GridViewRowInfo roleRow)
@@ -75,7 +76,7 @@ namespace MenaxhimiDitarit.DirectorForms
             {
                 if (dgvRoleList.SelectedRows.Count > 0)
                 {
-                    var findRole = _roles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
+                    var findRole = MyRoles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
 
                     dgvRoleList.DataSource = findRole;
                 }
@@ -96,8 +97,9 @@ namespace MenaxhimiDitarit.DirectorForms
                     var role = GetRole(dgvRoleList.Rows[row]);
                     if (role != null)
                     {
-                        RoleCreateForm roleCreate = new RoleCreateForm(role);
-                        roleCreate.ShowDialog();
+                        RoleCreateForm roleUpdate = new RoleCreateForm(role);
+                        roleUpdate.StartPosition = FormStartPosition.CenterParent;
+                        roleUpdate.ShowDialog();
                     }
                 }
             }
@@ -118,7 +120,7 @@ namespace MenaxhimiDitarit.DirectorForms
                             == DialogResult.OK)
                         {
                             _rolesBLL.Remove(role.RoleID);
-                            MessageBox.Show("The selected Role has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Role: {role.RoleName} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

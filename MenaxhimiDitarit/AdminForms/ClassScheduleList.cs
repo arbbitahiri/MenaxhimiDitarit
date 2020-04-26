@@ -16,19 +16,27 @@ namespace MenaxhimiDitarit.AdminForms
     public partial class ClassScheduletList : Form
     {
         private readonly ClassScheduleBLL _scheduleBLL;
-        private List<ClassSchedule> _schedule;
+        private List<ClassSchedule> MySchedules;
+
+
+        private readonly ClassBLL _classBLL;
+        private readonly List<Class> MyClasses;
 
         public ClassScheduletList()
         {
             InitializeComponent();
 
             _scheduleBLL = new ClassScheduleBLL();
+            _classBLL = new ClassBLL();
+
+            MyClasses = _classBLL.GetAll();
+            cmbSelectClass.DataSource = MyClasses;
         }
 
         private void RefreshList()
         {
-            _schedule = _scheduleBLL.GetAll();
-            dgvScheduleList.DataSource = _schedule;
+            MySchedules = _scheduleBLL.GetAll();
+            dgvScheduleList.DataSource = MySchedules;
         }
 
         private ClassSchedule GetSchedule(GridViewRowInfo classRow)
@@ -69,6 +77,7 @@ namespace MenaxhimiDitarit.AdminForms
                     if (schedule != null)
                     {
                         ClassScheduleUpdateForm updateSchedule = new ClassScheduleUpdateForm(schedule);
+                        updateSchedule.StartPosition = FormStartPosition.CenterParent;
                         updateSchedule.ShowDialog();
                     }
                 }
@@ -91,7 +100,7 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
                 {
-                    var findSchedule = _schedule.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedIndex + 1) && f.Date == cmbSelectDay.SelectedItem.ToString()).ToList();
+                    var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == cmbSelectDay.SelectedItem.ToString()).ToList();
 
                     dgvScheduleList.DataSource = findSchedule;
                 }
