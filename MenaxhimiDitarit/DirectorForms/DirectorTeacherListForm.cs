@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.DirectorForms
     public partial class DirectorTeacherListForm : Form
     {
         private readonly TeacherBLL _teacherBLL;
-        private List<Teacher> _teacher;
+        private List<Teacher> MyTeachers;
 
         public DirectorTeacherListForm()
         {
@@ -27,8 +27,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void RefreshList()
         {
-            _teacher = _teacherBLL.GetAll();
-            dgvTeacherListD.DataSource = _teacher;
+            MyTeachers = _teacherBLL.GetAll();
+            dgvTeacherListD.DataSource = MyTeachers;
         }
 
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
@@ -46,17 +46,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     DayofBirth = (DateTime)teacherRow.Cells[6].Value,
                     Email = (string)teacherRow.Cells[7].Value,
                     PhoneNo = (string)teacherRow.Cells[8].Value,
-                    InsertBy = (string)teacherRow.Cells[9].Value,
-                    InsertDate = (DateTime)teacherRow.Cells[10].Value,
-                    LUB = (string)teacherRow.Cells[11].Value,
-                    LUD = (DateTime)teacherRow.Cells[12].Value,
-                    LUN = (int)teacherRow.Cells[13].Value
+                    InsertBy = (string)teacherRow.Cells[10].Value,
+                    InsertDate = (DateTime)teacherRow.Cells[11].Value,
+                    LUB = (string)teacherRow.Cells[12].Value,
+                    LUD = (DateTime)teacherRow.Cells[13].Value,
+                    LUN = (int)teacherRow.Cells[14].Value
                 };
 
                 return teacher;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                string rrrrr = ex.Message;
+
                 return null;
             }
         }
@@ -82,7 +84,7 @@ namespace MenaxhimiDitarit.DirectorForms
             {
                 if (txtSearchName.Text.Trim().Length > 0)
                 {
-                    var findTeacher = _teacher.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
+                    var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
 
                     dgvTeacherListD.DataSource = findTeacher;
                 }
@@ -103,8 +105,9 @@ namespace MenaxhimiDitarit.DirectorForms
                     var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
                     if (teacher != null)
                     {
-                        TeacherCreateForm teacherCreate = new TeacherCreateForm(teacher);
-                        teacherCreate.ShowDialog();
+                        TeacherCreateForm teacherUpdate = new TeacherCreateForm(teacher);
+                        teacherUpdate.StartPosition = FormStartPosition.CenterParent;
+                        teacherUpdate.ShowDialog();
                     }
                 }
             }

@@ -15,8 +15,8 @@ namespace MenaxhimiDitarit.DirectorForms
     public partial class RoleCreateForm : Form
     {
         private readonly RoleBLL _rolesBLL;
-        private Roles _role;
-        private List<Roles> MyRoles;
+        private Role _role;
+        private List<Role> MyRoles;
         private bool update = false;
 
         public RoleCreateForm()
@@ -28,7 +28,7 @@ namespace MenaxhimiDitarit.DirectorForms
             update = false;
         }
 
-        public RoleCreateForm(Roles role)
+        public RoleCreateForm(Role role)
         {
             InitializeComponent();
 
@@ -39,52 +39,71 @@ namespace MenaxhimiDitarit.DirectorForms
             PopulateForm(_role);
         }
 
-        private void PopulateForm(Roles role)
+        private void PopulateForm(Role role)
         {
             txtID.Text = role.RoleID.ToString();
             txtRoleName.Text = role.RoleName;
         }
 
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Roles role = new Roles();
-
-            role.RoleID = int.Parse(txtID.Text);
-            role.RoleName = txtRoleName.Text;
-            role.InsertBy = UserSession.GetUser.UserName;
-            role.InsertDate = DateTime.Now;
-            role.LUB = UserSession.GetUser.UserName;
-            role.LUD = DateTime.Now;
-
-            if (!update)
-                role.LUN++;
-            else if (update)
-                role.LUN = ++_role.LUN;
-
-            if (!update)
+            if (CheckTextbox())
             {
-                var temp = MyRoles.Where(t => t.RoleName == txtRoleName.Text).ToList();
+                Role role = new Role();
 
-                if (temp.Count > 0)
-                    MessageBox.Show("Role exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                role.RoleID = int.Parse(txtID.Text);
+                role.RoleName = txtRoleName.Text;
+                role.InsertBy = UserSession.GetUser.UserName;
+                role.InsertDate = DateTime.Now;
+                role.LUB = UserSession.GetUser.UserName;
+                role.LUD = DateTime.Now;
+
+                if (!update)
+                    role.LUN++;
+                else if (update)
+                    role.LUN = ++_role.LUN;
+
+                if (!update)
+                {
+                    var temp = MyRoles.Where(t => t.RoleName == txtRoleName.Text).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Role exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _rolesBLL.Add(role);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Role registered successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    bool isRegistred = _rolesBLL.Add(role);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("Role registered successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Role updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             else
-            {
-                MessageBox.Show("Role updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

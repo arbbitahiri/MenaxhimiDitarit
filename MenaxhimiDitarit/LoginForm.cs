@@ -37,7 +37,6 @@ namespace MenaxhimiDitarit
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            //this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace MenaxhimiDitarit
             //expiresdate
 
             if (username.Trim() != "" && password != "") {
-                Users user = AdministrationBLL.Login(username, password);
+                User user = AdministrationBLL.Login(username, password);
 
                 if (user != null) {
                     UserSession.GetUser = user;
@@ -56,18 +55,21 @@ namespace MenaxhimiDitarit
                     if (user.RoleID == 1) {
                         AdminMainForm adminForm = new AdminMainForm();
                         this.Hide();
+                        adminForm.StartPosition = FormStartPosition.CenterScreen;
                         adminForm.ShowDialog();
                         //this.Close();
                     }
-                    else if (user.UserName == "teacher") {
+                    else if (user.RoleID == 2) {
                         TeacherMainForm teacherForm = new TeacherMainForm();
                         this.Hide();
+                        teacherForm.StartPosition = FormStartPosition.CenterScreen;
                         teacherForm.ShowDialog();
                         //this.Close();
                     }
-                    else if (user.UserName == "director") {
+                    else if (user.RoleID == 4) {
                         DirectorMainForm directorForm = new DirectorMainForm();
                         this.Hide();
+                        directorForm.StartPosition = FormStartPosition.CenterScreen;
                         directorForm.ShowDialog();
                         //this.Close();
                     }
@@ -75,10 +77,10 @@ namespace MenaxhimiDitarit
                         MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Username or Passwod is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("Please fill your credentials", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill your credentials!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)

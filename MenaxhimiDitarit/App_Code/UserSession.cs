@@ -4,6 +4,6 @@ namespace MenaxhimiDitarit
 {
     public class UserSession
     {
-        public static Users GetUser = null;
+        public static User GetUser = null;
     }
 }

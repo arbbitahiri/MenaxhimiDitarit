@@ -9,36 +9,36 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.BLL
 {
-    public class RoleBLL : IBaseCRUD<Roles>
+    public class RoleBLL : IBaseCRUD<Role>
     {
-        private readonly RolesDAL rolesDAL;
+        private readonly RoleDAL rolesDAL;
 
         public RoleBLL()
         {
-            rolesDAL = new RolesDAL();
+            rolesDAL = new RoleDAL();
         }
 
-        public bool Add(Roles model)
+        public bool Add(Role model)
         {
             return rolesDAL.Add(model);
         }
 
-        public Roles Get(int id)
+        public Role Get(int id)
         {
             return rolesDAL.Get(id);
         }
 
-        public Roles Get(Roles model)
+        public Role Get(Role model)
         {
             return rolesDAL.Get(model);
         }
 
-        public List<Roles> GetAll()
+        public List<Role> GetAll()
         {
             return rolesDAL.GetAll();
         }
 
-        public bool Remove(Roles model)
+        public bool Remove(Role model)
         {
             return rolesDAL.Remove(model);
         }
@@ -48,7 +48,7 @@ namespace MenaxhimiDitarit.BLL
             return rolesDAL.Remove(id);
         }
 
-        public bool Update(Roles model)
+        public bool Update(Role model)
         {
             return rolesDAL.Update(model);
         }

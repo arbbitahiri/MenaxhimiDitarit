@@ -157,7 +157,7 @@
             // 
             // bsrcRole
             // 
-            this.bsrcRole.DataSource = typeof(MenaxhimiDitarit.BO.Roles);
+            this.bsrcRole.DataSource = typeof(MenaxhimiDitarit.BO.Role);
             // 
             // txtFirstName
             // 

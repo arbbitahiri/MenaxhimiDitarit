@@ -9,36 +9,36 @@ using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
 {
-    public class UsersBLL : IBaseCRUD<Users>
+    public class UserBLL : IBaseCRUD<User>
     {
-        private UsersDAL dal;
+        private UserDAL dal;
 
-        public UsersBLL()
+        public UserBLL()
         {
-            dal = new UsersDAL();
+            dal = new UserDAL();
         }
 
-        public bool Add(Users model)
+        public bool Add(User model)
         {
             return dal.Add(model);
         }
 
-        public Users Get(int id)
+        public User Get(int id)
         {
             return dal.Get(id);
         }
 
-        public Users Get(Users model)
+        public User Get(User model)
         {
             return dal.Get(model);
         }
 
-        public List<Users> GetAll()
+        public List<User> GetAll()
         {
             return dal.GetAll();
         }
 
-        public bool Remove(Users model)
+        public bool Remove(User model)
         {
             return dal.Remove(model);
         }
@@ -48,7 +48,7 @@ namespace MenaxhimiDitarit.BLL
             return dal.Remove(id);
         }
 
-        public bool Update(Users model)
+        public bool Update(User model)
         {
             return dal.Update(model);
         }

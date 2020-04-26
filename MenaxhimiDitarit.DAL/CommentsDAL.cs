@@ -9,29 +9,29 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class CommentsDAL : IBaseConvert<Comments>, IBaseCRUD<Comments>
+    public class CommentsDAL : IBaseConvert<Comment>, IBaseCRUD<Comment>
     {
-        public bool Add(Comments model)
+        public bool Add(Comment model)
         {
             throw new NotImplementedException();
         }
 
-        public Comments Get(int id)
+        public Comment Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Comments Get(Comments model)
+        public Comment Get(Comment model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Comments> GetAll()
+        public List<Comment> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool Remove(Comments model)
+        public bool Remove(Comment model)
         {
             throw new NotImplementedException();
         }
@@ -41,12 +41,12 @@ namespace MenaxhimiDitarit.DAL
             throw new NotImplementedException();
         }
 
-        public Comments ToObject(SqlDataReader reader)
+        public Comment ToObject(SqlDataReader reader)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Comments model)
+        public bool Update(Comment model)
         {
             throw new NotImplementedException();
         }

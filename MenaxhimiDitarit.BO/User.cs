@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MenaxhimiDitarit.BO
 {
-    public class Users:BaseAuditObject
+    public class User:BaseAuditObject
     {
         public int UserID { get; set; }
         public string FirstName { get; set; }
@@ -15,5 +15,7 @@ namespace MenaxhimiDitarit.BO
         public string UserPassword { get; set; }
         public DateTime ExpiresDate { get; set; }
         public int RoleID { get; set; }
+
+        public virtual Role Roles { get; set; }
     }
 }

@@ -15,8 +15,8 @@ namespace MenaxhimiDitarit.TeacherForms
     public partial class TopicCreateForm : Form
     {
         private readonly TopicBLL _topicBLL;
-        private Topics _topics;
-        private List<Topics> MyTopics;
+        private Topic _topics;
+        private List<Topic> MyTopics;
         private bool update = false;
 
         private readonly SubjectBLL _subjectBLL;
@@ -37,6 +37,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
+            MyTopics = _topicBLL.GetAll();
 
             cmbSelectClass.DataSource = MyClasses;
             cmbSelectSubject.DataSource = MySubjects;
@@ -44,7 +45,7 @@ namespace MenaxhimiDitarit.TeacherForms
             dtpSelectDate.Enabled = false;
         }
 
-        public TopicCreateForm(Topics topic)
+        public TopicCreateForm(Topic topic)
         {
             InitializeComponent();
 
@@ -65,7 +66,7 @@ namespace MenaxhimiDitarit.TeacherForms
             PopulateForm(topic);
         }
 
-        private void PopulateForm(Topics topic)
+        private void PopulateForm(Topic topic)
         {
             txtID.Text = topic.TopicID.ToString();
             cmbSelectClass.SelectedItem = MyClasses.FirstOrDefault(f => f.ClassID == topic.ClassID);
@@ -75,52 +76,72 @@ namespace MenaxhimiDitarit.TeacherForms
             txtContent.Text = topic.Content;
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private bool CheckTextbox()
         {
-            Topics topic = new Topics();
-
-            topic.TopicID = int.Parse(txtID.Text);
-            topic.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-            topic.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-            topic.Date = dtpSelectDate.Value.Date;
-            topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-            topic.Content = txtContent.Text;
-            topic.InsertBy = UserSession.GetUser.UserName;
-            topic.InsertDate = DateTime.Now;
-            topic.LUB = UserSession.GetUser.UserName;
-            topic.LUD = DateTime.Now;
-
-            if (!update)
-                topic.LUN++;
-            else if (update)
-                topic.LUN = ++_topics.LUN;
-
-            if (!update)
+            foreach (Control ctrl in this.Controls)
             {
-                var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
-                && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
-
-                if (temp.Count > 0)
-                    MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
+                if (ctrl is TextBox)
                 {
-                    bool isRegistred = _topicBLL.Add(topic);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
                 }
             }
-            else
+            return true;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (CheckTextbox())
             {
-                MessageBox.Show("Topic Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                Topic topic = new Topic();
+
+                topic.TopicID = int.Parse(txtID.Text);
+                topic.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
+                topic.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
+                topic.Date = dtpSelectDate.Value.Date;
+                topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
+                topic.Content = txtContent.Text;
+                topic.InsertBy = UserSession.GetUser.UserName;
+                topic.InsertDate = DateTime.Now;
+                topic.LUB = UserSession.GetUser.UserName;
+                topic.LUD = DateTime.Now;
+
+                if (!update)
+                    topic.LUN++;
+                else if (update)
+                    topic.LUN = ++_topics.LUN;
+
+                if (!update)
+                {
+                    var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                    && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
+                    && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _topicBLL.Add(topic);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Topic Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
             }
+            else
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

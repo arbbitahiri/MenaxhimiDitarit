@@ -152,7 +152,13 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void DirectorMainForm_Shown(object sender, EventArgs e)
+        {
+            lblUsername.Text = UserSession.GetUser.UserName;
+            lblWelcomeName.Text = UserSession.GetUser.FirstName;
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
@@ -160,9 +166,9 @@ namespace MenaxhimiDitarit.DirectorForms
             this.Close();
         }
 
-        private void DirectorMainForm_Shown(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            lblUsername.Text = UserSession.GetUser.UserName;
+            Application.Exit();
         }
     }
 }

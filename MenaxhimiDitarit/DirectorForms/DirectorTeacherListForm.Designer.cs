@@ -53,17 +53,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchName = new System.Windows.Forms.TextBox();
             this.dgvTeacherListD = new Telerik.WinControls.UI.RadGridView();
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
-            this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
             this.cmsTeacherContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).BeginInit();
             this.cmsTeacherContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -276,23 +276,19 @@
             this.dgvTeacherListD.TabIndex = 12;
             this.dgvTeacherListD.ThemeName = "CrystalDark";
             // 
-            // bsrcTeacherList
-            // 
-            this.bsrcTeacherList.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
-            // 
             // cmsTeacherContext
             // 
             this.cmsTeacherContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.cmsTeacherContext.Name = "cmsTeacherContext";
-            this.cmsTeacherContext.Size = new System.Drawing.Size(181, 70);
+            this.cmsTeacherContext.Size = new System.Drawing.Size(113, 48);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -300,9 +296,13 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // bsrcTeacherList
+            // 
+            this.bsrcTeacherList.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
             // DirectorTeacherListForm
             // 
@@ -321,8 +321,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).EndInit();
             this.cmsTeacherContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).EndInit();
             this.ResumeLayout(false);
 
         }

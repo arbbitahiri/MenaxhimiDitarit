@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMainForm));
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pnlComments = new System.Windows.Forms.Panel();
             this.btnAddNewComment = new System.Windows.Forms.Button();
             this.btnListComments = new System.Windows.Forms.Button();
@@ -50,7 +52,10 @@
             this.picSchool = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.lblWelcomeName = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlComments.SuspendLayout();
             this.pnlAbsences.SuspendLayout();
             this.pnlTopics.SuspendLayout();
@@ -64,7 +69,7 @@
             // 
             this.pnlMain.AutoScroll = true;
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.pnlMain.Controls.Add(this.btnClose);
+            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlComments);
             this.pnlMain.Controls.Add(this.btnComments);
             this.pnlMain.Controls.Add(this.pnlAbsences);
@@ -78,19 +83,41 @@
             this.pnlMain.Size = new System.Drawing.Size(200, 600);
             this.pnlMain.TabIndex = 1;
             // 
-            // btnClose
+            // panel1
             // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(0, 550);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(200, 50);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.panel1.Controls.Add(this.btnSignOut);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 535);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 65);
+            this.panel1.TabIndex = 12;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.Location = new System.Drawing.Point(100, 0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(100, 65);
+            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(0, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 65);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pnlComments
             // 
@@ -363,12 +390,35 @@
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "Username:";
             // 
+            // lblWelcomeName
+            // 
+            this.lblWelcomeName.AutoSize = true;
+            this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
+            this.lblWelcomeName.Location = new System.Drawing.Point(779, 575);
+            this.lblWelcomeName.Name = "lblWelcomeName";
+            this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
+            this.lblWelcomeName.TabIndex = 7;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(707, 574);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(66, 16);
+            this.lblWelcome.TabIndex = 8;
+            this.lblWelcome.Text = "Welcome";
+            // 
             // TeacherMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.lblWelcomeName);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlChildForm);
@@ -379,6 +429,7 @@
             this.Text = "TeacherMainForm";
             this.Shown += new System.EventHandler(this.TeacherMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlComments.ResumeLayout(false);
             this.pnlAbsences.ResumeLayout(false);
             this.pnlTopics.ResumeLayout(false);
@@ -395,7 +446,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlComments;
         private System.Windows.Forms.Button btnAddNewComment;
         private System.Windows.Forms.Button btnListComments;
@@ -415,5 +465,10 @@
         private System.Windows.Forms.PictureBox picSchool;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWelcomeName;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

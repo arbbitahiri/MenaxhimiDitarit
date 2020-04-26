@@ -10,9 +10,9 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class UsersDAL : IBaseConvert<Users>, IBaseCRUD<Users>
+    public class UserDAL : IBaseConvert<User>, IBaseCRUD<User>
     {
-        public Users Login(string username, string password)
+        public User Login(string username, string password)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace MenaxhimiDitarit.DAL
 
                         using (var reader = command.ExecuteReader())
                         {
-                            Users result = null;
+                            User result = null;
                             while (reader.Read())
                                 result = ToObject(reader);
 
@@ -42,7 +42,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Add(Users model)
+        public bool Add(User model)
         {
             try
             {
@@ -77,19 +77,19 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public List<Users> GetAll()
+        public List<User> GetAll()
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Users> users = null;
+                    List<User> users = null;
                     string sqlproc = "dbo.usp_Users_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            users = new List<Users>();
+                            users = new List<User>();
                             while (reader.Read())
                                 users.Add(ToObject(reader));
                         }
@@ -105,13 +105,13 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Users Get(int id)
+        public User Get(int id)
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    Users users = null;
+                    User users = null;
                     string sqlproc = "dbo.usp_Users_ViewByID";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
@@ -134,11 +134,11 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Users ToObject(SqlDataReader reader)
+        public User ToObject(SqlDataReader reader)
         {
             try
             {
-                var user = new Users();
+                var user = new User();
 
                 if (reader["UserID"] != DBNull.Value)
                     user.UserID = int.Parse(reader["UserID"].ToString());
@@ -208,13 +208,13 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Users Get(Users model)
+        public User Get(User model)
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    Users users = null;
+                    User users = null;
                     string sqlproc = "dbo.usp_Users_ViewBy_UserName";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
@@ -237,12 +237,12 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Update(Users model)
+        public bool Update(User model)
         {
             throw new NotImplementedException();
         }
 
-        public bool Remove(Users model)
+        public bool Remove(User model)
         {
             throw new NotImplementedException();
         }

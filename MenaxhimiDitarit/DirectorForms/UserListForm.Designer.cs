@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserListForm));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -58,30 +59,29 @@
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserListForm));
             this.grbSearch = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtSearchUserByNU = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnViewAllUsers = new System.Windows.Forms.Button();
             this.dgvUserList = new Telerik.WinControls.UI.RadGridView();
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
-            this.gridViewTemplate1 = new Telerik.WinControls.UI.GridViewTemplate();
-            this.MasterTemplate = new Telerik.WinControls.UI.RadGridView();
-            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
-            this.txtSearchUserByNU = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.cmsUserContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTemplate1 = new Telerik.WinControls.UI.GridViewTemplate();
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.MasterTemplate = new Telerik.WinControls.UI.RadGridView();
             this.grbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).BeginInit();
+            this.cmsUserContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.cmsUserContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -99,6 +99,36 @@
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search User";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.panel2.Location = new System.Drawing.Point(39, 56);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(362, 1);
+            this.panel2.TabIndex = 16;
+            // 
+            // txtSearchUserByNU
+            // 
+            this.txtSearchUserByNU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtSearchUserByNU.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchUserByNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchUserByNU.ForeColor = System.Drawing.Color.White;
+            this.txtSearchUserByNU.Location = new System.Drawing.Point(69, 31);
+            this.txtSearchUserByNU.Name = "txtSearchUserByNU";
+            this.txtSearchUserByNU.Size = new System.Drawing.Size(332, 15);
+            this.txtSearchUserByNU.TabIndex = 15;
+            this.txtSearchUserByNU.Text = "Search by Name or Username";
+            this.txtSearchUserByNU.Click += new System.EventHandler(this.txtSearchUserByNU_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(39, 25);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // btnSearch
             // 
@@ -248,6 +278,34 @@
             this.dgvUserList.TabIndex = 1;
             this.dgvUserList.ThemeName = "CrystalDark";
             // 
+            // cmsUserContext
+            // 
+            this.cmsUserContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsUserContext.Name = "cmsUserContext";
+            this.cmsUserContext.Size = new System.Drawing.Size(113, 48);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // bsrcUserList
+            // 
+            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
+            // 
             // gridViewTemplate1
             // 
             this.gridViewTemplate1.ViewDefinition = tableViewDefinition1;
@@ -365,63 +423,6 @@
             this.MasterTemplate.TabIndex = 1;
             this.MasterTemplate.ThemeName = "CrystalDark";
             // 
-            // bsrcUserList
-            // 
-            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.Users);
-            // 
-            // txtSearchUserByNU
-            // 
-            this.txtSearchUserByNU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtSearchUserByNU.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchUserByNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchUserByNU.ForeColor = System.Drawing.Color.White;
-            this.txtSearchUserByNU.Location = new System.Drawing.Point(69, 31);
-            this.txtSearchUserByNU.Name = "txtSearchUserByNU";
-            this.txtSearchUserByNU.Size = new System.Drawing.Size(332, 15);
-            this.txtSearchUserByNU.TabIndex = 15;
-            this.txtSearchUserByNU.Text = "Search by Name or Username";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(39, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 1);
-            this.panel2.TabIndex = 16;
-            // 
-            // cmsUserContext
-            // 
-            this.cmsUserContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.cmsUserContext.Name = "cmsUserContext";
-            this.cmsUserContext.Size = new System.Drawing.Size(113, 48);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
             // UserListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,14 +437,14 @@
             this.Load += new System.EventHandler(this.UserListForm_Load);
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
+            this.cmsUserContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.cmsUserContext.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.TeacherForms
     public partial class TopicListForm : Form
     {
         private readonly TopicBLL _topicBLL;
-        private List<Topics> MyTopics;
+        private List<Topic> MyTopics;
 
         private readonly SubjectBLL _subjectBLL;
         private readonly List<Subject> MySubjects;
@@ -45,11 +45,11 @@ namespace MenaxhimiDitarit.TeacherForms
             dgvTopicList.DataSource = MyTopics;
         }
 
-        private Topics GetTopic(GridViewRowInfo topicRow)
+        private Topic GetTopic(GridViewRowInfo topicRow)
         {
             try
             {
-                Topics topic = new Topics
+                Topic topic = new Topic
                 {
                     TopicID = (int)topicRow.Cells[0].Value,
                     ClassID = (int)topicRow.Cells[1].Value,

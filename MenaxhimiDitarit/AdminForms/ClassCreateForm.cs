@@ -20,10 +20,10 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
-        private List<Teacher> _teacher;
+        private List<Teacher> MyTeachers;
 
         private readonly RoomBLL _roomBLL;
-        private List<Room> _room;
+        private List<Room> MyRooms;
 
         public ClassCreateForm()
         {
@@ -33,12 +33,12 @@ namespace MenaxhimiDitarit.AdminForms
             _teacherBLL = new TeacherBLL();
             _roomBLL = new RoomBLL();
 
-            _teacher = _teacherBLL.GetAll();
-            _room = _roomBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+            MyRooms = _roomBLL.GetAll();
             MyClass = _classBLL.GetAll();
 
-            cmbMainTeacher.DataSource = _teacher;
-            cmbSelectRoom.DataSource = _room;
+            cmbMainTeacher.DataSource = MyTeachers;
+            cmbSelectRoom.DataSource = MyRooms;
 
             update = false;
         }
@@ -53,11 +53,11 @@ namespace MenaxhimiDitarit.AdminForms
 
             _class = classes;
 
-            _teacher = _teacherBLL.GetAll();
-            _room = _roomBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+            MyRooms = _roomBLL.GetAll();
 
-            cmbMainTeacher.DataSource = _teacher;
-            cmbSelectRoom.DataSource = _room;
+            cmbMainTeacher.DataSource = MyTeachers;
+            cmbSelectRoom.DataSource = MyRooms;
 
             update = _class != null;
             PopulateForm(_class);
@@ -66,53 +66,72 @@ namespace MenaxhimiDitarit.AdminForms
         private void PopulateForm(Class classes)
         {
             txtID.Text = classes.ClassID.ToString();
-            cmbMainTeacher.SelectedItem = _teacher.FirstOrDefault(f => f.TeacherID == classes.TeacherID);
+            cmbMainTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == classes.TeacherID);
             cmbSelectClass.SelectedItem = _class.ClassNo;
-            cmbSelectRoom.SelectedItem = _room.FirstOrDefault(f => f.RoomID == classes.RoomID);
+            cmbSelectRoom.SelectedItem = MyRooms.FirstOrDefault(f => f.RoomID == classes.RoomID);
+        }
+
+        private bool CheckComboBox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    ComboBox cmb = ctrl as ComboBox;
+                    if (cmb.SelectedIndex > -1)
+                        return true;
+                }
+            }
+            return false;
         }
 
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
-            Class classes = new Class();
-
-            classes.ClassID = int.Parse(txtID.Text);
-            classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
-            classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
-            classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
-            classes.InsertBy = UserSession.GetUser.UserName;
-            classes.InsertDate = DateTime.Now;
-            classes.LUB = UserSession.GetUser.UserName;
-            classes.LUD = DateTime.Now;
-
-            if (!update)
-                classes.LUN++;
-            else if (update)
-                classes.LUN = ++_class.LUN;
-
-            if (!update)
+            if (!CheckComboBox())
             {
-                var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+                Class classes = new Class();
 
-                if (temp.Count > 0)
-                    MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                classes.ClassID = int.Parse(txtID.Text);
+                classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
+                classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
+                classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
+                classes.InsertBy = UserSession.GetUser.UserName;
+                classes.InsertDate = DateTime.Now;
+                classes.LUB = UserSession.GetUser.UserName;
+                classes.LUD = DateTime.Now;
+
+                if (!update)
+                    classes.LUN++;
+                else if (update)
+                    classes.LUN = ++_class.LUN;
+
+                if (!update)
+                {
+                    var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _classBLL.Add(classes);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    bool isRegistred = _classBLL.Add(classes);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Class Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             else
-            {
-                MessageBox.Show("Class Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

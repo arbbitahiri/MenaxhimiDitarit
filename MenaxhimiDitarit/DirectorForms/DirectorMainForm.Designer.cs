@@ -30,10 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorMainForm));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.pnlReview = new System.Windows.Forms.Panel();
             this.btnReviewComments = new System.Windows.Forms.Button();
             this.btnReview = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.pnlRoles = new System.Windows.Forms.Panel();
             this.btnAddNRole = new System.Windows.Forms.Button();
             this.btnRolesList = new System.Windows.Forms.Button();
@@ -53,7 +55,10 @@
             this.picSchool = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.lblWelcomeName = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlReview.SuspendLayout();
             this.pnlRoles.SuspendLayout();
             this.pnlUsers.SuspendLayout();
@@ -68,9 +73,9 @@
             // 
             this.pnlMain.AutoScroll = true;
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlReview);
             this.pnlMain.Controls.Add(this.btnReview);
-            this.pnlMain.Controls.Add(this.btnClose);
             this.pnlMain.Controls.Add(this.pnlRoles);
             this.pnlMain.Controls.Add(this.btnRoles);
             this.pnlMain.Controls.Add(this.pnlUsers);
@@ -84,13 +89,49 @@
             this.pnlMain.Size = new System.Drawing.Size(200, 600);
             this.pnlMain.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSignOut);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 539);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 65);
+            this.panel1.TabIndex = 12;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.Location = new System.Drawing.Point(83, 0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(100, 65);
+            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(0, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 65);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // pnlReview
             // 
             this.pnlReview.Controls.Add(this.btnReviewComments);
             this.pnlReview.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReview.Location = new System.Drawing.Point(0, 504);
             this.pnlReview.Name = "pnlReview";
-            this.pnlReview.Size = new System.Drawing.Size(200, 35);
+            this.pnlReview.Size = new System.Drawing.Size(183, 35);
             this.pnlReview.TabIndex = 11;
             // 
             // btnReviewComments
@@ -104,7 +145,7 @@
             this.btnReviewComments.Location = new System.Drawing.Point(0, 0);
             this.btnReviewComments.Name = "btnReviewComments";
             this.btnReviewComments.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnReviewComments.Size = new System.Drawing.Size(200, 35);
+            this.btnReviewComments.Size = new System.Drawing.Size(183, 35);
             this.btnReviewComments.TabIndex = 2;
             this.btnReviewComments.Text = "Review Comments";
             this.btnReviewComments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,27 +164,13 @@
             this.btnReview.Location = new System.Drawing.Point(0, 464);
             this.btnReview.Name = "btnReview";
             this.btnReview.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnReview.Size = new System.Drawing.Size(200, 40);
+            this.btnReview.Size = new System.Drawing.Size(183, 40);
             this.btnReview.TabIndex = 10;
             this.btnReview.Text = "Reviews";
             this.btnReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReview.UseVisualStyleBackColor = true;
             this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(0, 550);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(200, 50);
-            this.btnClose.TabIndex = 9;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlRoles
             // 
@@ -152,7 +179,7 @@
             this.pnlRoles.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRoles.Location = new System.Drawing.Point(0, 394);
             this.pnlRoles.Name = "pnlRoles";
-            this.pnlRoles.Size = new System.Drawing.Size(200, 70);
+            this.pnlRoles.Size = new System.Drawing.Size(183, 70);
             this.pnlRoles.TabIndex = 7;
             // 
             // btnAddNRole
@@ -166,7 +193,7 @@
             this.btnAddNRole.Location = new System.Drawing.Point(0, 35);
             this.btnAddNRole.Name = "btnAddNRole";
             this.btnAddNRole.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNRole.Size = new System.Drawing.Size(200, 35);
+            this.btnAddNRole.Size = new System.Drawing.Size(183, 35);
             this.btnAddNRole.TabIndex = 2;
             this.btnAddNRole.Text = "Add New Role";
             this.btnAddNRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,7 +211,7 @@
             this.btnRolesList.Location = new System.Drawing.Point(0, 0);
             this.btnRolesList.Name = "btnRolesList";
             this.btnRolesList.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnRolesList.Size = new System.Drawing.Size(200, 35);
+            this.btnRolesList.Size = new System.Drawing.Size(183, 35);
             this.btnRolesList.TabIndex = 1;
             this.btnRolesList.Text = "List Roles";
             this.btnRolesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +230,7 @@
             this.btnRoles.Location = new System.Drawing.Point(0, 354);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRoles.Size = new System.Drawing.Size(200, 40);
+            this.btnRoles.Size = new System.Drawing.Size(183, 40);
             this.btnRoles.TabIndex = 6;
             this.btnRoles.Text = "Roles";
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +245,7 @@
             this.pnlUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsers.Location = new System.Drawing.Point(0, 284);
             this.pnlUsers.Name = "pnlUsers";
-            this.pnlUsers.Size = new System.Drawing.Size(200, 70);
+            this.pnlUsers.Size = new System.Drawing.Size(183, 70);
             this.pnlUsers.TabIndex = 5;
             // 
             // btnAddNUser
@@ -232,7 +259,7 @@
             this.btnAddNUser.Location = new System.Drawing.Point(0, 35);
             this.btnAddNUser.Name = "btnAddNUser";
             this.btnAddNUser.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNUser.Size = new System.Drawing.Size(200, 35);
+            this.btnAddNUser.Size = new System.Drawing.Size(183, 35);
             this.btnAddNUser.TabIndex = 2;
             this.btnAddNUser.Text = "Add New User";
             this.btnAddNUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,7 +277,7 @@
             this.btnListUsers.Location = new System.Drawing.Point(0, 0);
             this.btnListUsers.Name = "btnListUsers";
             this.btnListUsers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListUsers.Size = new System.Drawing.Size(200, 35);
+            this.btnListUsers.Size = new System.Drawing.Size(183, 35);
             this.btnListUsers.TabIndex = 1;
             this.btnListUsers.Text = "List Users";
             this.btnListUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,7 +296,7 @@
             this.btnUsers.Location = new System.Drawing.Point(0, 244);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(200, 40);
+            this.btnUsers.Size = new System.Drawing.Size(183, 40);
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -284,7 +311,7 @@
             this.pnlTeachers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTeachers.Location = new System.Drawing.Point(0, 174);
             this.pnlTeachers.Name = "pnlTeachers";
-            this.pnlTeachers.Size = new System.Drawing.Size(200, 70);
+            this.pnlTeachers.Size = new System.Drawing.Size(183, 70);
             this.pnlTeachers.TabIndex = 3;
             // 
             // btnAddNTeacher
@@ -298,7 +325,7 @@
             this.btnAddNTeacher.Location = new System.Drawing.Point(0, 35);
             this.btnAddNTeacher.Name = "btnAddNTeacher";
             this.btnAddNTeacher.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNTeacher.Size = new System.Drawing.Size(200, 35);
+            this.btnAddNTeacher.Size = new System.Drawing.Size(183, 35);
             this.btnAddNTeacher.TabIndex = 2;
             this.btnAddNTeacher.Text = "Add New Teacher";
             this.btnAddNTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,7 +343,7 @@
             this.btnListTeachers.Location = new System.Drawing.Point(0, 0);
             this.btnListTeachers.Name = "btnListTeachers";
             this.btnListTeachers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListTeachers.Size = new System.Drawing.Size(200, 35);
+            this.btnListTeachers.Size = new System.Drawing.Size(183, 35);
             this.btnListTeachers.TabIndex = 1;
             this.btnListTeachers.Text = "List Teachers";
             this.btnListTeachers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,7 +362,7 @@
             this.btnTeachers.Location = new System.Drawing.Point(0, 134);
             this.btnTeachers.Name = "btnTeachers";
             this.btnTeachers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTeachers.Size = new System.Drawing.Size(200, 40);
+            this.btnTeachers.Size = new System.Drawing.Size(183, 40);
             this.btnTeachers.TabIndex = 2;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -350,7 +377,7 @@
             this.pnlPic.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPic.Location = new System.Drawing.Point(0, 0);
             this.pnlPic.Name = "pnlPic";
-            this.pnlPic.Size = new System.Drawing.Size(200, 134);
+            this.pnlPic.Size = new System.Drawing.Size(183, 134);
             this.pnlPic.TabIndex = 0;
             // 
             // lblDirector
@@ -370,7 +397,7 @@
             this.picDirector.Image = ((System.Drawing.Image)(resources.GetObject("picDirector.Image")));
             this.picDirector.Location = new System.Drawing.Point(0, 0);
             this.picDirector.Name = "picDirector";
-            this.picDirector.Size = new System.Drawing.Size(200, 100);
+            this.picDirector.Size = new System.Drawing.Size(183, 100);
             this.picDirector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picDirector.TabIndex = 1;
             this.picDirector.TabStop = false;
@@ -417,13 +444,36 @@
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Username:";
             // 
+            // lblWelcomeName
+            // 
+            this.lblWelcomeName.AutoSize = true;
+            this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
+            this.lblWelcomeName.Location = new System.Drawing.Point(779, 574);
+            this.lblWelcomeName.Name = "lblWelcomeName";
+            this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
+            this.lblWelcomeName.TabIndex = 5;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(707, 574);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(66, 16);
+            this.lblWelcome.TabIndex = 6;
+            this.lblWelcome.Text = "Welcome";
+            // 
             // DirectorMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.lblUser);
@@ -433,6 +483,7 @@
             this.Text = "DirectorMainForm";
             this.Shown += new System.EventHandler(this.DirectorMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlReview.ResumeLayout(false);
             this.pnlRoles.ResumeLayout(false);
             this.pnlUsers.ResumeLayout(false);
@@ -470,8 +521,12 @@
         private System.Windows.Forms.Panel pnlReview;
         private System.Windows.Forms.Button btnReviewComments;
         private System.Windows.Forms.Button btnReview;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblWelcomeName;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

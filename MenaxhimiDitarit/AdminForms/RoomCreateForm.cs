@@ -44,47 +44,66 @@ namespace MenaxhimiDitarit
             txtRoomType.Text = room.RoomType;
         }
 
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Room room = new Room();
-
-            room.RoomID = int.Parse(txtID.Text);
-            room.RoomNo = int.Parse(txtRoomNo.Text);
-            room.RoomType = txtRoomType.Text;
-            room.InsertBy = UserSession.GetUser.UserName;
-            room.InsertDate = DateTime.Now;
-            room.LUB = UserSession.GetUser.UserName;
-            room.LUD = DateTime.Now;
-
-            if (!update)
-                room.LUN++;
-            else if (update)
-                room.LUN = ++_room.LUN;
-
-            if (!update)
+            if (CheckTextbox())
             {
-                var temp = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
+                Room room = new Room();
 
-                if (temp.Count > 0)
-                    MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                room.RoomID = int.Parse(txtID.Text);
+                room.RoomNo = int.Parse(txtRoomNo.Text);
+                room.RoomType = txtRoomType.Text;
+                room.InsertBy = UserSession.GetUser.UserName;
+                room.InsertDate = DateTime.Now;
+                room.LUB = UserSession.GetUser.UserName;
+                room.LUD = DateTime.Now;
+
+                if (!update)
+                    room.LUN++;
+                else if (update)
+                    room.LUN = ++_room.LUN;
+
+                if (!update)
+                {
+                    var temp = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _roomBLL.Add(room);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    bool isRegistred = _roomBLL.Add(room);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Room updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             else
-            {
-                MessageBox.Show("Room updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

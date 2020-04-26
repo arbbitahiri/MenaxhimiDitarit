@@ -365,7 +365,7 @@
             // 
             // bsrcTopicsList
             // 
-            this.bsrcTopicsList.DataSource = typeof(MenaxhimiDitarit.BO.Topics);
+            this.bsrcTopicsList.DataSource = typeof(MenaxhimiDitarit.BO.Topic);
             // 
             // TopicListForm
             // 

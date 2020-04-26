@@ -211,7 +211,7 @@
             // 
             // bsrcRoleList
             // 
-            this.bsrcRoleList.DataSource = typeof(MenaxhimiDitarit.BO.Roles);
+            this.bsrcRoleList.DataSource = typeof(MenaxhimiDitarit.BO.Role);
             // 
             // cmsRoleContext
             // 

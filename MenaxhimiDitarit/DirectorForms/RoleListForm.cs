@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.DirectorForms
     public partial class RoleListForm : Form
     {
         private readonly RoleBLL _rolesBLL;
-        private List<Roles> MyRoles = null;
+        private List<Role> MyRoles = null;
 
         public RoleListForm()
         {
@@ -32,11 +32,11 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvRoleList.DataSource = MyRoles;
         }
 
-        private Roles GetRole(GridViewRowInfo roleRow)
+        private Role GetRole(GridViewRowInfo roleRow)
         {
             try
             {
-                Roles role = new Roles
+                Role role = new Role
                 {
                     RoleID = (int)roleRow.Cells[0].Value,
                     RoleName = (string)roleRow.Cells[1].Value,

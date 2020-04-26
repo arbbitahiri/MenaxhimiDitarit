@@ -10,9 +10,9 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class TopicsDAL : IBaseCRUD<Topics>, IBaseConvert<Topics>
+    public class TopicsDAL : IBaseCRUD<Topic>, IBaseConvert<Topic>
     {
-        public bool Add(Topics model)
+        public bool Add(Topic model)
         {
             try
             {
@@ -46,29 +46,29 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Topics Get(int id)
+        public Topic Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Topics Get(Topics model)
+        public Topic Get(Topic model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Topics> GetAll()
+        public List<Topic> GetAll()
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Topics> topic = null;
+                    List<Topic> topic = null;
                     string sqlproc = "dbo.usp_Topics_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            topic = new List<Topics>();
+                            topic = new List<Topic>();
                             while (reader.Read())
                                 topic.Add(ToObject(reader));
                         }
@@ -85,7 +85,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(Topics model)
+        public bool Remove(Topic model)
         {
             throw new NotImplementedException();
         }
@@ -113,11 +113,11 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Topics ToObject(SqlDataReader reader)
+        public Topic ToObject(SqlDataReader reader)
         {
             try
             {
-                var topic = new Topics();
+                var topic = new Topic();
 
                 if (reader["TopicID"] != DBNull.Value)
                     topic.TopicID = int.Parse(reader["TopicID"].ToString());
@@ -161,7 +161,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Update(Topics model)
+        public bool Update(Topic model)
         {
             throw new NotImplementedException();
         }

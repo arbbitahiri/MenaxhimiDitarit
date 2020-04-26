@@ -10,9 +10,9 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class RolesDAL : IBaseCRUD<Roles>, IBaseConvert<Roles>
+    public class RoleDAL : IBaseCRUD<Role>, IBaseConvert<Role>
     {
-        public bool Add(Roles model)
+        public bool Add(Role model)
         {
             try
             {
@@ -42,11 +42,11 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public List<Roles> GetAll()
+        public List<Role> GetAll()
         {
             try
             {
-                List<Roles> result = null;
+                List<Role> result = null;
                 using (var connection = DataConnection.GetConnection())
                 {
                     string sqlproc = "dbo.usp_Roles_ViewAll";
@@ -54,7 +54,7 @@ namespace MenaxhimiDitarit.DAL
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            result = new List<Roles>();
+                            result = new List<Role>();
                             while (reader.Read())
                                 result.Add(ToObject(reader));
                         }
@@ -92,11 +92,11 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Roles Get(int id)
+        public Role Get(int id)
         {
             try
             {
-                Roles result = null;
+                Role result = null;
                 using (var connection = DataConnection.GetConnection())
                 {
                     string sqlproc = "dbo.usp_Roles_ViewByID";
@@ -120,11 +120,11 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Roles ToObject(SqlDataReader reader)
+        public Role ToObject(SqlDataReader reader)
         {
             try
             {
-                var roles = new Roles();
+                var roles = new Role();
 
                 if (reader["RoleID"] != DBNull.Value)
                     roles.RoleID = int.Parse(reader["RoleID"].ToString());
@@ -156,17 +156,17 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(Roles model)
+        public bool Remove(Role model)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Roles model)
+        public bool Update(Role model)
         {
             throw new NotImplementedException();
         }
 
-        public Roles Get(Roles model)
+        public Role Get(Role model)
         {
             throw new NotImplementedException();
         }

@@ -60,49 +60,68 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Subject subject = new Subject();
-
-            subject.SubjectID = int.Parse(txtID.Text);
-            subject.SubjectTitle = txtSubjectTitle.Text;
-            subject.Book = txtSubjectBook.Text;
-            subject.Book_Author = txtBookAuthor.Text;
-            subject.InsertBy = UserSession.GetUser.UserName;
-            subject.InsertDate = DateTime.Now;
-            subject.LUB = UserSession.GetUser.UserName;
-            subject.LUD = DateTime.Now;
-            subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
-
-            if (!update)
-                subject.LUN++;
-            else if (update)
-                subject.LUN = ++_subject.LUN;
-
-            if (!update)
+            if (CheckTextbox())
             {
-                var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
+                Subject subject = new Subject();
 
-                if (temp.Count > 0)
-                    MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                subject.SubjectID = int.Parse(txtID.Text);
+                subject.SubjectTitle = txtSubjectTitle.Text;
+                subject.Book = txtSubjectBook.Text;
+                subject.Book_Author = txtBookAuthor.Text;
+                subject.InsertBy = UserSession.GetUser.UserName;
+                subject.InsertDate = DateTime.Now;
+                subject.LUB = UserSession.GetUser.UserName;
+                subject.LUD = DateTime.Now;
+                subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
+
+                if (!update)
+                    subject.LUN++;
+                else if (update)
+                    subject.LUN = ++_subject.LUN;
+
+                if (!update)
+                {
+                    var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _subjectBLL.Add(subject);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    bool isRegistred = _subjectBLL.Add(subject);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Subject updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
             else
-            {
-                MessageBox.Show("Subject updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

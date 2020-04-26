@@ -15,14 +15,14 @@ namespace MenaxhimiDitarit.DirectorForms
 {
     public partial class UserListForm : Form
     {
-        private readonly UsersBLL _usersBLL;
-        private List<Users> MyUsers = null;
+        private readonly UserBLL _usersBLL;
+        private List<User> MyUsers = null;
 
         public UserListForm()
         {
             InitializeComponent();
 
-            _usersBLL = new UsersBLL();
+            _usersBLL = new UserBLL();
         }
 
         private void RefreshList()
@@ -31,11 +31,11 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvUserList.DataSource = MyUsers;
         }
 
-        private Users GetUser(GridViewRowInfo userRow)
+        private User GetUser(GridViewRowInfo userRow)
         {
             try
             {
-                Users user = new Users
+                User user = new User
                 {
                     UserID = (int)userRow.Cells[0].Value,
                     FirstName = (string)userRow.Cells[1].Value,
@@ -130,6 +130,11 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                 }
             }
+        }
+
+        private void txtSearchUserByNU_Click(object sender, EventArgs e)
+        {
+            txtSearchUserByNU.Text = "";
         }
     }
 }

@@ -37,7 +37,13 @@
             this.btnAddNTacher = new System.Windows.Forms.Button();
             this.btnListTeachers = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pnlRoom = new System.Windows.Forms.Panel();
+            this.btnAddNewRoom = new System.Windows.Forms.Button();
+            this.btnListRooms = new System.Windows.Forms.Button();
+            this.btnRoom = new System.Windows.Forms.Button();
             this.pnlClassR = new System.Windows.Forms.Panel();
             this.btnViewClassSchedule = new System.Windows.Forms.Button();
             this.btnAddNewClass = new System.Windows.Forms.Button();
@@ -49,21 +55,20 @@
             this.btnSubjects = new System.Windows.Forms.Button();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.picSchool = new System.Windows.Forms.PictureBox();
-            this.pnlRoom = new System.Windows.Forms.Panel();
-            this.btnAddNewRoom = new System.Windows.Forms.Button();
-            this.btnListRooms = new System.Windows.Forms.Button();
-            this.btnRoom = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
+            this.lblWelcomeName = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).BeginInit();
             this.pnlTeachers.SuspendLayout();
             this.pnlMain.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnlRoom.SuspendLayout();
             this.pnlClassR.SuspendLayout();
             this.pnlSubjects.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSchool)).BeginInit();
-            this.pnlRoom.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPicture
@@ -167,9 +172,9 @@
             // 
             this.pnlMain.AutoScroll = true;
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlRoom);
             this.pnlMain.Controls.Add(this.btnRoom);
-            this.pnlMain.Controls.Add(this.btnClose);
             this.pnlMain.Controls.Add(this.pnlClassR);
             this.pnlMain.Controls.Add(this.btnClass);
             this.pnlMain.Controls.Add(this.pnlSubjects);
@@ -183,19 +188,107 @@
             this.pnlMain.Size = new System.Drawing.Size(200, 600);
             this.pnlMain.TabIndex = 0;
             // 
-            // btnClose
+            // panel1
             // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(0, 609);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(183, 50);
-            this.btnClose.TabIndex = 8;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.panel1.Controls.Add(this.btnSignOut);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 609);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 65);
+            this.panel1.TabIndex = 11;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.Location = new System.Drawing.Point(83, 0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(100, 65);
+            this.btnSignOut.TabIndex = 9;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(0, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 65);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // pnlRoom
+            // 
+            this.pnlRoom.Controls.Add(this.btnAddNewRoom);
+            this.pnlRoom.Controls.Add(this.btnListRooms);
+            this.pnlRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRoom.Location = new System.Drawing.Point(0, 539);
+            this.pnlRoom.Name = "pnlRoom";
+            this.pnlRoom.Size = new System.Drawing.Size(183, 70);
+            this.pnlRoom.TabIndex = 10;
+            // 
+            // btnAddNewRoom
+            // 
+            this.btnAddNewRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.btnAddNewRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddNewRoom.FlatAppearance.BorderSize = 0;
+            this.btnAddNewRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewRoom.ForeColor = System.Drawing.Color.White;
+            this.btnAddNewRoom.Location = new System.Drawing.Point(0, 35);
+            this.btnAddNewRoom.Name = "btnAddNewRoom";
+            this.btnAddNewRoom.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAddNewRoom.Size = new System.Drawing.Size(183, 35);
+            this.btnAddNewRoom.TabIndex = 1;
+            this.btnAddNewRoom.Text = "Add New Room";
+            this.btnAddNewRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewRoom.UseVisualStyleBackColor = false;
+            this.btnAddNewRoom.Click += new System.EventHandler(this.btnAddNewRoom_Click_1);
+            // 
+            // btnListRooms
+            // 
+            this.btnListRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.btnListRooms.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListRooms.FlatAppearance.BorderSize = 0;
+            this.btnListRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListRooms.ForeColor = System.Drawing.Color.White;
+            this.btnListRooms.Location = new System.Drawing.Point(0, 0);
+            this.btnListRooms.Name = "btnListRooms";
+            this.btnListRooms.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnListRooms.Size = new System.Drawing.Size(183, 35);
+            this.btnListRooms.TabIndex = 2;
+            this.btnListRooms.Text = "List Rooms";
+            this.btnListRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListRooms.UseVisualStyleBackColor = false;
+            this.btnListRooms.Click += new System.EventHandler(this.btnListRooms_Click);
+            // 
+            // btnRoom
+            // 
+            this.btnRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRoom.FlatAppearance.BorderSize = 0;
+            this.btnRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoom.ForeColor = System.Drawing.Color.White;
+            this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
+            this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoom.Location = new System.Drawing.Point(0, 499);
+            this.btnRoom.Name = "btnRoom";
+            this.btnRoom.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnRoom.Size = new System.Drawing.Size(183, 40);
+            this.btnRoom.TabIndex = 9;
+            this.btnRoom.Text = "Rooms";
+            this.btnRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRoom.UseVisualStyleBackColor = true;
+            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
             // 
             // pnlClassR
             // 
@@ -369,72 +462,6 @@
             this.picSchool.TabIndex = 0;
             this.picSchool.TabStop = false;
             // 
-            // pnlRoom
-            // 
-            this.pnlRoom.Controls.Add(this.btnAddNewRoom);
-            this.pnlRoom.Controls.Add(this.btnListRooms);
-            this.pnlRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRoom.Location = new System.Drawing.Point(0, 539);
-            this.pnlRoom.Name = "pnlRoom";
-            this.pnlRoom.Size = new System.Drawing.Size(183, 70);
-            this.pnlRoom.TabIndex = 10;
-            // 
-            // btnAddNewRoom
-            // 
-            this.btnAddNewRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.btnAddNewRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddNewRoom.FlatAppearance.BorderSize = 0;
-            this.btnAddNewRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewRoom.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewRoom.Location = new System.Drawing.Point(0, 35);
-            this.btnAddNewRoom.Name = "btnAddNewRoom";
-            this.btnAddNewRoom.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNewRoom.Size = new System.Drawing.Size(183, 35);
-            this.btnAddNewRoom.TabIndex = 1;
-            this.btnAddNewRoom.Text = "Add New Room";
-            this.btnAddNewRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNewRoom.UseVisualStyleBackColor = false;
-            this.btnAddNewRoom.Click += new System.EventHandler(this.btnAddNewRoom_Click_1);
-            // 
-            // btnListRooms
-            // 
-            this.btnListRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.btnListRooms.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListRooms.FlatAppearance.BorderSize = 0;
-            this.btnListRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListRooms.ForeColor = System.Drawing.Color.White;
-            this.btnListRooms.Location = new System.Drawing.Point(0, 0);
-            this.btnListRooms.Name = "btnListRooms";
-            this.btnListRooms.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListRooms.Size = new System.Drawing.Size(183, 35);
-            this.btnListRooms.TabIndex = 2;
-            this.btnListRooms.Text = "List Rooms";
-            this.btnListRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListRooms.UseVisualStyleBackColor = false;
-            this.btnListRooms.Click += new System.EventHandler(this.btnListRooms_Click);
-            // 
-            // btnRoom
-            // 
-            this.btnRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoom.FlatAppearance.BorderSize = 0;
-            this.btnRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoom.ForeColor = System.Drawing.Color.White;
-            this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
-            this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.Location = new System.Drawing.Point(0, 499);
-            this.btnRoom.Name = "btnRoom";
-            this.btnRoom.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRoom.Size = new System.Drawing.Size(183, 40);
-            this.btnRoom.TabIndex = 9;
-            this.btnRoom.Text = "Rooms";
-            this.btnRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRoom.UseVisualStyleBackColor = true;
-            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -456,13 +483,36 @@
             this.lblUsername.Size = new System.Drawing.Size(0, 16);
             this.lblUsername.TabIndex = 2;
             // 
+            // lblWelcomeName
+            // 
+            this.lblWelcomeName.AutoSize = true;
+            this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
+            this.lblWelcomeName.Location = new System.Drawing.Point(779, 574);
+            this.lblWelcomeName.Name = "lblWelcomeName";
+            this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
+            this.lblWelcomeName.TabIndex = 3;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(707, 574);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(66, 16);
+            this.lblWelcome.TabIndex = 4;
+            this.lblWelcome.Text = "Welcome";
+            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMain);
@@ -476,11 +526,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).EndInit();
             this.pnlTeachers.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.pnlRoom.ResumeLayout(false);
             this.pnlClassR.ResumeLayout(false);
             this.pnlSubjects.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSchool)).EndInit();
-            this.pnlRoom.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,7 +550,7 @@
         private System.Windows.Forms.Button btnAddNSubject;
         private System.Windows.Forms.Button btnListSubjects;
         private System.Windows.Forms.Button btnSubjects;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.PictureBox picSchool;
@@ -514,5 +565,9 @@
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Label lblWelcomeName;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

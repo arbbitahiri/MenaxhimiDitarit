@@ -10,9 +10,9 @@ namespace MenaxhimiDitarit.BLL
 {
     public class AdministrationBLL
     {
-        private static UsersDAL usersDAL = new UsersDAL();
+        private static UserDAL usersDAL = new UserDAL();
 
-        public static Users Login(string username, string password)
+        public static User Login(string username, string password)
         {
             return usersDAL.Login(username, password);
         }

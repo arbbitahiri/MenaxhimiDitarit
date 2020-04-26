@@ -9,29 +9,29 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class AbsencesDAL : IBaseCRUD<Absences>, IBaseConvert<Absences>
+    public class AbsencesDAL : IBaseCRUD<Absence>, IBaseConvert<Absence>
     {
-        public bool Add(Absences model)
+        public bool Add(Absence model)
         {
             throw new NotImplementedException();
         }
 
-        public Absences Get(int id)
+        public Absence Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Absences Get(Absences model)
+        public Absence Get(Absence model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Absences> GetAll()
+        public List<Absence> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool Remove(Absences model)
+        public bool Remove(Absence model)
         {
             throw new NotImplementedException();
         }
@@ -41,12 +41,12 @@ namespace MenaxhimiDitarit.DAL
             throw new NotImplementedException();
         }
 
-        public Absences ToObject(SqlDataReader reader)
+        public Absence ToObject(SqlDataReader reader)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Absences model)
+        public bool Update(Absence model)
         {
             throw new NotImplementedException();
         }

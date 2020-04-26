@@ -48,12 +48,12 @@
     <Compile Include="CommentsDAL.cs" />
     <Compile Include="DataConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RolesDAL.cs" />
+    <Compile Include="RoleDAL.cs" />
     <Compile Include="RoomDAL.cs" />
     <Compile Include="SubjectDAL.cs" />
     <Compile Include="TeacherDAL.cs" />
     <Compile Include="TopicsDAL.cs" />
-    <Compile Include="UsersDAL.cs" />
+    <Compile Include="UserDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MenaxhimiDitarit.BO\MenaxhimiDitarit.BO.csproj">

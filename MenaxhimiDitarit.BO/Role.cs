@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MenaxhimiDitarit.BO
 {
-    public class Roles:BaseAuditObject
+    public class Role:BaseAuditObject
     {
         public int RoleID { get; set; }
         public string RoleName { get; set; }

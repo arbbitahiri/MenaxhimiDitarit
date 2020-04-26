@@ -9,29 +9,29 @@ using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
 {
-    public class CommentsBLL : IBaseCRUD<Comments>
+    public class CommentBLL : IBaseCRUD<Comment>
     {
-        public bool Add(Comments model)
+        public bool Add(Comment model)
         {
             throw new NotImplementedException();
         }
 
-        public Comments Get(int id)
+        public Comment Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Comments Get(Comments model)
+        public Comment Get(Comment model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Comments> GetAll()
+        public List<Comment> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool Remove(Comments model)
+        public bool Remove(Comment model)
         {
             throw new NotImplementedException();
         }
@@ -41,7 +41,7 @@ namespace MenaxhimiDitarit.BLL
             throw new NotImplementedException();
         }
 
-        public bool Update(Comments model)
+        public bool Update(Comment model)
         {
             throw new NotImplementedException();
         }

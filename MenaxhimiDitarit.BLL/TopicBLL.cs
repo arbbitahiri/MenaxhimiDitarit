@@ -9,7 +9,7 @@ using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
 {
-    public class TopicBLL : IBaseCRUD<Topics>
+    public class TopicBLL : IBaseCRUD<Topic>
     {
         private TopicsDAL topicsDAL;
 
@@ -18,27 +18,27 @@ namespace MenaxhimiDitarit.BLL
             topicsDAL = new TopicsDAL();
         }
 
-        public bool Add(Topics model)
+        public bool Add(Topic model)
         {
             return topicsDAL.Add(model);
         }
 
-        public Topics Get(int id)
+        public Topic Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Topics Get(Topics model)
+        public Topic Get(Topic model)
         {
             throw new NotImplementedException();
         }
 
-        public List<Topics> GetAll()
+        public List<Topic> GetAll()
         {
             return topicsDAL.GetAll();
         }
 
-        public bool Remove(Topics model)
+        public bool Remove(Topic model)
         {
             throw new NotImplementedException();
         }
@@ -48,7 +48,7 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.Remove(id);
         }
 
-        public bool Update(Topics model)
+        public bool Update(Topic model)
         {
             throw new NotImplementedException();
         }

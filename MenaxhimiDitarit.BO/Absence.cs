@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MenaxhimiDitarit.BO
 {
-    public class Comments:BaseAuditObject
+    public class Absence:BaseAuditObject
     {
-        public int CommentID { get; set; }
+        public int AbsencesID { get; set; }
         public int TopicID { get; set; }
-        public string Comment { get; set; }
-        public string Review { get; set; }
+        public string Reasoning { get; set; }
+        public int NoStudents { get; set; }
     }
 }

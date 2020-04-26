@@ -14,19 +14,19 @@ namespace MenaxhimiDitarit.DirectorForms
 {
     public partial class UserCreateForm : Form
     {
-        private readonly UsersBLL _usersBLL;
-        private Users _user;
-        private List<Users> MyUsers;
+        private readonly UserBLL _usersBLL;
+        private User _user;
+        private List<User> MyUsers;
         private bool update = false;
 
         private readonly RoleBLL _roleBLL;
-        private readonly List<Roles> MyRoles;
+        private readonly List<Role> MyRoles;
 
         public UserCreateForm()
         {
             InitializeComponent();
 
-            _usersBLL = new UsersBLL();
+            _usersBLL = new UserBLL();
             _roleBLL = new RoleBLL();
 
             MyUsers = _usersBLL.GetAll();
@@ -34,13 +34,14 @@ namespace MenaxhimiDitarit.DirectorForms
             cmbRoles.DataSource = MyRoles;
 
             update = false;
+            txtPassword.UseSystemPasswordChar = true;
         }
 
-        public UserCreateForm(Users user)
+        public UserCreateForm(User user)
         {
             InitializeComponent();
 
-            _usersBLL = new UsersBLL();
+            _usersBLL = new UserBLL();
             _user = user;
             _roleBLL = new RoleBLL();
             MyRoles = _roleBLL.GetAll();
@@ -48,9 +49,10 @@ namespace MenaxhimiDitarit.DirectorForms
 
             update = _user != null;
             PopulateForm(_user);
+            txtPassword.UseSystemPasswordChar = true;
         }
 
-        private void PopulateForm(Users user)
+        private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
             txtFirstName.Text = user.FirstName;
@@ -58,6 +60,20 @@ namespace MenaxhimiDitarit.DirectorForms
             txtUsername.Text = user.UserName;
             txtPassword.Text = user.UserPassword;
             cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
+        }
+
+        private bool CheckTextbox()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txtb = ctrl as TextBox;
+                    if (txtb.Text == string.Empty)
+                        return false;
+                }
+            }
+            return true;
         }
 
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -70,48 +86,54 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Users user = new Users();
-
-            user.UserID = int.Parse(txtID.Text);
-            user.FirstName = txtFirstName.Text;
-            user.LastName = txtLastName.Text;
-            user.ExpiresDate = dtpExpireDate.Value;
-            user.RoleID = Convert.ToInt32(cmbRoles.SelectedIndex + 1);
-            user.UserName = txtUsername.Text;
-            user.UserPassword = txtPassword.Text;
-            user.InsertBy = UserSession.GetUser.UserName;
-            user.InsertDate = DateTime.Now;
-            user.LUB = UserSession.GetUser.UserName;
-            user.LUD = DateTime.Now;
-
-            if (!update)
-                user.LUN++;
-            else if (update)
-                user.LUN = ++_user.LUN;
-
-            if (!update)
+            if (CheckTextbox())
             {
-                var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
+                User user = new User();
 
-                if (temp.Count > 0)
-                    MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                user.UserID = int.Parse(txtID.Text);
+                user.FirstName = txtFirstName.Text;
+                user.LastName = txtLastName.Text;
+                user.ExpiresDate = dtpExpireDate.Value;
+                user.RoleID = Convert.ToInt32(cmbRoles.SelectedIndex + 1);
+                user.UserName = txtUsername.Text;
+                user.UserPassword = txtPassword.Text;
+                user.InsertBy = UserSession.GetUser.UserName;
+                user.InsertDate = DateTime.Now;
+                user.LUB = UserSession.GetUser.UserName;
+                user.LUD = DateTime.Now;
+
+                if (!update)
+                    user.LUN++;
+                else if (update)
+                    user.LUN = ++_user.LUN;
+
+                if (!update)
+                {
+                    var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
+
+                    if (temp.Count > 0)
+                        MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        bool isRegistred = _usersBLL.Add(user);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 else
                 {
-                    bool isRegistred = _usersBLL.Add(user);
-
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("User Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
-            else {
-                MessageBox.Show("User Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+            else
+                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
