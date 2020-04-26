@@ -12,7 +12,7 @@ using MenaxhimiDitarit.BO;
 
 namespace MenaxhimiDitarit.AdminForms
 {
-    public partial class ClassScheduleCreateForm : Form
+    public partial class ClassScheduleUpdateForm : Form
     {
         private readonly ClassScheduleBLL _scheduleBLL;
         private ClassSchedule _schedule;
@@ -21,7 +21,7 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly SubjectBLL _subjectBLL;
         private List<Subject> _subject;
 
-        public ClassScheduleCreateForm()
+        public ClassScheduleUpdateForm()
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace MenaxhimiDitarit.AdminForms
             update = false;
         }
 
-        public ClassScheduleCreateForm(ClassSchedule schedule)
+        public ClassScheduleUpdateForm(ClassSchedule schedule)
         {
             InitializeComponent();
 

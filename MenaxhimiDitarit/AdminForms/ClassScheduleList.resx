@@ -126,4 +126,17 @@
   <metadata name="cmsScheduleContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>314, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFeSURBVDhPvdTNKwRhAMfxiSQkBxeEcnQhOTgoylFEKRcleQknUZSkJQ7OnDhsXi8OkiQ3okiR
+        vJz9J8r39zwzT2vNzuxum2992ueZw7P77DMz3n/XgAFMYAjNyKt+3OEKCcxiGad48efFiK0Mx9hHnS6E
+        VIV13KJWFzKlb7zAlJnF14UnVJtZSEvQ9nJJ/++JHXrDcItrG/pvSswst87QiTeU6oKaxIIdZt0lVjCC
+        L2zBdYhWO8w6HeA4HvGNJrh0YhV2mFc1/qfrHuV2WJgO0GKHhUmHsmiHsWknq9hNs4M2mCrxCnfsEWmx
+        TbSn6cE7XPPYsMPI9Gu0QGr16Mazmfnp0TuHHvyoggWLzMzu7gEd+LWg0pZ1Tx6hURdCChbcwzT0/A9C
+        /VkwqA83uMYaZqCnYhTBgrqxk5hDUMYFg/QK07txDL3QC3cbOoCwPvzPnNKtodPUr0n16Xle4gcQbTw4
+        wUcYCAAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

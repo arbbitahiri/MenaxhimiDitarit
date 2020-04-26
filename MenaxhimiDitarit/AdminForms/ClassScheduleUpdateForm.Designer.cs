@@ -1,6 +1,6 @@
 ﻿namespace MenaxhimiDitarit.AdminForms
 {
-    partial class ClassScheduleCreateForm
+    partial class ClassScheduleUpdateForm
     {
         /// <summary>
         /// Required designer variable.

@@ -11,9 +11,16 @@ namespace MenaxhimiDitarit.BLL
 {
     public class TopicBLL : IBaseCRUD<Topics>
     {
+        private TopicsDAL topicsDAL;
+
+        public TopicBLL()
+        {
+            topicsDAL = new TopicsDAL();
+        }
+
         public bool Add(Topics model)
         {
-            throw new NotImplementedException();
+            return topicsDAL.Add(model);
         }
 
         public Topics Get(int id)
@@ -28,7 +35,7 @@ namespace MenaxhimiDitarit.BLL
 
         public List<Topics> GetAll()
         {
-            throw new NotImplementedException();
+            return topicsDAL.GetAll();
         }
 
         public bool Remove(Topics model)
@@ -38,7 +45,7 @@ namespace MenaxhimiDitarit.BLL
 
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            return topicsDAL.Remove(id);
         }
 
         public bool Update(Topics model)

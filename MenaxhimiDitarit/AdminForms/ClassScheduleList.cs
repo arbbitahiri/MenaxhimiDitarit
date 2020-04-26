@@ -15,8 +15,6 @@ namespace MenaxhimiDitarit.AdminForms
 {
     public partial class ClassScheduletList : Form
     {
-        private Form activeForm = null;
-
         private readonly ClassScheduleBLL _scheduleBLL;
         private List<ClassSchedule> _schedule;
 
@@ -60,33 +58,6 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void ClassScheduletList_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (_scheduleBLL != null)
-            {
-                if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
-                {
-                    var findSchedule = _schedule.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedIndex + 1) && f.Date == cmbSelectDay.SelectedItem.ToString()).ToList();
-
-                    dgvScheduleList.DataSource = findSchedule;
-                }
-                else
-                    MessageBox.Show("Please write a select class and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-                MessageBox.Show("Schedule does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvScheduleList.SelectedRows.Count > 0)
@@ -97,35 +68,38 @@ namespace MenaxhimiDitarit.AdminForms
                     var schedule = GetSchedule(dgvScheduleList.Rows[row]);
                     if (schedule != null)
                     {
-                        ClassScheduleCreateForm updateSchedule = new ClassScheduleCreateForm(schedule);
+                        ClassScheduleUpdateForm updateSchedule = new ClassScheduleUpdateForm(schedule);
                         updateSchedule.ShowDialog();
                     }
                 }
             }
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ClassScheduletList_Load_1(object sender, EventArgs e)
         {
-            if (dgvScheduleList.SelectedRows.Count > 0)
+            RefreshList();
+        }
+
+        private void btnViewAll_Click_1(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            if (_scheduleBLL != null)
             {
-                var row = dgvScheduleList.SelectedRows[0].Index;
-                if (row >= 0)
+                if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
                 {
-                    var schedule = GetSchedule(dgvScheduleList.Rows[row]);
-                    if (schedule != null)
-                    {
-                        if (MessageBox.Show($"Are you sure you want to delete?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
-                        {
-                            _scheduleBLL.Remove(schedule.ClassID);
-                            MessageBox.Show("The selected schedule has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            RefreshList();
-                        }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    var findSchedule = _schedule.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedIndex + 1) && f.Date == cmbSelectDay.SelectedItem.ToString()).ToList();
+
+                    dgvScheduleList.DataSource = findSchedule;
                 }
+                else
+                    MessageBox.Show("Please select class and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+                MessageBox.Show("Schedule does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

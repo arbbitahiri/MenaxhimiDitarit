@@ -48,6 +48,8 @@
             this.picTeacher = new System.Windows.Forms.PictureBox();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.picSchool = new System.Windows.Forms.PictureBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlComments.SuspendLayout();
             this.pnlAbsences.SuspendLayout();
@@ -73,7 +75,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(200, 563);
+            this.pnlMain.Size = new System.Drawing.Size(200, 600);
             this.pnlMain.TabIndex = 1;
             // 
             // btnClose
@@ -83,7 +85,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(0, 513);
+            this.btnClose.Location = new System.Drawing.Point(0, 550);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(200, 50);
             this.btnClose.TabIndex = 8;
@@ -340,18 +342,42 @@
             this.picSchool.TabIndex = 1;
             this.picSchool.TabStop = false;
             // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
+            this.lblUsername.Location = new System.Drawing.Point(286, 575);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(0, 16);
+            this.lblUsername.TabIndex = 5;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(206, 575);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(74, 16);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "Username:";
+            // 
             // TeacherMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(873, 563);
+            this.ClientSize = new System.Drawing.Size(873, 600);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherMainForm";
+            this.Shown += new System.EventHandler(this.TeacherMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
             this.pnlComments.ResumeLayout(false);
             this.pnlAbsences.ResumeLayout(false);
@@ -362,6 +388,7 @@
             this.pnlChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSchool)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -386,5 +413,7 @@
         private System.Windows.Forms.PictureBox picTeacher;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.PictureBox picSchool;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblUser;
     }
 }

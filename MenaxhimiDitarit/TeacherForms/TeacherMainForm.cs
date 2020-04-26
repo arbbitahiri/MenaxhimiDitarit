@@ -135,5 +135,10 @@ namespace MenaxhimiDitarit.TeacherForms
 
             this.Close();
         }
+
+        private void TeacherMainForm_Shown(object sender, EventArgs e)
+        {
+            lblUsername.Text = UserSession.GetUser.UserName;
+        }
     }
 }

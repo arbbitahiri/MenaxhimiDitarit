@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using MenaxhimiDitarit.BO;
@@ -13,7 +14,36 @@ namespace MenaxhimiDitarit.DAL
     {
         public bool Add(Topics model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Topic_Create";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "topicID", model.TopicID);
+                        DataConnection.AddParameter(command, "classID", model.ClassID);
+                        DataConnection.AddParameter(command, "subjectID", model.SubjectID);
+                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "time", model.Time);
+                        DataConnection.AddParameter(command, "content", model.Content);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUD", model.LUD);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                string rerrr = e.Message;
+
+                return false;
+            }
         }
 
         public Topics Get(int id)
@@ -28,7 +58,31 @@ namespace MenaxhimiDitarit.DAL
 
         public List<Topics> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    List<Topics> topic = null;
+                    string sqlproc = "dbo.usp_Topics_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            topic = new List<Topics>();
+                            while (reader.Read())
+                                topic.Add(ToObject(reader));
+                        }
+
+                        return topic;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
         }
 
         public bool Remove(Topics model)
@@ -38,12 +92,73 @@ namespace MenaxhimiDitarit.DAL
 
         public bool Remove(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Topic_Delete";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "topicID", id);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public Topics ToObject(SqlDataReader reader)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var topic = new Topics();
+
+                if (reader["TopicID"] != DBNull.Value)
+                    topic.TopicID = int.Parse(reader["TopicID"].ToString());
+
+                if (reader["ClassID"] != DBNull.Value)
+                    topic.ClassID = int.Parse(reader["ClassID"].ToString());
+
+                if (reader["SubjectID"] != DBNull.Value)
+                    topic.SubjectID = int.Parse(reader["SubjectID"].ToString());
+
+                if (reader["Date"] != DBNull.Value)
+                    topic.Date = DateTime.Parse(reader["Date"].ToString());
+
+                if (reader["Time"] != DBNull.Value)
+                    topic.Time = int.Parse(reader["Time"].ToString());
+
+                if (reader["Content"] != DBNull.Value)
+                    topic.Content = reader["Content"].ToString();
+
+                if (reader["InsertBy"] != DBNull.Value)
+                    topic.InsertBy = reader["InsertBy"].ToString();
+
+                if (reader["InsertDate"] != DBNull.Value)
+                    topic.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+
+                if (reader["LUB"] != DBNull.Value)
+                    topic.LUB = reader["LUB"].ToString();
+
+                if (reader["LUD"] != DBNull.Value)
+                    topic.LUD = DateTime.Parse(reader["LUD"].ToString());
+
+                if (reader["LUN"] != DBNull.Value)
+                    topic.LUN = int.Parse(reader["LUN"].ToString());
+
+                return topic;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public bool Update(Topics model)

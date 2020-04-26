@@ -7,14 +7,137 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.BLL;
+using MenaxhimiDitarit.BO;
+using Telerik.WinControls.UI;
 
 namespace MenaxhimiDitarit.TeacherForms
 {
     public partial class TopicListForm : Form
     {
+        private readonly TopicBLL _topicBLL;
+        private List<Topics> _topic;
+
+        private readonly SubjectBLL _subjectBLL;
+        private readonly List<Subject> _subject;
+
+        private readonly ClassBLL _classBLL;
+        private readonly List<Class> _class;
+
         public TopicListForm()
         {
             InitializeComponent();
+
+            _topicBLL = new TopicBLL();
+            _subjectBLL = new SubjectBLL();
+            _classBLL = new ClassBLL();
+
+            _subject = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = _subject;
+
+            _class = _classBLL.GetAll();
+            cmbSelectClass.DataSource = _class;
+        }
+
+        private void RefreshList()
+        {
+            _topic = _topicBLL.GetAll();
+            dgvTopicList.DataSource = _topic;
+        }
+
+        private Topics GetTopic(GridViewRowInfo topicRow)
+        {
+            try
+            {
+                Topics topic = new Topics
+                {
+                    TopicID = (int)topicRow.Cells[0].Value,
+                    ClassID = (int)topicRow.Cells[1].Value,
+                    SubjectID = (int)topicRow.Cells[2].Value,
+                    Date = (DateTime)topicRow.Cells[3].Value,
+                    Time = (int)topicRow.Cells[4].Value,
+                    Content = (string)topicRow.Cells[5].Value,
+                    InsertBy = (string)topicRow.Cells[6].Value,
+                    InsertDate = (DateTime)topicRow.Cells[7].Value,
+                    LUB = (string)topicRow.Cells[8].Value,
+                    LUD = (DateTime)topicRow.Cells[9].Value,
+                    LUN = (int)topicRow.Cells[10].Value
+                };
+
+                return topic;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        private void TopicListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (_topicBLL != null)
+            {
+                if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
+                {
+                    var findTopic = _topic.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
+
+                    dgvTopicList.DataSource = findTopic;
+                }
+                else
+                    MessageBox.Show("Please select a class, a subject and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Topic does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvTopicList.SelectedRows.Count > 0)
+            {
+                var row = dgvTopicList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var topic = GetTopic(dgvTopicList.Rows[row]);
+                    if (topic != null)
+                    {
+                        TopicCreateForm updateTopic = new TopicCreateForm(topic);
+                        updateTopic.ShowDialog();
+                    }
+                }
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvTopicList.SelectedRows.Count > 0)
+            {
+                var row = dgvTopicList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var topic = GetTopic(dgvTopicList.Rows[row]);
+                    if (topic != null)
+                    {
+                        if (MessageBox.Show($"Are you sure you want to delete?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                            == DialogResult.OK)
+                        {
+                            _topicBLL.Remove(topic.TopicID);
+                            MessageBox.Show("The selected Topic has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RefreshList();
+                        }
+                        else
+                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
         }
     }
 }
