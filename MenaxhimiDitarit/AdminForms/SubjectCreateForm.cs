@@ -47,8 +47,10 @@ namespace MenaxhimiDitarit
             cmbTeacher.DataSource = MyTeachers;
 
             _subject = subject;
-            update = this._subject != null;
+            update = _subject != null;
             PopulateForm(_subject);
+
+            txtSubjectTitle.Enabled = false;
         }
 
         private void PopulateForm(Subject subject)
@@ -62,10 +64,8 @@ namespace MenaxhimiDitarit
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -76,8 +76,7 @@ namespace MenaxhimiDitarit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
-            {
+            if (CheckTextbox()) {
                 Subject subject = new Subject();
 
                 subject.SubjectID = int.Parse(txtID.Text);
@@ -95,18 +94,15 @@ namespace MenaxhimiDitarit
                 else if (update)
                     subject.LUN = ++_subject.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
+                    else {
                         bool isRegistred = _subjectBLL.Add(subject);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -114,10 +110,15 @@ namespace MenaxhimiDitarit
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Subject updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _subjectBLL.Add(subject);
+
+                    if (isUpdated) {
+                        MessageBox.Show($"Subject: {subject.SubjectTitle} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

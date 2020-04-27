@@ -46,17 +46,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchSubject = new System.Windows.Forms.TextBox();
             this.dgvRoomList = new Telerik.WinControls.UI.RadGridView();
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
-            this.bsrcRoomList = new System.Windows.Forms.BindingSource(this.components);
             this.cmsRoomContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsrcRoomList = new System.Windows.Forms.BindingSource(this.components);
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomList.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoomList)).BeginInit();
             this.cmsRoomContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoomList)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -133,6 +133,7 @@
             this.txtSearchSubject.TabIndex = 5;
             this.txtSearchSubject.Text = "Search by Room Type";
             this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchSubject_Click);
+            this.txtSearchSubject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchSubject_KeyDown);
             // 
             // dgvRoomList
             // 
@@ -220,23 +221,19 @@
             this.dgvRoomList.TabIndex = 13;
             this.dgvRoomList.ThemeName = "CrystalDark";
             // 
-            // bsrcRoomList
-            // 
-            this.bsrcRoomList.DataSource = typeof(MenaxhimiDitarit.BO.Room);
-            // 
             // cmsRoomContext
             // 
             this.cmsRoomContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.cmsRoomContext.Name = "cmsRoomContext";
-            this.cmsRoomContext.Size = new System.Drawing.Size(181, 70);
+            this.cmsRoomContext.Size = new System.Drawing.Size(113, 48);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -244,9 +241,13 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // bsrcRoomList
+            // 
+            this.bsrcRoomList.DataSource = typeof(MenaxhimiDitarit.BO.Room);
             // 
             // RoomListForm
             // 
@@ -265,8 +266,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoomList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoomList)).EndInit();
             this.cmsRoomContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoomList)).EndInit();
             this.ResumeLayout(false);
 
         }

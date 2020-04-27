@@ -17,7 +17,7 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassBLL _classBLL;
         private Class _class;
         private List<Class> MyClass;
-        private readonly bool update = false;
+        private bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
         private List<Teacher> MyTeachers;
@@ -59,6 +59,8 @@ namespace MenaxhimiDitarit.AdminForms
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;
 
+            cmbSelectClass.Enabled = false;
+
             update = _class != null;
             PopulateForm(_class);
         }
@@ -73,10 +75,8 @@ namespace MenaxhimiDitarit.AdminForms
 
         private bool CheckComboBox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is ComboBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is ComboBox) {
                     ComboBox cmb = ctrl as ComboBox;
                     if (cmb.SelectedIndex > -1)
                         return true;
@@ -87,8 +87,7 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
-            if (!CheckComboBox())
-            {
+            if (!CheckComboBox()) {
                 Class classes = new Class();
 
                 classes.ClassID = int.Parse(txtID.Text);
@@ -105,18 +104,15 @@ namespace MenaxhimiDitarit.AdminForms
                 else if (update)
                     classes.LUN = ++_class.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
+                    else {
                         bool isRegistred = _classBLL.Add(classes);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -124,10 +120,15 @@ namespace MenaxhimiDitarit.AdminForms
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Class Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _classBLL.Add(classes);
+
+                    if (isUpdated) {
+                        MessageBox.Show($"Class: {classes.ClassNo} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

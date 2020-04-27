@@ -12,5 +12,7 @@ namespace MenaxhimiDitarit.BO
         public int TopicID { get; set; }
         public string Reasoning { get; set; }
         public int NoStudents { get; set; }
+
+        public virtual Topic Topic { get; set; }
     }
 }

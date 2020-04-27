@@ -12,5 +12,8 @@ namespace MenaxhimiDitarit.BO
         public int TeacherID { get; set; }
         public int ClassNo { get; set; }
         public int RoomID { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
+        public virtual Room Room { get; set; }
     }
 }

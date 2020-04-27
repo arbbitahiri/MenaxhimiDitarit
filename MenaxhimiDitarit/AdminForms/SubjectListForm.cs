@@ -41,11 +41,12 @@ namespace MenaxhimiDitarit
                     SubjectTitle = (string)subjectRow.Cells[1].Value,
                     Book = (string)subjectRow.Cells[2].Value,
                     Book_Author = (string)subjectRow.Cells[3].Value,
-                    InsertBy = (string)subjectRow.Cells[4].Value,
-                    InsertDate = (DateTime)subjectRow.Cells[5].Value,
-                    LUB = (string)subjectRow.Cells[6].Value,
-                    LUD = (DateTime)subjectRow.Cells[7].Value,
-                    LUN = (int)subjectRow.Cells[8].Value
+                    TeacherID = (int)subjectRow.Cells[4].Value,
+                    InsertBy = (string)subjectRow.Cells[5].Value,
+                    InsertDate = (DateTime)subjectRow.Cells[6].Value,
+                    LUB = (string)subjectRow.Cells[7].Value,
+                    LUD = (DateTime)subjectRow.Cells[8].Value,
+                    LUN = (int)subjectRow.Cells[9].Value
                 };
 
                 return subject;
@@ -128,6 +129,12 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+        }
+
+        private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnSearchSubject_Click(this, new EventArgs());
         }
     }
 }

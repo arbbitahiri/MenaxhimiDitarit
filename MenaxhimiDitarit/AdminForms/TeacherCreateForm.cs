@@ -35,8 +35,12 @@ namespace MenaxhimiDitarit
             InitializeComponent();
 
             _teacherBLL = new TeacherBLL();
-            this._teacher = teacher;
-            PopulateForm(this._teacher);
+            _teacher = teacher;
+
+            update = teacher != null;
+            PopulateForm(_teacher);
+
+
             rbtnMale.Checked = true;
         }
 
@@ -74,10 +78,8 @@ namespace MenaxhimiDitarit
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -100,8 +102,8 @@ namespace MenaxhimiDitarit
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             bool isEmail = CheckEmail(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
-            if (isEmail && CheckTextbox())
-            {
+
+            if (isEmail && CheckTextbox()) {
                 Teacher teacher = new Teacher();
 
                 teacher.TeacherID = int.Parse(txtID.Text);
@@ -123,25 +125,20 @@ namespace MenaxhimiDitarit
                 else if (update)
                     teacher.LUN = ++this._teacher.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
 
-                    if (temp.Count > 0)
-                    {
+                    if (temp.Count > 0) {
                         if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
-                            "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                        {
+                            "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                             teacher = null;
                             update = false;
                             txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = ""; txtPhoneNo.Text = ""; txtQualification.Text = "";
                         }
-                        else
-                        {
+                        else {
                             bool isRegistred = _teacherBLL.Add(teacher);
 
-                            if (isRegistred)
-                            {
+                            if (isRegistred) {
                                 MessageBox.Show($"Teacher {teacher.FirstName} {teacher.LastName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
@@ -149,12 +146,10 @@ namespace MenaxhimiDitarit
                                 MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    else
-                    {
+                    else {
                         bool isRegistred = _teacherBLL.Add(teacher);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("Teacher registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -162,10 +157,15 @@ namespace MenaxhimiDitarit
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Teacher updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _teacherBLL.Add(teacher);
+
+                    if (isUpdated) {
+                        MessageBox.Show($"Teacher: {teacher.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

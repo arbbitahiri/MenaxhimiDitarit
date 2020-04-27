@@ -14,7 +14,7 @@ namespace MenaxhimiDitarit.DirectorForms
 {
     public partial class RoleCreateForm : Form
     {
-        private readonly RoleBLL _rolesBLL;
+        private readonly RoleBLL _roleBLL;
         private Role _role;
         private List<Role> MyRoles;
         private bool update = false;
@@ -23,8 +23,8 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             InitializeComponent();
 
-            _rolesBLL = new RoleBLL();
-            MyRoles = _rolesBLL.GetAll();
+            _roleBLL = new RoleBLL();
+            MyRoles = _roleBLL.GetAll();
             update = false;
         }
 
@@ -32,8 +32,8 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             InitializeComponent();
 
-            _rolesBLL = new RoleBLL();
-            MyRoles = _rolesBLL.GetAll();
+            _roleBLL = new RoleBLL();
+            MyRoles = _roleBLL.GetAll();
             _role = role;
             update = _role != null;
             PopulateForm(_role);
@@ -47,10 +47,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -61,8 +59,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
-            {
+            if (CheckTextbox()) {
                 Role role = new Role();
 
                 role.RoleID = int.Parse(txtID.Text);
@@ -77,18 +74,15 @@ namespace MenaxhimiDitarit.DirectorForms
                 else if (update)
                     role.LUN = ++_role.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyRoles.Where(t => t.RoleName == txtRoleName.Text).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Role exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
-                        bool isRegistred = _rolesBLL.Add(role);
+                    else {
+                        bool isRegistred = _roleBLL.Add(role);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("Role registered successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -96,10 +90,15 @@ namespace MenaxhimiDitarit.DirectorForms
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Role updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _roleBLL.Add(role);
+
+                    if (isUpdated) {
+                        MessageBox.Show($"Role: {role.RoleName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

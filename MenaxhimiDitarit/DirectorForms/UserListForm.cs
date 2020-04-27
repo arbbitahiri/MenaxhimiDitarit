@@ -136,5 +136,11 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             txtSearchUserByNU.Text = "";
         }
+
+        private void txtSearchUserByNU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnSearch_Click(this, new EventArgs());
+        }
     }
 }

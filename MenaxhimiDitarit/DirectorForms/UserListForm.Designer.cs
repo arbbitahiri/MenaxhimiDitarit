@@ -69,19 +69,19 @@
             this.cmsUserContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewTemplate1 = new Telerik.WinControls.UI.GridViewTemplate();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.MasterTemplate = new Telerik.WinControls.UI.RadGridView();
+            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).BeginInit();
             this.cmsUserContext.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -120,6 +120,7 @@
             this.txtSearchUserByNU.TabIndex = 15;
             this.txtSearchUserByNU.Text = "Search by Name or Username";
             this.txtSearchUserByNU.Click += new System.EventHandler(this.txtSearchUserByNU_Click);
+            this.txtSearchUserByNU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchUserByNU_KeyDown);
             // 
             // pictureBox2
             // 
@@ -302,10 +303,6 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // bsrcUserList
-            // 
-            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
-            // 
             // gridViewTemplate1
             // 
             this.gridViewTemplate1.ViewDefinition = tableViewDefinition1;
@@ -423,6 +420,10 @@
             this.MasterTemplate.TabIndex = 1;
             this.MasterTemplate.ThemeName = "CrystalDark";
             // 
+            // bsrcUserList
+            // 
+            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
+            // 
             // UserListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,10 +442,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.cmsUserContext.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,7 +458,6 @@
         private Telerik.WinControls.UI.RadGridView dgvUserList;
         private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
         private Telerik.WinControls.UI.GridViewTemplate gridViewTemplate1;
-        private System.Windows.Forms.BindingSource bsrcUserList;
         private Telerik.WinControls.UI.RadGridView MasterTemplate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtSearchUserByNU;
@@ -465,5 +465,6 @@
         private System.Windows.Forms.ContextMenuStrip cmsUserContext;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.BindingSource bsrcUserList;
     }
 }

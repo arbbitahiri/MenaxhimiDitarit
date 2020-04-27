@@ -128,5 +128,11 @@ namespace MenaxhimiDitarit.AdminForms
                 }
             }
         }
+
+        private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnSearchSubject_Click(this, new EventArgs());
+        }
     }
 }

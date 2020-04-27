@@ -17,5 +17,17 @@ namespace MenaxhimiDitarit.BO
         public int RoleID { get; set; }
 
         public virtual Role Roles { get; set; }
+
+        public string FullName {
+            get {
+                return FirstName + " " + LastName;
+            }
+        }
+
+        public string GetRole {
+            get {
+                return Roles.RoleName;
+            }
+        }
     }
 }

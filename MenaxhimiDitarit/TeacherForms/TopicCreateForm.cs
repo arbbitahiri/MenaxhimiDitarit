@@ -78,10 +78,8 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -92,8 +90,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
-            {
+            if (CheckTextbox()) {
                 Topic topic = new Topic();
 
                 topic.TopicID = int.Parse(txtID.Text);
@@ -112,20 +109,17 @@ namespace MenaxhimiDitarit.TeacherForms
                 else if (update)
                     topic.LUN = ++_topics.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
                     && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
+                    else {
                         bool isRegistred = _topicBLL.Add(topic);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -133,10 +127,15 @@ namespace MenaxhimiDitarit.TeacherForms
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Topic Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _topicBLL.Add(topic);
+
+                    if (isUpdated) {
+                        MessageBox.Show("Topic updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

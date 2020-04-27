@@ -17,7 +17,7 @@ namespace MenaxhimiDitarit
         private readonly RoomBLL _roomBLL;
         private Room _room;
         private List<Room> MyRooms;
-        private readonly bool update = false;
+        private bool update = false;
 
         public RoomCreateForm()
         {
@@ -34,6 +34,8 @@ namespace MenaxhimiDitarit
 
             _roomBLL = new RoomBLL();
             _room = room;
+
+            update = room != null;
             PopulateForm(_room);
         }
 
@@ -46,10 +48,8 @@ namespace MenaxhimiDitarit
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -60,8 +60,7 @@ namespace MenaxhimiDitarit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
-            {
+            if (CheckTextbox()) {
                 Room room = new Room();
 
                 room.RoomID = int.Parse(txtID.Text);
@@ -77,18 +76,15 @@ namespace MenaxhimiDitarit
                 else if (update)
                     room.LUN = ++_room.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
+                    else {
                         bool isRegistred = _roomBLL.Add(room);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("Room registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -96,10 +92,15 @@ namespace MenaxhimiDitarit
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Room updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _roomBLL.Add(room);
+
+                    if (isUpdated) {
+                        MessageBox.Show($"Room No: {room.RoomNo} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

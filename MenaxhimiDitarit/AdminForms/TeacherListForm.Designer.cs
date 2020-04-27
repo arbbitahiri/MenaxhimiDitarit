@@ -84,6 +84,7 @@
             this.txtSearchName.TabIndex = 5;
             this.txtSearchName.Text = "Search by Name or Teacher";
             this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
+            this.txtSearchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchName_KeyDown);
             // 
             // grbSearch
             // 

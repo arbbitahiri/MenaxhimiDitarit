@@ -45,17 +45,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchUser = new System.Windows.Forms.TextBox();
             this.dgvRoleList = new Telerik.WinControls.UI.RadGridView();
-            this.bsrcRoleList = new System.Windows.Forms.BindingSource(this.components);
-            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsRoleContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bsrcRoleList = new System.Windows.Forms.BindingSource(this.components);
+            this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleList.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoleList)).BeginInit();
             this.cmsRoleContext.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoleList)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -131,6 +131,7 @@
             this.txtSearchUser.TabIndex = 9;
             this.txtSearchUser.Text = "Search by Role Name";
             this.txtSearchUser.Click += new System.EventHandler(this.txtSearchUser_Click);
+            this.txtSearchUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchUser_KeyDown);
             // 
             // dgvRoleList
             // 
@@ -209,10 +210,6 @@
             this.dgvRoleList.TabIndex = 3;
             this.dgvRoleList.ThemeName = "CrystalDark";
             // 
-            // bsrcRoleList
-            // 
-            this.bsrcRoleList.DataSource = typeof(MenaxhimiDitarit.BO.Role);
-            // 
             // cmsRoleContext
             // 
             this.cmsRoleContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -237,6 +234,10 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
+            // bsrcRoleList
+            // 
+            this.bsrcRoleList.DataSource = typeof(MenaxhimiDitarit.BO.Role);
+            // 
             // RoleListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,8 +255,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoleList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoleList)).EndInit();
             this.cmsRoleContext.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcRoleList)).EndInit();
             this.ResumeLayout(false);
 
         }

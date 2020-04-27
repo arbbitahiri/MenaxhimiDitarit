@@ -14,7 +14,7 @@ namespace MenaxhimiDitarit.DirectorForms
 {
     public partial class UserCreateForm : Form
     {
-        private readonly UserBLL _usersBLL;
+        private readonly UserBLL _userBLL;
         private User _user;
         private List<User> MyUsers;
         private bool update = false;
@@ -26,10 +26,10 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             InitializeComponent();
 
-            _usersBLL = new UserBLL();
+            _userBLL = new UserBLL();
             _roleBLL = new RoleBLL();
 
-            MyUsers = _usersBLL.GetAll();
+            MyUsers = _userBLL.GetAll();
             MyRoles = _roleBLL.GetAll();
             cmbRoles.DataSource = MyRoles;
 
@@ -41,7 +41,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             InitializeComponent();
 
-            _usersBLL = new UserBLL();
+            _userBLL = new UserBLL();
             _user = user;
             _roleBLL = new RoleBLL();
             MyRoles = _roleBLL.GetAll();
@@ -64,10 +64,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
+            foreach (Control ctrl in this.Controls) {
+                if (ctrl is TextBox) {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -86,8 +84,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
-            {
+            if (CheckTextbox()) {
                 User user = new User();
 
                 user.UserID = int.Parse(txtID.Text);
@@ -107,18 +104,15 @@ namespace MenaxhimiDitarit.DirectorForms
                 else if (update)
                     user.LUN = ++_user.LUN;
 
-                if (!update)
-                {
+                if (!update) {
                     var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
                     if (temp.Count > 0)
                         MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
-                        bool isRegistred = _usersBLL.Add(user);
+                    else {
+                        bool isRegistred = _userBLL.Add(user);
 
-                        if (isRegistred)
-                        {
+                        if (isRegistred) {
                             MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
@@ -126,10 +120,16 @@ namespace MenaxhimiDitarit.DirectorForms
                             MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("User Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                else {
+                    bool isUpdated = _userBLL.Add(user);
+
+                    if (isUpdated)
+                    {
+                        MessageBox.Show($"User: {user.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

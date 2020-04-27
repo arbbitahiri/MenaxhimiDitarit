@@ -14,5 +14,8 @@ namespace MenaxhimiDitarit.BO
         public DateTime Date { get; set; }
         public int Time { get; set; }
         public string Content { get; set; }
+
+        public virtual Class Class { get; set; }
+        public virtual Subject Subject { get; set; }
     }
 }

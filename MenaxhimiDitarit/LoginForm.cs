@@ -96,8 +96,8 @@ namespace MenaxhimiDitarit
             if (e.KeyCode == Keys.Enter)
                 btnLogin_Click(this, new EventArgs());
 
-            if (e.KeyCode == Keys.Tab)
-                txtPassword_Click(this, new EventArgs());
+            //if (e.KeyCode == Keys.Tab)
+            //    txtPassword_Click(this, new EventArgs());
         }
     }
 }

@@ -130,5 +130,11 @@ namespace MenaxhimiDitarit
                 }
             }
         }
+
+        private void txtSearchClass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnSearchClass_Click(this, new EventArgs());
+        }
     }
 }
