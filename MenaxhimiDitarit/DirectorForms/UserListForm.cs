@@ -23,6 +23,7 @@ namespace MenaxhimiDitarit.DirectorForms
             InitializeComponent();
 
             _usersBLL = new UserBLL();
+            dgvUserList.SelectionMode = GridViewSelectionMode.FullRowSelect;
         }
 
         private void RefreshList()
@@ -44,11 +45,11 @@ namespace MenaxhimiDitarit.DirectorForms
                     UserPassword = (string)userRow.Cells[4].Value,
                     ExpiresDate = (DateTime)userRow.Cells[5].Value,
                     RoleID = (int)userRow.Cells[6].Value,
-                    InsertBy = (string)userRow.Cells[7].Value,
-                    InsertDate = (DateTime)userRow.Cells[8].Value,
-                    LUB = (string)userRow.Cells[9].Value,
-                    LUD = (DateTime)userRow.Cells[10].Value,
-                    LUN = (int)userRow.Cells[11].Value
+                    InsertBy = (string)userRow.Cells[9].Value,
+                    InsertDate = (DateTime)userRow.Cells[10].Value,
+                    LUB = (string)userRow.Cells[11].Value,
+                    LUD = (DateTime)userRow.Cells[12].Value,
+                    LUN = (int)userRow.Cells[13].Value
                 };
 
                 return user;
@@ -102,6 +103,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

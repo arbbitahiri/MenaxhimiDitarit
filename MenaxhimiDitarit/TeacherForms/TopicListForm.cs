@@ -19,14 +19,16 @@ namespace MenaxhimiDitarit.TeacherForms
         private List<Topic> MyTopics;
 
         private readonly SubjectBLL _subjectBLL;
-        private readonly List<Subject> MySubjects;
+        private List<Subject> MySubjects;
 
         private readonly ClassBLL _classBLL;
-        private readonly List<Class> MyClasses;
+        private List<Class> MyClasses;
 
         public TopicListForm()
         {
             InitializeComponent();
+
+            dgvTopicList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _topicBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
@@ -115,6 +117,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

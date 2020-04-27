@@ -22,6 +22,8 @@ namespace MenaxhimiDitarit.AdminForms
         {
             InitializeComponent();
 
+            dgvRoomList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _roomBLL = new RoomBLL();
         }
 
@@ -103,6 +105,7 @@ namespace MenaxhimiDitarit.AdminForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

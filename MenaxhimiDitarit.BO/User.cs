@@ -23,11 +23,5 @@ namespace MenaxhimiDitarit.BO
                 return FirstName + " " + LastName;
             }
         }
-
-        public string GetRole {
-            get {
-                return Roles.RoleName;
-            }
-        }
     }
 }

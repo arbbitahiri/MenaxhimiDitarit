@@ -17,6 +17,7 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassBLL _classBLL;
         private Class _class;
         private List<Class> MyClass;
+
         private bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
@@ -87,52 +88,66 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
-            if (!CheckComboBox()) {
-                Class classes = new Class();
+            try
+            {
+                if (CheckComboBox())
+                {
+                    Class classes = new Class();
 
-                classes.ClassID = int.Parse(txtID.Text);
-                classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
-                classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
-                classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
-                classes.InsertBy = UserSession.GetUser.UserName;
-                classes.InsertDate = DateTime.Now;
-                classes.LUB = UserSession.GetUser.UserName;
-                classes.LUD = DateTime.Now;
+                    classes.ClassID = int.Parse(txtID.Text);
+                    classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
+                    classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
+                    classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
+                    classes.InsertBy = UserSession.GetUser.UserName;
+                    classes.InsertDate = DateTime.Now;
+                    classes.LUB = UserSession.GetUser.UserName;
+                    classes.LUD = DateTime.Now;
 
-                if (!update)
-                    classes.LUN++;
-                else if (update)
-                    classes.LUN = ++_class.LUN;
+                    if (!update)
+                        classes.LUN++;
+                    else if (update)
+                        classes.LUN = ++_class.LUN;
 
-                if (!update) {
-                    var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+                    if (!update)
+                    {
+                        var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
-                    if (temp.Count > 0)
-                        MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else {
-                        bool isRegistred = _classBLL.Add(classes);
+                        if (temp.Count > 0)
+                            MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            bool isRegistred = _classBLL.Add(classes);
 
-                        if (isRegistred) {
-                            MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (isRegistred)
+                            {
+                                MessageBox.Show("Class registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        bool isUpdated = _classBLL.Add(classes);
+
+                        if (isUpdated)
+                        {
+                            MessageBox.Show($"Class: {classes.ClassNo} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else {
-                    bool isUpdated = _classBLL.Add(classes);
+                else
+                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    if (isUpdated) {
-                        MessageBox.Show($"Class: {classes.ClassNo} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-            else
-                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

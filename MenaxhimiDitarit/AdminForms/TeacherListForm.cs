@@ -22,6 +22,8 @@ namespace MenaxhimiDitarit
         {
             InitializeComponent();
 
+            dgvTeacherList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _teacherBLL = new TeacherBLL();
         }
 
@@ -109,6 +111,7 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+            RefreshList();
         }
 
         private void txtSearchName_KeyDown(object sender, KeyEventArgs e)

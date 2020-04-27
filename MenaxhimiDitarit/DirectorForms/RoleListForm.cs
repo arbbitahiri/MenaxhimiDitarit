@@ -22,6 +22,8 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             InitializeComponent();
 
+            dgvRoleList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _rolesBLL = new RoleBLL();
             MyRoles = _rolesBLL.GetAll();
         }
@@ -30,29 +32,6 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             MyRoles = _rolesBLL.GetAll();
             dgvRoleList.DataSource = MyRoles;
-        }
-
-        private Role GetRole(GridViewRowInfo roleRow)
-        {
-            try
-            {
-                Role role = new Role
-                {
-                    RoleID = (int)roleRow.Cells[0].Value,
-                    RoleName = (string)roleRow.Cells[1].Value,
-                    InsertBy = (string)roleRow.Cells[2].Value,
-                    InsertDate = (DateTime)roleRow.Cells[3].Value,
-                    LUB = (string)roleRow.Cells[4].Value,
-                    LUD = (DateTime)roleRow.Cells[5].Value,
-                    LUN = (int)roleRow.Cells[6].Value
-                };
-
-                return role;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
         }
 
         private void RoleListForm_Load(object sender, EventArgs e)
@@ -87,49 +66,6 @@ namespace MenaxhimiDitarit.DirectorForms
                 MessageBox.Show("Role does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvRoleList.SelectedRows.Count > 0)
-            {
-                var row = dgvRoleList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var role = GetRole(dgvRoleList.Rows[row]);
-                    if (role != null)
-                    {
-                        RoleCreateForm roleUpdate = new RoleCreateForm(role);
-                        roleUpdate.StartPosition = FormStartPosition.CenterParent;
-                        roleUpdate.ShowDialog();
-                    }
-                }
-            }
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvRoleList.SelectedRows.Count > 0)
-            {
-                var row = dgvRoleList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var role = GetRole(dgvRoleList.Rows[row]);
-                    if (role != null)
-                    {
-
-                        if (MessageBox.Show($"Are you sure you want to delete {role.RoleName}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
-                        {
-                            _rolesBLL.Remove(role.RoleID);
-                            MessageBox.Show($"Role: {role.RoleName} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            RefreshList();
-                        }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-        }
-
         private void txtSearchUser_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -137,3 +73,33 @@ namespace MenaxhimiDitarit.DirectorForms
         }
     }
 }
+
+
+
+
+
+
+
+
+//private Role GetRole(GridViewRowInfo roleRow)
+//{
+//    try
+//    {
+//        Role role = new Role
+//        {
+//            RoleID = (int)roleRow.Cells[0].Value,
+//            RoleName = (string)roleRow.Cells[1].Value,
+//            InsertBy = (string)roleRow.Cells[2].Value,
+//            InsertDate = (DateTime)roleRow.Cells[3].Value,
+//            LUB = (string)roleRow.Cells[4].Value,
+//            LUD = (DateTime)roleRow.Cells[5].Value,
+//            LUN = (int)roleRow.Cells[6].Value
+//        };
+
+//        return role;
+//    }
+//    catch (Exception)
+//    {
+//        return null;
+//    }
+//}

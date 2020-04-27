@@ -37,7 +37,6 @@
             this.btnReviewComments = new System.Windows.Forms.Button();
             this.btnReview = new System.Windows.Forms.Button();
             this.pnlRoles = new System.Windows.Forms.Panel();
-            this.btnAddNRole = new System.Windows.Forms.Button();
             this.btnRolesList = new System.Windows.Forms.Button();
             this.btnRoles = new System.Windows.Forms.Button();
             this.pnlUsers = new System.Windows.Forms.Panel();
@@ -94,9 +93,9 @@
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 539);
+            this.panel1.Location = new System.Drawing.Point(0, 535);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 65);
+            this.panel1.Size = new System.Drawing.Size(200, 65);
             this.panel1.TabIndex = 12;
             // 
             // btnSignOut
@@ -105,7 +104,7 @@
             this.btnSignOut.FlatAppearance.BorderSize = 0;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.Location = new System.Drawing.Point(83, 0);
+            this.btnSignOut.Location = new System.Drawing.Point(100, 0);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(100, 65);
             this.btnSignOut.TabIndex = 9;
@@ -129,9 +128,9 @@
             // 
             this.pnlReview.Controls.Add(this.btnReviewComments);
             this.pnlReview.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlReview.Location = new System.Drawing.Point(0, 504);
+            this.pnlReview.Location = new System.Drawing.Point(0, 469);
             this.pnlReview.Name = "pnlReview";
-            this.pnlReview.Size = new System.Drawing.Size(183, 35);
+            this.pnlReview.Size = new System.Drawing.Size(200, 35);
             this.pnlReview.TabIndex = 11;
             // 
             // btnReviewComments
@@ -145,7 +144,7 @@
             this.btnReviewComments.Location = new System.Drawing.Point(0, 0);
             this.btnReviewComments.Name = "btnReviewComments";
             this.btnReviewComments.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnReviewComments.Size = new System.Drawing.Size(183, 35);
+            this.btnReviewComments.Size = new System.Drawing.Size(200, 35);
             this.btnReviewComments.TabIndex = 2;
             this.btnReviewComments.Text = "Review Comments";
             this.btnReviewComments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,10 +160,10 @@
             this.btnReview.ForeColor = System.Drawing.Color.White;
             this.btnReview.Image = ((System.Drawing.Image)(resources.GetObject("btnReview.Image")));
             this.btnReview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReview.Location = new System.Drawing.Point(0, 464);
+            this.btnReview.Location = new System.Drawing.Point(0, 429);
             this.btnReview.Name = "btnReview";
             this.btnReview.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnReview.Size = new System.Drawing.Size(183, 40);
+            this.btnReview.Size = new System.Drawing.Size(200, 40);
             this.btnReview.TabIndex = 10;
             this.btnReview.Text = "Reviews";
             this.btnReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,31 +173,12 @@
             // 
             // pnlRoles
             // 
-            this.pnlRoles.Controls.Add(this.btnAddNRole);
             this.pnlRoles.Controls.Add(this.btnRolesList);
             this.pnlRoles.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRoles.Location = new System.Drawing.Point(0, 394);
             this.pnlRoles.Name = "pnlRoles";
-            this.pnlRoles.Size = new System.Drawing.Size(183, 70);
+            this.pnlRoles.Size = new System.Drawing.Size(200, 35);
             this.pnlRoles.TabIndex = 7;
-            // 
-            // btnAddNRole
-            // 
-            this.btnAddNRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.btnAddNRole.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddNRole.FlatAppearance.BorderSize = 0;
-            this.btnAddNRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNRole.ForeColor = System.Drawing.Color.White;
-            this.btnAddNRole.Location = new System.Drawing.Point(0, 35);
-            this.btnAddNRole.Name = "btnAddNRole";
-            this.btnAddNRole.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNRole.Size = new System.Drawing.Size(183, 35);
-            this.btnAddNRole.TabIndex = 2;
-            this.btnAddNRole.Text = "Add New Role";
-            this.btnAddNRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNRole.UseVisualStyleBackColor = false;
-            this.btnAddNRole.Click += new System.EventHandler(this.btnAddNRole_Click);
             // 
             // btnRolesList
             // 
@@ -211,7 +191,7 @@
             this.btnRolesList.Location = new System.Drawing.Point(0, 0);
             this.btnRolesList.Name = "btnRolesList";
             this.btnRolesList.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnRolesList.Size = new System.Drawing.Size(183, 35);
+            this.btnRolesList.Size = new System.Drawing.Size(200, 35);
             this.btnRolesList.TabIndex = 1;
             this.btnRolesList.Text = "List Roles";
             this.btnRolesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +210,7 @@
             this.btnRoles.Location = new System.Drawing.Point(0, 354);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRoles.Size = new System.Drawing.Size(183, 40);
+            this.btnRoles.Size = new System.Drawing.Size(200, 40);
             this.btnRoles.TabIndex = 6;
             this.btnRoles.Text = "Roles";
             this.btnRoles.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,7 +225,7 @@
             this.pnlUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUsers.Location = new System.Drawing.Point(0, 284);
             this.pnlUsers.Name = "pnlUsers";
-            this.pnlUsers.Size = new System.Drawing.Size(183, 70);
+            this.pnlUsers.Size = new System.Drawing.Size(200, 70);
             this.pnlUsers.TabIndex = 5;
             // 
             // btnAddNUser
@@ -259,7 +239,7 @@
             this.btnAddNUser.Location = new System.Drawing.Point(0, 35);
             this.btnAddNUser.Name = "btnAddNUser";
             this.btnAddNUser.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNUser.Size = new System.Drawing.Size(183, 35);
+            this.btnAddNUser.Size = new System.Drawing.Size(200, 35);
             this.btnAddNUser.TabIndex = 2;
             this.btnAddNUser.Text = "Add New User";
             this.btnAddNUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -277,7 +257,7 @@
             this.btnListUsers.Location = new System.Drawing.Point(0, 0);
             this.btnListUsers.Name = "btnListUsers";
             this.btnListUsers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListUsers.Size = new System.Drawing.Size(183, 35);
+            this.btnListUsers.Size = new System.Drawing.Size(200, 35);
             this.btnListUsers.TabIndex = 1;
             this.btnListUsers.Text = "List Users";
             this.btnListUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,7 +276,7 @@
             this.btnUsers.Location = new System.Drawing.Point(0, 244);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(183, 40);
+            this.btnUsers.Size = new System.Drawing.Size(200, 40);
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +291,7 @@
             this.pnlTeachers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTeachers.Location = new System.Drawing.Point(0, 174);
             this.pnlTeachers.Name = "pnlTeachers";
-            this.pnlTeachers.Size = new System.Drawing.Size(183, 70);
+            this.pnlTeachers.Size = new System.Drawing.Size(200, 70);
             this.pnlTeachers.TabIndex = 3;
             // 
             // btnAddNTeacher
@@ -325,7 +305,7 @@
             this.btnAddNTeacher.Location = new System.Drawing.Point(0, 35);
             this.btnAddNTeacher.Name = "btnAddNTeacher";
             this.btnAddNTeacher.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAddNTeacher.Size = new System.Drawing.Size(183, 35);
+            this.btnAddNTeacher.Size = new System.Drawing.Size(200, 35);
             this.btnAddNTeacher.TabIndex = 2;
             this.btnAddNTeacher.Text = "Add New Teacher";
             this.btnAddNTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,7 +323,7 @@
             this.btnListTeachers.Location = new System.Drawing.Point(0, 0);
             this.btnListTeachers.Name = "btnListTeachers";
             this.btnListTeachers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnListTeachers.Size = new System.Drawing.Size(183, 35);
+            this.btnListTeachers.Size = new System.Drawing.Size(200, 35);
             this.btnListTeachers.TabIndex = 1;
             this.btnListTeachers.Text = "List Teachers";
             this.btnListTeachers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,7 +342,7 @@
             this.btnTeachers.Location = new System.Drawing.Point(0, 134);
             this.btnTeachers.Name = "btnTeachers";
             this.btnTeachers.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTeachers.Size = new System.Drawing.Size(183, 40);
+            this.btnTeachers.Size = new System.Drawing.Size(200, 40);
             this.btnTeachers.TabIndex = 2;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,7 +357,7 @@
             this.pnlPic.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPic.Location = new System.Drawing.Point(0, 0);
             this.pnlPic.Name = "pnlPic";
-            this.pnlPic.Size = new System.Drawing.Size(183, 134);
+            this.pnlPic.Size = new System.Drawing.Size(200, 134);
             this.pnlPic.TabIndex = 0;
             // 
             // lblDirector
@@ -397,7 +377,7 @@
             this.picDirector.Image = ((System.Drawing.Image)(resources.GetObject("picDirector.Image")));
             this.picDirector.Location = new System.Drawing.Point(0, 0);
             this.picDirector.Name = "picDirector";
-            this.picDirector.Size = new System.Drawing.Size(183, 100);
+            this.picDirector.Size = new System.Drawing.Size(200, 100);
             this.picDirector.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picDirector.TabIndex = 1;
             this.picDirector.TabStop = false;
@@ -507,7 +487,6 @@
         private System.Windows.Forms.Panel pnlTeachers;
         private System.Windows.Forms.Button btnTeachers;
         private System.Windows.Forms.Panel pnlRoles;
-        private System.Windows.Forms.Button btnAddNRole;
         private System.Windows.Forms.Button btnRolesList;
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Panel pnlUsers;

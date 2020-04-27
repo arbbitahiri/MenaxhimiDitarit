@@ -143,6 +143,9 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["LUN"] != DBNull.Value)
                     subject.LUN = int.Parse(reader["LUN"].ToString());
 
+                if (reader["TeacherID"] != DBNull.Value)
+                    subject.TeacherID = int.Parse(reader["TeacherID"].ToString());
+
                 return subject;
             }
             catch (Exception)

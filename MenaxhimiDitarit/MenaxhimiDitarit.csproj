@@ -59,6 +59,8 @@
     <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -118,12 +120,6 @@
     </Compile>
     <Compile Include="DirectorForms\ReviewCommentForm.Designer.cs">
       <DependentUpon>ReviewCommentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DirectorForms\RoleCreateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DirectorForms\RoleCreateForm.Designer.cs">
-      <DependentUpon>RoleCreateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DirectorForms\RoleListForm.cs">
       <SubType>Form</SubType>
@@ -250,9 +246,6 @@
     <EmbeddedResource Include="DirectorForms\ReviewCommentForm.resx">
       <DependentUpon>ReviewCommentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\RoleCreateForm.resx">
-      <DependentUpon>RoleCreateForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DirectorForms\RoleListForm.resx">
       <DependentUpon>RoleListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,7 +311,7 @@
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Subject.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Teacher.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Topics.datasource" />
-    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Users.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

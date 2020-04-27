@@ -55,10 +55,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 return teacher;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string rrrrr = ex.Message;
-
                 return null;
             }
         }
@@ -111,6 +109,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

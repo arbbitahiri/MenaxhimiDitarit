@@ -23,6 +23,8 @@ namespace MenaxhimiDitarit
         {
             InitializeComponent();
 
+            dgvClassesList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _classBLL = new ClassBLL();
         }
 
@@ -57,11 +59,6 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void txtSearchClass_Click(object sender, EventArgs e)
-        {
-            txtSearchClass.Text = "";
-        }
-
         private void btnViewAllClass_Click(object sender, EventArgs e)
         {
             RefreshList();
@@ -72,7 +69,7 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
-        private void btnSearchClass_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             if (_classBLL != null)
             {
@@ -105,6 +102,7 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,10 +129,15 @@ namespace MenaxhimiDitarit
             }
         }
 
+        private void txtSearchClass_Click(object sender, EventArgs e)
+        {
+            txtSearchClass.Text = "";
+        }
+
         private void txtSearchClass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                btnSearchClass_Click(this, new EventArgs());
+                btnSearch_Click(this, new EventArgs());
         }
     }
 }

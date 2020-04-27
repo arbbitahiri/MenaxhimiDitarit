@@ -26,6 +26,8 @@ namespace MenaxhimiDitarit.AdminForms
         {
             InitializeComponent();
 
+            dgvScheduleList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _scheduleBLL = new ClassScheduleBLL();
             _classBLL = new ClassBLL();
 
@@ -82,6 +84,7 @@ namespace MenaxhimiDitarit.AdminForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void ClassScheduletList_Load_1(object sender, EventArgs e)

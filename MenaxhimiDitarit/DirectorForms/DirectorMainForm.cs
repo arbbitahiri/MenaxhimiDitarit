@@ -129,13 +129,6 @@ namespace MenaxhimiDitarit.DirectorForms
 
             HideSubMenu();
         }
-        private void btnAddNRole_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new RoleCreateForm());
-
-            HideSubMenu();
-        }
-
         #endregion
 
         #region Review

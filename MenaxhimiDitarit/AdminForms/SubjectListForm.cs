@@ -18,11 +18,20 @@ namespace MenaxhimiDitarit
         private readonly SubjectBLL _subjectBLL;
         private List<Subject> MySubjects;
 
+        private readonly TeacherBLL _teacherBLL;
+        private List<Teacher> MyTeachers;
+
         public SubjectListForm()
         {
             InitializeComponent();
 
+            dgvSubjectList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
             _subjectBLL = new SubjectBLL();
+            _teacherBLL = new TeacherBLL();
+
+            MyTeachers = _teacherBLL.GetAll();
+            cmbSelectTeacher.DataSource = MyTeachers;
         }
 
         private void RefreshList()
@@ -51,8 +60,9 @@ namespace MenaxhimiDitarit
 
                 return subject;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return null;
             }
         }
@@ -74,19 +84,27 @@ namespace MenaxhimiDitarit
 
         private void btnSearchSubject_Click(object sender, EventArgs e)
         {
-            if (_subjectBLL != null)
+            try
             {
-                if (txtSearchSubject.Text.Trim().Length > 0)
+                if (_subjectBLL != null)
                 {
-                    var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Book.Contains(txtSearchSubject.Text) || f.Book_Author.Contains(txtSearchSubject.Text)).ToList();
+                    if (txtSearchSubject.Text.Trim().Length > 0 || cmbSelectTeacher.SelectedIndex != -1)
+                    {
+                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Book.Contains(txtSearchSubject.Text) || f.TeacherID == Convert.ToInt32(cmbSelectTeacher.SelectedValue.ToString())).ToList();
 
-                    dgvSubjectList.DataSource = findSubject;
+                        dgvSubjectList.DataSource = findSubject;
+                    }
+                    else
+                        MessageBox.Show("Please write a subject title, book or a book author!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a subject title, book or a book author!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Subject title, book or book author does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            else
-                MessageBox.Show("Subject title, book or book author does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,6 +123,7 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+            RefreshList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -69,10 +69,8 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string error = ex.Message;
-
                 return false;
             }
         }
@@ -92,35 +90,6 @@ namespace MenaxhimiDitarit.DAL
                             users = new List<User>();
                             while (reader.Read())
                                 users.Add(ToObject(reader));
-                        }
-
-                        return users;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public User Get(int id)
-        {
-            try
-            {
-                using (var connection = DataConnection.GetConnection())
-                {
-                    User users = null;
-                    string sqlproc = "dbo.usp_Users_ViewByID";
-                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
-                    {
-                        DataConnection.AddParameter(command, "UserID", id);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                                users = ToObject(reader);
                         }
 
                         return users;
@@ -208,33 +177,14 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
+        public User Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public User Get(User model)
         {
-            try
-            {
-                using (var connection = DataConnection.GetConnection())
-                {
-                    User users = null;
-                    string sqlproc = "dbo.usp_Users_ViewBy_UserName";
-                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
-                    {
-                        DataConnection.AddParameter(command, "UserName", model);
-
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                                users = ToObject(reader);
-                        }
-
-                        return users;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            throw new NotImplementedException();
         }
 
         public bool Update(User model)
