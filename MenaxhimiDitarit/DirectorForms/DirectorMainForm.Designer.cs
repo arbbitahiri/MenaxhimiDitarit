@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorMainForm));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
@@ -103,7 +102,7 @@
             this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSignOut.FlatAppearance.BorderSize = 0;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_sign_out_50;
             this.btnSignOut.Location = new System.Drawing.Point(100, 0);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(100, 65);
@@ -116,7 +115,7 @@
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_close_window_50;
             this.btnExit.Location = new System.Drawing.Point(0, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 65);
@@ -158,7 +157,7 @@
             this.btnReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReview.ForeColor = System.Drawing.Color.White;
-            this.btnReview.Image = ((System.Drawing.Image)(resources.GetObject("btnReview.Image")));
+            this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_survey_25;
             this.btnReview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReview.Location = new System.Drawing.Point(0, 429);
             this.btnReview.Name = "btnReview";
@@ -205,7 +204,7 @@
             this.btnRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoles.ForeColor = System.Drawing.Color.White;
-            this.btnRoles.Image = ((System.Drawing.Image)(resources.GetObject("btnRoles.Image")));
+            this.btnRoles.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_people_25;
             this.btnRoles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoles.Location = new System.Drawing.Point(0, 354);
             this.btnRoles.Name = "btnRoles";
@@ -271,7 +270,7 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
+            this.btnUsers.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_user_account_25;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.Location = new System.Drawing.Point(0, 244);
             this.btnUsers.Name = "btnUsers";
@@ -337,7 +336,7 @@
             this.btnTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeachers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachers.ForeColor = System.Drawing.Color.White;
-            this.btnTeachers.Image = ((System.Drawing.Image)(resources.GetObject("btnTeachers.Image")));
+            this.btnTeachers.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_teacher_25;
             this.btnTeachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeachers.Location = new System.Drawing.Point(0, 134);
             this.btnTeachers.Name = "btnTeachers";
@@ -374,7 +373,7 @@
             // picDirector
             // 
             this.picDirector.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picDirector.Image = ((System.Drawing.Image)(resources.GetObject("picDirector.Image")));
+            this.picDirector.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_school_director_100;
             this.picDirector.Location = new System.Drawing.Point(0, 0);
             this.picDirector.Name = "picDirector";
             this.picDirector.Size = new System.Drawing.Size(200, 100);
@@ -395,7 +394,7 @@
             // picSchool
             // 
             this.picSchool.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picSchool.Image = ((System.Drawing.Image)(resources.GetObject("picSchool.Image")));
+            this.picSchool.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_school_100;
             this.picSchool.Location = new System.Drawing.Point(279, 232);
             this.picSchool.Name = "picSchool";
             this.picSchool.Size = new System.Drawing.Size(114, 99);

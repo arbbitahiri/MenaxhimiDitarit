@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.picLogin = new System.Windows.Forms.PictureBox();
             this.picUsername = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,17 +45,17 @@
             // 
             // picLogin
             // 
-            this.picLogin.Image = ((System.Drawing.Image)(resources.GetObject("picLogin.Image")));
-            this.picLogin.Location = new System.Drawing.Point(135, 62);
+            this.picLogin.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_customer_90;
+            this.picLogin.Location = new System.Drawing.Point(130, 62);
             this.picLogin.Name = "picLogin";
-            this.picLogin.Size = new System.Drawing.Size(64, 64);
-            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogin.Size = new System.Drawing.Size(75, 75);
+            this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogin.TabIndex = 0;
             this.picLogin.TabStop = false;
             // 
             // picUsername
             // 
-            this.picUsername.Image = ((System.Drawing.Image)(resources.GetObject("picUsername.Image")));
+            this.picUsername.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_username_50;
             this.picUsername.Location = new System.Drawing.Point(42, 160);
             this.picUsername.Name = "picUsername";
             this.picUsername.Size = new System.Drawing.Size(24, 24);
@@ -66,7 +65,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_password_50;
             this.pictureBox1.Location = new System.Drawing.Point(42, 197);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);

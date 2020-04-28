@@ -35,6 +35,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
             update = false;
             txtPassword.UseSystemPasswordChar = true;
+            txtConfirmPass.UseSystemPasswordChar = true;
         }
 
         public UserCreateForm(User user)
@@ -76,10 +77,14 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbShowPassword.Checked)
+            if (chbShowPassword.Checked) {
+                txtConfirmPass.UseSystemPasswordChar = false;
                 txtPassword.UseSystemPasswordChar = false;
-            else
+            }
+            else {
                 txtPassword.UseSystemPasswordChar = true;
+                txtConfirmPass.UseSystemPasswordChar = true;
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -139,6 +144,14 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == txtConfirmPass.Text)
+                picValidatePassword.Image = Properties.Resources.icons8_ok_15;
+            else
+                picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
         }
     }
 }

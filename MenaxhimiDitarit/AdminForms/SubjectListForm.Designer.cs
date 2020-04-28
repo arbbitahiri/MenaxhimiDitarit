@@ -30,18 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectListForm));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn4 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
+            this.cmbSelectTeacher = new System.Windows.Forms.ComboBox();
+            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
+            this.lblSelectTeacher = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearchSubject = new System.Windows.Forms.Button();
             this.btnViewAllSubjects = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,17 +57,13 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvSubjectList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcSubjectList = new System.Windows.Forms.BindingSource(this.components);
-            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbSelectTeacher = new System.Windows.Forms.ComboBox();
-            this.lblSelectTeacher = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.grbSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsSubjectContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubjectList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -82,9 +82,47 @@
             this.grbSearch.Location = new System.Drawing.Point(42, 12);
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.Size = new System.Drawing.Size(588, 111);
-            this.grbSearch.TabIndex = 11;
+            this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
+            // 
+            // cmbSelectTeacher
+            // 
+            this.cmbSelectTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectTeacher.DataSource = this.bsrcTeacher;
+            this.cmbSelectTeacher.DisplayMember = "FullName";
+            this.cmbSelectTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSelectTeacher.ForeColor = System.Drawing.Color.White;
+            this.cmbSelectTeacher.FormattingEnabled = true;
+            this.cmbSelectTeacher.Location = new System.Drawing.Point(389, 26);
+            this.cmbSelectTeacher.Name = "cmbSelectTeacher";
+            this.cmbSelectTeacher.Size = new System.Drawing.Size(181, 24);
+            this.cmbSelectTeacher.TabIndex = 1;
+            this.cmbSelectTeacher.ValueMember = "TeacherID";
+            // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
+            // 
+            // lblSelectTeacher
+            // 
+            this.lblSelectTeacher.AutoSize = true;
+            this.lblSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectTeacher.ForeColor = System.Drawing.Color.White;
+            this.lblSelectTeacher.Location = new System.Drawing.Point(283, 29);
+            this.lblSelectTeacher.Name = "lblSelectTeacher";
+            this.lblSelectTeacher.Size = new System.Drawing.Size(100, 16);
+            this.lblSelectTeacher.TabIndex = 80;
+            this.lblSelectTeacher.Text = "Select Teacher";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.panel4.Location = new System.Drawing.Point(389, 56);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(181, 1);
+            this.panel4.TabIndex = 79;
             // 
             // btnSearchSubject
             // 
@@ -92,10 +130,10 @@
             this.btnSearchSubject.FlatAppearance.BorderSize = 0;
             this.btnSearchSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearchSubject.Location = new System.Drawing.Point(451, 68);
+            this.btnSearchSubject.Location = new System.Drawing.Point(451, 64);
             this.btnSearchSubject.Name = "btnSearchSubject";
             this.btnSearchSubject.Size = new System.Drawing.Size(120, 32);
-            this.btnSearchSubject.TabIndex = 9;
+            this.btnSearchSubject.TabIndex = 3;
             this.btnSearchSubject.Text = "Search";
             this.btnSearchSubject.UseVisualStyleBackColor = false;
             this.btnSearchSubject.Click += new System.EventHandler(this.btnSearchSubject_Click);
@@ -106,17 +144,17 @@
             this.btnViewAllSubjects.FlatAppearance.BorderSize = 0;
             this.btnViewAllSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllSubjects.Location = new System.Drawing.Point(17, 68);
+            this.btnViewAllSubjects.Location = new System.Drawing.Point(17, 64);
             this.btnViewAllSubjects.Name = "btnViewAllSubjects";
             this.btnViewAllSubjects.Size = new System.Drawing.Size(120, 32);
-            this.btnViewAllSubjects.TabIndex = 9;
+            this.btnViewAllSubjects.TabIndex = 2;
             this.btnViewAllSubjects.Text = "View All";
             this.btnViewAllSubjects.UseVisualStyleBackColor = false;
             this.btnViewAllSubjects.Click += new System.EventHandler(this.btnViewAllSubjects_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
             this.pictureBox1.Location = new System.Drawing.Point(17, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
@@ -126,9 +164,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(17, 51);
+            this.panel1.Location = new System.Drawing.Point(47, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 1);
+            this.panel1.Size = new System.Drawing.Size(207, 1);
             this.panel1.TabIndex = 7;
             // 
             // txtSearchSubject
@@ -140,7 +178,7 @@
             this.txtSearchSubject.Location = new System.Drawing.Point(47, 30);
             this.txtSearchSubject.Name = "txtSearchSubject";
             this.txtSearchSubject.Size = new System.Drawing.Size(207, 15);
-            this.txtSearchSubject.TabIndex = 5;
+            this.txtSearchSubject.TabIndex = 0;
             this.txtSearchSubject.Text = "Search by Subject Title or Book";
             this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchNameSubject_Click);
             this.txtSearchSubject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchSubject_KeyDown);
@@ -178,136 +216,98 @@
             this.dgvSubjectList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dgvSubjectList.ForeColor = System.Drawing.Color.White;
             this.dgvSubjectList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgvSubjectList.Location = new System.Drawing.Point(0, 129);
+            this.dgvSubjectList.Location = new System.Drawing.Point(0, 137);
             // 
             // 
             // 
             this.dgvSubjectList.MasterTemplate.AllowAddNewRow = false;
             this.dgvSubjectList.MasterTemplate.AllowCellContextMenu = false;
             this.dgvSubjectList.MasterTemplate.AllowColumnReorder = false;
-            gridViewDecimalColumn4.DataType = typeof(int);
-            gridViewDecimalColumn4.EnableExpressionEditor = false;
-            gridViewDecimalColumn4.FieldName = "SubjectID";
-            gridViewDecimalColumn4.HeaderText = "SubjectID";
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.Name = "SubjectID";
-            gridViewDecimalColumn4.Width = 75;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "SubjectTitle";
-            gridViewTextBoxColumn6.HeaderText = "SubjectTitle";
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "SubjectTitle";
-            gridViewTextBoxColumn6.Width = 100;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Book";
-            gridViewTextBoxColumn7.HeaderText = "Book";
-            gridViewTextBoxColumn7.IsAutoGenerated = true;
-            gridViewTextBoxColumn7.Name = "Book";
-            gridViewTextBoxColumn7.Width = 100;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Book_Author";
-            gridViewTextBoxColumn8.HeaderText = "Book_Author";
-            gridViewTextBoxColumn8.IsAutoGenerated = true;
-            gridViewTextBoxColumn8.Name = "Book_Author";
-            gridViewTextBoxColumn8.Width = 100;
-            gridViewDecimalColumn5.DataType = typeof(int);
-            gridViewDecimalColumn5.EnableExpressionEditor = false;
-            gridViewDecimalColumn5.FieldName = "TeacherID";
-            gridViewDecimalColumn5.HeaderText = "TeacherID";
-            gridViewDecimalColumn5.IsAutoGenerated = true;
-            gridViewDecimalColumn5.Name = "TeacherID";
-            gridViewDecimalColumn5.Width = 75;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "InsertBy";
-            gridViewTextBoxColumn9.HeaderText = "InsertBy";
-            gridViewTextBoxColumn9.IsAutoGenerated = true;
-            gridViewTextBoxColumn9.Name = "InsertBy";
-            gridViewTextBoxColumn9.Width = 85;
-            gridViewDateTimeColumn3.EnableExpressionEditor = false;
-            gridViewDateTimeColumn3.FieldName = "InsertDate";
-            gridViewDateTimeColumn3.HeaderText = "InsertDate";
-            gridViewDateTimeColumn3.IsAutoGenerated = true;
-            gridViewDateTimeColumn3.Name = "InsertDate";
-            gridViewDateTimeColumn3.Width = 100;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "LUB";
-            gridViewTextBoxColumn10.HeaderText = "LUB";
-            gridViewTextBoxColumn10.IsAutoGenerated = true;
-            gridViewTextBoxColumn10.Name = "LUB";
-            gridViewTextBoxColumn10.Width = 85;
-            gridViewDateTimeColumn4.EnableExpressionEditor = false;
-            gridViewDateTimeColumn4.FieldName = "LUD";
-            gridViewDateTimeColumn4.HeaderText = "LUD";
-            gridViewDateTimeColumn4.IsAutoGenerated = true;
-            gridViewDateTimeColumn4.Name = "LUD";
-            gridViewDateTimeColumn4.Width = 100;
-            gridViewDecimalColumn6.DataType = typeof(int);
-            gridViewDecimalColumn6.EnableExpressionEditor = false;
-            gridViewDecimalColumn6.FieldName = "LUN";
-            gridViewDecimalColumn6.HeaderText = "LUN";
-            gridViewDecimalColumn6.IsAutoGenerated = true;
-            gridViewDecimalColumn6.Name = "LUN";
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "SubjectID";
+            gridViewDecimalColumn1.HeaderText = "SubjectID";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "SubjectID";
+            gridViewDecimalColumn1.Width = 75;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "SubjectTitle";
+            gridViewTextBoxColumn1.HeaderText = "SubjectTitle";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "SubjectTitle";
+            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Book";
+            gridViewTextBoxColumn2.HeaderText = "Book";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "Book";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Book_Author";
+            gridViewTextBoxColumn3.HeaderText = "Book_Author";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Book_Author";
+            gridViewTextBoxColumn3.Width = 100;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "TeacherID";
+            gridViewDecimalColumn2.HeaderText = "TeacherID";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "TeacherID";
+            gridViewDecimalColumn2.Width = 75;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "InsertBy";
+            gridViewTextBoxColumn4.HeaderText = "InsertBy";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "InsertBy";
+            gridViewTextBoxColumn4.Width = 85;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "InsertDate";
+            gridViewDateTimeColumn1.HeaderText = "InsertDate";
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "InsertDate";
+            gridViewDateTimeColumn1.Width = 100;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "LUB";
+            gridViewTextBoxColumn5.HeaderText = "LUB";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "LUB";
+            gridViewTextBoxColumn5.Width = 85;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "LUD";
+            gridViewDateTimeColumn2.HeaderText = "LUD";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "LUD";
+            gridViewDateTimeColumn2.Width = 100;
+            gridViewDecimalColumn3.DataType = typeof(int);
+            gridViewDecimalColumn3.EnableExpressionEditor = false;
+            gridViewDecimalColumn3.FieldName = "LUN";
+            gridViewDecimalColumn3.HeaderText = "LUN";
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.Name = "LUN";
             this.dgvSubjectList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn4,
-            gridViewTextBoxColumn6,
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewDecimalColumn5,
-            gridViewTextBoxColumn9,
-            gridViewDateTimeColumn3,
-            gridViewTextBoxColumn10,
-            gridViewDateTimeColumn4,
-            gridViewDecimalColumn6});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn4,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn2,
+            gridViewDecimalColumn3});
             this.dgvSubjectList.MasterTemplate.DataSource = this.bsrcSubjectList;
-            this.dgvSubjectList.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.dgvSubjectList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvSubjectList.Name = "dgvSubjectList";
             this.dgvSubjectList.ReadOnly = true;
             this.dgvSubjectList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvSubjectList.Size = new System.Drawing.Size(673, 434);
+            this.dgvSubjectList.Size = new System.Drawing.Size(673, 426);
             this.dgvSubjectList.TabIndex = 14;
             this.dgvSubjectList.ThemeName = "CrystalDark";
             // 
             // bsrcSubjectList
             // 
             this.bsrcSubjectList.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
-            // 
-            // bsrcTeacher
-            // 
-            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
-            // 
-            // cmbSelectTeacher
-            // 
-            this.cmbSelectTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbSelectTeacher.DataSource = this.bsrcTeacher;
-            this.cmbSelectTeacher.DisplayMember = "FullName";
-            this.cmbSelectTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSelectTeacher.ForeColor = System.Drawing.Color.White;
-            this.cmbSelectTeacher.FormattingEnabled = true;
-            this.cmbSelectTeacher.Location = new System.Drawing.Point(389, 26);
-            this.cmbSelectTeacher.Name = "cmbSelectTeacher";
-            this.cmbSelectTeacher.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectTeacher.TabIndex = 78;
-            this.cmbSelectTeacher.ValueMember = "TeacherID";
-            // 
-            // lblSelectTeacher
-            // 
-            this.lblSelectTeacher.AutoSize = true;
-            this.lblSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblSelectTeacher.Location = new System.Drawing.Point(283, 29);
-            this.lblSelectTeacher.Name = "lblSelectTeacher";
-            this.lblSelectTeacher.Size = new System.Drawing.Size(100, 16);
-            this.lblSelectTeacher.TabIndex = 80;
-            this.lblSelectTeacher.Text = "Select Teacher";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(389, 56);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 1);
-            this.panel4.TabIndex = 79;
             // 
             // SubjectListForm
             // 
@@ -323,12 +323,12 @@
             this.Load += new System.EventHandler(this.SubjectListForm_Load);
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsSubjectContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubjectList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             this.ResumeLayout(false);
 
         }

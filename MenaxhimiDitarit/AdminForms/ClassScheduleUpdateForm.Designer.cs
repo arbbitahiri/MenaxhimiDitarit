@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.cmbSelectTime = new System.Windows.Forms.ComboBox();
             this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             this.cmbSelectClass = new System.Windows.Forms.ComboBox();
+            this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             this.lblTime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.txtYear = new System.Windows.Forms.TextBox();
             this.btnSubmitClass = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
-            this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             this.cmbSelectTime.Location = new System.Drawing.Point(296, 247);
             this.cmbSelectTime.Name = "cmbSelectTime";
             this.cmbSelectTime.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectTime.TabIndex = 67;
+            this.cmbSelectTime.TabIndex = 3;
             this.cmbSelectTime.ValueMember = "RoomID";
             // 
             // cmbSelectSubject
@@ -88,8 +88,12 @@
             this.cmbSelectSubject.Location = new System.Drawing.Point(296, 209);
             this.cmbSelectSubject.Name = "cmbSelectSubject";
             this.cmbSelectSubject.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectSubject.TabIndex = 68;
+            this.cmbSelectSubject.TabIndex = 2;
             this.cmbSelectSubject.ValueMember = "SubjectID";
+            // 
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
             // cmbSelectClass
             // 
@@ -103,8 +107,12 @@
             this.cmbSelectClass.Location = new System.Drawing.Point(296, 172);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectClass.TabIndex = 69;
+            this.cmbSelectClass.TabIndex = 1;
             this.cmbSelectClass.ValueMember = "ClassID";
+            // 
+            // bsrcClass
+            // 
+            this.bsrcClass.DataSource = typeof(MenaxhimiDitarit.BO.Class);
             // 
             // lblTime
             // 
@@ -154,7 +162,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 62;
+            this.txtID.TabIndex = 0;
             this.txtID.Text = "-1";
             // 
             // lblSubject
@@ -212,7 +220,7 @@
             this.cmbSelectDate.Location = new System.Drawing.Point(296, 284);
             this.cmbSelectDate.Name = "cmbSelectDate";
             this.cmbSelectDate.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectDate.TabIndex = 72;
+            this.cmbSelectDate.TabIndex = 4;
             this.cmbSelectDate.ValueMember = "RoomID";
             // 
             // lblDate
@@ -262,7 +270,7 @@
             this.txtYear.Location = new System.Drawing.Point(296, 321);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(181, 15);
-            this.txtYear.TabIndex = 73;
+            this.txtYear.TabIndex = 5;
             // 
             // btnSubmitClass
             // 
@@ -275,7 +283,7 @@
             this.btnSubmitClass.Location = new System.Drawing.Point(339, 371);
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmitClass.TabIndex = 76;
+            this.btnSubmitClass.TabIndex = 6;
             this.btnSubmitClass.Text = "Submit";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
             this.btnSubmitClass.Click += new System.EventHandler(this.btnSubmitClass_Click);
@@ -291,18 +299,10 @@
             this.btnCancel.Location = new System.Drawing.Point(164, 371);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 77;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // bsrcSubject
-            // 
-            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
-            // 
-            // bsrcClass
-            // 
-            this.bsrcClass.DataSource = typeof(MenaxhimiDitarit.BO.Class);
             // 
             // ClassScheduleUpdateForm
             // 

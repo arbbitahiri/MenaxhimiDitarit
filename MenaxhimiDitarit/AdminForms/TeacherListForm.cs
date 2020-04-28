@@ -57,8 +57,9 @@ namespace MenaxhimiDitarit
 
                 return teacher;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -80,19 +81,27 @@ namespace MenaxhimiDitarit
 
         private void btnSearchTeachers_Click(object sender, EventArgs e)
         {
-            if (_teacherBLL != null)
+            try
             {
-                if (txtSearchName.Text.Trim().Length > 0)
+                while (_teacherBLL != null)
                 {
-                    var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
+                    if (txtSearchName.Text.Trim().Length > 0)
+                    {
+                        var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text) || f.FullName.Contains(txtSearchName.Text)).ToList();
 
-                    dgvTeacherList.DataSource = findTeacher;
+                        dgvTeacherList.DataSource = findTeacher;
+                    }
+                    else
+                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                    MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //else
+                //    MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            else
-                MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)

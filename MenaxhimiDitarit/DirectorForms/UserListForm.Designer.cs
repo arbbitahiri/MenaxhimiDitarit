@@ -66,7 +66,7 @@
             this.txtSearchUserByNU = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnViewAllUsers = new System.Windows.Forms.Button();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.cmsUserContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,12 +92,12 @@
             this.grbSearch.Controls.Add(this.txtSearchUserByNU);
             this.grbSearch.Controls.Add(this.pictureBox2);
             this.grbSearch.Controls.Add(this.btnSearch);
-            this.grbSearch.Controls.Add(this.btnViewAllUsers);
+            this.grbSearch.Controls.Add(this.btnViewAll);
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(116, 12);
+            this.grbSearch.Location = new System.Drawing.Point(146, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(441, 119);
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search User";
@@ -105,9 +105,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(39, 56);
+            this.panel2.Location = new System.Drawing.Point(49, 52);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(362, 1);
+            this.panel2.Size = new System.Drawing.Size(312, 1);
             this.panel2.TabIndex = 16;
             // 
             // txtSearchUserByNU
@@ -116,18 +116,18 @@
             this.txtSearchUserByNU.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchUserByNU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchUserByNU.ForeColor = System.Drawing.Color.White;
-            this.txtSearchUserByNU.Location = new System.Drawing.Point(69, 31);
+            this.txtSearchUserByNU.Location = new System.Drawing.Point(49, 31);
             this.txtSearchUserByNU.Name = "txtSearchUserByNU";
-            this.txtSearchUserByNU.Size = new System.Drawing.Size(332, 15);
-            this.txtSearchUserByNU.TabIndex = 15;
+            this.txtSearchUserByNU.Size = new System.Drawing.Size(312, 15);
+            this.txtSearchUserByNU.TabIndex = 0;
             this.txtSearchUserByNU.Text = "Search by Name or Username";
             this.txtSearchUserByNU.Click += new System.EventHandler(this.txtSearchUserByNU_Click);
             this.txtSearchUserByNU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchUserByNU_KeyDown);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 25);
+            this.pictureBox2.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
+            this.pictureBox2.Location = new System.Drawing.Point(19, 25);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 25);
             this.pictureBox2.TabIndex = 14;
@@ -139,27 +139,27 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearch.Location = new System.Drawing.Point(233, 71);
+            this.btnSearch.Location = new System.Drawing.Point(241, 64);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(168, 32);
-            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Size = new System.Drawing.Size(120, 32);
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnViewAllUsers
+            // btnViewAll
             // 
-            this.btnViewAllUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnViewAllUsers.FlatAppearance.BorderSize = 0;
-            this.btnViewAllUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllUsers.Location = new System.Drawing.Point(39, 71);
-            this.btnViewAllUsers.Name = "btnViewAllUsers";
-            this.btnViewAllUsers.Size = new System.Drawing.Size(168, 32);
-            this.btnViewAllUsers.TabIndex = 12;
-            this.btnViewAllUsers.Text = "View All Users";
-            this.btnViewAllUsers.UseVisualStyleBackColor = false;
-            this.btnViewAllUsers.Click += new System.EventHandler(this.btnViewAllUsers_Click);
+            this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.btnViewAll.FlatAppearance.BorderSize = 0;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.btnViewAll.Location = new System.Drawing.Point(19, 64);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
+            this.btnViewAll.TabIndex = 1;
+            this.btnViewAll.Text = "View All";
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAllUsers_Click);
             // 
             // cmsUserContext
             // 
@@ -481,7 +481,7 @@
 
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnViewAllUsers;
+        private System.Windows.Forms.Button btnViewAll;
         private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
         private Telerik.WinControls.UI.RadGridView MasterTemplate;
         private System.Windows.Forms.Panel panel2;

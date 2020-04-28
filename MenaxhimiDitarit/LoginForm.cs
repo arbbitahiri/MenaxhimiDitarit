@@ -44,37 +44,53 @@ namespace MenaxhimiDitarit
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            //expiresdate
+            //if (txtUsername.Text == "admin")
+            //{
+            //    AdminMainForm adminForm = new AdminMainForm();
+            //    this.Hide();
+            //    adminForm.StartPosition = FormStartPosition.CenterScreen;
+            //    adminForm.ShowDialog();
+            //}
 
-            if (username.Trim() != "" && password != "") {
+            if (username.Trim() != "" && password != "")
+            {
                 User user = AdministrationBLL.Login(username, password);
 
-                if (user != null) {
+                if (user != null)
+                {
                     UserSession.GetUser = user;
 
-                    if (user.RoleID == 1) {
-                        AdminMainForm adminForm = new AdminMainForm();
-                        this.Hide();
-                        adminForm.StartPosition = FormStartPosition.CenterScreen;
-                        adminForm.ShowDialog();
-                        //this.Close();
-                    }
-                    else if (user.RoleID == 2) {
-                        TeacherMainForm teacherForm = new TeacherMainForm();
-                        this.Hide();
-                        teacherForm.StartPosition = FormStartPosition.CenterScreen;
-                        teacherForm.ShowDialog();
-                        //this.Close();
-                    }
-                    else if (user.RoleID == 4) {
-                        DirectorMainForm directorForm = new DirectorMainForm();
-                        this.Hide();
-                        directorForm.StartPosition = FormStartPosition.CenterScreen;
-                        directorForm.ShowDialog();
-                        //this.Close();
+                    if (user.ExpiresDate > DateTime.Now)
+                    {
+                        if (user.RoleID == 1)
+                        {
+                            AdminMainForm adminForm = new AdminMainForm();
+                            this.Hide();
+                            adminForm.StartPosition = FormStartPosition.CenterScreen;
+                            adminForm.ShowDialog();
+                            //this.Close();
+                        }
+                        else if (user.RoleID == 2)
+                        {
+                            TeacherMainForm teacherForm = new TeacherMainForm();
+                            this.Hide();
+                            teacherForm.StartPosition = FormStartPosition.CenterScreen;
+                            teacherForm.ShowDialog();
+                            //this.Close();
+                        }
+                        else if (user.RoleID == 4)
+                        {
+                            DirectorMainForm directorForm = new DirectorMainForm();
+                            this.Hide();
+                            directorForm.StartPosition = FormStartPosition.CenterScreen;
+                            directorForm.ShowDialog();
+                            //this.Close();
+                        }
+                        else
+                            MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
-                        MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                     MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,9 +111,6 @@ namespace MenaxhimiDitarit
         {
             if (e.KeyCode == Keys.Enter)
                 btnLogin_Click(this, new EventArgs());
-
-            //if (e.KeyCode == Keys.Tab)
-            //    txtPassword_Click(this, new EventArgs());
         }
     }
 }

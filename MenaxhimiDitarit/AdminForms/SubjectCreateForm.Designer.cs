@@ -79,7 +79,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 35;
+            this.txtID.TabIndex = 0;
             this.txtID.Text = "-1";
             // 
             // lblBook
@@ -129,7 +129,7 @@
             this.txtSubjectBook.Location = new System.Drawing.Point(290, 233);
             this.txtSubjectBook.Name = "txtSubjectBook";
             this.txtSubjectBook.Size = new System.Drawing.Size(181, 15);
-            this.txtSubjectBook.TabIndex = 29;
+            this.txtSubjectBook.TabIndex = 2;
             // 
             // txtSubjectTitle
             // 
@@ -140,7 +140,7 @@
             this.txtSubjectTitle.Location = new System.Drawing.Point(290, 205);
             this.txtSubjectTitle.Name = "txtSubjectTitle";
             this.txtSubjectTitle.Size = new System.Drawing.Size(181, 15);
-            this.txtSubjectTitle.TabIndex = 30;
+            this.txtSubjectTitle.TabIndex = 1;
             // 
             // lblBookAuthor
             // 
@@ -170,7 +170,7 @@
             this.txtBookAuthor.Location = new System.Drawing.Point(290, 261);
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.Size = new System.Drawing.Size(181, 15);
-            this.txtBookAuthor.TabIndex = 38;
+            this.txtBookAuthor.TabIndex = 3;
             // 
             // btnSubmit
             // 
@@ -180,10 +180,10 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(339, 346);
+            this.btnSubmit.Location = new System.Drawing.Point(339, 336);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmit.TabIndex = 41;
+            this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -196,10 +196,10 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 346);
+            this.btnCancel.Location = new System.Drawing.Point(164, 336);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 42;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -235,7 +235,7 @@
             this.cmbTeacher.Location = new System.Drawing.Point(290, 289);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(181, 24);
-            this.cmbTeacher.TabIndex = 46;
+            this.cmbTeacher.TabIndex = 4;
             this.cmbTeacher.ValueMember = "TeacherID";
             // 
             // bsrcTeacher

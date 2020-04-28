@@ -54,7 +54,12 @@
             this.lblExpireDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dtpExpireDate = new System.Windows.Forms.DateTimePicker();
+            this.lblConfirmPass = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
+            this.picValidatePassword = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValidatePassword)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -65,10 +70,10 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(339, 340);
+            this.btnSubmit.Location = new System.Drawing.Point(339, 396);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmit.TabIndex = 10;
+            this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -81,10 +86,10 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 340);
+            this.btnCancel.Location = new System.Drawing.Point(164, 396);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 11;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -94,7 +99,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(263, 92);
+            this.lblID.Location = new System.Drawing.Point(264, 132);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 16);
             this.lblID.TabIndex = 65;
@@ -103,7 +108,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(290, 113);
+            this.panel8.Location = new System.Drawing.Point(291, 153);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(181, 1);
             this.panel8.TabIndex = 2;
@@ -114,11 +119,11 @@
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(290, 92);
+            this.txtID.Location = new System.Drawing.Point(291, 132);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 63;
+            this.txtID.TabIndex = 0;
             this.txtID.Text = "-1";
             // 
             // lblRole
@@ -126,7 +131,7 @@
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(247, 216);
+            this.lblRole.Location = new System.Drawing.Point(247, 252);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(37, 16);
             this.lblRole.TabIndex = 70;
@@ -135,7 +140,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(290, 243);
+            this.panel3.Location = new System.Drawing.Point(290, 279);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 69;
@@ -149,10 +154,10 @@
             this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoles.ForeColor = System.Drawing.Color.White;
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(290, 213);
+            this.cmbRoles.Location = new System.Drawing.Point(290, 249);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(181, 24);
-            this.cmbRoles.TabIndex = 6;
+            this.cmbRoles.TabIndex = 4;
             this.cmbRoles.ValueMember = "RoleID";
             // 
             // bsrcRole
@@ -165,10 +170,10 @@
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
-            this.txtFirstName.Location = new System.Drawing.Point(290, 120);
+            this.txtFirstName.Location = new System.Drawing.Point(291, 160);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(181, 15);
-            this.txtFirstName.TabIndex = 3;
+            this.txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
@@ -176,15 +181,15 @@
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.White;
-            this.txtLastName.Location = new System.Drawing.Point(290, 148);
+            this.txtLastName.Location = new System.Drawing.Point(291, 188);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(181, 15);
-            this.txtLastName.TabIndex = 4;
+            this.txtLastName.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(290, 141);
+            this.panel1.Location = new System.Drawing.Point(291, 181);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 60;
@@ -192,7 +197,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(290, 169);
+            this.panel2.Location = new System.Drawing.Point(291, 209);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 1);
             this.panel2.TabIndex = 59;
@@ -202,7 +207,7 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.White;
-            this.lblFirstName.Location = new System.Drawing.Point(211, 120);
+            this.lblFirstName.Location = new System.Drawing.Point(212, 160);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(73, 16);
             this.lblFirstName.TabIndex = 62;
@@ -213,7 +218,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.White;
-            this.lblLastName.Location = new System.Drawing.Point(211, 148);
+            this.lblLastName.Location = new System.Drawing.Point(212, 188);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(73, 16);
             this.lblLastName.TabIndex = 61;
@@ -224,7 +229,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(216, 278);
+            this.lblPassword.Location = new System.Drawing.Point(217, 314);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(68, 16);
             this.lblPassword.TabIndex = 76;
@@ -235,7 +240,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(213, 250);
+            this.lblUsername.Location = new System.Drawing.Point(214, 286);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(71, 16);
             this.lblUsername.TabIndex = 77;
@@ -244,7 +249,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(290, 299);
+            this.panel4.Location = new System.Drawing.Point(291, 335);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 1);
             this.panel4.TabIndex = 74;
@@ -252,7 +257,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel5.Location = new System.Drawing.Point(290, 271);
+            this.panel5.Location = new System.Drawing.Point(291, 307);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(181, 1);
             this.panel5.TabIndex = 75;
@@ -263,10 +268,10 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(290, 278);
+            this.txtPassword.Location = new System.Drawing.Point(291, 314);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(181, 15);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.TabIndex = 6;
             // 
             // txtUsername
             // 
@@ -274,21 +279,21 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(290, 250);
+            this.txtUsername.Location = new System.Drawing.Point(291, 286);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(181, 15);
-            this.txtUsername.TabIndex = 7;
+            this.txtUsername.TabIndex = 5;
             // 
             // chbShowPassword
             // 
             this.chbShowPassword.AutoSize = true;
             this.chbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chbShowPassword.Location = new System.Drawing.Point(290, 307);
+            this.chbShowPassword.Location = new System.Drawing.Point(348, 370);
             this.chbShowPassword.Name = "chbShowPassword";
-            this.chbShowPassword.Size = new System.Drawing.Size(178, 20);
+            this.chbShowPassword.Size = new System.Drawing.Size(123, 20);
             this.chbShowPassword.TabIndex = 9;
-            this.chbShowPassword.Text = "Check to Show Password";
+            this.chbShowPassword.Text = "Show Password";
             this.chbShowPassword.UseVisualStyleBackColor = true;
             this.chbShowPassword.CheckedChanged += new System.EventHandler(this.chbShowPassword_CheckedChanged);
             // 
@@ -297,7 +302,7 @@
             this.lblExpireDate.AutoSize = true;
             this.lblExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpireDate.ForeColor = System.Drawing.Color.White;
-            this.lblExpireDate.Location = new System.Drawing.Point(206, 185);
+            this.lblExpireDate.Location = new System.Drawing.Point(206, 221);
             this.lblExpireDate.Name = "lblExpireDate";
             this.lblExpireDate.Size = new System.Drawing.Size(78, 16);
             this.lblExpireDate.TabIndex = 80;
@@ -306,7 +311,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel6.Location = new System.Drawing.Point(290, 206);
+            this.panel6.Location = new System.Drawing.Point(290, 242);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(181, 1);
             this.panel6.TabIndex = 79;
@@ -316,10 +321,51 @@
             this.dtpExpireDate.CustomFormat = "ddMMMMyyyy";
             this.dtpExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExpireDate.Location = new System.Drawing.Point(291, 180);
+            this.dtpExpireDate.Location = new System.Drawing.Point(291, 216);
             this.dtpExpireDate.Name = "dtpExpireDate";
             this.dtpExpireDate.Size = new System.Drawing.Size(180, 22);
-            this.dtpExpireDate.TabIndex = 5;
+            this.dtpExpireDate.TabIndex = 3;
+            // 
+            // lblConfirmPass
+            // 
+            this.lblConfirmPass.AutoSize = true;
+            this.lblConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPass.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmPass.Location = new System.Drawing.Point(169, 342);
+            this.lblConfirmPass.Name = "lblConfirmPass";
+            this.lblConfirmPass.Size = new System.Drawing.Size(116, 16);
+            this.lblConfirmPass.TabIndex = 83;
+            this.lblConfirmPass.Text = "Confirm Password";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.panel7.Location = new System.Drawing.Point(291, 363);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(181, 1);
+            this.panel7.TabIndex = 82;
+            // 
+            // txtConfirmPass
+            // 
+            this.txtConfirmPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPass.ForeColor = System.Drawing.Color.White;
+            this.txtConfirmPass.Location = new System.Drawing.Point(291, 342);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.Size = new System.Drawing.Size(181, 15);
+            this.txtConfirmPass.TabIndex = 7;
+            this.txtConfirmPass.TextChanged += new System.EventHandler(this.txtConfirmPass_TextChanged);
+            // 
+            // picValidatePassword
+            // 
+            this.picValidatePassword.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            this.picValidatePassword.Location = new System.Drawing.Point(478, 342);
+            this.picValidatePassword.Name = "picValidatePassword";
+            this.picValidatePassword.Size = new System.Drawing.Size(20, 20);
+            this.picValidatePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picValidatePassword.TabIndex = 84;
+            this.picValidatePassword.TabStop = false;
             // 
             // UserCreateForm
             // 
@@ -327,6 +373,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(673, 563);
+            this.Controls.Add(this.picValidatePassword);
+            this.Controls.Add(this.lblConfirmPass);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.txtConfirmPass);
             this.Controls.Add(this.dtpExpireDate);
             this.Controls.Add(this.lblExpireDate);
             this.Controls.Add(this.panel6);
@@ -355,6 +405,7 @@
             this.Name = "UserCreateForm";
             this.Text = "UserCreateForm";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picValidatePassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +438,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DateTimePicker dtpExpireDate;
         private System.Windows.Forms.BindingSource bsrcRole;
+        private System.Windows.Forms.Label lblConfirmPass;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtConfirmPass;
+        private System.Windows.Forms.PictureBox picValidatePassword;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomListForm));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -39,9 +38,10 @@
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomListForm));
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearchSubject = new System.Windows.Forms.Button();
-            this.btnViewAllSubjects = new System.Windows.Forms.Button();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchSubject = new System.Windows.Forms.TextBox();
@@ -61,20 +61,22 @@
             // 
             // grbSearch
             // 
+            this.grbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbSearch.Controls.Add(this.btnSearchSubject);
-            this.grbSearch.Controls.Add(this.btnViewAllSubjects);
+            this.grbSearch.Controls.Add(this.btnViewAll);
             this.grbSearch.Controls.Add(this.pictureBox1);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.txtSearchSubject);
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(113, 12);
+            this.grbSearch.Location = new System.Drawing.Point(146, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(446, 111);
-            this.grbSearch.TabIndex = 12;
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
+            this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
-            this.grbSearch.Text = "Search";
+            this.grbSearch.Text = "Search Room";
             // 
             // btnSearchSubject
             // 
@@ -82,32 +84,32 @@
             this.btnSearchSubject.FlatAppearance.BorderSize = 0;
             this.btnSearchSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearchSubject.Location = new System.Drawing.Point(259, 68);
+            this.btnSearchSubject.Location = new System.Drawing.Point(241, 64);
             this.btnSearchSubject.Name = "btnSearchSubject";
-            this.btnSearchSubject.Size = new System.Drawing.Size(172, 32);
-            this.btnSearchSubject.TabIndex = 9;
+            this.btnSearchSubject.Size = new System.Drawing.Size(120, 32);
+            this.btnSearchSubject.TabIndex = 1;
             this.btnSearchSubject.Text = "Search";
             this.btnSearchSubject.UseVisualStyleBackColor = false;
             this.btnSearchSubject.Click += new System.EventHandler(this.btnSearchSubject_Click);
             // 
-            // btnViewAllSubjects
+            // btnViewAll
             // 
-            this.btnViewAllSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnViewAllSubjects.FlatAppearance.BorderSize = 0;
-            this.btnViewAllSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllSubjects.Location = new System.Drawing.Point(8, 68);
-            this.btnViewAllSubjects.Name = "btnViewAllSubjects";
-            this.btnViewAllSubjects.Size = new System.Drawing.Size(168, 32);
-            this.btnViewAllSubjects.TabIndex = 9;
-            this.btnViewAllSubjects.Text = "View All Subjects";
-            this.btnViewAllSubjects.UseVisualStyleBackColor = false;
-            this.btnViewAllSubjects.Click += new System.EventHandler(this.btnViewAllSubjects_Click);
+            this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.btnViewAll.FlatAppearance.BorderSize = 0;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.btnViewAll.Location = new System.Drawing.Point(19, 64);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
+            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.Text = "View All";
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAllSubjects_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 24);
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.TabIndex = 8;
@@ -116,9 +118,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(17, 51);
+            this.panel1.Location = new System.Drawing.Point(49, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 1);
+            this.panel1.Size = new System.Drawing.Size(312, 1);
             this.panel1.TabIndex = 7;
             // 
             // txtSearchSubject
@@ -127,10 +129,10 @@
             this.txtSearchSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchSubject.ForeColor = System.Drawing.Color.White;
-            this.txtSearchSubject.Location = new System.Drawing.Point(47, 30);
+            this.txtSearchSubject.Location = new System.Drawing.Point(49, 31);
             this.txtSearchSubject.Name = "txtSearchSubject";
-            this.txtSearchSubject.Size = new System.Drawing.Size(393, 15);
-            this.txtSearchSubject.TabIndex = 5;
+            this.txtSearchSubject.Size = new System.Drawing.Size(312, 15);
+            this.txtSearchSubject.TabIndex = 0;
             this.txtSearchSubject.Text = "Search by Room Type";
             this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchSubject_Click);
             this.txtSearchSubject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchSubject_KeyDown);
@@ -144,7 +146,7 @@
             this.dgvRoomList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dgvRoomList.ForeColor = System.Drawing.Color.White;
             this.dgvRoomList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgvRoomList.Location = new System.Drawing.Point(0, 129);
+            this.dgvRoomList.Location = new System.Drawing.Point(0, 137);
             // 
             // 
             // 
@@ -217,7 +219,7 @@
             this.dgvRoomList.Name = "dgvRoomList";
             this.dgvRoomList.ReadOnly = true;
             this.dgvRoomList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvRoomList.Size = new System.Drawing.Size(673, 434);
+            this.dgvRoomList.Size = new System.Drawing.Size(673, 426);
             this.dgvRoomList.TabIndex = 13;
             this.dgvRoomList.ThemeName = "CrystalDark";
             // 
@@ -276,7 +278,7 @@
 
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnSearchSubject;
-        private System.Windows.Forms.Button btnViewAllSubjects;
+        private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearchSubject;

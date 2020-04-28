@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorTeacherListForm));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -46,9 +45,10 @@
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorTeacherListForm));
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearchTeachers = new System.Windows.Forms.Button();
-            this.btnViewAllTeachers = new System.Windows.Forms.Button();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchName = new System.Windows.Forms.TextBox();
@@ -69,19 +69,19 @@
             // grbSearch
             // 
             this.grbSearch.Controls.Add(this.btnSearchTeachers);
-            this.grbSearch.Controls.Add(this.btnViewAllTeachers);
+            this.grbSearch.Controls.Add(this.btnViewAll);
             this.grbSearch.Controls.Add(this.pictureBox1);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.txtSearchName);
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(113, 12);
+            this.grbSearch.Location = new System.Drawing.Point(146, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(446, 111);
-            this.grbSearch.TabIndex = 11;
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
+            this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
-            this.grbSearch.Text = "Search";
+            this.grbSearch.Text = "Search Teacher";
             // 
             // btnSearchTeachers
             // 
@@ -89,32 +89,32 @@
             this.btnSearchTeachers.FlatAppearance.BorderSize = 0;
             this.btnSearchTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchTeachers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearchTeachers.Location = new System.Drawing.Point(259, 68);
+            this.btnSearchTeachers.Location = new System.Drawing.Point(241, 64);
             this.btnSearchTeachers.Name = "btnSearchTeachers";
-            this.btnSearchTeachers.Size = new System.Drawing.Size(172, 32);
-            this.btnSearchTeachers.TabIndex = 9;
+            this.btnSearchTeachers.Size = new System.Drawing.Size(120, 32);
+            this.btnSearchTeachers.TabIndex = 1;
             this.btnSearchTeachers.Text = "Search";
             this.btnSearchTeachers.UseVisualStyleBackColor = false;
             this.btnSearchTeachers.Click += new System.EventHandler(this.btnSearchTeachers_Click);
             // 
-            // btnViewAllTeachers
+            // btnViewAll
             // 
-            this.btnViewAllTeachers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnViewAllTeachers.FlatAppearance.BorderSize = 0;
-            this.btnViewAllTeachers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllTeachers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllTeachers.Location = new System.Drawing.Point(8, 68);
-            this.btnViewAllTeachers.Name = "btnViewAllTeachers";
-            this.btnViewAllTeachers.Size = new System.Drawing.Size(168, 32);
-            this.btnViewAllTeachers.TabIndex = 9;
-            this.btnViewAllTeachers.Text = "View All Teachers";
-            this.btnViewAllTeachers.UseVisualStyleBackColor = false;
-            this.btnViewAllTeachers.Click += new System.EventHandler(this.btnViewAllTeachers_Click);
+            this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.btnViewAll.FlatAppearance.BorderSize = 0;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.btnViewAll.Location = new System.Drawing.Point(19, 64);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
+            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.Text = "View All";
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAllTeachers_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 24);
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.TabIndex = 8;
@@ -123,9 +123,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(17, 51);
+            this.panel1.Location = new System.Drawing.Point(49, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(423, 1);
+            this.panel1.Size = new System.Drawing.Size(312, 1);
             this.panel1.TabIndex = 7;
             // 
             // txtSearchName
@@ -134,10 +134,10 @@
             this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchName.ForeColor = System.Drawing.Color.White;
-            this.txtSearchName.Location = new System.Drawing.Point(47, 30);
+            this.txtSearchName.Location = new System.Drawing.Point(49, 31);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(393, 15);
-            this.txtSearchName.TabIndex = 5;
+            this.txtSearchName.Size = new System.Drawing.Size(312, 15);
+            this.txtSearchName.TabIndex = 0;
             this.txtSearchName.Text = "Search by First Name or Last Name";
             this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
             this.txtSearchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchName_KeyDown);
@@ -151,7 +151,7 @@
             this.dgvTeacherListD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dgvTeacherListD.ForeColor = System.Drawing.Color.White;
             this.dgvTeacherListD.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgvTeacherListD.Location = new System.Drawing.Point(0, 129);
+            this.dgvTeacherListD.Location = new System.Drawing.Point(0, 137);
             // 
             // 
             // 
@@ -273,7 +273,7 @@
             this.dgvTeacherListD.Name = "dgvTeacherListD";
             this.dgvTeacherListD.ReadOnly = true;
             this.dgvTeacherListD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvTeacherListD.Size = new System.Drawing.Size(673, 434);
+            this.dgvTeacherListD.Size = new System.Drawing.Size(673, 426);
             this.dgvTeacherListD.TabIndex = 12;
             this.dgvTeacherListD.ThemeName = "CrystalDark";
             // 
@@ -331,7 +331,7 @@
         #endregion
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnSearchTeachers;
-        private System.Windows.Forms.Button btnViewAllTeachers;
+        private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearchName;

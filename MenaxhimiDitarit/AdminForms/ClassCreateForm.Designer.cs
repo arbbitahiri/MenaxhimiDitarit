@@ -60,7 +60,7 @@
             this.btnSubmitClass.Location = new System.Drawing.Point(339, 326);
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmitClass.TabIndex = 55;
+            this.btnSubmitClass.TabIndex = 4;
             this.btnSubmitClass.Text = "Submit";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
             this.btnSubmitClass.Click += new System.EventHandler(this.btnSubmitClass_Click);
@@ -76,7 +76,7 @@
             this.btnCancel.Location = new System.Drawing.Point(164, 326);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 56;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -129,7 +129,7 @@
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 49;
+            this.txtID.TabIndex = 0;
             this.txtID.Text = "-1";
             // 
             // lblClass
@@ -182,7 +182,7 @@
             this.cmbMainTeacher.Location = new System.Drawing.Point(290, 201);
             this.cmbMainTeacher.Name = "cmbMainTeacher";
             this.cmbMainTeacher.Size = new System.Drawing.Size(181, 24);
-            this.cmbMainTeacher.TabIndex = 57;
+            this.cmbMainTeacher.TabIndex = 1;
             this.cmbMainTeacher.ValueMember = "TeacherID";
             // 
             // bsrcTeacher
@@ -209,7 +209,7 @@
             this.cmbSelectClass.Location = new System.Drawing.Point(290, 238);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectClass.TabIndex = 57;
+            this.cmbSelectClass.TabIndex = 2;
             // 
             // cmbSelectRoom
             // 
@@ -223,7 +223,7 @@
             this.cmbSelectRoom.Location = new System.Drawing.Point(290, 276);
             this.cmbSelectRoom.Name = "cmbSelectRoom";
             this.cmbSelectRoom.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectRoom.TabIndex = 57;
+            this.cmbSelectRoom.TabIndex = 3;
             this.cmbSelectRoom.ValueMember = "RoomID";
             // 
             // bsrcRoom

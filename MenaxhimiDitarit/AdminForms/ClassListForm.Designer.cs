@@ -41,7 +41,9 @@
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearchClass = new System.Windows.Forms.GroupBox();
+            this.txtSearchClass = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnViewAllClass = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmsClassContext = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -51,10 +53,6 @@
             this.dgvClassesList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcClassList = new System.Windows.Forms.BindingSource(this.components);
             this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
-            this.txtSearchClass = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.windows8Theme1 = new Telerik.WinControls.Themes.Windows8Theme();
-            this.visualStudio2012DarkTheme1 = new Telerik.WinControls.Themes.VisualStudio2012DarkTheme();
             this.grbSearchClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsClassContext.SuspendLayout();
@@ -74,20 +72,48 @@
             this.grbSearchClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearchClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearchClass.ForeColor = System.Drawing.Color.White;
-            this.grbSearchClass.Location = new System.Drawing.Point(147, 12);
+            this.grbSearchClass.Location = new System.Drawing.Point(146, 12);
             this.grbSearchClass.Name = "grbSearchClass";
-            this.grbSearchClass.Size = new System.Drawing.Size(379, 111);
-            this.grbSearchClass.TabIndex = 11;
+            this.grbSearchClass.Size = new System.Drawing.Size(380, 111);
+            this.grbSearchClass.TabIndex = 0;
             this.grbSearchClass.TabStop = false;
-            this.grbSearchClass.Text = "Search";
+            this.grbSearchClass.Text = "Search Class";
+            // 
+            // txtSearchClass
+            // 
+            this.txtSearchClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtSearchClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchClass.ForeColor = System.Drawing.Color.White;
+            this.txtSearchClass.Location = new System.Drawing.Point(49, 31);
+            this.txtSearchClass.Name = "txtSearchClass";
+            this.txtSearchClass.Size = new System.Drawing.Size(312, 15);
+            this.txtSearchClass.TabIndex = 0;
+            this.txtSearchClass.Text = "Search by Class No";
+            this.txtSearchClass.Click += new System.EventHandler(this.txtSearchClass_Click);
+            this.txtSearchClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchClass_KeyDown);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(47, 48);
+            this.panel4.Location = new System.Drawing.Point(49, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(312, 1);
             this.panel4.TabIndex = 82;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.btnSearch.Location = new System.Drawing.Point(241, 64);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(120, 32);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnViewAllClass
             // 
@@ -95,18 +121,18 @@
             this.btnViewAllClass.FlatAppearance.BorderSize = 0;
             this.btnViewAllClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllClass.Location = new System.Drawing.Point(17, 64);
+            this.btnViewAllClass.Location = new System.Drawing.Point(19, 64);
             this.btnViewAllClass.Name = "btnViewAllClass";
             this.btnViewAllClass.Size = new System.Drawing.Size(120, 32);
-            this.btnViewAllClass.TabIndex = 9;
+            this.btnViewAllClass.TabIndex = 2;
             this.btnViewAllClass.Text = "View All";
             this.btnViewAllClass.UseVisualStyleBackColor = false;
             this.btnViewAllClass.Click += new System.EventHandler(this.btnViewAllClass_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 24);
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.TabIndex = 8;
@@ -145,7 +171,7 @@
             this.dgvClassesList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dgvClassesList.ForeColor = System.Drawing.Color.White;
             this.dgvClassesList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgvClassesList.Location = new System.Drawing.Point(0, 129);
+            this.dgvClassesList.Location = new System.Drawing.Point(0, 137);
             // 
             // 
             // 
@@ -227,9 +253,9 @@
             this.dgvClassesList.Name = "dgvClassesList";
             this.dgvClassesList.ReadOnly = true;
             this.dgvClassesList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvClassesList.Size = new System.Drawing.Size(673, 434);
+            this.dgvClassesList.Size = new System.Drawing.Size(673, 426);
             this.dgvClassesList.TabIndex = 12;
-            this.dgvClassesList.ThemeName = "VisualStudio2012Dark";
+            this.dgvClassesList.ThemeName = "CrystalDark";
             // 
             // bsrcClassList
             // 
@@ -238,34 +264,6 @@
             // bsrcClass
             // 
             this.bsrcClass.DataSource = typeof(MenaxhimiDitarit.BO.Class);
-            // 
-            // txtSearchClass
-            // 
-            this.txtSearchClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtSearchClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchClass.ForeColor = System.Drawing.Color.White;
-            this.txtSearchClass.Location = new System.Drawing.Point(47, 27);
-            this.txtSearchClass.Name = "txtSearchClass";
-            this.txtSearchClass.Size = new System.Drawing.Size(312, 15);
-            this.txtSearchClass.TabIndex = 84;
-            this.txtSearchClass.Text = "Search by Class No";
-            this.txtSearchClass.Click += new System.EventHandler(this.txtSearchClass_Click);
-            this.txtSearchClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchClass_KeyDown);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearch.Location = new System.Drawing.Point(238, 64);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 32);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ClassListForm
             // 
@@ -305,7 +303,5 @@
         private System.Windows.Forms.BindingSource bsrcClass;
         private System.Windows.Forms.TextBox txtSearchClass;
         private System.Windows.Forms.Button btnSearch;
-        private Telerik.WinControls.Themes.Windows8Theme windows8Theme1;
-        private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
     }
 }

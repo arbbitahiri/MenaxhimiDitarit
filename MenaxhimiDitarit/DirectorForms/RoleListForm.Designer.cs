@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleListForm));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -40,7 +39,7 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnViewAllRoles = new System.Windows.Forms.Button();
+            this.btnViewAll = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchUser = new System.Windows.Forms.TextBox();
@@ -57,16 +56,16 @@
             // grbSearch
             // 
             this.grbSearch.Controls.Add(this.btnSearch);
-            this.grbSearch.Controls.Add(this.btnViewAllRoles);
+            this.grbSearch.Controls.Add(this.btnViewAll);
             this.grbSearch.Controls.Add(this.pictureBox1);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.txtSearchUser);
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(116, 12);
+            this.grbSearch.Location = new System.Drawing.Point(146, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(441, 119);
-            this.grbSearch.TabIndex = 2;
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
+            this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search Role";
             // 
@@ -76,32 +75,32 @@
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearch.Location = new System.Drawing.Point(236, 71);
+            this.btnSearch.Location = new System.Drawing.Point(241, 64);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(168, 32);
-            this.btnSearch.TabIndex = 12;
+            this.btnSearch.Size = new System.Drawing.Size(120, 32);
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnViewAllRoles
+            // btnViewAll
             // 
-            this.btnViewAllRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.btnViewAllRoles.FlatAppearance.BorderSize = 0;
-            this.btnViewAllRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAllRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllRoles.Location = new System.Drawing.Point(36, 71);
-            this.btnViewAllRoles.Name = "btnViewAllRoles";
-            this.btnViewAllRoles.Size = new System.Drawing.Size(168, 32);
-            this.btnViewAllRoles.TabIndex = 12;
-            this.btnViewAllRoles.Text = "View All Roles";
-            this.btnViewAllRoles.UseVisualStyleBackColor = false;
-            this.btnViewAllRoles.Click += new System.EventHandler(this.btnViewAllRoles_Click);
+            this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.btnViewAll.FlatAppearance.BorderSize = 0;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.btnViewAll.Location = new System.Drawing.Point(19, 64);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
+            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.Text = "View All";
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAllRoles_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 26);
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.TabIndex = 11;
@@ -110,9 +109,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(36, 53);
+            this.panel1.Location = new System.Drawing.Point(49, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(368, 1);
+            this.panel1.Size = new System.Drawing.Size(312, 1);
             this.panel1.TabIndex = 10;
             // 
             // txtSearchUser
@@ -121,10 +120,10 @@
             this.txtSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchUser.ForeColor = System.Drawing.Color.White;
-            this.txtSearchUser.Location = new System.Drawing.Point(66, 32);
+            this.txtSearchUser.Location = new System.Drawing.Point(49, 31);
             this.txtSearchUser.Name = "txtSearchUser";
-            this.txtSearchUser.Size = new System.Drawing.Size(338, 15);
-            this.txtSearchUser.TabIndex = 9;
+            this.txtSearchUser.Size = new System.Drawing.Size(312, 15);
+            this.txtSearchUser.TabIndex = 0;
             this.txtSearchUser.Text = "Search by Role Name";
             this.txtSearchUser.Click += new System.EventHandler(this.txtSearchUser_Click);
             this.txtSearchUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchUser_KeyDown);
@@ -234,7 +233,7 @@
         #endregion
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnViewAllRoles;
+        private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearchUser;

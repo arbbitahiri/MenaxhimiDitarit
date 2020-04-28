@@ -90,57 +90,72 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox()) {
-                Topic topic = new Topic();
+            try
+            {
+                if (CheckTextbox())
+                {
+                    Topic topic = new Topic();
 
-                topic.TopicID = int.Parse(txtID.Text);
-                topic.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                topic.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                topic.Date = dtpSelectDate.Value.Date;
-                topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                topic.Content = txtContent.Text;
-                topic.InsertBy = UserSession.GetUser.UserName;
-                topic.InsertDate = DateTime.Now;
-                topic.LUB = UserSession.GetUser.UserName;
-                topic.LUD = DateTime.Now;
+                    topic.TopicID = int.Parse(txtID.Text);
+                    topic.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
+                    topic.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
+                    topic.Date = dtpSelectDate.Value.Date;
+                    topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
+                    topic.Content = txtContent.Text;
+                    topic.InsertBy = UserSession.GetUser.UserName;
+                    topic.InsertDate = DateTime.Now;
+                    topic.LUB = UserSession.GetUser.UserName;
+                    topic.LUD = DateTime.Now;
 
-                if (!update)
-                    topic.LUN++;
-                else if (update)
-                    topic.LUN = ++_topics.LUN;
+                    if (!update)
+                        topic.LUN++;
+                    else if (update)
+                        topic.LUN = ++_topics.LUN;
 
-                if (!update) {
-                    var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                    && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
-                    && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+                    if (!update)
+                    {
+                        var temp = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
+                        && t.Time == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
-                    if (temp.Count > 0)
-                        MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else {
-                        bool isRegistred = _topicBLL.Add(topic);
+                        if (temp.Count > 0)
+                            MessageBox.Show("Topic exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            bool isRegistred = _topicBLL.Add(topic);
 
-                        if (isRegistred) {
-                            MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (isRegistred)
+                            {
+                                MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        bool isUpdated = _topicBLL.Add(topic);
+
+                        if (isUpdated)
+                        {
+                            MessageBox.Show("Topic updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else {
-                    bool isUpdated = _topicBLL.Add(topic);
 
-                    if (isUpdated) {
-                        MessageBox.Show("Topic updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
 
             }
-            else
-                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
