@@ -66,196 +66,196 @@
     <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForms\AdminMainForm.cs">
+    <Compile Include="App_Forms\AdminForms\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\AdminMainForm.Designer.cs">
-      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\ClassCreateForm.cs">
+    <Compile Include="App_Forms\AdminForms\ClassCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\ClassCreateForm.Designer.cs">
-      <DependentUpon>ClassCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\ClassCreate.Designer.cs">
+      <DependentUpon>ClassCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\ClassScheduleUpdateForm.cs">
+    <Compile Include="App_Forms\AdminForms\ClassScheduleUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\ClassScheduleUpdateForm.Designer.cs">
-      <DependentUpon>ClassScheduleUpdateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\ClassScheduleUpdate.Designer.cs">
+      <DependentUpon>ClassScheduleUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\ClassScheduleList.cs">
+    <Compile Include="App_Forms\AdminForms\ClassScheduleList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\ClassScheduleList.Designer.cs">
+    <Compile Include="App_Forms\AdminForms\ClassScheduleList.Designer.cs">
       <DependentUpon>ClassScheduleList.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\RoomListForm.cs">
+    <Compile Include="App_Forms\AdminForms\RoomList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\RoomListForm.Designer.cs">
-      <DependentUpon>RoomListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\RoomList.Designer.cs">
+      <DependentUpon>RoomList.cs</DependentUpon>
     </Compile>
     <Compile Include="App_Code\UserSession.cs" />
-    <Compile Include="AdminForms\ClassListForm.cs">
+    <Compile Include="App_Forms\AdminForms\ClassList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\ClassListForm.Designer.cs">
-      <DependentUpon>ClassListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\ClassList.Designer.cs">
+      <DependentUpon>ClassList.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\DirectorMainForm.cs">
+    <Compile Include="App_Forms\DirectorForms\DirectorMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\DirectorMainForm.Designer.cs">
-      <DependentUpon>DirectorMainForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\DirectorMain.Designer.cs">
+      <DependentUpon>DirectorMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\DirectorTeacherListForm.cs">
+    <Compile Include="App_Forms\DirectorForms\DirectorTeacherList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\DirectorTeacherListForm.Designer.cs">
-      <DependentUpon>DirectorTeacherListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\DirectorTeacherList.Designer.cs">
+      <DependentUpon>DirectorTeacherList.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\ReviewCommentForm.cs">
+    <Compile Include="App_Forms\DirectorForms\ReviewComment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\ReviewCommentForm.Designer.cs">
-      <DependentUpon>ReviewCommentForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\ReviewComment.Designer.cs">
+      <DependentUpon>ReviewComment.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\RoleListForm.cs">
+    <Compile Include="App_Forms\DirectorForms\RoleList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\RoleListForm.Designer.cs">
-      <DependentUpon>RoleListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\RoleList.Designer.cs">
+      <DependentUpon>RoleList.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\UserCreateForm.cs">
+    <Compile Include="App_Forms\DirectorForms\UserCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\UserCreateForm.Designer.cs">
-      <DependentUpon>UserCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\UserCreate.Designer.cs">
+      <DependentUpon>UserCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="DirectorForms\UserListForm.cs">
+    <Compile Include="App_Forms\DirectorForms\UserList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DirectorForms\UserListForm.Designer.cs">
-      <DependentUpon>UserListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\DirectorForms\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="App_Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="App_Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AdminForms\RoomCreateForm.cs">
+    <Compile Include="App_Forms\AdminForms\RoomCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\RoomCreateForm.Designer.cs">
-      <DependentUpon>RoomCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\RoomCreate.Designer.cs">
+      <DependentUpon>RoomCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\SubjectCreateForm.cs">
+    <Compile Include="App_Forms\AdminForms\SubjectCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\SubjectCreateForm.Designer.cs">
-      <DependentUpon>SubjectCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\SubjectCreate.Designer.cs">
+      <DependentUpon>SubjectCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\SubjectListForm.cs">
+    <Compile Include="App_Forms\AdminForms\SubjectList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\SubjectListForm.Designer.cs">
-      <DependentUpon>SubjectListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\SubjectList.Designer.cs">
+      <DependentUpon>SubjectList.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TeacherCreateForm.cs">
+    <Compile Include="App_Forms\AdminForms\TeacherCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TeacherCreateForm.Designer.cs">
-      <DependentUpon>TeacherCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\TeacherCreate.Designer.cs">
+      <DependentUpon>TeacherCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForms\TeacherListForm.cs">
+    <Compile Include="App_Forms\AdminForms\TeacherList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForms\TeacherListForm.Designer.cs">
-      <DependentUpon>TeacherListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\TeacherList.Designer.cs">
+      <DependentUpon>TeacherList.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\AbsenceCreateForm.cs">
+    <Compile Include="App_Forms\TeacherForms\AbsenceCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\AbsenceCreateForm.Designer.cs">
-      <DependentUpon>AbsenceCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\AbsenceCreate.Designer.cs">
+      <DependentUpon>AbsenceCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\AbsenceListForm.cs">
+    <Compile Include="App_Forms\TeacherForms\AbsenceList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\AbsenceListForm.Designer.cs">
-      <DependentUpon>AbsenceListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\AbsenceList.Designer.cs">
+      <DependentUpon>AbsenceList.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\CommentCreateForm.cs">
+    <Compile Include="App_Forms\TeacherForms\CommentCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\CommentCreateForm.Designer.cs">
-      <DependentUpon>CommentCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\CommentCreate.Designer.cs">
+      <DependentUpon>CommentCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\CommentListForm.cs">
+    <Compile Include="App_Forms\TeacherForms\CommentList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\CommentListForm.Designer.cs">
-      <DependentUpon>CommentListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\CommentList.Designer.cs">
+      <DependentUpon>CommentList.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\TeacherMainForm.cs">
+    <Compile Include="App_Forms\TeacherForms\TeacherMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\TeacherMainForm.Designer.cs">
-      <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\TeacherMain.Designer.cs">
+      <DependentUpon>TeacherMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\TopicCreateForm.cs">
+    <Compile Include="App_Forms\TeacherForms\TopicCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\TopicCreateForm.Designer.cs">
-      <DependentUpon>TopicCreateForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\TopicCreate.Designer.cs">
+      <DependentUpon>TopicCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherForms\TopicListForm.cs">
+    <Compile Include="App_Forms\TeacherForms\TopicList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherForms\TopicListForm.Designer.cs">
-      <DependentUpon>TopicListForm.cs</DependentUpon>
+    <Compile Include="App_Forms\TeacherForms\TopicList.Designer.cs">
+      <DependentUpon>TopicList.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminForms\AdminMainForm.resx">
-      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\ClassCreateForm.resx">
-      <DependentUpon>ClassCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.resx">
+      <DependentUpon>ClassCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\ClassListForm.resx">
-      <DependentUpon>ClassListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassList.resx">
+      <DependentUpon>ClassList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\ClassScheduleUpdateForm.resx">
-      <DependentUpon>ClassScheduleUpdateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleUpdate.resx">
+      <DependentUpon>ClassScheduleUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\ClassScheduleList.resx">
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleList.resx">
       <DependentUpon>ClassScheduleList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\RoomListForm.resx">
-      <DependentUpon>RoomListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\RoomList.resx">
+      <DependentUpon>RoomList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\DirectorMainForm.resx">
-      <DependentUpon>DirectorMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\DirectorMain.resx">
+      <DependentUpon>DirectorMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\DirectorTeacherListForm.resx">
-      <DependentUpon>DirectorTeacherListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\DirectorTeacherList.resx">
+      <DependentUpon>DirectorTeacherList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\ReviewCommentForm.resx">
-      <DependentUpon>ReviewCommentForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\ReviewComment.resx">
+      <DependentUpon>ReviewComment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\RoleListForm.resx">
-      <DependentUpon>RoleListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\RoleList.resx">
+      <DependentUpon>RoleList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\UserCreateForm.resx">
-      <DependentUpon>UserCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserCreate.resx">
+      <DependentUpon>UserCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DirectorForms\UserListForm.resx">
-      <DependentUpon>UserListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="App_Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -269,41 +269,41 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="AdminForms\RoomCreateForm.resx">
-      <DependentUpon>RoomCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\RoomCreate.resx">
+      <DependentUpon>RoomCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\SubjectCreateForm.resx">
-      <DependentUpon>SubjectCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\SubjectCreate.resx">
+      <DependentUpon>SubjectCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\SubjectListForm.resx">
-      <DependentUpon>SubjectListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\SubjectList.resx">
+      <DependentUpon>SubjectList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TeacherCreateForm.resx">
-      <DependentUpon>TeacherCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\TeacherCreate.resx">
+      <DependentUpon>TeacherCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForms\TeacherListForm.resx">
-      <DependentUpon>TeacherListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\TeacherList.resx">
+      <DependentUpon>TeacherList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\AbsenceCreateForm.resx">
-      <DependentUpon>AbsenceCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\AbsenceCreate.resx">
+      <DependentUpon>AbsenceCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\AbsenceListForm.resx">
-      <DependentUpon>AbsenceListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\AbsenceList.resx">
+      <DependentUpon>AbsenceList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\CommentCreateForm.resx">
-      <DependentUpon>CommentCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\CommentCreate.resx">
+      <DependentUpon>CommentCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\CommentListForm.resx">
-      <DependentUpon>CommentListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\CommentList.resx">
+      <DependentUpon>CommentList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\TeacherMainForm.resx">
-      <DependentUpon>TeacherMainForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TeacherMain.resx">
+      <DependentUpon>TeacherMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\TopicCreateForm.resx">
-      <DependentUpon>TopicCreateForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TopicCreate.resx">
+      <DependentUpon>TopicCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherForms\TopicListForm.resx">
-      <DependentUpon>TopicListForm.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TopicList.resx">
+      <DependentUpon>TopicList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Class.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.ClassSchedule.datasource" />
@@ -440,6 +440,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-username-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_microsoft_admin_100_s61_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_90_kYg_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_school_director_100_QND_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_100_u5j_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_university_100__1__QAG_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_university_100__2__EBh_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-university-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-university-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-university-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

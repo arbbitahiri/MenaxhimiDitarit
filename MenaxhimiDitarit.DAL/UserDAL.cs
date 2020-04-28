@@ -179,7 +179,30 @@ namespace MenaxhimiDitarit.DAL
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                User result = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Roles_GetByID";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "@roleID", id);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                                result = ToObject(reader);
+                        }
+                    }
+                }
+
+                return result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public User Get(User model)

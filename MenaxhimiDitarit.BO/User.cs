@@ -16,7 +16,7 @@ namespace MenaxhimiDitarit.BO
         public DateTime ExpiresDate { get; set; }
         public int RoleID { get; set; }
 
-        public virtual Role Roles { get; set; }
+        public Role Roles { get; set; }
 
         public string FullName {
             get {
