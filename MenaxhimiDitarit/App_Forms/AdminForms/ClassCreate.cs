@@ -38,6 +38,7 @@ namespace MenaxhimiDitarit.AdminForms
             MyRooms = _roomBLL.GetAll();
             MyClass = _classBLL.GetAll();
 
+            txtID.Enabled = false;
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;
 
@@ -59,7 +60,7 @@ namespace MenaxhimiDitarit.AdminForms
 
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;
-
+            txtID.Enabled = false;
             cmbSelectClass.Enabled = false;
 
             update = _class != null;

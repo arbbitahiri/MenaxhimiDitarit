@@ -139,6 +139,18 @@
     <Compile Include="App_Forms\DirectorForms\UserList.Designer.cs">
       <DependentUpon>UserList.cs</DependentUpon>
     </Compile>
+    <Compile Include="App_Forms\DirectorForms\UserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\UserUpdate.Designer.cs">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\UserUpdatePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\UserUpdatePassword.Designer.cs">
+      <DependentUpon>UserUpdatePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="App_Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,12 @@
     <EmbeddedResource Include="App_Forms\DirectorForms\UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdatePassword.resx">
+      <DependentUpon>UserUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +325,7 @@
     </EmbeddedResource>
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Class.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.ClassSchedule.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Role.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Roles.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Room.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Subject.datasource" />
@@ -467,6 +486,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-university-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-change-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-show-password-15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,16 +44,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Subject Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Subject Get(Subject model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Subject> GetAll()
         {
             try
@@ -80,11 +70,6 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
-        }
-
-        public bool Remove(Subject model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)
@@ -154,6 +139,12 @@ namespace MenaxhimiDitarit.DAL
                 throw;
             }
         }
+
+        public Subject Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public bool Update(Subject model)
         {

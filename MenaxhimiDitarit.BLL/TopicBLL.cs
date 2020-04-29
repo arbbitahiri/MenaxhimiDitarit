@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             throw new NotImplementedException();
         }
 
-        public Topic Get(Topic model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Topic> GetAll()
         {
             return topicsDAL.GetAll();
-        }
-
-        public bool Remove(Topic model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)

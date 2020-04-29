@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Forms.DirectorForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls;
@@ -52,11 +53,14 @@ namespace MenaxhimiDitarit.DirectorForms
                     UserPassword = (string)userRow.Cells[4].Value,
                     ExpiresDate = (DateTime)userRow.Cells[5].Value,
                     RoleID = (int)userRow.Cells[6].Value,
-                    InsertBy = (string)userRow.Cells[9].Value,
-                    InsertDate = (DateTime)userRow.Cells[10].Value,
-                    LUB = (string)userRow.Cells[11].Value,
-                    LUD = (DateTime)userRow.Cells[12].Value,
-                    LUN = (int)userRow.Cells[13].Value
+                    LastLoginDate = (DateTime)userRow.Cells[7].Value,
+                    LastPasswordChangeDate = (DateTime)userRow.Cells[8].Value,
+                    IsPasswordChanged = (bool)userRow.Cells[9].Value,
+                    InsertBy = (string)userRow.Cells[12].Value,
+                    InsertDate = (DateTime)userRow.Cells[13].Value,
+                    LUB = (string)userRow.Cells[14].Value,
+                    LUD = (DateTime)userRow.Cells[15].Value,
+                    LUN = (int)userRow.Cells[16].Value
                 };
 
                 return user;
@@ -104,7 +108,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
                     {
-                        UserCreate userUpdate = new UserCreate(user);
+                        UserUpdate userUpdate = new UserUpdate(user);
                         userUpdate.StartPosition = FormStartPosition.CenterParent;
                         userUpdate.ShowDialog();
                     }
@@ -141,6 +145,39 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        private void showPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvUserList.SelectedRows.Count > 0)
+            {
+                var row = dgvUserList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var user = GetUser(dgvUserList.Rows[row]);
+                    if (user != null)
+                        MessageBox.Show($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvUserList.SelectedRows.Count > 0)
+            {
+                var row = dgvUserList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var user = GetUser(dgvUserList.Rows[row]);
+                    if (user != null)
+                    {
+                        UserUpdatePassword userChangePassword = new UserUpdatePassword(user);
+                        userChangePassword.StartPosition = FormStartPosition.CenterParent;
+                        userChangePassword.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+
         private void txtSearchUserByNU_Click(object sender, EventArgs e)
         {
             txtSearchUserByNU.Text = "";
@@ -150,6 +187,15 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             if (e.KeyCode == Keys.Enter)
                 btnSearch_Click(this, new EventArgs());
+        }
+
+        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
+            {
+                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
+                e.CellElement.Text = new String('\u25CF', e.CellElement.ToString().Length);
+            }
         }
     }
 }

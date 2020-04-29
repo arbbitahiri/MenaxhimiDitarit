@@ -15,6 +15,9 @@ namespace MenaxhimiDitarit.BO
         public string UserPassword { get; set; }
         public DateTime ExpiresDate { get; set; }
         public int RoleID { get; set; }
+        public DateTime LastLoginDate { get; set; }
+        public DateTime LastPasswordChangeDate { get; set; }
+        public bool IsPasswordChanged { get; set; }
 
         public Role Roles { get; set; }
 

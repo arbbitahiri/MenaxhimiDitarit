@@ -269,6 +269,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(291, 314);
+            this.txtPassword.MaxLength = 10;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(181, 15);
             this.txtPassword.TabIndex = 6;
@@ -289,7 +290,7 @@
             this.chbShowPassword.AutoSize = true;
             this.chbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chbShowPassword.Location = new System.Drawing.Point(348, 370);
+            this.chbShowPassword.Location = new System.Drawing.Point(357, 370);
             this.chbShowPassword.Name = "chbShowPassword";
             this.chbShowPassword.Size = new System.Drawing.Size(123, 20);
             this.chbShowPassword.TabIndex = 9;
@@ -325,6 +326,7 @@
             this.dtpExpireDate.Name = "dtpExpireDate";
             this.dtpExpireDate.Size = new System.Drawing.Size(180, 22);
             this.dtpExpireDate.TabIndex = 3;
+            this.dtpExpireDate.CloseUp += new System.EventHandler(this.dtpExpireDate_CloseUp);
             // 
             // lblConfirmPass
             // 
@@ -352,6 +354,7 @@
             this.txtConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPass.ForeColor = System.Drawing.Color.White;
             this.txtConfirmPass.Location = new System.Drawing.Point(291, 342);
+            this.txtConfirmPass.MaxLength = 10;
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(181, 15);
             this.txtConfirmPass.TabIndex = 7;

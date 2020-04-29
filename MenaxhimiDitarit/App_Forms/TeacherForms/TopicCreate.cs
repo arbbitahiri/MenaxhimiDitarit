@@ -39,6 +39,7 @@ namespace MenaxhimiDitarit.TeacherForms
             MyClasses = _classBLL.GetAll();
             MyTopics = _topicBLL.GetAll();
 
+            txtID.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
             cmbSelectSubject.DataSource = MySubjects;
 
@@ -58,11 +59,13 @@ namespace MenaxhimiDitarit.TeacherForms
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
 
+            dtpSelectDate.Enabled = false;
+            txtID.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
             cmbSelectSubject.DataSource = MySubjects;
 
             update = _topics != null;
-            dtpSelectDate.Enabled = false;
+
             PopulateForm(topic);
         }
 

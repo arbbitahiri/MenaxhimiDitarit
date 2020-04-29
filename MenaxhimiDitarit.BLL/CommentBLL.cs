@@ -21,17 +21,7 @@ namespace MenaxhimiDitarit.BLL
             throw new NotImplementedException();
         }
 
-        public Comment Get(Comment model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Comment> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(Comment model)
         {
             throw new NotImplementedException();
         }

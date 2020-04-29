@@ -42,16 +42,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Room Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Room Get(Room model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Room> GetAll()
         {
             try
@@ -78,11 +68,6 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
-        }
-
-        public bool Remove(Room model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)
@@ -145,6 +130,11 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
+        }
+
+        public Room Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(Room model)

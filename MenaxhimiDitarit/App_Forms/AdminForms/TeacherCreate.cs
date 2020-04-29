@@ -26,7 +26,10 @@ namespace MenaxhimiDitarit
 
             _teacherBLL = new TeacherBLL();
             MyTeachers = _teacherBLL.GetAll();
+
             update = false;
+
+            txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 
@@ -40,7 +43,7 @@ namespace MenaxhimiDitarit
             update = teacher != null;
             PopulateForm(_teacher);
 
-
+            txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 

@@ -35,6 +35,7 @@ namespace MenaxhimiDitarit.AdminForms
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
 
+            txtID.Enabled = false;
             cmbSelectSubject.DataSource = MySubjects;
             cmbSelectClass.DataSource = MyClasses;
 
@@ -54,6 +55,7 @@ namespace MenaxhimiDitarit.AdminForms
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
 
+            txtID.Enabled = false;
             cmbSelectSubject.DataSource = MySubjects;
             cmbSelectClass.DataSource = MyClasses;
 

@@ -304,6 +304,7 @@
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNo.ForeColor = System.Drawing.Color.White;
             this.txtPhoneNo.Location = new System.Drawing.Point(281, 377);
+            this.txtPhoneNo.MaxLength = 16;
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(181, 15);
             this.txtPhoneNo.TabIndex = 8;

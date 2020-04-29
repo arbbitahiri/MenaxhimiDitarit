@@ -83,6 +83,16 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_change_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_change_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_classroom_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8_classroom_20", resourceCulture);
@@ -126,6 +136,16 @@ namespace MenaxhimiDitarit.Properties {
         internal static System.Drawing.Bitmap icons8_delete_trash_20__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_trash_20__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eye_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +286,16 @@ namespace MenaxhimiDitarit.Properties {
         internal static System.Drawing.Bitmap icons8_search_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_show_password_15 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-show-password-15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

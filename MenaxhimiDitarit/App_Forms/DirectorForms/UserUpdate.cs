@@ -10,36 +10,50 @@ using System.Windows.Forms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
-namespace MenaxhimiDitarit.DirectorForms
+namespace MenaxhimiDitarit.App_Forms.DirectorForms
 {
-    public partial class UserCreate : Form
+    public partial class UserUpdate : Form
     {
         private readonly UserBLL _userBLL;
+        private User _user;
         private List<User> MyUsers;
 
         private readonly RoleBLL _roleBLL;
         private readonly List<Role> MyRoles;
 
-        public UserCreate()
+        public UserUpdate(User user)
         {
             InitializeComponent();
 
             _userBLL = new UserBLL();
-            _roleBLL = new RoleBLL();
-
             MyUsers = _userBLL.GetAll();
+            _roleBLL = new RoleBLL();
             MyRoles = _roleBLL.GetAll();
-            cmbRoles.DataSource = MyRoles;
+
+            _user = user;
 
             txtID.Enabled = false;
-            txtPassword.UseSystemPasswordChar = true;
-            txtConfirmPass.UseSystemPasswordChar = true;
+            cmbRoles.DataSource = MyRoles;
+
+            PopulateForm(_user);
+        }
+
+        private void PopulateForm(User user)
+        {
+            txtID.Text = user.UserID.ToString();
+            txtFirstName.Text = user.FirstName;
+            txtLastName.Text = user.LastName;
+            txtUsername.Text = user.UserName;
+            dtpExpireDate.Value = user.ExpiresDate;
+            cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
         private bool CheckTextbox()
         {
-            foreach (Control ctrl in this.Controls) {
-                if (ctrl is TextBox) {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox)
+                {
                     TextBox txtb = ctrl as TextBox;
                     if (txtb.Text == string.Empty)
                         return false;
@@ -48,24 +62,13 @@ namespace MenaxhimiDitarit.DirectorForms
             return true;
         }
 
-        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbShowPassword.Checked) {
-                txtConfirmPass.UseSystemPasswordChar = false;
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else {
-                txtPassword.UseSystemPasswordChar = true;
-                txtConfirmPass.UseSystemPasswordChar = true;
-            }
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
             if (expireDate < DateTime.Now)
                 MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             else
             {
                 if (CheckTextbox())
@@ -78,29 +81,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     user.ExpiresDate = dtpExpireDate.Value;
                     user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
                     user.UserName = txtUsername.Text;
-                    user.UserPassword = txtPassword.Text;
-                    user.InsertBy = UserSession.GetUser.UserName;
-                    user.InsertDate = DateTime.Now;
                     user.LUB = UserSession.GetUser.UserName;
                     user.LUD = DateTime.Now;
-                    user.LUN++;
+                    user.LUN = ++_user.LUN;
 
-                    var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
+                    bool isUpdated = _userBLL.Add(user);
 
-                    if (temp.Count > 0)
-                        MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
+                    if (isUpdated)
                     {
-                        bool isRegistred = _userBLL.Add(user);
-
-                        if (isRegistred)
-                        {
-                            MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"User: {user.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,14 +103,6 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
-        {
-            if (txtPassword.Text == txtConfirmPass.Text)
-                picValidatePassword.Image = Properties.Resources.icons8_ok_15;
-            else
-                picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
         }
 
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)

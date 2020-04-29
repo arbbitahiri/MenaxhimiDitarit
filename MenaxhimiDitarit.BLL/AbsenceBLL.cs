@@ -21,17 +21,7 @@ namespace MenaxhimiDitarit.BLL
             throw new NotImplementedException();
         }
 
-        public Absence Get(Absence model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Absence> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(Absence model)
         {
             throw new NotImplementedException();
         }

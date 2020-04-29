@@ -46,16 +46,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Topic Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Topic Get(Topic model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Topic> GetAll()
         {
             try
@@ -83,11 +73,6 @@ namespace MenaxhimiDitarit.DAL
                 throw;
 
             }
-        }
-
-        public bool Remove(Topic model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)
@@ -159,6 +144,11 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
+        }
+
+        public Topic Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(Topic model)

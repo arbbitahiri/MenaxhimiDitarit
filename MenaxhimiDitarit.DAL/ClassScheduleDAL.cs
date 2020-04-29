@@ -44,16 +44,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public ClassSchedule Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ClassSchedule Get(ClassSchedule model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<ClassSchedule> GetAll()
         {
             try
@@ -80,11 +70,6 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
-        }
-
-        public bool Remove(ClassSchedule model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)
@@ -156,6 +141,11 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
+        }
+
+        public ClassSchedule Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(ClassSchedule model)

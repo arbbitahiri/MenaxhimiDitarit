@@ -27,20 +27,9 @@ namespace MenaxhimiDitarit.BLL
         {
             throw new NotImplementedException();
         }
-
-        public ClassSchedule Get(ClassSchedule model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<ClassSchedule> GetAll()
         {
             return scheduleDAL.GetAll();
-        }
-
-        public bool Remove(ClassSchedule model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)

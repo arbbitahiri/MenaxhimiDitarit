@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             return rolesDAL.Get(id);
         }
 
-        public Role Get(Role model)
-        {
-            return rolesDAL.Get(model);
-        }
-
         public List<Role> GetAll()
         {
             return rolesDAL.GetAll();
-        }
-
-        public bool Remove(Role model)
-        {
-            return rolesDAL.Remove(model);
         }
 
         public bool Remove(int id)

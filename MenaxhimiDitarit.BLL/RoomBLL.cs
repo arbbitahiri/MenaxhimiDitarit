@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             return roomDAL.Get(id);
         }
 
-        public Room Get(Room model)
-        {
-            return roomDAL.Get(model);
-        }
-
         public List<Room> GetAll()
         {
             return roomDAL.GetAll();
-        }
-
-        public bool Remove(Room model)
-        {
-            return roomDAL.Remove(model);
         }
 
         public bool Remove(int id)

@@ -50,16 +50,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Teacher Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Teacher Get(Teacher model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Teacher> GetAll()
         {
             try
@@ -145,11 +135,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(Teacher model)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool Remove(int id)
         {
             try
@@ -171,6 +156,11 @@ namespace MenaxhimiDitarit.DAL
             {
                 return false;
             }
+        }
+
+        public Teacher Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(Teacher model)

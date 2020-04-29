@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             return dal.Get(id);
         }
 
-        public User Get(User model)
-        {
-            return dal.Get(model);
-        }
-
         public List<User> GetAll()
         {
             return dal.GetAll();
-        }
-
-        public bool Remove(User model)
-        {
-            return dal.Remove(model);
         }
 
         public bool Remove(int id)

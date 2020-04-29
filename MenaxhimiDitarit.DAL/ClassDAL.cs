@@ -42,16 +42,6 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Class Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Class Get(Class model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Class> GetAll()
         {
             try
@@ -78,11 +68,6 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
-        }
-
-        public bool Remove(Class model)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Remove(int id)
@@ -148,6 +133,11 @@ namespace MenaxhimiDitarit.DAL
 
                 throw;
             }
+        }
+
+        public Class Get(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update(Class model)

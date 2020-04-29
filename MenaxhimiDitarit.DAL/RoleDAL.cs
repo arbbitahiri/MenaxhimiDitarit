@@ -156,17 +156,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(Role model)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool Update(Role model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Role Get(Role model)
         {
             throw new NotImplementedException();
         }

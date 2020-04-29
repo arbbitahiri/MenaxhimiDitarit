@@ -31,6 +31,8 @@ namespace MenaxhimiDitarit
 
             MySubjects = _subjectBLL.GetAll();
             MyTeachers = _teacherBLL.GetAll();
+
+            txtID.Enabled = false;
             cmbTeacher.DataSource = MyTeachers;
 
             update = false;
@@ -47,9 +49,11 @@ namespace MenaxhimiDitarit
             cmbTeacher.DataSource = MyTeachers;
 
             _subject = subject;
+
             update = _subject != null;
             PopulateForm(_subject);
 
+            txtID.Enabled = false;
             txtSubjectTitle.Enabled = false;
         }
 

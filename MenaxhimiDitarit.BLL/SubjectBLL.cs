@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             return subjectDAL.Get(id);
         }
 
-        public Subject Get(Subject model)
-        {
-            return subjectDAL.Get(model);
-        }
-
         public List<Subject> GetAll()
         {
             return subjectDAL.GetAll();
-        }
-
-        public bool Remove(Subject model)
-        {
-            return subjectDAL.Remove(model);
         }
 
         public bool Remove(int id)

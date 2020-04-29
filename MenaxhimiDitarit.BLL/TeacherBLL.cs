@@ -28,19 +28,9 @@ namespace MenaxhimiDitarit.BLL
             return teacherDAL.Get(id);
         }
 
-        public Teacher Get(Teacher model)
-        {
-            return teacherDAL.Get(model);
-        }
-
         public List<Teacher> GetAll()
         {
             return teacherDAL.GetAll();
-        }
-
-        public bool Remove(Teacher model)
-        {
-            return teacherDAL.Remove(model);
         }
 
         public bool Remove(int id)

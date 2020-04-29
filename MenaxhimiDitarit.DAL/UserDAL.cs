@@ -12,7 +12,7 @@ namespace MenaxhimiDitarit.DAL
 {
     public class UserDAL : IBaseConvert<User>, IBaseCRUD<User>
     {
-        public User Login(string username, string password)
+        public User Login(string username, string password, DateTime lastlogindate)
         {
             try
             {
@@ -23,6 +23,7 @@ namespace MenaxhimiDitarit.DAL
                     {
                         DataConnection.AddParameter(command, "username", username);
                         DataConnection.AddParameter(command, "password", password);
+                        DataConnection.AddParameter(command, "lastlogindate", lastlogindate);
 
                         using (var reader = command.ExecuteReader())
                         {
@@ -37,7 +38,6 @@ namespace MenaxhimiDitarit.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -51,18 +51,18 @@ namespace MenaxhimiDitarit.DAL
                     string sqlproc = "dbo.usp_User_Create";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "@userID", model.UserID);
-                        DataConnection.AddParameter(command, "@username", model.UserName);
-                        DataConnection.AddParameter(command, "@userpassword", model.UserPassword);
-                        DataConnection.AddParameter(command, "@expiresdate", model.ExpiresDate);
-                        DataConnection.AddParameter(command, "@roleID", model.RoleID);
-                        DataConnection.AddParameter(command, "@insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "@insertdate", model.InsertDate);
-                        DataConnection.AddParameter(command, "@LUB", model.LUB);
-                        DataConnection.AddParameter(command, "@LUD", model.LUD);
-                        DataConnection.AddParameter(command, "@LUN", model.LUN);
-                        DataConnection.AddParameter(command, "@firstname", model.FirstName);
-                        DataConnection.AddParameter(command, "@lastname", model.LastName);
+                        DataConnection.AddParameter(command, "userID", model.UserID);
+                        DataConnection.AddParameter(command, "username", model.UserName);
+                        DataConnection.AddParameter(command, "userpassword", model.UserPassword);
+                        DataConnection.AddParameter(command, "expiresdate", model.ExpiresDate);
+                        DataConnection.AddParameter(command, "roleID", model.RoleID);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "LUD", model.LUD);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "firstname", model.FirstName);
+                        DataConnection.AddParameter(command, "lastname", model.LastName);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
@@ -145,6 +145,15 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["Last_Name"] != DBNull.Value)
                     user.LastName = reader["Last_Name"].ToString();
 
+                if (reader["LastLoginDate"] != DBNull.Value)
+                    user.LastLoginDate = DateTime.Parse(reader["LastLoginDate"].ToString());
+
+                if (reader["LastPasswordChangeDate"] != DBNull.Value)
+                    user.LastPasswordChangeDate = DateTime.Parse(reader["LastPasswordChangeDate"].ToString());
+
+                if (reader["IsPasswordChanged"] != DBNull.Value)
+                    user.IsPasswordChanged = bool.Parse(reader["IsPasswordChanged"].ToString());
+
                 return user;
             }
             catch (Exception)
@@ -177,45 +186,32 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public User Get(int id)
+        public bool Update(User model)
         {
             try
             {
-                User result = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    string sqlproc = "dbo.usp_Roles_GetByID";
+                    string sqlproc = "dbo.usp_User_ChangePassword";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "@roleID", id);
+                        DataConnection.AddParameter(command, "userID", model.UserID);
+                        DataConnection.AddParameter(command, "userpass", model.UserPassword);
+                        DataConnection.AddParameter(command, "lastpasswordchangedate", model.LastPasswordChangeDate);
+                        DataConnection.AddParameter(command, "ispasswordchanged", model.IsPasswordChanged);
 
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                                result = ToObject(reader);
-                        }
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
                     }
                 }
-
-                return result;
             }
             catch (Exception)
             {
-                return null;
+                return false;
             }
         }
 
-        public User Get(User model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Update(User model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(User model)
+        public User Get(int id)
         {
             throw new NotImplementedException();
         }
