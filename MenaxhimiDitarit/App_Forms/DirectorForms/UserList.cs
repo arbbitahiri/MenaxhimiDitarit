@@ -194,7 +194,7 @@ namespace MenaxhimiDitarit.DirectorForms
             if (e.ColumnIndex == 4 && e.CellElement.Text != null)
             {
                 dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
-                e.CellElement.Text = new String('\u25CF', e.CellElement.ToString().Length);
+                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
             }
         }
     }

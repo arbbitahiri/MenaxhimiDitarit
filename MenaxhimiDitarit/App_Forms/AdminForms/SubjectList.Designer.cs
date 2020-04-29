@@ -42,10 +42,7 @@
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
-            this.cmbSelectTeacher = new System.Windows.Forms.ComboBox();
             this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
-            this.lblSelectTeacher = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.btnSearchSubject = new System.Windows.Forms.Button();
             this.btnViewAllSubjects = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,9 +65,6 @@
             // 
             // grbSearch
             // 
-            this.grbSearch.Controls.Add(this.cmbSelectTeacher);
-            this.grbSearch.Controls.Add(this.lblSelectTeacher);
-            this.grbSearch.Controls.Add(this.panel4);
             this.grbSearch.Controls.Add(this.btnSearchSubject);
             this.grbSearch.Controls.Add(this.btnViewAllSubjects);
             this.grbSearch.Controls.Add(this.pictureBox1);
@@ -79,50 +73,16 @@
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(42, 12);
+            this.grbSearch.Location = new System.Drawing.Point(146, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(588, 111);
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
             // 
-            // cmbSelectTeacher
-            // 
-            this.cmbSelectTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbSelectTeacher.DataSource = this.bsrcTeacher;
-            this.cmbSelectTeacher.DisplayMember = "FullName";
-            this.cmbSelectTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSelectTeacher.ForeColor = System.Drawing.Color.White;
-            this.cmbSelectTeacher.FormattingEnabled = true;
-            this.cmbSelectTeacher.Location = new System.Drawing.Point(389, 26);
-            this.cmbSelectTeacher.Name = "cmbSelectTeacher";
-            this.cmbSelectTeacher.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectTeacher.TabIndex = 1;
-            this.cmbSelectTeacher.ValueMember = "TeacherID";
-            // 
             // bsrcTeacher
             // 
             this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
-            // 
-            // lblSelectTeacher
-            // 
-            this.lblSelectTeacher.AutoSize = true;
-            this.lblSelectTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblSelectTeacher.Location = new System.Drawing.Point(283, 29);
-            this.lblSelectTeacher.Name = "lblSelectTeacher";
-            this.lblSelectTeacher.Size = new System.Drawing.Size(100, 16);
-            this.lblSelectTeacher.TabIndex = 80;
-            this.lblSelectTeacher.Text = "Select Teacher";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(389, 56);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 1);
-            this.panel4.TabIndex = 79;
             // 
             // btnSearchSubject
             // 
@@ -130,7 +90,7 @@
             this.btnSearchSubject.FlatAppearance.BorderSize = 0;
             this.btnSearchSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearchSubject.Location = new System.Drawing.Point(451, 64);
+            this.btnSearchSubject.Location = new System.Drawing.Point(241, 64);
             this.btnSearchSubject.Name = "btnSearchSubject";
             this.btnSearchSubject.Size = new System.Drawing.Size(120, 32);
             this.btnSearchSubject.TabIndex = 3;
@@ -144,7 +104,7 @@
             this.btnViewAllSubjects.FlatAppearance.BorderSize = 0;
             this.btnViewAllSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllSubjects.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAllSubjects.Location = new System.Drawing.Point(17, 64);
+            this.btnViewAllSubjects.Location = new System.Drawing.Point(19, 64);
             this.btnViewAllSubjects.Name = "btnViewAllSubjects";
             this.btnViewAllSubjects.Size = new System.Drawing.Size(120, 32);
             this.btnViewAllSubjects.TabIndex = 2;
@@ -155,7 +115,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.TabIndex = 8;
@@ -164,9 +124,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(47, 51);
+            this.panel1.Location = new System.Drawing.Point(49, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(207, 1);
+            this.panel1.Size = new System.Drawing.Size(312, 1);
             this.panel1.TabIndex = 7;
             // 
             // txtSearchSubject
@@ -175,11 +135,11 @@
             this.txtSearchSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchSubject.ForeColor = System.Drawing.Color.White;
-            this.txtSearchSubject.Location = new System.Drawing.Point(47, 30);
+            this.txtSearchSubject.Location = new System.Drawing.Point(49, 31);
             this.txtSearchSubject.Name = "txtSearchSubject";
-            this.txtSearchSubject.Size = new System.Drawing.Size(207, 15);
+            this.txtSearchSubject.Size = new System.Drawing.Size(312, 15);
             this.txtSearchSubject.TabIndex = 0;
-            this.txtSearchSubject.Text = "Search by Subject Title or Book";
+            this.txtSearchSubject.Text = "Search by Subject Title or Teacher Name";
             this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchNameSubject_Click);
             this.txtSearchSubject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchSubject_KeyDown);
             // 
@@ -347,8 +307,5 @@
         private Telerik.WinControls.UI.RadGridView dgvSubjectList;
         private System.Windows.Forms.BindingSource bsrcSubjectList;
         private System.Windows.Forms.BindingSource bsrcTeacher;
-        private System.Windows.Forms.ComboBox cmbSelectTeacher;
-        private System.Windows.Forms.Label lblSelectTeacher;
-        private System.Windows.Forms.Panel panel4;
     }
 }
