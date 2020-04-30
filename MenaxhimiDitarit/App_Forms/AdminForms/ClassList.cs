@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.AdminForms;
+using MenaxhimiDitarit.App_Forms.AdminForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -127,6 +128,24 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+        }
+
+        private void viewScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvClassesList.SelectedRows.Count > 0)
+            {
+                var row = dgvClassesList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var classes = GetClass(dgvClassesList.Rows[row]);
+                    if (classes != null)
+                    {
+                        ClassScheduler viewSchedule = new ClassScheduler(classes);
+                        viewSchedule.StartPosition = FormStartPosition.CenterParent;
+                        viewSchedule.ShowDialog();
+                    }
+                }
+            };
         }
 
         private void txtSearchClass_Click(object sender, EventArgs e)

@@ -51,13 +51,13 @@ namespace MenaxhimiDitarit.AdminForms
                     ClassID = (int)classRow.Cells[1].Value,
                     SubjectID = (int)classRow.Cells[2].Value,
                     Time = (int)classRow.Cells[3].Value,
-                    Date = (string)classRow.Cells[4].Value,
+                    Day = (string)classRow.Cells[4].Value,
                     Year = (int)classRow.Cells[5].Value,
-                    InsertBy = (string)classRow.Cells[6].Value,
-                    InsertDate = (DateTime)classRow.Cells[7].Value,
-                    LUB = (string)classRow.Cells[8].Value,
-                    LUD = (DateTime)classRow.Cells[9].Value,
-                    LUN = (int)classRow.Cells[10].Value
+                    InsertBy = (string)classRow.Cells[8].Value,
+                    InsertDate = (DateTime)classRow.Cells[9].Value,
+                    LUB = (string)classRow.Cells[10].Value,
+                    LUD = (DateTime)classRow.Cells[11].Value,
+                    LUN = (int)classRow.Cells[12].Value
                 };
 
                 return schedule;
@@ -78,7 +78,7 @@ namespace MenaxhimiDitarit.AdminForms
                     var schedule = GetSchedule(dgvScheduleList.Rows[row]);
                     if (schedule != null)
                     {
-                        ClassScheduleUpdate updateSchedule = new ClassScheduleUpdate(schedule);
+                        ClassScheduleCreate updateSchedule = new ClassScheduleCreate(schedule);
                         updateSchedule.StartPosition = FormStartPosition.CenterParent;
                         updateSchedule.ShowDialog();
                     }
@@ -103,7 +103,7 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
                 {
-                    var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == cmbSelectDay.SelectedItem.ToString()).ToList();
+                    var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Day == cmbSelectDay.SelectedItem.ToString()).ToList();
 
                     dgvScheduleList.DataSource = findSchedule;
                 }

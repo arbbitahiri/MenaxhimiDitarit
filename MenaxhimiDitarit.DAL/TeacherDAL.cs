@@ -31,9 +31,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "email", model.Email);
                         DataConnection.AddParameter(command, "phoneno", model.PhoneNo);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
 
 

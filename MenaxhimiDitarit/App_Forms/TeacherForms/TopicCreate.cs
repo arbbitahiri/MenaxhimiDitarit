@@ -106,9 +106,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
                     topic.Content = txtContent.Text;
                     topic.InsertBy = UserSession.GetUser.UserName;
-                    topic.InsertDate = DateTime.Now;
                     topic.LUB = UserSession.GetUser.UserName;
-                    topic.LUD = DateTime.Now;
 
                     if (!update)
                         topic.LUN++;
@@ -122,7 +120,7 @@ namespace MenaxhimiDitarit.TeacherForms
                         && t.Time == int.Parse(cmbSelectTime.Text) && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
 
                         if (temp.Count > 0)
-                            MessageBox.Show($"Topic exists for today: {topic.Date.ToShortDateString()}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"Topic exists for day: {topic.Date.ToShortDateString()}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
                             bool isRegistred = _topicBLL.Add(topic);

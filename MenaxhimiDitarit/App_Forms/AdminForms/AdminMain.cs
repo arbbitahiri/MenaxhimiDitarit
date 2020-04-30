@@ -29,6 +29,7 @@ namespace MenaxhimiDitarit
             pnlClassR.Visible = false;
             pnlSubjects.Visible = false;
             pnlRoom.Visible = false;
+            pnlSchedule.Visible = false;
         }
 
         private void HideSubMenu()
@@ -44,6 +45,9 @@ namespace MenaxhimiDitarit
 
             if (pnlRoom.Visible == true)
                 pnlRoom.Visible = false;
+
+            if (pnlSchedule.Visible == true)
+                pnlSchedule.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -129,23 +133,9 @@ namespace MenaxhimiDitarit
             HideSubMenu();
         }
 
-        private void btnAddClassRSchedule_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ClassScheduletList());
-
-            HideSubMenu();
-        }
-
         private void btnAddNewClass_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ClassCreate());
-
-            HideSubMenu();
-        }
-
-        private void btnAddNewRoom_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new RoomCreate());
 
             HideSubMenu();
         }
@@ -167,6 +157,27 @@ namespace MenaxhimiDitarit
         private void btnAddNewRoom_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new RoomCreate());
+
+            HideSubMenu();
+        }
+        #endregion
+
+        #region Schedule
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlSchedule);
+        }
+
+        private void btnListSchedules_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ClassScheduletList());
+
+            HideSubMenu();
+        }
+
+        private void btnAddSchedule_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ClassScheduleCreate());
 
             HideSubMenu();
         }

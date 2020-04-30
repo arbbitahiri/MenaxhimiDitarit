@@ -49,6 +49,7 @@
             this.cmsClassContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.dgvClassesList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcClassList = new System.Windows.Forms.BindingSource(this.components);
@@ -142,15 +143,16 @@
             // 
             this.cmsClassContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.viewScheduleToolStripMenuItem});
             this.cmsClassContext.Name = "cmsClassContext";
-            this.cmsClassContext.Size = new System.Drawing.Size(113, 48);
+            this.cmsClassContext.Size = new System.Drawing.Size(151, 70);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -158,9 +160,17 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // viewScheduleToolStripMenuItem
+            // 
+            this.viewScheduleToolStripMenuItem.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_eye_15;
+            this.viewScheduleToolStripMenuItem.Name = "viewScheduleToolStripMenuItem";
+            this.viewScheduleToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.viewScheduleToolStripMenuItem.Text = "View Schedule";
+            this.viewScheduleToolStripMenuItem.Click += new System.EventHandler(this.viewScheduleToolStripMenuItem_Click);
             // 
             // dgvClassesList
             // 
@@ -303,5 +313,6 @@
         private System.Windows.Forms.BindingSource bsrcClass;
         private System.Windows.Forms.TextBox txtSearchClass;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripMenuItem viewScheduleToolStripMenuItem;
     }
 }

@@ -94,9 +94,6 @@ namespace MenaxhimiDitarit
                     else
                         MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                //else
-                //    MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
             catch (Exception ex)
             {

@@ -12,7 +12,7 @@ namespace MenaxhimiDitarit.DAL
 {
     public class UserDAL : IBaseConvert<User>, IBaseCRUD<User>
     {
-        public User Login(string username, string password, DateTime lastlogindate)
+        public User Login(string username, string password)
         {
             try
             {
@@ -23,7 +23,6 @@ namespace MenaxhimiDitarit.DAL
                     {
                         DataConnection.AddParameter(command, "username", username);
                         DataConnection.AddParameter(command, "password", password);
-                        DataConnection.AddParameter(command, "lastlogindate", lastlogindate);
 
                         using (var reader = command.ExecuteReader())
                         {
@@ -57,9 +56,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "expiresdate", model.ExpiresDate);
                         DataConnection.AddParameter(command, "roleID", model.RoleID);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
                         DataConnection.AddParameter(command, "firstname", model.FirstName);
                         DataConnection.AddParameter(command, "lastname", model.LastName);
@@ -197,8 +194,9 @@ namespace MenaxhimiDitarit.DAL
                     {
                         DataConnection.AddParameter(command, "userID", model.UserID);
                         DataConnection.AddParameter(command, "userpass", model.UserPassword);
-                        DataConnection.AddParameter(command, "lastpasswordchangedate", model.LastPasswordChangeDate);
                         DataConnection.AddParameter(command, "ispasswordchanged", model.IsPasswordChanged);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;

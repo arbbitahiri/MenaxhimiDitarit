@@ -100,9 +100,7 @@ namespace MenaxhimiDitarit.AdminForms
                     classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
                     classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
                     classes.InsertBy = UserSession.GetUser.UserName;
-                    classes.InsertDate = DateTime.Now;
                     classes.LUB = UserSession.GetUser.UserName;
-                    classes.LUD = DateTime.Now;
 
                     if (!update)
                         classes.LUN++;

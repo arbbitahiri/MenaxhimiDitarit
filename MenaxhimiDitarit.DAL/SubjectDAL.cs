@@ -26,9 +26,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "book", model.Book);
                         DataConnection.AddParameter(command, "bookauthor", model.Book_Author);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
                         DataConnection.AddParameter(command, "teacherID", model.TeacherID);
 

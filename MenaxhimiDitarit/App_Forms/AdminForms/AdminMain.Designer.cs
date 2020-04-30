@@ -36,6 +36,10 @@
             this.btnAddNTacher = new System.Windows.Forms.Button();
             this.btnListTeachers = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.pnlSchedule = new System.Windows.Forms.Panel();
+            this.btnAddSchedule = new System.Windows.Forms.Button();
+            this.btnListSchedules = new System.Windows.Forms.Button();
+            this.btnSchedule = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -44,7 +48,6 @@
             this.btnListRooms = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
             this.pnlClassR = new System.Windows.Forms.Panel();
-            this.btnViewClassSchedule = new System.Windows.Forms.Button();
             this.btnAddNewClass = new System.Windows.Forms.Button();
             this.btnListClass = new System.Windows.Forms.Button();
             this.btnClass = new System.Windows.Forms.Button();
@@ -62,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).BeginInit();
             this.pnlTeachers.SuspendLayout();
             this.pnlMain.SuspendLayout();
+            this.pnlSchedule.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlRoom.SuspendLayout();
             this.pnlClassR.SuspendLayout();
@@ -171,6 +175,8 @@
             // 
             this.pnlMain.AutoScroll = true;
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlMain.Controls.Add(this.pnlSchedule);
+            this.pnlMain.Controls.Add(this.btnSchedule);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlRoom);
             this.pnlMain.Controls.Add(this.btnRoom);
@@ -187,12 +193,78 @@
             this.pnlMain.Size = new System.Drawing.Size(200, 600);
             this.pnlMain.TabIndex = 0;
             // 
+            // pnlSchedule
+            // 
+            this.pnlSchedule.Controls.Add(this.btnAddSchedule);
+            this.pnlSchedule.Controls.Add(this.btnListSchedules);
+            this.pnlSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSchedule.Location = new System.Drawing.Point(0, 614);
+            this.pnlSchedule.Name = "pnlSchedule";
+            this.pnlSchedule.Size = new System.Drawing.Size(183, 70);
+            this.pnlSchedule.TabIndex = 13;
+            // 
+            // btnAddSchedule
+            // 
+            this.btnAddSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.btnAddSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddSchedule.FlatAppearance.BorderSize = 0;
+            this.btnAddSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSchedule.ForeColor = System.Drawing.Color.White;
+            this.btnAddSchedule.Location = new System.Drawing.Point(0, 35);
+            this.btnAddSchedule.Name = "btnAddSchedule";
+            this.btnAddSchedule.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAddSchedule.Size = new System.Drawing.Size(183, 35);
+            this.btnAddSchedule.TabIndex = 1;
+            this.btnAddSchedule.Text = "Add Schedule";
+            this.btnAddSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddSchedule.UseVisualStyleBackColor = false;
+            this.btnAddSchedule.Click += new System.EventHandler(this.btnAddSchedule_Click);
+            // 
+            // btnListSchedules
+            // 
+            this.btnListSchedules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            this.btnListSchedules.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListSchedules.FlatAppearance.BorderSize = 0;
+            this.btnListSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListSchedules.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListSchedules.ForeColor = System.Drawing.Color.White;
+            this.btnListSchedules.Location = new System.Drawing.Point(0, 0);
+            this.btnListSchedules.Name = "btnListSchedules";
+            this.btnListSchedules.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnListSchedules.Size = new System.Drawing.Size(183, 35);
+            this.btnListSchedules.TabIndex = 2;
+            this.btnListSchedules.Text = "List Schedules";
+            this.btnListSchedules.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListSchedules.UseVisualStyleBackColor = false;
+            this.btnListSchedules.Click += new System.EventHandler(this.btnListSchedules_Click);
+            // 
+            // btnSchedule
+            // 
+            this.btnSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSchedule.FlatAppearance.BorderSize = 0;
+            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedule.ForeColor = System.Drawing.Color.White;
+            this.btnSchedule.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_schedule_25;
+            this.btnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedule.Location = new System.Drawing.Point(0, 574);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnSchedule.Size = new System.Drawing.Size(183, 40);
+            this.btnSchedule.TabIndex = 12;
+            this.btnSchedule.Text = "Schedule";
+            this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 609);
+            this.panel1.Location = new System.Drawing.Point(0, 684);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(183, 65);
             this.panel1.TabIndex = 11;
@@ -228,7 +300,7 @@
             this.pnlRoom.Controls.Add(this.btnAddNewRoom);
             this.pnlRoom.Controls.Add(this.btnListRooms);
             this.pnlRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRoom.Location = new System.Drawing.Point(0, 539);
+            this.pnlRoom.Location = new System.Drawing.Point(0, 504);
             this.pnlRoom.Name = "pnlRoom";
             this.pnlRoom.Size = new System.Drawing.Size(183, 70);
             this.pnlRoom.TabIndex = 10;
@@ -278,7 +350,7 @@
             this.btnRoom.ForeColor = System.Drawing.Color.White;
             this.btnRoom.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_room_25;
             this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.Location = new System.Drawing.Point(0, 499);
+            this.btnRoom.Location = new System.Drawing.Point(0, 464);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnRoom.Size = new System.Drawing.Size(183, 40);
@@ -291,32 +363,13 @@
             // 
             // pnlClassR
             // 
-            this.pnlClassR.Controls.Add(this.btnViewClassSchedule);
             this.pnlClassR.Controls.Add(this.btnAddNewClass);
             this.pnlClassR.Controls.Add(this.btnListClass);
             this.pnlClassR.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlClassR.Location = new System.Drawing.Point(0, 394);
             this.pnlClassR.Name = "pnlClassR";
-            this.pnlClassR.Size = new System.Drawing.Size(183, 105);
+            this.pnlClassR.Size = new System.Drawing.Size(183, 70);
             this.pnlClassR.TabIndex = 6;
-            // 
-            // btnViewClassSchedule
-            // 
-            this.btnViewClassSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.btnViewClassSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewClassSchedule.FlatAppearance.BorderSize = 0;
-            this.btnViewClassSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewClassSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewClassSchedule.ForeColor = System.Drawing.Color.White;
-            this.btnViewClassSchedule.Location = new System.Drawing.Point(0, 70);
-            this.btnViewClassSchedule.Name = "btnViewClassSchedule";
-            this.btnViewClassSchedule.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnViewClassSchedule.Size = new System.Drawing.Size(183, 35);
-            this.btnViewClassSchedule.TabIndex = 0;
-            this.btnViewClassSchedule.Text = "View Class Schedule";
-            this.btnViewClassSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewClassSchedule.UseVisualStyleBackColor = false;
-            this.btnViewClassSchedule.Click += new System.EventHandler(this.btnAddClassRSchedule_Click);
             // 
             // btnAddNewClass
             // 
@@ -466,7 +519,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(206, 574);
+            this.lblUser.Location = new System.Drawing.Point(206, 566);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(74, 16);
             this.lblUser.TabIndex = 2;
@@ -477,7 +530,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(286, 574);
+            this.lblUsername.Location = new System.Drawing.Point(280, 566);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 16);
             this.lblUsername.TabIndex = 2;
@@ -487,7 +540,7 @@
             this.lblWelcomeName.AutoSize = true;
             this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeName.Location = new System.Drawing.Point(779, 574);
+            this.lblWelcomeName.Location = new System.Drawing.Point(780, 566);
             this.lblWelcomeName.Name = "lblWelcomeName";
             this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
             this.lblWelcomeName.TabIndex = 3;
@@ -497,7 +550,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(707, 574);
+            this.lblWelcome.Location = new System.Drawing.Point(714, 566);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(66, 16);
             this.lblWelcome.TabIndex = 4;
@@ -525,6 +578,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).EndInit();
             this.pnlTeachers.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
+            this.pnlSchedule.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlRoom.ResumeLayout(false);
             this.pnlClassR.ResumeLayout(false);
@@ -554,7 +608,6 @@
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.PictureBox picSchool;
         private System.Windows.Forms.Panel pnlClassR;
-        private System.Windows.Forms.Button btnViewClassSchedule;
         private System.Windows.Forms.Button btnAddNewClass;
         private System.Windows.Forms.Button btnListClass;
         private System.Windows.Forms.Button btnClass;
@@ -568,5 +621,9 @@
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Label lblWelcomeName;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Panel pnlSchedule;
+        private System.Windows.Forms.Button btnAddSchedule;
+        private System.Windows.Forms.Button btnListSchedules;
+        private System.Windows.Forms.Button btnSchedule;
     }
 }

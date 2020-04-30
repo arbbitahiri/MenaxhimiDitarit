@@ -25,9 +25,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "roomno", model.RoomNo);
                         DataConnection.AddParameter(command, "roomtype", model.RoomType);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
 
 

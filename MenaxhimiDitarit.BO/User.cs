@@ -19,7 +19,7 @@ namespace MenaxhimiDitarit.BO
         public DateTime LastPasswordChangeDate { get; set; }
         public bool IsPasswordChanged { get; set; }
 
-        public Role Roles { get; set; }
+        public virtual Role Roles { get; set; }
 
         public string FullName {
             get {

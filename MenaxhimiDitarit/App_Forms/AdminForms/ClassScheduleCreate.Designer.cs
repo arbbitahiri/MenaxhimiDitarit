@@ -1,6 +1,6 @@
 ﻿namespace MenaxhimiDitarit.AdminForms
 {
-    partial class ClassScheduleUpdate
+    partial class ClassScheduleCreate
     {
         /// <summary>
         /// Required designer variable.
@@ -268,9 +268,12 @@
             this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear.ForeColor = System.Drawing.Color.White;
             this.txtYear.Location = new System.Drawing.Point(296, 321);
+            this.txtYear.MaxLength = 4;
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(181, 15);
             this.txtYear.TabIndex = 5;
+            this.txtYear.Text = "2020";
+            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // btnSubmitClass
             // 
@@ -304,7 +307,7 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ClassScheduleUpdate
+            // ClassScheduleCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,7 +334,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ClassScheduleUpdate";
+            this.Name = "ClassScheduleCreate";
             this.Text = "Create Class Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();

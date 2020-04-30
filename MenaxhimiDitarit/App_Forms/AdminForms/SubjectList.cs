@@ -38,11 +38,6 @@ namespace MenaxhimiDitarit
             MyTeachers = _teacherBLL.GetAll();
             MySubjects = _subjectBLL.GetAll();
             dgvSubjectList.DataSource = MySubjects;
-            dgvSubjectList.Columns.Add("Teacher", "Teacher", "Teacher");
-            foreach (var item in MyTeachers)
-            {
-                dgvSubjectList.Columns["Teacher"].Tag = item.FullName;
-            }
         }
 
         private Subject GetSubject(GridViewRowInfo subjectRow)
@@ -95,7 +90,7 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchSubject.Text.Trim().Length > 0)
                     {
-                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Teacher.FirstName.Contains(txtSearchSubject.Text)).ToList();
+                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text)).ToList();
 
                         dgvSubjectList.DataSource = findSubject;
                     }

@@ -407,7 +407,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(286, 575);
+            this.lblUsername.Location = new System.Drawing.Point(280, 566);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 16);
             this.lblUsername.TabIndex = 3;
@@ -417,7 +417,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(206, 575);
+            this.lblUser.Location = new System.Drawing.Point(206, 566);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(74, 16);
             this.lblUser.TabIndex = 4;
@@ -428,7 +428,7 @@
             this.lblWelcomeName.AutoSize = true;
             this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeName.Location = new System.Drawing.Point(779, 574);
+            this.lblWelcomeName.Location = new System.Drawing.Point(781, 566);
             this.lblWelcomeName.Name = "lblWelcomeName";
             this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
             this.lblWelcomeName.TabIndex = 5;
@@ -438,7 +438,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(707, 574);
+            this.lblWelcome.Location = new System.Drawing.Point(715, 566);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(66, 16);
             this.lblWelcome.TabIndex = 6;

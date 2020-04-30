@@ -43,11 +43,10 @@ namespace MenaxhimiDitarit
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            DateTime dateNow = DateTime.Now;
 
             if (username.Trim() != "" && password != "")
             {
-                User user = AdministrationBLL.Login(username, password, dateNow);
+                User user = AdministrationBLL.Login(username, password);
 
                 if (user != null)
                 {

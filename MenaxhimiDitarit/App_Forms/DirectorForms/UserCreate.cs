@@ -29,6 +29,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
             MyUsers = _userBLL.GetAll();
             MyRoles = _roleBLL.GetAll();
+
             cmbRoles.DataSource = MyRoles;
 
             txtID.Enabled = false;
@@ -80,9 +81,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     user.UserName = txtUsername.Text;
                     user.UserPassword = txtPassword.Text;
                     user.InsertBy = UserSession.GetUser.UserName;
-                    user.InsertDate = DateTime.Now;
                     user.LUB = UserSession.GetUser.UserName;
-                    user.LUD = DateTime.Now;
                     user.LUN++;
 
                     var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();

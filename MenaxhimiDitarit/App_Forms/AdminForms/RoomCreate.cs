@@ -71,9 +71,7 @@ namespace MenaxhimiDitarit
                 room.RoomNo = int.Parse(txtRoomNo.Text);
                 room.RoomType = txtRoomType.Text;
                 room.InsertBy = UserSession.GetUser.UserName;
-                room.InsertDate = DateTime.Now;
                 room.LUB = UserSession.GetUser.UserName;
-                room.LUD = DateTime.Now;
 
                 if (!update)
                     room.LUN++;

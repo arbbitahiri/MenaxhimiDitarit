@@ -78,27 +78,18 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 user.UserID = int.Parse(txtID.Text);
                 user.UserPassword = txtPassword.Text;
                 user.LUB = UserSession.GetUser.UserName;
-                user.LUD = DateTime.Now;
                 user.LUN = ++_user.LUN;
-                user.LastPasswordChangeDate = DateTime.Now;
                 user.IsPasswordChanged = true;
 
-                var temp = MyUsers.Where(t => t.UserPassword == txtPassword.Text).ToList();
+                bool isUpdated = _userBLL.Update(user);
 
-                if (temp.Count > 0)
-                    MessageBox.Show("You can't change it to the old password!", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
+                if (isUpdated)
                 {
-                    bool isUpdated = _userBLL.Update(user);
-
-                    if (isUpdated)
-                    {
-                        MessageBox.Show("Password changed successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Update failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Password changed successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
+                else
+                    MessageBox.Show("Update failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

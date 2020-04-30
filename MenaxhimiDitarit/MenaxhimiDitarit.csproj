@@ -78,11 +78,17 @@
     <Compile Include="App_Forms\AdminForms\ClassCreate.Designer.cs">
       <DependentUpon>ClassCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="App_Forms\AdminForms\ClassScheduleUpdate.cs">
+    <Compile Include="App_Forms\AdminForms\ClassScheduler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App_Forms\AdminForms\ClassScheduleUpdate.Designer.cs">
-      <DependentUpon>ClassScheduleUpdate.cs</DependentUpon>
+    <Compile Include="App_Forms\AdminForms\ClassScheduler.Designer.cs">
+      <DependentUpon>ClassScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\AdminForms\ClassScheduleCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\AdminForms\ClassScheduleCreate.Designer.cs">
+      <DependentUpon>ClassScheduleCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="App_Forms\AdminForms\ClassScheduleList.cs">
       <SubType>Form</SubType>
@@ -240,8 +246,11 @@
     <EmbeddedResource Include="App_Forms\AdminForms\ClassList.resx">
       <DependentUpon>ClassList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleUpdate.resx">
-      <DependentUpon>ClassScheduleUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduler.resx">
+      <DependentUpon>ClassScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleCreate.resx">
+      <DependentUpon>ClassScheduleCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleList.resx">
       <DependentUpon>ClassScheduleList.cs</DependentUpon>
@@ -495,6 +504,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-show-password-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-schedule-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

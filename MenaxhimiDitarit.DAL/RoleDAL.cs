@@ -21,13 +21,11 @@ namespace MenaxhimiDitarit.DAL
                     string sqlproc = "dbo.usp_Role_Create";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "@roleID", model.RoleID);
-                        DataConnection.AddParameter(command, "@rolename", model.RoleName);
-                        DataConnection.AddParameter(command, "@insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "@insertdate", model.InsertDate);
-                        DataConnection.AddParameter(command, "@LUB", model.LUB);
-                        DataConnection.AddParameter(command, "@LUD", model.LUD);
-                        DataConnection.AddParameter(command, "@LUN", model.LUN);
+                        DataConnection.AddParameter(command, "roleID", model.RoleID);
+                        DataConnection.AddParameter(command, "rolename", model.RoleName);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;

@@ -129,17 +129,18 @@ namespace MenaxhimiDitarit.DirectorForms
                     {
                         if (UserSession.GetUser.UserName == user.UserName)
                             MessageBox.Show("You cannot delete your User Account", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-
-                        if (MessageBox.Show($"Are you sure you want to delete {user.UserName}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
-                        {
-                            _usersBLL.Remove(user.UserID);
-                            MessageBox.Show($"User: {user.UserName} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            RefreshList();
-                        }
                         else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        {
+                            if (MessageBox.Show($"Are you sure you want to delete {user.UserName}?", "Sure?",
+                                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                            {
+                                _usersBLL.Remove(user.UserID);
+                                MessageBox.Show($"User: {user.UserName} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                RefreshList();
+                            }
+                            else
+                                MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

@@ -88,9 +88,7 @@ namespace MenaxhimiDitarit
                 subject.Book = txtSubjectBook.Text;
                 subject.Book_Author = txtBookAuthor.Text;
                 subject.InsertBy = UserSession.GetUser.UserName;
-                subject.InsertDate = DateTime.Now;
                 subject.LUB = UserSession.GetUser.UserName;
-                subject.LUD = DateTime.Now;
                 subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
 
                 if (!update)

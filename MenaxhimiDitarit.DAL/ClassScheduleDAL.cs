@@ -23,23 +23,23 @@ namespace MenaxhimiDitarit.DAL
                     {
                         DataConnection.AddParameter(command, "scheduleID", model.ScheduleID);
                         DataConnection.AddParameter(command, "classID", model.ClassID);
-                        DataConnection.AddParameter(command, "subjectID", model.ScheduleID);
+                        DataConnection.AddParameter(command, "subjectID", model.SubjectID);
                         DataConnection.AddParameter(command, "time", model.Time);
-                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "date", model.Day);
                         DataConnection.AddParameter(command, "year", model.Year);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
-                        DataConnection.AddParameter(command, "LUB", model.LUN);
-                        DataConnection.AddParameter(command, "LUN", model.LUD);
-                        DataConnection.AddParameter(command, "LUD", model.LUB);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                string sss = ex.Message;
+
                 return false;
             }
         }
@@ -113,8 +113,8 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["Time"] != DBNull.Value)
                     schedule.Time = int.Parse(reader["Time"].ToString());
 
-                if (reader["Date"] != DBNull.Value)
-                    schedule.Date = reader["Date"].ToString();
+                if (reader["Day"] != DBNull.Value)
+                    schedule.Day = reader["Day"].ToString();
 
                 if (reader["Year"] != DBNull.Value)
                     schedule.Year = int.Parse(reader["Year"].ToString());

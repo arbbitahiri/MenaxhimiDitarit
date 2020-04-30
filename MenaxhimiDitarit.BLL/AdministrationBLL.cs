@@ -14,9 +14,9 @@ namespace MenaxhimiDitarit.BLL
     {
         private static UserDAL usersDAL = new UserDAL();
 
-        public static User Login(string username, string password, DateTime lastlogindate)
+        public static User Login(string username, string password)
         {
-            return usersDAL.Login(username, password, lastlogindate);
+            return usersDAL.Login(username, password);
         }
     }
 }

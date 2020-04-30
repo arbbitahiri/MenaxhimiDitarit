@@ -12,10 +12,12 @@ using MenaxhimiDitarit.BO;
 
 namespace MenaxhimiDitarit.AdminForms
 {
-    public partial class ClassScheduleUpdate : Form
+    public partial class ClassScheduleCreate : Form
     {
         private readonly ClassScheduleBLL _scheduleBLL;
         private ClassSchedule _schedule;
+        private List<ClassSchedule> MySchedules;
+
         private readonly bool update = false;
 
         private readonly SubjectBLL _subjectBLL;
@@ -24,7 +26,7 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;
 
-        public ClassScheduleUpdate()
+        public ClassScheduleCreate()
         {
             InitializeComponent();
 
@@ -32,17 +34,12 @@ namespace MenaxhimiDitarit.AdminForms
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
-
-            txtID.Enabled = false;
-            cmbSelectSubject.DataSource = MySubjects;
-            cmbSelectClass.DataSource = MyClasses;
+            GetAll();
 
             update = false;
         }
 
-        public ClassScheduleUpdate(ClassSchedule schedule)
+        public ClassScheduleCreate(ClassSchedule schedule)
         {
             InitializeComponent();
 
@@ -52,16 +49,23 @@ namespace MenaxhimiDitarit.AdminForms
 
             _schedule = schedule;
 
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
-
-            txtID.Enabled = false;
-            cmbSelectSubject.DataSource = MySubjects;
-            cmbSelectClass.DataSource = MyClasses;
+            GetAll();
 
             update = _schedule != null;
 
             PopulateForm(_schedule);
+        }
+
+        private void GetAll()
+        {
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+
+            txtID.Enabled = false;
+            txtYear.Enabled = false;
+            cmbSelectSubject.DataSource = MySubjects;
+            cmbSelectClass.DataSource = MyClasses;
         }
 
         private void PopulateForm(ClassSchedule schedule)
@@ -70,7 +74,7 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.SelectedItem = schedule.ClassID;
             cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == schedule.SubjectID);
             cmbSelectTime.SelectedItem = schedule.Time;
-            cmbSelectDate.SelectedItem = schedule.Date;
+            cmbSelectDate.SelectedItem = schedule.Day;
         }
 
         private bool CheckTextbox()
@@ -94,14 +98,13 @@ namespace MenaxhimiDitarit.AdminForms
                 ClassSchedule schedule = new ClassSchedule();
 
                 schedule.ScheduleID = int.Parse(txtID.Text);
-                schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedIndex + 1);
-                schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedIndex + 1);
-                schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedValue.ToString());
-                schedule.Date = cmbSelectTime.SelectedValue.ToString();
-                //schedule.InsertBy = UserSession.GetUser.UserName;
-                //schedule.InsertDate = DateTime.Now;
+                schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
+                schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
+                schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
+                schedule.Day = cmbSelectDate.SelectedItem.ToString();
+                schedule.Year = int.Parse(txtYear.Text);
+                schedule.InsertBy = UserSession.GetUser.UserName;
                 schedule.LUB = UserSession.GetUser.UserName;
-                schedule.LUD = DateTime.Now;
 
                 if (!update)
                     schedule.LUN++;
@@ -110,20 +113,35 @@ namespace MenaxhimiDitarit.AdminForms
 
                 if (!update)
                 {
-                    bool isRegistred = _scheduleBLL.Add(schedule);
+                    var temp = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                    && f.Day == cmbSelectDate.SelectedItem.ToString() && f.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
 
-                    if (isRegistred)
-                    {
-                        MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
+                    if (temp.Count > 0)
+                        MessageBox.Show("Schedule exists in that period!", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else
-                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        bool isRegistred = _scheduleBLL.Add(schedule);
+
+                        if (isRegistred)
+                        {
+                            MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Schedule updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    bool isUpdated = _scheduleBLL.Add(schedule);
+
+                    if (isUpdated)
+                    {
+                        MessageBox.Show("Schedule updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -133,6 +151,13 @@ namespace MenaxhimiDitarit.AdminForms
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (!Char.IsDigit(c) && c != 8)
+                e.Handled = true;
         }
     }
 }

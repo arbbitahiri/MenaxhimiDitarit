@@ -18,6 +18,7 @@ namespace MenaxhimiDitarit
         private readonly TeacherBLL _teacherBLL;
         private Teacher _teacher;
         private List<Teacher> MyTeachers;
+
         private bool update = false;
 
         public TeacherCreate()
@@ -38,9 +39,11 @@ namespace MenaxhimiDitarit
             InitializeComponent();
 
             _teacherBLL = new TeacherBLL();
+
             _teacher = teacher;
 
             update = teacher != null;
+
             PopulateForm(_teacher);
 
             txtID.Enabled = false;
@@ -119,14 +122,12 @@ namespace MenaxhimiDitarit
                 teacher.Email = txtEmail.Text;
                 teacher.PhoneNo = txtPhoneNo.Text;
                 teacher.InsertBy = UserSession.GetUser.UserName;
-                teacher.InsertDate = DateTime.Now;
                 teacher.LUB = UserSession.GetUser.UserName;
-                teacher.LUD = DateTime.Now;
 
                 if (!update)
                     teacher.LUN++;
                 else if (update)
-                    teacher.LUN = ++this._teacher.LUN;
+                    teacher.LUN = ++_teacher.LUN;
 
                 if (!update) {
                     var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
@@ -142,7 +143,7 @@ namespace MenaxhimiDitarit
                             bool isRegistred = _teacherBLL.Add(teacher);
 
                             if (isRegistred) {
-                                MessageBox.Show($"Teacher {teacher.FirstName} {teacher.LastName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
@@ -153,7 +154,7 @@ namespace MenaxhimiDitarit
                         bool isRegistred = _teacherBLL.Add(teacher);
 
                         if (isRegistred) {
-                            MessageBox.Show("Teacher registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else

@@ -122,8 +122,8 @@ namespace MenaxhimiDitarit.DirectorForms
                     var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
                     if (teacher != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {teacher.FirstName} {teacher.LastName}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
+                        if (MessageBox.Show($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
+                            MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             _teacherBLL.Remove(teacher.TeacherID);
                             MessageBox.Show("The selected teacher has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);

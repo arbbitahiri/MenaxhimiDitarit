@@ -28,9 +28,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "time", model.Time);
                         DataConnection.AddParameter(command, "content", model.Content);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
-                        DataConnection.AddParameter(command, "LUD", model.LUD);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
-                        DataConnection.AddParameter(command, "insertdate", model.InsertDate);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
 
                         int result = command.ExecuteNonQuery();

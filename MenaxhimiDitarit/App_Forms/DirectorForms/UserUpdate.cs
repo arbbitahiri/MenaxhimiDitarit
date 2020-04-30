@@ -68,7 +68,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
             if (expireDate < DateTime.Now)
                 MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             else
             {
                 if (CheckTextbox())
@@ -82,7 +81,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
                     user.UserName = txtUsername.Text;
                     user.LUB = UserSession.GetUser.UserName;
-                    user.LUD = DateTime.Now;
                     user.LUN = ++_user.LUN;
 
                     bool isUpdated = _userBLL.Add(user);
