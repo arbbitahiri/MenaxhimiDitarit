@@ -42,12 +42,12 @@
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
-            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
             this.btnSearchSubject = new System.Windows.Forms.Button();
             this.btnViewAllSubjects = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchSubject = new System.Windows.Forms.TextBox();
+            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsSubjectContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +55,8 @@
             this.dgvSubjectList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcSubjectList = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             this.cmsSubjectContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).BeginInit();
@@ -79,10 +79,6 @@
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
-            // 
-            // bsrcTeacher
-            // 
-            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
             // btnSearchSubject
             // 
@@ -142,6 +138,10 @@
             this.txtSearchSubject.Text = "Search by Subject Title or Teacher Name";
             this.txtSearchSubject.Click += new System.EventHandler(this.txtSearchNameSubject_Click);
             this.txtSearchSubject.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchSubject_KeyDown);
+            // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
             // cmsSubjectContext
             // 
@@ -278,13 +278,14 @@
             this.Controls.Add(this.dgvSubjectList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SubjectList";
             this.Text = "Subject List";
             this.Load += new System.EventHandler(this.SubjectListForm_Load);
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             this.cmsSubjectContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectList)).EndInit();

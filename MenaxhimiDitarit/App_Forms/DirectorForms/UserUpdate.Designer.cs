@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUpdate));
             this.dtpExpireDate = new System.Windows.Forms.DateTimePicker();
             this.lblExpireDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.bsrcRole = new System.Windows.Forms.BindingSource(this.components);
             this.lblRole = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
@@ -49,7 +51,6 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.bsrcRole = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +98,10 @@
             this.cmbRoles.Size = new System.Drawing.Size(181, 24);
             this.cmbRoles.TabIndex = 86;
             this.cmbRoles.ValueMember = "RoleID";
+            // 
+            // bsrcRole
+            // 
+            this.bsrcRole.DataSource = typeof(MenaxhimiDitarit.BO.Role);
             // 
             // lblRole
             // 
@@ -270,10 +275,6 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // bsrcRole
-            // 
-            this.bsrcRole.DataSource = typeof(MenaxhimiDitarit.BO.Role);
-            // 
             // UserUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +302,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserUpdate";
             this.Text = "UserUpdate";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).EndInit();

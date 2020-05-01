@@ -118,7 +118,7 @@ namespace MenaxhimiDitarit
                 teacher.Gender = GetSelectedRBTN();
                 teacher.City = txtCity.Text;
                 teacher.Qualification = txtQualification.Text;
-                teacher.DayofBirth = DateTime.Parse(dtpBirthday.Text);
+                teacher.DayofBirth = dtpBirthday.Value.Date;
                 teacher.Email = txtEmail.Text;
                 teacher.PhoneNo = txtPhoneNo.Text;
                 teacher.InsertBy = UserSession.GetUser.UserName;

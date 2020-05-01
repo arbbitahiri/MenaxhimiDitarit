@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassScheduleCreate));
             this.cmbSelectTime = new System.Windows.Forms.ComboBox();
             this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
             this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
@@ -334,6 +335,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassScheduleCreate";
             this.Text = "Create Class Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();

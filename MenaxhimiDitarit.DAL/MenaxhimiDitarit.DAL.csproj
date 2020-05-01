@@ -61,5 +61,8 @@
       <Name>MenaxhimiDitarit.BO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\SchoolDiaryManagement2.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

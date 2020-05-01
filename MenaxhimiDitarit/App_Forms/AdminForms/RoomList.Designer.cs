@@ -260,6 +260,7 @@
             this.Controls.Add(this.dgvRoomList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoomList";
             this.Text = "Room List";
             this.Load += new System.EventHandler(this.RoomListForm_Load);

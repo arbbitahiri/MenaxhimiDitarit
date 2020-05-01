@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserUpdatePassword));
             this.picValidatePassword = new System.Windows.Forms.PictureBox();
             this.lblConfirmPass = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -248,6 +249,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserUpdatePassword";
             this.Text = "Update User Password";
             ((System.ComponentModel.ISupportInitialize)(this.picValidatePassword)).EndInit();

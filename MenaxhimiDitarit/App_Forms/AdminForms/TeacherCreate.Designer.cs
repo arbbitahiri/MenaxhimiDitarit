@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherCreate));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblEmri = new System.Windows.Forms.Label();
@@ -408,6 +409,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TeacherCreate";
             this.Text = "Create Teacher";
             this.grbGender.ResumeLayout(false);

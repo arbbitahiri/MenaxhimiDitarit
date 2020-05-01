@@ -376,6 +376,7 @@
             this.Controls.Add(this.dgvTopicList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TopicList";
             this.Text = "Topic List";
             this.Load += new System.EventHandler(this.TopicListForm_Load);

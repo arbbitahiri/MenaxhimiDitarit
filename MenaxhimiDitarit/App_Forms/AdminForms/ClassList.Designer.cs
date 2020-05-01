@@ -284,6 +284,7 @@
             this.Controls.Add(this.dgvClassesList);
             this.Controls.Add(this.grbSearchClass);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassList";
             this.Text = "Class List";
             this.Load += new System.EventHandler(this.ClassListForm_Load);

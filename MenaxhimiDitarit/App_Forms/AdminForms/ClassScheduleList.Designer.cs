@@ -355,6 +355,7 @@
             this.Controls.Add(this.dgvScheduleList);
             this.Controls.Add(this.grbSearchSchedule);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassScheduletList";
             this.Text = "Class Schedule List";
             this.Load += new System.EventHandler(this.ClassScheduletList_Load_1);

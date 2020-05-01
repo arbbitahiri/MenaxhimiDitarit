@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewComment));
             this.dgvReviewComment = new System.Windows.Forms.DataGridView();
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.txtReview = new System.Windows.Forms.TextBox();
@@ -198,6 +199,7 @@
             this.Controls.Add(this.dgvReviewComment);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReviewComment";
             this.Text = "Review Comment";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReviewComment)).EndInit();

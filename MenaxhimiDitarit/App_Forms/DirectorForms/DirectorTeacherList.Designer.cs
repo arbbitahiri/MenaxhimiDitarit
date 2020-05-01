@@ -314,6 +314,7 @@
             this.Controls.Add(this.dgvTeacherListD);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DirectorTeacherList";
             this.Text = "Director Teacher List";
             this.Load += new System.EventHandler(this.DirectorTeacherListForm_Load);
