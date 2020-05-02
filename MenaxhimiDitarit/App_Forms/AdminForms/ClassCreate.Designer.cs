@@ -58,7 +58,7 @@
             this.btnSubmitClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmitClass.Location = new System.Drawing.Point(339, 326);
+            this.btnSubmitClass.Location = new System.Drawing.Point(403, 338);
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
             this.btnSubmitClass.TabIndex = 4;
@@ -74,7 +74,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 326);
+            this.btnCancel.Location = new System.Drawing.Point(228, 338);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
             this.btnCancel.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.lblSelectRoom.AutoSize = true;
             this.lblSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectRoom.ForeColor = System.Drawing.Color.White;
-            this.lblSelectRoom.Location = new System.Drawing.Point(198, 279);
+            this.lblSelectRoom.Location = new System.Drawing.Point(262, 291);
             this.lblSelectRoom.Name = "lblSelectRoom";
             this.lblSelectRoom.Size = new System.Drawing.Size(86, 16);
             this.lblSelectRoom.TabIndex = 54;
@@ -96,7 +96,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(290, 306);
+            this.panel3.Location = new System.Drawing.Point(354, 318);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 53;
@@ -106,7 +106,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(263, 173);
+            this.lblID.Location = new System.Drawing.Point(327, 185);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 16);
             this.lblID.TabIndex = 51;
@@ -115,7 +115,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(290, 194);
+            this.panel8.Location = new System.Drawing.Point(354, 206);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(181, 1);
             this.panel8.TabIndex = 50;
@@ -126,7 +126,7 @@
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(290, 174);
+            this.txtID.Location = new System.Drawing.Point(354, 186);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
@@ -138,7 +138,7 @@
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.Color.White;
-            this.lblClass.Location = new System.Drawing.Point(201, 241);
+            this.lblClass.Location = new System.Drawing.Point(265, 253);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(83, 16);
             this.lblClass.TabIndex = 47;
@@ -149,7 +149,7 @@
             this.lblMainTeacher.AutoSize = true;
             this.lblMainTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblMainTeacher.Location = new System.Drawing.Point(193, 204);
+            this.lblMainTeacher.Location = new System.Drawing.Point(257, 216);
             this.lblMainTeacher.Name = "lblMainTeacher";
             this.lblMainTeacher.Size = new System.Drawing.Size(91, 16);
             this.lblMainTeacher.TabIndex = 48;
@@ -158,7 +158,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(290, 268);
+            this.panel2.Location = new System.Drawing.Point(354, 280);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 1);
             this.panel2.TabIndex = 45;
@@ -166,7 +166,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(290, 231);
+            this.panel1.Location = new System.Drawing.Point(354, 243);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 46;
@@ -180,7 +180,7 @@
             this.cmbMainTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMainTeacher.ForeColor = System.Drawing.Color.White;
             this.cmbMainTeacher.FormattingEnabled = true;
-            this.cmbMainTeacher.Location = new System.Drawing.Point(290, 201);
+            this.cmbMainTeacher.Location = new System.Drawing.Point(354, 213);
             this.cmbMainTeacher.Name = "cmbMainTeacher";
             this.cmbMainTeacher.Size = new System.Drawing.Size(181, 24);
             this.cmbMainTeacher.TabIndex = 1;
@@ -207,7 +207,7 @@
             "7",
             "8",
             "9"});
-            this.cmbSelectClass.Location = new System.Drawing.Point(290, 238);
+            this.cmbSelectClass.Location = new System.Drawing.Point(354, 250);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectClass.TabIndex = 2;
@@ -221,7 +221,7 @@
             this.cmbSelectRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectRoom.ForeColor = System.Drawing.Color.White;
             this.cmbSelectRoom.FormattingEnabled = true;
-            this.cmbSelectRoom.Location = new System.Drawing.Point(290, 276);
+            this.cmbSelectRoom.Location = new System.Drawing.Point(354, 288);
             this.cmbSelectRoom.Name = "cmbSelectRoom";
             this.cmbSelectRoom.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectRoom.TabIndex = 3;
@@ -236,7 +236,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.cmbSelectRoom);
             this.Controls.Add(this.cmbSelectClass);
             this.Controls.Add(this.cmbMainTeacher);

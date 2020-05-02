@@ -57,12 +57,12 @@
             this.btnListSubjects = new System.Windows.Forms.Button();
             this.btnSubjects = new System.Windows.Forms.Button();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.lblSDM = new System.Windows.Forms.Label();
             this.picSchool = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
-            this.lblSDM = new System.Windows.Forms.Label();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).BeginInit();
             this.pnlTeachers.SuspendLayout();
@@ -503,14 +503,25 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlChildForm.Location = new System.Drawing.Point(200, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(673, 563);
+            this.pnlChildForm.Size = new System.Drawing.Size(800, 563);
             this.pnlChildForm.TabIndex = 1;
+            // 
+            // lblSDM
+            // 
+            this.lblSDM.AutoSize = true;
+            this.lblSDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblSDM.Location = new System.Drawing.Point(234, 327);
+            this.lblSDM.Name = "lblSDM";
+            this.lblSDM.Size = new System.Drawing.Size(332, 31);
+            this.lblSDM.TabIndex = 2;
+            this.lblSDM.Text = "School Diary Management";
             // 
             // picSchool
             // 
             this.picSchool.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSchool.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_university_100__2_;
-            this.picSchool.Location = new System.Drawing.Point(279, 205);
+            this.picSchool.Location = new System.Drawing.Point(343, 205);
             this.picSchool.Name = "picSchool";
             this.picSchool.Size = new System.Drawing.Size(114, 99);
             this.picSchool.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -559,23 +570,12 @@
             this.lblWelcome.TabIndex = 4;
             this.lblWelcome.Text = "Welcome";
             // 
-            // lblSDM
-            // 
-            this.lblSDM.AutoSize = true;
-            this.lblSDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.lblSDM.Location = new System.Drawing.Point(170, 327);
-            this.lblSDM.Name = "lblSDM";
-            this.lblSDM.Size = new System.Drawing.Size(332, 31);
-            this.lblSDM.TabIndex = 2;
-            this.lblSDM.Text = "School Diary Management";
-            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(873, 585);
+            this.ClientSize = new System.Drawing.Size(1000, 585);
             this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblWelcome);
