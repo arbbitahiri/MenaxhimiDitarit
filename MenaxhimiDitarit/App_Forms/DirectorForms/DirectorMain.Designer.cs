@@ -56,6 +56,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblSDM = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlReview.SuspendLayout();
@@ -85,7 +86,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(200, 600);
+            this.pnlMain.Size = new System.Drawing.Size(200, 585);
             this.pnlMain.TabIndex = 0;
             // 
             // panel1
@@ -93,7 +94,7 @@
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 535);
+            this.panel1.Location = new System.Drawing.Point(0, 520);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 65);
             this.panel1.TabIndex = 12;
@@ -385,6 +386,7 @@
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlChildForm.Controls.Add(this.lblSDM);
             this.pnlChildForm.Controls.Add(this.picSchool);
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlChildForm.Location = new System.Drawing.Point(200, 0);
@@ -396,7 +398,7 @@
             // 
             this.picSchool.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSchool.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_school_100;
-            this.picSchool.Location = new System.Drawing.Point(279, 232);
+            this.picSchool.Location = new System.Drawing.Point(279, 200);
             this.picSchool.Name = "picSchool";
             this.picSchool.Size = new System.Drawing.Size(114, 99);
             this.picSchool.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -445,12 +447,23 @@
             this.lblWelcome.TabIndex = 6;
             this.lblWelcome.Text = "Welcome";
             // 
+            // lblSDM
+            // 
+            this.lblSDM.AutoSize = true;
+            this.lblSDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblSDM.Location = new System.Drawing.Point(170, 327);
+            this.lblSDM.Name = "lblSDM";
+            this.lblSDM.Size = new System.Drawing.Size(332, 31);
+            this.lblSDM.TabIndex = 3;
+            this.lblSDM.Text = "School Diary Management";
+            // 
             // DirectorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(873, 600);
+            this.ClientSize = new System.Drawing.Size(873, 585);
             this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblWelcome);
@@ -473,6 +486,7 @@
             this.pnlPic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDirector)).EndInit();
             this.pnlChildForm.ResumeLayout(false);
+            this.pnlChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSchool)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -508,5 +522,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblWelcomeName;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblSDM;
     }
 }

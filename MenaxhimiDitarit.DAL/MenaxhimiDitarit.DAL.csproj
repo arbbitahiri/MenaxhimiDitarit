@@ -61,6 +61,7 @@
       <Name>MenaxhimiDitarit.BO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\SchoolDiaryManagement.sql" />
   </ItemGroup>

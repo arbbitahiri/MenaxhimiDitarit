@@ -186,7 +186,7 @@ namespace MenaxhimiDitarit
         private void AdminMainForm_Shown(object sender, EventArgs e)
         {
             lblUsername.Text = UserSession.GetUser.UserName;
-            lblWelcomeName.Text = UserSession.GetUser.FullName;
+            lblWelcomeName.Text = UserSession.GetUser.FirstName;
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
