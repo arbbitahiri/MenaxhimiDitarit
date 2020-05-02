@@ -44,22 +44,29 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
+                List<Class> MyClasses = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Class> classes = null;
                     string sqlproc = "dbo.usp_Classes_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            classes = new List<Class>();
+                            MyClasses = new List<Class>();
                             while (reader.Read())
-                                classes.Add(ToObject(reader));
+                            {
+                                var classes = ToObject(reader);
+                                if (reader["Room_Type"] != DBNull.Value && reader["First_Name"] != DBNull.Value && reader["Last_Name"] != DBNull.Value)
+                                {
+                                    classes.Room = new Room { RoomType = reader["Room_Type"].ToString() };
+                                    classes.Teacher = new Teacher { FirstName = reader["First_Name"].ToString(), LastName = reader["Last_Name"].ToString() };
+                                }
+                                MyClasses.Add(classes);
+                            }
                         }
-
-                        return classes;
                     }
                 }
+                return MyClasses;
             }
             catch (Exception)
             {

@@ -76,22 +76,28 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
+                List<User> MyUsers = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<User> users = null;
                     string sqlproc = "dbo.usp_Users_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            users = new List<User>();
+                            MyUsers = new List<User>();
                             while (reader.Read())
-                                users.Add(ToObject(reader));
+                            {
+                                var user = ToObject(reader);
+                                if (reader["RoleName"] != DBNull.Value)
+                                {
+                                    user.Roles = new Role { RoleName = reader["RoleName"].ToString() };
+                                }
+                                MyUsers.Add(user);
+                            }
                         }
-
-                        return users;
                     }
                 }
+                return MyUsers;
             }
             catch (Exception)
             {

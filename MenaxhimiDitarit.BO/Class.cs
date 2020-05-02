@@ -15,5 +15,10 @@ namespace MenaxhimiDitarit.BO
 
         public virtual Teacher Teacher { get; set; }
         public virtual Room Room { get; set; }
+
+        public override string ToString()
+        {
+            return ClassNo + "";
+        }
     }
 }

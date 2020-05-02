@@ -20,15 +20,11 @@ namespace MenaxhimiDitarit.DirectorForms
         private readonly UserBLL _usersBLL;
         private List<User> MyUsers = null;
 
-        private readonly RoleBLL _roleBLL;
-        private List<Role> MyRoles = null;
-
         public UserList()
         {
             InitializeComponent();
 
             _usersBLL = new UserBLL();
-            _roleBLL = new RoleBLL();
 
             dgvUserList.SelectionMode = GridViewSelectionMode.FullRowSelect;
         }
@@ -36,7 +32,6 @@ namespace MenaxhimiDitarit.DirectorForms
         private void RefreshList()
         {
             MyUsers = _usersBLL.GetAll();
-            MyRoles = _roleBLL.GetAll();
             dgvUserList.DataSource = MyUsers;
         }
 

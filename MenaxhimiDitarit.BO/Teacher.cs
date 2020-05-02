@@ -23,5 +23,10 @@ namespace MenaxhimiDitarit.BO
                 return FirstName + " " + LastName;
             }
         }
+
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }

@@ -342,6 +342,7 @@
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Room.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Subject.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Teacher.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Topic.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Topics.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.User.datasource" />
     <None Include="Properties\Settings.settings">

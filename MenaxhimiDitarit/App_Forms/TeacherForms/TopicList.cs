@@ -59,11 +59,11 @@ namespace MenaxhimiDitarit.TeacherForms
                     Date = (DateTime)topicRow.Cells[3].Value,
                     Time = (int)topicRow.Cells[4].Value,
                     Content = (string)topicRow.Cells[5].Value,
-                    InsertBy = (string)topicRow.Cells[6].Value,
-                    InsertDate = (DateTime)topicRow.Cells[7].Value,
-                    LUB = (string)topicRow.Cells[8].Value,
-                    LUD = (DateTime)topicRow.Cells[9].Value,
-                    LUN = (int)topicRow.Cells[10].Value
+                    InsertBy = (string)topicRow.Cells[8].Value,
+                    InsertDate = (DateTime)topicRow.Cells[9].Value,
+                    LUB = (string)topicRow.Cells[10].Value,
+                    LUD = (DateTime)topicRow.Cells[11].Value,
+                    LUN = (int)topicRow.Cells[12].Value
                 };
 
                 return topic;

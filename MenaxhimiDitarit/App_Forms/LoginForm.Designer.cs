@@ -155,11 +155,11 @@
             this.chbShowPassword.AutoSize = true;
             this.chbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chbShowPassword.Location = new System.Drawing.Point(114, 234);
+            this.chbShowPassword.Location = new System.Drawing.Point(174, 234);
             this.chbShowPassword.Name = "chbShowPassword";
-            this.chbShowPassword.Size = new System.Drawing.Size(178, 20);
+            this.chbShowPassword.Size = new System.Drawing.Size(123, 20);
             this.chbShowPassword.TabIndex = 10;
-            this.chbShowPassword.Text = "Check to Show Password";
+            this.chbShowPassword.Text = "Show Password";
             this.chbShowPassword.UseVisualStyleBackColor = true;
             this.chbShowPassword.CheckedChanged += new System.EventHandler(this.chbShowPassword_CheckedChanged);
             // 

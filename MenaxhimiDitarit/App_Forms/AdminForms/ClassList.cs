@@ -45,11 +45,11 @@ namespace MenaxhimiDitarit
                     TeacherID = (int)classRow.Cells[1].Value,
                     ClassNo = (int)classRow.Cells[2].Value,
                     RoomID = (int)classRow.Cells[3].Value,
-                    InsertBy = (string)classRow.Cells[4].Value,
-                    InsertDate = (DateTime)classRow.Cells[5].Value,
-                    LUB = (string)classRow.Cells[6].Value,
-                    LUD = (DateTime)classRow.Cells[7].Value,
-                    LUN = (int)classRow.Cells[8].Value
+                    InsertBy = (string)classRow.Cells[6].Value,
+                    InsertDate = (DateTime)classRow.Cells[7].Value,
+                    LUB = (string)classRow.Cells[8].Value,
+                    LUD = (DateTime)classRow.Cells[9].Value,
+                    LUN = (int)classRow.Cells[10].Value
                 };
 
                 return classes;

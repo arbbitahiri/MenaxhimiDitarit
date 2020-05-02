@@ -35,7 +35,6 @@ namespace MenaxhimiDitarit
 
         private void RefreshList()
         {
-            MyTeachers = _teacherBLL.GetAll();
             MySubjects = _subjectBLL.GetAll();
             dgvSubjectList.DataSource = MySubjects;
         }
@@ -51,11 +50,11 @@ namespace MenaxhimiDitarit
                     Book = (string)subjectRow.Cells[2].Value,
                     Book_Author = (string)subjectRow.Cells[3].Value,
                     TeacherID = (int)subjectRow.Cells[4].Value,
-                    InsertBy = (string)subjectRow.Cells[5].Value,
-                    InsertDate = (DateTime)subjectRow.Cells[6].Value,
-                    LUB = (string)subjectRow.Cells[7].Value,
-                    LUD = (DateTime)subjectRow.Cells[8].Value,
-                    LUN = (int)subjectRow.Cells[9].Value
+                    InsertBy = (string)subjectRow.Cells[6].Value,
+                    InsertDate = (DateTime)subjectRow.Cells[7].Value,
+                    LUB = (string)subjectRow.Cells[8].Value,
+                    LUD = (DateTime)subjectRow.Cells[9].Value,
+                    LUN = (int)subjectRow.Cells[10].Value
                 };
 
                 return subject;
@@ -90,15 +89,16 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchSubject.Text.Trim().Length > 0)
                     {
-                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text)).ToList();
+                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Teacher.FirstName.Contains(txtSearchSubject.Text)
+                         || f.Teacher.LastName.Contains(txtSearchSubject.Text) || f.Teacher.FullName.Contains(txtSearchSubject.Text)).ToList();
 
                         dgvSubjectList.DataSource = findSubject;
                     }
                     else
-                        MessageBox.Show("Please write a subject title, book or a book author!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please write a subject title or a teacher name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Subject title, book or book author does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Subject title or teacher you're trying to search does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             catch (Exception ex)

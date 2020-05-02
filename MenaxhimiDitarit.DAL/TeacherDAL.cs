@@ -52,22 +52,21 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
+                List<Teacher> MyTeachers = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Teacher> teacher = null;
                     string sqlproc = "dbo.usp_Teachers_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            teacher = new List<Teacher>();
+                            MyTeachers = new List<Teacher>();
                             while (reader.Read())
-                                teacher.Add(ToObject(reader));
+                                MyTeachers.Add(ToObject(reader));
                         }
-
-                        return teacher;
                     }
                 }
+                return MyTeachers;
             }
             catch (Exception)
             {

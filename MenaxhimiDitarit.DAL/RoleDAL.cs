@@ -44,7 +44,7 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
-                List<Role> result = null;
+                List<Role> MyRoles = null;
                 using (var connection = DataConnection.GetConnection())
                 {
                     string sqlproc = "dbo.usp_Roles_ViewAll";
@@ -52,14 +52,13 @@ namespace MenaxhimiDitarit.DAL
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            result = new List<Role>();
+                            MyRoles = new List<Role>();
                             while (reader.Read())
-                                result.Add(ToObject(reader));
+                                MyRoles.Add(ToObject(reader));
                         }
                     }
                 }
-
-                return result;
+                return MyRoles;
             }
             catch (Exception)
             {

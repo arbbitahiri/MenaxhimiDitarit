@@ -48,22 +48,29 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
+                List<ClassSchedule> MySchedules = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<ClassSchedule> schedule = null;
                     string sqlproc = "dbo.usp_ClassSchedule_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            schedule = new List<ClassSchedule>();
+                            MySchedules = new List<ClassSchedule>();
                             while (reader.Read())
-                                schedule.Add(ToObject(reader));
+                            {
+                                var schedule = ToObject(reader);
+                                if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
+                                {
+                                    schedule.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    schedule.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                }
+                                MySchedules.Add(schedule);
+                            }
                         }
-
-                        return schedule;
                     }
                 }
+                return MySchedules;
             }
             catch (Exception)
             {

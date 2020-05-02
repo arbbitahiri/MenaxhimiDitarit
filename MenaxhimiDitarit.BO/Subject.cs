@@ -15,5 +15,10 @@ namespace MenaxhimiDitarit.BO
         public int TeacherID { get; set; }
 
         public virtual Teacher Teacher { get; set; }
+
+        public override string ToString()
+        {
+            return SubjectTitle;
+        }
     }
 }

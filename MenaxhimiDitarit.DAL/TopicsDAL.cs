@@ -48,22 +48,29 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
+                List<Topic> MyTopics = null;
                 using (var connection = DataConnection.GetConnection())
                 {
-                    List<Topic> topic = null;
                     string sqlproc = "dbo.usp_Topics_ViewAll";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            topic = new List<Topic>();
+                            MyTopics = new List<Topic>();
                             while (reader.Read())
-                                topic.Add(ToObject(reader));
+                            {
+                                var topic = ToObject(reader);
+                                if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
+                                {
+                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                }
+                                MyTopics.Add(topic);
+                            }
                         }
-
-                        return topic;
                     }
                 }
+                return MyTopics;
             }
             catch (Exception)
             {
