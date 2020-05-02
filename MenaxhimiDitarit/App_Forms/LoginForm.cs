@@ -54,21 +54,21 @@ namespace MenaxhimiDitarit
 
                     if (user.ExpiresDate > DateTime.Now)
                     {
-                        if (user.RoleID == 1)
+                        if (user.RoleID == 2)
                         {
                             AdminMain adminForm = new AdminMain();
                             this.Hide();
                             adminForm.StartPosition = FormStartPosition.CenterScreen;
                             adminForm.ShowDialog();
                         }
-                        else if (user.RoleID == 2)
+                        else if (user.RoleID == 3)
                         {
                             TeacherMain teacherForm = new TeacherMain();
                             this.Hide();
                             teacherForm.StartPosition = FormStartPosition.CenterScreen;
                             teacherForm.ShowDialog();
                         }
-                        else if (user.RoleID == 4)
+                        else if (user.RoleID == 1)
                         {
                             DirectorMain directorForm = new DirectorMain();
                             this.Hide();

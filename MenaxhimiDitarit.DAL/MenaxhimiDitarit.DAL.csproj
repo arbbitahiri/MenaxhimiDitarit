@@ -62,7 +62,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\SchoolDiaryManagement2.sql" />
+    <Content Include="Database\SchoolDiaryManagement.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
