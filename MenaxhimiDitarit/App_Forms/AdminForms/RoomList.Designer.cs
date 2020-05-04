@@ -71,9 +71,9 @@
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(146, 12);
+            this.grbSearch.Location = new System.Drawing.Point(147, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(380, 111);
+            this.grbSearch.Size = new System.Drawing.Size(507, 111);
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search Room";
@@ -225,7 +225,7 @@
             this.dgvRoomList.Name = "dgvRoomList";
             this.dgvRoomList.ReadOnly = true;
             this.dgvRoomList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvRoomList.Size = new System.Drawing.Size(673, 426);
+            this.dgvRoomList.Size = new System.Drawing.Size(800, 426);
             this.dgvRoomList.TabIndex = 13;
             this.dgvRoomList.ThemeName = "CrystalDark";
             // 
@@ -262,7 +262,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvRoomList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

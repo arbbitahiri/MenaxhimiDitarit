@@ -71,7 +71,7 @@
             "4",
             "5",
             "6"});
-            this.cmbSelectTime.Location = new System.Drawing.Point(296, 247);
+            this.cmbSelectTime.Location = new System.Drawing.Point(316, 247);
             this.cmbSelectTime.Name = "cmbSelectTime";
             this.cmbSelectTime.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectTime.TabIndex = 3;
@@ -86,7 +86,7 @@
             this.cmbSelectSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
-            this.cmbSelectSubject.Location = new System.Drawing.Point(296, 209);
+            this.cmbSelectSubject.Location = new System.Drawing.Point(316, 209);
             this.cmbSelectSubject.Name = "cmbSelectSubject";
             this.cmbSelectSubject.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectSubject.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.cmbSelectClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
-            this.cmbSelectClass.Location = new System.Drawing.Point(296, 172);
+            this.cmbSelectClass.Location = new System.Drawing.Point(316, 172);
             this.cmbSelectClass.Name = "cmbSelectClass";
             this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectClass.TabIndex = 1;
@@ -120,7 +120,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(210, 250);
+            this.lblTime.Location = new System.Drawing.Point(230, 250);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(80, 16);
             this.lblTime.TabIndex = 66;
@@ -129,7 +129,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(296, 277);
+            this.panel3.Location = new System.Drawing.Point(316, 277);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 65;
@@ -139,7 +139,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(269, 144);
+            this.lblID.Location = new System.Drawing.Point(289, 144);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 16);
             this.lblID.TabIndex = 64;
@@ -148,7 +148,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(296, 165);
+            this.panel8.Location = new System.Drawing.Point(316, 165);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(181, 1);
             this.panel8.TabIndex = 63;
@@ -159,7 +159,7 @@
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(296, 145);
+            this.txtID.Location = new System.Drawing.Point(316, 145);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
@@ -171,7 +171,7 @@
             this.lblSubject.AutoSize = true;
             this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(196, 212);
+            this.lblSubject.Location = new System.Drawing.Point(216, 212);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(94, 16);
             this.lblSubject.TabIndex = 60;
@@ -182,7 +182,7 @@
             this.lblClass.AutoSize = true;
             this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.Color.White;
-            this.lblClass.Location = new System.Drawing.Point(207, 175);
+            this.lblClass.Location = new System.Drawing.Point(227, 175);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(83, 16);
             this.lblClass.TabIndex = 61;
@@ -191,7 +191,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(296, 239);
+            this.panel2.Location = new System.Drawing.Point(316, 239);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 1);
             this.panel2.TabIndex = 58;
@@ -199,7 +199,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(296, 202);
+            this.panel1.Location = new System.Drawing.Point(316, 202);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 59;
@@ -218,7 +218,7 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.cmbSelectDate.Location = new System.Drawing.Point(296, 284);
+            this.cmbSelectDate.Location = new System.Drawing.Point(316, 284);
             this.cmbSelectDate.Name = "cmbSelectDate";
             this.cmbSelectDate.Size = new System.Drawing.Size(181, 24);
             this.cmbSelectDate.TabIndex = 4;
@@ -229,7 +229,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(253, 287);
+            this.lblDate.Location = new System.Drawing.Point(273, 287);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(37, 16);
             this.lblDate.TabIndex = 71;
@@ -238,7 +238,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(296, 314);
+            this.panel4.Location = new System.Drawing.Point(316, 314);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 1);
             this.panel4.TabIndex = 70;
@@ -248,7 +248,7 @@
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.White;
-            this.lblYear.Location = new System.Drawing.Point(253, 321);
+            this.lblYear.Location = new System.Drawing.Point(273, 321);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(37, 16);
             this.lblYear.TabIndex = 75;
@@ -257,7 +257,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel5.Location = new System.Drawing.Point(296, 341);
+            this.panel5.Location = new System.Drawing.Point(316, 341);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(181, 1);
             this.panel5.TabIndex = 74;
@@ -268,7 +268,7 @@
             this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear.ForeColor = System.Drawing.Color.White;
-            this.txtYear.Location = new System.Drawing.Point(296, 321);
+            this.txtYear.Location = new System.Drawing.Point(316, 321);
             this.txtYear.MaxLength = 4;
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(181, 15);
@@ -284,7 +284,7 @@
             this.btnSubmitClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmitClass.Location = new System.Drawing.Point(339, 371);
+            this.btnSubmitClass.Location = new System.Drawing.Point(359, 371);
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
             this.btnSubmitClass.TabIndex = 6;
@@ -300,7 +300,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 371);
+            this.btnCancel.Location = new System.Drawing.Point(184, 371);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
             this.btnCancel.TabIndex = 7;
@@ -313,7 +313,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.btnSubmitClass);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblYear);

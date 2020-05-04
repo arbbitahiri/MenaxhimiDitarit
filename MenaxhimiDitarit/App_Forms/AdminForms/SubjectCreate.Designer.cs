@@ -56,7 +56,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(263, 177);
+            this.lblID.Location = new System.Drawing.Point(327, 177);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 16);
             this.lblID.TabIndex = 37;
@@ -65,7 +65,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(290, 198);
+            this.panel8.Location = new System.Drawing.Point(354, 198);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(181, 1);
             this.panel8.TabIndex = 36;
@@ -76,7 +76,7 @@
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(290, 177);
+            this.txtID.Location = new System.Drawing.Point(354, 177);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
@@ -88,7 +88,7 @@
             this.lblBook.AutoSize = true;
             this.lblBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBook.ForeColor = System.Drawing.Color.White;
-            this.lblBook.Location = new System.Drawing.Point(244, 233);
+            this.lblBook.Location = new System.Drawing.Point(308, 233);
             this.lblBook.Name = "lblBook";
             this.lblBook.Size = new System.Drawing.Size(40, 16);
             this.lblBook.TabIndex = 33;
@@ -99,7 +99,7 @@
             this.lblSubjectTitle.AutoSize = true;
             this.lblSubjectTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubjectTitle.ForeColor = System.Drawing.Color.White;
-            this.lblSubjectTitle.Location = new System.Drawing.Point(202, 205);
+            this.lblSubjectTitle.Location = new System.Drawing.Point(266, 205);
             this.lblSubjectTitle.Name = "lblSubjectTitle";
             this.lblSubjectTitle.Size = new System.Drawing.Size(82, 16);
             this.lblSubjectTitle.TabIndex = 34;
@@ -108,7 +108,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(290, 254);
+            this.panel2.Location = new System.Drawing.Point(354, 254);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 1);
             this.panel2.TabIndex = 31;
@@ -116,7 +116,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(290, 226);
+            this.panel1.Location = new System.Drawing.Point(354, 226);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 32;
@@ -127,7 +127,7 @@
             this.txtSubjectBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubjectBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectBook.ForeColor = System.Drawing.Color.White;
-            this.txtSubjectBook.Location = new System.Drawing.Point(290, 233);
+            this.txtSubjectBook.Location = new System.Drawing.Point(354, 233);
             this.txtSubjectBook.Name = "txtSubjectBook";
             this.txtSubjectBook.Size = new System.Drawing.Size(181, 15);
             this.txtSubjectBook.TabIndex = 2;
@@ -138,7 +138,7 @@
             this.txtSubjectTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubjectTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectTitle.ForeColor = System.Drawing.Color.White;
-            this.txtSubjectTitle.Location = new System.Drawing.Point(290, 205);
+            this.txtSubjectTitle.Location = new System.Drawing.Point(354, 205);
             this.txtSubjectTitle.Name = "txtSubjectTitle";
             this.txtSubjectTitle.Size = new System.Drawing.Size(181, 15);
             this.txtSubjectTitle.TabIndex = 1;
@@ -148,7 +148,7 @@
             this.lblBookAuthor.AutoSize = true;
             this.lblBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBookAuthor.ForeColor = System.Drawing.Color.White;
-            this.lblBookAuthor.Location = new System.Drawing.Point(203, 261);
+            this.lblBookAuthor.Location = new System.Drawing.Point(267, 261);
             this.lblBookAuthor.Name = "lblBookAuthor";
             this.lblBookAuthor.Size = new System.Drawing.Size(81, 16);
             this.lblBookAuthor.TabIndex = 40;
@@ -157,7 +157,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(290, 282);
+            this.panel3.Location = new System.Drawing.Point(354, 282);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 39;
@@ -168,7 +168,7 @@
             this.txtBookAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookAuthor.ForeColor = System.Drawing.Color.White;
-            this.txtBookAuthor.Location = new System.Drawing.Point(290, 261);
+            this.txtBookAuthor.Location = new System.Drawing.Point(354, 261);
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.Size = new System.Drawing.Size(181, 15);
             this.txtBookAuthor.TabIndex = 3;
@@ -181,7 +181,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(339, 336);
+            this.btnSubmit.Location = new System.Drawing.Point(403, 336);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(169, 39);
             this.btnSubmit.TabIndex = 5;
@@ -197,7 +197,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 336);
+            this.btnCancel.Location = new System.Drawing.Point(228, 336);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
             this.btnCancel.TabIndex = 6;
@@ -210,7 +210,7 @@
             this.lblAssignTeacher.AutoSize = true;
             this.lblAssignTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssignTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblAssignTeacher.Location = new System.Drawing.Point(181, 292);
+            this.lblAssignTeacher.Location = new System.Drawing.Point(245, 292);
             this.lblAssignTeacher.Name = "lblAssignTeacher";
             this.lblAssignTeacher.Size = new System.Drawing.Size(103, 16);
             this.lblAssignTeacher.TabIndex = 45;
@@ -219,7 +219,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(290, 319);
+            this.panel4.Location = new System.Drawing.Point(354, 319);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(181, 1);
             this.panel4.TabIndex = 44;
@@ -233,7 +233,7 @@
             this.cmbTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTeacher.ForeColor = System.Drawing.Color.White;
             this.cmbTeacher.FormattingEnabled = true;
-            this.cmbTeacher.Location = new System.Drawing.Point(290, 289);
+            this.cmbTeacher.Location = new System.Drawing.Point(354, 289);
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.Size = new System.Drawing.Size(181, 24);
             this.cmbTeacher.TabIndex = 4;
@@ -248,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.cmbTeacher);
             this.Controls.Add(this.lblAssignTeacher);
             this.Controls.Add(this.panel4);

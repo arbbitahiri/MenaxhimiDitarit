@@ -47,7 +47,7 @@
             // picLogin
             // 
             this.picLogin.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_customer_90;
-            this.picLogin.Location = new System.Drawing.Point(130, 62);
+            this.picLogin.Location = new System.Drawing.Point(135, 62);
             this.picLogin.Name = "picLogin";
             this.picLogin.Size = new System.Drawing.Size(75, 75);
             this.picLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -57,7 +57,7 @@
             // picUsername
             // 
             this.picUsername.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_username_50;
-            this.picUsername.Location = new System.Drawing.Point(42, 160);
+            this.picUsername.Location = new System.Drawing.Point(47, 160);
             this.picUsername.Name = "picUsername";
             this.picUsername.Size = new System.Drawing.Size(24, 24);
             this.picUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,7 +67,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_password_50;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 197);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 197);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(72, 169);
+            this.txtUsername.Location = new System.Drawing.Point(77, 169);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(220, 15);
             this.txtUsername.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(72, 206);
+            this.txtPassword.Location = new System.Drawing.Point(77, 206);
             this.txtPassword.MaxLength = 10;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(220, 15);
@@ -110,7 +110,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnLogin.Location = new System.Drawing.Point(65, 260);
+            this.btnLogin.Location = new System.Drawing.Point(70, 260);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(205, 39);
             this.btnLogin.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(65, 305);
+            this.btnCancel.Location = new System.Drawing.Point(70, 305);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(205, 39);
             this.btnCancel.TabIndex = 3;
@@ -137,7 +137,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(42, 190);
+            this.panel1.Location = new System.Drawing.Point(47, 190);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 1);
             this.panel1.TabIndex = 4;
@@ -145,7 +145,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(42, 227);
+            this.panel2.Location = new System.Drawing.Point(47, 227);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 4;
@@ -155,7 +155,7 @@
             this.chbShowPassword.AutoSize = true;
             this.chbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chbShowPassword.Location = new System.Drawing.Point(174, 234);
+            this.chbShowPassword.Location = new System.Drawing.Point(179, 234);
             this.chbShowPassword.Name = "chbShowPassword";
             this.chbShowPassword.Size = new System.Drawing.Size(123, 20);
             this.chbShowPassword.TabIndex = 10;
@@ -168,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(335, 392);
+            this.ClientSize = new System.Drawing.Size(349, 418);
             this.Controls.Add(this.chbShowPassword);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

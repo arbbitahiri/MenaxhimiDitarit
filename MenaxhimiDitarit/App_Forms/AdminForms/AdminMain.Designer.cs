@@ -554,7 +554,7 @@
             this.lblWelcomeName.AutoSize = true;
             this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeName.Location = new System.Drawing.Point(780, 566);
+            this.lblWelcomeName.Location = new System.Drawing.Point(927, 566);
             this.lblWelcomeName.Name = "lblWelcomeName";
             this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
             this.lblWelcomeName.TabIndex = 3;
@@ -564,7 +564,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(714, 566);
+            this.lblWelcome.Location = new System.Drawing.Point(861, 566);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(66, 16);
             this.lblWelcome.TabIndex = 4;

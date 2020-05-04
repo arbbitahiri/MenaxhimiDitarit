@@ -357,7 +357,7 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlChildForm.Location = new System.Drawing.Point(200, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(673, 563);
+            this.pnlChildForm.Size = new System.Drawing.Size(800, 563);
             this.pnlChildForm.TabIndex = 2;
             // 
             // lblSDM
@@ -365,7 +365,7 @@
             this.lblSDM.AutoSize = true;
             this.lblSDM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.lblSDM.Location = new System.Drawing.Point(170, 327);
+            this.lblSDM.Location = new System.Drawing.Point(234, 327);
             this.lblSDM.Name = "lblSDM";
             this.lblSDM.Size = new System.Drawing.Size(332, 31);
             this.lblSDM.TabIndex = 3;
@@ -375,7 +375,7 @@
             // 
             this.picSchool.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSchool.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_university_100;
-            this.picSchool.Location = new System.Drawing.Point(278, 205);
+            this.picSchool.Location = new System.Drawing.Point(343, 205);
             this.picSchool.Name = "picSchool";
             this.picSchool.Size = new System.Drawing.Size(114, 99);
             this.picSchool.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -408,7 +408,7 @@
             this.lblWelcomeName.AutoSize = true;
             this.lblWelcomeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcomeName.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeName.Location = new System.Drawing.Point(778, 567);
+            this.lblWelcomeName.Location = new System.Drawing.Point(925, 567);
             this.lblWelcomeName.Name = "lblWelcomeName";
             this.lblWelcomeName.Size = new System.Drawing.Size(0, 16);
             this.lblWelcomeName.TabIndex = 7;
@@ -418,7 +418,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(712, 566);
+            this.lblWelcome.Location = new System.Drawing.Point(859, 566);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(66, 16);
             this.lblWelcome.TabIndex = 8;
@@ -429,7 +429,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.ClientSize = new System.Drawing.Size(873, 585);
+            this.ClientSize = new System.Drawing.Size(1000, 585);
             this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblUsername);

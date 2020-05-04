@@ -63,7 +63,7 @@
             this.grbSearch.Controls.Add(this.txtSearchUser);
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(146, 12);
+            this.grbSearch.Location = new System.Drawing.Point(210, 12);
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.Size = new System.Drawing.Size(380, 111);
             this.grbSearch.TabIndex = 0;
@@ -207,7 +207,7 @@
             this.dgvRoleList.Name = "dgvRoleList";
             this.dgvRoleList.ReadOnly = true;
             this.dgvRoleList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvRoleList.Size = new System.Drawing.Size(673, 426);
+            this.dgvRoleList.Size = new System.Drawing.Size(800, 426);
             this.dgvRoleList.TabIndex = 3;
             this.dgvRoleList.ThemeName = "CrystalDark";
             // 
@@ -220,7 +220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvRoleList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

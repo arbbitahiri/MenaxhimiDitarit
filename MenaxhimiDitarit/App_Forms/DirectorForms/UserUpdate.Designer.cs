@@ -59,7 +59,7 @@
             this.dtpExpireDate.CustomFormat = "ddMMMMyyyy";
             this.dtpExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExpireDate.Location = new System.Drawing.Point(288, 249);
+            this.dtpExpireDate.Location = new System.Drawing.Point(352, 249);
             this.dtpExpireDate.Name = "dtpExpireDate";
             this.dtpExpireDate.Size = new System.Drawing.Size(180, 22);
             this.dtpExpireDate.TabIndex = 85;
@@ -70,7 +70,7 @@
             this.lblExpireDate.AutoSize = true;
             this.lblExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpireDate.ForeColor = System.Drawing.Color.White;
-            this.lblExpireDate.Location = new System.Drawing.Point(203, 254);
+            this.lblExpireDate.Location = new System.Drawing.Point(267, 254);
             this.lblExpireDate.Name = "lblExpireDate";
             this.lblExpireDate.Size = new System.Drawing.Size(78, 16);
             this.lblExpireDate.TabIndex = 95;
@@ -79,7 +79,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel6.Location = new System.Drawing.Point(287, 275);
+            this.panel6.Location = new System.Drawing.Point(351, 275);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(181, 1);
             this.panel6.TabIndex = 94;
@@ -93,7 +93,7 @@
             this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoles.ForeColor = System.Drawing.Color.White;
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(287, 282);
+            this.cmbRoles.Location = new System.Drawing.Point(351, 282);
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(181, 24);
             this.cmbRoles.TabIndex = 86;
@@ -108,7 +108,7 @@
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(244, 285);
+            this.lblRole.Location = new System.Drawing.Point(308, 285);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(37, 16);
             this.lblRole.TabIndex = 93;
@@ -117,7 +117,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(287, 312);
+            this.panel3.Location = new System.Drawing.Point(351, 312);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 92;
@@ -127,7 +127,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(261, 165);
+            this.lblID.Location = new System.Drawing.Point(325, 165);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 16);
             this.lblID.TabIndex = 91;
@@ -136,7 +136,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(288, 186);
+            this.panel8.Location = new System.Drawing.Point(352, 186);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(181, 1);
             this.panel8.TabIndex = 83;
@@ -147,7 +147,7 @@
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(288, 165);
+            this.txtID.Location = new System.Drawing.Point(352, 165);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 15);
@@ -158,7 +158,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.White;
-            this.lblLastName.Location = new System.Drawing.Point(209, 221);
+            this.lblLastName.Location = new System.Drawing.Point(273, 221);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(73, 16);
             this.lblLastName.TabIndex = 89;
@@ -169,7 +169,7 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.White;
-            this.lblFirstName.Location = new System.Drawing.Point(209, 193);
+            this.lblFirstName.Location = new System.Drawing.Point(273, 193);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(73, 16);
             this.lblFirstName.TabIndex = 90;
@@ -178,7 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(288, 242);
+            this.panel2.Location = new System.Drawing.Point(352, 242);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(181, 1);
             this.panel2.TabIndex = 87;
@@ -186,7 +186,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(288, 214);
+            this.panel1.Location = new System.Drawing.Point(352, 214);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 88;
@@ -197,7 +197,7 @@
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.White;
-            this.txtLastName.Location = new System.Drawing.Point(288, 221);
+            this.txtLastName.Location = new System.Drawing.Point(352, 221);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(181, 15);
             this.txtLastName.TabIndex = 84;
@@ -208,7 +208,7 @@
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
-            this.txtFirstName.Location = new System.Drawing.Point(288, 193);
+            this.txtFirstName.Location = new System.Drawing.Point(352, 193);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(181, 15);
             this.txtFirstName.TabIndex = 82;
@@ -218,7 +218,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(211, 319);
+            this.lblUsername.Location = new System.Drawing.Point(275, 319);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(71, 16);
             this.lblUsername.TabIndex = 98;
@@ -227,7 +227,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel5.Location = new System.Drawing.Point(288, 340);
+            this.panel5.Location = new System.Drawing.Point(352, 340);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(181, 1);
             this.panel5.TabIndex = 97;
@@ -238,7 +238,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(288, 319);
+            this.txtUsername.Location = new System.Drawing.Point(352, 319);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(181, 15);
             this.txtUsername.TabIndex = 96;
@@ -251,7 +251,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(339, 358);
+            this.btnSubmit.Location = new System.Drawing.Point(403, 358);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(169, 39);
             this.btnSubmit.TabIndex = 99;
@@ -267,7 +267,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(164, 358);
+            this.btnCancel.Location = new System.Drawing.Point(228, 358);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(169, 39);
             this.btnCancel.TabIndex = 100;
@@ -280,7 +280,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblUsername);

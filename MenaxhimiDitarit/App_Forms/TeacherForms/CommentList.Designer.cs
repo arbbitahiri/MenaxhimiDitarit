@@ -58,7 +58,7 @@
             this.grbSearch.Controls.Add(this.panel3);
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(95, 12);
+            this.grbSearch.Location = new System.Drawing.Point(159, 12);
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.Size = new System.Drawing.Size(483, 111);
             this.grbSearch.TabIndex = 3;
@@ -163,7 +163,7 @@
             // 
             this.dgvCommentList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvCommentList.Name = "dgvCommentList";
-            this.dgvCommentList.Size = new System.Drawing.Size(673, 426);
+            this.dgvCommentList.Size = new System.Drawing.Size(800, 426);
             this.dgvCommentList.TabIndex = 4;
             this.dgvCommentList.ThemeName = "CrystalDark";
             // 
@@ -172,7 +172,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvCommentList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

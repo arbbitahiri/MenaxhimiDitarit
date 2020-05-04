@@ -48,6 +48,7 @@
             this.cmsScheduleContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvScheduleList = new Telerik.WinControls.UI.RadGridView();
+            this.bsrcScheduleList = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearchSchedule = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
@@ -58,13 +59,12 @@
             this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             this.lblSelectClass = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bsrcScheduleList = new System.Windows.Forms.BindingSource(this.components);
             this.cmsScheduleContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).BeginInit();
             this.grbSearchSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsScheduleContext
@@ -209,9 +209,13 @@
             this.dgvScheduleList.Name = "dgvScheduleList";
             this.dgvScheduleList.ReadOnly = true;
             this.dgvScheduleList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvScheduleList.Size = new System.Drawing.Size(673, 426);
+            this.dgvScheduleList.Size = new System.Drawing.Size(800, 426);
             this.dgvScheduleList.TabIndex = 5;
             this.dgvScheduleList.ThemeName = "CrystalDark";
+            // 
+            // bsrcScheduleList
+            // 
+            this.bsrcScheduleList.DataSource = typeof(MenaxhimiDitarit.BO.ClassSchedule);
             // 
             // grbSearchSchedule
             // 
@@ -225,7 +229,7 @@
             this.grbSearchSchedule.Controls.Add(this.panel3);
             this.grbSearchSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearchSchedule.ForeColor = System.Drawing.Color.White;
-            this.grbSearchSchedule.Location = new System.Drawing.Point(33, 12);
+            this.grbSearchSchedule.Location = new System.Drawing.Point(97, 12);
             this.grbSearchSchedule.Name = "grbSearchSchedule";
             this.grbSearchSchedule.Size = new System.Drawing.Size(606, 111);
             this.grbSearchSchedule.TabIndex = 0;
@@ -339,16 +343,12 @@
             this.panel3.Size = new System.Drawing.Size(181, 1);
             this.panel3.TabIndex = 58;
             // 
-            // bsrcScheduleList
-            // 
-            this.bsrcScheduleList.DataSource = typeof(MenaxhimiDitarit.BO.ClassSchedule);
-            // 
             // ClassScheduletList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(673, 563);
+            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvScheduleList);
             this.Controls.Add(this.grbSearchSchedule);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -359,10 +359,10 @@
             this.cmsScheduleContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).EndInit();
             this.grbSearchSchedule.ResumeLayout(false);
             this.grbSearchSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).EndInit();
             this.ResumeLayout(false);
 
         }
