@@ -40,9 +40,12 @@ namespace MenaxhimiDitarit.TeacherForms
 
             update = false;
 
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
             MyTopics = _topicBLL.GetAll();
 
-            GetAll();
+            CustomizeDesign();
         }
 
         public TopicCreate(Topic topic)
@@ -53,9 +56,13 @@ namespace MenaxhimiDitarit.TeacherForms
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+
             _topics = topic;
 
-            GetAll();
+            CustomizeDesign();
 
             update = _topics != null;
 
@@ -63,12 +70,8 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Metodat
-        private void GetAll()
+        private void CustomizeDesign()
         {
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
-            MySchedules = _scheduleBLL.GetAll();
-
             dtpSelectDate.Enabled = false;
             txtID.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;

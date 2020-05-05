@@ -34,7 +34,11 @@ namespace MenaxhimiDitarit.AdminForms
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
-            GetAll();
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+
+            CustomizeDesign();
 
             update = false;
         }
@@ -47,9 +51,13 @@ namespace MenaxhimiDitarit.AdminForms
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+
             _schedule = schedule;
 
-            GetAll();
+            CustomizeDesign();
 
             update = _schedule != null;
 
@@ -57,12 +65,8 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         #region Metodat
-        private void GetAll()
+        private void CustomizeDesign()
         {
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
-            MySchedules = _scheduleBLL.GetAll();
-
             txtYear.Text = DateTime.Now.Year.ToString();
 
             txtID.Enabled = false;

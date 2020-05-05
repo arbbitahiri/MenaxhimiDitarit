@@ -42,6 +42,9 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
+            MySubjects = _subjectBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+
             _subject = subject;
 
             update = _subject != null;
@@ -50,17 +53,14 @@ namespace MenaxhimiDitarit
 
             PopulateForm(_subject);
             CustomizeDesign();
+
+            cmbTeacher.DataSource = MyTeachers;
         }
 
         #region Metodat
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
-
-            MySubjects = _subjectBLL.GetAll();
-            MyTeachers = _teacherBLL.GetAll();
-
-            cmbTeacher.DataSource = MyTeachers;
         }
 
         //Popullimi i TextBox-ave dhe ComboBox-it me te dhenat nga Subject

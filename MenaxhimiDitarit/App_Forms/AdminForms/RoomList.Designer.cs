@@ -71,9 +71,9 @@
             this.grbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(147, 12);
+            this.grbSearch.Location = new System.Drawing.Point(210, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(507, 111);
+            this.grbSearch.Size = new System.Drawing.Size(380, 111);
             this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search Room";

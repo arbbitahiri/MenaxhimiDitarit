@@ -34,9 +34,11 @@ namespace MenaxhimiDitarit.AdminForms
             _teacherBLL = new TeacherBLL();
             _roomBLL = new RoomBLL();
 
+            MyTeachers = _teacherBLL.GetAll();
+            MyRooms = _roomBLL.GetAll();
             MyClass = _classBLL.GetAll();
 
-            GetAll();
+            CustomizeDesign();
 
             update = false;
         }
@@ -49,6 +51,9 @@ namespace MenaxhimiDitarit.AdminForms
             _teacherBLL = new TeacherBLL();
             _roomBLL = new RoomBLL();
 
+            MyTeachers = _teacherBLL.GetAll();
+            MyRooms = _roomBLL.GetAll();
+
             _class = classes;
 
             cmbSelectClass.Enabled = false;
@@ -56,15 +61,12 @@ namespace MenaxhimiDitarit.AdminForms
             update = _class != null;
 
             PopulateForm(_class);
-            GetAll();
+            CustomizeDesign();
         }
 
         #region Metodat
-        private void GetAll()
+        private void CustomizeDesign()
         {
-            MyTeachers = _teacherBLL.GetAll();
-            MyRooms = _roomBLL.GetAll();
-
             txtID.Enabled = false;
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;

@@ -89,7 +89,6 @@ namespace MenaxhimiDitarit
                     if (!update)
                     {
                         var checkRooms = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
-
                         if (checkRooms.Count > 0)
                             MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
@@ -103,6 +102,7 @@ namespace MenaxhimiDitarit
                             }
                             else
                                 MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                         }
                     }
                     else
