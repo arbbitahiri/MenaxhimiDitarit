@@ -57,7 +57,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -94,15 +95,18 @@ namespace MenaxhimiDitarit
                         dgvSubjectList.DataSource = findSubject;
                     }
                     else
-                        MessageBox.Show("Please write a subject title or a teacher name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please write a subject title or a teacher name!!",
+                            "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Subject title or teacher you're trying to search does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Subject title or teacher you're trying to search does not exist!!",
+                        "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occured while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"A problem occured while searching data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -139,11 +143,14 @@ namespace MenaxhimiDitarit
                     var subject = GetSubject(dgvSubjectList.Rows[row]);
                     if (subject != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {subject.SubjectTitle}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
+                        if (MessageBox.Show($"Are you sure you want to delete {subject.SubjectTitle}?",
+                            "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             _subjectBLL.Remove(subject.SubjectID);
-                            MessageBox.Show($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            MessageBox.Show($"Subject {subject.SubjectTitle} has been deleted successfully!",
+                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             RefreshList();
                         }
                         else

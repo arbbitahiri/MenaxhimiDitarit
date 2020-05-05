@@ -53,12 +53,19 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
         //Popullimi i TextBox-ave me te dhenat nga Class
         private void PopulateForm(Class classes)
         {
-            txtMonday1.Text = GetDayTime(classes, "Monday", 1); txtTuesday1.Text = GetDayTime(classes, "Tuesday", 1); txtWednesday1.Text = GetDayTime(classes, "Wednesday", 1);
-            txtMonday2.Text = GetDayTime(classes, "Monday", 2); txtTuesday2.Text = GetDayTime(classes, "Tuesday", 2); txtWednesday2.Text = GetDayTime(classes, "Wednesday", 2);
-            txtMonday3.Text = GetDayTime(classes, "Monday", 3); txtTuesday3.Text = GetDayTime(classes, "Tuesday", 3); txtWednesday3.Text = GetDayTime(classes, "Wednesday", 3);
-            txtMonday4.Text = GetDayTime(classes, "Monday", 4); txtTuesday4.Text = GetDayTime(classes, "Tuesday", 4); txtWednesday4.Text = GetDayTime(classes, "Wednesday", 4);
-            txtMonday5.Text = GetDayTime(classes, "Monday", 5); txtTuesday5.Text = GetDayTime(classes, "Tuesday", 5); txtWednesday5.Text = GetDayTime(classes, "Wednesday", 5);
-            txtMonday6.Text = GetDayTime(classes, "Monday", 6); txtTuesday6.Text = GetDayTime(classes, "Tuesday", 6); txtWednesday6.Text = GetDayTime(classes, "Wednesday", 6);
+            txtMonday1.Text = GetDayTime(classes, "Monday", 1); txtTuesday1.Text = GetDayTime(classes, "Tuesday", 1);
+            txtMonday2.Text = GetDayTime(classes, "Monday", 2); txtTuesday2.Text = GetDayTime(classes, "Tuesday", 2);
+            txtMonday3.Text = GetDayTime(classes, "Monday", 3); txtTuesday3.Text = GetDayTime(classes, "Tuesday", 3);
+            txtMonday4.Text = GetDayTime(classes, "Monday", 4); txtTuesday4.Text = GetDayTime(classes, "Tuesday", 4);
+            txtMonday5.Text = GetDayTime(classes, "Monday", 5); txtTuesday5.Text = GetDayTime(classes, "Tuesday", 5);
+            txtMonday6.Text = GetDayTime(classes, "Monday", 6); txtTuesday6.Text = GetDayTime(classes, "Tuesday", 6);
+
+            txtWednesday1.Text = GetDayTime(classes, "Wednesday", 1);
+            txtWednesday2.Text = GetDayTime(classes, "Wednesday", 2);
+            txtWednesday3.Text = GetDayTime(classes, "Wednesday", 3);
+            txtWednesday4.Text = GetDayTime(classes, "Wednesday", 4);
+            txtWednesday5.Text = GetDayTime(classes, "Wednesday", 5);
+            txtWednesday6.Text = GetDayTime(classes, "Wednesday", 6);
 
             txtThursday1.Text = GetDayTime(classes, "Thursday", 1); txtFriday1.Text = GetDayTime(classes, "Friday", 1);
             txtThursday2.Text = GetDayTime(classes, "Thursday", 2); txtFriday2.Text = GetDayTime(classes, "Friday", 2);

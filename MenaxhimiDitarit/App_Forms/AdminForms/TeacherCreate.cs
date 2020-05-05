@@ -165,7 +165,8 @@ namespace MenaxhimiDitarit
 
                                     if (isRegistred)
                                     {
-                                        MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show($"Teacher {teacher.FullName} registred successfully",
+                                            "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         this.Close();
                                     }
                                     else
@@ -178,7 +179,8 @@ namespace MenaxhimiDitarit
 
                                 if (isRegistred)
                                 {
-                                    MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show($"Teacher {teacher.FullName} registred successfully",
+                                        "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else
@@ -205,7 +207,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

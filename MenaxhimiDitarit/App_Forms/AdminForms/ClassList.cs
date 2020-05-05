@@ -58,7 +58,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -95,7 +96,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -130,11 +132,14 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete class: {classes.ClassNo}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
+                        if (MessageBox.Show($"Are you sure you want to delete class: {classes.ClassNo}?",
+                            "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             _classBLL.Remove(classes.ClassID);
-                            MessageBox.Show($"Class: {classes.ClassNo} has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            MessageBox.Show($"Class: {classes.ClassNo} has been deleted successfully!",
+                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             RefreshList();
                         }
                         else

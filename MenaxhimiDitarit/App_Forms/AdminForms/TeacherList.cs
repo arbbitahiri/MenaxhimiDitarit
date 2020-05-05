@@ -61,7 +61,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -102,7 +103,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

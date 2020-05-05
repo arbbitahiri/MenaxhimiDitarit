@@ -55,6 +55,7 @@ namespace MenaxhimiDitarit.TeacherForms
             _topicBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
+            _scheduleBLL = new ClassScheduleBLL();
 
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
@@ -140,7 +141,8 @@ namespace MenaxhimiDitarit.TeacherForms
                             && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
 
                             if (checkTopic.Count > 0)
-                                MessageBox.Show($"Topic exists for day: {topic.Date.ToShortDateString()}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show($"Topic exists for day: {topic.Date.ToShortDateString()}",
+                                    "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             else
                             {
                                 bool isRegistred = _topicBLL.Add(topic);
@@ -175,7 +177,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

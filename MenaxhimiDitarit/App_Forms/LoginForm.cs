@@ -70,7 +70,7 @@ namespace MenaxhimiDitarit
                             teacherForm.StartPosition = FormStartPosition.CenterScreen;
                             teacherForm.ShowDialog();
                         }
-                        else if (user.RoleID == 4)
+                        else if (user.RoleID == 3)
                         {
                             DirectorMain directorForm = new DirectorMain();
                             this.Hide();

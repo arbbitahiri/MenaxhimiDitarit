@@ -153,7 +153,8 @@ namespace MenaxhimiDitarit.AdminForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occured while registering data.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"A problem occured while registering data.\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

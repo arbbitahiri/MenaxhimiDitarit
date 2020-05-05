@@ -64,6 +64,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bsrcTopicList = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.showContentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
@@ -366,15 +367,16 @@
             // 
             this.cmsTopicContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.deleteToolStripMenuItem,
+            this.showContentToolStripMenuItem});
             this.cmsTopicContext.Name = "cmsTopicContext";
-            this.cmsTopicContext.Size = new System.Drawing.Size(113, 48);
+            this.cmsTopicContext.Size = new System.Drawing.Size(181, 92);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateToolStripMenuItem.Image")));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -382,13 +384,21 @@
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // bsrcTopicList
             // 
             this.bsrcTopicList.DataSource = typeof(MenaxhimiDitarit.BO.Topic);
+            // 
+            // showContentToolStripMenuItem
+            // 
+            this.showContentToolStripMenuItem.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_eye_15;
+            this.showContentToolStripMenuItem.Name = "showContentToolStripMenuItem";
+            this.showContentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showContentToolStripMenuItem.Text = "Show Content";
+            this.showContentToolStripMenuItem.Click += new System.EventHandler(this.showContentToolStripMenuItem_Click);
             // 
             // TopicList
             // 
@@ -437,5 +447,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.BindingSource bsrcClass;
         private System.Windows.Forms.BindingSource bsrcTopicList;
+        private System.Windows.Forms.ToolStripMenuItem showContentToolStripMenuItem;
     }
 }

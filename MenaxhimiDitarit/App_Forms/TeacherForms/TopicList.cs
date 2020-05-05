@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraPrinting.Export;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -72,7 +73,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -109,7 +111,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -150,7 +153,8 @@ namespace MenaxhimiDitarit.TeacherForms
                             == DialogResult.OK)
                         {
                             _topicBLL.Remove(topic.TopicID);
-                            MessageBox.Show("The selected topic has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("The selected topic has been deleted successfully!",
+                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else
@@ -159,6 +163,22 @@ namespace MenaxhimiDitarit.TeacherForms
                 }
             }
             RefreshList();
+        }
+
+        //Shikojme Content te Topic
+        private void showContentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvTopicList.SelectedRows.Count > 0)
+            {
+                var row = dgvTopicList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var topic = GetTopic(dgvTopicList.Rows[row]);
+                    if (topic != null)
+                        MessageBox.Show($"Content: {topic.Content}",
+                            "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

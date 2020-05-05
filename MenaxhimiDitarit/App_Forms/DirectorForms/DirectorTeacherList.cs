@@ -59,7 +59,8 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -102,7 +103,8 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -141,7 +143,8 @@ namespace MenaxhimiDitarit.DirectorForms
                             MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             _teacherBLL.Remove(teacher.TeacherID);
-                            MessageBox.Show("The selected teacher has been deleted successfully!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("The selected teacher has been deleted successfully!",
+                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
                         }
                         else

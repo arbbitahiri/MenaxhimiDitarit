@@ -30,6 +30,11 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
+            MySubjects = _subjectBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+
+            cmbTeacher.DataSource = MyTeachers;
+
             CustomizeDesign();
 
             update = false;
@@ -121,7 +126,8 @@ namespace MenaxhimiDitarit
 
                             if (isRegistred)
                             {
-                                MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully",
+                                    "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
@@ -146,7 +152,8 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

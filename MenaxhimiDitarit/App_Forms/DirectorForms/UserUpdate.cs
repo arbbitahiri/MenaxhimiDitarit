@@ -72,7 +72,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
                 if (expireDate < DateTime.Now)
-                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}",
+                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
                     if (CheckTextbox())
@@ -104,7 +105,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
+                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -119,7 +121,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
             if (expireDate < DateTime.Now)
-                MessageBox.Show("Can't select date!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
