@@ -274,7 +274,6 @@
             this.txtYear.Size = new System.Drawing.Size(181, 15);
             this.txtYear.TabIndex = 5;
             this.txtYear.Text = "2020";
-            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // btnSubmitClass
             // 

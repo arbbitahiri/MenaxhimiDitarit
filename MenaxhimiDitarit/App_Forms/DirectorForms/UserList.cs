@@ -29,12 +29,14 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvUserList.SelectionMode = GridViewSelectionMode.FullRowSelect;
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyUsers = _usersBLL.GetAll();
             dgvUserList.DataSource = MyUsers;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private User GetUser(GridViewRowInfo userRow)
         {
             try
@@ -60,8 +62,9 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 return user;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -76,23 +79,34 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (_usersBLL != null)
+            try
             {
-                if (txtSearchUserByNU.Text.Trim().Length > 0)
+                if (_usersBLL != null)
                 {
-                    var findUsersByNU = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text) || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
+                    if (txtSearchUserByNU.Text.Trim().Length > 0)
+                    {
+                        //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName
+                        var findUsersByNU = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text)
+                        || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
 
-                    dgvUserList.DataSource = findUsersByNU;
+                        dgvUserList.DataSource = findUsersByNU;
+                    }
+                    else
+                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("User does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("User does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -112,6 +126,7 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -139,8 +154,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                 }
             }
+            RefreshList();
         }
 
+        //Shfaqim passwordin per rreshtin e klikuar ne DataGrid
         private void showPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -155,6 +172,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        //Update passwordin per rreshtin e klikuar ne DataGrid
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -185,6 +203,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 btnSearch_Click(this, new EventArgs());
         }
 
+        //Hide Password me karakter
         private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
         {
             if (e.ColumnIndex == 4 && e.CellElement.Text != null)

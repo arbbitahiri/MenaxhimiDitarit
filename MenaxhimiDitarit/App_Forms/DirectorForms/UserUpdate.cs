@@ -16,7 +16,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
     {
         private readonly UserBLL _userBLL;
         private User _user;
-        private List<User> MyUsers;
 
         private readonly RoleBLL _roleBLL;
         private readonly List<Role> MyRoles;
@@ -26,7 +25,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             InitializeComponent();
 
             _userBLL = new UserBLL();
-            MyUsers = _userBLL.GetAll();
+
             _roleBLL = new RoleBLL();
             MyRoles = _roleBLL.GetAll();
 
@@ -38,6 +37,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
+        #region Metodat
+        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
@@ -48,6 +49,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls)
@@ -61,40 +63,48 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             return true;
         }
+        #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
-
-            if (expireDate < DateTime.Now)
-                MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+            try
             {
-                if (CheckTextbox())
+                DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
+
+                if (expireDate < DateTime.Now)
+                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
                 {
-                    User user = new User();
-
-                    user.UserID = int.Parse(txtID.Text);
-                    user.FirstName = txtFirstName.Text;
-                    user.LastName = txtLastName.Text;
-                    user.ExpiresDate = dtpExpireDate.Value;
-                    user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
-                    user.UserName = txtUsername.Text;
-                    user.LUB = UserSession.GetUser.UserName;
-                    user.LUN = ++_user.LUN;
-
-                    bool isUpdated = _userBLL.Add(user);
-
-                    if (isUpdated)
+                    if (CheckTextbox())
                     {
-                        MessageBox.Show($"User: {user.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        User user = new User();
+
+                        user.UserID = int.Parse(txtID.Text);
+                        user.FirstName = txtFirstName.Text;
+                        user.LastName = txtLastName.Text;
+                        user.ExpiresDate = dtpExpireDate.Value;
+                        user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
+                        user.UserName = txtUsername.Text;
+                        user.LUB = UserSession.GetUser.UserName;
+                        user.LUN = ++_user.LUN;
+
+                        bool isUpdated = _userBLL.Add(user);
+
+                        if (isUpdated)
+                        {
+                            MessageBox.Show($"User: {user.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -103,6 +113,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             this.Close();
         }
 
+        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);

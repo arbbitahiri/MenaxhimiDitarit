@@ -42,7 +42,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MyTopics = _topicBLL.GetAll();
 
-            CostumizeDesign();
+            GetAll();
         }
 
         public TopicCreate(Topic topic)
@@ -55,14 +55,15 @@ namespace MenaxhimiDitarit.TeacherForms
 
             _topics = topic;
 
-            CostumizeDesign();
+            GetAll();
 
             update = _topics != null;
 
             PopulateForm(topic);
         }
 
-        private void CostumizeDesign()
+        #region Metodat
+        private void GetAll()
         {
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
@@ -74,6 +75,7 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
+        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(Topic topic)
         {
             txtID.Text = topic.TopicID.ToString();
@@ -84,6 +86,7 @@ namespace MenaxhimiDitarit.TeacherForms
             txtContent.Text = topic.Content;
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -95,6 +98,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             return true;
         }
+        #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -118,6 +122,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     else if (update)
                         topic.LUN = ++_topics.LUN;
 
+                    //Shikojme nese Tema per klasen, lenden, oren dhe diten ekziston ne Orar
                     var checkSchedule = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                     && t.Day == dtpSelectDate.Value.ToString("dddd")).ToList();
@@ -126,6 +131,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     {
                         if (!update)
                         {
+                            //Shikojme nese Tema eshte shkruar me pare
                             var checkTopic = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                             && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                             && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
@@ -166,7 +172,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -201,6 +201,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "userID", model.UserID);
                         DataConnection.AddParameter(command, "userpass", model.UserPassword);
                         DataConnection.AddParameter(command, "ispasswordchanged", model.IsPasswordChanged);
+                        DataConnection.AddParameter(command, "lastpasswordchangedate", model.LastPasswordChangeDate);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
 

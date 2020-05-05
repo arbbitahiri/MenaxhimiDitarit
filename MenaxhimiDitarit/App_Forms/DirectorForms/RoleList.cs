@@ -28,6 +28,7 @@ namespace MenaxhimiDitarit.DirectorForms
             MyRoles = _rolesBLL.GetAll();
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyRoles = _rolesBLL.GetAll();
@@ -49,21 +50,31 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (_rolesBLL != null)
+            try
             {
-                if (dgvRoleList.SelectedRows.Count > 0)
+                if (_rolesBLL != null)
                 {
-                    var findRole = MyRoles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
+                    if (dgvRoleList.SelectedRows.Count > 0)
+                    {
+                        //Shikojme nese teksti i shkruar ne TextBox eshte RoleName
+                        var findRole = MyRoles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
 
-                    dgvRoleList.DataSource = findRole;
+                        dgvRoleList.DataSource = findRole;
+                    }
+                    else
+                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Role does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            else
-                MessageBox.Show("Role does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void txtSearchUser_KeyDown(object sender, KeyEventArgs e)
@@ -73,33 +84,3 @@ namespace MenaxhimiDitarit.DirectorForms
         }
     }
 }
-
-
-
-
-
-
-
-
-//private Role GetRole(GridViewRowInfo roleRow)
-//{
-//    try
-//    {
-//        Role role = new Role
-//        {
-//            RoleID = (int)roleRow.Cells[0].Value,
-//            RoleName = (string)roleRow.Cells[1].Value,
-//            InsertBy = (string)roleRow.Cells[2].Value,
-//            InsertDate = (DateTime)roleRow.Cells[3].Value,
-//            LUB = (string)roleRow.Cells[4].Value,
-//            LUD = (DateTime)roleRow.Cells[5].Value,
-//            LUN = (int)roleRow.Cells[6].Value
-//        };
-
-//        return role;
-//    }
-//    catch (Exception)
-//    {
-//        return null;
-//    }
-//}

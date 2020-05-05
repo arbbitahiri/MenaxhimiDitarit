@@ -56,18 +56,23 @@ namespace MenaxhimiDitarit.AdminForms
             PopulateForm(_schedule);
         }
 
+        #region Metodat
         private void GetAll()
         {
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
             MySchedules = _scheduleBLL.GetAll();
 
+            txtYear.Text = DateTime.Now.Year.ToString();
+
             txtID.Enabled = false;
             txtYear.Enabled = false;
+
             cmbSelectSubject.DataSource = MySubjects;
             cmbSelectClass.DataSource = MyClasses;
         }
 
+        //Popullimi i TextBox-it dhe ComboBox-ave me te dhenat nga ClassSchedule
         private void PopulateForm(ClassSchedule schedule)
         {
             txtID.Text = schedule.ScheduleID.ToString();
@@ -77,6 +82,7 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectDate.SelectedItem = schedule.Day;
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls)
@@ -90,74 +96,76 @@ namespace MenaxhimiDitarit.AdminForms
             }
             return true;
         }
+        #endregion
 
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
+            try
             {
-                ClassSchedule schedule = new ClassSchedule();
-
-                schedule.ScheduleID = int.Parse(txtID.Text);
-                schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                schedule.Day = cmbSelectDate.SelectedItem.ToString();
-                schedule.Year = int.Parse(txtYear.Text);
-                schedule.InsertBy = UserSession.GetUser.UserName;
-                schedule.LUB = UserSession.GetUser.UserName;
-
-                if (!update)
-                    schedule.LUN++;
-                else if (update)
-                    schedule.LUN = ++_schedule.LUN;
-
-                if (!update)
+                if (CheckTextbox())
                 {
-                    var temp = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                    && f.Day == cmbSelectDate.SelectedItem.ToString() && f.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
+                    ClassSchedule schedule = new ClassSchedule();
 
-                    if (temp.Count > 0)
-                        MessageBox.Show("Schedule exists in that period!", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    schedule.ScheduleID = int.Parse(txtID.Text);
+                    schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
+                    schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
+                    schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
+                    schedule.Day = cmbSelectDate.SelectedItem.ToString();
+                    schedule.Year = int.Parse(txtYear.Text);
+                    schedule.InsertBy = UserSession.GetUser.UserName;
+                    schedule.LUB = UserSession.GetUser.UserName;
+
+                    if (!update)
+                        schedule.LUN++;
+                    else if (update)
+                        schedule.LUN = ++_schedule.LUN;
+
+                    if (!update)
+                    {
+                        //Shikojme nese ekziton orari i till
+                        var temp = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && f.Day == cmbSelectDate.SelectedItem.ToString() && f.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
+
+                        if (temp.Count > 0)
+                            MessageBox.Show("Schedule exists in that period!", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        else
+                        {
+                            bool isRegistred = _scheduleBLL.Add(schedule);
+
+                            if (isRegistred)
+                            {
+                                MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                     else
                     {
-                        bool isRegistred = _scheduleBLL.Add(schedule);
+                        bool isUpdated = _scheduleBLL.Add(schedule);
 
-                        if (isRegistred)
+                        if (isUpdated)
                         {
-                            MessageBox.Show("Schedule registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Schedule updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
-                {
-                    bool isUpdated = _scheduleBLL.Add(schedule);
-
-                    if (isUpdated)
-                    {
-                        MessageBox.Show("Schedule updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    MessageBox.Show("Plesae fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Plesae fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char c = e.KeyChar;
-            if (!Char.IsDigit(c) && c != 8)
-                e.Handled = true;
         }
     }
 }

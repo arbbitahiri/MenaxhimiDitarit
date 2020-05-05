@@ -18,9 +18,6 @@ namespace MenaxhimiDitarit
         private readonly SubjectBLL _subjectBLL;
         private List<Subject> MySubjects;
 
-        private readonly TeacherBLL _teacherBLL;
-        private List<Teacher> MyTeachers;
-
         public SubjectList()
         {
             InitializeComponent();
@@ -28,17 +25,16 @@ namespace MenaxhimiDitarit
             dgvSubjectList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _subjectBLL = new SubjectBLL();
-            _teacherBLL = new TeacherBLL();
-
-            MyTeachers = _teacherBLL.GetAll();
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MySubjects = _subjectBLL.GetAll();
             dgvSubjectList.DataSource = MySubjects;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private Subject GetSubject(GridViewRowInfo subjectRow)
         {
             try
@@ -61,7 +57,7 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -81,6 +77,7 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearchSubject_Click(object sender, EventArgs e)
         {
             try
@@ -89,8 +86,10 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchSubject.Text.Trim().Length > 0)
                     {
-                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text) || f.Teacher.FirstName.Contains(txtSearchSubject.Text)
-                         || f.Teacher.LastName.Contains(txtSearchSubject.Text) || f.Teacher.FullName.Contains(txtSearchSubject.Text)).ToList();
+                        //Shikojme nese teksti i shkruar ne TextBox eshte emri i lendes apo emri i arsimtarit
+                        var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text)
+                        || f.Teacher.FirstName.Contains(txtSearchSubject.Text) || f.Teacher.LastName.Contains(txtSearchSubject.Text)
+                        || f.Teacher.FullName.Contains(txtSearchSubject.Text)).ToList();
 
                         dgvSubjectList.DataSource = findSubject;
                     }
@@ -103,10 +102,11 @@ namespace MenaxhimiDitarit
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"A problem occured while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvSubjectList.SelectedRows.Count > 0)
@@ -126,6 +126,7 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvSubjectList.SelectedRows.Count > 0)
@@ -148,6 +149,7 @@ namespace MenaxhimiDitarit
                     }
                 }
             }
+            RefreshList();
         }
 
         private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)

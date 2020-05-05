@@ -16,14 +16,12 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
     {
         private readonly UserBLL _userBLL;
         private User _user;
-        private List<User> MyUsers;
 
         public UserUpdatePassword(User user)
         {
             InitializeComponent();
 
             _userBLL = new UserBLL();
-            MyUsers = _userBLL.GetAll();
 
             _user = user;
 
@@ -35,12 +33,15 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
+        #region Metodat
+        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
             txtUsername.Text = user.UserName;
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls)
@@ -54,7 +55,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             return true;
         }
+        #endregion
 
+        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
@@ -71,28 +74,35 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox())
+            try
             {
-                User user = new User();
-
-                user.UserID = int.Parse(txtID.Text);
-                user.UserPassword = txtPassword.Text;
-                user.LUB = UserSession.GetUser.UserName;
-                user.LUN = ++_user.LUN;
-                user.IsPasswordChanged = true;
-
-                bool isUpdated = _userBLL.Update(user);
-
-                if (isUpdated)
+                if (CheckTextbox())
                 {
-                    MessageBox.Show("Password changed successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    User user = new User();
+
+                    user.UserID = int.Parse(txtID.Text);
+                    user.UserPassword = txtPassword.Text;
+                    user.LUB = UserSession.GetUser.UserName;
+                    user.LUN = ++_user.LUN;
+                    user.IsPasswordChanged = true;
+
+                    bool isUpdated = _userBLL.Update(user);
+
+                    if (isUpdated)
+                    {
+                        MessageBox.Show("Password changed successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else
+                        MessageBox.Show("Update failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Update failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -100,6 +110,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             this.Close();
         }
 
+        //Ndrojme foton varesisht a jane a eshte ConfirmPass = Password
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == txtConfirmPass.Text)

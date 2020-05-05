@@ -20,13 +20,15 @@ namespace MenaxhimiDitarit.TeacherForms
             CustomizeDesign();
         }
 
-        #region Methods for Panels
+        #region Methodat per Panel-et
+        //Nuk i shfaqim Panel-et e Side Menus
         private void CustomizeDesign() {
             pnlTopics.Visible = false;
             pnlAbsences.Visible = false;
             pnlComments.Visible = false;
         }
 
+        //Fshehim Panelin pasi te klkojm ne njerin nga Button-at qe jane ne Panel
         private void HideSubMenu() {
             if (pnlTopics.Visible == true)
                 pnlTopics.Visible = false;
@@ -38,6 +40,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 pnlComments.Visible = false;
         }
 
+        //Shfaqim Panel-in ne Side Menu
         private void ShowSubMenu(Panel subMenu) {
             if (subMenu.Visible == false) {
                 HideSubMenu();
@@ -47,6 +50,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 subMenu.Visible = false;
         }
 
+        //Hapim format ne Panel-in kryesor
         private void OpenChildForm(Form childForm) {
             if (activeForm != null)
                 activeForm.Close();

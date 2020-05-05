@@ -16,7 +16,6 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
 {
     public partial class ClassScheduler : Form
     {
-        private readonly ClassBLL _classBLL;
         private Class _class;
 
         private readonly SubjectBLL _subjectBLL;
@@ -29,7 +28,6 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
         {
             InitializeComponent();
 
-            _classBLL = new ClassBLL();
             _subjectBLL = new SubjectBLL();
             _scheduleBLL = new ClassScheduleBLL();
 
@@ -52,6 +50,7 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
             }
         }
 
+        //Popullimi i TextBox-ave me te dhenat nga Class
         private void PopulateForm(Class classes)
         {
             txtMonday1.Text = GetDayTime(classes, "Monday", 1); txtTuesday1.Text = GetDayTime(classes, "Tuesday", 1); txtWednesday1.Text = GetDayTime(classes, "Wednesday", 1);
@@ -70,6 +69,7 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
 
         }
 
+        //Marrim emrin e lendes varesisht nga te dhenat e klases, diten dhe oren
         private string GetDayTime(Class classes, string day, int time)
         {
             foreach (var subject in MySubjects)

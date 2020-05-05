@@ -21,6 +21,7 @@ namespace MenaxhimiDitarit
             InitializeComponent();
 
             txtPassword.UseSystemPasswordChar = true;
+            btnLogin.Enabled = false;
         }
 
         private void txtUsername_Click(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace MenaxhimiDitarit
             Application.Exit();
         }
 
+        //Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -68,7 +70,7 @@ namespace MenaxhimiDitarit
                             teacherForm.StartPosition = FormStartPosition.CenterScreen;
                             teacherForm.ShowDialog();
                         }
-                        else if (user.RoleID == 3)
+                        else if (user.RoleID == 4)
                         {
                             DirectorMain directorForm = new DirectorMain();
                             this.Hide();
@@ -88,6 +90,7 @@ namespace MenaxhimiDitarit
                 MessageBox.Show("Please fill your credentials!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
@@ -96,10 +99,19 @@ namespace MenaxhimiDitarit
                 txtPassword.UseSystemPasswordChar = true;
         }
 
+
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 btnLogin_Click(this, new EventArgs());
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "")
+                btnLogin.Enabled = true;
+            else
+                btnLogin.Enabled = false;
         }
     }
 }

@@ -25,12 +25,14 @@ namespace MenaxhimiDitarit.DirectorForms
             _teacherBLL = new TeacherBLL();
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
             dgvTeacherListD.DataSource = MyTeachers;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
         {
             try
@@ -55,8 +57,9 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 return teacher;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -76,23 +79,34 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearchTeachers_Click(object sender, EventArgs e)
         {
-            if (_teacherBLL != null)
+            try
             {
-                if (txtSearchName.Text.Trim().Length > 0)
+                if (_teacherBLL != null)
                 {
-                    var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text) || f.LastName.Contains(txtSearchName.Text)).ToList();
+                    if (txtSearchName.Text.Trim().Length > 0)
+                    {
+                        //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName
+                        var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text)
+                        || f.LastName.Contains(txtSearchName.Text)).ToList();
 
-                    dgvTeacherListD.DataSource = findTeacher;
+                        dgvTeacherListD.DataSource = findTeacher;
+                    }
+                    else
+                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvTeacherListD.SelectedRows.Count > 0)
@@ -112,6 +126,7 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvTeacherListD.SelectedRows.Count > 0)
@@ -134,6 +149,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void txtSearchName_KeyDown(object sender, KeyEventArgs e)

@@ -27,12 +27,14 @@ namespace MenaxhimiDitarit.AdminForms
             _roomBLL = new RoomBLL();
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyRooms = _roomBLL.GetAll();
             dgvRoomList.DataSource = MyRooms;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private Room GetRoom(GridViewRowInfo roomRow)
         {
             try
@@ -51,8 +53,9 @@ namespace MenaxhimiDitarit.AdminForms
 
                 return room;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -72,23 +75,33 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearchSubject_Click(object sender, EventArgs e)
         {
-            if (_roomBLL != null)
+            try
             {
-                if (txtSearchSubject.Text.Trim().Length > 0)
+                if (_roomBLL != null)
                 {
-                    var findRoom = MyRooms.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
+                    if (txtSearchSubject.Text.Trim().Length > 0)
+                    {
+                        //Shikojme nese teksti i shkruar ne TextBox eshte RoomType
+                        var findRoom = MyRooms.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
 
-                    dgvRoomList.DataSource = findRoom;
+                        dgvRoomList.DataSource = findRoom;
+                    }
+                    else
+                        MessageBox.Show("Please write a room type!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a room type!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Room type does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Room type does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvRoomList.SelectedRows.Count > 0)
@@ -108,6 +121,7 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvRoomList.SelectedRows.Count > 0)
@@ -118,7 +132,7 @@ namespace MenaxhimiDitarit.AdminForms
                     var room = GetRoom(dgvRoomList.Rows[row]);
                     if (room != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {room.RoomID}. {room.RoomNo} - {room.RoomType}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+                        if (MessageBox.Show($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                             == DialogResult.OK)
                         {
                             _roomBLL.Remove(room.RoomID);
@@ -130,6 +144,7 @@ namespace MenaxhimiDitarit.AdminForms
                     }
                 }
             }
+            RefreshList();
         }
 
         private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)

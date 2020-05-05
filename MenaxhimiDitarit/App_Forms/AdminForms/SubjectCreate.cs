@@ -17,6 +17,7 @@ namespace MenaxhimiDitarit
         private readonly SubjectBLL _subjectBLL;
         private Subject _subject;
         private List<Subject> MySubjects;
+
         private readonly bool update = false;
 
         private readonly TeacherBLL _teacherBLL;
@@ -29,11 +30,7 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
-            MySubjects = _subjectBLL.GetAll();
-            MyTeachers = _teacherBLL.GetAll();
-
-            txtID.Enabled = false;
-            cmbTeacher.DataSource = MyTeachers;
+            CustomizeDesign();
 
             update = false;
         }
@@ -45,18 +42,28 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
             _teacherBLL = new TeacherBLL();
 
-            MyTeachers = _teacherBLL.GetAll();
-            cmbTeacher.DataSource = MyTeachers;
-
             _subject = subject;
 
             update = _subject != null;
-            PopulateForm(_subject);
 
-            txtID.Enabled = false;
             txtSubjectTitle.Enabled = false;
+
+            PopulateForm(_subject);
+            CustomizeDesign();
         }
 
+        #region Metodat
+        private void CustomizeDesign()
+        {
+            txtID.Enabled = false;
+
+            MySubjects = _subjectBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
+
+            cmbTeacher.DataSource = MyTeachers;
+        }
+
+        //Popullimi i TextBox-ave dhe ComboBox-it me te dhenat nga Subject
         private void PopulateForm(Subject subject)
         {
             txtID.Text = subject.SubjectID.ToString();
@@ -66,6 +73,7 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -77,54 +85,69 @@ namespace MenaxhimiDitarit
             }
             return true;
         }
+        #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (CheckTextbox()) {
-                Subject subject = new Subject();
+            try
+            {
+                if (CheckTextbox())
+                {
+                    Subject subject = new Subject();
 
-                subject.SubjectID = int.Parse(txtID.Text);
-                subject.SubjectTitle = txtSubjectTitle.Text;
-                subject.Book = txtSubjectBook.Text;
-                subject.Book_Author = txtBookAuthor.Text;
-                subject.InsertBy = UserSession.GetUser.UserName;
-                subject.LUB = UserSession.GetUser.UserName;
-                subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
+                    subject.SubjectID = int.Parse(txtID.Text);
+                    subject.SubjectTitle = txtSubjectTitle.Text;
+                    subject.Book = txtSubjectBook.Text;
+                    subject.Book_Author = txtBookAuthor.Text;
+                    subject.InsertBy = UserSession.GetUser.UserName;
+                    subject.LUB = UserSession.GetUser.UserName;
+                    subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
 
-                if (!update)
-                    subject.LUN++;
-                else if (update)
-                    subject.LUN = ++_subject.LUN;
+                    if (!update)
+                        subject.LUN++;
+                    else if (update)
+                        subject.LUN = ++_subject.LUN;
 
-                if (!update) {
-                    var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
+                    if (!update)
+                    {
+                        //Shikojme nese eksiston nje lend e till
+                        var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
-                    if (temp.Count > 0)
-                        MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else {
-                        bool isRegistred = _subjectBLL.Add(subject);
+                        if (temp.Count > 0)
+                            MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            bool isRegistred = _subjectBLL.Add(subject);
 
-                        if (isRegistred) {
-                            MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (isRegistred)
+                            {
+                                MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        bool isUpdated = _subjectBLL.Add(subject);
+
+                        if (isUpdated)
+                        {
+                            MessageBox.Show($"Subject: {subject.SubjectTitle} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else {
-                    bool isUpdated = _subjectBLL.Add(subject);
-
-                    if (isUpdated) {
-                        MessageBox.Show($"Subject: {subject.SubjectTitle} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                else
+                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

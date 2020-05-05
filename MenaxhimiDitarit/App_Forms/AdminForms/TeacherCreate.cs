@@ -30,8 +30,7 @@ namespace MenaxhimiDitarit
 
             update = false;
 
-            txtID.Enabled = false;
-            rbtnMale.Checked = true;
+            CostumizeDesign();
         }
 
         public TeacherCreate(Teacher teacher)
@@ -45,12 +44,17 @@ namespace MenaxhimiDitarit
             update = teacher != null;
 
             PopulateForm(_teacher);
+            CostumizeDesign();
+        }
 
+        #region Metodat
+        private void CostumizeDesign()
+        {
             txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 
-        #region Methods
+        //Popullimi i TextBox-ave dhe DateTimePicker me te dhenat nga Teacher
         private void PopulateForm(Teacher teacher)
         {
             txtID.Text = teacher.TeacherID.ToString();
@@ -63,6 +67,7 @@ namespace MenaxhimiDitarit
             txtPhoneNo.Text = teacher.PhoneNo;
         }
 
+        //Marrim tekstin te RadioButton-it
         private string GetSelectedRBTN()
         {
             foreach (Control ctrl in grbGender.Controls)
@@ -73,6 +78,7 @@ namespace MenaxhimiDitarit
             return null;
         }
 
+        //Marrim moshen
         private int GetAge(DateTime birthDate)
         {
             DateTime today = DateTime.Today;
@@ -82,6 +88,7 @@ namespace MenaxhimiDitarit
             return age;
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -94,6 +101,7 @@ namespace MenaxhimiDitarit
             return true;
         }
 
+        //Shikojme nese Email esht valid
         private bool CheckEmail(string reg, TextBox textBox)
         {
             Regex regex = new Regex(reg);
@@ -107,73 +115,98 @@ namespace MenaxhimiDitarit
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            bool isEmail = CheckEmail(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+            try
+            {
+                bool isEmail = CheckEmail(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
 
-            if (isEmail && CheckTextbox()) {
-                Teacher teacher = new Teacher();
+                if (!isEmail)
+                    MessageBox.Show("The email you entered is not valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    if (CheckTextbox())
+                    {
+                        Teacher teacher = new Teacher();
 
-                teacher.TeacherID = int.Parse(txtID.Text);
-                teacher.FirstName = txtFirstName.Text;
-                teacher.LastName = txtLastName.Text;
-                teacher.Gender = GetSelectedRBTN();
-                teacher.City = txtCity.Text;
-                teacher.Qualification = txtQualification.Text;
-                teacher.DayofBirth = dtpBirthday.Value.Date;
-                teacher.Email = txtEmail.Text;
-                teacher.PhoneNo = txtPhoneNo.Text;
-                teacher.InsertBy = UserSession.GetUser.UserName;
-                teacher.LUB = UserSession.GetUser.UserName;
+                        teacher.TeacherID = int.Parse(txtID.Text);
+                        teacher.FirstName = txtFirstName.Text;
+                        teacher.LastName = txtLastName.Text;
+                        teacher.Gender = GetSelectedRBTN();
+                        teacher.City = txtCity.Text;
+                        teacher.Qualification = txtQualification.Text;
+                        teacher.DayofBirth = dtpBirthday.Value.Date;
+                        teacher.Email = txtEmail.Text;
+                        teacher.PhoneNo = txtPhoneNo.Text;
+                        teacher.InsertBy = UserSession.GetUser.UserName;
+                        teacher.LUB = UserSession.GetUser.UserName;
 
-                if (!update)
-                    teacher.LUN++;
-                else if (update)
-                    teacher.LUN = ++_teacher.LUN;
+                        if (!update)
+                            teacher.LUN++;
+                        else if (update)
+                            teacher.LUN = ++_teacher.LUN;
 
-                if (!update) {
-                    var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
+                        if (!update)
+                        {
+                            //Shikojme nese ekziston nje Emer i tille
+                            var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
 
-                    if (temp.Count > 0) {
-                        if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
-                            "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
-                            teacher = null;
-                            update = false;
-                            txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = ""; txtPhoneNo.Text = ""; txtQualification.Text = "";
+                            if (temp.Count > 0)
+                            {
+                                if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
+                                    "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                {
+                                    teacher = null;
+                                    update = false;
+                                    txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = "";
+                                    txtPhoneNo.Text = ""; txtQualification.Text = "";
+                                }
+                                else
+                                {
+                                    bool isRegistred = _teacherBLL.Add(teacher);
+
+                                    if (isRegistred)
+                                    {
+                                        MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Close();
+                                    }
+                                    else
+                                        MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                bool isRegistred = _teacherBLL.Add(teacher);
+
+                                if (isRegistred)
+                                {
+                                    MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        else {
-                            bool isRegistred = _teacherBLL.Add(teacher);
+                        else
+                        {
+                            bool isUpdated = _teacherBLL.Add(teacher);
 
-                            if (isRegistred) {
-                                MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (isUpdated)
+                            {
+                                MessageBox.Show($"Teacher: {teacher.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                    }
-                    else {
-                        bool isRegistred = _teacherBLL.Add(teacher);
-
-                        if (isRegistred) {
-                            MessageBox.Show($"Teacher {teacher.FullName} registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else {
-                    bool isUpdated = _teacherBLL.Add(teacher);
-
-                    if (isUpdated) {
-                        MessageBox.Show($"Teacher: {teacher.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
                     }
                     else
-                        MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
             }
-            else
-                MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

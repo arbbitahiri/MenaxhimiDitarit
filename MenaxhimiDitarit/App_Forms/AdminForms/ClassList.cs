@@ -29,12 +29,14 @@ namespace MenaxhimiDitarit
             _classBLL = new ClassBLL();
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyClasses = _classBLL.GetAll();
             dgvClassesList.DataSource = MyClasses;
         }
 
+        //Mirren te dhenat nga rreshti i klikua
         private Class GetClass(GridViewRowInfo classRow)
         {
             try
@@ -54,8 +56,9 @@ namespace MenaxhimiDitarit
 
                 return classes;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -70,23 +73,33 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (_classBLL != null)
+            try
             {
-                if (txtSearchClass.Text.Trim().Length > 0)
+                if (_classBLL != null)
                 {
-                    var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
+                    if (txtSearchClass.Text.Trim().Length > 0)
+                    {
+                        //Shikojme nese teksti i shkruar ne TextBox eshte ClassNo
+                        var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
 
-                    dgvClassesList.DataSource = findClass;
+                        dgvClassesList.DataSource = findClass;
+                    }
+                    else
+                        MessageBox.Show("Please write a class number!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please write a class number!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Class number does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Class number does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvClassesList.SelectedRows.Count > 0)
@@ -106,6 +119,7 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvClassesList.SelectedRows.Count > 0)
@@ -130,6 +144,7 @@ namespace MenaxhimiDitarit
             }
         }
 
+        //Shikojme orarin per klasen e krijuar ne DataGrid
         private void viewScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvClassesList.SelectedRows.Count > 0)
@@ -157,6 +172,14 @@ namespace MenaxhimiDitarit
         {
             if (e.KeyCode == Keys.Enter)
                 btnSearch_Click(this, new EventArgs());
+        }
+
+        //Lejon qe ne TextBox te shkruhet vetem numer dhe te mund te fshihet
+        private void txtSearchClass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (!Char.IsDigit(c) && c != 8)
+                e.Handled = true;
         }
     }
 }

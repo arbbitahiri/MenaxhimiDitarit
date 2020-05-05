@@ -93,6 +93,7 @@
             this.txtSearchClass.Text = "Search by Class No";
             this.txtSearchClass.Click += new System.EventHandler(this.txtSearchClass_Click);
             this.txtSearchClass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchClass_KeyDown);
+            this.txtSearchClass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchClass_KeyPress);
             // 
             // panel4
             // 

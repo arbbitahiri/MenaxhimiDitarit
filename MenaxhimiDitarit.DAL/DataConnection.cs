@@ -13,18 +13,6 @@ namespace MenaxhimiDitarit.DAL
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["ditariConnStr"].ConnectionString;
 
-        public static string ConnectionString
-        {
-            get
-            {
-                return connectionString != "" ? connectionString : ConfigurationManager.ConnectionStrings["connStr"].ConnectionString;
-            }
-            set
-            {
-                connectionString = ConfigurationManager.ConnectionStrings[value].ConnectionString;
-            }
-        }
-
         public static SqlConnection GetConnection()
         {
             try

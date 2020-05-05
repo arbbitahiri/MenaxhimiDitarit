@@ -41,12 +41,14 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyTopics = _topicBLL.GetAll();
             dgvTopicList.DataSource = MyTopics;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private Topic GetTopic(GridViewRowInfo topicRow)
         {
             try
@@ -68,8 +70,9 @@ namespace MenaxhimiDitarit.TeacherForms
 
                 return topic;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
@@ -84,23 +87,33 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (_topicBLL != null)
+            try
             {
-                if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
+                if (_topicBLL != null)
                 {
-                    var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
+                    if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
+                    {
+                        var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
+                        && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
 
-                    dgvTopicList.DataSource = findTopic;
+                        dgvTopicList.DataSource = findTopic;
+                    }
+                    else
+                        MessageBox.Show("Please select a class, a subject and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please select a class, a subject and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Topic does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
-                MessageBox.Show("Topic does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvTopicList.SelectedRows.Count > 0)
@@ -120,6 +133,7 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvTopicList.SelectedRows.Count > 0)
@@ -142,6 +156,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                 }
             }
+            RefreshList();
         }
     }
 }

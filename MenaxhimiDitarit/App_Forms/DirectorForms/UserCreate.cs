@@ -18,7 +18,7 @@ namespace MenaxhimiDitarit.DirectorForms
         private List<User> MyUsers;
 
         private readonly RoleBLL _roleBLL;
-        private readonly List<Role> MyRoles;
+        private List<Role> MyRoles;
 
         public UserCreate()
         {
@@ -37,6 +37,7 @@ namespace MenaxhimiDitarit.DirectorForms
             txtConfirmPass.UseSystemPasswordChar = true;
         }
 
+        //Shikojme nese TextBox-at jane te mbushur me te dhena
         private bool CheckTextbox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -49,6 +50,7 @@ namespace MenaxhimiDitarit.DirectorForms
             return true;
         }
 
+        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked) {
@@ -63,46 +65,54 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
-
-            if (expireDate < DateTime.Now)
-                MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            else
+            try
             {
-                if (CheckTextbox())
-                {
-                    User user = new User();
+                DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
-                    user.UserID = int.Parse(txtID.Text);
-                    user.FirstName = txtFirstName.Text;
-                    user.LastName = txtLastName.Text;
-                    user.ExpiresDate = dtpExpireDate.Value;
-                    user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
-                    user.UserName = txtUsername.Text;
-                    user.UserPassword = txtPassword.Text;
-                    user.InsertBy = UserSession.GetUser.UserName;
-                    user.LUB = UserSession.GetUser.UserName;
-                    user.LUN++;
-
-                    var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
-
-                    if (temp.Count > 0)
-                        MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    else
-                    {
-                        bool isRegistred = _userBLL.Add(user);
-
-                        if (isRegistred)
-                        {
-                            MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                if (expireDate < DateTime.Now)
+                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    if (CheckTextbox())
+                    {
+                        User user = new User();
+
+                        user.UserID = int.Parse(txtID.Text);
+                        user.FirstName = txtFirstName.Text;
+                        user.LastName = txtLastName.Text;
+                        user.ExpiresDate = dtpExpireDate.Value;
+                        user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
+                        user.UserName = txtUsername.Text;
+                        user.UserPassword = txtPassword.Text;
+                        user.InsertBy = UserSession.GetUser.UserName;
+                        user.LUB = UserSession.GetUser.UserName;
+                        user.LUN++;
+
+                        //Shikojme nese ekziston nje Username i till
+                        var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
+
+                        if (temp.Count > 0)
+                            MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else
+                        {
+                            bool isRegistred = _userBLL.Add(user);
+
+                            if (isRegistred)
+                            {
+                                MessageBox.Show("User registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
+                            else
+                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -119,6 +129,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
         }
 
+        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);

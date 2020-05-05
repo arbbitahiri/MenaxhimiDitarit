@@ -18,7 +18,6 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassScheduleBLL _scheduleBLL;
         private List<ClassSchedule> MySchedules;
 
-
         private readonly ClassBLL _classBLL;
         private readonly List<Class> MyClasses;
 
@@ -35,12 +34,14 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
+        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MySchedules = _scheduleBLL.GetAll();
             dgvScheduleList.DataSource = MySchedules;
         }
 
+        //Mirren te dhenat nga rreshti i klikuar
         private ClassSchedule GetSchedule(GridViewRowInfo classRow)
         {
             try
@@ -62,12 +63,14 @@ namespace MenaxhimiDitarit.AdminForms
 
                 return schedule;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return null;
             }
         }
 
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvScheduleList.SelectedRows.Count > 0)
@@ -87,6 +90,33 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        //Kerkojm te dhenat ne DataGrid
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_scheduleBLL != null)
+                {
+                    if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
+                    {
+                        var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && f.Day == cmbSelectDay.SelectedItem.ToString()).ToList();
+
+                        dgvScheduleList.DataSource = findSchedule;
+                    }
+                    else
+                        MessageBox.Show("Please select class and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                    MessageBox.Show("Schedule does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void ClassScheduletList_Load_1(object sender, EventArgs e)
         {
             RefreshList();
@@ -95,23 +125,6 @@ namespace MenaxhimiDitarit.AdminForms
         private void btnViewAll_Click_1(object sender, EventArgs e)
         {
             RefreshList();
-        }
-
-        private void btnSearch_Click_1(object sender, EventArgs e)
-        {
-            if (_scheduleBLL != null)
-            {
-                if (cmbSelectClass.SelectedIndex != -1 && cmbSelectDay.SelectedIndex != -1)
-                {
-                    var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Day == cmbSelectDay.SelectedItem.ToString()).ToList();
-
-                    dgvScheduleList.DataSource = findSchedule;
-                }
-                else
-                    MessageBox.Show("Please select class and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-                MessageBox.Show("Schedule does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

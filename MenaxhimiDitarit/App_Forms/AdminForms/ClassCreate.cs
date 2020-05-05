@@ -34,13 +34,9 @@ namespace MenaxhimiDitarit.AdminForms
             _teacherBLL = new TeacherBLL();
             _roomBLL = new RoomBLL();
 
-            MyTeachers = _teacherBLL.GetAll();
-            MyRooms = _roomBLL.GetAll();
             MyClass = _classBLL.GetAll();
 
-            txtID.Enabled = false;
-            cmbMainTeacher.DataSource = MyTeachers;
-            cmbSelectRoom.DataSource = MyRooms;
+            GetAll();
 
             update = false;
         }
@@ -55,18 +51,26 @@ namespace MenaxhimiDitarit.AdminForms
 
             _class = classes;
 
-            MyTeachers = _teacherBLL.GetAll();
-            MyRooms = _roomBLL.GetAll();
-
-            cmbMainTeacher.DataSource = MyTeachers;
-            cmbSelectRoom.DataSource = MyRooms;
-            txtID.Enabled = false;
             cmbSelectClass.Enabled = false;
 
             update = _class != null;
+
             PopulateForm(_class);
+            GetAll();
         }
 
+        #region Metodat
+        private void GetAll()
+        {
+            MyTeachers = _teacherBLL.GetAll();
+            MyRooms = _roomBLL.GetAll();
+
+            txtID.Enabled = false;
+            cmbMainTeacher.DataSource = MyTeachers;
+            cmbSelectRoom.DataSource = MyRooms;
+        }
+
+        //Popullimi i TextBox-it dhe ComboBox-ave me te dhenat nga Class
         private void PopulateForm(Class classes)
         {
             txtID.Text = classes.ClassID.ToString();
@@ -75,6 +79,7 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectRoom.SelectedItem = MyRooms.FirstOrDefault(f => f.RoomID == classes.RoomID);
         }
 
+        //Shikojme nese eshte selektuar e dhena ne ComboBox
         private bool CheckComboBox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -86,6 +91,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             return false;
         }
+        #endregion
 
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
@@ -145,7 +151,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"There has been a problem.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"A problem occured while registering data.\n{ex.Message}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
