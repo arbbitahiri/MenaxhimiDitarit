@@ -147,9 +147,9 @@ namespace MenaxhimiDitarit
                         if (!update)
                         {
                             //Shikojme nese ekziston nje Emer i tille
-                            var temp = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
+                            var checkTeacher = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
 
-                            if (temp.Count > 0)
+                            if (checkTeacher.Count > 0)
                             {
                                 if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
                                     "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)

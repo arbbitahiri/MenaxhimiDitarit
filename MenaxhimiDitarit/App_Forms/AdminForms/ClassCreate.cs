@@ -115,9 +115,9 @@ namespace MenaxhimiDitarit.AdminForms
 
                     if (!update)
                     {
-                        var temp = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
+                        var checkClasses = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
-                        if (temp.Count > 0)
+                        if (checkClasses.Count > 0)
                             MessageBox.Show("Class exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {

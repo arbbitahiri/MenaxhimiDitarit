@@ -123,10 +123,10 @@ namespace MenaxhimiDitarit.AdminForms
                     if (!update)
                     {
                         //Shikojme nese ekziton orari i till
-                        var temp = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                        && f.Day == cmbSelectDate.SelectedItem.ToString() && f.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
+                        var checkSchedules = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && t.Day == cmbSelectDate.SelectedItem.ToString() && t.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
 
-                        if (temp.Count > 0)
+                        if (checkSchedules.Count > 0)
                             MessageBox.Show("Schedule exists in that period!", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         else
                         {

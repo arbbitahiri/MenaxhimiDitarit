@@ -117,8 +117,10 @@ namespace MenaxhimiDitarit
                     var subject = GetSubject(dgvSubjectList.Rows[row]);
                     if (subject != null)
                     {
-                        SubjectCreate subjectUpdate = new SubjectCreate(subject);
-                        subjectUpdate.StartPosition = FormStartPosition.CenterParent;
+                        SubjectCreate subjectUpdate = new SubjectCreate(subject)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         subjectUpdate.ShowDialog();
                     }
                 }

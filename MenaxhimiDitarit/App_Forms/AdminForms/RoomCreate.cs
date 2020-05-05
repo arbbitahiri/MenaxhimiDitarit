@@ -88,9 +88,9 @@ namespace MenaxhimiDitarit
 
                     if (!update)
                     {
-                        var temp = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
+                        var checkRooms = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
 
-                        if (temp.Count > 0)
+                        if (checkRooms.Count > 0)
                             MessageBox.Show("Room exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {

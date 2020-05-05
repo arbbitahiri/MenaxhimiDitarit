@@ -124,8 +124,10 @@ namespace MenaxhimiDitarit.TeacherForms
                     var topic = GetTopic(dgvTopicList.Rows[row]);
                     if (topic != null)
                     {
-                        TopicCreate updateTopic = new TopicCreate(topic);
-                        updateTopic.StartPosition = FormStartPosition.CenterParent;
+                        TopicCreate updateTopic = new TopicCreate(topic)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         updateTopic.ShowDialog();
                     }
                 }

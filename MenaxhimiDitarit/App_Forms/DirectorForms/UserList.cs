@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using MenaxhimiDitarit.App_Forms.DirectorForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
-using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
 namespace MenaxhimiDitarit.DirectorForms
@@ -89,10 +88,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     if (txtSearchUserByNU.Text.Trim().Length > 0)
                     {
                         //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName
-                        var findUsersByNU = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text)
+                        var findUsers = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text)
                         || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
 
-                        dgvUserList.DataSource = findUsersByNU;
+                        dgvUserList.DataSource = findUsers;
                     }
                     else
                         MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -117,8 +116,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
                     {
-                        UserUpdate userUpdate = new UserUpdate(user);
-                        userUpdate.StartPosition = FormStartPosition.CenterParent;
+                        UserUpdate userUpdate = new UserUpdate(user)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         userUpdate.ShowDialog();
                     }
                 }
@@ -167,7 +168,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
-                        MessageBox.Show($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}", "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

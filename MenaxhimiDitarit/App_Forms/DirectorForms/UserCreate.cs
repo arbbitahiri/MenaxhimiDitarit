@@ -89,9 +89,9 @@ namespace MenaxhimiDitarit.DirectorForms
                         user.LUN++;
 
                         //Shikojme nese ekziston nje Username i till
-                        var temp = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
+                        var checkUsers = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
-                        if (temp.Count > 0)
+                        if (checkUsers.Count > 0)
                             MessageBox.Show("Username exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {

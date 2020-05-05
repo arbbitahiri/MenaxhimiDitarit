@@ -111,9 +111,9 @@ namespace MenaxhimiDitarit
                     if (!update)
                     {
                         //Shikojme nese eksiston nje lend e till
-                        var temp = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
+                        var checkSubjects = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
-                        if (temp.Count > 0)
+                        if (checkSubjects.Count > 0)
                             MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
