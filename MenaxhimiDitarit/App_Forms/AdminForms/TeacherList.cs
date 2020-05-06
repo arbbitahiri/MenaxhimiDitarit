@@ -119,8 +119,10 @@ namespace MenaxhimiDitarit
                     var teacher = GetTeacher(dgvTeacherList.Rows[row]);
                     if (teacher != null)
                     {
-                        TeacherCreate teacherUpdate = new TeacherCreate(teacher);
-                        teacherUpdate.StartPosition = FormStartPosition.CenterParent;
+                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         teacherUpdate.ShowDialog();
                     }
                 }

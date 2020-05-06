@@ -153,6 +153,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             lblUsername.Text = UserSession.GetUser.UserName;
             lblWelcomeName.Text = UserSession.GetUser.FirstName;
+            lblDate.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)

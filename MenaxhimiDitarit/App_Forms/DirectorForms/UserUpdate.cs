@@ -112,7 +112,14 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!CheckTextbox())
+            {
+                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
+                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
 
         //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar

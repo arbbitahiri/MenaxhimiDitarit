@@ -55,6 +55,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlComments.SuspendLayout();
@@ -424,6 +425,16 @@
             this.lblWelcome.TabIndex = 8;
             this.lblWelcome.Text = "Welcome";
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(562, 566);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 16);
+            this.lblDate.TabIndex = 6;
+            // 
             // TeacherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +444,7 @@
             this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMain);
@@ -486,5 +498,6 @@
         private System.Windows.Forms.Label lblWelcomeName;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblSDM;
+        private System.Windows.Forms.Label lblDate;
     }
 }

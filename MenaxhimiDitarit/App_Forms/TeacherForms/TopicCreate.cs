@@ -184,7 +184,14 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!CheckTextbox())
+            {
+                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
+                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
     }
 }

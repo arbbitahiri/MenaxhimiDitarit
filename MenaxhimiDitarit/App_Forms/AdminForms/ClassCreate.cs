@@ -160,7 +160,14 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (cmbMainTeacher.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1 && cmbSelectRoom.SelectedIndex != -1)
+            {
+                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
+                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
     }
 }

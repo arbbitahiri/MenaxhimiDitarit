@@ -136,6 +136,7 @@ namespace MenaxhimiDitarit
                         teacher.DayofBirth = dtpBirthday.Value.Date;
                         teacher.Email = txtEmail.Text;
                         teacher.PhoneNo = txtPhoneNo.Text;
+
                         teacher.InsertBy = UserSession.GetUser.UserName;
                         teacher.LUB = UserSession.GetUser.UserName;
 
@@ -214,7 +215,14 @@ namespace MenaxhimiDitarit
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!CheckTextbox())
+            {
+                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
+                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
 
         private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)

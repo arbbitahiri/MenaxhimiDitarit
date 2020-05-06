@@ -63,6 +63,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).BeginInit();
             this.pnlTeachers.SuspendLayout();
@@ -570,12 +571,23 @@
             this.lblWelcome.TabIndex = 4;
             this.lblWelcome.Text = "Welcome";
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(597, 566);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 16);
+            this.lblDate.TabIndex = 7;
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(1000, 585);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblWelcomeName);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblWelcome);
@@ -642,5 +654,6 @@
         private System.Windows.Forms.Button btnListSchedules;
         private System.Windows.Forms.Button btnSchedule;
         private System.Windows.Forms.Label lblSDM;
+        private System.Windows.Forms.Label lblDate;
     }
 }
