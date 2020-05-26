@@ -65,100 +65,68 @@
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(403, 394);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmit.TabIndex = 8;
-            this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(228, 394);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 9;
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblID
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblID, "lblID");
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(328, 130);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 16);
-            this.lblID.TabIndex = 65;
-            this.lblID.Text = "ID";
             // 
             // panel8
             // 
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(355, 151);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(181, 1);
-            this.panel8.TabIndex = 2;
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(355, 130);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 0;
-            this.txtID.Text = "-1";
             // 
             // lblRole
             // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblRole, "lblRole");
             this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(311, 250);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(37, 16);
-            this.lblRole.TabIndex = 70;
-            this.lblRole.Text = "Role";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(354, 277);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 1);
-            this.panel3.TabIndex = 69;
             // 
             // cmbRoles
             // 
+            resources.ApplyResources(this.cmbRoles, "cmbRoles");
             this.cmbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbRoles.DataSource = this.bsrcRole;
             this.cmbRoles.DisplayMember = "RoleName";
-            this.cmbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoles.ForeColor = System.Drawing.Color.White;
             this.cmbRoles.FormattingEnabled = true;
-            this.cmbRoles.Location = new System.Drawing.Point(354, 247);
             this.cmbRoles.Name = "cmbRoles";
-            this.cmbRoles.Size = new System.Drawing.Size(181, 24);
-            this.cmbRoles.TabIndex = 4;
             this.cmbRoles.ValueMember = "RoleID";
             // 
             // bsrcRole
@@ -167,216 +135,144 @@
             // 
             // txtFirstName
             // 
+            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
-            this.txtFirstName.Location = new System.Drawing.Point(355, 158);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(181, 15);
-            this.txtFirstName.TabIndex = 1;
             // 
             // txtLastName
             // 
+            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.White;
-            this.txtLastName.Location = new System.Drawing.Point(355, 186);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(181, 15);
-            this.txtLastName.TabIndex = 2;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(355, 179);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 1);
-            this.panel1.TabIndex = 60;
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(355, 207);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 1);
-            this.panel2.TabIndex = 59;
             // 
             // lblFirstName
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblFirstName, "lblFirstName");
             this.lblFirstName.ForeColor = System.Drawing.Color.White;
-            this.lblFirstName.Location = new System.Drawing.Point(276, 158);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(73, 16);
-            this.lblFirstName.TabIndex = 62;
-            this.lblFirstName.Text = "First Name";
             // 
             // lblLastName
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblLastName, "lblLastName");
             this.lblLastName.ForeColor = System.Drawing.Color.White;
-            this.lblLastName.Location = new System.Drawing.Point(276, 186);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(73, 16);
-            this.lblLastName.TabIndex = 61;
-            this.lblLastName.Text = "Last Name";
             // 
             // lblPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblPassword, "lblPassword");
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(281, 312);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(68, 16);
-            this.lblPassword.TabIndex = 76;
-            this.lblPassword.Text = "Password";
             // 
             // lblUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblUsername, "lblUsername");
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(278, 284);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(71, 16);
-            this.lblUsername.TabIndex = 77;
-            this.lblUsername.Text = "Username";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(355, 333);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 1);
-            this.panel4.TabIndex = 74;
             // 
             // panel5
             // 
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel5.Location = new System.Drawing.Point(355, 305);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(181, 1);
-            this.panel5.TabIndex = 75;
             // 
             // txtPassword
             // 
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(355, 312);
-            this.txtPassword.MaxLength = 10;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(181, 15);
-            this.txtPassword.TabIndex = 6;
             // 
             // txtUsername
             // 
+            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(355, 284);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(181, 15);
-            this.txtUsername.TabIndex = 5;
             // 
             // chbShowPassword
             // 
-            this.chbShowPassword.AutoSize = true;
-            this.chbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.chbShowPassword, "chbShowPassword");
             this.chbShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chbShowPassword.Location = new System.Drawing.Point(421, 368);
             this.chbShowPassword.Name = "chbShowPassword";
-            this.chbShowPassword.Size = new System.Drawing.Size(123, 20);
-            this.chbShowPassword.TabIndex = 9;
-            this.chbShowPassword.Text = "Show Password";
             this.chbShowPassword.UseVisualStyleBackColor = true;
             this.chbShowPassword.CheckedChanged += new System.EventHandler(this.chbShowPassword_CheckedChanged);
             // 
             // lblExpireDate
             // 
-            this.lblExpireDate.AutoSize = true;
-            this.lblExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblExpireDate, "lblExpireDate");
             this.lblExpireDate.ForeColor = System.Drawing.Color.White;
-            this.lblExpireDate.Location = new System.Drawing.Point(270, 219);
             this.lblExpireDate.Name = "lblExpireDate";
-            this.lblExpireDate.Size = new System.Drawing.Size(78, 16);
-            this.lblExpireDate.TabIndex = 80;
-            this.lblExpireDate.Text = "Expire Date";
             // 
             // panel6
             // 
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel6.Location = new System.Drawing.Point(354, 240);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(181, 1);
-            this.panel6.TabIndex = 79;
             // 
             // dtpExpireDate
             // 
-            this.dtpExpireDate.CustomFormat = "ddMMMMyyyy";
-            this.dtpExpireDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.dtpExpireDate, "dtpExpireDate");
             this.dtpExpireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpExpireDate.Location = new System.Drawing.Point(355, 214);
             this.dtpExpireDate.Name = "dtpExpireDate";
-            this.dtpExpireDate.Size = new System.Drawing.Size(180, 22);
-            this.dtpExpireDate.TabIndex = 3;
             this.dtpExpireDate.CloseUp += new System.EventHandler(this.dtpExpireDate_CloseUp);
             // 
             // lblConfirmPass
             // 
-            this.lblConfirmPass.AutoSize = true;
-            this.lblConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblConfirmPass, "lblConfirmPass");
             this.lblConfirmPass.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmPass.Location = new System.Drawing.Point(233, 340);
             this.lblConfirmPass.Name = "lblConfirmPass";
-            this.lblConfirmPass.Size = new System.Drawing.Size(116, 16);
-            this.lblConfirmPass.TabIndex = 83;
-            this.lblConfirmPass.Text = "Confirm Password";
             // 
             // panel7
             // 
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel7.Location = new System.Drawing.Point(355, 361);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(181, 1);
-            this.panel7.TabIndex = 82;
             // 
             // txtConfirmPass
             // 
+            resources.ApplyResources(this.txtConfirmPass, "txtConfirmPass");
             this.txtConfirmPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPass.ForeColor = System.Drawing.Color.White;
-            this.txtConfirmPass.Location = new System.Drawing.Point(355, 340);
-            this.txtConfirmPass.MaxLength = 10;
             this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.Size = new System.Drawing.Size(181, 15);
-            this.txtConfirmPass.TabIndex = 7;
             this.txtConfirmPass.TextChanged += new System.EventHandler(this.txtConfirmPass_TextChanged);
             // 
             // picValidatePassword
             // 
+            resources.ApplyResources(this.picValidatePassword, "picValidatePassword");
             this.picValidatePassword.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
-            this.picValidatePassword.Location = new System.Drawing.Point(542, 340);
             this.picValidatePassword.Name = "picValidatePassword";
-            this.picValidatePassword.Size = new System.Drawing.Size(20, 20);
-            this.picValidatePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picValidatePassword.TabIndex = 84;
             this.picValidatePassword.TabStop = false;
             // 
             // UserCreate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.picValidatePassword);
             this.Controls.Add(this.lblConfirmPass);
             this.Controls.Add(this.panel7);
@@ -406,9 +302,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserCreate";
-            this.Text = "Create User";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValidatePassword)).EndInit();
             this.ResumeLayout(false);

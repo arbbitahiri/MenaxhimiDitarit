@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleList));
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -37,7 +38,6 @@
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoleList));
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
@@ -61,26 +61,18 @@
             this.grbSearch.Controls.Add(this.pictureBox1);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.txtSearchUser);
-            this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.grbSearch, "grbSearch");
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(210, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(380, 111);
-            this.grbSearch.TabIndex = 0;
             this.grbSearch.TabStop = false;
-            this.grbSearch.Text = "Search Role";
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearch.Location = new System.Drawing.Point(241, 64);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 32);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -88,44 +80,32 @@
             // 
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnViewAll.FlatAppearance.BorderSize = 0;
-            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnViewAll, "btnViewAll");
             this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAll.Location = new System.Drawing.Point(19, 64);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
-            this.btnViewAll.TabIndex = 2;
-            this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = false;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAllRoles_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_search_25;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 25);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(49, 51);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 1);
-            this.panel1.TabIndex = 10;
             // 
             // txtSearchUser
             // 
             this.txtSearchUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSearchUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.txtSearchUser, "txtSearchUser");
             this.txtSearchUser.ForeColor = System.Drawing.Color.White;
-            this.txtSearchUser.Location = new System.Drawing.Point(49, 31);
             this.txtSearchUser.Name = "txtSearchUser";
-            this.txtSearchUser.Size = new System.Drawing.Size(312, 15);
-            this.txtSearchUser.TabIndex = 0;
-            this.txtSearchUser.Text = "Search by Role Name";
             this.txtSearchUser.Click += new System.EventHandler(this.txtSearchUser_Click);
             this.txtSearchUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchUser_KeyDown);
             // 
@@ -133,11 +113,8 @@
             // 
             this.dgvRoleList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.dgvRoleList.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvRoleList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvRoleList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            resources.ApplyResources(this.dgvRoleList, "dgvRoleList");
             this.dgvRoleList.ForeColor = System.Drawing.Color.White;
-            this.dgvRoleList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgvRoleList.Location = new System.Drawing.Point(0, 137);
             // 
             // 
             // 
@@ -147,42 +124,42 @@
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
             gridViewDecimalColumn1.FieldName = "RoleID";
-            gridViewDecimalColumn1.HeaderText = "RoleID";
+            resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
             gridViewDecimalColumn1.IsAutoGenerated = true;
             gridViewDecimalColumn1.Name = "RoleID";
             gridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDecimalColumn1.Width = 75;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "RoleName";
-            gridViewTextBoxColumn1.HeaderText = "Role Name";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
             gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "RoleName";
             gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn1.Width = 100;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "InsertBy";
-            gridViewTextBoxColumn2.HeaderText = "InsertBy";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
             gridViewTextBoxColumn2.IsAutoGenerated = true;
             gridViewTextBoxColumn2.Name = "InsertBy";
             gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn2.Width = 85;
             gridViewDateTimeColumn1.EnableExpressionEditor = false;
             gridViewDateTimeColumn1.FieldName = "InsertDate";
-            gridViewDateTimeColumn1.HeaderText = "InsertDate";
+            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
             gridViewDateTimeColumn1.IsAutoGenerated = true;
             gridViewDateTimeColumn1.Name = "InsertDate";
             gridViewDateTimeColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDateTimeColumn1.Width = 170;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.FieldName = "LUB";
-            gridViewTextBoxColumn3.HeaderText = "LUB";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
             gridViewTextBoxColumn3.IsAutoGenerated = true;
             gridViewTextBoxColumn3.Name = "LUB";
             gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn3.Width = 85;
             gridViewDateTimeColumn2.EnableExpressionEditor = false;
             gridViewDateTimeColumn2.FieldName = "LUD";
-            gridViewDateTimeColumn2.HeaderText = "LUD";
+            resources.ApplyResources(gridViewDateTimeColumn2, "gridViewDateTimeColumn2");
             gridViewDateTimeColumn2.IsAutoGenerated = true;
             gridViewDateTimeColumn2.Name = "LUD";
             gridViewDateTimeColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,7 +167,7 @@
             gridViewDecimalColumn2.DataType = typeof(int);
             gridViewDecimalColumn2.EnableExpressionEditor = false;
             gridViewDecimalColumn2.FieldName = "LUN";
-            gridViewDecimalColumn2.HeaderText = "LUN";
+            resources.ApplyResources(gridViewDecimalColumn2, "gridViewDecimalColumn2");
             gridViewDecimalColumn2.IsAutoGenerated = true;
             gridViewDecimalColumn2.Name = "LUN";
             gridViewDecimalColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -206,9 +183,6 @@
             this.dgvRoleList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvRoleList.Name = "dgvRoleList";
             this.dgvRoleList.ReadOnly = true;
-            this.dgvRoleList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvRoleList.Size = new System.Drawing.Size(800, 426);
-            this.dgvRoleList.TabIndex = 3;
             this.dgvRoleList.ThemeName = "CrystalDark";
             // 
             // bsrcRoleList
@@ -217,16 +191,13 @@
             // 
             // RoleList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvRoleList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoleList";
-            this.Text = "Role List";
             this.Load += new System.EventHandler(this.RoleListForm_Load);
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();

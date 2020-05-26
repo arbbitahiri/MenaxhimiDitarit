@@ -69,6 +69,7 @@
     <Reference Include="TelerikCommon, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\TranslateForm.cs" />
     <Compile Include="App_Forms\AdminForms\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +124,12 @@
     </Compile>
     <Compile Include="App_Forms\DirectorForms\DirectorTeacherList.Designer.cs">
       <DependentUpon>DirectorTeacherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
     </Compile>
     <Compile Include="App_Forms\DirectorForms\ReviewComment.cs">
       <SubType>Form</SubType>
@@ -243,11 +250,29 @@
     <EmbeddedResource Include="App_Forms\AdminForms\AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\AdminMain.sq-XK.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.aa.resx">
+      <DependentUpon>ClassCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.resx">
+      <DependentUpon>ClassCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.sq-XK.resx">
       <DependentUpon>ClassCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\ClassList.resx">
       <DependentUpon>ClassList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassList.sq-XK.resx">
+      <DependentUpon>ClassList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleCreate.sq-XK.resx">
+      <DependentUpon>ClassScheduleCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleList.sq-XK.resx">
+      <DependentUpon>ClassScheduleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduler.resx">
       <DependentUpon>ClassScheduler.cs</DependentUpon>
@@ -258,35 +283,110 @@
     <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduleList.resx">
       <DependentUpon>ClassScheduleList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\ClassScheduler.sq-XK.resx">
+      <DependentUpon>ClassScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\RoomCreate.sq-XK.resx">
+      <DependentUpon>RoomCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\RoomList.resx">
       <DependentUpon>RoomList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\RoomList.sq-XK.resx">
+      <DependentUpon>RoomList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\SubjectCreate.sq-XK.resx">
+      <DependentUpon>SubjectCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\SubjectList.sq-XK.resx">
+      <DependentUpon>SubjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\TeacherCreate.sq-XK.resx">
+      <DependentUpon>TeacherCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\AdminForms\TeacherList.sq-XK.resx">
+      <DependentUpon>TeacherList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\DirectorMain.resx">
+      <DependentUpon>DirectorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\DirectorMain.sq-XK.resx">
       <DependentUpon>DirectorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\DirectorTeacherList.resx">
       <DependentUpon>DirectorTeacherList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\DirectorTeacherList.sq-XK.resx">
+      <DependentUpon>DirectorTeacherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\Review.sq-XK.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\ReviewComment.resx">
+      <DependentUpon>ReviewComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\ReviewComment.sq-XK.resx">
       <DependentUpon>ReviewComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\RoleList.resx">
       <DependentUpon>RoleList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\RoleList.sq-XK.resx">
+      <DependentUpon>RoleList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserCreate.resx">
+      <DependentUpon>UserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserCreate.sq-XK.resx">
       <DependentUpon>UserCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserList.resx">
       <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserList.sq-XK.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdate.resx">
+      <DependentUpon>UserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdate.sq-XK.resx">
       <DependentUpon>UserUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdatePassword.resx">
       <DependentUpon>UserUpdatePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\UserUpdatePassword.sq-XK.resx">
+      <DependentUpon>UserUpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\LoginForm.sq-XK.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\AbsenceCreate.sq-XK.resx">
+      <DependentUpon>AbsenceCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\AbsenceList.sq-XK.resx">
+      <DependentUpon>AbsenceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\CommentCreate.sq-XK.resx">
+      <DependentUpon>CommentCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\CommentList.sq-XK.resx">
+      <DependentUpon>CommentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TeacherMain.sq-XK.resx">
+      <DependentUpon>TeacherMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TopicCreate.sq-XK.resx">
+      <DependentUpon>TopicCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\TeacherForms\TopicList.sq-XK.resx">
+      <DependentUpon>TopicList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -335,8 +435,10 @@
     <EmbeddedResource Include="App_Forms\TeacherForms\TopicList.resx">
       <DependentUpon>TopicList.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Absence.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Class.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.ClassSchedule.datasource" />
+    <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Comment.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Role.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Roles.datasource" />
     <None Include="Properties\DataSources\MenaxhimiDitarit.BO.Room.datasource" />

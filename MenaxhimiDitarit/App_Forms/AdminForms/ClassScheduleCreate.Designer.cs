@@ -58,38 +58,30 @@
             // 
             // cmbSelectTime
             // 
+            resources.ApplyResources(this.cmbSelectTime, "cmbSelectTime");
             this.cmbSelectTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectTime.DisplayMember = "RoomType";
-            this.cmbSelectTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectTime.ForeColor = System.Drawing.Color.White;
             this.cmbSelectTime.FormattingEnabled = true;
             this.cmbSelectTime.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cmbSelectTime.Location = new System.Drawing.Point(360, 251);
+            resources.GetString("cmbSelectTime.Items"),
+            resources.GetString("cmbSelectTime.Items1"),
+            resources.GetString("cmbSelectTime.Items2"),
+            resources.GetString("cmbSelectTime.Items3"),
+            resources.GetString("cmbSelectTime.Items4"),
+            resources.GetString("cmbSelectTime.Items5")});
             this.cmbSelectTime.Name = "cmbSelectTime";
-            this.cmbSelectTime.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectTime.TabIndex = 3;
             this.cmbSelectTime.ValueMember = "RoomID";
             // 
             // cmbSelectSubject
             // 
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectSubject.DataSource = this.bsrcSubject;
             this.cmbSelectSubject.DisplayMember = "SubjectTitle";
-            this.cmbSelectSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
-            this.cmbSelectSubject.Location = new System.Drawing.Point(360, 213);
             this.cmbSelectSubject.Name = "cmbSelectSubject";
-            this.cmbSelectSubject.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectSubject.TabIndex = 2;
             this.cmbSelectSubject.ValueMember = "SubjectID";
             // 
             // bsrcSubject
@@ -98,17 +90,13 @@
             // 
             // cmbSelectClass
             // 
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectClass.DataSource = this.bsrcClass;
             this.cmbSelectClass.DisplayMember = "ClassNo";
-            this.cmbSelectClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
-            this.cmbSelectClass.Location = new System.Drawing.Point(360, 176);
             this.cmbSelectClass.Name = "cmbSelectClass";
-            this.cmbSelectClass.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectClass.TabIndex = 1;
             this.cmbSelectClass.ValueMember = "ClassID";
             // 
             // bsrcClass
@@ -117,202 +105,136 @@
             // 
             // lblTime
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblTime, "lblTime");
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(274, 254);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(80, 16);
-            this.lblTime.TabIndex = 66;
-            this.lblTime.Text = "Select Time";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(360, 281);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 1);
-            this.panel3.TabIndex = 65;
             // 
             // lblID
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblID, "lblID");
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(333, 148);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 16);
-            this.lblID.TabIndex = 64;
-            this.lblID.Text = "ID";
             // 
             // panel8
             // 
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(360, 169);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(181, 1);
-            this.panel8.TabIndex = 63;
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(360, 149);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 0;
-            this.txtID.Text = "-1";
             // 
             // lblSubject
             // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblSubject, "lblSubject");
             this.lblSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSubject.Location = new System.Drawing.Point(260, 216);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(94, 16);
-            this.lblSubject.TabIndex = 60;
-            this.lblSubject.Text = "Select Subject";
             // 
             // lblClass
             // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblClass, "lblClass");
             this.lblClass.ForeColor = System.Drawing.Color.White;
-            this.lblClass.Location = new System.Drawing.Point(271, 179);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(83, 16);
-            this.lblClass.TabIndex = 61;
-            this.lblClass.Text = "Select Class";
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(360, 243);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 1);
-            this.panel2.TabIndex = 58;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(360, 206);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 1);
-            this.panel1.TabIndex = 59;
             // 
             // cmbSelectDate
             // 
+            resources.ApplyResources(this.cmbSelectDate, "cmbSelectDate");
             this.cmbSelectDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectDate.DisplayMember = "RoomType";
-            this.cmbSelectDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSelectDate.ForeColor = System.Drawing.Color.White;
             this.cmbSelectDate.FormattingEnabled = true;
             this.cmbSelectDate.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"});
-            this.cmbSelectDate.Location = new System.Drawing.Point(360, 288);
+            resources.GetString("cmbSelectDate.Items"),
+            resources.GetString("cmbSelectDate.Items1"),
+            resources.GetString("cmbSelectDate.Items2"),
+            resources.GetString("cmbSelectDate.Items3"),
+            resources.GetString("cmbSelectDate.Items4")});
             this.cmbSelectDate.Name = "cmbSelectDate";
-            this.cmbSelectDate.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectDate.TabIndex = 4;
             this.cmbSelectDate.ValueMember = "RoomID";
             // 
             // lblDate
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblDate, "lblDate");
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(317, 291);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(37, 16);
-            this.lblDate.TabIndex = 71;
-            this.lblDate.Text = "Date";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(360, 318);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 1);
-            this.panel4.TabIndex = 70;
             // 
             // lblYear
             // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblYear, "lblYear");
             this.lblYear.ForeColor = System.Drawing.Color.White;
-            this.lblYear.Location = new System.Drawing.Point(317, 325);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(37, 16);
-            this.lblYear.TabIndex = 75;
-            this.lblYear.Text = "Year";
             // 
             // panel5
             // 
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel5.Location = new System.Drawing.Point(360, 345);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(181, 1);
-            this.panel5.TabIndex = 74;
             // 
             // txtYear
             // 
+            resources.ApplyResources(this.txtYear, "txtYear");
             this.txtYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear.ForeColor = System.Drawing.Color.White;
-            this.txtYear.Location = new System.Drawing.Point(360, 325);
-            this.txtYear.MaxLength = 4;
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(181, 15);
-            this.txtYear.TabIndex = 5;
-            this.txtYear.Text = "2020";
             // 
             // btnSubmitClass
             // 
+            resources.ApplyResources(this.btnSubmitClass, "btnSubmitClass");
             this.btnSubmitClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmitClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitClass.FlatAppearance.BorderSize = 0;
-            this.btnSubmitClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmitClass.Location = new System.Drawing.Point(403, 375);
             this.btnSubmitClass.Name = "btnSubmitClass";
-            this.btnSubmitClass.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmitClass.TabIndex = 6;
-            this.btnSubmitClass.Text = "Submit";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
             this.btnSubmitClass.Click += new System.EventHandler(this.btnSubmitClass_Click);
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(228, 375);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ClassScheduleCreate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.btnSubmitClass);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblYear);
@@ -334,9 +256,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClassScheduleCreate";
-            this.Text = "Create Class Schedule";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();
             this.ResumeLayout(false);

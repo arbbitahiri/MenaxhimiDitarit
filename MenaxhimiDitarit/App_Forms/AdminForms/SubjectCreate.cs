@@ -168,5 +168,10 @@ namespace MenaxhimiDitarit
                     this.Close();
             }
         }
+
+        private void SubjectCreate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

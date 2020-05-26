@@ -28,8 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommentList));
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnViewAll = new System.Windows.Forms.Button();
@@ -40,10 +51,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvCommentList = new Telerik.WinControls.UI.RadGridView();
+            this.bsrcComment = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.cmsComment = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcComment)).BeginInit();
+            this.cmsComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -56,28 +72,19 @@
             this.grbSearch.Controls.Add(this.lblSelectDay);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.panel3);
-            this.grbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.grbSearch, "grbSearch");
             this.grbSearch.ForeColor = System.Drawing.Color.White;
-            this.grbSearch.Location = new System.Drawing.Point(159, 12);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(483, 111);
-            this.grbSearch.TabIndex = 3;
             this.grbSearch.TabStop = false;
-            this.grbSearch.Text = "Search Comment";
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSearch.Location = new System.Drawing.Point(338, 20);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(120, 32);
-            this.btnSearch.TabIndex = 80;
-            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnViewAll
@@ -85,104 +92,171 @@
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnViewAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAll.FlatAppearance.BorderSize = 0;
-            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btnViewAll, "btnViewAll");
             this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnViewAll.Location = new System.Drawing.Point(338, 64);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(120, 32);
-            this.btnViewAll.TabIndex = 79;
-            this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = false;
             // 
             // dtpSelectDay
             // 
-            this.dtpSelectDay.CustomFormat = "ddMMMMyyyy";
+            resources.ApplyResources(this.dtpSelectDay, "dtpSelectDay");
             this.dtpSelectDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSelectDay.Location = new System.Drawing.Point(124, 65);
             this.dtpSelectDay.Name = "dtpSelectDay";
-            this.dtpSelectDay.Size = new System.Drawing.Size(181, 22);
-            this.dtpSelectDay.TabIndex = 78;
             // 
             // cmbSelectSubject
             // 
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbSelectSubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSelectSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
-            this.cmbSelectSubject.Location = new System.Drawing.Point(124, 26);
             this.cmbSelectSubject.Name = "cmbSelectSubject";
-            this.cmbSelectSubject.Size = new System.Drawing.Size(181, 24);
-            this.cmbSelectSubject.TabIndex = 68;
             // 
             // lblSelectSubject
             // 
-            this.lblSelectSubject.AutoSize = true;
-            this.lblSelectSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblSelectSubject, "lblSelectSubject");
             this.lblSelectSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSelectSubject.Location = new System.Drawing.Point(24, 29);
             this.lblSelectSubject.Name = "lblSelectSubject";
-            this.lblSelectSubject.Size = new System.Drawing.Size(94, 16);
-            this.lblSelectSubject.TabIndex = 74;
-            this.lblSelectSubject.Text = "Select Subject";
             // 
             // lblSelectDay
             // 
-            this.lblSelectDay.AutoSize = true;
-            this.lblSelectDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblSelectDay, "lblSelectDay");
             this.lblSelectDay.ForeColor = System.Drawing.Color.White;
-            this.lblSelectDay.Location = new System.Drawing.Point(44, 66);
             this.lblSelectDay.Name = "lblSelectDay";
-            this.lblSelectDay.Size = new System.Drawing.Size(74, 16);
-            this.lblSelectDay.TabIndex = 72;
-            this.lblSelectDay.Text = "Select Day";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(124, 93);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 1);
-            this.panel1.TabIndex = 71;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(124, 56);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 1);
-            this.panel3.TabIndex = 69;
             // 
             // dgvCommentList
             // 
-            this.dgvCommentList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvCommentList.Location = new System.Drawing.Point(0, 137);
+            this.dgvCommentList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.dgvCommentList.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.dgvCommentList, "dgvCommentList");
+            this.dgvCommentList.ForeColor = System.Drawing.Color.White;
             // 
             // 
             // 
+            this.dgvCommentList.MasterTemplate.AllowAddNewRow = false;
+            this.dgvCommentList.MasterTemplate.AllowColumnReorder = false;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "CommentID";
+            resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "CommentID";
+            gridViewDecimalColumn1.Width = 85;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "TopicID";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.IsVisible = false;
+            gridViewDecimalColumn2.Name = "TopicID";
+            gridViewDecimalColumn2.Width = 85;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Comments";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "Comments";
+            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Review";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "Review";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.DataType = typeof(MenaxhimiDitarit.BO.Topic);
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Topic";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Topic";
+            gridViewTextBoxColumn3.Width = 100;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "InsertBy";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "InsertBy";
+            gridViewTextBoxColumn4.Width = 85;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.FieldName = "InsertDate";
+            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "InsertDate";
+            gridViewDateTimeColumn1.Width = 150;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "LUB";
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "LUB";
+            gridViewTextBoxColumn5.Width = 85;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "LUD";
+            resources.ApplyResources(gridViewDateTimeColumn2, "gridViewDateTimeColumn2");
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "LUD";
+            gridViewDateTimeColumn2.Width = 150;
+            gridViewDecimalColumn3.DataType = typeof(int);
+            gridViewDecimalColumn3.EnableExpressionEditor = false;
+            gridViewDecimalColumn3.FieldName = "LUN";
+            resources.ApplyResources(gridViewDecimalColumn3, "gridViewDecimalColumn3");
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.Name = "LUN";
+            this.dgvCommentList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn2,
+            gridViewDecimalColumn3});
+            this.dgvCommentList.MasterTemplate.DataSource = this.bsrcComment;
             this.dgvCommentList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvCommentList.Name = "dgvCommentList";
-            this.dgvCommentList.Size = new System.Drawing.Size(800, 426);
-            this.dgvCommentList.TabIndex = 4;
+            this.dgvCommentList.ReadOnly = true;
             this.dgvCommentList.ThemeName = "CrystalDark";
+            // 
+            // bsrcComment
+            // 
+            this.bsrcComment.DataSource = typeof(MenaxhimiDitarit.BO.Comment);
+            // 
+            // cmsComment
+            // 
+            this.cmsComment.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem});
+            this.cmsComment.Name = "cmsComment";
+            resources.ApplyResources(this.cmsComment, "cmsComment");
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            resources.ApplyResources(this.updateToolStripMenuItem, "updateToolStripMenuItem");
             // 
             // CommentList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.dgvCommentList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CommentList";
-            this.Text = "Comment List";
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcComment)).EndInit();
+            this.cmsComment.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,5 +274,8 @@
         private System.Windows.Forms.Panel panel3;
         private Telerik.WinControls.UI.RadGridView dgvCommentList;
         private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
+        private System.Windows.Forms.BindingSource bsrcComment;
+        private System.Windows.Forms.ContextMenuStrip cmsComment;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

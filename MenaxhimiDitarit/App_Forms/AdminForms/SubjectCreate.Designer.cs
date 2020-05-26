@@ -53,190 +53,128 @@
             // 
             // lblID
             // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblID, "lblID");
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(327, 177);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 16);
-            this.lblID.TabIndex = 37;
-            this.lblID.Text = "ID";
             // 
             // panel8
             // 
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel8.Location = new System.Drawing.Point(354, 198);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(181, 1);
-            this.panel8.TabIndex = 36;
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Location = new System.Drawing.Point(354, 177);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(181, 15);
-            this.txtID.TabIndex = 0;
-            this.txtID.Text = "-1";
             // 
             // lblBook
             // 
-            this.lblBook.AutoSize = true;
-            this.lblBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblBook, "lblBook");
             this.lblBook.ForeColor = System.Drawing.Color.White;
-            this.lblBook.Location = new System.Drawing.Point(308, 233);
             this.lblBook.Name = "lblBook";
-            this.lblBook.Size = new System.Drawing.Size(40, 16);
-            this.lblBook.TabIndex = 33;
-            this.lblBook.Text = "Book";
             // 
             // lblSubjectTitle
             // 
-            this.lblSubjectTitle.AutoSize = true;
-            this.lblSubjectTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblSubjectTitle, "lblSubjectTitle");
             this.lblSubjectTitle.ForeColor = System.Drawing.Color.White;
-            this.lblSubjectTitle.Location = new System.Drawing.Point(266, 205);
             this.lblSubjectTitle.Name = "lblSubjectTitle";
-            this.lblSubjectTitle.Size = new System.Drawing.Size(82, 16);
-            this.lblSubjectTitle.TabIndex = 34;
-            this.lblSubjectTitle.Text = "Subject Title";
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Location = new System.Drawing.Point(354, 254);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(181, 1);
-            this.panel2.TabIndex = 31;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel1.Location = new System.Drawing.Point(354, 226);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(181, 1);
-            this.panel1.TabIndex = 32;
             // 
             // txtSubjectBook
             // 
+            resources.ApplyResources(this.txtSubjectBook, "txtSubjectBook");
             this.txtSubjectBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSubjectBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubjectBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectBook.ForeColor = System.Drawing.Color.White;
-            this.txtSubjectBook.Location = new System.Drawing.Point(354, 233);
             this.txtSubjectBook.Name = "txtSubjectBook";
-            this.txtSubjectBook.Size = new System.Drawing.Size(181, 15);
-            this.txtSubjectBook.TabIndex = 2;
             // 
             // txtSubjectTitle
             // 
+            resources.ApplyResources(this.txtSubjectTitle, "txtSubjectTitle");
             this.txtSubjectTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSubjectTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubjectTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectTitle.ForeColor = System.Drawing.Color.White;
-            this.txtSubjectTitle.Location = new System.Drawing.Point(354, 205);
             this.txtSubjectTitle.Name = "txtSubjectTitle";
-            this.txtSubjectTitle.Size = new System.Drawing.Size(181, 15);
-            this.txtSubjectTitle.TabIndex = 1;
             // 
             // lblBookAuthor
             // 
-            this.lblBookAuthor.AutoSize = true;
-            this.lblBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblBookAuthor, "lblBookAuthor");
             this.lblBookAuthor.ForeColor = System.Drawing.Color.White;
-            this.lblBookAuthor.Location = new System.Drawing.Point(267, 261);
             this.lblBookAuthor.Name = "lblBookAuthor";
-            this.lblBookAuthor.Size = new System.Drawing.Size(81, 16);
-            this.lblBookAuthor.TabIndex = 40;
-            this.lblBookAuthor.Text = "Book Author";
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel3.Location = new System.Drawing.Point(354, 282);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(181, 1);
-            this.panel3.TabIndex = 39;
             // 
             // txtBookAuthor
             // 
+            resources.ApplyResources(this.txtBookAuthor, "txtBookAuthor");
             this.txtBookAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtBookAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBookAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBookAuthor.ForeColor = System.Drawing.Color.White;
-            this.txtBookAuthor.Location = new System.Drawing.Point(354, 261);
             this.txtBookAuthor.Name = "txtBookAuthor";
-            this.txtBookAuthor.Size = new System.Drawing.Size(181, 15);
-            this.txtBookAuthor.TabIndex = 3;
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnSubmit.Location = new System.Drawing.Point(403, 336);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(169, 39);
-            this.btnSubmit.TabIndex = 5;
-            this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.btnCancel.Location = new System.Drawing.Point(228, 336);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(169, 39);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblAssignTeacher
             // 
-            this.lblAssignTeacher.AutoSize = true;
-            this.lblAssignTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblAssignTeacher, "lblAssignTeacher");
             this.lblAssignTeacher.ForeColor = System.Drawing.Color.White;
-            this.lblAssignTeacher.Location = new System.Drawing.Point(245, 292);
             this.lblAssignTeacher.Name = "lblAssignTeacher";
-            this.lblAssignTeacher.Size = new System.Drawing.Size(103, 16);
-            this.lblAssignTeacher.TabIndex = 45;
-            this.lblAssignTeacher.Text = "Assign Teacher";
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel4.Location = new System.Drawing.Point(354, 319);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(181, 1);
-            this.panel4.TabIndex = 44;
             // 
             // cmbTeacher
             // 
+            resources.ApplyResources(this.cmbTeacher, "cmbTeacher");
             this.cmbTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbTeacher.DataSource = this.bsrcTeacher;
             this.cmbTeacher.DisplayMember = "FullName";
-            this.cmbTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbTeacher.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTeacher.ForeColor = System.Drawing.Color.White;
             this.cmbTeacher.FormattingEnabled = true;
-            this.cmbTeacher.Location = new System.Drawing.Point(354, 289);
             this.cmbTeacher.Name = "cmbTeacher";
-            this.cmbTeacher.Size = new System.Drawing.Size(181, 24);
-            this.cmbTeacher.TabIndex = 4;
             this.cmbTeacher.ValueMember = "TeacherID";
             // 
             // bsrcTeacher
@@ -245,10 +183,9 @@
             // 
             // SubjectCreate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(800, 563);
             this.Controls.Add(this.cmbTeacher);
             this.Controls.Add(this.lblAssignTeacher);
             this.Controls.Add(this.panel4);
@@ -267,9 +204,7 @@
             this.Controls.Add(this.txtSubjectBook);
             this.Controls.Add(this.txtSubjectTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SubjectCreate";
-            this.Text = "Create Subject";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
