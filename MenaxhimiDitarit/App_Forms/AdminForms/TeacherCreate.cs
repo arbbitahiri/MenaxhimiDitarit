@@ -272,9 +272,9 @@ namespace MenaxhimiDitarit
                         "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
-                        e.Cancel = true;
-                    else if (result == DialogResult.No)
                         e.Cancel = false;
+                    else if (result == DialogResult.No)
+                        e.Cancel = true;
                 }
                 else
                     e.Cancel = true;
@@ -283,28 +283,38 @@ namespace MenaxhimiDitarit
 
         private void txtFirstName_KeyUp(object sender, KeyEventArgs e)
         {
-            string firstName = txtFirstName.Text;
-            string fnToUpper = char.ToUpper(firstName[0]) + firstName.Substring(1);
+            if (txtFirstName.Text != "")
+            {
+                string firstName = txtFirstName.Text;
+                string fnToUpper = char.ToUpper(firstName[0]) + firstName.Substring(1);
 
-            txtFirstName.Text = fnToUpper;
+                txtFirstName.Text = fnToUpper;
+            }
         }
 
         private void txtLastName_KeyUp(object sender, KeyEventArgs e)
         {
-            string lastName = txtLastName.Text;
-            string lnToUpper = char.ToUpper(lastName[0]) + lastName.Substring(1);
+            if (txtLastName.Text != "")
+            {
+                string lastName = txtLastName.Text;
+                string lnToUpper = char.ToUpper(lastName[0]) + lastName.Substring(1);
 
-            txtFirstName.Text = lnToUpper;
+                txtLastName.Text = lnToUpper;
+            }
         }
 
         private void txtCity_KeyUp(object sender, KeyEventArgs e)
         {
-            string city = txtCity.Text;
-            string cityToUpper = char.ToUpper(city[0]) + city.Substring(1);
+            if (txtCity.Text != "")
+            {
+                string city = txtCity.Text;
+                string cityToUpper = char.ToUpper(city[0]) + city.Substring(1);
 
-            txtFirstName.Text = cityToUpper;
+                txtCity.Text = cityToUpper;
+            }
         }
 
+        #region ErrorProviers
         ToolTip toolTip = new ToolTip();
 
         private void picFirstName_MouseHover(object sender, EventArgs e)
@@ -342,7 +352,10 @@ namespace MenaxhimiDitarit
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
                 picFirstName.Visible = false;
             else
+            {
                 picFirstName.Image = Properties.Resources.icons8_cancel_15;
+                picFirstName.Visible = true;
+            }
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
@@ -350,7 +363,10 @@ namespace MenaxhimiDitarit
             if (txtLastName.Text != null && txtLastName.Text.Length > 2)
                 picLastName.Visible = false;
             else
+            {
                 picLastName.Image = Properties.Resources.icons8_cancel_15;
+                picLastName.Visible = true;
+            }
         }
 
         private void txtCity_TextChanged(object sender, EventArgs e)
@@ -358,7 +374,10 @@ namespace MenaxhimiDitarit
             if (txtCity.Text != null && txtCity.Text.Length > 2)
                 picCity.Visible = false;
             else
+            {
                 picCity.Image = Properties.Resources.icons8_cancel_15;
+                picCity.Visible = true;
+            }
         }
 
         private void txtQualification_TextChanged(object sender, EventArgs e)
@@ -366,7 +385,10 @@ namespace MenaxhimiDitarit
             if (txtQualification.Text != null && txtQualification.Text.Length > 2)
                 picQualification.Visible = false;
             else
+            {
                 picQualification.Image = Properties.Resources.icons8_cancel_15;
+                picQualification.Visible = true;
+            }
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -374,7 +396,10 @@ namespace MenaxhimiDitarit
             if (txtEmail.Text != null && txtEmail.Text.Length > 2)
                 picEmail.Visible = false;
             else
+            {
                 picEmail.Image = Properties.Resources.icons8_cancel_15;
+                picEmail.Visible = true;
+            }
         }
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
@@ -382,7 +407,11 @@ namespace MenaxhimiDitarit
             if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 2)
                 picPhoneNo.Visible = false;
             else
+            {
                 picPhoneNo.Image = Properties.Resources.icons8_cancel_15;
+                picPhoneNo.Visible = true;
+            }
         }
+        #endregion
     }
 }

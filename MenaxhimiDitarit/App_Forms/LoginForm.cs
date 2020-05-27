@@ -71,7 +71,7 @@ namespace MenaxhimiDitarit
                             teacherForm.StartPosition = FormStartPosition.CenterScreen;
                             teacherForm.ShowDialog();
                         }
-                        else if (user.RoleID == 3)
+                        else if (user.RoleID == 4)
                         {
                             DirectorMain directorForm = new DirectorMain();
                             this.Hide();

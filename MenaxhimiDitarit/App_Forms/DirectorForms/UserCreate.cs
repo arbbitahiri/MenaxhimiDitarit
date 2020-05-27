@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Forms.MessageBoxes;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -72,8 +73,15 @@ namespace MenaxhimiDitarit.DirectorForms
                 DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
                 if (expireDate < DateTime.Now)
-                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}",
-                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    OKCancel oK = new OKCancel("Information", $"Expire date can't be from:\n {dtpExpireDate.Value}", Properties.Resources.icons8_user_100)
+                    {
+                        StartPosition = FormStartPosition.CenterScreen
+                    };
+                    oK.ShowDialog();
+                }
+                //MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}",
+                //    "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                 {
                     if (CheckTextbox())
@@ -110,7 +118,14 @@ namespace MenaxhimiDitarit.DirectorForms
                         }
                     }
                     else
-                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    {
+                        OKCancel oK = new OKCancel("Warning", "Please fill all fields!", Properties.Resources.icons8_user_100)
+                        {
+                            StartPosition = FormStartPosition.CenterScreen
+                        };
+                        oK.ShowDialog();
+                    }
+                        //MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
