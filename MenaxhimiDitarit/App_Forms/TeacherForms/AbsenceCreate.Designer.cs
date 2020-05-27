@@ -28,61 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AbsenceCreate));
-            this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
-            this.cmbMainTeacher = new System.Windows.Forms.ComboBox();
+            this.bsrcTopic = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbSelectClass = new System.Windows.Forms.ComboBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtpSelectDate = new System.Windows.Forms.DateTimePicker();
             this.lblSelectDate = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblContent = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblSelectSubject = new System.Windows.Forms.Label();
             this.lblSelectClass = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNoStudents = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSelectSubject = new System.Windows.Forms.Label();
+            this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
+            this.cmbReasoning = new System.Windows.Forms.ComboBox();
+            this.lblReasoning = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbSelectTime = new System.Windows.Forms.ComboBox();
+            this.lblSelectTime = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTopic)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbSelectSubject
+            // bsrcTopic
             // 
-            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
-            this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
-            this.cmbSelectSubject.FormattingEnabled = true;
-            this.cmbSelectSubject.Name = "cmbSelectSubject";
+            this.bsrcTopic.DataSource = typeof(MenaxhimiDitarit.BO.Topic);
             // 
-            // cmbMainTeacher
+            // cmbSelectClass
             // 
-            resources.ApplyResources(this.cmbMainTeacher, "cmbMainTeacher");
-            this.cmbMainTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.cmbMainTeacher.ForeColor = System.Drawing.Color.White;
-            this.cmbMainTeacher.FormattingEnabled = true;
-            this.cmbMainTeacher.Name = "cmbMainTeacher";
+            this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
+            this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
+            this.cmbSelectClass.FormattingEnabled = true;
+            this.cmbSelectClass.Items.AddRange(new object[] {
+            resources.GetString("cmbSelectClass.Items"),
+            resources.GetString("cmbSelectClass.Items1"),
+            resources.GetString("cmbSelectClass.Items2"),
+            resources.GetString("cmbSelectClass.Items3"),
+            resources.GetString("cmbSelectClass.Items4"),
+            resources.GetString("cmbSelectClass.Items5"),
+            resources.GetString("cmbSelectClass.Items6"),
+            resources.GetString("cmbSelectClass.Items7"),
+            resources.GetString("cmbSelectClass.Items8")});
+            this.cmbSelectClass.Name = "cmbSelectClass";
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblID
             // 
@@ -92,25 +109,25 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
-            // dtpBirthday
+            // dtpSelectDate
             // 
-            resources.ApplyResources(this.dtpBirthday, "dtpBirthday");
-            this.dtpBirthday.CalendarMonthBackground = System.Drawing.Color.White;
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthday.Name = "dtpBirthday";
+            resources.ApplyResources(this.dtpSelectDate, "dtpSelectDate");
+            this.dtpSelectDate.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpSelectDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSelectDate.Name = "dtpSelectDate";
             // 
             // lblSelectDate
             // 
@@ -120,8 +137,8 @@
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // lblContent
@@ -132,15 +149,9 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
-            // 
-            // lblSelectSubject
-            // 
-            resources.ApplyResources(this.lblSelectSubject, "lblSelectSubject");
-            this.lblSelectSubject.ForeColor = System.Drawing.Color.White;
-            this.lblSelectSubject.Name = "lblSelectSubject";
             // 
             // lblSelectClass
             // 
@@ -148,40 +159,114 @@
             this.lblSelectClass.ForeColor = System.Drawing.Color.White;
             this.lblSelectClass.Name = "lblSelectClass";
             // 
-            // panel2
-            // 
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            this.panel2.Name = "panel2";
-            // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // txtNoStudents
             // 
-            resources.ApplyResources(this.txtNoStudents, "txtNoStudents");
             this.txtNoStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtNoStudents, "txtNoStudents");
             this.txtNoStudents.ForeColor = System.Drawing.Color.White;
             this.txtNoStudents.Name = "txtNoStudents";
+            this.txtNoStudents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNoStudents_KeyPress);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // lblSelectSubject
+            // 
+            resources.ApplyResources(this.lblSelectSubject, "lblSelectSubject");
+            this.lblSelectSubject.ForeColor = System.Drawing.Color.White;
+            this.lblSelectSubject.Name = "lblSelectSubject";
+            // 
+            // cmbSelectSubject
+            // 
+            this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectSubject.DataSource = this.bsrcTopic;
+            this.cmbSelectSubject.DisplayMember = "Subject";
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
+            this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
+            this.cmbSelectSubject.FormattingEnabled = true;
+            this.cmbSelectSubject.Name = "cmbSelectSubject";
+            this.cmbSelectSubject.ValueMember = "SubjectID";
+            // 
+            // cmbReasoning
+            // 
+            this.cmbReasoning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            resources.ApplyResources(this.cmbReasoning, "cmbReasoning");
+            this.cmbReasoning.ForeColor = System.Drawing.Color.White;
+            this.cmbReasoning.FormattingEnabled = true;
+            this.cmbReasoning.Items.AddRange(new object[] {
+            resources.GetString("cmbReasoning.Items"),
+            resources.GetString("cmbReasoning.Items1")});
+            this.cmbReasoning.Name = "cmbReasoning";
+            // 
+            // lblReasoning
+            // 
+            resources.ApplyResources(this.lblReasoning, "lblReasoning");
+            this.lblReasoning.ForeColor = System.Drawing.Color.White;
+            this.lblReasoning.Name = "lblReasoning";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // cmbSelectTime
+            // 
+            this.cmbSelectTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            resources.ApplyResources(this.cmbSelectTime, "cmbSelectTime");
+            this.cmbSelectTime.ForeColor = System.Drawing.Color.White;
+            this.cmbSelectTime.FormattingEnabled = true;
+            this.cmbSelectTime.Items.AddRange(new object[] {
+            resources.GetString("cmbSelectTime.Items"),
+            resources.GetString("cmbSelectTime.Items1"),
+            resources.GetString("cmbSelectTime.Items2"),
+            resources.GetString("cmbSelectTime.Items3"),
+            resources.GetString("cmbSelectTime.Items4"),
+            resources.GetString("cmbSelectTime.Items5")});
+            this.cmbSelectTime.Name = "cmbSelectTime";
+            // 
+            // lblSelectTime
+            // 
+            resources.ApplyResources(this.lblSelectTime, "lblSelectTime");
+            this.lblSelectTime.ForeColor = System.Drawing.Color.White;
+            this.lblSelectTime.Name = "lblSelectTime";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
             // 
             // AbsenceCreate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.cmbSelectTime);
+            this.Controls.Add(this.lblSelectTime);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.cmbReasoning);
+            this.Controls.Add(this.lblReasoning);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtNoStudents);
             this.Controls.Add(this.cmbSelectSubject);
-            this.Controls.Add(this.cmbMainTeacher);
+            this.Controls.Add(this.cmbSelectClass);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.dtpSelectDate);
             this.Controls.Add(this.lblSelectDate);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.lblContent);
@@ -192,29 +277,36 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AbsenceCreate";
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTopic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cmbSelectSubject;
-        private System.Windows.Forms.ComboBox cmbMainTeacher;
+        private System.Windows.Forms.ComboBox cmbSelectClass;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.DateTimePicker dtpSelectDate;
         private System.Windows.Forms.Label lblSelectDate;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblContent;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblSelectSubject;
         private System.Windows.Forms.Label lblSelectClass;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNoStudents;
+        private System.Windows.Forms.BindingSource bsrcTopic;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblSelectSubject;
+        private System.Windows.Forms.ComboBox cmbSelectSubject;
+        private System.Windows.Forms.ComboBox cmbReasoning;
+        private System.Windows.Forms.Label lblReasoning;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cmbSelectTime;
+        private System.Windows.Forms.Label lblSelectTime;
+        private System.Windows.Forms.Panel panel6;
     }
 }

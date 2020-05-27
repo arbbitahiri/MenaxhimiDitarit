@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 
 namespace MenaxhimiDitarit.App_Code
 {
@@ -65,6 +66,18 @@ namespace MenaxhimiDitarit.App_Code
                 else if (control is DataGridView)
                 {
                     foreach (DataGridViewColumn dataGridViewColumn in ((DataGridView)control).Columns)
+                    {
+                        string text = resources.GetString(dataGridViewColumn.Name + ".HeaderText", cultureInfo);
+                        if (text != null)
+                        {
+                            dataGridViewColumn.HeaderText = text;
+                            control.Text = text;
+                        }
+                    }
+                }
+                else if (control is RadGridView)
+                {
+                    foreach (GridViewColumn dataGridViewColumn in ((RadGridView)control).Columns)
                     {
                         string text = resources.GetString(dataGridViewColumn.Name + ".HeaderText", cultureInfo);
                         if (text != null)

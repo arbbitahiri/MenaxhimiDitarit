@@ -11,6 +11,7 @@ using MenaxhimiDitarit.BO;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.TeacherForms;
 using MenaxhimiDitarit.DirectorForms;
+using MenaxhimiDitarit.App_Code;
 
 namespace MenaxhimiDitarit
 {
@@ -112,6 +113,14 @@ namespace MenaxhimiDitarit
                 btnLogin.Enabled = true;
             else
                 btnLogin.Enabled = false;
+        }
+
+        private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbLanguage.SelectedIndex == 0)
+                TranslateForm.ChangeLanguages("en-UK");
+            else if (cmbLanguage.SelectedIndex == 1)
+                TranslateForm.ChangeLanguages("sq-XK");
         }
     }
 }

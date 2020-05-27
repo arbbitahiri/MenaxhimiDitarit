@@ -119,31 +119,37 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 204</value>
+    <value>299, 186</value>
   </data>
   <data name="cmbMainTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 167</value>
+    <value>299, 149</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>403, 403</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 403</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>272, 139</value>
+    <value>272, 121</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 160</value>
+    <value>299, 142</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 139</value>
+    <value>299, 121</value>
   </data>
   <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 241</value>
+    <value>299, 260</value>
   </data>
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 246</value>
+    <value>204, 265</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -152,10 +158,10 @@
     <value>Zgjedh Datën</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 269</value>
+    <value>299, 288</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 306</value>
+    <value>220, 325</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 16</value>
@@ -164,13 +170,13 @@
     <value>Përmbajtja</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 358</value>
+    <value>299, 377</value>
   </data>
   <data name="txtComent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 276</value>
+    <value>299, 295</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 207</value>
+    <value>195, 189</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 16</value>
@@ -179,7 +185,7 @@
     <value>Zgjedh Lëndën</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 170</value>
+    <value>199, 152</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -188,10 +194,25 @@
     <value>Zgjedh Klasën</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 234</value>
+    <value>299, 216</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 197</value>
+    <value>299, 179</value>
+  </data>
+  <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 223</value>
+  </data>
+  <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 226</value>
+  </data>
+  <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 16</value>
+  </data>
+  <data name="lblSelectTime.Text" xml:space="preserve">
+    <value>Zgjedh Orën</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 253</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -11,27 +11,34 @@ namespace MenaxhimiDitarit.BLL
 {
     public class AbsenceBLL : IBaseCRUD<Absence>
     {
+        AbsencesDAL absencesDAL;
+
+        public AbsenceBLL()
+        {
+            absencesDAL = new AbsencesDAL();
+        }
+
         public bool Add(Absence model)
+        {
+            return absencesDAL.Add(model);
+        }
+
+        public List<Absence> GetAll()
+        {
+            return absencesDAL.GetAll();
+        }
+
+        public bool Remove(int id)
+        {
+            return absencesDAL.Remove(id);
+        }
+
+        public bool Update(Absence model)
         {
             throw new NotImplementedException();
         }
 
         public Absence Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Absence> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Update(Absence model)
         {
             throw new NotImplementedException();
         }

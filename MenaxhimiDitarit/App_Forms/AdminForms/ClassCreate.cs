@@ -26,6 +26,8 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly RoomBLL _roomBLL;
         private List<Room> MyRooms;
 
+        ToolTip toolTip = new ToolTip();
+
         public ClassCreate()
         {
             InitializeComponent();
@@ -77,7 +79,7 @@ namespace MenaxhimiDitarit.AdminForms
         {
             txtID.Text = classes.ClassID.ToString();
             cmbMainTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == classes.TeacherID);
-            cmbSelectClass.SelectedItem = _class.ClassNo.ToString();
+            cmbSelectClass.SelectedItem = classes.ClassNo.ToString();
             cmbSelectRoom.SelectedItem = MyRooms.FirstOrDefault(f => f.RoomID == classes.RoomID);
         }
 
@@ -168,6 +170,45 @@ namespace MenaxhimiDitarit.AdminForms
                 if (result == DialogResult.Yes)
                     this.Close();
             }
+        }
+
+        private void picMainTeacher_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a teacher!", picMainTeacher);
+        }
+
+        private void picClass_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a class!", picClass);
+        }
+
+        private void picRoom_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a room!", picRoom);
+        }
+
+        private void cmbMainTeacher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMainTeacher.SelectedIndex != -1)
+                picMainTeacher.Visible = false;
+            else
+                picMainTeacher.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectClass.SelectedIndex != -1)
+                picClass.Visible = false;
+            else
+                picClass.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectRoom.SelectedIndex != -1)
+                picRoom.Visible = false;
+            else
+                picRoom.Image = Properties.Resources.icons8_cancel_15;
         }
     }
 }

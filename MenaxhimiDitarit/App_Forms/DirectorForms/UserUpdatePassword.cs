@@ -17,6 +17,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly UserBLL _userBLL;
         private User _user;
 
+                ToolTip toolTip = new ToolTip();
+
         public UserUpdatePassword(User user)
         {
             InitializeComponent();
@@ -118,7 +120,37 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
-        //Ndrojme foton varesisht a jane a eshte ConfirmPass = Password
+        private void picPassword_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Password is required!", picPassword);
+        }
+
+        private void picUsername_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Username is required!", picUsername);
+        }
+
+        private void picValidatePassword_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Password does not match!", picValidatePassword);
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsername.Text != null && txtUsername.Text.Length > 2)
+                picUsername.Visible = false;
+            else
+                picUsername.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != null && txtPassword.Text.Length > 2)
+                picPassword.Visible = false;
+            else
+                picPassword.Image = Properties.Resources.icons8_cancel_15;
+        }
+
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == txtConfirmPass.Text)
@@ -126,5 +158,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             else
                 picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
         }
+
     }
 }

@@ -228,7 +228,7 @@ namespace MenaxhimiDitarit
         private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             char c = e.KeyChar;
-            if (!Char.IsDigit(c) && c != 8 && c != 32)
+            if (!char.IsDigit(c) && c != 8 && c != 32)
                 e.Handled = true;
         }
 
@@ -239,6 +239,150 @@ namespace MenaxhimiDitarit
             var age = GetAge(birthdate);
             if (age < 18)
                 MessageBox.Show("Teacher must be older than 18 years old!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (char.IsDigit(c))
+                e.Handled = true;
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (char.IsDigit(c))
+                e.Handled = true;
+        }
+
+        private void txtCity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (char.IsDigit(c))
+                e.Handled = true;
+        }
+
+        private void TeacherCreate_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                if (!CheckTextbox())
+                {
+                    var result = MessageBox.Show("You have something written, are you sure you want to exit?",
+                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                        e.Cancel = true;
+                    else if (result == DialogResult.No)
+                        e.Cancel = false;
+                }
+                else
+                    e.Cancel = true;
+            }
+        }
+
+        private void txtFirstName_KeyUp(object sender, KeyEventArgs e)
+        {
+            string firstName = txtFirstName.Text;
+            string fnToUpper = char.ToUpper(firstName[0]) + firstName.Substring(1);
+
+            txtFirstName.Text = fnToUpper;
+        }
+
+        private void txtLastName_KeyUp(object sender, KeyEventArgs e)
+        {
+            string lastName = txtLastName.Text;
+            string lnToUpper = char.ToUpper(lastName[0]) + lastName.Substring(1);
+
+            txtFirstName.Text = lnToUpper;
+        }
+
+        private void txtCity_KeyUp(object sender, KeyEventArgs e)
+        {
+            string city = txtCity.Text;
+            string cityToUpper = char.ToUpper(city[0]) + city.Substring(1);
+
+            txtFirstName.Text = cityToUpper;
+        }
+
+        ToolTip toolTip = new ToolTip();
+
+        private void picFirstName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("First name is required!", picFirstName);
+        }
+
+        private void picLastName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Last name is required!", picLastName);
+        }
+
+        private void picCity_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("City is required!", picCity);
+        }
+
+        private void picQualification_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Qualification is required!", picQualification);
+        }
+
+        private void picEmail_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("E-mail is required!", picEmail);
+        }
+
+        private void picPhoneNo_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Phone number is required!", picPhoneNo);
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
+                picFirstName.Visible = false;
+            else
+                picFirstName.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLastName.Text != null && txtLastName.Text.Length > 2)
+                picLastName.Visible = false;
+            else
+                picLastName.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtCity_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCity.Text != null && txtCity.Text.Length > 2)
+                picCity.Visible = false;
+            else
+                picCity.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtQualification_TextChanged(object sender, EventArgs e)
+        {
+            if (txtQualification.Text != null && txtQualification.Text.Length > 2)
+                picQualification.Visible = false;
+            else
+                picQualification.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmail.Text != null && txtEmail.Text.Length > 2)
+                picEmail.Visible = false;
+            else
+                picEmail.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtPhoneNo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 2)
+                picPhoneNo.Visible = false;
+            else
+                picPhoneNo.Image = Properties.Resources.icons8_cancel_15;
         }
     }
 }

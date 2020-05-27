@@ -169,9 +169,58 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void SubjectCreate_Load(object sender, EventArgs e)
-        {
+        ToolTip toolTip = new ToolTip();
 
+        private void picSubjectTitle_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("A title is required!", picSubjectTitle);
+        }
+
+        private void picBook_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("A book is required!", picBook);
+        }
+
+        private void picBAuthor_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("An author is required!", picBAuthor);
+        }
+
+        private void picTeacher_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a teacher!", picTeacher);
+        }
+
+        private void txtSubjectTitle_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSubjectTitle.Text != null && txtSubjectTitle.Text.Length > 2)
+                picSubjectTitle.Visible = false;
+            else
+                picSubjectTitle.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtSubjectBook_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSubjectBook.Text != null && txtSubjectBook.Text.Length > 2)
+                picBook.Visible = false;
+            else
+                picBook.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtBookAuthor_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBookAuthor.Text != null && txtBookAuthor.Text.Length > 2)
+                picBAuthor.Visible = false;
+            else
+                picBAuthor.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTeacher.SelectedIndex != -1)
+                picTeacher.Visible = false;
+            else
+                picTeacher.Image = Properties.Resources.icons8_cancel_15;
         }
     }
 }

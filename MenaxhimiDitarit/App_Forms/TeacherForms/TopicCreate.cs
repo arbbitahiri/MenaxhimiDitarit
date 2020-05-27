@@ -193,5 +193,59 @@ namespace MenaxhimiDitarit.TeacherForms
                     this.Close();
             }
         }
+
+        ToolTip toolTip = new ToolTip();
+
+        private void picClass_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Class is required!", picClass);
+        }
+
+        private void picSubject_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Subject is required!", picSubject);
+        }
+
+        private void picTime_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Time is required!", picTime);
+        }
+
+        private void picContent_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Content is required!", picContent);
+        }
+
+        private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectClass.SelectedIndex != -1)
+                picClass.Visible = false;
+            else
+                picClass.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectSubject.SelectedIndex != -1)
+                picSubject.Visible = false;
+            else
+                picSubject.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectTime.SelectedIndex != -1)
+                picTime.Visible = false;
+            else
+                picTime.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtContent_TextChanged(object sender, EventArgs e)
+        {
+            if (txtContent.Text != null && txtContent.Text.Length > 2)
+                picContent.Visible = false;
+            else
+                picContent.Image = Properties.Resources.icons8_cancel_15;
+        }
     }
 }

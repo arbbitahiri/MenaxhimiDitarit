@@ -140,5 +140,33 @@ namespace MenaxhimiDitarit
                     this.Close();
             }
         }
+
+        ToolTip toolTip = new ToolTip();
+
+        private void picRoomNo_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Class is required!", picRoomNo);
+        }
+
+        private void picRoomType_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Class is required!", picRoomType);
+        }
+
+        private void txtRoomNo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRoomNo.Text != null && txtRoomNo.Text.Length > 2)
+                picRoomNo.Visible = false;
+            else
+                picRoomNo.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtRoomType_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRoomType.Text != null && txtRoomType.Text.Length > 2)
+                picRoomType.Visible = false;
+            else
+                picRoomType.Image = Properties.Resources.icons8_cancel_15;
+        }
     }
 }

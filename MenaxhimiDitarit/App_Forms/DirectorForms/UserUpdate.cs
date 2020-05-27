@@ -20,6 +20,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly RoleBLL _roleBLL;
         private readonly List<Role> MyRoles;
 
+        ToolTip toolTip = new ToolTip();
+
         public UserUpdate(User user)
         {
             InitializeComponent();
@@ -129,6 +131,58 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
             if (expireDate < DateTime.Now)
                 MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
+                picLastName.Visible = false;
+            else
+                picLastName.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLastName.Text != null && txtLastName.Text.Length > 2)
+                picLastName.Visible = false;
+            else
+                picLastName.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbRoles.SelectedIndex != -1)
+                picRole.Visible = false;
+            else
+                picRole.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsername.Text != null && txtUsername.Text.Length > 2)
+                picUsername.Visible = false;
+            else
+                picUsername.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void picFirstName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picFirstName);
+        }
+
+        private void picLastName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picLastName);
+        }
+
+        private void picRole_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picRole);
+        }
+
+        private void picUsername_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picUsername);
         }
     }
 }

@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 256</value>
+    <value>274, 275</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -134,7 +134,7 @@
     <value>Zgjedh Datën</value>
   </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>234, 286</value>
+    <value>250, 346</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 16</value>
@@ -142,8 +142,17 @@
   <data name="lblContent.Text" xml:space="preserve">
     <value>Numri i Nxënësve</value>
   </data>
+  <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 166</value>
+  </data>
+  <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 16</value>
+  </data>
+  <data name="lblSelectClass.Text" xml:space="preserve">
+    <value>Zgjedh Klasën</value>
+  </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 217</value>
+    <value>265, 203</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 16</value>
@@ -151,14 +160,29 @@
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Zgjedh Lëndën</value>
   </data>
-  <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 180</value>
+  <data name="cmbReasoning.Items" xml:space="preserve">
+    <value>E Arsyeshme</value>
   </data>
-  <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+  <data name="cmbReasoning.Items1" xml:space="preserve">
+    <value>E Paarsyeshme</value>
   </data>
-  <data name="lblSelectClass.Text" xml:space="preserve">
-    <value>Zgjedh Klasën</value>
+  <data name="lblReasoning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 312</value>
+  </data>
+  <data name="lblReasoning.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="lblReasoning.Text" xml:space="preserve">
+    <value>Arsyetimi</value>
+  </data>
+  <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 240</value>
+  </data>
+  <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 16</value>
+  </data>
+  <data name="lblSelectTime.Text" xml:space="preserve">
+    <value>Zgjedh Orën</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

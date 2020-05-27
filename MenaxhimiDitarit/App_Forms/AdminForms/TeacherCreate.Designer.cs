@@ -58,22 +58,37 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.picFirstName = new System.Windows.Forms.PictureBox();
+            this.picLastName = new System.Windows.Forms.PictureBox();
+            this.picCity = new System.Windows.Forms.PictureBox();
+            this.picQualification = new System.Windows.Forms.PictureBox();
+            this.picEmail = new System.Windows.Forms.PictureBox();
+            this.picPhoneNo = new System.Windows.Forms.PictureBox();
             this.grbGender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQualification)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPhoneNo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // txtFirstName
             // 
-            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
+            this.txtFirstName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFirstName_KeyUp);
             // 
             // lblEmri
             // 
@@ -83,16 +98,19 @@
             // 
             // txtLastName
             // 
-            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.ForeColor = System.Drawing.Color.White;
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
+            this.txtLastName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLastName_KeyUp);
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // lblLastName
@@ -103,9 +121,9 @@
             // 
             // grbGender
             // 
-            resources.ApplyResources(this.grbGender, "grbGender");
             this.grbGender.Controls.Add(this.rbtnFemale);
             this.grbGender.Controls.Add(this.rbtnMale);
+            resources.ApplyResources(this.grbGender, "grbGender");
             this.grbGender.ForeColor = System.Drawing.Color.White;
             this.grbGender.Name = "grbGender";
             this.grbGender.TabStop = false;
@@ -132,17 +150,20 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // txtCity
             // 
-            resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.ForeColor = System.Drawing.Color.White;
             this.txtCity.Name = "txtCity";
+            this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
+            this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCity_KeyPress);
+            this.txtCity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyUp);
             // 
             // lblQualification
             // 
@@ -152,17 +173,18 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // txtQualification
             // 
-            resources.ApplyResources(this.txtQualification, "txtQualification");
             this.txtQualification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtQualification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtQualification, "txtQualification");
             this.txtQualification.ForeColor = System.Drawing.Color.White;
             this.txtQualification.Name = "txtQualification";
+            this.txtQualification.TextChanged += new System.EventHandler(this.txtQualification_TextChanged);
             // 
             // lblBirthday
             // 
@@ -172,8 +194,8 @@
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // dtpBirthday
@@ -192,17 +214,18 @@
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // txtEmail
             // 
-            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblPhoneNo
             // 
@@ -212,17 +235,18 @@
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // txtPhoneNo
             // 
-            resources.ApplyResources(this.txtPhoneNo, "txtPhoneNo");
             this.txtPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtPhoneNo, "txtPhoneNo");
             this.txtPhoneNo.ForeColor = System.Drawing.Color.White;
             this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.TextChanged += new System.EventHandler(this.txtPhoneNo_TextChanged);
             this.txtPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
             // lblID
@@ -233,25 +257,25 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -259,20 +283,74 @@
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // picFirstName
+            // 
+            this.picFirstName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picFirstName, "picFirstName");
+            this.picFirstName.Name = "picFirstName";
+            this.picFirstName.TabStop = false;
+            this.picFirstName.MouseHover += new System.EventHandler(this.picFirstName_MouseHover);
+            // 
+            // picLastName
+            // 
+            this.picLastName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picLastName, "picLastName");
+            this.picLastName.Name = "picLastName";
+            this.picLastName.TabStop = false;
+            this.picLastName.MouseHover += new System.EventHandler(this.picLastName_MouseHover);
+            // 
+            // picCity
+            // 
+            this.picCity.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picCity, "picCity");
+            this.picCity.Name = "picCity";
+            this.picCity.TabStop = false;
+            this.picCity.MouseHover += new System.EventHandler(this.picCity_MouseHover);
+            // 
+            // picQualification
+            // 
+            this.picQualification.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picQualification, "picQualification");
+            this.picQualification.Name = "picQualification";
+            this.picQualification.TabStop = false;
+            this.picQualification.MouseHover += new System.EventHandler(this.picQualification_MouseHover);
+            // 
+            // picEmail
+            // 
+            this.picEmail.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picEmail, "picEmail");
+            this.picEmail.Name = "picEmail";
+            this.picEmail.TabStop = false;
+            this.picEmail.MouseHover += new System.EventHandler(this.picEmail_MouseHover);
+            // 
+            // picPhoneNo
+            // 
+            this.picPhoneNo.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picPhoneNo, "picPhoneNo");
+            this.picPhoneNo.Name = "picPhoneNo";
+            this.picPhoneNo.TabStop = false;
+            this.picPhoneNo.MouseHover += new System.EventHandler(this.picPhoneNo_MouseHover);
             // 
             // TeacherCreate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.picPhoneNo);
+            this.Controls.Add(this.picEmail);
+            this.Controls.Add(this.picQualification);
+            this.Controls.Add(this.picCity);
+            this.Controls.Add(this.picLastName);
+            this.Controls.Add(this.picFirstName);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblID);
@@ -302,8 +380,15 @@
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherCreate";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeacherCreate_FormClosing);
             this.grbGender.ResumeLayout(false);
             this.grbGender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picQualification)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPhoneNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +425,11 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.PictureBox picFirstName;
+        private System.Windows.Forms.PictureBox picLastName;
+        private System.Windows.Forms.PictureBox picCity;
+        private System.Windows.Forms.PictureBox picQualification;
+        private System.Windows.Forms.PictureBox picEmail;
+        private System.Windows.Forms.PictureBox picPhoneNo;
     }
 }

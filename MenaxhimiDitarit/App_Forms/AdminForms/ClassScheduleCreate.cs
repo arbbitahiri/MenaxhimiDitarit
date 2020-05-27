@@ -26,6 +26,8 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;
 
+        ToolTip toolTip = new ToolTip();
+
         public ClassScheduleCreate()
         {
             InitializeComponent();
@@ -178,6 +180,58 @@ namespace MenaxhimiDitarit.AdminForms
                 if (result == DialogResult.Yes)
                     this.Close();
             }
+        }
+
+        private void picClass_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a class!", picClass);
+        }
+
+        private void picSubject_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a subject!", picSubject);
+        }
+
+        private void picTime_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a time!", picTime);
+        }
+
+        private void picDate_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Please select a date!", picDate);
+        }
+
+        private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectClass.SelectedIndex != -1)
+                picClass.Visible = false;
+            else
+                picClass.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectSubject.SelectedIndex != -1)
+                picSubject.Visible = false;
+            else
+                picSubject.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectTime.SelectedIndex != -1)
+                picTime.Visible = false;
+            else
+                picTime.Image = Properties.Resources.icons8_cancel_15;
+        }
+
+        private void cmbSelectDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectDate.SelectedIndex != -1)
+                picDate.Visible = false;
+            else
+                picDate.Image = Properties.Resources.icons8_cancel_15;
         }
     }
 }

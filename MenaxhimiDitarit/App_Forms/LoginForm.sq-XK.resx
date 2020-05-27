@@ -131,13 +131,25 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="chbShowPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 323</value>
+    <value>486, 300</value>
   </data>
   <data name="chbShowPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 20</value>
   </data>
   <data name="chbShowPassword.Text" xml:space="preserve">
     <value>Shfaq Fjalëkalimin</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 16</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Gjuha</value>
+  </data>
+  <data name="cmbLanguage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 333</value>
+  </data>
+  <data name="cmbLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 24</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
