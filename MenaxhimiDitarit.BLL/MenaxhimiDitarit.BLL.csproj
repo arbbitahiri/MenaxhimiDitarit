@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbsenceBLL.cs" />
     <Compile Include="AdministrationBLL.cs" />
     <Compile Include="ClassBLL.cs" />
     <Compile Include="ClassScheduleBLL.cs" />

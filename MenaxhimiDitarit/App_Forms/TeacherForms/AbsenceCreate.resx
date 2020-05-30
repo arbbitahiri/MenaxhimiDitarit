@@ -128,35 +128,8 @@
   <data name="cmbSelectClass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="cmbSelectClass.Items" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cmbSelectClass.Items1" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cmbSelectClass.Items2" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="cmbSelectClass.Items3" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cmbSelectClass.Items4" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cmbSelectClass.Items5" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="cmbSelectClass.Items6" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cmbSelectClass.Items7" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="cmbSelectClass.Items8" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 163</value>
+    <value>375, 163</value>
   </data>
   <data name="cmbSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -244,7 +217,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 135</value>
+    <value>348, 135</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 16</value>
@@ -268,7 +241,7 @@
     <value>11</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 156</value>
+    <value>375, 156</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -292,7 +265,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 135</value>
+    <value>375, 135</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 15</value>
@@ -328,7 +301,7 @@
     <value>Off</value>
   </data>
   <data name="dtpSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 274</value>
+    <value>375, 274</value>
   </data>
   <data name="dtpSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
@@ -355,7 +328,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 279</value>
+    <value>291, 279</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 16</value>
@@ -379,7 +352,7 @@
     <value>15</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 302</value>
+    <value>375, 302</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -406,7 +379,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 346</value>
+    <value>244, 346</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 16</value>
@@ -430,7 +403,7 @@
     <value>17</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 367</value>
+    <value>375, 367</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -457,7 +430,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 166</value>
+    <value>286, 166</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 16</value>
@@ -481,7 +454,7 @@
     <value>20</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 193</value>
+    <value>375, 193</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -505,7 +478,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtNoStudents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 346</value>
+    <value>375, 346</value>
   </data>
   <data name="txtNoStudents.MaxLength" type="System.Int32, mscorlib">
     <value>2</value>
@@ -529,7 +502,7 @@
     <value>6</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 230</value>
+    <value>375, 230</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -559,7 +532,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 203</value>
+    <value>275, 203</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -589,7 +562,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 200</value>
+    <value>375, 200</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -622,7 +595,7 @@
     <value>Unreasonable</value>
   </data>
   <data name="cmbReasoning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 309</value>
+    <value>375, 309</value>
   </data>
   <data name="cmbReasoning.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -652,7 +625,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblReasoning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 312</value>
+    <value>295, 312</value>
   </data>
   <data name="lblReasoning.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 16</value>
@@ -676,7 +649,7 @@
     <value>4</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 339</value>
+    <value>375, 339</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -721,7 +694,7 @@
     <value>6</value>
   </data>
   <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 237</value>
+    <value>375, 237</value>
   </data>
   <data name="cmbSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -751,7 +724,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 240</value>
+    <value>289, 240</value>
   </data>
   <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 16</value>
@@ -775,7 +748,7 @@
     <value>1</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 267</value>
+    <value>375, 267</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>

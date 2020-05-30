@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IBaseConvertTopic.cs" />
+    <Compile Include="Interface\IBaseCRUDTopic.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="BaseAuditObject.cs" />
-    <Compile Include="Absence.cs" />
     <Compile Include="Topic.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Interface\IBaseConvert.cs" />

@@ -14,9 +14,9 @@ namespace MenaxhimiDitarit.TeacherForms
 {
     public partial class AbsenceCreate : Form
     {
-        private readonly AbsenceBLL _absenceBLL;
-        private Absence _absence;
-        private List<Absence> MyAbsences;
+        private readonly TopicBLL _absenceBLL;
+        private Topic _absence;
+        private List<Topic> MyAbsences;
 
         private bool update = false;
 
@@ -30,30 +30,28 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             InitializeComponent();
 
-            _absenceBLL = new AbsenceBLL();
+            _absenceBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
-            MyAbsences = _absenceBLL.GetAll();
+            MyAbsences = _absenceBLL.GetAllAbsence();
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
 
             update = false;
 
-            MyAbsences = _absenceBLL.GetAll();
-
             CustomizeDesign();
         }
 
-        public AbsenceCreate(Absence absence)
+        public AbsenceCreate(Topic absence)
         {
             InitializeComponent();
 
-            _absenceBLL = new AbsenceBLL();
+            _absenceBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
 
-            MyAbsences = _absenceBLL.GetAll();
+            MyAbsences = _absenceBLL.GetAllAbsence();
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
 
@@ -74,12 +72,12 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
-        private void PopulateForm(Absence absence)
+        private void PopulateForm(Topic absence)
         {
-            txtID.Text = absence.AbsencesID.ToString();
-            cmbSelectClass.SelectedItem = MyClasses.FirstOrDefault(f => f.ClassID == absence.Topic.ClassID);
-            cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == absence.Topic.SubjectID);
-            dtpSelectDate.Value = absence.Topic.Date;
+            txtID.Text = absence.TopicID.ToString();
+            cmbSelectClass.SelectedItem = MyClasses.FirstOrDefault(f => f.ClassID == absence.ClassID);
+            cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == absence.SubjectID);
+            dtpSelectDate.Value = absence.Date;
             txtNoStudents.Text = absence.NoStudents.ToString();
         }
 
@@ -104,15 +102,15 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 if (CheckTextbox())
                 {
-                    Absence absence = new Absence();
+                    Topic absence = new Topic();
 
-                    absence.AbsencesID = int.Parse(txtID.Text);
-                    absence.TopicID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                    absence.Reasoning = cmbReasoning.SelectedValue.ToString();
+                    absence.TopicID = int.Parse(txtID.Text);
+                    absence.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
+                    absence.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
+                    absence.Reasoning = cmbReasoning.SelectedItem.ToString();
                     absence.NoStudents = int.Parse(txtNoStudents.Text);
-                    absence.Topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                    absence.Topic.Class.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                    absence.Topic.Date = dtpSelectDate.Value;
+                    absence.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
+                    absence.Date = dtpSelectDate.Value;
                     absence.InsertBy = UserSession.GetUser.UserName;
                     absence.LUB = UserSession.GetUser.UserName;
 
@@ -123,17 +121,16 @@ namespace MenaxhimiDitarit.TeacherForms
 
                     if (!update)
                     {
-                        var checkAbsence = MyAbsences.Where(t => t.Topic.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
-                        && t.Topic.Class.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                        && t.Topic.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
+                        var checkAbsence = MyAbsences.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
+                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
 
                         if (checkAbsence.Count > 0)
-                            MessageBox.Show($"Absence exists for subject: {absence.Topic.Subject.SubjectTitle}" +
-                                $" in {absence.Topic.Time} hour for class {absence.Topic.Class.ClassNo}",
-                                "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"Absence exists for subject: {absence.Subject.SubjectTitle}" +
+                                $" in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
-                            bool isRegistred = _absenceBLL.Add(absence);
+                            bool isRegistred = _absenceBLL.AddAbsence(absence);
 
                             if (isRegistred)
                             {
@@ -146,7 +143,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                     else
                     {
-                        bool isUpdated = _absenceBLL.Add(absence);
+                        bool isUpdated = _absenceBLL.AddAbsence(absence);
 
                         if (isUpdated)
                         {

@@ -10,9 +10,9 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class TopicsDAL : IBaseCRUD<Topic>, IBaseConvert<Topic>
+    public class TopicsDAL : IBaseCRUDTopic<Topic>, IBaseConvertTopic<Topic>
     {
-        public bool Add(Topic model)
+        public bool AddTopic(Topic model)
         {
             try
             {
@@ -36,15 +36,14 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                string rerrr = e.Message;
 
                 return false;
             }
         }
 
-        public List<Topic> GetAll()
+        public List<Topic> GetAllTopic()
         {
             try
             {
@@ -59,7 +58,7 @@ namespace MenaxhimiDitarit.DAL
                             MyTopics = new List<Topic>();
                             while (reader.Read())
                             {
-                                var topic = ToObject(reader);
+                                var topic = ToObjectTopic(reader);
                                 if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
                                 {
                                     topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
@@ -80,7 +79,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Remove(int id)
+        public bool RemoveTopic(int id)
         {
             try
             {
@@ -103,7 +102,74 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Topic ToObject(SqlDataReader reader)
+        public bool AddAbsence(Topic model)
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Absence_Create";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "topicID", model.TopicID);
+                        DataConnection.AddParameter(command, "classID", model.ClassID);
+                        DataConnection.AddParameter(command, "subjectID", model.SubjectID);
+                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "time", model.Time);
+                        DataConnection.AddParameter(command, "absencereasoning", model.Reasoning);
+                        DataConnection.AddParameter(command, "nostudents_absence", model.NoStudents);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+        }
+
+        public List<Topic> GetAllAbsence()
+        {
+
+            try
+            {
+                List<Topic> MyTopics = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Absence_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            MyTopics = new List<Topic>();
+                            while (reader.Read())
+                            {
+                                var topic = ToObjectAbsence(reader);
+                                if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
+                                {
+                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                }
+                                MyTopics.Add(topic);
+                            }
+                        }
+                    }
+                }
+                return MyTopics;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public Topic ToObjectTopic(SqlDataReader reader)
         {
             try
             {
@@ -151,12 +217,79 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public Topic Get(int id)
+        public Topic ToObjectAbsence(SqlDataReader reader)
+        {
+            try
+            {
+                var topic = new Topic();
+
+                if (reader["TopicID"] != DBNull.Value)
+                    topic.TopicID = int.Parse(reader["TopicID"].ToString());
+
+                if (reader["ClassID"] != DBNull.Value)
+                    topic.ClassID = int.Parse(reader["ClassID"].ToString());
+
+                if (reader["SubjectID"] != DBNull.Value)
+                    topic.SubjectID = int.Parse(reader["SubjectID"].ToString());
+
+                if (reader["Date"] != DBNull.Value)
+                    topic.Date = DateTime.Parse(reader["Date"].ToString());
+
+                if (reader["Time"] != DBNull.Value)
+                    topic.Time = int.Parse(reader["Time"].ToString());
+
+                if (reader["AbsenceReasoning"] != DBNull.Value)
+                    topic.Reasoning = reader["AbsenceReasoning"].ToString();
+
+                if (reader["NoStudents_Absence"] != DBNull.Value)
+                    topic.NoStudents = int.Parse(reader["NoStudents_Absence"].ToString());
+
+                if (reader["InsertBy"] != DBNull.Value)
+                    topic.InsertBy = reader["InsertBy"].ToString();
+
+                if (reader["InsertDate"] != DBNull.Value)
+                    topic.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+
+                if (reader["LUB"] != DBNull.Value)
+                    topic.LUB = reader["LUB"].ToString();
+
+                if (reader["LUD"] != DBNull.Value)
+                    topic.LUD = DateTime.Parse(reader["LUD"].ToString());
+
+                if (reader["LUN"] != DBNull.Value)
+                    topic.LUN = int.Parse(reader["LUN"].ToString());
+
+                return topic;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public bool UpdateTopic(Topic model)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Topic model)
+        public Topic GetTopic(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveAbsence(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateAbsence(Topic model)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public Topic GetAbsence(int id)
         {
             throw new NotImplementedException();
         }

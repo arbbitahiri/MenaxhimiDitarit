@@ -43,7 +43,7 @@ namespace MenaxhimiDitarit.TeacherForms
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
             MySchedules = _scheduleBLL.GetAll();
-            MyTopics = _topicBLL.GetAll();
+            MyTopics = _topicBLL.GetAllTopic();
 
             CustomizeDesign();
         }
@@ -145,7 +145,7 @@ namespace MenaxhimiDitarit.TeacherForms
                                     "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             else
                             {
-                                bool isRegistred = _topicBLL.Add(topic);
+                                bool isRegistred = _topicBLL.AddTopic(topic);
 
                                 if (isRegistred)
                                 {
@@ -158,7 +158,7 @@ namespace MenaxhimiDitarit.TeacherForms
                         }
                         else
                         {
-                            bool isUpdated = _topicBLL.Add(topic);
+                            bool isUpdated = _topicBLL.AddTopic(topic);
 
                             if (isUpdated)
                             {

@@ -64,20 +64,13 @@
             // cmbSelectClass
             // 
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectClass.DataSource = this.bsrcTopic;
+            this.cmbSelectClass.DisplayMember = "Class";
             resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
-            this.cmbSelectClass.Items.AddRange(new object[] {
-            resources.GetString("cmbSelectClass.Items"),
-            resources.GetString("cmbSelectClass.Items1"),
-            resources.GetString("cmbSelectClass.Items2"),
-            resources.GetString("cmbSelectClass.Items3"),
-            resources.GetString("cmbSelectClass.Items4"),
-            resources.GetString("cmbSelectClass.Items5"),
-            resources.GetString("cmbSelectClass.Items6"),
-            resources.GetString("cmbSelectClass.Items7"),
-            resources.GetString("cmbSelectClass.Items8")});
             this.cmbSelectClass.Name = "cmbSelectClass";
+            this.cmbSelectClass.ValueMember = "ClassID";
             // 
             // btnSubmit
             // 

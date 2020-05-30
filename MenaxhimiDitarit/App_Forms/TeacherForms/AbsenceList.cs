@@ -14,23 +14,28 @@ namespace MenaxhimiDitarit.TeacherForms
 {
     public partial class AbsenceList : Form
     {
-        private readonly AbsenceBLL _absenceBLL;
-        private List<Absence> MyAbsences;
+        private readonly TopicBLL _absenceBLL;
+        private List<Topic> MyAbsences;
 
         public AbsenceList()
         {
             InitializeComponent();
 
-            _absenceBLL = new AbsenceBLL();
+            _absenceBLL = new TopicBLL();
         }
 
         private void RefreshList()
         {
-            MyAbsences = _absenceBLL.GetAll();
+            MyAbsences = _absenceBLL.GetAllAbsence();
             dgvAbsenceList.DataSource = MyAbsences;
         }
 
         private void AbsenceList_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
         {
             RefreshList();
         }

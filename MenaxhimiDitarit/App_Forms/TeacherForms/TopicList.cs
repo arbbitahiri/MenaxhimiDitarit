@@ -45,7 +45,7 @@ namespace MenaxhimiDitarit.TeacherForms
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
-            MyTopics = _topicBLL.GetAll();
+            MyTopics = _topicBLL.GetAllTopic();
             dgvTopicList.DataSource = MyTopics;
         }
 
@@ -152,7 +152,7 @@ namespace MenaxhimiDitarit.TeacherForms
                         if (MessageBox.Show($"Are you sure you want to delete?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
                             == DialogResult.OK)
                         {
-                            _topicBLL.Remove(topic.TopicID);
+                            _topicBLL.RemoveTopic(topic.TopicID);
                             MessageBox.Show("The selected topic has been deleted successfully!",
                                 "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             RefreshList();
