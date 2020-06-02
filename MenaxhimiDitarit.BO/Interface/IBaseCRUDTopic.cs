@@ -17,9 +17,14 @@ namespace MenaxhimiDitarit.BO.Interface
 
         bool AddAbsence(T model);
         bool UpdateAbsence(T model);
-        bool RemoveAbsence(int id);
 
         List<T> GetAllAbsence();
         T GetAbsence(int id);
+
+        bool AddComment(T model);
+        bool UpdateComment(T model);
+
+        List<T> GetAllComment();
+        T GetComment(int id);
     }
 }

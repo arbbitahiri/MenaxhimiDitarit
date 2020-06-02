@@ -46,7 +46,6 @@
     <Compile Include="Teacher.cs" />
     <Compile Include="BaseAuditObject.cs" />
     <Compile Include="Topic.cs" />
-    <Compile Include="Comment.cs" />
     <Compile Include="Interface\IBaseConvert.cs" />
     <Compile Include="Interface\IBaseCRUD.cs" />
     <Compile Include="Class.cs" />

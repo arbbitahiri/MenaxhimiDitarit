@@ -11,5 +11,6 @@ namespace MenaxhimiDitarit.BO.Interface
     {
         T ToObjectTopic(SqlDataReader reader);
         T ToObjectAbsence(SqlDataReader reader);
+        T ToObjectComment(SqlDataReader reader);
     }
 }

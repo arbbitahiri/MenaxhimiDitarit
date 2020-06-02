@@ -56,6 +56,8 @@
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvTeacherList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsTeacherContext.SuspendLayout();
@@ -123,7 +125,8 @@
             // cmsTeacherContext
             // 
             this.cmsTeacherContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem});
+            this.updateToolStripMenuItem,
+            this.exportToolStripMenuItem});
             this.cmsTeacherContext.Name = "cmsTeacherContext";
             resources.ApplyResources(this.cmsTeacherContext, "cmsTeacherContext");
             // 
@@ -266,11 +269,27 @@
             // 
             this.bsrcTeacherList.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            resources.ApplyResources(this.exportToolStripMenuItem, "exportToolStripMenuItem");
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnSearchTeachers_Click);
+            // 
             // TeacherList
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvTeacherList);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -300,5 +319,7 @@
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private Telerik.WinControls.UI.RadGridView dgvTeacherList;
         private System.Windows.Forms.BindingSource bsrcTeacherList;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

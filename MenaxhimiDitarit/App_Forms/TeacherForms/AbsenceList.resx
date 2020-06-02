@@ -121,6 +121,12 @@
     <value>292, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
+  </data>
+  <data name="updateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
   <data name="cmsAbsence.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 26</value>
   </data>
@@ -143,49 +149,40 @@
   <data name="dgvAbsenceList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
-  <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>TopicID</value>
   </data>
-  <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
-    <value>ClassID</value>
-  </data>
-  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
-    <value>SubjectID</value>
-  </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
     <value>Time</value>
   </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Content</value>
-  </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Reasoning</value>
   </data>
-  <data name="gridViewDecimalColumn11.HeaderText" xml:space="preserve">
-    <value>Number of Students</value>
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+    <value>No.</value>
   </data>
-  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Class</value>
   </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>InsertBy</value>
   </data>
-  <data name="gridViewDateTimeColumn5.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
     <value>InsertDate</value>
   </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>LUB</value>
   </data>
-  <data name="gridViewDateTimeColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
     <value>LUD</value>
   </data>
-  <data name="gridViewDecimalColumn12.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
     <value>LUN</value>
   </data>
   <metadata name="bsrcTopicAbsence.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -212,12 +209,6 @@
   </data>
   <data name="&gt;&gt;dgvAbsenceList.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="updateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Update</value>
   </data>
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

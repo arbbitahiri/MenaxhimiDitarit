@@ -229,7 +229,6 @@
             resources.ApplyResources(this.txtContent, "txtContent");
             this.txtContent.ForeColor = System.Drawing.Color.White;
             this.txtContent.Name = "txtContent";
-            this.txtContent.ReadOnly = true;
             this.txtContent.TextChanged += new System.EventHandler(this.txtContent_TextChanged);
             // 
             // picClass

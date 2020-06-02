@@ -131,6 +131,8 @@ namespace MenaxhimiDitarit.TeacherForms
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                     && t.Day == dtpSelectDate.Value.ToString("dddd")).ToList();
 
+                    //MessageBox.Show(dtpSelectDate.Value.ToString("dddd"));
+
                     if (checkSchedule.Count > 0)
                     {
                         if (!update)

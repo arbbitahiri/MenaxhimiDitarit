@@ -63,10 +63,10 @@
             // 
             // cmbSelectClass
             // 
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectClass.DataSource = this.bsrcTopic;
             this.cmbSelectClass.DisplayMember = "Class";
-            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
             this.cmbSelectClass.Name = "cmbSelectClass";
@@ -74,10 +74,10 @@
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -85,10 +85,10 @@
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -102,15 +102,15 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -130,8 +130,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel5.Name = "panel5";
             // 
             // lblContent
@@ -142,8 +142,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel3.Name = "panel3";
             // 
             // lblSelectClass
@@ -154,23 +154,23 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Name = "panel1";
             // 
             // txtNoStudents
             // 
+            resources.ApplyResources(this.txtNoStudents, "txtNoStudents");
             this.txtNoStudents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtNoStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtNoStudents, "txtNoStudents");
             this.txtNoStudents.ForeColor = System.Drawing.Color.White;
             this.txtNoStudents.Name = "txtNoStudents";
             this.txtNoStudents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNoStudents_KeyPress);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel2.Name = "panel2";
             // 
             // lblSelectSubject
@@ -181,10 +181,10 @@
             // 
             // cmbSelectSubject
             // 
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectSubject.DataSource = this.bsrcTopic;
             this.cmbSelectSubject.DisplayMember = "Subject";
-            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
             this.cmbSelectSubject.Name = "cmbSelectSubject";
@@ -192,8 +192,8 @@
             // 
             // cmbReasoning
             // 
-            this.cmbReasoning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             resources.ApplyResources(this.cmbReasoning, "cmbReasoning");
+            this.cmbReasoning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbReasoning.ForeColor = System.Drawing.Color.White;
             this.cmbReasoning.FormattingEnabled = true;
             this.cmbReasoning.Items.AddRange(new object[] {
@@ -209,14 +209,14 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel4.Name = "panel4";
             // 
             // cmbSelectTime
             // 
-            this.cmbSelectTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             resources.ApplyResources(this.cmbSelectTime, "cmbSelectTime");
+            this.cmbSelectTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectTime.ForeColor = System.Drawing.Color.White;
             this.cmbSelectTime.FormattingEnabled = true;
             this.cmbSelectTime.Items.AddRange(new object[] {
@@ -236,8 +236,8 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel6.Name = "panel6";
             // 
             // AbsenceCreate

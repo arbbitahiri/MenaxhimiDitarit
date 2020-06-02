@@ -123,37 +123,37 @@
   <data name="&gt;&gt;txtThursday4.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtThursday2.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
-    <value>panel11</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtTuesday1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 53</value>
+  </data>
+  <data name="&gt;&gt;txtThursday3.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtTuesday6.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="panel12.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 460</value>
   </data>
-  <data name="&gt;&gt;txtFriday2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="txtFriday3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 56</value>
+  </data>
+  <data name="txtMonday4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 56</value>
   </data>
   <data name="&gt;&gt;txtThursday4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblWednesday.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
+  <data name="txtThursday6.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
   </data>
-  <data name="&gt;&gt;txtFriday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtWednesday2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 56</value>
   </data>
-  <data name="lblWednesday.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtThursday2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 122</value>
-  </data>
-  <data name="&gt;&gt;txtMonday4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtTuesday3.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
   </data>
   <data name="&gt;&gt;txtWednesday6.Name" xml:space="preserve">
     <value>txtWednesday6</value>
@@ -167,6 +167,10 @@
   <data name="panel14.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 460</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtTuesday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="txtThursday6.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 56</value>
   </data>
@@ -176,21 +180,23 @@
   <data name="&gt;&gt;lblFriday.Name" xml:space="preserve">
     <value>lblFriday</value>
   </data>
-  <data name="&gt;&gt;txtFriday4.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="txtThursday3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 56</value>
+  </data>
+  <data name="txtFriday4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="lbl4.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 29</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtTuesday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="txtWednesday1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="txtThursday2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 122</value>
   </data>
   <data name="txtMonday1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtThursday1.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="txtThursday5.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -198,7 +204,7 @@
   <data name="txtThursday3.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 191</value>
   </data>
-  <data name="txtWednesday5.Multiline" type="System.Boolean, mscorlib">
+  <data name="txtTuesday5.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtThursday5.Location" type="System.Drawing.Point, System.Drawing">
@@ -210,8 +216,8 @@
   <data name="txtWednesday3.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 56</value>
   </data>
-  <data name="txtMonday5.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtTuesday5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 329</value>
   </data>
   <data name="txtTuesday1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -228,14 +234,20 @@
   <data name="txtFriday1.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtWednesday4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 260</value>
+  </data>
   <data name="&gt;&gt;txtMonday5.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtWednesday5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="txtTuesday5.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;txtMonday4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtFriday6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="&gt;&gt;txtWednesday3.Name" xml:space="preserve">
     <value>txtWednesday3</value>
@@ -273,11 +285,14 @@
   <data name="&gt;&gt;txtFriday1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 67</value>
+  <data name="txtMonday1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 56</value>
   </data>
   <data name="txtWednesday3.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="txtTuesday5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 56</value>
   </data>
   <data name="txtWednesday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -288,11 +303,14 @@
   <data name="&gt;&gt;txtFriday6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="txtMonday6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="lblThursday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtTuesday6.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="txtWednesday1.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 56</value>
@@ -312,8 +330,8 @@
   <data name="&gt;&gt;txtWednesday3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtWednesday5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblThursday.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="panel13.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -324,14 +342,17 @@
   <data name="lbl4.Text" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;txtFriday4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="txtThursday4.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 260</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>53</value>
   </data>
-  <data name="panel14.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
+  <data name="&gt;&gt;txtTuesday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblThursday.Text" xml:space="preserve">
     <value>Thursday</value>
@@ -345,8 +366,8 @@
   <data name="txtMonday1.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtFriday5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 329</value>
+  <data name="txtFriday3.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;txtMonday1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -357,20 +378,17 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="&gt;&gt;lblThursday.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="txtWednesday1.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
+  <data name="txtMonday6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 56</value>
   </data>
   <data name="&gt;&gt;lbl3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>52</value>
+  <data name="txtThursday6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>434, 398</value>
   </data>
   <data name="txtThursday4.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 56</value>
@@ -387,14 +405,8 @@
   <data name="txtWednesday3.Location" type="System.Drawing.Point, System.Drawing">
     <value>310, 191</value>
   </data>
-  <data name="txtThursday6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 460</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
+  <data name="txtTuesday2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 122</value>
   </data>
   <data name="&gt;&gt;txtThursday3.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -402,8 +414,11 @@
   <data name="&gt;&gt;txtFriday1.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="txtMonday6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 460</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>673, 463</value>
   </data>
   <data name="&gt;&gt;txtMonday2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -438,8 +453,8 @@
   <data name="&gt;&gt;lblMonday.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtTuesday3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 56</value>
   </data>
   <data name="txtFriday4.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -471,9 +486,6 @@
   <data name="txtMonday1.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 53</value>
   </data>
-  <data name="&gt;&gt;txtThursday2.Name" xml:space="preserve">
-    <value>txtThursday2</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -483,11 +495,14 @@
   <data name="&gt;&gt;txtMonday1.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <data name="&gt;&gt;txtWednesday5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;txtFriday5.Name" xml:space="preserve">
     <value>txtFriday5</value>
   </data>
-  <data name="txtFriday6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="lbl5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 343</value>
   </data>
   <data name="txtTuesday6.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
@@ -507,14 +522,14 @@
   <data name="txtMonday2.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 122</value>
   </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
+  <data name="lblTuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
-  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 4</value>
+  <data name="&gt;&gt;txtFriday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblFriday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -534,17 +549,17 @@
   <data name="&gt;&gt;txtWednesday4.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="txtWednesday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;lbl1.Name" xml:space="preserve">
     <value>lbl1</value>
   </data>
   <data name="&gt;&gt;txtMonday2.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="txtThursday3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 56</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtFriday2.Name" xml:space="preserve">
+    <value>txtFriday2</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -552,23 +567,23 @@
   <data name="txtFriday6.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 398</value>
   </data>
-  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="txtWednesday2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="lbl6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 18pt</value>
+  <data name="&gt;&gt;txtWednesday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFriday2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="txtThursday3.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="txtTuesday3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 56</value>
-  </data>
-  <data name="txtWednesday1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 53</value>
+  <data name="txtFriday1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 53</value>
   </data>
   <data name="lblFriday.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -576,14 +591,17 @@
   <data name="txtMonday3.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 191</value>
   </data>
-  <data name="txtTuesday2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 122</value>
+  <data name="txtFriday5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 329</value>
   </data>
   <data name="txtFriday2.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 122</value>
   </data>
   <data name="&gt;&gt;txtThursday5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
   </data>
   <data name="&gt;&gt;lbl3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -600,17 +618,14 @@
   <data name="&gt;&gt;panel14.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtWednesday6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 398</value>
+  <data name="&gt;&gt;txtThursday5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtTuesday1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 53</value>
+  <data name="&gt;&gt;txtFriday3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtMonday6.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 322</value>
+  <data name="&gt;&gt;txtThursday2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lbl5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
@@ -618,8 +633,8 @@
   <data name="&gt;&gt;panel8.Name" xml:space="preserve">
     <value>panel8</value>
   </data>
-  <data name="&gt;&gt;txtFriday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
   </data>
   <data name="txtWednesday1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -636,8 +651,11 @@
   <data name="txtTuesday5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;txtFriday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtThursday5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lbl6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
   </data>
   <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>177, 1</value>
@@ -645,11 +663,14 @@
   <data name="&gt;&gt;txtMonday3.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <data name="txtTuesday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
   <data name="&gt;&gt;txtMonday6.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="txtWednesday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="txtTuesday1.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="&gt;&gt;panel9.Name" xml:space="preserve">
     <value>panel9</value>
@@ -672,8 +693,8 @@
   <data name="&gt;&gt;txtWednesday5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtThursday6.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -693,8 +714,11 @@
   <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
     <value>427, 1</value>
   </data>
-  <data name="txtMonday4.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
+  <data name="&gt;&gt;txtWednesday5.Name" xml:space="preserve">
+    <value>txtWednesday5</value>
+  </data>
+  <data name="txtWednesday4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
     <value>$this</value>
@@ -702,20 +726,26 @@
   <data name="lbl6.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="txtWednesday4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 260</value>
+  <data name="panel14.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="lbl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 67</value>
   </data>
   <data name="&gt;&gt;txtThursday1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtTuesday6.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtMonday4.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
   </data>
-  <data name="txtTuesday3.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
+  <data name="txtTuesday3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 191</value>
   </data>
   <data name="txtThursday5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
+  </data>
+  <data name="&gt;&gt;txtTuesday3.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;txtTuesday6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -729,6 +759,9 @@
   <data name="txtTuesday2.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
+  <data name="txtMonday6.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
   <data name="txtTuesday4.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 56</value>
   </data>
@@ -741,20 +774,23 @@
   <data name="&gt;&gt;lbl6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtFriday2.ZOrder" xml:space="preserve">
+    <value>23</value>
   </data>
   <data name="&gt;&gt;txtTuesday6.Name" xml:space="preserve">
     <value>txtTuesday6</value>
   </data>
-  <data name="txtThursday1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
   </data>
-  <data name="txtTuesday1.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="txtMonday4.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lbl5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="txtFriday6.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
   </data>
   <data name="txtThursday5.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -771,20 +807,26 @@
   <data name="lbl6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
-    <value>btnClose</value>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>52</value>
   </data>
   <data name="&gt;&gt;txtFriday6.Name" xml:space="preserve">
     <value>txtFriday6</value>
   </data>
+  <data name="txtThursday2.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
   <data name="txtMonday3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtThursday6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl4.Name" xml:space="preserve">
-    <value>lbl4</value>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 322</value>
   </data>
   <data name="&gt;&gt;lblWednesday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -804,14 +846,14 @@
   <data name="&gt;&gt;panel14.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;txtThursday6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;txtTuesday4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl2.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="txtFriday3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 56</value>
   </data>
   <data name="lbl6.Text" xml:space="preserve">
     <value>6</value>
@@ -819,14 +861,11 @@
   <data name="&gt;&gt;lblTuesday.ZOrder" xml:space="preserve">
     <value>47</value>
   </data>
-  <data name="txtWednesday2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 56</value>
-  </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>51</value>
   </data>
-  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtMonday5.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 1</value>
@@ -858,6 +897,9 @@
   <data name="lblWednesday.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
+  </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 391</value>
   </data>
@@ -888,6 +930,9 @@
   <data name="&gt;&gt;txtTuesday2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="txtWednesday6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 398</value>
+  </data>
   <data name="&gt;&gt;txtWednesday4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -909,14 +954,8 @@
   <data name="lblMonday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;txtThursday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 1</value>
-  </data>
-  <data name="lbl4.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
   </data>
   <data name="lblMonday.Text" xml:space="preserve">
     <value>Monday</value>
@@ -935,9 +974,6 @@
   </data>
   <data name="txtMonday2.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 56</value>
-  </data>
-  <data name="txtTuesday5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
   </data>
   <data name="&gt;&gt;lblTuesday.Name" xml:space="preserve">
     <value>lblTuesday</value>
@@ -1942,26 +1978,26 @@
   <data name="&gt;&gt;txtThursday5.Name" xml:space="preserve">
     <value>txtThursday5</value>
   </data>
-  <data name="&gt;&gt;txtTuesday3.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtFriday2.Name" xml:space="preserve">
-    <value>txtFriday2</value>
+  <data name="&gt;&gt;txtFriday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtFriday3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="txtMonday6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 398</value>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
   </data>
-  <data name="txtTuesday5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 329</value>
+  <data name="lblWednesday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtThursday6.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;txtThursday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lbl2.Text" xml:space="preserve">
     <value>2</value>
@@ -1990,8 +2026,11 @@
   <data name="panel7.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="lblTuesday.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
+  <data name="&gt;&gt;panel15.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl4.Name" xml:space="preserve">
+    <value>lbl4</value>
   </data>
   <data name="&gt;&gt;panel14.Name" xml:space="preserve">
     <value>panel14</value>
@@ -2008,8 +2047,8 @@
   <data name="txtMonday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="txtMonday1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 56</value>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblMonday.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -2017,8 +2056,8 @@
   <data name="txtThursday1.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
   </data>
-  <data name="txtFriday1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 53</value>
+  <data name="txtTuesday1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="txtTuesday6.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 56</value>
@@ -2035,17 +2074,17 @@
   <data name="&gt;&gt;txtTuesday2.Name" xml:space="preserve">
     <value>txtTuesday2</value>
   </data>
-  <data name="&gt;&gt;txtFriday2.ZOrder" xml:space="preserve">
-    <value>23</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 115</value>
   </data>
-  <data name="txtTuesday5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 56</value>
-  </data>
-  <data name="txtTuesday3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 191</value>
+  <data name="&gt;&gt;lblMonday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel14.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="txtWednesday4.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
   </data>
   <data name="lbl1.Text" xml:space="preserve">
     <value>1</value>
@@ -2053,14 +2092,11 @@
   <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtWednesday4.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
+  <data name="&gt;&gt;txtTuesday1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtTuesday6.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel11.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2074,20 +2110,20 @@
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1, 460</value>
   </data>
-  <data name="&gt;&gt;txtWednesday1.Name" xml:space="preserve">
-    <value>txtWednesday1</value>
-  </data>
   <data name="lbl4.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 275</value>
   </data>
   <data name="&gt;&gt;txtTuesday3.Name" xml:space="preserve">
     <value>txtTuesday3</value>
   </data>
+  <data name="txtMonday6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 398</value>
+  </data>
   <data name="txtTuesday1.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 56</value>
   </data>
-  <data name="&gt;&gt;txtThursday5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtTuesday5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="&gt;&gt;txtMonday5.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2101,8 +2137,8 @@
   <data name="&gt;&gt;txtWednesday6.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;txtTuesday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtWednesday2.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="txtThursday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -2122,11 +2158,11 @@
   <data name="&gt;&gt;panel3.Name" xml:space="preserve">
     <value>panel3</value>
   </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;lbl2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>549, 1</value>
   </data>
   <data name="&gt;&gt;txtThursday6.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2134,14 +2170,11 @@
   <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="txtWednesday4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
   <data name="&gt;&gt;txtFriday4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtFriday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
@@ -2164,8 +2197,8 @@
   <data name="lblTuesday.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 20</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 115</value>
+  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblMonday.ZOrder" xml:space="preserve">
     <value>48</value>
@@ -2185,8 +2218,8 @@
   <data name="&gt;&gt;panel6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtWednesday5.Name" xml:space="preserve">
-    <value>txtWednesday5</value>
+  <data name="&gt;&gt;txtThursday1.ZOrder" xml:space="preserve">
+    <value>29</value>
   </data>
   <data name="txtTuesday3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2206,8 +2239,8 @@
   <data name="txtThursday2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="&gt;&gt;txtWednesday2.Name" xml:space="preserve">
+    <value>txtWednesday2</value>
   </data>
   <data name="&gt;&gt;panel7.Name" xml:space="preserve">
     <value>panel7</value>
@@ -2221,14 +2254,11 @@
   <data name="txtThursday1.Location" type="System.Drawing.Point, System.Drawing">
     <value>434, 53</value>
   </data>
-  <data name="&gt;&gt;lblWednesday.Name" xml:space="preserve">
-    <value>lblWednesday</value>
-  </data>
   <data name="txtWednesday6.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
   </data>
-  <data name="txtMonday6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 56</value>
+  <data name="lblWednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
   </data>
   <data name="&gt;&gt;panel8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2248,11 +2278,11 @@
   <data name="lblThursday.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
-    <value>36</value>
+  <data name="&gt;&gt;lblWednesday.Name" xml:space="preserve">
+    <value>lblWednesday</value>
   </data>
-  <data name="txtTuesday6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 398</value>
+  <data name="txtMonday3.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="txtTuesday2.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2263,14 +2293,14 @@
   <data name="&gt;&gt;txtFriday5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lbl5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtWednesday3.ZOrder" xml:space="preserve">
     <value>21</value>
-  </data>
-  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="txtThursday1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -2278,11 +2308,17 @@
   <data name="txtThursday5.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 56</value>
   </data>
+  <data name="txtMonday5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 329</value>
+  </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 1</value>
   </data>
-  <data name="txtTuesday3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="txtTuesday6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>184, 398</value>
+  </data>
+  <data name="&gt;&gt;lbl4.ZOrder" xml:space="preserve">
+    <value>41</value>
   </data>
   <data name="lbl3.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -2295,9 +2331,6 @@
   </data>
   <data name="&gt;&gt;txtMonday6.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
   </data>
   <data name="&gt;&gt;txtFriday5.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2313,6 +2346,12 @@
   </data>
   <data name="lbl1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="lbl6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 412</value>
+  </data>
+  <data name="txtMonday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
   </data>
   <data name="txtWednesday2.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
@@ -2332,14 +2371,11 @@
   <data name="panel12.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="txtThursday3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="&gt;&gt;lblThursday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtMonday5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;txtTuesday3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtFriday3.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 191</value>
@@ -2353,8 +2389,8 @@
   <data name="&gt;&gt;panel12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="txtMonday5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 329</value>
+  <data name="txtMonday2.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2362,8 +2398,8 @@
   <data name="&gt;&gt;panel15.Name" xml:space="preserve">
     <value>panel15</value>
   </data>
-  <data name="txtThursday5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="lblFriday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 46</value>
@@ -2404,9 +2440,6 @@
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;txtWednesday2.Name" xml:space="preserve">
-    <value>txtWednesday2</value>
-  </data>
   <data name="&gt;&gt;txtMonday6.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2415,6 +2448,9 @@
   </data>
   <data name="lblFriday.Text" xml:space="preserve">
     <value>Friday</value>
+  </data>
+  <data name="txtWednesday5.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;panel7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2425,11 +2461,8 @@
   <data name="&gt;&gt;txtWednesday1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblFriday.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>670, 1</value>
+  <data name="lblFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
   </data>
   <data name="lbl4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
@@ -2440,17 +2473,14 @@
   <data name="lbl1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="&gt;&gt;txtWednesday1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
   </data>
   <data name="txtMonday4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="txtMonday6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="&gt;&gt;txtTuesday6.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;txtWednesday6.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2458,14 +2488,11 @@
   <data name="&gt;&gt;txtFriday3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtTuesday1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
   <data name="panel13.Location" type="System.Drawing.Point, System.Drawing">
     <value>671, 1</value>
   </data>
-  <data name="lblFriday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+  <data name="txtWednesday1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lbl5.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 29</value>
@@ -2479,8 +2506,8 @@
   <data name="&gt;&gt;lbl6.Name" xml:space="preserve">
     <value>lbl6</value>
   </data>
-  <data name="txtMonday4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 56</value>
+  <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>549, 1</value>
   </data>
   <data name="&gt;&gt;panel5.Name" xml:space="preserve">
     <value>panel5</value>
@@ -2488,20 +2515,17 @@
   <data name="&gt;&gt;panel10.Name" xml:space="preserve">
     <value>panel10</value>
   </data>
-  <data name="&gt;&gt;txtThursday2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
   </data>
   <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtFriday1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 56</value>
+  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 1</value>
   </data>
-  <data name="lbl6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 412</value>
-  </data>
-  <data name="lbl5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 343</value>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>670, 1</value>
   </data>
   <data name="panel15.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
@@ -2509,17 +2533,14 @@
   <data name="txtWednesday3.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <data name="&gt;&gt;lblMonday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="lbl3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>673, 463</value>
+  <data name="txtFriday1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 56</value>
   </data>
-  <data name="txtFriday3.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;txtWednesday1.Name" xml:space="preserve">
+    <value>txtWednesday1</value>
   </data>
   <data name="txtThursday3.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -2533,17 +2554,14 @@
   <data name="txtThursday4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;txtThursday3.Name" xml:space="preserve">
-    <value>txtThursday3</value>
-  </data>
-  <data name="txtMonday2.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
+  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
+    <value>panel11</value>
   </data>
   <data name="panel15.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 1</value>
   </data>
-  <data name="txtFriday6.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
+  <data name="txtMonday3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 56</value>
   </data>
   <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2560,17 +2578,14 @@
   <data name="&gt;&gt;panel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl4.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtThursday3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="&gt;&gt;lblThursday.ZOrder" xml:space="preserve">
     <value>45</value>
   </data>
-  <data name="txtMonday3.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+    <value>36</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 184</value>
@@ -2581,8 +2596,8 @@
   <data name="&gt;&gt;txtFriday3.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="txtFriday4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
+  <data name="&gt;&gt;txtThursday3.Name" xml:space="preserve">
+    <value>txtThursday3</value>
   </data>
   <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -2593,14 +2608,11 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>53, 1</value>
   </data>
-  <data name="txtThursday6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 398</value>
-  </data>
   <data name="&gt;&gt;txtMonday3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtMonday4.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="txtWednesday1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 53</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>670, 1</value>
@@ -2611,17 +2623,14 @@
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 40</value>
   </data>
-  <data name="&gt;&gt;txtWednesday6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtWednesday2.ZOrder" xml:space="preserve">
-    <value>26</value>
+  <data name="&gt;&gt;txtThursday2.Name" xml:space="preserve">
+    <value>txtThursday2</value>
   </data>
   <data name="panel8.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="txtMonday3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 56</value>
+  <data name="&gt;&gt;lbl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="txtWednesday1.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -2635,8 +2644,8 @@
   <data name="lbl2.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 136</value>
   </data>
-  <data name="&gt;&gt;txtThursday1.ZOrder" xml:space="preserve">
-    <value>29</value>
+  <data name="&gt;&gt;txtWednesday6.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 460</value>
@@ -2646,12 +2655,6 @@
   </data>
   <data name="txtThursday4.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblThursday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 1</value>
   </data>
   <data name="lblMonday.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -2668,9 +2671,6 @@
   <data name="lbl3.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 205</value>
   </data>
-  <data name="&gt;&gt;lbl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="txtThursday2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
@@ -2686,8 +2686,8 @@
   <data name="&gt;&gt;lbl4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtThursday3.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="lbl4.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
   </data>
   <data name="txtFriday2.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 56</value>

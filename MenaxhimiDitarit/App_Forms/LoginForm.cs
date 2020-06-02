@@ -49,43 +49,48 @@ namespace MenaxhimiDitarit
 
             if (username.Trim() != "" && password != "")
             {
-                User user = AdministrationBLL.Login(username, password);
-
-                if (user != null)
+                if (cmbLanguage.SelectedIndex != -1)
                 {
-                    UserSession.GetUser = user;
+                    User user = AdministrationBLL.Login(username, password);
 
-                    if (user.ExpiresDate > DateTime.Now)
+                    if (user != null)
                     {
-                        if (user.RoleID == 1)
+                        UserSession.GetUser = user;
+
+                        if (user.ExpiresDate > DateTime.Now)
                         {
-                            AdminMain adminForm = new AdminMain();
-                            this.Hide();
-                            adminForm.StartPosition = FormStartPosition.CenterScreen;
-                            adminForm.ShowDialog();
-                        }
-                        else if (user.RoleID == 2)
-                        {
-                            TeacherMain teacherForm = new TeacherMain();
-                            this.Hide();
-                            teacherForm.StartPosition = FormStartPosition.CenterScreen;
-                            teacherForm.ShowDialog();
-                        }
-                        else if (user.RoleID == 4)
-                        {
-                            DirectorMain directorForm = new DirectorMain();
-                            this.Hide();
-                            directorForm.StartPosition = FormStartPosition.CenterScreen;
-                            directorForm.ShowDialog();
+                            if (user.RoleID == 1)
+                            {
+                                AdminMain adminForm = new AdminMain();
+                                this.Hide();
+                                adminForm.StartPosition = FormStartPosition.CenterScreen;
+                                adminForm.ShowDialog();
+                            }
+                            else if (user.RoleID == 2)
+                            {
+                                TeacherMain teacherForm = new TeacherMain();
+                                this.Hide();
+                                teacherForm.StartPosition = FormStartPosition.CenterScreen;
+                                teacherForm.ShowDialog();
+                            }
+                            else if (user.RoleID == 4)
+                            {
+                                DirectorMain directorForm = new DirectorMain();
+                                this.Hide();
+                                directorForm.StartPosition = FormStartPosition.CenterScreen;
+                                directorForm.ShowDialog();
+                            }
+                            else
+                                MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
-                            MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
-                        MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("Please fill your credentials!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
