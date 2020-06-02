@@ -13,7 +13,7 @@ namespace MenaxhimiDitarit
 {
     public partial class AdminMain : Form
     {
-        private Form activeForm = null;
+        private Form activeForm;
 
         public AdminMain()
         {
@@ -79,17 +79,6 @@ namespace MenaxhimiDitarit
 
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        private void ChildFormClosing(Form childForm)
-        {
-            childForm = new Form();
-            childForm.FormClosing += ChildForm_FormClosing;
-        }
-
-        private void ChildForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
         #endregion
 

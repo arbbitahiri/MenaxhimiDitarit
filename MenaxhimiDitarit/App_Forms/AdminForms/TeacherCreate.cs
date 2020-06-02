@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
+using System.Threading;
 
 namespace MenaxhimiDitarit
 {
@@ -102,7 +103,7 @@ namespace MenaxhimiDitarit
         }
 
         //Shikojme nese Email esht valid
-        private bool CheckEmail(string reg, TextBox textBox)
+        private bool IsValid(string reg, TextBox textBox)
         {
             Regex regex = new Regex(reg);
 
@@ -117,7 +118,8 @@ namespace MenaxhimiDitarit
         {
             try
             {
-                bool isEmail = CheckEmail(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+                bool isEmail = IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+                bool isPhone = IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
 
                 if (!isEmail)
                     MessageBox.Show("The email you entered is not valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -215,21 +217,14 @@ namespace MenaxhimiDitarit
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
-            {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //if (!CheckTextbox())
+            //{
+            //    var result = MessageBox.Show(this, "You have written something. Do you want to close?",
+            //        "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-        }
-
-        private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char c = e.KeyChar;
-            if (!char.IsDigit(c) && c != 8 && c != 32)
-                e.Handled = true;
+            //    if (result == DialogResult.Yes)
+            //        this.Close();
+            //}
         }
 
         private void dtpBirthday_CloseUp(object sender, EventArgs e)
@@ -262,155 +257,193 @@ namespace MenaxhimiDitarit
                 e.Handled = true;
         }
 
+        private void txtPhoneNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (!char.IsDigit(c) && c != 8 && c != 32)
+                e.Handled = true;
+        }
+
         private void TeacherCreate_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                if (!CheckTextbox())
+                if (!txtCity.Text.Equals(""))
                 {
                     var result = MessageBox.Show("You have something written, are you sure you want to exit?",
-                        "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
-                        e.Cancel = false;
-                    else if (result == DialogResult.No)
                         e.Cancel = true;
+                    else
+                        e.Cancel = false;
                 }
                 else
                     e.Cancel = true;
             }
         }
 
-        private void txtFirstName_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (txtFirstName.Text != "")
-            {
-                string firstName = txtFirstName.Text;
-                string fnToUpper = char.ToUpper(firstName[0]) + firstName.Substring(1);
-
-                txtFirstName.Text = fnToUpper;
-            }
-        }
-
-        private void txtLastName_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (txtLastName.Text != "")
-            {
-                string lastName = txtLastName.Text;
-                string lnToUpper = char.ToUpper(lastName[0]) + lastName.Substring(1);
-
-                txtLastName.Text = lnToUpper;
-            }
-        }
-
-        private void txtCity_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (txtCity.Text != "")
-            {
-                string city = txtCity.Text;
-                string cityToUpper = char.ToUpper(city[0]) + city.Substring(1);
-
-                txtCity.Text = cityToUpper;
-            }
-        }
-
         #region ErrorProviers
-        ToolTip toolTip = new ToolTip();
+        private readonly ToolTip toolTip = new ToolTip();
 
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("First name is required!", picFirstName);
+            if (txtFirstName.Text.Equals(""))
+                toolTip.Show("First name is required!", picFirstName);
+            else if (txtFirstName.Text.Length < 2)
+                toolTip.Show("First name is to short!", picFirstName);
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Last name is required!", picLastName);
+            if (txtLastName.Text.Equals(""))
+                toolTip.Show("Last name is required!", picLastName);
+            else if (txtLastName.Text.Length < 2)
+                toolTip.Show("Last name is to short!", picLastName);
         }
 
         private void picCity_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("City is required!", picCity);
+            if (txtCity.Text.Equals(""))
+                toolTip.Show("City is required!", picCity);
+            else if (txtCity.Text.Length < 2)
+                toolTip.Show("City is to short!", picCity);
         }
 
         private void picQualification_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Qualification is required!", picQualification);
+            if (txtQualification.Text.Equals(""))
+                toolTip.Show("Qualification is required!", picQualification);
+            else if (txtQualification.Text.Length < 4)
+                toolTip.Show("Qualification is to short!", picQualification);
         }
 
         private void picEmail_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("E-mail is required!", picEmail);
+            bool isEmail = IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+
+            if(txtEmail.Text.Equals(""))
+                toolTip.Show("E-mail is required!", picEmail);
+            else if (txtEmail.Text.Length < 10)
+                toolTip.Show("E-mail is to short!", picEmail);
+            else if (!isEmail)
+                toolTip.Show("E-mail is in wrong format!", picEmail);
         }
 
         private void picPhoneNo_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Phone number is required!", picPhoneNo);
+            bool isPhone = IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
+
+            if (txtPhoneNo.Text.Equals(""))
+                toolTip.Show("Phone number is required!", picPhoneNo);
+            else if(txtPhoneNo.Text.Length < 8)
+                toolTip.Show("Phone number is to short!", picPhoneNo);
+            else if(!isPhone)
+                toolTip.Show("Phone number is in wrong format!", picPhoneNo);
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
-            if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
-                picFirstName.Visible = false;
-            else
+            if (txtFirstName.Text.Length > 0)
             {
-                picFirstName.Image = Properties.Resources.icons8_cancel_15;
-                picFirstName.Visible = true;
+                Capitalize(txtFirstName);
             }
+
+            if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
+            {
+                picFirstName.Visible = false;
+            }
+            else
+                SetImageVisibility(picFirstName);
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
-            if (txtLastName.Text != null && txtLastName.Text.Length > 2)
-                picLastName.Visible = false;
-            else
+            if (txtLastName.Text.Length > 0)
             {
-                picLastName.Image = Properties.Resources.icons8_cancel_15;
-                picLastName.Visible = true;
+                Capitalize(txtLastName);
             }
+
+            if (txtLastName.Text != null && txtLastName.Text.Length > 2)
+            {
+                picLastName.Visible = false;
+            }
+            else
+                SetImageVisibility(picLastName);
         }
 
         private void txtCity_TextChanged(object sender, EventArgs e)
         {
-            if (txtCity.Text != null && txtCity.Text.Length > 2)
-                picCity.Visible = false;
-            else
+            if (txtCity.Text.Length > 0)
             {
-                picCity.Image = Properties.Resources.icons8_cancel_15;
-                picCity.Visible = true;
+                Capitalize(txtCity);
             }
+
+            if (txtCity.Text != null && txtCity.Text.Length > 3)
+            {
+                picCity.Visible = false;
+            }
+            else
+                SetImageVisibility(picCity);
         }
 
         private void txtQualification_TextChanged(object sender, EventArgs e)
         {
-            if (txtQualification.Text != null && txtQualification.Text.Length > 2)
-                picQualification.Visible = false;
-            else
+            if (txtQualification.Text.Length > 0)
             {
-                picQualification.Image = Properties.Resources.icons8_cancel_15;
-                picQualification.Visible = true;
+                Capitalize(txtQualification);
             }
+
+            if (txtQualification.Text != null && txtQualification.Text.Length > 4)
+            {
+                picQualification.Visible = false;
+            }
+            else
+                SetImageVisibility(picQualification);
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if (txtEmail.Text != null && txtEmail.Text.Length > 2)
-                picEmail.Visible = false;
-            else
+            bool isEmail = IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
+
+            if (txtEmail.Text != null && txtEmail.Text.Length > 10 && isEmail)
             {
-                picEmail.Image = Properties.Resources.icons8_cancel_15;
-                picEmail.Visible = true;
+                picEmail.Visible = false;
             }
+            else
+                SetImageVisibility(picEmail);
         }
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
         {
-            if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 2)
-                picPhoneNo.Visible = false;
-            else
+            bool isPhone = IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
+
+            if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 8 && isPhone)
             {
-                picPhoneNo.Image = Properties.Resources.icons8_cancel_15;
-                picPhoneNo.Visible = true;
+                picPhoneNo.Visible = false;
             }
+            else
+                SetImageVisibility(picPhoneNo);
+
+        }
+
+        private void Capitalize(TextBox textBox)
+        {
+            StringBuilder stringBuilder = new StringBuilder(textBox.Text.Length);
+            bool capitalize = true;
+            foreach (char c in textBox.Text)
+            {
+                stringBuilder.Append(capitalize ? char.ToUpper(c) : char.ToLower(c));
+                capitalize = !char.IsLetter(c);
+            }
+            textBox.Text = stringBuilder.ToString();
+            textBox.Select(textBox.Text.Length, 0);
+        }
+
+        private void SetImageVisibility(PictureBox pictureBox)
+        {
+            pictureBox.Image = Properties.Resources.icons8_cancel_15;
+            pictureBox.Visible = true;
         }
         #endregion
     }

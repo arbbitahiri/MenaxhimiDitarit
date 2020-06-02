@@ -88,7 +88,6 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
-            this.txtFirstName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFirstName_KeyUp);
             // 
             // lblEmri
             // 
@@ -105,7 +104,6 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
-            this.txtLastName.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLastName_KeyUp);
             // 
             // panel2
             // 
@@ -163,7 +161,6 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
             this.txtCity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCity_KeyPress);
-            this.txtCity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyUp);
             // 
             // lblQualification
             // 

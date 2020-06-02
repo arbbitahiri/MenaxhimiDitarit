@@ -112,8 +112,10 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        ClassCreate classUpdate = new ClassCreate(classes);
-                        classUpdate.StartPosition = FormStartPosition.CenterParent;
+                        ClassCreate classUpdate = new ClassCreate(classes)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         classUpdate.ShowDialog();
                     }
                 }
@@ -160,8 +162,10 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        ClassScheduler viewSchedule = new ClassScheduler(classes);
-                        viewSchedule.StartPosition = FormStartPosition.CenterParent;
+                        ClassScheduler viewSchedule = new ClassScheduler(classes)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         viewSchedule.ShowDialog();
                     }
                 }

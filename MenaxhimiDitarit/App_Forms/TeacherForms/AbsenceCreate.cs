@@ -126,12 +126,10 @@ namespace MenaxhimiDitarit.TeacherForms
                         && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                         && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
 
-                        OKCancel oK = new OKCancel("Exists", $"Absence exists for subject: {absence.Subject.SubjectTitle}" +
-                            $" in {absence.Time} hour for class {absence.Class.ClassNo}", Properties.Resources.icons8_book_20);
+
                         if (checkAbsence.Count > 0)
-                            oK.ShowDialog();
-                            //MessageBox.Show($"Absence exists for subject: {absence.Subject.SubjectTitle}" +
-                            //    $" in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"Absence exists for subject: {absence.Subject.SubjectTitle}" +
+                                $" in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
                             bool isRegistred = _absenceBLL.AddAbsence(absence);
