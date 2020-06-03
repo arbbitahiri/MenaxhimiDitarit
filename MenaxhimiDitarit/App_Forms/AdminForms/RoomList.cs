@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -53,10 +54,10 @@ namespace MenaxhimiDitarit.AdminForms
 
                 return room;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -91,15 +92,17 @@ namespace MenaxhimiDitarit.AdminForms
                         dgvRoomList.DataSource = findRoom;
                     }
                     else
-                        MessageBox.Show("Please write a room type!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please write a room type!", "Empty",
+                            "Ju lutem shkruani llojin e sallës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Room type does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Room type does not exist!", "Doesn't exist",
+                        "Lloji i sallës nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -114,8 +117,10 @@ namespace MenaxhimiDitarit.AdminForms
                     var room = GetRoom(dgvRoomList.Rows[row]);
                     if (room != null)
                     {
-                        RoomCreate roomUpdate = new RoomCreate(room);
-                        roomUpdate.StartPosition = FormStartPosition.CenterParent;
+                        RoomCreate roomUpdate = new RoomCreate(room)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         roomUpdate.ShowDialog();
                     }
                 }
@@ -134,18 +139,18 @@ namespace MenaxhimiDitarit.AdminForms
                     var room = GetRoom(dgvRoomList.Rows[row]);
                     if (room != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?",
-                            "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini sallën: {room.RoomNo} - {room.RoomType}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             _roomBLL.Remove(room.RoomID);
 
-                            MessageBox.Show($"Room: {room.RoomNo} has been deleted successfully!",
-                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
+                                $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                             RefreshList();
                         }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

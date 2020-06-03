@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -55,10 +56,10 @@ namespace MenaxhimiDitarit
 
                 return subject;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -95,18 +96,20 @@ namespace MenaxhimiDitarit
                         dgvSubjectList.DataSource = findSubject;
                     }
                     else
-                        MessageBox.Show("Please write a subject title or a teacher name!!",
+                        Validation.MessageBoxShow("Please write a subject title or a teacher name!", "Empty",
+                            "Ju lutemi shkruani një lëndën ose një arsimtarë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    MessageBox.Show("Please write a subject title or a teacher name!!",
                             "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Subject title or teacher you're trying to search does not exist!!",
-                        "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    Validation.MessageBoxShow("Subject title or teacher you're trying to search does not exist!", "Doesn't exist",
+                        "Lënda ose arsimtari që po përpiqeni të kërkoni nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occured while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -143,18 +146,18 @@ namespace MenaxhimiDitarit
                     var subject = GetSubject(dgvSubjectList.Rows[row]);
                     if (subject != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {subject.SubjectTitle}?",
-                            "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete subject: {subject.SubjectTitle}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini lëndën: {subject.SubjectTitle}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             _subjectBLL.Remove(subject.SubjectID);
 
-                            MessageBox.Show($"Subject {subject.SubjectTitle} has been deleted successfully!",
-                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted",
+                                $"Lënda: {subject.SubjectTitle} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                             RefreshList();
                         }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

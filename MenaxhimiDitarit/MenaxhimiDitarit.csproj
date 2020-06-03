@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\TranslateForm.cs" />
+    <Compile Include="App_Code\Validation.cs" />
     <Compile Include="App_Forms\AdminForms\AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,18 +173,6 @@
     </Compile>
     <Compile Include="App_Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="App_Forms\MessageBoxes\OKCancel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="App_Forms\MessageBoxes\OKCancel.Designer.cs">
-      <DependentUpon>OKCancel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="App_Forms\MessageBoxes\YesNo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="App_Forms\MessageBoxes\YesNo.Designer.cs">
-      <DependentUpon>YesNo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -378,15 +367,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\LoginForm.sq-XK.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Forms\MessageBoxes\OKCancel.resx">
-      <DependentUpon>OKCancel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Forms\MessageBoxes\YesNo.resx">
-      <DependentUpon>YesNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Forms\MessageBoxes\YesNo.sq-XK.resx">
-      <DependentUpon>YesNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\TeacherForms\AbsenceCreate.sq-XK.resx">
       <DependentUpon>AbsenceCreate.cs</DependentUpon>

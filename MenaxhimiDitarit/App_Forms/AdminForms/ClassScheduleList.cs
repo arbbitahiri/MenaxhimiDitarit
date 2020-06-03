@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -34,6 +35,7 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
+        #region Metodat
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
@@ -63,13 +65,14 @@ namespace MenaxhimiDitarit.AdminForms
 
                 return schedule;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
+        #endregion
 
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,8 +85,10 @@ namespace MenaxhimiDitarit.AdminForms
                     var schedule = GetSchedule(dgvScheduleList.Rows[row]);
                     if (schedule != null)
                     {
-                        ClassScheduleCreate updateSchedule = new ClassScheduleCreate(schedule);
-                        updateSchedule.StartPosition = FormStartPosition.CenterParent;
+                        ClassScheduleCreate updateSchedule = new ClassScheduleCreate(schedule)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         updateSchedule.ShowDialog();
                     }
                 }
@@ -106,16 +111,18 @@ namespace MenaxhimiDitarit.AdminForms
                         dgvScheduleList.DataSource = findSchedule;
                     }
                     else
-                        MessageBox.Show("Please select class and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please select a class and a day!", "Empty",
+                            "Ju lutem zgjedheni një klasë dhe një datë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Schedule does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Schedule does not exist!", "Doesn't exist",
+                            "Orari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

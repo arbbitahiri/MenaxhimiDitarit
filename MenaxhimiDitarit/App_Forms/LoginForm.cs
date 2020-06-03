@@ -81,30 +81,21 @@ namespace MenaxhimiDitarit
                                 directorForm.ShowDialog();
                             }
                             else
-                                MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            {
+                                Validation.MessageBoxShow("You don't have access!", "Access denied",
+                                    "Ju nuk keni qasje!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {
-                            if (cmbLanguage.SelectedIndex == 0)
-                            {
-                                MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                            else if (cmbLanguage.SelectedIndex == 1)
-                            {
-                                MessageBox.Show("Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
+                            Validation.MessageBoxShow("Your user has expired!", "Access denied",
+                                    "Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        if (cmbLanguage.SelectedIndex == 0)
-                        {
-                            MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else if (cmbLanguage.SelectedIndex == 1)
-                        {
-                            MessageBox.Show("Nofka apo fjalëkalimi janë të gabuara!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        Validation.MessageBoxShow("Username or Password is incorrect!", "Incorrect",
+                                    "Nofka apo fjalëkalimi janë të gabuara!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -112,14 +103,16 @@ namespace MenaxhimiDitarit
             }
             else
                 MessageBox.Show("Ju lutem plotësoni të gjitha fushat!\nPlease fill your credentials!",
-                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
+            {
                 txtPassword.UseSystemPasswordChar = false;
+            }
             else
                 txtPassword.UseSystemPasswordChar = true;
         }
@@ -128,13 +121,17 @@ namespace MenaxhimiDitarit
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 btnLogin_Click(this, new EventArgs());
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text != "")
+            {
                 btnLogin.Enabled = true;
+            }
             else
                 btnLogin.Enabled = false;
         }
@@ -142,9 +139,13 @@ namespace MenaxhimiDitarit
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbLanguage.SelectedIndex == 0)
+            {
                 TranslateForm.ChangeLanguages("en-UK");
+            }
             else if (cmbLanguage.SelectedIndex == 1)
+            {
                 TranslateForm.ChangeLanguages("sq-XK");
+            }
         }
     }
 }

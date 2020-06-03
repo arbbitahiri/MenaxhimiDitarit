@@ -15,6 +15,23 @@ namespace MenaxhimiDitarit.App_Code
 {
     public class TranslateForm
     {
+        public static int checkLanguage = 0;
+        public static int CheckLanguage()
+        {
+            if (checkLanguage == 1)
+            {
+                return 1;
+            }
+            else if (checkLanguage == 2)
+            {
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         public static void ChangeLanguages(string langCode)
         {
             foreach (Form openForm in Application.OpenForms)
@@ -23,6 +40,19 @@ namespace MenaxhimiDitarit.App_Code
 
                 foreach (var openChildForm in openForm.MdiChildren)
                     ChangeLanguage(langCode, openChildForm);
+            }
+
+            if (langCode == "sq-XK")
+            {
+                checkLanguage = 1;
+            }
+            else if (langCode == "en-UK")
+            {
+                checkLanguage = 2;
+            }
+            else
+            {
+                checkLanguage = 0;
             }
         }
 
@@ -34,11 +64,13 @@ namespace MenaxhimiDitarit.App_Code
             ComponentResourceManager resources;
 
             if (actualForm.GetType() == typeof(AdminMain))
+            {
                 resources = new ComponentResourceManager(typeof(AdminMain));
-
+            }
             else if (actualForm.GetType() == typeof(TeacherMain))
+            {
                 resources = new ComponentResourceManager(typeof(TeacherMain));
-
+            }
             else
                 resources = new ComponentResourceManager(typeof(DirectorMain));
 
@@ -99,9 +131,8 @@ namespace MenaxhimiDitarit.App_Code
 
         public static void ToolStripItemTranslate(ToolStripItem item, CultureInfo cultureInfo, ComponentResourceManager resources)
         {
-            if (item is ToolStripMenuItem)
+            if (item is ToolStripMenuItem menuItem)
             {
-                var menuItem = (ToolStripMenuItem)item;
                 foreach (ToolStripItem toolStripItem in menuItem.DropDown.Items)
                 {
                     string text = resources.GetString(toolStripItem.Name + ".Text", cultureInfo);

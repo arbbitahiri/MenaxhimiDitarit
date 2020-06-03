@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -59,10 +60,10 @@ namespace MenaxhimiDitarit
 
                 return teacher;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -98,13 +99,18 @@ namespace MenaxhimiDitarit
                         dgvTeacherList.DataSource = findTeacher;
                     }
                     else
-                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                    Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
+                        "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

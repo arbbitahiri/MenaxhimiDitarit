@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.AdminForms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.App_Forms.AdminForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
@@ -29,6 +30,7 @@ namespace MenaxhimiDitarit
             _classBLL = new ClassBLL();
         }
 
+        #region Metodat
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
@@ -56,13 +58,14 @@ namespace MenaxhimiDitarit
 
                 return classes;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
+        #endregion
 
         private void btnViewAllClass_Click(object sender, EventArgs e)
         {
@@ -89,15 +92,17 @@ namespace MenaxhimiDitarit
                         dgvClassesList.DataSource = findClass;
                     }
                     else
-                        MessageBox.Show("Please write a class number!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please write a class number!", "Empty",
+                            "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Class number does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Class number does not exist!", "Doesn't exist",
+                            "Klasa nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -134,18 +139,17 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete class: {classes.ClassNo}?",
-                            "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete class: {classes.ClassNo}", "Sure?",
+                            $"A je i/e sigurt që do ta fshini klasën: {classes.ClassNo}", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
                             _classBLL.Remove(classes.ClassID);
 
-                            MessageBox.Show($"Class: {classes.ClassNo} has been deleted successfully!",
-                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow($"Class: {classes.ClassNo} has been deleted successfully!", "Deleted",
+                               $"Klasa: {classes.ClassNo} është fshirë me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
                         }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -180,15 +184,15 @@ namespace MenaxhimiDitarit
         private void txtSearchClass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 btnSearch_Click(this, new EventArgs());
+            }
         }
 
         //Lejon qe ne TextBox te shkruhet vetem numer dhe te mund te fshihet
         private void txtSearchClass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char c = e.KeyChar;
-            if (!Char.IsDigit(c) && c != 8)
-                e.Handled = true;
+            Validation.NoLetter(e);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -35,9 +36,9 @@ namespace MenaxhimiDitarit
 
             cmbTeacher.DataSource = MyTeachers;
 
-            CustomizeDesign();
-
             update = false;
+
+            txtID.Enabled = false;
         }
 
         public SubjectCreate(Subject subject)
@@ -57,14 +58,9 @@ namespace MenaxhimiDitarit
             txtSubjectTitle.Enabled = false;
 
             PopulateForm(_subject);
-            CustomizeDesign();
 
             cmbTeacher.DataSource = MyTeachers;
-        }
 
-        #region Metodat
-        private void CustomizeDesign()
-        {
             txtID.Enabled = false;
         }
 
@@ -78,25 +74,11 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
-        //Shikojme nese TextBox-at jane te mbushur me te dhena
-        private bool CheckTextbox()
-        {
-            foreach (Control ctrl in this.Controls) {
-                if (ctrl is TextBox) {
-                    TextBox txtb = ctrl as TextBox;
-                    if (txtb.Text == string.Empty)
-                        return false;
-                }
-            }
-            return true;
-        }
-        #endregion
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (CheckTextbox())
+                if (Validation.CheckTextbox(this))
                 {
                     Subject subject = new Subject
                     {
@@ -120,19 +102,21 @@ namespace MenaxhimiDitarit
                         var checkSubjects = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
                         if (checkSubjects.Count > 0)
-                            MessageBox.Show("Subject exists", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Validation.MessageBoxShow("Subject exists!", "Exists",
+                                "Lënda ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
                             bool isRegistred = _subjectBLL.Add(subject);
 
                             if (isRegistred)
                             {
-                                MessageBox.Show($"Subject: {subject.SubjectTitle} registred successfully",
-                                    "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow($"Subject: {subject.SubjectTitle} registred successfully", "Registered",
+                                    $"Lënda: {subject.SubjectTitle} u regjistrua me sukses", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
@@ -141,29 +125,32 @@ namespace MenaxhimiDitarit
 
                         if (isUpdated)
                         {
-                            MessageBox.Show($"Subject: {subject.SubjectTitle} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow($"Subject: {subject.SubjectTitle} updated", "Updated",
+                                $"Lënda: {subject.SubjectTitle} u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Validation.MessageBoxShow("Update failed!", "Error",
+                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
+            if (!Validation.CheckTextbox(this))
             {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
@@ -172,38 +159,36 @@ namespace MenaxhimiDitarit
 
         private void txtBookAuthor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char c = e.KeyChar;
-            if (char.IsDigit(c))
-                e.Handled = true;
+            Validation.NoNumber(e);
         }
 
         #region ErrorProvider
-        ToolTip toolTip = new ToolTip();
-
         private void picSubjectTitle_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("A title is required!", picSubjectTitle);
+            Validation.ToolTipShow("A title is required!", "Emri i lëndës duhet të plotësohet!", picSubjectTitle);
         }
 
         private void picBook_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("A book is required!", picBook);
+            Validation.ToolTipShow("A book is required!", "Një libër duhet të plotësohet!", picBook);
         }
 
         private void picBAuthor_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("An author is required!", picBAuthor);
+            Validation.ToolTipShow("An author is required!", "Autori i librit duhet të plotësohet!", picBAuthor);
         }
 
         private void picTeacher_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Please select a teacher!", picTeacher);
+            Validation.ToolTipShow("Please select a teacher!", "Zgjedh arsimtarin!", picTeacher);
         }
 
         private void txtSubjectTitle_TextChanged(object sender, EventArgs e)
         {
             if (txtSubjectTitle.Text != null && txtSubjectTitle.Text.Length > 2)
+            {
                 picSubjectTitle.Visible = false;
+            }
             else
                 picSubjectTitle.Image = Properties.Resources.icons8_cancel_15;
         }
@@ -211,7 +196,9 @@ namespace MenaxhimiDitarit
         private void txtSubjectBook_TextChanged(object sender, EventArgs e)
         {
             if (txtSubjectBook.Text != null && txtSubjectBook.Text.Length > 2)
+            {
                 picBook.Visible = false;
+            }
             else
                 picBook.Image = Properties.Resources.icons8_cancel_15;
         }
@@ -219,7 +206,9 @@ namespace MenaxhimiDitarit
         private void txtBookAuthor_TextChanged(object sender, EventArgs e)
         {
             if (txtBookAuthor.Text != null && txtBookAuthor.Text.Length > 2)
+            {
                 picBAuthor.Visible = false;
+            }
             else
                 picBAuthor.Image = Properties.Resources.icons8_cancel_15;
         }
@@ -227,7 +216,9 @@ namespace MenaxhimiDitarit
         private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbTeacher.SelectedIndex != -1)
+            {
                 picTeacher.Visible = false;
+            }
             else
                 picTeacher.Image = Properties.Resources.icons8_cancel_15;
         }
