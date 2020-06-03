@@ -84,16 +84,35 @@ namespace MenaxhimiDitarit
                                 MessageBox.Show("You don't have access!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
-                            MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        {
+                            if (cmbLanguage.SelectedIndex == 0)
+                            {
+                                MessageBox.Show("Your user has expired!", "Access denied!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            else if (cmbLanguage.SelectedIndex == 1)
+                            {
+                                MessageBox.Show("Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
                     }
                     else
-                        MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        if (cmbLanguage.SelectedIndex == 0)
+                        {
+                            MessageBox.Show("Username or Password is incorrect!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else if (cmbLanguage.SelectedIndex == 1)
+                        {
+                            MessageBox.Show("Nofka apo fjalëkalimi janë të gabuara!", "Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
-                    MessageBox.Show("Please choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ju lutem zgjidheni gjuhën!\nPlease choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                MessageBox.Show("Please fill your credentials!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ju lutem plotësoni të gjitha fushat!\nPlease fill your credentials!",
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         //Show/Hide Password

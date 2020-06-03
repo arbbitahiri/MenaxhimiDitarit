@@ -300,45 +300,67 @@ namespace MenaxhimiDitarit
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
             if (txtFirstName.Text.Equals(""))
+            {
                 toolTip.Show("First name is required!", picFirstName);
+            }
             else if (txtFirstName.Text.Length < 2)
+            {
                 toolTip.Show("First name is to short!", picFirstName);
+            }
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
             if (txtLastName.Text.Equals(""))
+            {
                 toolTip.Show("Last name is required!", picLastName);
+            }
             else if (txtLastName.Text.Length < 2)
+            {
                 toolTip.Show("Last name is to short!", picLastName);
+            }
         }
 
         private void picCity_MouseHover(object sender, EventArgs e)
         {
             if (txtCity.Text.Equals(""))
+            {
                 toolTip.Show("City is required!", picCity);
+            }
             else if (txtCity.Text.Length < 2)
+            {
                 toolTip.Show("City is to short!", picCity);
+            }
         }
 
         private void picQualification_MouseHover(object sender, EventArgs e)
         {
             if (txtQualification.Text.Equals(""))
+            {
                 toolTip.Show("Qualification is required!", picQualification);
+            }
             else if (txtQualification.Text.Length < 4)
+            {
                 toolTip.Show("Qualification is to short!", picQualification);
+            }
         }
 
         private void picEmail_MouseHover(object sender, EventArgs e)
         {
             bool isEmail = IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
 
-            if(txtEmail.Text.Equals(""))
-                toolTip.Show("E-mail is required!", picEmail);
+            if (txtEmail.Text.Equals(""))
+            {
+                toolTip.Show("E-mail is required! Please write in correct format:\nexample@gmail.com", picEmail);
+            }
             else if (txtEmail.Text.Length < 10)
-                toolTip.Show("E-mail is to short!", picEmail);
+            {
+                toolTip.Show("E-mail is to short! Please write in correct format:\nexample@gmail.com", picEmail);
+            }
             else if (!isEmail)
+            {
                 toolTip.Show("E-mail is in wrong format! Please write in correct format:\nexample@gmail.com", picEmail);
+            }
         }
 
         private void picPhoneNo_MouseHover(object sender, EventArgs e)
@@ -346,11 +368,17 @@ namespace MenaxhimiDitarit
             bool isPhone = IsValid(@"^(?:\(?)(\d{3})(?:[\)-\..\s]?)(\d{2})(?:[-\.\s]?)(\d{3})(?:[-\.\s]?)(\d{3})(?!\d)", txtPhoneNo);
 
             if (txtPhoneNo.Text.Equals(""))
-                toolTip.Show("Phone number is required!", picPhoneNo);
+            {
+                toolTip.Show("Phone number is required! Please write in correct format:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+            }
             else if(txtPhoneNo.Text.Length < 8)
-                toolTip.Show("Phone number is to short!", picPhoneNo);
-            else if(!isPhone)
+            {
+                toolTip.Show("Phone number is to short! Please write in correct format:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+            }
+            else if (!isPhone)
+            {
                 toolTip.Show("Phone number is in wrong format! Please write in correct format:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+            }
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
