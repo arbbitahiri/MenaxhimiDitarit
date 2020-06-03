@@ -26,8 +26,6 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly RoomBLL _roomBLL;
         private List<Room> MyRooms;
 
-        ToolTip toolTip = new ToolTip();
-
         public ClassCreate()
         {
             InitializeComponent();
@@ -103,14 +101,15 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 if (CheckComboBox())
                 {
-                    Class classes = new Class();
-
-                    classes.ClassID = int.Parse(txtID.Text);
-                    classes.TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString());
-                    classes.ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString());
-                    classes.RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString());
-                    classes.InsertBy = UserSession.GetUser.UserName;
-                    classes.LUB = UserSession.GetUser.UserName;
+                    Class classes = new Class
+                    {
+                        ClassID = int.Parse(txtID.Text),
+                        TeacherID = Convert.ToInt32(cmbMainTeacher.SelectedValue.ToString()),
+                        ClassNo = Convert.ToInt32(cmbSelectClass.SelectedItem.ToString()),
+                        RoomID = Convert.ToInt32(cmbSelectRoom.SelectedValue.ToString()),
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         classes.LUN++;
@@ -162,7 +161,7 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (cmbMainTeacher.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1 && cmbSelectRoom.SelectedIndex != -1)
+            if (cmbMainTeacher.SelectedIndex != -1 || cmbSelectClass.SelectedIndex != -1 || cmbSelectRoom.SelectedIndex != -1)
             {
                 var result = MessageBox.Show(this, "You have written something. Do you want to close?",
                     "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -171,6 +170,9 @@ namespace MenaxhimiDitarit.AdminForms
                     this.Close();
             }
         }
+
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
 
         private void picMainTeacher_MouseHover(object sender, EventArgs e)
         {
@@ -210,5 +212,6 @@ namespace MenaxhimiDitarit.AdminForms
             else
                 picRoom.Image = Properties.Resources.icons8_cancel_15;
         }
+        #endregion
     }
 }

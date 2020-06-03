@@ -73,13 +73,14 @@ namespace MenaxhimiDitarit
             {
                 if (CheckTextbox())
                 {
-                    Room room = new Room();
-
-                    room.RoomID = int.Parse(txtID.Text);
-                    room.RoomNo = int.Parse(txtRoomNo.Text);
-                    room.RoomType = txtRoomType.Text;
-                    room.InsertBy = UserSession.GetUser.UserName;
-                    room.LUB = UserSession.GetUser.UserName;
+                    Room room = new Room
+                    {
+                        RoomID = int.Parse(txtID.Text),
+                        RoomNo = int.Parse(txtRoomNo.Text),
+                        RoomType = txtRoomType.Text,
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         room.LUN++;
@@ -141,16 +142,17 @@ namespace MenaxhimiDitarit
             }
         }
 
+        #region ErrorProvider
         ToolTip toolTip = new ToolTip();
 
         private void picRoomNo_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Class is required!", picRoomNo);
+            toolTip.Show("Room number is required!", picRoomNo);
         }
 
         private void picRoomType_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Class is required!", picRoomType);
+            toolTip.Show("Room type is required!", picRoomType);
         }
 
         private void txtRoomNo_TextChanged(object sender, EventArgs e)
@@ -168,5 +170,6 @@ namespace MenaxhimiDitarit
             else
                 picRoomType.Image = Properties.Resources.icons8_cancel_15;
         }
+        #endregion
     }
 }

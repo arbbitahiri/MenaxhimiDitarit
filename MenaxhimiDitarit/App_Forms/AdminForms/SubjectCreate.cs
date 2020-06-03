@@ -98,15 +98,16 @@ namespace MenaxhimiDitarit
             {
                 if (CheckTextbox())
                 {
-                    Subject subject = new Subject();
-
-                    subject.SubjectID = int.Parse(txtID.Text);
-                    subject.SubjectTitle = txtSubjectTitle.Text;
-                    subject.Book = txtSubjectBook.Text;
-                    subject.Book_Author = txtBookAuthor.Text;
-                    subject.InsertBy = UserSession.GetUser.UserName;
-                    subject.LUB = UserSession.GetUser.UserName;
-                    subject.TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString());
+                    Subject subject = new Subject
+                    {
+                        SubjectID = int.Parse(txtID.Text),
+                        SubjectTitle = txtSubjectTitle.Text,
+                        Book = txtSubjectBook.Text,
+                        Book_Author = txtBookAuthor.Text,
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName,
+                        TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString())
+                    };
 
                     if (!update)
                         subject.LUN++;
@@ -169,6 +170,14 @@ namespace MenaxhimiDitarit
             }
         }
 
+        private void txtBookAuthor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (char.IsDigit(c))
+                e.Handled = true;
+        }
+
+        #region ErrorProvider
         ToolTip toolTip = new ToolTip();
 
         private void picSubjectTitle_MouseHover(object sender, EventArgs e)
@@ -222,5 +231,6 @@ namespace MenaxhimiDitarit
             else
                 picTeacher.Image = Properties.Resources.icons8_cancel_15;
         }
+        #endregion
     }
 }

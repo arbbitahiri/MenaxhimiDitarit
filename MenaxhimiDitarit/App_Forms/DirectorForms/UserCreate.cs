@@ -21,8 +21,6 @@ namespace MenaxhimiDitarit.DirectorForms
         private readonly RoleBLL _roleBLL;
         private List<Role> MyRoles;
 
-        ToolTip toolTip = new ToolTip();
-
         public UserCreate()
         {
             InitializeComponent();
@@ -86,17 +84,18 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     if (CheckTextbox())
                     {
-                        User user = new User();
-
-                        user.UserID = int.Parse(txtID.Text);
-                        user.FirstName = txtFirstName.Text;
-                        user.LastName = txtLastName.Text;
-                        user.ExpiresDate = dtpExpireDate.Value;
-                        user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
-                        user.UserName = txtUsername.Text;
-                        user.UserPassword = txtPassword.Text;
-                        user.InsertBy = UserSession.GetUser.UserName;
-                        user.LUB = UserSession.GetUser.UserName;
+                        User user = new User
+                        {
+                            UserID = int.Parse(txtID.Text),
+                            FirstName = txtFirstName.Text,
+                            LastName = txtLastName.Text,
+                            ExpiresDate = dtpExpireDate.Value,
+                            RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString()),
+                            UserName = txtUsername.Text,
+                            UserPassword = txtPassword.Text,
+                            InsertBy = UserSession.GetUser.UserName,
+                            LUB = UserSession.GetUser.UserName
+                        };
                         user.LUN++;
 
                         //Shikojme nese ekziston nje Username i till
@@ -147,6 +146,48 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
+        private void dtpExpireDate_CloseUp(object sender, EventArgs e)
+        {
+            DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
+
+            if (expireDate < DateTime.Now)
+                MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
+
+        private void picFirstName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("First name is required!", picFirstName);
+        }
+
+        private void picLastName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Last name is required!", picLastName);
+        }
+
+        private void picUsername_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Username is required!", picUsername);
+        }
+
+        private void picPassword_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Password is required!", picPassword);
+        }
+
+        private void picValidatePassword_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Password does not match!", picValidatePassword);
+        }
+
+        private void picRole_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picRole);
+        }
+
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == txtConfirmPass.Text)
@@ -194,44 +235,6 @@ namespace MenaxhimiDitarit.DirectorForms
             else
                 picPassword.Image = Properties.Resources.icons8_cancel_15;
         }
-
-        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
-        private void dtpExpireDate_CloseUp(object sender, EventArgs e)
-        {
-            DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
-
-            if (expireDate < DateTime.Now)
-                MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void picFirstName_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("First name is required!", picFirstName);
-        }
-
-        private void picLastName_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Last name is required!", picLastName);
-        }
-
-        private void picUsername_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Username is required!", picUsername);
-        }
-
-        private void picPassword_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Password is required!", picPassword);
-        }
-
-        private void picValidatePassword_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Password does not match!", picValidatePassword);
-        }
-
-        private void picRole_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Role is required!", picRole);
-        }
+        #endregion
     }
 }

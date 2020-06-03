@@ -26,8 +26,6 @@ namespace MenaxhimiDitarit.AdminForms
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;
 
-        ToolTip toolTip = new ToolTip();
-
         public ClassScheduleCreate()
         {
             InitializeComponent();
@@ -110,16 +108,17 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 if (CheckTextbox())
                 {
-                    ClassSchedule schedule = new ClassSchedule();
-
-                    schedule.ScheduleID = int.Parse(txtID.Text);
-                    schedule.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                    schedule.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                    schedule.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                    schedule.Day = cmbSelectDate.SelectedItem.ToString();
-                    schedule.Year = int.Parse(txtYear.Text);
-                    schedule.InsertBy = UserSession.GetUser.UserName;
-                    schedule.LUB = UserSession.GetUser.UserName;
+                    ClassSchedule schedule = new ClassSchedule
+                    {
+                        ScheduleID = int.Parse(txtID.Text),
+                        ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()),
+                        SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()),
+                        Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString()),
+                        Day = cmbSelectDate.SelectedItem.ToString(),
+                        Year = int.Parse(txtYear.Text),
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         schedule.LUN++;
@@ -182,6 +181,9 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
+
         private void picClass_MouseHover(object sender, EventArgs e)
         {
             toolTip.Show("Please select a class!", picClass);
@@ -233,5 +235,6 @@ namespace MenaxhimiDitarit.AdminForms
             else
                 picDate.Image = Properties.Resources.icons8_cancel_15;
         }
+        #endregion
     }
 }

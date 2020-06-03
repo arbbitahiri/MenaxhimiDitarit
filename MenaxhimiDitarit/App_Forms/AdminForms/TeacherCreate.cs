@@ -119,48 +119,71 @@ namespace MenaxhimiDitarit
             try
             {
                 bool isEmail = IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
-                bool isPhone = IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
+                bool isPhone = IsValid(@"^(?:\(?)(\d{3})(?:[\)-\..\s]?)(\d{2})(?:[-\.\s]?)(\d{3})(?:[-\.\s]?)(\d{3})(?!\d)", txtPhoneNo);
 
-                if (!isEmail)
-                    MessageBox.Show("The email you entered is not valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!isPhone)
+                {
+                    MessageBox.Show("The phone number you entered is not valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
-                    if (CheckTextbox())
+                    if (!isEmail)
                     {
-                        Teacher teacher = new Teacher();
-
-                        teacher.TeacherID = int.Parse(txtID.Text);
-                        teacher.FirstName = txtFirstName.Text;
-                        teacher.LastName = txtLastName.Text;
-                        teacher.Gender = GetSelectedRBTN();
-                        teacher.City = txtCity.Text;
-                        teacher.Qualification = txtQualification.Text;
-                        teacher.DayofBirth = dtpBirthday.Value.Date;
-                        teacher.Email = txtEmail.Text;
-                        teacher.PhoneNo = txtPhoneNo.Text;
-
-                        teacher.InsertBy = UserSession.GetUser.UserName;
-                        teacher.LUB = UserSession.GetUser.UserName;
-
-                        if (!update)
-                            teacher.LUN++;
-                        else if (update)
-                            teacher.LUN = ++_teacher.LUN;
-
-                        if (!update)
+                        MessageBox.Show("The email you entered is not valid!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (CheckTextbox())
                         {
-                            //Shikojme nese ekziston nje Emer i tille
-                            var checkTeacher = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
-
-                            if (checkTeacher.Count > 0)
+                            Teacher teacher = new Teacher
                             {
-                                if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
-                                    "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                TeacherID = int.Parse(txtID.Text),
+                                FirstName = txtFirstName.Text,
+                                LastName = txtLastName.Text,
+                                Gender = GetSelectedRBTN(),
+                                City = txtCity.Text,
+                                Qualification = txtQualification.Text,
+                                DayofBirth = dtpBirthday.Value.Date,
+                                Email = txtEmail.Text,
+                                PhoneNo = txtPhoneNo.Text,
+
+                                InsertBy = UserSession.GetUser.UserName,
+                                LUB = UserSession.GetUser.UserName
+                            };
+
+                            if (!update)
+                                teacher.LUN++;
+                            else if (update)
+                                teacher.LUN = ++_teacher.LUN;
+
+                            if (!update)
+                            {
+                                //Shikojme nese ekziston nje Emer i tille
+                                var checkTeacher = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
+
+                                if (checkTeacher.Count > 0)
                                 {
-                                    teacher = null;
-                                    update = false;
-                                    txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = "";
-                                    txtPhoneNo.Text = ""; txtQualification.Text = "";
+                                    if (MessageBox.Show($"There is already a teacher called {teacher.FirstName}. Do you want to continue?",
+                                        "Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                    {
+                                        teacher = null;
+                                        update = false;
+                                        txtCity.Text = ""; txtEmail.Text = ""; txtFirstName.Text = ""; txtLastName.Text = "";
+                                        txtPhoneNo.Text = ""; txtQualification.Text = "";
+                                    }
+                                    else
+                                    {
+                                        bool isRegistred = _teacherBLL.Add(teacher);
+
+                                        if (isRegistred)
+                                        {
+                                            MessageBox.Show($"Teacher {teacher.FullName} registred successfully",
+                                                "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                            this.Close();
+                                        }
+                                        else
+                                            MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                 }
                                 else
                                 {
@@ -178,35 +201,21 @@ namespace MenaxhimiDitarit
                             }
                             else
                             {
-                                bool isRegistred = _teacherBLL.Add(teacher);
+                                bool isUpdated = _teacherBLL.Add(teacher);
 
-                                if (isRegistred)
+                                if (isUpdated)
                                 {
-                                    MessageBox.Show($"Teacher {teacher.FullName} registred successfully",
-                                        "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show($"Teacher: {teacher.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else
-                                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
-                        {
-                            bool isUpdated = _teacherBLL.Add(teacher);
-
-                            if (isUpdated)
-                            {
-                                MessageBox.Show($"Teacher: {teacher.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
-                            }
-                            else
-                                MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                            MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else
-                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
             }
             catch (Exception ex)
             {
@@ -217,14 +226,14 @@ namespace MenaxhimiDitarit
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            //if (!CheckTextbox())
-            //{
-            //    var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-            //        "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (!CheckTextbox())
+            {
+                var result = MessageBox.Show(this, "you have written something. do you want to close?",
+                    "sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
 
-            //    if (result == DialogResult.Yes)
-            //        this.Close();
-            //}
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
 
         private void dtpBirthday_CloseUp(object sender, EventArgs e)
@@ -236,6 +245,7 @@ namespace MenaxhimiDitarit
                 MessageBox.Show("Teacher must be older than 18 years old!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        #region KeyPress
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             char c = e.KeyChar;
@@ -263,6 +273,7 @@ namespace MenaxhimiDitarit
             if (!char.IsDigit(c) && c != 8 && c != 32)
                 e.Handled = true;
         }
+        #endregion
 
         private void TeacherCreate_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -283,8 +294,8 @@ namespace MenaxhimiDitarit
             }
         }
 
-        #region ErrorProviers
-        private readonly ToolTip toolTip = new ToolTip();
+        #region ErrorProvier
+        ToolTip toolTip = new ToolTip();
 
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
@@ -327,19 +338,19 @@ namespace MenaxhimiDitarit
             else if (txtEmail.Text.Length < 10)
                 toolTip.Show("E-mail is to short!", picEmail);
             else if (!isEmail)
-                toolTip.Show("E-mail is in wrong format!", picEmail);
+                toolTip.Show("E-mail is in wrong format! Please write in correct format:\nexample@gmail.com", picEmail);
         }
 
         private void picPhoneNo_MouseHover(object sender, EventArgs e)
         {
-            bool isPhone = IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
+            bool isPhone = IsValid(@"^(?:\(?)(\d{3})(?:[\)-\..\s]?)(\d{2})(?:[-\.\s]?)(\d{3})(?:[-\.\s]?)(\d{3})(?!\d)", txtPhoneNo);
 
             if (txtPhoneNo.Text.Equals(""))
                 toolTip.Show("Phone number is required!", picPhoneNo);
             else if(txtPhoneNo.Text.Length < 8)
                 toolTip.Show("Phone number is to short!", picPhoneNo);
             else if(!isPhone)
-                toolTip.Show("Phone number is in wrong format!", picPhoneNo);
+                toolTip.Show("Phone number is in wrong format! Please write in correct format:\n555 55 555 555\n555-55-555-555", picPhoneNo);
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)

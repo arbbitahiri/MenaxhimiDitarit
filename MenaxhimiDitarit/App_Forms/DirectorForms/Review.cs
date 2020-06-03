@@ -12,24 +12,33 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 {
     public partial class Review : Form
     {
-        ToolTip toolTip = new ToolTip();
-
         public Review()
         {
             InitializeComponent();
         }
 
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
+
         private void picReview_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Class is required!", picReview);
+            if (txtReview.Text == null)
+            {
+                toolTip.Show("Review is required!", picReview);
+            }
+            else if (txtReview.Text.Length < 4)
+            {
+                toolTip.Show("Review is to short!", picReview);
+            }
         }
 
         private void txtReview_TextChanged(object sender, EventArgs e)
         {
-            if (txtReview.Text != null && txtReview.Text.Length > 2)
+            if (txtReview.Text != null && txtReview.Text.Length > 5)
                 picReview.Visible = false;
             else
                 picReview.Image = Properties.Resources.icons8_cancel_15;
         }
+        #endregion
     }
 }

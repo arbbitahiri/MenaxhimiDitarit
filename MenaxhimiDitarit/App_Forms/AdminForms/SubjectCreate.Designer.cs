@@ -142,6 +142,7 @@
             this.txtBookAuthor.ForeColor = System.Drawing.Color.White;
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.TextChanged += new System.EventHandler(this.txtBookAuthor_TextChanged);
+            this.txtBookAuthor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBookAuthor_KeyPress);
             // 
             // btnSubmit
             // 

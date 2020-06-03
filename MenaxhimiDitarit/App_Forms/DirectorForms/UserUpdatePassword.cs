@@ -17,8 +17,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly UserBLL _userBLL;
         private User _user;
 
-                ToolTip toolTip = new ToolTip();
-
         public UserUpdatePassword(User user)
         {
             InitializeComponent();
@@ -120,6 +118,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
+
         private void picPassword_MouseHover(object sender, EventArgs e)
         {
             toolTip.Show("Password is required!", picPassword);
@@ -158,6 +159,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             else
                 picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
         }
-
+        #endregion
     }
 }

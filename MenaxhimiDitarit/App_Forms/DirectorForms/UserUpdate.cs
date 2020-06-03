@@ -20,8 +20,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly RoleBLL _roleBLL;
         private readonly List<Role> MyRoles;
 
-        ToolTip toolTip = new ToolTip();
-
         public UserUpdate(User user)
         {
             InitializeComponent();
@@ -80,16 +78,17 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 {
                     if (CheckTextbox())
                     {
-                        User user = new User();
-
-                        user.UserID = int.Parse(txtID.Text);
-                        user.FirstName = txtFirstName.Text;
-                        user.LastName = txtLastName.Text;
-                        user.ExpiresDate = dtpExpireDate.Value;
-                        user.RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString());
-                        user.UserName = txtUsername.Text;
-                        user.LUB = UserSession.GetUser.UserName;
-                        user.LUN = ++_user.LUN;
+                        User user = new User
+                        {
+                            UserID = int.Parse(txtID.Text),
+                            FirstName = txtFirstName.Text,
+                            LastName = txtLastName.Text,
+                            ExpiresDate = dtpExpireDate.Value,
+                            RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString()),
+                            UserName = txtUsername.Text,
+                            LUB = UserSession.GetUser.UserName,
+                            LUN = ++_user.LUN
+                        };
 
                         bool isUpdated = _userBLL.Add(user);
 
@@ -133,6 +132,29 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        #region ErrorProvider
+        ToolTip toolTip = new ToolTip();
+
+        private void picFirstName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picFirstName);
+        }
+
+        private void picLastName_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picLastName);
+        }
+
+        private void picRole_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picRole);
+        }
+
+        private void picUsername_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.Show("Role is required!", picUsername);
+        }
+
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
@@ -159,30 +181,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsername.Text != null && txtUsername.Text.Length > 2)
+            if (txtUsername.Text != null && txtUsername.Text.Length > 3)
                 picUsername.Visible = false;
             else
                 picUsername.Image = Properties.Resources.icons8_cancel_15;
         }
-
-        private void picFirstName_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Role is required!", picFirstName);
-        }
-
-        private void picLastName_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Role is required!", picLastName);
-        }
-
-        private void picRole_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Role is required!", picRole);
-        }
-
-        private void picUsername_MouseHover(object sender, EventArgs e)
-        {
-            toolTip.Show("Role is required!", picUsername);
-        }
+        #endregion
     }
 }
