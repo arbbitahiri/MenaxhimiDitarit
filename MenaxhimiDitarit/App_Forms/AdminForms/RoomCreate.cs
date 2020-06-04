@@ -112,7 +112,6 @@ namespace MenaxhimiDitarit
                 else
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             catch (Exception)
             {

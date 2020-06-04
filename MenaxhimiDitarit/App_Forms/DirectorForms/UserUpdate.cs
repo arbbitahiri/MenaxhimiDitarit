@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -72,11 +73,13 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
                 if (expireDate < DateTime.Now)
-                    MessageBox.Show($"Expire date can't be from: {dtpExpireDate.Value}",
-                        "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    Validation.MessageBoxShow($"Expire date can't be from: {dtpExpireDate.Value}", "Error",
+                        $"Data e skadimit nuk mund të jetë nga {dtpExpireDate.Value}", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
-                    if (CheckTextbox())
+                    if (Validation.CheckTextbox(this))
                     {
                         User user = new User
                         {
@@ -94,29 +97,32 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                         if (isUpdated)
                         {
-                            MessageBox.Show($"User: {user.FullName} updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow($"User: {user.FullName} updated", "Updated",
+                                $"Përdoruesi: {user.FullName} u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Validation.MessageBoxShow("Update failed!", "Error",
+                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
-                        MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Validation.MessageBoxShow("Please fill all fields!", "Error",
+                            "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
+            if (!Validation.CheckTextbox(this))
             {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
@@ -129,30 +135,31 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
 
             if (expireDate < DateTime.Now)
-                MessageBox.Show("Can't select date from the past!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                Validation.MessageBoxShow("Invalid date. Please select a date that isn't in the past!", "Error",
+                    "Data e pavlefshme. Ju lutemi zgjidhni një datë që nuk është në të kaluarën!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         #region ErrorProvider
-        ToolTip toolTip = new ToolTip();
-
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Role is required!", picFirstName);
+            Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Role is required!", picLastName);
+            Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
         }
 
         private void picRole_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Role is required!", picRole);
+            Validation.ToolTipShow("Role is required!", "Roli duhet të plotësohet!", picRole);
         }
 
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Role is required!", picUsername);
+            Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)

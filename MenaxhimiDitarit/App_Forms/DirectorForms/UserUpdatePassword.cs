@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -33,29 +34,12 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
-        #region Metodat
         //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
             txtUsername.Text = user.UserName;
         }
-
-        //Shikojme nese TextBox-at jane te mbushur me te dhena
-        private bool CheckTextbox()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    TextBox txtb = ctrl as TextBox;
-                    if (txtb.Text == string.Empty)
-                        return false;
-                }
-            }
-            return true;
-        }
-        #endregion
 
         //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -76,7 +60,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             try
             {
-                if (CheckTextbox())
+                if (Validation.CheckTextbox(this))
                 {
                     User user = new User();
 
@@ -90,28 +74,31 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                     if (isUpdated)
                     {
-                        MessageBox.Show("Password changed successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Validation.MessageBoxShow("Password changed successfully!", "Updated",
+                            "Fjalëkalimi u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
-                        MessageBox.Show("Update failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Update failed!", "Error",
+                            "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
+            if (!Validation.CheckTextbox(this))
             {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
@@ -119,21 +106,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region ErrorProvider
-        ToolTip toolTip = new ToolTip();
-
         private void picPassword_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Password is required!", picPassword);
+            Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
         }
 
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Username is required!", picUsername);
+            Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
         }
 
         private void picValidatePassword_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Password does not match!", picValidatePassword);
+            Validation.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

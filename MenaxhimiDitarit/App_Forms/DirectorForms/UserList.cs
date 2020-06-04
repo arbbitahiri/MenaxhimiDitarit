@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.App_Forms.DirectorForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
@@ -61,10 +62,10 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 return user;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -95,15 +96,17 @@ namespace MenaxhimiDitarit.DirectorForms
                         dgvUserList.DataSource = findUsers;
                     }
                     else
-                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                            "Ju lutem shkruani emrin apo mbiemrin e përdoruesit!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("User does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("User does not exist!", "Doesn't exist",
+                        "Përdoruesi nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -141,19 +144,22 @@ namespace MenaxhimiDitarit.DirectorForms
                     if (user != null)
                     {
                         if (UserSession.GetUser.UserName == user.UserName)
-                            MessageBox.Show("You cannot delete your User Account", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            Validation.MessageBoxShow("You cannot delete your user account!", "Warning",
+                                "Nuk mund ta fshini llogarinë tënde!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         else
                         {
-                            if (MessageBox.Show($"Are you sure you want to delete {user.UserName}?", "Sure?",
-                                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                            var result = Validation.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
+                                $"A je i/e sigurt që do ta fshini përdoruesin: {user.UserName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                            if (result == DialogResult.Yes)
                             {
                                 _usersBLL.Remove(user.UserID);
-                                MessageBox.Show($"User: {user.UserName} has been deleted successfully!",
-                                    "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                Validation.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
+                                    $"Përdoruesi: {user.UserName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 RefreshList();
                             }
-                            else
-                                MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -171,8 +177,10 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
-                        MessageBox.Show($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}",
-                            "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    {
+                        Validation.MessageBoxShow($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}", "Password",
+                            $"Nofka:\t{user.UserName}\nFjalëkalimi:\t{user.UserPassword}?", "Fjalëkalimi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
@@ -188,8 +196,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     var user = GetUser(dgvUserList.Rows[row]);
                     if (user != null)
                     {
-                        UserUpdatePassword userChangePassword = new UserUpdatePassword(user);
-                        userChangePassword.StartPosition = FormStartPosition.CenterParent;
+                        UserUpdatePassword userChangePassword = new UserUpdatePassword(user)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         userChangePassword.ShowDialog();
                     }
                 }

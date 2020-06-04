@@ -147,7 +147,7 @@ namespace MenaxhimiDitarit.AdminForms
                             _roomBLL.Remove(room.RoomID);
 
                             Validation.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
-                                $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
                         }

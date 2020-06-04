@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -57,10 +58,10 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 return teacher;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -96,15 +97,17 @@ namespace MenaxhimiDitarit.DirectorForms
                         dgvTeacherListD.DataSource = findTeacher;
                     }
                     else
-                        MessageBox.Show("Please write a name!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Teacher does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
+                        "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -119,8 +122,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
                     if (teacher != null)
                     {
-                        TeacherCreate teacherUpdate = new TeacherCreate(teacher);
-                        teacherUpdate.StartPosition = FormStartPosition.CenterParent;
+                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
                         teacherUpdate.ShowDialog();
                     }
                 }
@@ -139,16 +144,18 @@ namespace MenaxhimiDitarit.DirectorForms
                     var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
                     if (teacher != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
-                            MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini: {teacher.FullName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
                         {
                             _teacherBLL.Remove(teacher.TeacherID);
-                            MessageBox.Show("The selected teacher has been deleted successfully!",
-                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Validation.MessageBoxShow($"Teacher: {teacher.FullName} has been deleted successfully!", "Deleted",
+                                $"Arsimtari: {teacher.FullName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             RefreshList();
                         }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

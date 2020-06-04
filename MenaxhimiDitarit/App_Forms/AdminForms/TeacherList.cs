@@ -105,7 +105,6 @@ namespace MenaxhimiDitarit
                 else
                     Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
                         "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             catch (Exception)
             {
