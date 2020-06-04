@@ -40,20 +40,20 @@ namespace MenaxhimiDitarit.DirectorForms
             {
                 Teacher teacher = new Teacher
                 {
-                    TeacherID = (int)teacherRow.Cells[0].Value,
-                    FirstName = (string)teacherRow.Cells[1].Value,
-                    LastName = (string)teacherRow.Cells[2].Value,
-                    Gender = (string)teacherRow.Cells[3].Value,
-                    City = (string)teacherRow.Cells[4].Value,
-                    Qualification = (string)teacherRow.Cells[5].Value,
-                    DayofBirth = (DateTime)teacherRow.Cells[6].Value,
-                    Email = (string)teacherRow.Cells[7].Value,
-                    PhoneNo = (string)teacherRow.Cells[8].Value,
-                    InsertBy = (string)teacherRow.Cells[10].Value,
-                    InsertDate = (DateTime)teacherRow.Cells[11].Value,
-                    LUB = (string)teacherRow.Cells[12].Value,
-                    LUD = (DateTime)teacherRow.Cells[13].Value,
-                    LUN = (int)teacherRow.Cells[14].Value
+                    TeacherID = (int)teacherRow.Cells["TeacherID"].Value,
+                    FirstName = (string)teacherRow.Cells["FirstName"].Value,
+                    LastName = (string)teacherRow.Cells["LastName"].Value,
+                    Gender = (string)teacherRow.Cells["Gender"].Value,
+                    City = (string)teacherRow.Cells["City"].Value,
+                    Qualification = (string)teacherRow.Cells["Qualification"].Value,
+                    DayofBirth = (DateTime)teacherRow.Cells["DayofBirth"].Value,
+                    Email = (string)teacherRow.Cells["Email"].Value,
+                    PhoneNo = (string)teacherRow.Cells["PhoneNo"].Value,
+                    InsertBy = (string)teacherRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)teacherRow.Cells["InsertDate"].Value,
+                    LUB = (string)teacherRow.Cells["LUB"].Value,
+                    LUD = (DateTime)teacherRow.Cells["LUD"].Value,
+                    LUN = (int)teacherRow.Cells["LUN"].Value
                 };
 
                 return teacher;

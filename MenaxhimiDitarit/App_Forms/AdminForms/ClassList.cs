@@ -45,15 +45,15 @@ namespace MenaxhimiDitarit
             {
                 Class classes = new Class
                 {
-                    ClassID = (int)classRow.Cells[0].Value,
-                    TeacherID = (int)classRow.Cells[1].Value,
-                    ClassNo = (int)classRow.Cells[2].Value,
-                    RoomID = (int)classRow.Cells[3].Value,
-                    InsertBy = (string)classRow.Cells[6].Value,
-                    InsertDate = (DateTime)classRow.Cells[7].Value,
-                    LUB = (string)classRow.Cells[8].Value,
-                    LUD = (DateTime)classRow.Cells[9].Value,
-                    LUN = (int)classRow.Cells[10].Value
+                    ClassID = (int)classRow.Cells["ClassID"].Value,
+                    TeacherID = (int)classRow.Cells["TeacherID"].Value,
+                    ClassNo = (int)classRow.Cells["ClassNo"].Value,
+                    RoomID = (int)classRow.Cells["RoomID"].Value,
+                    InsertBy = (string)classRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)classRow.Cells["InsertDate"].Value,
+                    LUB = (string)classRow.Cells["LUB"].Value,
+                    LUD = (DateTime)classRow.Cells["LUD"].Value,
+                    LUN = (int)classRow.Cells["LUN"].Value
                 };
 
                 return classes;

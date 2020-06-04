@@ -56,17 +56,17 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 Topic topic = new Topic
                 {
-                    TopicID = (int)topicRow.Cells[0].Value,
-                    ClassID = (int)topicRow.Cells[1].Value,
-                    SubjectID = (int)topicRow.Cells[2].Value,
-                    Date = (DateTime)topicRow.Cells[3].Value,
-                    Time = (int)topicRow.Cells[4].Value,
-                    Content = (string)topicRow.Cells[5].Value,
-                    InsertBy = (string)topicRow.Cells[8].Value,
-                    InsertDate = (DateTime)topicRow.Cells[9].Value,
-                    LUB = (string)topicRow.Cells[10].Value,
-                    LUD = (DateTime)topicRow.Cells[11].Value,
-                    LUN = (int)topicRow.Cells[12].Value
+                    TopicID = (int)topicRow.Cells["TopicID"].Value,
+                    ClassID = (int)topicRow.Cells["ClassID"].Value,
+                    SubjectID = (int)topicRow.Cells["SubjectID"].Value,
+                    Date = (DateTime)topicRow.Cells["Date"].Value,
+                    Time = (int)topicRow.Cells["Time"].Value,
+                    Content = (string)topicRow.Cells["Content"].Value,
+                    InsertBy = (string)topicRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)topicRow.Cells["InsertDate"].Value,
+                    LUB = (string)topicRow.Cells["LUB"].Value,
+                    LUD = (DateTime)topicRow.Cells["LUD"].Value,
+                    LUN = (int)topicRow.Cells["LUN"].Value
                 };
 
                 return topic;

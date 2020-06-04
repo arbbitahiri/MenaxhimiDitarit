@@ -43,21 +43,21 @@ namespace MenaxhimiDitarit.DirectorForms
             {
                 User user = new User
                 {
-                    UserID = (int)userRow.Cells[0].Value,
-                    FirstName = (string)userRow.Cells[1].Value,
-                    LastName = (string)userRow.Cells[2].Value,
-                    UserName = (string)userRow.Cells[3].Value,
-                    UserPassword = (string)userRow.Cells[4].Value,
-                    ExpiresDate = (DateTime)userRow.Cells[5].Value,
-                    RoleID = (int)userRow.Cells[6].Value,
-                    LastLoginDate = (DateTime)userRow.Cells[7].Value,
-                    LastPasswordChangeDate = (DateTime)userRow.Cells[8].Value,
-                    IsPasswordChanged = (bool)userRow.Cells[9].Value,
-                    InsertBy = (string)userRow.Cells[12].Value,
-                    InsertDate = (DateTime)userRow.Cells[13].Value,
-                    LUB = (string)userRow.Cells[14].Value,
-                    LUD = (DateTime)userRow.Cells[15].Value,
-                    LUN = (int)userRow.Cells[16].Value
+                    UserID = (int)userRow.Cells["UserID"].Value,
+                    FirstName = (string)userRow.Cells["FirstName"].Value,
+                    LastName = (string)userRow.Cells["LastName"].Value,
+                    UserName = (string)userRow.Cells["UserName"].Value,
+                    UserPassword = (string)userRow.Cells["UserPassword"].Value,
+                    ExpiresDate = (DateTime)userRow.Cells["ExpiresDate"].Value,
+                    RoleID = (int)userRow.Cells["RoleID"].Value,
+                    LastLoginDate = (DateTime)userRow.Cells["LastLoginDate"].Value,
+                    LastPasswordChangeDate = (DateTime)userRow.Cells["LastPasswordChangeDate"].Value,
+                    IsPasswordChanged = (bool)userRow.Cells["IsPasswordChanged"].Value,
+                    InsertBy = (string)userRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)userRow.Cells["InsertDate"].Value,
+                    LUB = (string)userRow.Cells["LUB"].Value,
+                    LUD = (DateTime)userRow.Cells["LUD"].Value,
+                    LUN = (int)userRow.Cells["LUN"].Value
                 };
 
                 return user;

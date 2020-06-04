@@ -38,12 +38,12 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 Topic absence = new Topic
                 {
-                    TopicID = (int)absenceRow.Cells[0].Value,
-                    ClassID = (int)absenceRow.Cells[1].Value,
-                    SubjectID = (int)absenceRow.Cells[2].Value,
-                    Date = (DateTime)absenceRow.Cells[3].Value,
-                    Time = (int)absenceRow.Cells[4].Value,
-                    Reasoning = (string)absenceRow.Cells[6].Value,
+                    TopicID = (int)absenceRow.Cells["TopicID"].Value,
+                    ClassID = (int)absenceRow.Cells["ClassID"].Value,
+                    SubjectID = (int)absenceRow.Cells["SubjectID"].Value,
+                    Date = (DateTime)absenceRow.Cells["Date"].Value,
+                    Time = (int)absenceRow.Cells["Time"].Value,
+                    Reasoning = (string)absenceRow.Cells["Reasoning"].Value,
                     NoStudents = (int)absenceRow.Cells["NoStudents"].Value,
                     InsertBy = (string)absenceRow.Cells["InsertBy"].Value,
                     InsertDate = (DateTime)absenceRow.Cells["InsertDate"].Value,

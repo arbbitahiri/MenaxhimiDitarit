@@ -42,14 +42,14 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 Room room = new Room
                 {
-                    RoomID = (int)roomRow.Cells[0].Value,
-                    RoomNo = (int)roomRow.Cells[1].Value,
-                    RoomType = (string)roomRow.Cells[2].Value,
-                    InsertBy = (string)roomRow.Cells[3].Value,
-                    InsertDate = (DateTime)roomRow.Cells[4].Value,
-                    LUB = (string)roomRow.Cells[5].Value,
-                    LUD = (DateTime)roomRow.Cells[6].Value,
-                    LUN = (int)roomRow.Cells[7].Value
+                    RoomID = (int)roomRow.Cells["RoomID"].Value,
+                    RoomNo = (int)roomRow.Cells["RoomNo"].Value,
+                    RoomType = (string)roomRow.Cells["RoomType"].Value,
+                    InsertBy = (string)roomRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)roomRow.Cells["InsertDate"].Value,
+                    LUB = (string)roomRow.Cells["LUB"].Value,
+                    LUD = (DateTime)roomRow.Cells["LUD"].Value,
+                    LUN = (int)roomRow.Cells["LUN"].Value
                 };
 
                 return room;

@@ -44,23 +44,23 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         //Mirren te dhenat nga rreshti i klikuar
-        private ClassSchedule GetSchedule(GridViewRowInfo classRow)
+        private ClassSchedule GetSchedule(GridViewRowInfo scheduleRow)
         {
             try
             {
                 ClassSchedule schedule = new ClassSchedule
                 {
-                    ScheduleID = (int)classRow.Cells[0].Value,
-                    ClassID = (int)classRow.Cells[1].Value,
-                    SubjectID = (int)classRow.Cells[2].Value,
-                    Time = (int)classRow.Cells[3].Value,
-                    Day = (string)classRow.Cells[4].Value,
-                    Year = (int)classRow.Cells[5].Value,
-                    InsertBy = (string)classRow.Cells[8].Value,
-                    InsertDate = (DateTime)classRow.Cells[9].Value,
-                    LUB = (string)classRow.Cells[10].Value,
-                    LUD = (DateTime)classRow.Cells[11].Value,
-                    LUN = (int)classRow.Cells[12].Value
+                    ScheduleID = (int)scheduleRow.Cells["ScheduleID"].Value,
+                    ClassID = (int)scheduleRow.Cells["ClassID"].Value,
+                    SubjectID = (int)scheduleRow.Cells["SubjectID"].Value,
+                    Time = (int)scheduleRow.Cells["Time"].Value,
+                    Day = (string)scheduleRow.Cells["Day"].Value,
+                    Year = (int)scheduleRow.Cells["Year"].Value,
+                    InsertBy = (string)scheduleRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)scheduleRow.Cells["InsertDate"].Value,
+                    LUB = (string)scheduleRow.Cells["LUB"].Value,
+                    LUD = (DateTime)scheduleRow.Cells["LUD"].Value,
+                    LUN = (int)scheduleRow.Cells["LUN"].Value
                 };
 
                 return schedule;

@@ -32,24 +32,24 @@ namespace MenaxhimiDitarit.TeacherForms
             dgvCommentList.DataSource = MyComments;
         }
 
-        private Topic GetComment(GridViewRowInfo topicRow)
+        private Topic GetComment(GridViewRowInfo commentRow)
         {
             try
             {
                 Topic comment = new Topic
                 {
-                    TopicID = (int)topicRow.Cells[0].Value,
-                    ClassID = (int)topicRow.Cells[1].Value,
-                    SubjectID = (int)topicRow.Cells[2].Value,
-                    Date = (DateTime)topicRow.Cells[3].Value,
-                    Time = (int)topicRow.Cells[4].Value,
-                    Comment = (string)topicRow.Cells["Comment"].Value,
-                    Review = (string)topicRow.Cells["Review"].Value,
-                    InsertBy = (string)topicRow.Cells["InsertBy"].Value,
-                    InsertDate = (DateTime)topicRow.Cells["InsertDate"].Value,
-                    LUB = (string)topicRow.Cells["LUB"].Value,
-                    LUD = (DateTime)topicRow.Cells["LUD"].Value,
-                    LUN = (int)topicRow.Cells["LUN"].Value
+                    TopicID = (int)commentRow.Cells["TopicID"].Value,
+                    ClassID = (int)commentRow.Cells["ClassID"].Value,
+                    SubjectID = (int)commentRow.Cells["SubjectID"].Value,
+                    Date = (DateTime)commentRow.Cells["Date"].Value,
+                    Time = (int)commentRow.Cells["Time"].Value,
+                    Comment = (string)commentRow.Cells["Comment"].Value,
+                    Review = (string)commentRow.Cells["Review"].Value,
+                    InsertBy = (string)commentRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)commentRow.Cells["InsertDate"].Value,
+                    LUB = (string)commentRow.Cells["LUB"].Value,
+                    LUD = (DateTime)commentRow.Cells["LUD"].Value,
+                    LUN = (int)commentRow.Cells["LUN"].Value
                 };
 
                 return comment;

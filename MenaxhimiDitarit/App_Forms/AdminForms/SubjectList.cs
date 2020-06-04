@@ -42,16 +42,16 @@ namespace MenaxhimiDitarit
             {
                 Subject subject = new Subject
                 {
-                    SubjectID = (int)subjectRow.Cells[0].Value,
-                    SubjectTitle = (string)subjectRow.Cells[1].Value,
-                    Book = (string)subjectRow.Cells[2].Value,
-                    Book_Author = (string)subjectRow.Cells[3].Value,
-                    TeacherID = (int)subjectRow.Cells[4].Value,
-                    InsertBy = (string)subjectRow.Cells[6].Value,
-                    InsertDate = (DateTime)subjectRow.Cells[7].Value,
-                    LUB = (string)subjectRow.Cells[8].Value,
-                    LUD = (DateTime)subjectRow.Cells[9].Value,
-                    LUN = (int)subjectRow.Cells[10].Value
+                    SubjectID = (int)subjectRow.Cells["SubjectID"].Value,
+                    SubjectTitle = (string)subjectRow.Cells["SubjectTitle"].Value,
+                    Book = (string)subjectRow.Cells["Book"].Value,
+                    Book_Author = (string)subjectRow.Cells["Book_Author"].Value,
+                    TeacherID = (int)subjectRow.Cells["TeacherID"].Value,
+                    InsertBy = (string)subjectRow.Cells["InsertBy"].Value,
+                    InsertDate = (DateTime)subjectRow.Cells["InsertDate"].Value,
+                    LUB = (string)subjectRow.Cells["LUB"].Value,
+                    LUD = (DateTime)subjectRow.Cells["LUD"].Value,
+                    LUN = (int)subjectRow.Cells["LUN"].Value
                 };
 
                 return subject;
