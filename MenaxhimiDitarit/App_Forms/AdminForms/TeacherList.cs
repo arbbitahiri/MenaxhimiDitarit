@@ -26,7 +26,43 @@ namespace MenaxhimiDitarit
             dgvTeacherList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _teacherBLL = new TeacherBLL();
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
@@ -68,10 +104,27 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void txtSearchName_Click(object sender, EventArgs e)
+        private void UpdateTeacher()
         {
-            txtSearchName.Clear();
+            if (dgvTeacherList.SelectedRows.Count > 0)
+            {
+                var row = dgvTeacherList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var teacher = GetTeacher(dgvTeacherList.Rows[row]);
+                    if (teacher != null)
+                    {
+                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        teacherUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
         }
+        #endregion
 
         private void TeacherListForm_Load(object sender, EventArgs e)
         {
@@ -120,23 +173,13 @@ namespace MenaxhimiDitarit
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvTeacherList.SelectedRows.Count > 0)
-            {
-                var row = dgvTeacherList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var teacher = GetTeacher(dgvTeacherList.Rows[row]);
-                    if (teacher != null)
-                    {
-                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        teacherUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateTeacher();
+        }
+
+        #region Search Textbox
+        private void txtSearchName_Click(object sender, EventArgs e)
+        {
+            txtSearchName.Clear();
         }
 
         private void txtSearchName_KeyDown(object sender, KeyEventArgs e)
@@ -144,5 +187,67 @@ namespace MenaxhimiDitarit
             if (e.KeyCode == Keys.Enter)
                 btnSearchTeachers_Click(this, new EventArgs());
         }
+
+        private void txtSearchName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
+
+        #region Menu
+        private void btnAddClass_Click(object sender, EventArgs e)
+        {
+            TeacherCreate addTeacher = new TeacherCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addTeacher.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateTeacher();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

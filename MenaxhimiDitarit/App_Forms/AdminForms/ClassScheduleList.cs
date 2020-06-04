@@ -14,6 +14,7 @@ using Telerik.WinControls.UI;
 
 namespace MenaxhimiDitarit.AdminForms
 {
+    //todo get(id) select all, view schedule
     public partial class ClassScheduletList : Form
     {
         private readonly ClassScheduleBLL _scheduleBLL;
@@ -33,9 +34,41 @@ namespace MenaxhimiDitarit.AdminForms
 
             MyClasses = _classBLL.GetAll();
             cmbSelectClass.DataSource = MyClasses;
+
+            CustomizeDesign();
         }
 
         #region Metodat
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
@@ -72,10 +105,8 @@ namespace MenaxhimiDitarit.AdminForms
                 return null;
             }
         }
-        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        private void UpdateSchedule()
         {
             if (dgvScheduleList.SelectedRows.Count > 0)
             {
@@ -93,6 +124,17 @@ namespace MenaxhimiDitarit.AdminForms
                     }
                 }
             }
+            RefreshList();
+        }
+        #endregion
+
+        private void ClassScheduletList_Load_1(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnViewAll_Click_1(object sender, EventArgs e)
+        {
             RefreshList();
         }
 
@@ -129,14 +171,66 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
-        private void ClassScheduletList_Load_1(object sender, EventArgs e)
+        //Update te dhenat per rreshtin e klikuar ne DataGrid
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RefreshList();
+            UpdateSchedule();
         }
 
-        private void btnViewAll_Click_1(object sender, EventArgs e)
+        #region Menu
+        private void btnAddClass_Click(object sender, EventArgs e)
         {
-            RefreshList();
+            ClassScheduleCreate addSchedule = new ClassScheduleCreate()
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addSchedule.ShowDialog();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateSchedule();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

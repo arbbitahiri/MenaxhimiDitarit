@@ -63,6 +63,26 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_new_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-new-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_book_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-book-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_book_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8_book_20", resourceCulture);
@@ -96,6 +116,26 @@ namespace MenaxhimiDitarit.Properties {
         internal static System.Drawing.Bitmap icons8_change_15 {
             get {
                 object obj = ResourceManager.GetObject("icons8_change_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_class_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-class-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_class_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-class-20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +203,29 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_trash_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-trash-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_trash_20__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_trash_20__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_pdf_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-export-pdf-20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +253,26 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_messaging_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-messaging-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_messaging_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-messaging-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_microsoft_admin_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8_microsoft_admin_100", resourceCulture);
@@ -213,6 +293,16 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_excel_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-excel-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_note_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8_note_25", resourceCulture);
@@ -226,6 +316,16 @@ namespace MenaxhimiDitarit.Properties {
         internal static System.Drawing.Bitmap icons8_ok_15 {
             get {
                 object obj = ResourceManager.GetObject("icons8_ok_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_outline_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-outline-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +353,39 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_people_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-people-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_people_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8_people_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-print-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_report_card_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-report-card-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +403,29 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_room_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-room-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_room_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8_room_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_schedule_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-schedule-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +513,16 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_teacher_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-teacher-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_teacher_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8_teacher_20", resourceCulture);
@@ -443,6 +603,16 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_update_left_rotation_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-left-rotation-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_100", resourceCulture);
@@ -457,6 +627,16 @@ namespace MenaxhimiDitarit.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8_user_100_u5j_icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_account_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-account-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

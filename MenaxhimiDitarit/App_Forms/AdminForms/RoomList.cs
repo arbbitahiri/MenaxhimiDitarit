@@ -28,6 +28,40 @@ namespace MenaxhimiDitarit.AdminForms
             _roomBLL = new RoomBLL();
         }
 
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
+
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
@@ -62,17 +96,62 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
-        private void txtSearchSubject_Click(object sender, EventArgs e)
+        private void DeleteRoom()
         {
-            txtSearchSubject.Text = "";
+            if (dgvRoomList.SelectedRows.Count > 0)
+            {
+                var row = dgvRoomList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var room = GetRoom(dgvRoomList.Rows[row]);
+                    if (room != null)
+                    {
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini sallën: {room.RoomNo} - {room.RoomType}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            _roomBLL.Remove(room.RoomID);
+
+                            Validation.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
+                                $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            RefreshList();
+                        }
+                    }
+                }
+            }
+            RefreshList();
         }
 
-        private void btnViewAllSubjects_Click(object sender, EventArgs e)
+        private void UpdateRoom()
+        {
+            if (dgvRoomList.SelectedRows.Count > 0)
+            {
+                var row = dgvRoomList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var room = GetRoom(dgvRoomList.Rows[row]);
+                    if (room != null)
+                    {
+                        RoomCreate roomUpdate = new RoomCreate(room)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        roomUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
+
+        private void RoomListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        private void RoomListForm_Load(object sender, EventArgs e)
+        private void btnViewAllSubjects_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
@@ -113,52 +192,19 @@ namespace MenaxhimiDitarit.AdminForms
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvRoomList.SelectedRows.Count > 0)
-            {
-                var row = dgvRoomList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var room = GetRoom(dgvRoomList.Rows[row]);
-                    if (room != null)
-                    {
-                        RoomCreate roomUpdate = new RoomCreate(room)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        roomUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateRoom();
         }
 
         //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvRoomList.SelectedRows.Count > 0)
-            {
-                var row = dgvRoomList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var room = GetRoom(dgvRoomList.Rows[row]);
-                    if (room != null)
-                    {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?",
-                            $"A je i/e sigurt që do ta fshini sallën: {room.RoomNo} - {room.RoomType}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DeleteRoom();
+        }
 
-                        if (result == DialogResult.Yes)
-                        {
-                            _roomBLL.Remove(room.RoomID);
-
-                            Validation.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
-                                $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            RefreshList();
-                        }
-                    }
-                }
-            }
-            RefreshList();
+        #region Search Textbox
+        private void txtSearchSubject_Click(object sender, EventArgs e)
+        {
+            txtSearchSubject.Text = "";
         }
 
         private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)
@@ -166,5 +212,73 @@ namespace MenaxhimiDitarit.AdminForms
             if (e.KeyCode == Keys.Enter)
                 btnSearchSubject_Click(this, new EventArgs());
         }
+
+        private void txtSearchSubject_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
+
+        #region Menu
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            RoomCreate addRoom = new RoomCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addRoom.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateRoom();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteRoom();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

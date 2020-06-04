@@ -27,7 +27,43 @@ namespace MenaxhimiDitarit.DirectorForms
             _usersBLL = new UserBLL();
 
             dgvUserList.SelectionMode = GridViewSelectionMode.FullRowSelect;
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
@@ -69,6 +105,85 @@ namespace MenaxhimiDitarit.DirectorForms
                 return null;
             }
         }
+
+        private void UpdateUser()
+        {
+            if (dgvUserList.SelectedRows.Count > 0)
+            {
+                var row = dgvUserList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var user = GetUser(dgvUserList.Rows[row]);
+                    if (user != null)
+                    {
+                        UserUpdate userUpdate = new UserUpdate(user)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        userUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+
+        private void DeleteUser()
+        {
+            if (dgvUserList.SelectedRows.Count > 0)
+            {
+                var row = dgvUserList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var user = GetUser(dgvUserList.Rows[row]);
+                    if (user != null)
+                    {
+                        if (UserSession.GetUser.UserName == user.UserName)
+                        {
+                            Validation.MessageBoxShow("You cannot delete your user account!", "Warning",
+                                "Nuk mund ta fshini llogarinë tënde!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            var result = Validation.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
+                                $"A je i/e sigurt që do ta fshini përdoruesin: {user.UserName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                            if (result == DialogResult.Yes)
+                            {
+                                _usersBLL.Remove(user.UserID);
+
+                                Validation.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
+                                    $"Përdoruesi: {user.UserName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                RefreshList();
+                            }
+                        }
+                    }
+                }
+            }
+            RefreshList();
+        }
+
+        private void ChangePassword()
+        {
+            if (dgvUserList.SelectedRows.Count > 0)
+            {
+                var row = dgvUserList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var user = GetUser(dgvUserList.Rows[row]);
+                    if (user != null)
+                    {
+                        UserUpdatePassword userChangePassword = new UserUpdatePassword(user)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        userChangePassword.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
 
         private void UserListForm_Load(object sender, EventArgs e)
         {
@@ -117,60 +232,19 @@ namespace MenaxhimiDitarit.DirectorForms
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvUserList.SelectedRows.Count > 0)
-            {
-                var row = dgvUserList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var user = GetUser(dgvUserList.Rows[row]);
-                    if (user != null)
-                    {
-                        UserUpdate userUpdate = new UserUpdate(user)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        userUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateUser();
         }
 
         //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvUserList.SelectedRows.Count > 0)
-            {
-                var row = dgvUserList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var user = GetUser(dgvUserList.Rows[row]);
-                    if (user != null)
-                    {
-                        if (UserSession.GetUser.UserName == user.UserName)
-                        {
-                            Validation.MessageBoxShow("You cannot delete your user account!", "Warning",
-                                "Nuk mund ta fshini llogarinë tënde!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            var result = Validation.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
-                                $"A je i/e sigurt që do ta fshini përdoruesin: {user.UserName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DeleteUser();
+        }
 
-                            if (result == DialogResult.Yes)
-                            {
-                                _usersBLL.Remove(user.UserID);
-
-                                Validation.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
-                                    $"Përdoruesi: {user.UserName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                RefreshList();
-                            }
-                        }
-                    }
-                }
-            }
-            RefreshList();
+        //Update passwordin per rreshtin e klikuar ne DataGrid
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword();
         }
 
         //Shfaqim passwordin per rreshtin e klikuar ne DataGrid
@@ -191,28 +265,17 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
-        //Update passwordin per rreshtin e klikuar ne DataGrid
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        //Hide Password me karakter
+        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
         {
-            if (dgvUserList.SelectedRows.Count > 0)
+            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
             {
-                var row = dgvUserList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var user = GetUser(dgvUserList.Rows[row]);
-                    if (user != null)
-                    {
-                        UserUpdatePassword userChangePassword = new UserUpdatePassword(user)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        userChangePassword.ShowDialog();
-                    }
-                }
+                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
+                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
             }
-            RefreshList();
         }
 
+        #region Search Textbox
         private void txtSearchUserByNU_Click(object sender, EventArgs e)
         {
             txtSearchUserByNU.Text = "";
@@ -224,14 +287,81 @@ namespace MenaxhimiDitarit.DirectorForms
                 btnSearch_Click(this, new EventArgs());
         }
 
-        //Hide Password me karakter
-        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
+        private void txtSearchUserByNU_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
-            {
-                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
-                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
-            }
+            Validation.NoNumber(e);
         }
+        #endregion
+
+        #region Menu
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            UserCreate addUser = new UserCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addUser.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlUpdate);
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+            UpdateUser();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePassword();
+        }
+
+        private void btnDeleteU_Click(object sender, EventArgs e)
+        {
+            DeleteUser();
+        }
+
+        #region Print
+        private void btnPrintUM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPicture);
+        }
+
+        private void btnPrintU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintS_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExportU_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcelU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDFU_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

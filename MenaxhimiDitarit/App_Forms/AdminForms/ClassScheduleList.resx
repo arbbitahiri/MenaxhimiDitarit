@@ -124,6 +124,15 @@
     <value>314, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmsScheduleContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 26</value>
+  </data>
+  <data name="&gt;&gt;cmsScheduleContext.Name" xml:space="preserve">
+    <value>cmsScheduleContext</value>
+  </data>
+  <data name="&gt;&gt;cmsScheduleContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAV5JREFUOE+9
@@ -142,59 +151,47 @@
   <data name="updateToolStripMenuItem.Text" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="cmsScheduleContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 26</value>
-  </data>
-  <data name="&gt;&gt;cmsScheduleContext.Name" xml:space="preserve">
-    <value>cmsScheduleContext</value>
-  </data>
-  <data name="&gt;&gt;cmsScheduleContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dgvScheduleList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
   <data name="dgvScheduleList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvScheduleList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="dgvScheduleList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
-  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn49.HeaderText" xml:space="preserve">
     <value>ScheduleID</value>
   </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn52.HeaderText" xml:space="preserve">
     <value>Time</value>
   </data>
-  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn41.HeaderText" xml:space="preserve">
     <value>Day</value>
   </data>
-  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn53.HeaderText" xml:space="preserve">
     <value>Year</value>
   </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn42.HeaderText" xml:space="preserve">
     <value>Class</value>
   </data>
-  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn43.HeaderText" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn44.HeaderText" xml:space="preserve">
     <value>InsertBy</value>
   </data>
-  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn17.HeaderText" xml:space="preserve">
     <value>InsertDate</value>
   </data>
-  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn45.HeaderText" xml:space="preserve">
     <value>LUB</value>
   </data>
-  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn18.HeaderText" xml:space="preserve">
     <value>LUD</value>
   </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn54.HeaderText" xml:space="preserve">
     <value>LUN</value>
   </data>
   <metadata name="bsrcScheduleList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -204,7 +201,7 @@
     <value>No</value>
   </data>
   <data name="dgvScheduleList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 426</value>
+    <value>805, 426</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvScheduleList.TabIndex" type="System.Int32, mscorlib">
@@ -220,7 +217,130 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvScheduleList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
+    <value>btnSearch</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnViewAll.Name" xml:space="preserve">
+    <value>btnViewAll</value>
+  </data>
+  <data name="&gt;&gt;btnViewAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnViewAll.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;btnViewAll.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectDay.Name" xml:space="preserve">
+    <value>cmbSelectDay</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectDay.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectDay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSelectDay.Name" xml:space="preserve">
+    <value>lblSelectDay</value>
+  </data>
+  <data name="&gt;&gt;lblSelectDay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSelectDay.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;lblSelectDay.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
+    <value>cmbSelectClass</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectClass.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblSelectClass.Name" xml:space="preserve">
+    <value>lblSelectClass</value>
+  </data>
+  <data name="&gt;&gt;lblSelectClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSelectClass.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;lblSelectClass.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="grbSearchSchedule.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="grbSearchSchedule.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 12</value>
+  </data>
+  <data name="grbSearchSchedule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 111</value>
+  </data>
+  <data name="grbSearchSchedule.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grbSearchSchedule.Text" xml:space="preserve">
+    <value>Search Schedule</value>
+  </data>
+  <data name="&gt;&gt;grbSearchSchedule.Name" xml:space="preserve">
+    <value>grbSearchSchedule</value>
+  </data>
+  <data name="&gt;&gt;grbSearchSchedule.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbSearchSchedule.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbSearchSchedule.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -405,6 +525,9 @@
   <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="bsrcClass.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>479, 17</value>
+  </metadata>
   <data name="lblSelectClass.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -456,32 +579,620 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="grbSearchSchedule.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnPDF.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPDF.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPDF.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="grbSearchSchedule.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 12</value>
+  <data name="btnPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="grbSearchSchedule.Size" type="System.Drawing.Size, System.Drawing">
-    <value>606, 111</value>
+  <data name="btnPDF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="grbSearchSchedule.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnPDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="btnPDF.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="btnPDF.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnPDF.Text" xml:space="preserve">
+    <value>PDF</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Name" xml:space="preserve">
+    <value>btnPDF</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.Parent" xml:space="preserve">
+    <value>pnlExport</value>
+  </data>
+  <data name="&gt;&gt;btnPDF.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="grbSearchSchedule.Text" xml:space="preserve">
-    <value>Search Schedule</value>
+  <data name="btnExcel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="&gt;&gt;grbSearchSchedule.Name" xml:space="preserve">
-    <value>grbSearchSchedule</value>
+  <data name="btnExcel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="&gt;&gt;grbSearchSchedule.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnExcel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;grbSearchSchedule.Parent" xml:space="preserve">
+  <data name="btnExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExcel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnExcel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="btnExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnExcel.Text" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Name" xml:space="preserve">
+    <value>btnExcel</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Parent" xml:space="preserve">
+    <value>pnlExport</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlExport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 396</value>
+  </data>
+  <data name="pnlExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 70</value>
+  </data>
+  <data name="pnlExport.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlExport.Name" xml:space="preserve">
+    <value>pnlExport</value>
+  </data>
+  <data name="&gt;&gt;pnlExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlExport.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlExport.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnExport.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExport.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnExport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnExport.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 356</value>
+  </data>
+  <data name="btnExport.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnExport.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnExport.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="btnExport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExport.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Name" xml:space="preserve">
+    <value>btnExport</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExport.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnExport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Name" xml:space="preserve">
+    <value>btnPrintSettings</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Name" xml:space="preserve">
+    <value>btnPrintPreview</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlPrint.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 251</value>
+  </data>
+  <data name="pnlPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 105</value>
+  </data>
+  <data name="pnlPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pnlPrint.Name" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;pnlPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlPrint.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPrintM.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnPrintM.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPrintM.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrintM.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnPrintM.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnPrintM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrintM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 211</value>
+  </data>
+  <data name="btnPrintM.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnPrintM.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnPrintM.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnPrintM.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="btnPrintM.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnPrintM.Name" xml:space="preserve">
+    <value>btnPrintM</value>
+  </data>
+  <data name="&gt;&gt;btnPrintM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrintM.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnPrintM.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnUpdate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnUpdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 171</value>
+  </data>
+  <data name="btnUpdate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnUpdate.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnAddClass.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAddClass.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddClass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnAddClass.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnAddClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 131</value>
+  </data>
+  <data name="btnAddClass.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnAddClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnAddClass.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnAddClass.Text" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="btnAddClass.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnAddClass.Name" xml:space="preserve">
+    <value>btnAddClass</value>
+  </data>
+  <data name="&gt;&gt;btnAddClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddClass.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnAddClass.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Name" xml:space="preserve">
+    <value>lblSchedule</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
+    <value>picClass</value>
+  </data>
+  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlPicture.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 131</value>
+  </data>
+  <data name="pnlPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Name" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pnlClassMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlClassMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>805, 0</value>
+  </data>
+  <data name="pnlClassMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 563</value>
+  </data>
+  <data name="pnlClassMain.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Name" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;grbSearchSchedule.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnPrintSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPrintSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrintSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnPrintSettings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrintSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 70</value>
+  </data>
+  <data name="btnPrintSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnPrintSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="btnPrintSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnPrintSettings.Text" xml:space="preserve">
+    <value>Print Settings</value>
+  </data>
+  <data name="btnPrintSettings.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Name" xml:space="preserve">
+    <value>btnPrintSettings</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnPrintPreview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPrintPreview.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrintPreview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnPrintPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrintPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="btnPrintPreview.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnPrintPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="btnPrintPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnPrintPreview.Text" xml:space="preserve">
+    <value>Print Preview</value>
+  </data>
+  <data name="btnPrintPreview.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Name" xml:space="preserve">
+    <value>btnPrintPreview</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrintPreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnPrint.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPrint.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnPrint.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 35</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="btnPrint.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>pnlPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblSchedule.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSchedule.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lblSchedule.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSchedule.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 103</value>
+  </data>
+  <data name="lblSchedule.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 24</value>
+  </data>
+  <data name="lblSchedule.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblSchedule.Text" xml:space="preserve">
+    <value>Schedule List</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Name" xml:space="preserve">
+    <value>lblSchedule</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;lblSchedule.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 100</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
+    <value>picClass</value>
+  </data>
+  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -490,7 +1201,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 563</value>
+    <value>950, 563</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

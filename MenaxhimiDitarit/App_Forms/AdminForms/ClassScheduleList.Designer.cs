@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassScheduletList));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn49 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn50 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn51 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn52 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn41 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn53 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn42 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn43 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn44 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn17 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn45 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn18 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn54 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsScheduleContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,12 +59,32 @@
             this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             this.lblSelectClass = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlClassMain = new System.Windows.Forms.Panel();
+            this.pnlExport = new System.Windows.Forms.Panel();
+            this.btnPDF = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.pnlPrint = new System.Windows.Forms.Panel();
+            this.btnPrintSettings = new System.Windows.Forms.Button();
+            this.btnPrintPreview = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnPrintM = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddClass = new System.Windows.Forms.Button();
+            this.pnlPicture = new System.Windows.Forms.Panel();
+            this.lblSchedule = new System.Windows.Forms.Label();
+            this.picClass = new System.Windows.Forms.PictureBox();
             this.cmsScheduleContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcScheduleList)).BeginInit();
             this.grbSearchSchedule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).BeginInit();
+            this.pnlClassMain.SuspendLayout();
+            this.pnlExport.SuspendLayout();
+            this.pnlPrint.SuspendLayout();
+            this.pnlPicture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsScheduleContext
@@ -93,112 +113,112 @@
             this.dgvScheduleList.MasterTemplate.AllowAddNewRow = false;
             this.dgvScheduleList.MasterTemplate.AllowCellContextMenu = false;
             this.dgvScheduleList.MasterTemplate.AllowColumnReorder = false;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "ScheduleID";
-            resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.Name = "ScheduleID";
-            gridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDecimalColumn1.Width = 75;
-            gridViewDecimalColumn2.DataType = typeof(int);
-            gridViewDecimalColumn2.EnableExpressionEditor = false;
-            gridViewDecimalColumn2.FieldName = "ClassID";
-            gridViewDecimalColumn2.IsAutoGenerated = true;
-            gridViewDecimalColumn2.IsVisible = false;
-            gridViewDecimalColumn2.Name = "ClassID";
-            gridViewDecimalColumn3.DataType = typeof(int);
-            gridViewDecimalColumn3.EnableExpressionEditor = false;
-            gridViewDecimalColumn3.FieldName = "SubjectID";
-            gridViewDecimalColumn3.IsAutoGenerated = true;
-            gridViewDecimalColumn3.IsVisible = false;
-            gridViewDecimalColumn3.Name = "SubjectID";
-            gridViewDecimalColumn4.DataType = typeof(int);
-            gridViewDecimalColumn4.EnableExpressionEditor = false;
-            gridViewDecimalColumn4.FieldName = "Time";
-            resources.ApplyResources(gridViewDecimalColumn4, "gridViewDecimalColumn4");
-            gridViewDecimalColumn4.IsAutoGenerated = true;
-            gridViewDecimalColumn4.Name = "Time";
-            gridViewDecimalColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "Day";
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "Day";
-            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn1.Width = 85;
-            gridViewDecimalColumn5.DataType = typeof(int);
-            gridViewDecimalColumn5.EnableExpressionEditor = false;
-            gridViewDecimalColumn5.FieldName = "Year";
-            resources.ApplyResources(gridViewDecimalColumn5, "gridViewDecimalColumn5");
-            gridViewDecimalColumn5.IsAutoGenerated = true;
-            gridViewDecimalColumn5.Name = "Year";
-            gridViewDecimalColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn2.DataType = typeof(int);
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Class.ClassNo";
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "Class";
-            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Subject.SubjectTitle";
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "Subject";
-            gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn3.Width = 100;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "InsertBy";
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "InsertBy";
-            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn4.Width = 85;
-            gridViewDateTimeColumn1.EnableExpressionEditor = false;
-            gridViewDateTimeColumn1.FieldName = "InsertDate";
-            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
-            gridViewDateTimeColumn1.IsAutoGenerated = true;
-            gridViewDateTimeColumn1.Name = "InsertDate";
-            gridViewDateTimeColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn1.Width = 170;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "LUB";
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "LUB";
-            gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn5.Width = 85;
-            gridViewDateTimeColumn2.EnableExpressionEditor = false;
-            gridViewDateTimeColumn2.FieldName = "LUD";
-            resources.ApplyResources(gridViewDateTimeColumn2, "gridViewDateTimeColumn2");
-            gridViewDateTimeColumn2.IsAutoGenerated = true;
-            gridViewDateTimeColumn2.Name = "LUD";
-            gridViewDateTimeColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn2.Width = 170;
-            gridViewDecimalColumn6.DataType = typeof(int);
-            gridViewDecimalColumn6.EnableExpressionEditor = false;
-            gridViewDecimalColumn6.FieldName = "LUN";
-            resources.ApplyResources(gridViewDecimalColumn6, "gridViewDecimalColumn6");
-            gridViewDecimalColumn6.IsAutoGenerated = true;
-            gridViewDecimalColumn6.Name = "LUN";
-            gridViewDecimalColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn49.DataType = typeof(int);
+            gridViewDecimalColumn49.EnableExpressionEditor = false;
+            gridViewDecimalColumn49.FieldName = "ScheduleID";
+            resources.ApplyResources(gridViewDecimalColumn49, "gridViewDecimalColumn49");
+            gridViewDecimalColumn49.IsAutoGenerated = true;
+            gridViewDecimalColumn49.Name = "ScheduleID";
+            gridViewDecimalColumn49.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn49.Width = 75;
+            gridViewDecimalColumn50.DataType = typeof(int);
+            gridViewDecimalColumn50.EnableExpressionEditor = false;
+            gridViewDecimalColumn50.FieldName = "ClassID";
+            gridViewDecimalColumn50.IsAutoGenerated = true;
+            gridViewDecimalColumn50.IsVisible = false;
+            gridViewDecimalColumn50.Name = "ClassID";
+            gridViewDecimalColumn51.DataType = typeof(int);
+            gridViewDecimalColumn51.EnableExpressionEditor = false;
+            gridViewDecimalColumn51.FieldName = "SubjectID";
+            gridViewDecimalColumn51.IsAutoGenerated = true;
+            gridViewDecimalColumn51.IsVisible = false;
+            gridViewDecimalColumn51.Name = "SubjectID";
+            gridViewDecimalColumn52.DataType = typeof(int);
+            gridViewDecimalColumn52.EnableExpressionEditor = false;
+            gridViewDecimalColumn52.FieldName = "Time";
+            resources.ApplyResources(gridViewDecimalColumn52, "gridViewDecimalColumn52");
+            gridViewDecimalColumn52.IsAutoGenerated = true;
+            gridViewDecimalColumn52.Name = "Time";
+            gridViewDecimalColumn52.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn41.EnableExpressionEditor = false;
+            gridViewTextBoxColumn41.FieldName = "Day";
+            resources.ApplyResources(gridViewTextBoxColumn41, "gridViewTextBoxColumn41");
+            gridViewTextBoxColumn41.IsAutoGenerated = true;
+            gridViewTextBoxColumn41.Name = "Day";
+            gridViewTextBoxColumn41.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn41.Width = 85;
+            gridViewDecimalColumn53.DataType = typeof(int);
+            gridViewDecimalColumn53.EnableExpressionEditor = false;
+            gridViewDecimalColumn53.FieldName = "Year";
+            resources.ApplyResources(gridViewDecimalColumn53, "gridViewDecimalColumn53");
+            gridViewDecimalColumn53.IsAutoGenerated = true;
+            gridViewDecimalColumn53.Name = "Year";
+            gridViewDecimalColumn53.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn42.DataType = typeof(int);
+            gridViewTextBoxColumn42.EnableExpressionEditor = false;
+            gridViewTextBoxColumn42.FieldName = "Class.ClassNo";
+            resources.ApplyResources(gridViewTextBoxColumn42, "gridViewTextBoxColumn42");
+            gridViewTextBoxColumn42.IsAutoGenerated = true;
+            gridViewTextBoxColumn42.Name = "Class";
+            gridViewTextBoxColumn42.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn43.EnableExpressionEditor = false;
+            gridViewTextBoxColumn43.FieldName = "Subject.SubjectTitle";
+            resources.ApplyResources(gridViewTextBoxColumn43, "gridViewTextBoxColumn43");
+            gridViewTextBoxColumn43.IsAutoGenerated = true;
+            gridViewTextBoxColumn43.Name = "Subject";
+            gridViewTextBoxColumn43.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn43.Width = 100;
+            gridViewTextBoxColumn44.EnableExpressionEditor = false;
+            gridViewTextBoxColumn44.FieldName = "InsertBy";
+            resources.ApplyResources(gridViewTextBoxColumn44, "gridViewTextBoxColumn44");
+            gridViewTextBoxColumn44.IsAutoGenerated = true;
+            gridViewTextBoxColumn44.Name = "InsertBy";
+            gridViewTextBoxColumn44.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn44.Width = 85;
+            gridViewDateTimeColumn17.EnableExpressionEditor = false;
+            gridViewDateTimeColumn17.FieldName = "InsertDate";
+            resources.ApplyResources(gridViewDateTimeColumn17, "gridViewDateTimeColumn17");
+            gridViewDateTimeColumn17.IsAutoGenerated = true;
+            gridViewDateTimeColumn17.Name = "InsertDate";
+            gridViewDateTimeColumn17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDateTimeColumn17.Width = 170;
+            gridViewTextBoxColumn45.EnableExpressionEditor = false;
+            gridViewTextBoxColumn45.FieldName = "LUB";
+            resources.ApplyResources(gridViewTextBoxColumn45, "gridViewTextBoxColumn45");
+            gridViewTextBoxColumn45.IsAutoGenerated = true;
+            gridViewTextBoxColumn45.Name = "LUB";
+            gridViewTextBoxColumn45.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn45.Width = 85;
+            gridViewDateTimeColumn18.EnableExpressionEditor = false;
+            gridViewDateTimeColumn18.FieldName = "LUD";
+            resources.ApplyResources(gridViewDateTimeColumn18, "gridViewDateTimeColumn18");
+            gridViewDateTimeColumn18.IsAutoGenerated = true;
+            gridViewDateTimeColumn18.Name = "LUD";
+            gridViewDateTimeColumn18.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDateTimeColumn18.Width = 170;
+            gridViewDecimalColumn54.DataType = typeof(int);
+            gridViewDecimalColumn54.EnableExpressionEditor = false;
+            gridViewDecimalColumn54.FieldName = "LUN";
+            resources.ApplyResources(gridViewDecimalColumn54, "gridViewDecimalColumn54");
+            gridViewDecimalColumn54.IsAutoGenerated = true;
+            gridViewDecimalColumn54.Name = "LUN";
+            gridViewDecimalColumn54.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.dgvScheduleList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewDecimalColumn2,
-            gridViewDecimalColumn3,
-            gridViewDecimalColumn4,
-            gridViewTextBoxColumn1,
-            gridViewDecimalColumn5,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewDateTimeColumn1,
-            gridViewTextBoxColumn5,
-            gridViewDateTimeColumn2,
-            gridViewDecimalColumn6});
+            gridViewDecimalColumn49,
+            gridViewDecimalColumn50,
+            gridViewDecimalColumn51,
+            gridViewDecimalColumn52,
+            gridViewTextBoxColumn41,
+            gridViewDecimalColumn53,
+            gridViewTextBoxColumn42,
+            gridViewTextBoxColumn43,
+            gridViewTextBoxColumn44,
+            gridViewDateTimeColumn17,
+            gridViewTextBoxColumn45,
+            gridViewDateTimeColumn18,
+            gridViewDecimalColumn54});
             this.dgvScheduleList.MasterTemplate.DataSource = this.bsrcScheduleList;
-            this.dgvScheduleList.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dgvScheduleList.MasterTemplate.ViewDefinition = tableViewDefinition9;
             this.dgvScheduleList.Name = "dgvScheduleList";
             this.dgvScheduleList.ReadOnly = true;
             this.dgvScheduleList.ThemeName = "CrystalDark";
@@ -297,11 +317,150 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
+            // pnlClassMain
+            // 
+            this.pnlClassMain.Controls.Add(this.pnlExport);
+            this.pnlClassMain.Controls.Add(this.btnExport);
+            this.pnlClassMain.Controls.Add(this.pnlPrint);
+            this.pnlClassMain.Controls.Add(this.btnPrintM);
+            this.pnlClassMain.Controls.Add(this.btnUpdate);
+            this.pnlClassMain.Controls.Add(this.btnAddClass);
+            this.pnlClassMain.Controls.Add(this.pnlPicture);
+            resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
+            this.pnlClassMain.Name = "pnlClassMain";
+            // 
+            // pnlExport
+            // 
+            this.pnlExport.Controls.Add(this.btnPDF);
+            this.pnlExport.Controls.Add(this.btnExcel);
+            resources.ApplyResources(this.pnlExport, "pnlExport");
+            this.pnlExport.Name = "pnlExport";
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPDF, "btnPDF");
+            this.btnPDF.FlatAppearance.BorderSize = 0;
+            this.btnPDF.ForeColor = System.Drawing.Color.White;
+            this.btnPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnExcel, "btnExcel");
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnExport
+            // 
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // pnlPrint
+            // 
+            this.pnlPrint.Controls.Add(this.btnPrintSettings);
+            this.pnlPrint.Controls.Add(this.btnPrintPreview);
+            this.pnlPrint.Controls.Add(this.btnPrint);
+            resources.ApplyResources(this.pnlPrint, "pnlPrint");
+            this.pnlPrint.Name = "pnlPrint";
+            // 
+            // btnPrintSettings
+            // 
+            this.btnPrintSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrintSettings, "btnPrintSettings");
+            this.btnPrintSettings.FlatAppearance.BorderSize = 0;
+            this.btnPrintSettings.ForeColor = System.Drawing.Color.White;
+            this.btnPrintSettings.Name = "btnPrintSettings";
+            this.btnPrintSettings.UseVisualStyleBackColor = false;
+            this.btnPrintSettings.Click += new System.EventHandler(this.btnPrintSettings_Click);
+            // 
+            // btnPrintPreview
+            // 
+            this.btnPrintPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrintPreview, "btnPrintPreview");
+            this.btnPrintPreview.FlatAppearance.BorderSize = 0;
+            this.btnPrintPreview.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.UseVisualStyleBackColor = false;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPrintM
+            // 
+            resources.ApplyResources(this.btnPrintM, "btnPrintM");
+            this.btnPrintM.FlatAppearance.BorderSize = 0;
+            this.btnPrintM.ForeColor = System.Drawing.Color.White;
+            this.btnPrintM.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
+            this.btnPrintM.Name = "btnPrintM";
+            this.btnPrintM.UseVisualStyleBackColor = true;
+            this.btnPrintM.Click += new System.EventHandler(this.btnPrintM_Click);
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_update_left_rotation_20;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAddClass
+            // 
+            resources.ApplyResources(this.btnAddClass, "btnAddClass");
+            this.btnAddClass.FlatAppearance.BorderSize = 0;
+            this.btnAddClass.ForeColor = System.Drawing.Color.White;
+            this.btnAddClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_add_new_20;
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.UseVisualStyleBackColor = true;
+            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
+            // 
+            // pnlPicture
+            // 
+            this.pnlPicture.Controls.Add(this.lblSchedule);
+            this.pnlPicture.Controls.Add(this.picClass);
+            resources.ApplyResources(this.pnlPicture, "pnlPicture");
+            this.pnlPicture.Name = "pnlPicture";
+            // 
+            // lblSchedule
+            // 
+            resources.ApplyResources(this.lblSchedule, "lblSchedule");
+            this.lblSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblSchedule.Name = "lblSchedule";
+            // 
+            // picClass
+            // 
+            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_schedule_100;
+            resources.ApplyResources(this.picClass, "picClass");
+            this.picClass.Name = "picClass";
+            this.picClass.TabStop = false;
+            // 
             // ClassScheduletList
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.pnlClassMain);
             this.Controls.Add(this.dgvScheduleList);
             this.Controls.Add(this.grbSearchSchedule);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -314,6 +473,13 @@
             this.grbSearchSchedule.ResumeLayout(false);
             this.grbSearchSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcClass)).EndInit();
+            this.pnlClassMain.ResumeLayout(false);
+            this.pnlClassMain.PerformLayout();
+            this.pnlExport.ResumeLayout(false);
+            this.pnlPrint.ResumeLayout(false);
+            this.pnlPicture.ResumeLayout(false);
+            this.pnlPicture.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +500,20 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.BindingSource bsrcClass;
         private System.Windows.Forms.BindingSource bsrcScheduleList;
+        private System.Windows.Forms.Panel pnlClassMain;
+        private System.Windows.Forms.Panel pnlExport;
+        private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Panel pnlPrint;
+        private System.Windows.Forms.Button btnPrintSettings;
+        private System.Windows.Forms.Button btnPrintPreview;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnPrintM;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAddClass;
+        private System.Windows.Forms.Panel pnlPicture;
+        private System.Windows.Forms.Label lblSchedule;
+        private System.Windows.Forms.PictureBox picClass;
     }
 }

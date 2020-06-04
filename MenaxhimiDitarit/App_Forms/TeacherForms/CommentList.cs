@@ -24,7 +24,43 @@ namespace MenaxhimiDitarit.TeacherForms
             InitializeComponent();
 
             _commentBLL = new TopicBLL();
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         private void RefreshList()
         {
@@ -61,6 +97,28 @@ namespace MenaxhimiDitarit.TeacherForms
                 return null;
             }
         }
+
+        private void UpdateComment()
+        {
+            if (dgvCommentList.SelectedRows.Count > 0)
+            {
+                var row = dgvCommentList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var comment = GetComment(dgvCommentList.Rows[row]);
+                    if (comment != null)
+                    {
+                        CommentCreate updateComment = new CommentCreate(comment)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        updateComment.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
 
         private void CommentList_Load(object sender, EventArgs e)
         {
@@ -106,23 +164,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvCommentList.SelectedRows.Count > 0)
-            {
-                var row = dgvCommentList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var comment = GetComment(dgvCommentList.Rows[row]);
-                    if (comment != null)
-                    {
-                        CommentCreate updateComment = new CommentCreate(comment)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        updateComment.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateComment();
         }
 
         private void showCommentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,6 +191,61 @@ namespace MenaxhimiDitarit.TeacherForms
                 }
             }
         }
-        //TODO: sa nxensa jan me shqyrtim
+
+        #region Menu
+        private void btnAddComment_Click(object sender, EventArgs e)
+        {
+            CommentCreate addComment = new CommentCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addComment.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateComment();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

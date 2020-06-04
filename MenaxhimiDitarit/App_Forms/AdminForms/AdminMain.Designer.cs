@@ -283,7 +283,7 @@
             resources.ApplyResources(this.btnClass, "btnClass");
             this.btnClass.FlatAppearance.BorderSize = 0;
             this.btnClass.ForeColor = System.Drawing.Color.White;
-            this.btnClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_classroom_20;
+            this.btnClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_class_20;
             this.btnClass.Name = "btnClass";
             this.btnClass.UseVisualStyleBackColor = true;
             this.btnClass.Click += new System.EventHandler(this.btnClassR_Click);

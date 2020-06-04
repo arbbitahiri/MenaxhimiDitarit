@@ -24,7 +24,43 @@ namespace MenaxhimiDitarit.DirectorForms
             InitializeComponent();
 
             _teacherBLL = new TeacherBLL();
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
@@ -66,10 +102,55 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
-        private void txtSearchName_Click(object sender, EventArgs e)
+        private void UpdateTeacher()
         {
-            txtSearchName.Clear();
+            if (dgvTeacherListD.SelectedRows.Count > 0)
+            {
+                var row = dgvTeacherListD.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
+                    if (teacher != null)
+                    {
+                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        teacherUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
         }
+
+        private void DeleteTeacher()
+        {
+            if (dgvTeacherListD.SelectedRows.Count > 0)
+            {
+                var row = dgvTeacherListD.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
+                    if (teacher != null)
+                    {
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini: {teacher.FullName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            _teacherBLL.Remove(teacher.TeacherID);
+
+                            Validation.MessageBoxShow($"Teacher: {teacher.FullName} has been deleted successfully!", "Deleted",
+                                $"Arsimtari: {teacher.FullName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            RefreshList();
+                        }
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
 
         private void DirectorTeacherListForm_Load(object sender, EventArgs e)
         {
@@ -118,52 +199,19 @@ namespace MenaxhimiDitarit.DirectorForms
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvTeacherListD.SelectedRows.Count > 0)
-            {
-                var row = dgvTeacherListD.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
-                    if (teacher != null)
-                    {
-                        TeacherCreate teacherUpdate = new TeacherCreate(teacher)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        teacherUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateTeacher();
         }
 
         //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvTeacherListD.SelectedRows.Count > 0)
-            {
-                var row = dgvTeacherListD.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
-                    if (teacher != null)
-                    {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
-                            $"A je i/e sigurt që do ta fshini: {teacher.FullName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DeleteTeacher();
+        }
 
-                        if (result == DialogResult.Yes)
-                        {
-                            _teacherBLL.Remove(teacher.TeacherID);
-
-                            Validation.MessageBoxShow($"Teacher: {teacher.FullName} has been deleted successfully!", "Deleted",
-                                $"Arsimtari: {teacher.FullName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            RefreshList();
-                        }
-                    }
-                }
-            }
-            RefreshList();
+        #region Search Textbox
+        private void txtSearchName_Click(object sender, EventArgs e)
+        {
+            txtSearchName.Clear();
         }
 
         private void txtSearchName_KeyDown(object sender, KeyEventArgs e)
@@ -171,5 +219,72 @@ namespace MenaxhimiDitarit.DirectorForms
             if (e.KeyCode == Keys.Enter)
                 btnSearchTeachers_Click(this, new EventArgs());
         }
+
+        private void txtSearchName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
+
+        #region Menu
+        private void btnAddTeacher_Click(object sender, EventArgs e)
+        {
+            TeacherCreate addTeacher = new TeacherCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addTeacher.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateTeacher();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteTeacher();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

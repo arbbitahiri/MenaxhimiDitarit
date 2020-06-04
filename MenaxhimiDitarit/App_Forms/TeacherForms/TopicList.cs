@@ -40,7 +40,43 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MyClasses = _classBLL.GetAll();
             cmbSelectClass.DataSource = MyClasses;
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
@@ -78,6 +114,55 @@ namespace MenaxhimiDitarit.TeacherForms
                 return null;
             }
         }
+
+        private void UpdateTopic()
+        {
+            if (dgvTopicList.SelectedRows.Count > 0)
+            {
+                var row = dgvTopicList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var topic = GetTopic(dgvTopicList.Rows[row]);
+                    if (topic != null)
+                    {
+                        TopicCreate updateTopic = new TopicCreate(topic)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        updateTopic.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+
+        private void DeleteTopic()
+        {
+            if (dgvTopicList.SelectedRows.Count > 0)
+            {
+                var row = dgvTopicList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var topic = GetTopic(dgvTopicList.Rows[row]);
+                    if (topic != null)
+                    {
+                        var result = Validation.MessageBoxShow("Are you sure you want to delete?", "Sure?",
+                            "A je i/e sigurt që do ta fshini?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            _topicBLL.RemoveTopic(topic.TopicID);
+
+                            Validation.MessageBoxShow("The selected topic has been deleted successfully!", "Deleted",
+                                "Tema u fshi me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            RefreshList();
+                        }
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
 
         private void TopicListForm_Load(object sender, EventArgs e)
         {
@@ -125,51 +210,13 @@ namespace MenaxhimiDitarit.TeacherForms
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvTopicList.SelectedRows.Count > 0)
-            {
-                var row = dgvTopicList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var topic = GetTopic(dgvTopicList.Rows[row]);
-                    if (topic != null)
-                    {
-                        TopicCreate updateTopic = new TopicCreate(topic)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        updateTopic.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateTopic();
         }
 
         //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvTopicList.SelectedRows.Count > 0)
-            {
-                var row = dgvTopicList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var topic = GetTopic(dgvTopicList.Rows[row]);
-                    if (topic != null)
-                    {
-                        var result = Validation.MessageBoxShow("Are you sure you want to delete?", "Sure?",
-                            "A je i/e sigurt që do ta fshini?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            _topicBLL.RemoveTopic(topic.TopicID);
-
-                            Validation.MessageBoxShow("The selected topic has been deleted successfully!", "Deleted",
-                                "Tema u fshi me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            RefreshList();
-                        }
-                    }
-                }
-            }
-            RefreshList();
+            DeleteTopic();
         }
 
         //Shikojme Content te Topic
@@ -189,5 +236,66 @@ namespace MenaxhimiDitarit.TeacherForms
                 }
             }
         }
+
+        #region Menu
+        private void btnAddTopic_Click(object sender, EventArgs e)
+        {
+            TopicCreate addTopic = new TopicCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addTopic.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateTopic();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteTopic();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowDialog(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

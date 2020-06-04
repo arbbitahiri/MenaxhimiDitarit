@@ -58,12 +58,33 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.pnlClassMain = new System.Windows.Forms.Panel();
+            this.pnlExport = new System.Windows.Forms.Panel();
+            this.btnPDF = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.pnlPrint = new System.Windows.Forms.Panel();
+            this.btnPrintSettings = new System.Windows.Forms.Button();
+            this.btnPrintPreview = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnPrintM = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAddTeacher = new System.Windows.Forms.Button();
+            this.pnlPicture = new System.Windows.Forms.Panel();
+            this.lblAdmin = new System.Windows.Forms.Label();
+            this.picClass = new System.Windows.Forms.PictureBox();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD.MasterTemplate)).BeginInit();
             this.cmsTeacherContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).BeginInit();
+            this.pnlClassMain.SuspendLayout();
+            this.pnlExport.SuspendLayout();
+            this.pnlPrint.SuspendLayout();
+            this.pnlPicture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -121,6 +142,7 @@
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
             this.txtSearchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchName_KeyDown);
+            this.txtSearchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchName_KeyPress);
             // 
             // dgvTeacherListD
             // 
@@ -282,11 +304,161 @@
             // 
             this.bsrcTeacherList.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
+            // pnlClassMain
+            // 
+            this.pnlClassMain.Controls.Add(this.pnlExport);
+            this.pnlClassMain.Controls.Add(this.btnExport);
+            this.pnlClassMain.Controls.Add(this.pnlPrint);
+            this.pnlClassMain.Controls.Add(this.btnPrintM);
+            this.pnlClassMain.Controls.Add(this.btnDelete);
+            this.pnlClassMain.Controls.Add(this.btnUpdate);
+            this.pnlClassMain.Controls.Add(this.btnAddTeacher);
+            this.pnlClassMain.Controls.Add(this.pnlPicture);
+            resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
+            this.pnlClassMain.Name = "pnlClassMain";
+            // 
+            // pnlExport
+            // 
+            this.pnlExport.Controls.Add(this.btnPDF);
+            this.pnlExport.Controls.Add(this.btnExcel);
+            resources.ApplyResources(this.pnlExport, "pnlExport");
+            this.pnlExport.Name = "pnlExport";
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPDF, "btnPDF");
+            this.btnPDF.FlatAppearance.BorderSize = 0;
+            this.btnPDF.ForeColor = System.Drawing.Color.White;
+            this.btnPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnExcel, "btnExcel");
+            this.btnExcel.FlatAppearance.BorderSize = 0;
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnExport
+            // 
+            resources.ApplyResources(this.btnExport, "btnExport");
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // pnlPrint
+            // 
+            this.pnlPrint.Controls.Add(this.btnPrintSettings);
+            this.pnlPrint.Controls.Add(this.btnPrintPreview);
+            this.pnlPrint.Controls.Add(this.btnPrint);
+            resources.ApplyResources(this.pnlPrint, "pnlPrint");
+            this.pnlPrint.Name = "pnlPrint";
+            // 
+            // btnPrintSettings
+            // 
+            this.btnPrintSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrintSettings, "btnPrintSettings");
+            this.btnPrintSettings.FlatAppearance.BorderSize = 0;
+            this.btnPrintSettings.ForeColor = System.Drawing.Color.White;
+            this.btnPrintSettings.Name = "btnPrintSettings";
+            this.btnPrintSettings.UseVisualStyleBackColor = false;
+            this.btnPrintSettings.Click += new System.EventHandler(this.btnPrintSettings_Click);
+            // 
+            // btnPrintPreview
+            // 
+            this.btnPrintPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrintPreview, "btnPrintPreview");
+            this.btnPrintPreview.FlatAppearance.BorderSize = 0;
+            this.btnPrintPreview.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPreview.Name = "btnPrintPreview";
+            this.btnPrintPreview.UseVisualStyleBackColor = false;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPrintM
+            // 
+            resources.ApplyResources(this.btnPrintM, "btnPrintM");
+            this.btnPrintM.FlatAppearance.BorderSize = 0;
+            this.btnPrintM.ForeColor = System.Drawing.Color.White;
+            this.btnPrintM.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
+            this.btnPrintM.Name = "btnPrintM";
+            this.btnPrintM.UseVisualStyleBackColor = true;
+            this.btnPrintM.Click += new System.EventHandler(this.btnPrintM_Click);
+            // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_trash_20;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_update_left_rotation_20;
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAddTeacher
+            // 
+            resources.ApplyResources(this.btnAddTeacher, "btnAddTeacher");
+            this.btnAddTeacher.FlatAppearance.BorderSize = 0;
+            this.btnAddTeacher.ForeColor = System.Drawing.Color.White;
+            this.btnAddTeacher.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_add_new_20;
+            this.btnAddTeacher.Name = "btnAddTeacher";
+            this.btnAddTeacher.UseVisualStyleBackColor = true;
+            this.btnAddTeacher.Click += new System.EventHandler(this.btnAddTeacher_Click);
+            // 
+            // pnlPicture
+            // 
+            this.pnlPicture.Controls.Add(this.lblAdmin);
+            this.pnlPicture.Controls.Add(this.picClass);
+            resources.ApplyResources(this.pnlPicture, "pnlPicture");
+            this.pnlPicture.Name = "pnlPicture";
+            // 
+            // lblAdmin
+            // 
+            resources.ApplyResources(this.lblAdmin, "lblAdmin");
+            this.lblAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblAdmin.Name = "lblAdmin";
+            // 
+            // picClass
+            // 
+            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_teacher_100;
+            resources.ApplyResources(this.picClass, "picClass");
+            this.picClass.Name = "picClass";
+            this.picClass.TabStop = false;
+            // 
             // DirectorTeacherList
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.pnlClassMain);
             this.Controls.Add(this.dgvTeacherListD);
             this.Controls.Add(this.grbSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -299,6 +471,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherListD)).EndInit();
             this.cmsTeacherContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).EndInit();
+            this.pnlClassMain.ResumeLayout(false);
+            this.pnlClassMain.PerformLayout();
+            this.pnlExport.ResumeLayout(false);
+            this.pnlPrint.ResumeLayout(false);
+            this.pnlPicture.ResumeLayout(false);
+            this.pnlPicture.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,5 +495,21 @@
         private System.Windows.Forms.ContextMenuStrip cmsTeacherContext;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlClassMain;
+        private System.Windows.Forms.Panel pnlExport;
+        private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Panel pnlPrint;
+        private System.Windows.Forms.Button btnPrintSettings;
+        private System.Windows.Forms.Button btnPrintPreview;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnPrintM;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAddTeacher;
+        private System.Windows.Forms.Panel pnlPicture;
+        private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.PictureBox picClass;
     }
 }

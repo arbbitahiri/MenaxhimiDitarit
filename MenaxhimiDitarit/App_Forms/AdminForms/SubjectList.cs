@@ -26,7 +26,43 @@ namespace MenaxhimiDitarit
             dgvSubjectList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _subjectBLL = new SubjectBLL();
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         //Refresh i te dhenave ne DataGrid
         private void RefreshList()
@@ -64,17 +100,62 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void txtSearchNameSubject_Click(object sender, EventArgs e)
+        private void UpdateSubject()
         {
-            txtSearchSubject.Text = "";
+            if (dgvSubjectList.SelectedRows.Count > 0)
+            {
+                var row = dgvSubjectList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var subject = GetSubject(dgvSubjectList.Rows[row]);
+                    if (subject != null)
+                    {
+                        SubjectCreate subjectUpdate = new SubjectCreate(subject)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        subjectUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
         }
 
-        private void btnViewAllSubjects_Click(object sender, EventArgs e)
+        private void DeleteSubject()
+        {
+            if (dgvSubjectList.SelectedRows.Count > 0)
+            {
+                var row = dgvSubjectList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var subject = GetSubject(dgvSubjectList.Rows[row]);
+                    if (subject != null)
+                    {
+                        var result = Validation.MessageBoxShow($"Are you sure you want to delete subject: {subject.SubjectTitle}?", "Sure?",
+                            $"A je i/e sigurt që do ta fshini lëndën: {subject.SubjectTitle}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            _subjectBLL.Remove(subject.SubjectID);
+
+                            Validation.MessageBoxShow($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted",
+                                $"Lënda: {subject.SubjectTitle} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                            RefreshList();
+                        }
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
+
+        private void SubjectListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        private void SubjectListForm_Load(object sender, EventArgs e)
+        private void btnViewAllSubjects_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
@@ -117,52 +198,19 @@ namespace MenaxhimiDitarit
         //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvSubjectList.SelectedRows.Count > 0)
-            {
-                var row = dgvSubjectList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var subject = GetSubject(dgvSubjectList.Rows[row]);
-                    if (subject != null)
-                    {
-                        SubjectCreate subjectUpdate = new SubjectCreate(subject)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        subjectUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateSubject();
         }
 
         //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvSubjectList.SelectedRows.Count > 0)
-            {
-                var row = dgvSubjectList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var subject = GetSubject(dgvSubjectList.Rows[row]);
-                    if (subject != null)
-                    {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete subject: {subject.SubjectTitle}?", "Sure?",
-                            $"A je i/e sigurt që do ta fshini lëndën: {subject.SubjectTitle}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DeleteSubject();
+        }
 
-                        if (result == DialogResult.Yes)
-                        {
-                            _subjectBLL.Remove(subject.SubjectID);
-
-                            Validation.MessageBoxShow($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted",
-                                $"Lënda: {subject.SubjectTitle} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                            RefreshList();
-                        }
-                    }
-                }
-            }
-            RefreshList();
+        #region Search Textbox
+        private void txtSearchNameSubject_Click(object sender, EventArgs e)
+        {
+            txtSearchSubject.Text = "";
         }
 
         private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)
@@ -170,5 +218,72 @@ namespace MenaxhimiDitarit
             if (e.KeyCode == Keys.Enter)
                 btnSearchSubject_Click(this, new EventArgs());
         }
+
+        private void txtSearchSubject_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
+
+        #region Menu
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            SubjectCreate addSubject = new SubjectCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addSubject.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateSubject();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteSubject();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }

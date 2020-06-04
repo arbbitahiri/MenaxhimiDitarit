@@ -24,7 +24,43 @@ namespace MenaxhimiDitarit.TeacherForms
             InitializeComponent();
 
             _absenceBLL = new TopicBLL();
+
+            CustomizeDesign();
         }
+
+        #region Metodat
+
+        #region Menu
+        private void CustomizeDesign()
+        {
+            pnlExport.Visible = false;
+            pnlPrint.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlExport.Visible == true)
+            {
+                pnlExport.Visible = false;
+            }
+
+            if (pnlPrint.Visible == true)
+            {
+                pnlPrint.Visible = false;
+            }
+        }
+
+        private void ShowSubMenu(Panel panel)
+        {
+            if (panel.Visible == false)
+            {
+                HideSubMenu();
+                panel.Visible = true;
+            }
+            else
+                panel.Visible = false;
+        }
+        #endregion
 
         private void RefreshList()
         {
@@ -62,6 +98,28 @@ namespace MenaxhimiDitarit.TeacherForms
             }
 
         }
+
+        private void UpdateAbsence()
+        {
+            if (dgvAbsenceList.SelectedRows.Count > 0)
+            {
+                var row = dgvAbsenceList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var absence = GetAbsence(dgvAbsenceList.Rows[row]);
+                    if (absence != null)
+                    {
+                        AbsenceCreate updateAbsence = new AbsenceCreate(absence)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        updateAbsence.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+        #endregion
 
         private void AbsenceList_Load(object sender, EventArgs e)
         {
@@ -108,25 +166,63 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvAbsenceList.SelectedRows.Count > 0)
-            {
-                var row = dgvAbsenceList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var absence = GetAbsence(dgvAbsenceList.Rows[row]);
-                    if (absence != null)
-                    {
-                        AbsenceCreate updateAbsence = new AbsenceCreate(absence)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        updateAbsence.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
+            UpdateAbsence();
         }
 
-        //TODO: Charts per reasoning
+        #region Menu
+        private void btnAddComment_Click(object sender, EventArgs e)
+        {
+            AbsenceCreate addAbsence = new AbsenceCreate
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            addAbsence.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateAbsence();
+        }
+
+        #region Print
+        private void btnPrintM_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlPrint);
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintPreview_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Export
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlExport);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #endregion
     }
 }
