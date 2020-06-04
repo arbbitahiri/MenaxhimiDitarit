@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -89,37 +90,25 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectTime.SelectedItem = topic.Time;
             txtContent.Text = topic.Content;
         }
-
-        //Shikojme nese TextBox-at jane te mbushur me te dhena
-        private bool CheckTextbox()
-        {
-            foreach (Control ctrl in this.Controls) {
-                if (ctrl is TextBox) {
-                    TextBox txtb = ctrl as TextBox;
-                    if (txtb.Text == string.Empty)
-                        return false;
-                }
-            }
-            return true;
-        }
         #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (CheckTextbox())
+                if (Validation.CheckTextbox(this))
                 {
-                    Topic topic = new Topic();
-
-                    topic.TopicID = int.Parse(txtID.Text);
-                    topic.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                    topic.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                    topic.Date = dtpSelectDate.Value.Date;
-                    topic.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                    topic.Content = txtContent.Text;
-                    topic.InsertBy = UserSession.GetUser.UserName;
-                    topic.LUB = UserSession.GetUser.UserName;
+                    Topic topic = new Topic
+                    {
+                        TopicID = int.Parse(txtID.Text),
+                        ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()),
+                        SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()),
+                        Date = dtpSelectDate.Value.Date,
+                        Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString()),
+                        Content = txtContent.Text,
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         topic.LUN++;
@@ -131,8 +120,6 @@ namespace MenaxhimiDitarit.TeacherForms
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                     && t.Day == dtpSelectDate.Value.ToString("dddd")).ToList();
 
-                    //MessageBox.Show(dtpSelectDate.Value.ToString("dddd"));
-
                     if (checkSchedule.Count > 0)
                     {
                         if (!update)
@@ -143,19 +130,25 @@ namespace MenaxhimiDitarit.TeacherForms
                             && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
 
                             if (checkTopic.Count > 0)
-                                MessageBox.Show($"Topic exists for day: {topic.Date.ToShortDateString()}",
-                                    "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                Validation.MessageBoxShow($"Topic exists for day: {topic.Date.ToShortDateString()}", "Exists",
+                                   $"Tema ekziston për ditën: {topic.Date.ToShortDateString()}", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                             else
                             {
                                 bool isRegistred = _topicBLL.AddTopic(topic);
 
                                 if (isRegistred)
                                 {
-                                    MessageBox.Show("Topic registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    Validation.MessageBoxShow("Topic registered successfully!", "Registered",
+                                        "Tema u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     this.Close();
                                 }
                                 else
-                                    MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                {
+                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                        "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         }
                         else
@@ -164,90 +157,116 @@ namespace MenaxhimiDitarit.TeacherForms
 
                             if (isUpdated)
                             {
-                                MessageBox.Show("Topic updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow("Topic updated", "Updated",
+                                    "Tema u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                Validation.MessageBoxShow("Update failed!", "Error",
+                                    "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
-                        MessageBox.Show("Can't create topic for that time!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        Validation.MessageBoxShow("Can't create topic for that time!", "Error",
+                            "Nuk mund të krijojë temë për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
+            if (!Validation.CheckTextbox(this))
             {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
             }
         }
 
-        ToolTip toolTip = new ToolTip();
-
+        #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Class is required!", picClass);
+            Validation.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
         }
 
         private void picSubject_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Subject is required!", picSubject);
+            Validation.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
         }
 
         private void picTime_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Time is required!", picTime);
+            Validation.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
         }
 
         private void picContent_MouseHover(object sender, EventArgs e)
         {
-            toolTip.Show("Content is required!", picContent);
+            Validation.ToolTipShow("Content is required!", "Vërejtja duhet të plotësohet!", picContent);
         }
 
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectClass.SelectedIndex != -1)
+            {
                 picClass.Visible = false;
+            }
             else
+            {
                 picClass.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectSubject.SelectedIndex != -1)
+            {
                 picSubject.Visible = false;
+            }
             else
+            {
                 picSubject.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectTime.SelectedIndex != -1)
+            {
                 picTime.Visible = false;
+            }
             else
+            {
                 picTime.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtContent_TextChanged(object sender, EventArgs e)
         {
-            if (txtContent.Text != null && txtContent.Text.Length > 2)
+            if (txtContent.Text != null && txtContent.Text.Length > 4)
+            {
                 picContent.Visible = false;
+            }
             else
+            {
                 picContent.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
+        #endregion
     }
 }

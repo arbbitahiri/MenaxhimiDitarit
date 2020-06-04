@@ -115,8 +115,10 @@ namespace MenaxhimiDitarit
                                 this.Close();
                             }
                             else
+                            {
                                 Validation.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -130,13 +132,17 @@ namespace MenaxhimiDitarit
                             this.Close();
                         }
                         else
+                        {
                             Validation.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

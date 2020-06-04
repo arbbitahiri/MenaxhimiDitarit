@@ -111,13 +111,16 @@ namespace MenaxhimiDitarit.AdminForms
                         dgvScheduleList.DataSource = findSchedule;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please select a class and a day!", "Empty",
                             "Ju lutem zgjedheni një klasë dhe një datë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Schedule does not exist!", "Doesn't exist",
                             "Orari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                }
             }
             catch (Exception)
             {

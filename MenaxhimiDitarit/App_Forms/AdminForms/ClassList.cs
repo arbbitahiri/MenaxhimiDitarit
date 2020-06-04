@@ -92,12 +92,16 @@ namespace MenaxhimiDitarit
                         dgvClassesList.DataSource = findClass;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a class number!", "Empty",
                             "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Class number does not exist!", "Doesn't exist",
                             "Klasa nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraPrinting.Export;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
@@ -71,10 +71,10 @@ namespace MenaxhimiDitarit.TeacherForms
 
                 return topic;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred getting those data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                            "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -104,15 +104,21 @@ namespace MenaxhimiDitarit.TeacherForms
                         dgvTopicList.DataSource = findTopic;
                     }
                     else
-                        MessageBox.Show("Please select a class, a subject and a day!!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        Validation.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
+                            "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
-                    MessageBox.Show("Topic does not exist!!", "Doesn't exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    Validation.MessageBoxShow("Topic does not exist!", "Doesn't exist",
+                        "Tema nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while searching data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -149,16 +155,17 @@ namespace MenaxhimiDitarit.TeacherForms
                     var topic = GetTopic(dgvTopicList.Rows[row]);
                     if (topic != null)
                     {
-                        if (MessageBox.Show($"Are you sure you want to delete?", "Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
-                            == DialogResult.OK)
+                        var result = Validation.MessageBoxShow("Are you sure you want to delete?", "Sure?",
+                            "A je i/e sigurt që do ta fshini?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
                             _topicBLL.RemoveTopic(topic.TopicID);
-                            MessageBox.Show("The selected topic has been deleted successfully!",
-                                "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Validation.MessageBoxShow("The selected topic has been deleted successfully!", "Deleted",
+                                "Tema u fshi me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             RefreshList();
                         }
-                        else
-                            MessageBox.Show("Please try again!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -175,8 +182,10 @@ namespace MenaxhimiDitarit.TeacherForms
                 {
                     var topic = GetTopic(dgvTopicList.Rows[row]);
                     if (topic != null)
-                        MessageBox.Show($"Content: {topic.Content}",
-                            "Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    {
+                        Validation.MessageBoxShow($"Content: {topic.Content}", "Content",
+                            $"Tema: {topic.Content}", "Tema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

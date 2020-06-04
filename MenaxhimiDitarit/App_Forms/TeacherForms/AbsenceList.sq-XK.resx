@@ -118,13 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
-    <value>TemaD</value>
-  </data>
-  <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
-    <value>ClassID</value>
-  </data>
-  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
-    <value>SubjectID</value>
+    <value>TemaID</value>
   </data>
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
     <value>Data</value>
@@ -132,35 +126,17 @@
   <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
     <value>Ora</value>
   </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Content</value>
-  </data>
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
     <value>Arsyetimi</value>
   </data>
   <data name="gridViewDecimalColumn11.HeaderText" xml:space="preserve">
-    <value>Nr</value>
+    <value>Nr Nxënësve</value>
   </data>
   <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
     <value>Klasa</value>
   </data>
   <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
     <value>Lënda</value>
-  </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn5.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn6.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn12.HeaderText" xml:space="preserve">
-    <value>LUN</value>
   </data>
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Mungesën</value>

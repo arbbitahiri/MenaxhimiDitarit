@@ -102,12 +102,16 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                             this.Close();
                         }
                         else
+                        {
                             Validation.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please fill all fields!", "Error",
                             "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception)
@@ -165,33 +169,49 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
+            {
                 picLastName.Visible = false;
+            }
             else
+            {
                 picLastName.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
             if (txtLastName.Text != null && txtLastName.Text.Length > 2)
+            {
                 picLastName.Visible = false;
+            }
             else
+            {
                 picLastName.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbRoles.SelectedIndex != -1)
+            {
                 picRole.Visible = false;
+            }
             else
+            {
                 picRole.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             if (txtUsername.Text != null && txtUsername.Text.Length > 3)
+            {
                 picUsername.Visible = false;
+            }
             else
+            {
                 picUsername.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MenaxhimiDitarit.App_Forms.MessageBoxes;
+using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 
@@ -81,39 +81,26 @@ namespace MenaxhimiDitarit.TeacherForms
             dtpSelectDate.Value = absence.Date;
             txtNoStudents.Text = absence.NoStudents.ToString();
         }
-
-        private bool CheckTextbox()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    TextBox txtb = ctrl as TextBox;
-                    if (txtb.Text == string.Empty)
-                        return false;
-                }
-            }
-            return true;
-        }
         #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (CheckTextbox())
+                if (Validation.CheckTextbox(this))
                 {
-                    Topic absence = new Topic();
-
-                    absence.TopicID = int.Parse(txtID.Text);
-                    absence.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                    absence.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                    absence.Reasoning = cmbReasoning.SelectedItem.ToString();
-                    absence.NoStudents = int.Parse(txtNoStudents.Text);
-                    absence.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                    absence.Date = dtpSelectDate.Value;
-                    absence.InsertBy = UserSession.GetUser.UserName;
-                    absence.LUB = UserSession.GetUser.UserName;
+                    Topic absence = new Topic
+                    {
+                        TopicID = int.Parse(txtID.Text),
+                        ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()),
+                        SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()),
+                        Reasoning = cmbReasoning.SelectedItem.ToString(),
+                        NoStudents = int.Parse(txtNoStudents.Text),
+                        Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString()),
+                        Date = dtpSelectDate.Value,
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         absence.LUN++;
@@ -126,21 +113,26 @@ namespace MenaxhimiDitarit.TeacherForms
                         && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                         && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
 
-
                         if (checkAbsence.Count > 0)
-                            MessageBox.Show($"Absence exists for subject: {absence.Subject.SubjectTitle}" +
-                                $" in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            Validation.MessageBoxShow($"Absence exists for subject: {absence.Subject.SubjectTitle} in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists",
+                                $"Mungesa ekziston për lëndën: {absence.Subject.SubjectTitle} në orën e {absence.Time} për klasën {absence.Class.ClassNo}!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _absenceBLL.AddAbsence(absence);
 
                             if (isRegistred)
                             {
-                                MessageBox.Show("Absence registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow("Absence registered successfully!", "Registered",
+                                    "Mungesa u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -149,29 +141,36 @@ namespace MenaxhimiDitarit.TeacherForms
 
                         if (isUpdated)
                         {
-                            MessageBox.Show("Absence updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow("Absence updated", "Updated",
+                                "Mungesa u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            Validation.MessageBoxShow("Update failed!", "Error",
+                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!CheckTextbox())
+            if (!Validation.CheckTextbox(this))
             {
-                var result = MessageBox.Show(this, "You have written something. Do you want to close?",
-                    "Sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
@@ -180,9 +179,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void txtNoStudents_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char c = e.KeyChar;
-            if (!char.IsDigit(c) && c != 8 && c != 32)
-                e.Handled = true;
+            Validation.NoLetter(e);
         }
     }
 }

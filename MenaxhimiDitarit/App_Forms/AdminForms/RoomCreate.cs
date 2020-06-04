@@ -90,8 +90,10 @@ namespace MenaxhimiDitarit
                                 this.Close();
                             }
                             else
+                            {
                                 Validation.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -105,13 +107,17 @@ namespace MenaxhimiDitarit
                             this.Close();
                         }
                         else
+                        {
                             Validation.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -146,17 +152,25 @@ namespace MenaxhimiDitarit
         private void txtRoomNo_TextChanged(object sender, EventArgs e)
         {
             if (txtRoomNo.Text != null && txtRoomNo.Text.Length > 2)
+            {
                 picRoomNo.Visible = false;
+            }
             else
+            {
                 picRoomNo.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtRoomType_TextChanged(object sender, EventArgs e)
         {
             if (txtRoomType.Text != null && txtRoomType.Text.Length > 2)
+            {
                 picRoomType.Visible = false;
+            }
             else
+            {
                 picRoomType.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

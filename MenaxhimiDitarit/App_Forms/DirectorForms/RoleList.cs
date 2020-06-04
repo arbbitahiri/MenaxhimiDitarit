@@ -66,12 +66,16 @@ namespace MenaxhimiDitarit.DirectorForms
                         dgvRoleList.DataSource = findRole;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a role!", "Empty",
                             "Ju lutem shkruani rolin!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Role does not exist!", "Doesn't exist",
                         "Roli nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

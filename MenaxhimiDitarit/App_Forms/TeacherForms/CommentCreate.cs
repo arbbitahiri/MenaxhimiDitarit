@@ -1,4 +1,5 @@
-﻿using MenaxhimiDitarit.BLL;
+﻿using MenaxhimiDitarit.App_Code;
+using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,7 @@ namespace MenaxhimiDitarit.TeacherForms
             PopulateForm(_comment);
         }
 
+        #region Metodat
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -83,6 +85,7 @@ namespace MenaxhimiDitarit.TeacherForms
             dtpSelectDate.Value = comment.Date;
             txtComent.Text = comment.Comment;
         }
+        #endregion
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -90,16 +93,17 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 if (!txtComent.Text.Equals(""))
                 {
-                    Topic comment = new Topic();
-
-                    comment.TopicID = int.Parse(txtID.Text);
-                    comment.ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString());
-                    comment.SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString());
-                    comment.Comment = txtComent.Text;
-                    comment.Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString());
-                    comment.Date = dtpSelectDate.Value;
-                    comment.InsertBy = UserSession.GetUser.UserName;
-                    comment.LUB = UserSession.GetUser.UserName;
+                    Topic comment = new Topic
+                    {
+                        TopicID = int.Parse(txtID.Text),
+                        ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()),
+                        SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()),
+                        Comment = txtComent.Text,
+                        Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString()),
+                        Date = dtpSelectDate.Value,
+                        InsertBy = UserSession.GetUser.UserName,
+                        LUB = UserSession.GetUser.UserName
+                    };
 
                     if (!update)
                         comment.LUN++;
@@ -113,19 +117,25 @@ namespace MenaxhimiDitarit.TeacherForms
                         && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
 
                         if (checkComment.Count > 0)
-                            MessageBox.Show($"Comment exists for subject: {comment.Subject.SubjectTitle}" +
-                                $" in {comment.Time} hour for class {comment.Class.ClassNo}", "Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            Validation.MessageBoxShow($"Comment exists for subject: {comment.Subject.SubjectTitle} in {comment.Time} hour for class {comment.Class.ClassNo}", "Exists",
+                                $"Vërejtja ekziston për lëndën: {comment.Subject.SubjectTitle} në orën e {comment.Time} për klasën {comment.Class.ClassNo}!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _commentBLL.AddComment(comment);
 
                             if (isRegistred)
                             {
-                                MessageBox.Show("Comment registred successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow("Cooment registered successfully!", "Registered",
+                                    "Vërejtja u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
-                                MessageBox.Show("Registration failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            {
+                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -134,26 +144,40 @@ namespace MenaxhimiDitarit.TeacherForms
 
                         if (isUpdated)
                         {
-                            MessageBox.Show("Comment updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Validation.MessageBoxShow("Comment updated", "Updated",
+                                "Vërejtja u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
-                            MessageBox.Show("Updated failed, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        {
+                            Validation.MessageBoxShow("Update failed!", "Error",
+                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
-                    MessageBox.Show("Please fill all fields!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"A problem occurred while registering data!\n{ex.Message}",
-                    "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (!Validation.CheckTextbox(this))
+            {
+                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                    this.Close();
+            }
         }
     }
 }

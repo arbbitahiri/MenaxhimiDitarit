@@ -41,11 +41,13 @@ namespace MenaxhimiDitarit.DirectorForms
         //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbShowPassword.Checked) {
+            if (chbShowPassword.Checked)
+            {
                 txtConfirmPass.UseSystemPasswordChar = false;
                 txtPassword.UseSystemPasswordChar = false;
             }
-            else {
+            else
+            {
                 txtPassword.UseSystemPasswordChar = true;
                 txtConfirmPass.UseSystemPasswordChar = true;
             }
@@ -84,8 +86,10 @@ namespace MenaxhimiDitarit.DirectorForms
                         var checkUsers = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
                         if (checkUsers.Count > 0)
+                        {
                             Validation.MessageBoxShow("Username exists!", "Exists",
                                 "Nofka ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _userBLL.Add(user);
@@ -97,8 +101,10 @@ namespace MenaxhimiDitarit.DirectorForms
                                 this.Close();
                             }
                             else
+                            {
                                 Validation.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -173,49 +179,73 @@ namespace MenaxhimiDitarit.DirectorForms
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == txtConfirmPass.Text)
+            {
                 picValidatePassword.Image = Properties.Resources.icons8_ok_15;
+            }
             else
+            {
                 picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
+            {
                 picFirstName.Visible = false;
+            }
             else
+            {
                 picFirstName.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
             if (txtLastName.Text != null && txtLastName.Text.Length > 2)
+            {
                 picLastName.Visible = false;
+            }
             else
+            {
                 picLastName.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             if (txtUsername.Text != null && txtUsername.Text.Length > 2)
+            {
                 picUsername.Visible = false;
+            }
             else
+            {
                 picUsername.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbRoles.SelectedIndex != -1)
+            {
                 picRole.Visible = false;
+            }
             else
+            {
                 picRole.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text != null && txtPassword.Text.Length > 2)
+            {
                 picPassword.Visible = false;
+            }
             else
+            {
                 picPassword.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

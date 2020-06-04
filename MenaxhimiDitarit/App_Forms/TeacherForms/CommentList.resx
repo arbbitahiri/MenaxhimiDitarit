@@ -364,25 +364,19 @@
     <value>300, 17</value>
   </metadata>
   <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+    <value>223, 22</value>
   </data>
   <data name="updateToolStripMenuItem.Text" xml:space="preserve">
     <value>Update</value>
   </data>
   <data name="showCommentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
+    <value>223, 22</value>
   </data>
   <data name="showCommentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show Comment</value>
-  </data>
-  <data name="showReviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="showReviewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show Review</value>
+    <value>Show Comment and Review</value>
   </data>
   <data name="cmsComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 70</value>
+    <value>224, 48</value>
   </data>
   <data name="&gt;&gt;cmsComment.Name" xml:space="preserve">
     <value>cmsComment</value>
@@ -403,28 +397,13 @@
     <value>0, 137</value>
   </data>
   <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
-    <value>TopicID</value>
-  </data>
-  <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
-    <value>ClassID</value>
-  </data>
-  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
-    <value>SubjectID</value>
+    <value>CommentID</value>
   </data>
   <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
     <value>Date</value>
   </data>
   <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
     <value>Time</value>
-  </data>
-  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Content</value>
-  </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Reasoning</value>
-  </data>
-  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
-    <value>NoStudents</value>
   </data>
   <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Comment</value>
@@ -437,21 +416,6 @@
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Subject</value>
-  </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>LUN</value>
   </data>
   <metadata name="bsrcComment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
@@ -1483,18 +1447,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Comment List</value>
   </data>
-  <data name="&gt;&gt;bsrcComment.Name" xml:space="preserve">
-    <value>bsrcComment</value>
-  </data>
-  <data name="&gt;&gt;bsrcComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crystalDarkTheme1.Name" xml:space="preserve">
-    <value>crystalDarkTheme1</value>
-  </data>
-  <data name="&gt;&gt;crystalDarkTheme1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.CrystalDarkTheme, Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;updateToolStripMenuItem.Name" xml:space="preserve">
     <value>updateToolStripMenuItem</value>
   </data>
@@ -1507,11 +1459,17 @@
   <data name="&gt;&gt;showCommentToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showReviewToolStripMenuItem.Name" xml:space="preserve">
-    <value>showReviewToolStripMenuItem</value>
+  <data name="&gt;&gt;bsrcComment.Name" xml:space="preserve">
+    <value>bsrcComment</value>
   </data>
-  <data name="&gt;&gt;showReviewToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;bsrcComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crystalDarkTheme1.Name" xml:space="preserve">
+    <value>crystalDarkTheme1</value>
+  </data>
+  <data name="&gt;&gt;crystalDarkTheme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.CrystalDarkTheme, Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>CommentList</value>

@@ -97,12 +97,16 @@ namespace MenaxhimiDitarit.DirectorForms
                         dgvTeacherListD.DataSource = findTeacher;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a name!", "Empty",
                             "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
                         "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

@@ -92,12 +92,16 @@ namespace MenaxhimiDitarit.AdminForms
                         dgvRoomList.DataSource = findRoom;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a room type!", "Empty",
                             "Ju lutem shkruani llojin e sallës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Room type does not exist!", "Doesn't exist",
                         "Lloji i sallës nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

@@ -145,14 +145,29 @@
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Vërejtjen</value>
   </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>VërejtjaID</value>
+  </data>
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+    <value>Ora</value>
   </data>
   <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
     <value>TopicID</value>
   </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Vërejtja</value>
+  </data>
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Shqyrtimi</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Lënda</value>
   </data>
   <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>Shqyrtimi</value>
@@ -160,17 +175,8 @@
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
     <value>Tema</value>
   </data>
-  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
   <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
     <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>LUD</value>
   </data>
   <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
     <value>LUN</value>

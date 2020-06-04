@@ -110,8 +110,10 @@ namespace MenaxhimiDitarit.AdminForms
                         var checkClasses = MyClass.Where(t => t.ClassNo == Convert.ToInt32(cmbSelectClass.SelectedItem.ToString())).ToList();
 
                         if (checkClasses.Count > 0)
+                        {
                             Validation.MessageBoxShow("Class exists!", "Warning",
                                     "Klasa ekziston", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _classBLL.Add(classes);
@@ -123,8 +125,10 @@ namespace MenaxhimiDitarit.AdminForms
                                 this.Close();
                             }
                             else
+                            {
                                 Validation.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -138,14 +142,17 @@ namespace MenaxhimiDitarit.AdminForms
                             this.Close();
                         }
                         else
+                        {
                             Validation.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Please fill all fields!", "Warning",
                         "Ju lutem plotësoni të gjitha fushat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                }
             }
             catch (Exception)
             {
@@ -190,7 +197,9 @@ namespace MenaxhimiDitarit.AdminForms
                 picMainTeacher.Visible = false;
             }
             else
+            {
                 picMainTeacher.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
@@ -200,7 +209,9 @@ namespace MenaxhimiDitarit.AdminForms
                 picClass.Visible = false;
             }
             else
+            {
                 picClass.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectRoom_SelectedIndexChanged(object sender, EventArgs e)
@@ -210,7 +221,9 @@ namespace MenaxhimiDitarit.AdminForms
                 picRoom.Visible = false;
             }
             else
+            {
                 picRoom.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

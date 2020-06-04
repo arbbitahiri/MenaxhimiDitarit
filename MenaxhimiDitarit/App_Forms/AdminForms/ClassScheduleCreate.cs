@@ -119,8 +119,10 @@ namespace MenaxhimiDitarit.AdminForms
                         && t.Day == cmbSelectDate.SelectedItem.ToString() && t.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
 
                         if (checkSchedules.Count > 0)
+                        {
                             Validation.MessageBoxShow("Schedule exists in that period!", "Exists",
                                    "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                         else
                         {
                             bool isRegistred = _scheduleBLL.Add(schedule);
@@ -132,8 +134,10 @@ namespace MenaxhimiDitarit.AdminForms
                                 this.Close();
                             }
                             else
+                            {
                                 Validation.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     else
@@ -147,13 +151,17 @@ namespace MenaxhimiDitarit.AdminForms
                             this.Close();
                         }
                         else
+                        {
                             Validation.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception)
             {
@@ -199,33 +207,49 @@ namespace MenaxhimiDitarit.AdminForms
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectClass.SelectedIndex != -1)
+            {
                 picClass.Visible = false;
+            }
             else
+            {
                 picClass.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectSubject.SelectedIndex != -1)
+            {
                 picSubject.Visible = false;
+            }
             else
+            {
                 picSubject.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectTime.SelectedIndex != -1)
+            {
                 picTime.Visible = false;
+            }
             else
+            {
                 picTime.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void cmbSelectDate_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbSelectDate.SelectedIndex != -1)
+            {
                 picDate.Visible = false;
+            }
             else
+            {
                 picDate.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

@@ -79,12 +79,16 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                         this.Close();
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Update failed!", "Error",
                             "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -124,25 +128,37 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             if (txtUsername.Text != null && txtUsername.Text.Length > 2)
+            {
                 picUsername.Visible = false;
+            }
             else
+            {
                 picUsername.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text != null && txtPassword.Text.Length > 2)
+            {
                 picPassword.Visible = false;
+            }
             else
+            {
                 picPassword.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
 
         private void txtConfirmPass_TextChanged(object sender, EventArgs e)
         {
             if (txtPassword.Text == txtConfirmPass.Text)
+            {
                 picValidatePassword.Image = Properties.Resources.icons8_ok_15;
+            }
             else
+            {
                 picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

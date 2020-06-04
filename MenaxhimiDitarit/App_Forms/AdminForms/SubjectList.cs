@@ -96,15 +96,16 @@ namespace MenaxhimiDitarit
                         dgvSubjectList.DataSource = findSubject;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a subject title or a teacher name!", "Empty",
                             "Ju lutemi shkruani një lëndën ose një arsimtarë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    MessageBox.Show("Please write a subject title or a teacher name!!",
-                            "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("Subject title or teacher you're trying to search does not exist!", "Doesn't exist",
                         "Lënda ose arsimtari që po përpiqeni të kërkoni nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

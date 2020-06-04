@@ -96,12 +96,16 @@ namespace MenaxhimiDitarit.DirectorForms
                         dgvUserList.DataSource = findUsers;
                     }
                     else
+                    {
                         Validation.MessageBoxShow("Please write a name!", "Empty",
                             "Ju lutem shkruani emrin apo mbiemrin e përdoruesit!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
+                {
                     Validation.MessageBoxShow("User does not exist!", "Doesn't exist",
                         "Përdoruesi nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
@@ -144,8 +148,10 @@ namespace MenaxhimiDitarit.DirectorForms
                     if (user != null)
                     {
                         if (UserSession.GetUser.UserName == user.UserName)
+                        {
                             Validation.MessageBoxShow("You cannot delete your user account!", "Warning",
                                 "Nuk mund ta fshini llogarinë tënde!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             var result = Validation.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
