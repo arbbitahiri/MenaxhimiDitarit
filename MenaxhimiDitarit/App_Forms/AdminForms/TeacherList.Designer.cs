@@ -30,21 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherList));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn23 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn100 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn101 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn102 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn103 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn104 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn34 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn105 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn106 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn107 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn35 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn108 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn36 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn24 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition12 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn3 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadPrintWatermark radPrintWatermark1 = new Telerik.WinControls.UI.RadPrintWatermark();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearchName = new System.Windows.Forms.TextBox();
             this.grbSearch = new System.Windows.Forms.GroupBox();
@@ -58,20 +59,15 @@
             this.dgvTeacherList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
             this.pnlClassMain = new System.Windows.Forms.Panel();
-            this.pnlExport = new System.Windows.Forms.Panel();
-            this.btnPDF = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.pnlPrint = new System.Windows.Forms.Panel();
-            this.btnPrintSettings = new System.Windows.Forms.Button();
-            this.btnPrintPreview = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnPrintM = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddClass = new System.Windows.Forms.Button();
             this.pnlPicture = new System.Windows.Forms.Panel();
             this.lblTeacher = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
+            this.btnExportPDF = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsTeacherContext.SuspendLayout();
@@ -79,8 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherList.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).BeginInit();
             this.pnlClassMain.SuspendLayout();
-            this.pnlExport.SuspendLayout();
-            this.pnlPrint.SuspendLayout();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
             this.SuspendLayout();
@@ -174,118 +168,118 @@
             this.dgvTeacherList.MasterTemplate.AllowAddNewRow = false;
             this.dgvTeacherList.MasterTemplate.AllowCellContextMenu = false;
             this.dgvTeacherList.MasterTemplate.AllowColumnReorder = false;
-            gridViewDecimalColumn23.DataType = typeof(int);
-            gridViewDecimalColumn23.EnableExpressionEditor = false;
-            gridViewDecimalColumn23.FieldName = "TeacherID";
-            resources.ApplyResources(gridViewDecimalColumn23, "gridViewDecimalColumn23");
-            gridViewDecimalColumn23.IsAutoGenerated = true;
-            gridViewDecimalColumn23.Name = "TeacherID";
-            gridViewDecimalColumn23.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDecimalColumn23.Width = 75;
-            gridViewTextBoxColumn100.EnableExpressionEditor = false;
-            gridViewTextBoxColumn100.FieldName = "FirstName";
-            resources.ApplyResources(gridViewTextBoxColumn100, "gridViewTextBoxColumn100");
-            gridViewTextBoxColumn100.IsAutoGenerated = true;
-            gridViewTextBoxColumn100.Name = "FirstName";
-            gridViewTextBoxColumn100.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn100.Width = 100;
-            gridViewTextBoxColumn101.EnableExpressionEditor = false;
-            gridViewTextBoxColumn101.FieldName = "LastName";
-            resources.ApplyResources(gridViewTextBoxColumn101, "gridViewTextBoxColumn101");
-            gridViewTextBoxColumn101.IsAutoGenerated = true;
-            gridViewTextBoxColumn101.Name = "LastName";
-            gridViewTextBoxColumn101.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn101.Width = 100;
-            gridViewTextBoxColumn102.EnableExpressionEditor = false;
-            gridViewTextBoxColumn102.FieldName = "Gender";
-            resources.ApplyResources(gridViewTextBoxColumn102, "gridViewTextBoxColumn102");
-            gridViewTextBoxColumn102.IsAutoGenerated = true;
-            gridViewTextBoxColumn102.Name = "Gender";
-            gridViewTextBoxColumn102.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn102.Width = 75;
-            gridViewTextBoxColumn103.EnableExpressionEditor = false;
-            gridViewTextBoxColumn103.FieldName = "City";
-            resources.ApplyResources(gridViewTextBoxColumn103, "gridViewTextBoxColumn103");
-            gridViewTextBoxColumn103.IsAutoGenerated = true;
-            gridViewTextBoxColumn103.Name = "City";
-            gridViewTextBoxColumn103.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn103.Width = 85;
-            gridViewTextBoxColumn104.EnableExpressionEditor = false;
-            gridViewTextBoxColumn104.FieldName = "Qualification";
-            resources.ApplyResources(gridViewTextBoxColumn104, "gridViewTextBoxColumn104");
-            gridViewTextBoxColumn104.IsAutoGenerated = true;
-            gridViewTextBoxColumn104.Name = "Qualification";
-            gridViewTextBoxColumn104.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn104.Width = 85;
-            gridViewDateTimeColumn34.EnableExpressionEditor = false;
-            gridViewDateTimeColumn34.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.ShortDate;
-            gridViewDateTimeColumn34.FieldName = "DayofBirth";
-            resources.ApplyResources(gridViewDateTimeColumn34, "gridViewDateTimeColumn34");
-            gridViewDateTimeColumn34.IsAutoGenerated = true;
-            gridViewDateTimeColumn34.Name = "DayofBirth";
-            gridViewDateTimeColumn34.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn34.Width = 100;
-            gridViewTextBoxColumn105.EnableExpressionEditor = false;
-            gridViewTextBoxColumn105.FieldName = "Email";
-            resources.ApplyResources(gridViewTextBoxColumn105, "gridViewTextBoxColumn105");
-            gridViewTextBoxColumn105.IsAutoGenerated = true;
-            gridViewTextBoxColumn105.Name = "Email";
-            gridViewTextBoxColumn105.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn105.Width = 200;
-            gridViewTextBoxColumn106.EnableExpressionEditor = false;
-            gridViewTextBoxColumn106.FieldName = "PhoneNo";
-            resources.ApplyResources(gridViewTextBoxColumn106, "gridViewTextBoxColumn106");
-            gridViewTextBoxColumn106.IsAutoGenerated = true;
-            gridViewTextBoxColumn106.Name = "PhoneNo";
-            gridViewTextBoxColumn106.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn106.Width = 125;
-            gridViewTextBoxColumn107.EnableExpressionEditor = false;
-            gridViewTextBoxColumn107.FieldName = "InsertBy";
-            gridViewTextBoxColumn107.IsAutoGenerated = true;
-            gridViewTextBoxColumn107.Name = "InsertBy";
-            gridViewTextBoxColumn107.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn107.Width = 85;
-            gridViewDateTimeColumn35.EnableExpressionEditor = false;
-            gridViewDateTimeColumn35.FieldName = "InsertDate";
-            gridViewDateTimeColumn35.IsAutoGenerated = true;
-            gridViewDateTimeColumn35.Name = "InsertDate";
-            gridViewDateTimeColumn35.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn35.Width = 170;
-            gridViewTextBoxColumn108.EnableExpressionEditor = false;
-            gridViewTextBoxColumn108.FieldName = "LUB";
-            gridViewTextBoxColumn108.IsAutoGenerated = true;
-            gridViewTextBoxColumn108.Name = "LUB";
-            gridViewTextBoxColumn108.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn108.Width = 85;
-            gridViewDateTimeColumn36.EnableExpressionEditor = false;
-            gridViewDateTimeColumn36.FieldName = "LUD";
-            gridViewDateTimeColumn36.IsAutoGenerated = true;
-            gridViewDateTimeColumn36.Name = "LUD";
-            gridViewDateTimeColumn36.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn36.Width = 170;
-            gridViewDecimalColumn24.DataType = typeof(int);
-            gridViewDecimalColumn24.EnableExpressionEditor = false;
-            gridViewDecimalColumn24.FieldName = "LUN";
-            gridViewDecimalColumn24.IsAutoGenerated = true;
-            gridViewDecimalColumn24.Name = "LUN";
-            gridViewDecimalColumn24.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "TeacherID";
+            resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "TeacherID";
+            gridViewDecimalColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDecimalColumn1.Width = 75;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "FirstName";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "FirstName";
+            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn1.Width = 100;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "LastName";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "LastName";
+            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Gender";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Gender";
+            gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn3.Width = 75;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "City";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "City";
+            gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn4.Width = 85;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Qualification";
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "Qualification";
+            gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn5.Width = 85;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.ShortDate;
+            gridViewDateTimeColumn1.FieldName = "DayofBirth";
+            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
+            gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.Name = "DayofBirth";
+            gridViewDateTimeColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDateTimeColumn1.Width = 100;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Email";
+            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
+            gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Name = "Email";
+            gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn6.Width = 200;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "PhoneNo";
+            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
+            gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Name = "PhoneNo";
+            gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn7.Width = 125;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "InsertBy";
+            gridViewTextBoxColumn8.IsAutoGenerated = true;
+            gridViewTextBoxColumn8.Name = "InsertBy";
+            gridViewTextBoxColumn8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn8.Width = 85;
+            gridViewDateTimeColumn2.EnableExpressionEditor = false;
+            gridViewDateTimeColumn2.FieldName = "InsertDate";
+            gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.Name = "InsertDate";
+            gridViewDateTimeColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDateTimeColumn2.Width = 170;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "LUB";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "LUB";
+            gridViewTextBoxColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn9.Width = 85;
+            gridViewDateTimeColumn3.EnableExpressionEditor = false;
+            gridViewDateTimeColumn3.FieldName = "LUD";
+            gridViewDateTimeColumn3.IsAutoGenerated = true;
+            gridViewDateTimeColumn3.Name = "LUD";
+            gridViewDateTimeColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewDateTimeColumn3.Width = 170;
+            gridViewDecimalColumn2.DataType = typeof(int);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "LUN";
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "LUN";
+            gridViewDecimalColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.dgvTeacherList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn23,
-            gridViewTextBoxColumn100,
-            gridViewTextBoxColumn101,
-            gridViewTextBoxColumn102,
-            gridViewTextBoxColumn103,
-            gridViewTextBoxColumn104,
-            gridViewDateTimeColumn34,
-            gridViewTextBoxColumn105,
-            gridViewTextBoxColumn106,
-            gridViewTextBoxColumn107,
-            gridViewDateTimeColumn35,
-            gridViewTextBoxColumn108,
-            gridViewDateTimeColumn36,
-            gridViewDecimalColumn24});
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewDateTimeColumn1,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewDateTimeColumn2,
+            gridViewTextBoxColumn9,
+            gridViewDateTimeColumn3,
+            gridViewDecimalColumn2});
             this.dgvTeacherList.MasterTemplate.DataSource = this.bsrcTeacherList;
-            this.dgvTeacherList.MasterTemplate.ViewDefinition = tableViewDefinition12;
+            this.dgvTeacherList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvTeacherList.Name = "dgvTeacherList";
             this.dgvTeacherList.ReadOnly = true;
             this.dgvTeacherList.ThemeName = "CrystalDark";
@@ -296,101 +290,14 @@
             // 
             // pnlClassMain
             // 
-            this.pnlClassMain.Controls.Add(this.pnlExport);
-            this.pnlClassMain.Controls.Add(this.btnExport);
-            this.pnlClassMain.Controls.Add(this.pnlPrint);
-            this.pnlClassMain.Controls.Add(this.btnPrintM);
+            this.pnlClassMain.Controls.Add(this.btnExportPDF);
+            this.pnlClassMain.Controls.Add(this.btnExportExcel);
+            this.pnlClassMain.Controls.Add(this.btnPrint);
             this.pnlClassMain.Controls.Add(this.btnUpdate);
             this.pnlClassMain.Controls.Add(this.btnAddClass);
             this.pnlClassMain.Controls.Add(this.pnlPicture);
             resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
             this.pnlClassMain.Name = "pnlClassMain";
-            // 
-            // pnlExport
-            // 
-            this.pnlExport.Controls.Add(this.btnPDF);
-            this.pnlExport.Controls.Add(this.btnExcel);
-            resources.ApplyResources(this.pnlExport, "pnlExport");
-            this.pnlExport.Name = "pnlExport";
-            // 
-            // btnPDF
-            // 
-            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnPDF, "btnPDF");
-            this.btnPDF.FlatAppearance.BorderSize = 0;
-            this.btnPDF.ForeColor = System.Drawing.Color.White;
-            this.btnPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.UseVisualStyleBackColor = false;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnExcel, "btnExcel");
-            this.btnExcel.FlatAppearance.BorderSize = 0;
-            this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.UseVisualStyleBackColor = false;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnExport
-            // 
-            resources.ApplyResources(this.btnExport, "btnExport");
-            this.btnExport.FlatAppearance.BorderSize = 0;
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Name = "btnExport";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // pnlPrint
-            // 
-            this.pnlPrint.Controls.Add(this.btnPrintSettings);
-            this.pnlPrint.Controls.Add(this.btnPrintPreview);
-            this.pnlPrint.Controls.Add(this.btnPrint);
-            resources.ApplyResources(this.pnlPrint, "pnlPrint");
-            this.pnlPrint.Name = "pnlPrint";
-            // 
-            // btnPrintSettings
-            // 
-            this.btnPrintSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnPrintSettings, "btnPrintSettings");
-            this.btnPrintSettings.FlatAppearance.BorderSize = 0;
-            this.btnPrintSettings.ForeColor = System.Drawing.Color.White;
-            this.btnPrintSettings.Name = "btnPrintSettings";
-            this.btnPrintSettings.UseVisualStyleBackColor = false;
-            this.btnPrintSettings.Click += new System.EventHandler(this.btnPrintSettings_Click);
-            // 
-            // btnPrintPreview
-            // 
-            this.btnPrintPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnPrintPreview, "btnPrintPreview");
-            this.btnPrintPreview.FlatAppearance.BorderSize = 0;
-            this.btnPrintPreview.ForeColor = System.Drawing.Color.White;
-            this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.UseVisualStyleBackColor = false;
-            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnPrint, "btnPrint");
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnPrintM
-            // 
-            resources.ApplyResources(this.btnPrintM, "btnPrintM");
-            this.btnPrintM.FlatAppearance.BorderSize = 0;
-            this.btnPrintM.ForeColor = System.Drawing.Color.White;
-            this.btnPrintM.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
-            this.btnPrintM.Name = "btnPrintM";
-            this.btnPrintM.UseVisualStyleBackColor = true;
-            this.btnPrintM.Click += new System.EventHandler(this.btnPrintM_Click);
             // 
             // btnUpdate
             // 
@@ -432,6 +339,42 @@
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             // 
+            // btnExportPDF
+            // 
+            resources.ApplyResources(this.btnExportPDF, "btnExportPDF");
+            this.btnExportPDF.FlatAppearance.BorderSize = 0;
+            this.btnExportPDF.ForeColor = System.Drawing.Color.White;
+            this.btnExportPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
+            this.btnExportPDF.Name = "btnExportPDF";
+            this.btnExportPDF.UseVisualStyleBackColor = true;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
+            // 
+            // btnExportExcel
+            // 
+            resources.ApplyResources(this.btnExportExcel, "btnExportExcel");
+            this.btnExportExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // btnPrint
+            // 
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // printDocument
+            // 
+            this.printDocument.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printDocument.Watermark = radPrintWatermark1;
+            // 
             // TeacherList
             // 
             resources.ApplyResources(this, "$this");
@@ -452,8 +395,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacherList)).EndInit();
             this.pnlClassMain.ResumeLayout(false);
             this.pnlClassMain.PerformLayout();
-            this.pnlExport.ResumeLayout(false);
-            this.pnlPrint.ResumeLayout(false);
             this.pnlPicture.ResumeLayout(false);
             this.pnlPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
@@ -476,19 +417,14 @@
         private System.Windows.Forms.BindingSource bsrcTeacherList;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.Panel pnlClassMain;
-        private System.Windows.Forms.Panel pnlExport;
-        private System.Windows.Forms.Button btnPDF;
-        private System.Windows.Forms.Button btnExcel;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Panel pnlPrint;
-        private System.Windows.Forms.Button btnPrintSettings;
-        private System.Windows.Forms.Button btnPrintPreview;
-        private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Button btnPrintM;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAddClass;
         private System.Windows.Forms.Panel pnlPicture;
         private System.Windows.Forms.Label lblTeacher;
         private System.Windows.Forms.PictureBox picClass;
+        private System.Windows.Forms.Button btnExportPDF;
+        private System.Windows.Forms.Button btnExportExcel;
+        private System.Windows.Forms.Button btnPrint;
+        private Telerik.WinControls.UI.RadPrintDocument printDocument;
     }
 }

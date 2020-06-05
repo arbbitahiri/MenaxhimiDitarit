@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
@@ -36,17 +37,11 @@ namespace MenaxhimiDitarit.DirectorForms
         #region Menu
         private void CustomizeDesign()
         {
-            pnlExport.Visible = false;
             pnlPrint.Visible = false;
         }
 
         private void HideSubMenu()
         {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
             if (pnlPrint.Visible == true)
             {
                 pnlPrint.Visible = false;
@@ -65,14 +60,12 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyUsers = _usersBLL.GetAll();
             dgvUserList.DataSource = MyUsers;
         }
 
-        //Mirren te dhenat nga rreshti i klikuar
         private User GetUser(GridViewRowInfo userRow)
         {
             try
@@ -188,14 +181,25 @@ namespace MenaxhimiDitarit.DirectorForms
         private void UserListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "User List", "Lista e Përdoruesve");
         }
 
+        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
+            {
+                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
+                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
+            }
+        }
+
+        #region Button
         private void btnViewAllUsers_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -228,26 +232,24 @@ namespace MenaxhimiDitarit.DirectorForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
+        #region Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateUser();
         }
 
-        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteUser();
         }
 
-        //Update passwordin per rreshtin e klikuar ne DataGrid
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ChangePassword();
         }
 
-        //Shfaqim passwordin per rreshtin e klikuar ne DataGrid
         private void showPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -264,16 +266,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 }
             }
         }
-
-        //Hide Password me karakter
-        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
-            {
-                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
-                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
-            }
-        }
+        #endregion
 
         #region Search Textbox
         private void txtSearchUserByNU_Click(object sender, EventArgs e)
@@ -303,6 +296,7 @@ namespace MenaxhimiDitarit.DirectorForms
             addUser.ShowDialog();
         }
 
+        #region Update
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlUpdate);
@@ -317,48 +311,55 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ChangePassword();
         }
+        #endregion
 
         private void btnDeleteU_Click(object sender, EventArgs e)
         {
             DeleteUser();
         }
 
-        #region Print
-        private void btnPrintUM_Click(object sender, EventArgs e)
+        private void btnPrintUser_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlPicture);
+            dgvUserList.PrintPreview(printDocument);
         }
-
-        private void btnPrintU_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintS_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
-        private void btnExportU_Click(object sender, EventArgs e)
+        private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("UserList", "ListaEPërdoruesve", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvUserList, saveFileDialog.FileName, "UserList", "ListaEPërdoruesve");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcelU_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("UserList", "ListaEPërdoruesve", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDFU_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvUserList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 

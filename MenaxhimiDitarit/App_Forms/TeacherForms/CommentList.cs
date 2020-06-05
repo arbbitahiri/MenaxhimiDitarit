@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
@@ -24,44 +25,9 @@ namespace MenaxhimiDitarit.TeacherForms
             InitializeComponent();
 
             _commentBLL = new TopicBLL();
-
-            CustomizeDesign();
         }
 
         #region Metodat
-
-        #region Menu
-        private void CustomizeDesign()
-        {
-            pnlExport.Visible = false;
-            pnlPrint.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
-            if (pnlPrint.Visible == true)
-            {
-                pnlPrint.Visible = false;
-            }
-        }
-
-        private void ShowSubMenu(Panel panel)
-        {
-            if (panel.Visible == false)
-            {
-                HideSubMenu();
-                panel.Visible = true;
-            }
-            else
-                panel.Visible = false;
-        }
-        #endregion
-
         private void RefreshList()
         {
             MyComments = _commentBLL.GetAllComment();
@@ -123,8 +89,11 @@ namespace MenaxhimiDitarit.TeacherForms
         private void CommentList_Load(object sender, EventArgs e)
         {
             RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Comment List", "Lista e Vërejtjes");
         }
 
+        #region Button
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             RefreshList();
@@ -161,7 +130,9 @@ namespace MenaxhimiDitarit.TeacherForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateComment();
@@ -191,6 +162,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 }
             }
         }
+        #endregion
 
         #region Menu
         private void btnAddComment_Click(object sender, EventArgs e)
@@ -207,42 +179,48 @@ namespace MenaxhimiDitarit.TeacherForms
             UpdateComment();
         }
 
-        #region Print
-        private void btnPrintM_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlPrint);
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            dgvCommentList.PrintPreview(printDocument);
         }
-
-        private void btnPrintPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
-        private void btnExport_Click(object sender, EventArgs e)
+        private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("CommentList", "ListaEVërejtjes", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvCommentList, saveFileDialog.FileName, "CommentList", "ListaEVërejtjes");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("CommentList", "ListaEVërejtjes", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvCommentList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
@@ -40,52 +41,15 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MyClasses = _classBLL.GetAll();
             cmbSelectClass.DataSource = MyClasses;
-
-            CustomizeDesign();
         }
 
         #region Metodat
-
-        #region Menu
-        private void CustomizeDesign()
-        {
-            pnlExport.Visible = false;
-            pnlPrint.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
-            if (pnlPrint.Visible == true)
-            {
-                pnlPrint.Visible = false;
-            }
-        }
-
-        private void ShowSubMenu(Panel panel)
-        {
-            if (panel.Visible == false)
-            {
-                HideSubMenu();
-                panel.Visible = true;
-            }
-            else
-                panel.Visible = false;
-        }
-        #endregion
-
-        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyTopics = _topicBLL.GetAllTopic();
             dgvTopicList.DataSource = MyTopics;
         }
 
-        //Mirren te dhenat nga rreshti i klikuar
         private Topic GetTopic(GridViewRowInfo topicRow)
         {
             try
@@ -167,14 +131,28 @@ namespace MenaxhimiDitarit.TeacherForms
         private void TopicListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Topic List", "Lista e Temave");
         }
 
+        #region Grid Formatting
+        private void dgvTopicList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Content", "Përmbajtja");
+        }
+
+        private void dgvTopicList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Content", "Përmbajtja");
+        }
+        #endregion
+
+        #region Button
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -206,20 +184,19 @@ namespace MenaxhimiDitarit.TeacherForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
+        #region Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateTopic();
         }
 
-        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteTopic();
         }
 
-        //Shikojme Content te Topic
         private void showContentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvTopicList.SelectedRows.Count > 0)
@@ -236,6 +213,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 }
             }
         }
+        #endregion
 
         #region Menu
         private void btnAddTopic_Click(object sender, EventArgs e)
@@ -257,42 +235,48 @@ namespace MenaxhimiDitarit.TeacherForms
             DeleteTopic();
         }
 
-        #region Print
-        private void btnPrintM_Click(object sender, EventArgs e)
-        {
-            ShowDialog(pnlPrint);
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            dgvTopicList.PrintPreview(printDocument);
         }
-
-        private void btnPrintPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
-        private void btnExport_Click(object sender, EventArgs e)
+        private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvTopicList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvTopicList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.AdminForms;
@@ -28,52 +29,15 @@ namespace MenaxhimiDitarit
             dgvClassesList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _classBLL = new ClassBLL();
-
-            CustomizeDesign();
         }
 
         #region Metodat
-
-        #region Menu
-        private void CustomizeDesign()
-        {
-            pnlExport.Visible = false;
-            pnlPrint.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
-            if (pnlPrint.Visible == true)
-            {
-                pnlPrint.Visible = false;
-            }
-        }
-
-        private void ShowSubMenu(Panel panel)
-        {
-            if (panel.Visible == false)
-            {
-                HideSubMenu();
-                panel.Visible = true;
-            }
-            else
-                panel.Visible = false;
-        }
-        #endregion
-
-        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyClasses = _classBLL.GetAll();
             dgvClassesList.DataSource = MyClasses;
         }
 
-        //Mirren te dhenat nga rreshti i klikua
         private Class GetClass(GridViewRowInfo classRow)
         {
             try
@@ -149,17 +113,19 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
+        private void ClassListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Class List", "Lista e Klasës");
+        }
+
+        #region Button
         private void btnViewAllClass_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        private void ClassListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -191,20 +157,19 @@ namespace MenaxhimiDitarit
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
+        #region Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateClass();
         }
 
-        //Delete te dhenat per rreshtin e klikuar ne DataGrid
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteClass();
         }
 
-        //Shikojme orarin per klasen e krijuar ne DataGrid
         private void viewScheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvClassesList.SelectedRows.Count > 0)
@@ -224,7 +189,9 @@ namespace MenaxhimiDitarit
                 }
             };
         }
+        #endregion
 
+        #region Search Textbox
         private void txtSearchClass_Click(object sender, EventArgs e)
         {
             txtSearchClass.Text = "";
@@ -238,11 +205,11 @@ namespace MenaxhimiDitarit
             }
         }
 
-        //Lejon qe ne TextBox te shkruhet vetem numer dhe te mund te fshihet
         private void txtSearchClass_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoLetter(e);
         }
+        #endregion
 
         #region Menu
         private void btnAddClass_Click(object sender, EventArgs e)
@@ -265,42 +232,48 @@ namespace MenaxhimiDitarit
             DeleteClass();
         }
 
-        #region Print
         private void btnPrintM_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlPrint);
+            dgvClassesList.PrintPreview(printDocument);
         }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
         private void btnExport_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvClassesList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvClassesList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 

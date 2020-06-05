@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
@@ -34,49 +35,15 @@ namespace MenaxhimiDitarit.AdminForms
 
             MyClasses = _classBLL.GetAll();
             cmbSelectClass.DataSource = MyClasses;
-
-            CustomizeDesign();
         }
 
         #region Metodat
-        private void CustomizeDesign()
-        {
-            pnlExport.Visible = false;
-            pnlPrint.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
-            if (pnlPrint.Visible == true)
-            {
-                pnlPrint.Visible = false;
-            }
-        }
-
-        private void ShowSubMenu(Panel panel)
-        {
-            if (panel.Visible == false)
-            {
-                HideSubMenu();
-                panel.Visible = true;
-            }
-            else
-                panel.Visible = false;
-        }
-
-        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MySchedules = _scheduleBLL.GetAll();
             dgvScheduleList.DataSource = MySchedules;
         }
 
-        //Mirren te dhenat nga rreshti i klikuar
         private ClassSchedule GetSchedule(GridViewRowInfo scheduleRow)
         {
             try
@@ -131,14 +98,16 @@ namespace MenaxhimiDitarit.AdminForms
         private void ClassScheduletList_Load_1(object sender, EventArgs e)
         {
             RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Class Schedule List", "Lista e Orarit të Klasës");
         }
 
+        #region Button
         private void btnViewAll_Click_1(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        //Kerkojm te dhenat ne DataGrid
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             try
@@ -170,8 +139,8 @@ namespace MenaxhimiDitarit.AdminForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateSchedule();
@@ -192,42 +161,48 @@ namespace MenaxhimiDitarit.AdminForms
             UpdateSchedule();
         }
 
-        #region Print
-        private void btnPrintM_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlPrint);
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            dgvScheduleList.PrintPreview(printDocument);
         }
-
-        private void btnPrintPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
-        private void btnExport_Click(object sender, EventArgs e)
+        private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassScheduleList", "ListaEOraritTëKlasës", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvScheduleList, saveFileDialog.FileName, "ClassScheduleList", "ListaEOraritTëKlasës");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("ClassScheduleList", "ListaEOraritTëKlasës", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvScheduleList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 

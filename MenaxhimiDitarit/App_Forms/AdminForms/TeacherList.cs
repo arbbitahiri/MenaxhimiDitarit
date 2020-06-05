@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
@@ -26,52 +27,15 @@ namespace MenaxhimiDitarit
             dgvTeacherList.SelectionMode = GridViewSelectionMode.FullRowSelect;
 
             _teacherBLL = new TeacherBLL();
-
-            CustomizeDesign();
         }
 
         #region Metodat
-
-        #region Menu
-        private void CustomizeDesign()
-        {
-            pnlExport.Visible = false;
-            pnlPrint.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (pnlExport.Visible == true)
-            {
-                pnlExport.Visible = false;
-            }
-
-            if (pnlPrint.Visible == true)
-            {
-                pnlPrint.Visible = false;
-            }
-        }
-
-        private void ShowSubMenu(Panel panel)
-        {
-            if (panel.Visible == false)
-            {
-                HideSubMenu();
-                panel.Visible = true;
-            }
-            else
-                panel.Visible = false;
-        }
-        #endregion
-
-        //Refresh i te dhenave ne DataGrid
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
             dgvTeacherList.DataSource = MyTeachers;
         }
 
-        //Mirren te dhenat nga rreshti i klikuar
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
         {
             try
@@ -129,14 +93,16 @@ namespace MenaxhimiDitarit
         private void TeacherListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
         }
 
+        #region Button
         private void btnViewAllTeachers_Click(object sender, EventArgs e)
         {
             RefreshList();
         }
 
-        //Kerkojm te dhenat ne DataGrid
         private void btnSearchTeachers_Click(object sender, EventArgs e)
         {
             try
@@ -169,8 +135,8 @@ namespace MenaxhimiDitarit
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
-        //Update te dhenat per rreshtin e klikuar ne DataGrid
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateTeacher();
@@ -209,42 +175,48 @@ namespace MenaxhimiDitarit
             UpdateTeacher();
         }
 
-        #region Print
-        private void btnPrintM_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlPrint);
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            dgvTeacherList.PrintPreview(printDocument);
         }
-
-        private void btnPrintPreview_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrintSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
 
         #region Export
-        private void btnExport_Click(object sender, EventArgs e)
+        private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlExport);
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx");
+
+                saveFileDialog.ShowDialog();
+
+                Validation.ExportToExcel(dgvTeacherList, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
+
+                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnExportPDF_Click(object sender, EventArgs e)
         {
+            Thread thread = new Thread((ThreadStart)(() =>
+            {
+                var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf");
 
-        }
+                saveFileDialog.ShowDialog();
 
-        private void btnPDF_Click(object sender, EventArgs e)
-        {
+                Validation.ExportToPDF(dgvTeacherList, saveFileDialog.FileName);
 
+                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
         #endregion
 
