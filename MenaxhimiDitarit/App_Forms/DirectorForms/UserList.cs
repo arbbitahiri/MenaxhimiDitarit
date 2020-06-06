@@ -208,9 +208,8 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     if (txtSearchUserByNU.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName
                         var findUsers = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text)
-                        || f.UserName.Contains(txtSearchUserByNU.Text)).ToList();
+                        || f.UserName.Contains(txtSearchUserByNU.Text) || f.FullName.Contains(txtSearchUserByNU.Text)).ToList();
 
                         dgvUserList.DataSource = findUsers;
                     }

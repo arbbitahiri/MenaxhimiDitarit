@@ -22,22 +22,17 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly SubjectBLL _subjectBLL;
         private List<Subject> MySubjects;
 
-        private readonly ClassBLL _classBLL;
-        private List<Class> MyClasses;
-
         public Review(Topic review)
         {
             InitializeComponent();
 
             _reviewBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
-            _classBLL = new ClassBLL();
 
             _review = review;
 
             MyReviews = _reviewBLL.GetAllComment();
             MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
 
             if (review.Review != "NONE")
             {
@@ -55,15 +50,17 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
-            txtSubject.Enabled = false;
+            cmbSelectSubject.Enabled = false;
             dtpCommentDay.Enabled = false;
             txtComment.Enabled = false;
+
+            cmbSelectSubject.DataSource = MySubjects;
         }
 
         private void PopulateForm(Topic review)
         {
             txtID.Text = review.TopicID.ToString();
-            txtSubject.Text = review.Subject.ToString();
+            cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == review.SubjectID);
             dtpCommentDay.Value = review.Date;
             txtComment.Text = review.Comment;
         }
@@ -113,7 +110,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!Validation.CheckTextbox(this))
+            if (Validation.CheckTextbox(this))
             {
                 var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
                     "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -121,30 +118,35 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 if (result == DialogResult.Yes)
                     this.Close();
             }
+            else
+            {
+                this.Close();
+            }
         }
 
-
         #region ErrorProvider
-        ToolTip toolTip = new ToolTip();
-
         private void picReview_MouseHover(object sender, EventArgs e)
         {
             if (txtReview.Text == null)
             {
-                toolTip.Show("Review is required!", picReview);
+                Validation.ToolTipShow("Review is required!", "Shqyrtimi duhet të plotësohet!", picReview);
             }
             else if (txtReview.Text.Length < 4)
             {
-                toolTip.Show("Review is to short!", picReview);
+                Validation.ToolTipShow("Review is to short!", "Shqyrtimi është shumë i vogël!", picReview);
             }
         }
 
         private void txtReview_TextChanged(object sender, EventArgs e)
         {
             if (txtReview.Text != null && txtReview.Text.Length > 5)
+            {
                 picReview.Visible = false;
+            }
             else
+            {
                 picReview.Image = Properties.Resources.icons8_cancel_15;
+            }
         }
         #endregion
     }

@@ -20,11 +20,17 @@ namespace MenaxhimiDitarit.TeacherForms
         private readonly TopicBLL _commentBLL;
         private List<Topic> MyComments;
 
+        private readonly SubjectBLL _subjectBLL;
+        private List<Subject> MySubjects;
         public CommentList()
         {
             InitializeComponent();
 
             _commentBLL = new TopicBLL();
+            _subjectBLL = new SubjectBLL();
+
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
         }
 
         #region Metodat

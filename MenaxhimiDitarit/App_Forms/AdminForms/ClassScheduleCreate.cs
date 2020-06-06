@@ -88,7 +88,6 @@ namespace MenaxhimiDitarit.AdminForms
         }
         #endregion
 
-        #region Eventet
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
             try
@@ -172,7 +171,7 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!Validation.CheckTextbox(this))
+            if (Validation.CheckTextbox(this))
             {
                 var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
                     "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -180,8 +179,11 @@ namespace MenaxhimiDitarit.AdminForms
                 if (result == DialogResult.Yes)
                     this.Close();
             }
+            else
+            {
+                this.Close();
+            }
         }
-        #endregion
 
         #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)

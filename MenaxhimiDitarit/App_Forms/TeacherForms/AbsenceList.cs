@@ -20,11 +20,18 @@ namespace MenaxhimiDitarit.TeacherForms
         private readonly TopicBLL _absenceBLL;
         private List<Topic> MyAbsences;
 
+        private readonly SubjectBLL _subjectBLL;
+        private List<Subject> MySubjects;
+
         public AbsenceList()
         {
             InitializeComponent();
 
             _absenceBLL = new TopicBLL();
+            _subjectBLL = new SubjectBLL();
+
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
         }
 
         #region Metodat

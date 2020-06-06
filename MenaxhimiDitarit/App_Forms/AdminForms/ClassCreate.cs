@@ -83,7 +83,6 @@ namespace MenaxhimiDitarit.AdminForms
         }
         #endregion
 
-        #region Eventet
         private void btnSubmitClass_Click(object sender, EventArgs e)
         {
             try
@@ -171,8 +170,11 @@ namespace MenaxhimiDitarit.AdminForms
                 if (result == DialogResult.Yes)
                     this.Close();
             }
+            else
+            {
+                this.Close();
+            }
         }
-        #endregion
 
         #region ErrorProvider
         private void picMainTeacher_MouseHover(object sender, EventArgs e)

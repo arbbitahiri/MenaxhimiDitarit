@@ -64,6 +64,7 @@
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsReviewComment = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.reviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlClassMain = new System.Windows.Forms.Panel();
             this.btnExportPDF = new System.Windows.Forms.Button();
             this.btnExportExcel = new System.Windows.Forms.Button();
@@ -73,8 +74,8 @@
             this.pnlPicture = new System.Windows.Forms.Panel();
             this.lblComment = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReviewCommentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReviewCommentList.MasterTemplate)).BeginInit();
@@ -83,6 +84,7 @@
             this.pnlClassMain.SuspendLayout();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -336,6 +338,12 @@
             resources.ApplyResources(this.reviewToolStripMenuItem, "reviewToolStripMenuItem");
             this.reviewToolStripMenuItem.Click += new System.EventHandler(this.reviewToolStripMenuItem_Click);
             // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            resources.ApplyResources(this.updateToolStripMenuItem, "updateToolStripMenuItem");
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
             // pnlClassMain
             // 
             this.pnlClassMain.Controls.Add(this.btnExportPDF);
@@ -417,17 +425,15 @@
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            resources.ApplyResources(this.updateToolStripMenuItem, "updateToolStripMenuItem");
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
             // printDocument
             // 
             this.printDocument.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.Watermark = radPrintWatermark1;
+            // 
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
             // ReviewComment
             // 
@@ -451,6 +457,7 @@
             this.pnlPicture.ResumeLayout(false);
             this.pnlPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +488,6 @@
         private System.Windows.Forms.BindingSource bsrcReview;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private Telerik.WinControls.UI.RadPrintDocument printDocument;
+        private System.Windows.Forms.BindingSource bsrcSubject;
     }
 }

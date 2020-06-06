@@ -138,9 +138,8 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     if (txtSearchName.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName
                         var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text)
-                        || f.LastName.Contains(txtSearchName.Text)).ToList();
+                        || f.LastName.Contains(txtSearchName.Text) || f.FullName.Contains(txtSearchName.Text)).ToList();
 
                         dgvTeacherListD.DataSource = findTeacher;
                     }

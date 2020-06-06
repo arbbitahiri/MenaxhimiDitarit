@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtComment.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>20</value>
   </data>
   <data name="lblID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -238,7 +238,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 154</value>
+    <value>503, 157</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
@@ -262,7 +262,7 @@
     <value>18</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 175</value>
+    <value>562, 184</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -281,30 +281,6 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>19</value>
-  </data>
-  <data name="txtSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="txtSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 154</value>
-  </data>
-  <data name="txtSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
-  </data>
-  <data name="txtSubject.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;txtSubject.Name" xml:space="preserve">
-    <value>txtSubject</value>
-  </data>
-  <data name="&gt;&gt;txtSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtSubject.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtSubject.ZOrder" xml:space="preserve">
-    <value>20</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 330</value>
@@ -361,7 +337,7 @@
     <value>17</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 330</value>
+    <value>562, 330</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -391,7 +367,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 262</value>
+    <value>503, 271</value>
   </data>
   <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
@@ -418,13 +394,13 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 217</value>
+    <value>562, 226</value>
   </data>
   <data name="txtReview.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtReview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 107</value>
+    <value>181, 98</value>
   </data>
   <data name="txtReview.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -586,7 +562,7 @@
     <value>NoControl</value>
   </data>
   <data name="picReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>752, 260</value>
+    <value>750, 269</value>
   </data>
   <data name="picReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -616,7 +592,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="dtpReviewDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 182</value>
+    <value>562, 191</value>
   </data>
   <data name="dtpReviewDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
@@ -634,7 +610,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dtpReviewDate.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -646,7 +622,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>473, 187</value>
+    <value>471, 196</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 16</value>
@@ -667,10 +643,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>564, 210</value>
+    <value>562, 219</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -688,34 +664,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <metadata name="bsrcSubject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="cmbSelectSubject.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>752, 184</value>
+  <data name="cmbSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+  <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 154</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
+  <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 24</value>
   </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
+  <data name="cmbSelectSubject.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
+  <data name="&gt;&gt;cmbSelectSubject.Name" xml:space="preserve">
+    <value>cmbSelectSubject</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cmbSelectSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbSelectSubject.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -728,6 +707,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Review</value>
+  </data>
+  <data name="&gt;&gt;bsrcSubject.Name" xml:space="preserve">
+    <value>bsrcSubject</value>
+  </data>
+  <data name="&gt;&gt;bsrcSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Review</value>

@@ -21,11 +21,18 @@ namespace MenaxhimiDitarit.DirectorForms
         private readonly TopicBLL _reviewBLL;
         private List<Topic> MyReview;
 
+        private readonly SubjectBLL _subjectBLL;
+        private List<Subject> MySubjects;
+
         public ReviewComment()
         {
             InitializeComponent();
 
             _reviewBLL = new TopicBLL();
+            _subjectBLL = new SubjectBLL();
+
+            MySubjects = _subjectBLL.GetAll();
+            cmbSelectSubject.DataSource = MySubjects;
         }
 
         #region Metodat

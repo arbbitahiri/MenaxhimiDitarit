@@ -50,7 +50,7 @@
             this.dgvAbsenceList = new Telerik.WinControls.UI.RadGridView();
             this.cmsAbsence = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bsrcTopicAbsence = new System.Windows.Forms.BindingSource(this.components);
+            this.bsrcAbsence = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.grbSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -71,14 +71,16 @@
             this.lblAbsence = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsenceList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsenceList.MasterTemplate)).BeginInit();
             this.cmsAbsence.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTopicAbsence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcAbsence)).BeginInit();
             this.grbSearch.SuspendLayout();
             this.pnlAbsenceMain.SuspendLayout();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAbsenceList
@@ -216,7 +218,7 @@
             gridViewTextBoxColumn6,
             gridViewDateTimeColumn3,
             gridViewDecimalColumn6});
-            this.dgvAbsenceList.MasterTemplate.DataSource = this.bsrcTopicAbsence;
+            this.dgvAbsenceList.MasterTemplate.DataSource = this.bsrcAbsence;
             this.dgvAbsenceList.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dgvAbsenceList.Name = "dgvAbsenceList";
             this.dgvAbsenceList.ReadOnly = true;
@@ -236,9 +238,9 @@
             resources.ApplyResources(this.updateToolStripMenuItem, "updateToolStripMenuItem");
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
-            // bsrcTopicAbsence
+            // bsrcAbsence
             // 
-            this.bsrcTopicAbsence.DataSource = typeof(MenaxhimiDitarit.BO.Topic);
+            this.bsrcAbsence.DataSource = typeof(MenaxhimiDitarit.BO.Topic);
             // 
             // grbSearch
             // 
@@ -286,10 +288,13 @@
             // cmbSelectSubject
             // 
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectSubject.DataSource = this.bsrcSubject;
+            this.cmbSelectSubject.DisplayMember = "SubjectTitle";
             resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
             this.cmbSelectSubject.Name = "cmbSelectSubject";
+            this.cmbSelectSubject.ValueMember = "SubjectID";
             // 
             // lblSelectSubject
             // 
@@ -402,6 +407,10 @@
             this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.Watermark = radPrintWatermark1;
             // 
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
+            // 
             // AbsenceList
             // 
             resources.ApplyResources(this, "$this");
@@ -416,7 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsenceList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAbsenceList)).EndInit();
             this.cmsAbsence.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcTopicAbsence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcAbsence)).EndInit();
             this.grbSearch.ResumeLayout(false);
             this.grbSearch.PerformLayout();
             this.pnlAbsenceMain.ResumeLayout(false);
@@ -424,6 +433,7 @@
             this.pnlPicture.ResumeLayout(false);
             this.pnlPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,7 +452,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ContextMenuStrip cmsAbsence;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.BindingSource bsrcTopicAbsence;
+        private System.Windows.Forms.BindingSource bsrcAbsence;
         private System.Windows.Forms.Panel pnlAbsenceMain;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAddComment;
@@ -453,5 +463,6 @@
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnPrint;
         private Telerik.WinControls.UI.RadPrintDocument printDocument;
+        private System.Windows.Forms.BindingSource bsrcSubject;
     }
 }

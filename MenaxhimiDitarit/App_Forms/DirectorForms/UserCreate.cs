@@ -123,13 +123,17 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!Validation.CheckTextbox(this))
+            if (Validation.CheckTextbox(this))
             {
                 var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
                     "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (result == DialogResult.Yes)
                     this.Close();
+            }
+            else
+            {
+                this.Close();
             }
         }
 

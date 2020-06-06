@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Review));
             this.txtComment = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
@@ -35,7 +36,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSubject = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblComment = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,9 +50,10 @@
             this.dtpReviewDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // txtComment
@@ -96,15 +97,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtSubject, "txtSubject");
-            this.txtSubject.ForeColor = System.Drawing.Color.White;
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.ReadOnly = true;
             // 
             // panel3
             // 
@@ -205,23 +197,30 @@
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
-            // pictureBox1
+            // cmbSelectSubject
             // 
-            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseHover += new System.EventHandler(this.picReview_MouseHover);
+            this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectSubject.DataSource = this.bsrcSubject;
+            this.cmbSelectSubject.DisplayMember = "SubjectTitle";
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
+            this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
+            this.cmbSelectSubject.FormattingEnabled = true;
+            this.cmbSelectSubject.Name = "cmbSelectSubject";
+            this.cmbSelectSubject.ValueMember = "SubjectID";
+            // 
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
             // Review
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.cmbSelectSubject);
             this.Controls.Add(this.dtpReviewDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picReview);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
@@ -238,12 +237,11 @@
             this.Controls.Add(this.lblComment);
             this.Controls.Add(this.lblRoomNo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.txtComment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Review";
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +255,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblRoomNo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Panel panel2;
@@ -272,6 +269,7 @@
         private System.Windows.Forms.DateTimePicker dtpReviewDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbSelectSubject;
+        private System.Windows.Forms.BindingSource bsrcSubject;
     }
 }

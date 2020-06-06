@@ -65,15 +65,16 @@
             this.bsrcComment = new System.Windows.Forms.BindingSource(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.pnlClassMain = new System.Windows.Forms.Panel();
+            this.btnExportPDF = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAddComment = new System.Windows.Forms.Button();
             this.pnlPicture = new System.Windows.Forms.Panel();
             this.lblComment = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
-            this.btnExportPDF = new System.Windows.Forms.Button();
-            this.btnExportExcel = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
+            this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCommentList.MasterTemplate)).BeginInit();
@@ -82,6 +83,7 @@
             this.pnlClassMain.SuspendLayout();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -130,10 +132,13 @@
             // cmbSelectSubject
             // 
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.cmbSelectSubject.DataSource = this.bsrcSubject;
+            this.cmbSelectSubject.DisplayMember = "SubjectTitle";
             resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
             this.cmbSelectSubject.Name = "cmbSelectSubject";
+            this.cmbSelectSubject.ValueMember = "SubjectID";
             // 
             // lblSelectSubject
             // 
@@ -349,6 +354,36 @@
             resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
             this.pnlClassMain.Name = "pnlClassMain";
             // 
+            // btnExportPDF
+            // 
+            resources.ApplyResources(this.btnExportPDF, "btnExportPDF");
+            this.btnExportPDF.FlatAppearance.BorderSize = 0;
+            this.btnExportPDF.ForeColor = System.Drawing.Color.White;
+            this.btnExportPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
+            this.btnExportPDF.Name = "btnExportPDF";
+            this.btnExportPDF.UseVisualStyleBackColor = true;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
+            // 
+            // btnExportExcel
+            // 
+            resources.ApplyResources(this.btnExportExcel, "btnExportExcel");
+            this.btnExportExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // btnPrint
+            // 
+            resources.ApplyResources(this.btnPrint, "btnPrint");
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // btnUpdate
             // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
@@ -389,41 +424,15 @@
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             // 
-            // btnExportPDF
-            // 
-            resources.ApplyResources(this.btnExportPDF, "btnExportPDF");
-            this.btnExportPDF.FlatAppearance.BorderSize = 0;
-            this.btnExportPDF.ForeColor = System.Drawing.Color.White;
-            this.btnExportPDF.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_export_pdf_20;
-            this.btnExportPDF.Name = "btnExportPDF";
-            this.btnExportPDF.UseVisualStyleBackColor = true;
-            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
-            // 
-            // btnExportExcel
-            // 
-            resources.ApplyResources(this.btnExportExcel, "btnExportExcel");
-            this.btnExportExcel.FlatAppearance.BorderSize = 0;
-            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportExcel.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_excel_20;
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.UseVisualStyleBackColor = true;
-            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
-            // 
-            // btnPrint
-            // 
-            resources.ApplyResources(this.btnPrint, "btnPrint");
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_print_20;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // printDocument
             // 
             this.printDocument.FooterFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.Watermark = radPrintWatermark1;
+            // 
+            // bsrcSubject
+            // 
+            this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
             // CommentList
             // 
@@ -447,6 +456,7 @@
             this.pnlPicture.ResumeLayout(false);
             this.pnlPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +488,6 @@
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnPrint;
         private Telerik.WinControls.UI.RadPrintDocument printDocument;
+        private System.Windows.Forms.BindingSource bsrcSubject;
     }
 }
