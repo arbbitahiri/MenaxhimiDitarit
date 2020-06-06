@@ -137,7 +137,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
-        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
@@ -152,12 +151,26 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         #region ErrorProvider
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+            if (txtFirstName.Text == null)
+            {
+                Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+            }
+            else if (txtFirstName.Text.Length < 2)
+            {
+                Validation.ToolTipShow("First name is to short!", "Emri është i shkurtë!", picFirstName);
+            }
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+            if (txtLastName.Text == null)
+            {
+                Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+            }
+            else if (txtLastName.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtë!", picLastName);
+            }
         }
 
         private void picRole_MouseHover(object sender, EventArgs e)
@@ -167,18 +180,25 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+            if (txtUsername.Text == null)
+            {
+                Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+            }
+            else if (txtUsername.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Username is to short!", "Nofka është i shkurtë!", picFirstName);
+            }
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
             {
-                picLastName.Visible = false;
+                picFirstName.Visible = false;
             }
             else
             {
-                picLastName.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picFirstName);
             }
         }
 
@@ -190,7 +210,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picLastName.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picLastName);
             }
         }
 
@@ -202,7 +222,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picRole.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picRole);
             }
         }
 
@@ -214,7 +234,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picUsername.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picUsername);
             }
         }
         #endregion

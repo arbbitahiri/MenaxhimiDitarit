@@ -45,7 +45,6 @@ namespace MenaxhimiDitarit
             txtID.Enabled = false;
         }
 
-        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(Room room)
         {
             txtID.Text = room.RoomID.ToString();
@@ -145,12 +144,26 @@ namespace MenaxhimiDitarit
         #region ErrorProvider
         private void picRoomNo_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Room number is required!", "Numri i sallës duhet të plotësohet!", picRoomNo);
+            if (txtRoomNo.Text == null)
+            {
+                Validation.ToolTipShow("Room number is required!", "Numri i sallës duhet të plotësohet!", picRoomNo);
+            }
+            else if (txtRoomNo.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Room number is to short!", "Numri i sallës është i vogël!", picRoomNo);
+            }
         }
 
         private void picRoomType_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Room type is required!", "Lloji i sallës duhet të plotësohet!", picRoomType);
+            if (txtRoomType.Text == null)
+            {
+                Validation.ToolTipShow("Room type is required!", "Lloji i sallës duhet të plotësohet!", picRoomType);
+            }
+            else if (txtRoomType.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Room type is to short!", "Lloji i sallës është i vogël!", picRoomNo);
+            }
         }
 
         private void txtRoomNo_TextChanged(object sender, EventArgs e)
@@ -161,7 +174,7 @@ namespace MenaxhimiDitarit
             }
             else
             {
-                picRoomNo.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picRoomNo);
             }
         }
 
@@ -173,7 +186,7 @@ namespace MenaxhimiDitarit
             }
             else
             {
-                picRoomType.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picRoomType);
             }
         }
         #endregion

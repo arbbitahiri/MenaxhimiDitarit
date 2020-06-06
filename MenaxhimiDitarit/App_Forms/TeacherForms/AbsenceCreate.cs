@@ -181,9 +181,96 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        #region ErrorProvider
         private void txtNoStudents_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoLetter(e);
         }
+
+        private void picClass_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
+        }
+
+        private void picSubjetct_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
+        }
+
+        private void picTime_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
+        }
+
+        private void picReasoning_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Select a reason!", "Zgjedh arsyen!", picReasoning);
+        }
+
+        private void picNoStudents_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Write numbers of students that are absence!", "Shkruaj numrat e studentëve që mungojnë!", picNoStudents);
+        }
+
+        private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectClass.SelectedIndex != -1)
+            {
+                picClass.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picClass);
+            }
+        }
+
+        private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectSubject.SelectedIndex != -1)
+            {
+                picSubject.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picSubject);
+            }
+        }
+
+        private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectTime.SelectedIndex != -1)
+            {
+                picTime.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picTime);
+            }
+        }
+
+        private void cmbReasoning_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbReasoning.SelectedIndex != -1)
+            {
+                picReasoning.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picReasoning);
+            }
+        }
+
+        private void txtNoStudents_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNoStudents.Text != null)
+            {
+                picNoStudents.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picNoStudents);
+            }
+        }
+        #endregion
     }
 }

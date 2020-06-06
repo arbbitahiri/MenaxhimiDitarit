@@ -83,7 +83,7 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectClass.SelectedItem = MyClasses.FirstOrDefault(f => f.ClassID == comment.ClassID);
             cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == comment.SubjectID);
             dtpSelectDate.Value = comment.Date;
-            txtComent.Text = comment.Comment;
+            txtComment.Text = comment.Comment;
         }
         #endregion
 
@@ -91,14 +91,14 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             try
             {
-                if (!txtComent.Text.Equals(""))
+                if (!txtComment.Text.Equals(""))
                 {
                     Topic comment = new Topic
                     {
                         TopicID = int.Parse(txtID.Text),
                         ClassID = Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()),
                         SubjectID = Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()),
-                        Comment = txtComent.Text,
+                        Comment = txtComment.Text,
                         Time = Convert.ToInt32(cmbSelectTime.SelectedItem.ToString()),
                         Date = dtpSelectDate.Value,
                         InsertBy = UserSession.GetUser.UserName,
@@ -183,5 +183,81 @@ namespace MenaxhimiDitarit.TeacherForms
                 this.Close();
             }
         }
+
+        #region ErrorProvider
+        private void picClass_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
+        }
+
+        private void picSubject_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
+        }
+        private void picTime_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
+        }
+
+        private void picContent_MouseHover(object sender, EventArgs e)
+        {
+            if (txtComment.Text == null)
+            {
+                Validation.ToolTipShow("Comment is required!", "Vërejtja duhet të plotësohet!", picTime);
+            }
+            else if (txtComment.Text.Length < 4)
+            {
+                Validation.ToolTipShow("Comment is to short!", "Vërejtja është shumë e vogël!", picComment);
+            }
+        }
+
+        private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectClass.SelectedIndex != -1)
+            {
+                picClass.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picClass);
+            }
+        }
+
+        private void cmbSelectSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectSubject.SelectedIndex != -1)
+            {
+                picSubject.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picSubject);
+            }
+        }
+
+        private void cmbSelectTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSelectTime.SelectedIndex != -1)
+            {
+                picTime.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picTime);
+            }
+        }
+
+        private void txtComent_TextChanged(object sender, EventArgs e)
+        {
+            if (txtComment.Text != null && txtComment.Text.Length > 4)
+            {
+                picComment.Visible = false;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picComment);
+            }
+        }
+        #endregion
     }
 }

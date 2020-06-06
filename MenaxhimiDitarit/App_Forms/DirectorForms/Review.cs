@@ -133,7 +133,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else if (txtReview.Text.Length < 4)
             {
-                Validation.ToolTipShow("Review is to short!", "Shqyrtimi është shumë i vogël!", picReview);
+                Validation.ToolTipShow("Review is to short!", "Shqyrtimi është i shkurtë!", picReview);
             }
         }
 
@@ -145,7 +145,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picReview.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picReview);
             }
         }
         #endregion

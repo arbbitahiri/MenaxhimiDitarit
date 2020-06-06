@@ -200,7 +200,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picMainTeacher.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picMainTeacher);
             }
         }
 
@@ -212,7 +212,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picClass.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picClass);
             }
         }
 
@@ -224,7 +224,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picRoom.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picRoom);
             }
         }
         #endregion

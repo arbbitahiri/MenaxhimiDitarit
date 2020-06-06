@@ -244,7 +244,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             else
             {
-                picSubject.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picSubject);
             }
         }
 
@@ -256,7 +256,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             else
             {
-                picTime.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picTime);
             }
         }
 
@@ -268,7 +268,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             else
             {
-                picContent.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picContent);
             }
         }
         #endregion

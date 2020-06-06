@@ -214,7 +214,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picClass.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picClass);
             }
         }
 
@@ -226,7 +226,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picSubject.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picSubject);
             }
         }
 
@@ -238,7 +238,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picTime.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picTime);
             }
         }
 
@@ -250,7 +250,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             else
             {
-                picDate.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picDate);
             }
         }
         #endregion

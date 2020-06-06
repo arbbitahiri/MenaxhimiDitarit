@@ -114,14 +114,28 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region ErrorProvider
-        private void picPassword_MouseHover(object sender, EventArgs e)
-        {
-            Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
-        }
-
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+            if (txtUsername.Text == null)
+            {
+                Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+            }
+            else if (txtUsername.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Username is to short!", "Nofka është shumë i vogël!", picPassword);
+            }
+        }
+
+        private void picPassword_MouseHover(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == null)
+            {
+                Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
+            }
+            else if (txtPassword.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Password is to short!", "Fjalëkalimi është shumë i vogël!", picPassword);
+            }
         }
 
         private void picValidatePassword_MouseHover(object sender, EventArgs e)
@@ -137,7 +151,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picUsername.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picUsername);
             }
         }
 
@@ -149,7 +163,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picPassword.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picPassword);
             }
         }
 
@@ -161,7 +175,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             else
             {
-                picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picValidatePassword);
             }
         }
         #endregion

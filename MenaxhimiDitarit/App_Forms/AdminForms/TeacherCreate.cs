@@ -76,7 +76,7 @@ namespace MenaxhimiDitarit
             try
             {
                 bool isEmail = Validation.IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
-                bool isPhone = Validation.IsValid(@"^(?:\(?)(\d{3})(?:[\)-\..\s]?)(\d{2})(?:[-\.\s]?)(\d{3})(?:[-\.\s]?)(\d{3})(?!\d)", txtPhoneNo);
+                bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
 
                 if (!isPhone)
                 {
@@ -281,7 +281,7 @@ namespace MenaxhimiDitarit
         #region ErrorProvier
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
-            if (txtFirstName.Text.Equals(""))
+            if (txtFirstName.Text == null)
             {
                 Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
             }
@@ -293,7 +293,7 @@ namespace MenaxhimiDitarit
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            if (txtLastName.Text.Equals(""))
+            if (txtLastName.Text == null)
             {
                 Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
             }
@@ -305,7 +305,7 @@ namespace MenaxhimiDitarit
 
         private void picCity_MouseHover(object sender, EventArgs e)
         {
-            if (txtCity.Text.Equals(""))
+            if (txtCity.Text == null)
             {
                 Validation.ToolTipShow("City is required!", "Qyteti duhet të plotësohet!", picCity);
             }
@@ -317,7 +317,7 @@ namespace MenaxhimiDitarit
 
         private void picQualification_MouseHover(object sender, EventArgs e)
         {
-            if (txtQualification.Text.Equals(""))
+            if (txtQualification.Text == null)
             {
                 Validation.ToolTipShow("Qualification is required!", "Kualifikimi duhet të plotësohet!", picQualification);
             }
@@ -331,7 +331,7 @@ namespace MenaxhimiDitarit
         {
             bool isEmail = Validation.IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
 
-            if (txtEmail.Text.Equals(""))
+            if (txtEmail.Text == null)
             {
                 Validation.ToolTipShow("E-mail is required! Please write in correct format:\nexample@gmail.com",
                     "Email duhet të plotësohet. Ju lutem shkruani në formë korrekte:\nexample@gmail.com", picEmail);
@@ -350,22 +350,22 @@ namespace MenaxhimiDitarit
 
         private void picPhoneNo_MouseHover(object sender, EventArgs e)
         {
-            bool isPhone = Validation.IsValid(@"^(?:\(?)(\d{3})(?:[\)-\..\s]?)(\d{2})(?:[-\.\s]?)(\d{3})(?:[-\.\s]?)(\d{3})(?!\d)", txtPhoneNo);
+            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
 
-            if (txtPhoneNo.Text.Equals(""))
+            if (txtPhoneNo.Text == null)
             {
-                Validation.ToolTipShow("Phone number is required! Please write in correct format:\n555 55 555 555\n555-55-555-555",
-                    "Numri i telefonit duhet të plotësohet Ju lutem shkruani në formë korrekte:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+                Validation.ToolTipShow("Phone number is required! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
+                    "Numri i telefonit duhet të plotësohet Ju lutem shkruani në formë korrekte:\n555 (044) 444 444\n444-(044)-444-444", picPhoneNo);
             }
             else if(txtPhoneNo.Text.Length < 8)
             {
-                Validation.ToolTipShow("Phone number is to short! Please write in correct format:\n555 55 555 555\n555-55-555-555",
-                    "Numri i telefonit duhet të plotësohet! Ju lutem shkruani në formë korrekte:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+                Validation.ToolTipShow("Phone number is to short! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
+                    "Numri i telefonit duhet të plotësohet! Ju lutem shkruani në formë korrekte:\n444 (044) 444 444\n444-(044)-444-444", picPhoneNo);
             }
             else if (!isPhone)
             {
-                Validation.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n555 55 555 555\n555-55-555-555",
-                    "Numri i telefonit është në format të gabuar. Ju lutem shkruani në formë korrekte:\n555 55 555 555\n555-55-555-555", picPhoneNo);
+                Validation.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
+                    "Numri i telefonit është në format të gabuar. Ju lutem shkruani në formë korrekte:\n444 (044) 444 444\n444-(044)-444-444", picPhoneNo);
             }
         }
 
@@ -381,7 +381,9 @@ namespace MenaxhimiDitarit
                 picFirstName.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picFirstName);
+            }
         }
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
@@ -396,7 +398,9 @@ namespace MenaxhimiDitarit
                 picLastName.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picLastName);
+            }
         }
 
         private void txtCity_TextChanged(object sender, EventArgs e)
@@ -411,7 +415,9 @@ namespace MenaxhimiDitarit
                 picCity.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picCity);
+            }
         }
 
         private void txtQualification_TextChanged(object sender, EventArgs e)
@@ -426,7 +432,9 @@ namespace MenaxhimiDitarit
                 picQualification.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picQualification);
+            }
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -438,7 +446,9 @@ namespace MenaxhimiDitarit
                 picEmail.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picEmail);
+            }
         }
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
@@ -450,8 +460,9 @@ namespace MenaxhimiDitarit
                 picPhoneNo.Visible = false;
             }
             else
+            {
                 Validation.SetImageVisibility(picPhoneNo);
-
+            }
         }
         #endregion
     }

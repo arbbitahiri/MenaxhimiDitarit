@@ -38,7 +38,6 @@ namespace MenaxhimiDitarit.DirectorForms
             txtConfirmPass.UseSystemPasswordChar = true;
         }
 
-        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
@@ -82,7 +81,6 @@ namespace MenaxhimiDitarit.DirectorForms
                         };
                         user.LUN++;
 
-                        //Shikojme nese ekziston nje Username i till
                         var checkUsers = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
                         if (checkUsers.Count > 0)
@@ -137,7 +135,6 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
-        //Shikojme nese data e zgjedhur ne DateTimePicker nuk eshte date e kaluar
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
@@ -152,27 +149,38 @@ namespace MenaxhimiDitarit.DirectorForms
         #region ErrorProvider
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+            if (txtFirstName.Text == null)
+            {
+                Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+            }
+            else if (txtFirstName.Text.Length < 2)
+            {
+                Validation.ToolTipShow("First name is to short!", "Emri është i shkurtër!", picFirstName);
+            }
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+            if (txtFirstName.Text == null)
+            {
+                Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+            }
+            else if (txtFirstName.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtër!", picLastName);
+            }
         }
 
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
-        }
-
-        private void picPassword_MouseHover(object sender, EventArgs e)
-        {
-            Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
-        }
-
-        private void picValidatePassword_MouseHover(object sender, EventArgs e)
-        {
-            Validation.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
+            if (txtFirstName.Text == null)
+            {
+                Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+            }
+            else if (txtFirstName.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Username is to short!", "Nofka është i shkurtër!", picUsername);
+            }
         }
 
         private void picRole_MouseHover(object sender, EventArgs e)
@@ -180,16 +188,21 @@ namespace MenaxhimiDitarit.DirectorForms
             Validation.ToolTipShow("Role is required!", "Roli duhet të plotësohet!", picRole);
         }
 
-        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
+        private void picPassword_MouseHover(object sender, EventArgs e)
         {
-            if (txtPassword.Text == txtConfirmPass.Text)
+            if (txtFirstName.Text == null)
             {
-                picValidatePassword.Image = Properties.Resources.icons8_ok_15;
+                Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
             }
-            else
+            else if (txtFirstName.Text.Length < 2)
             {
-                picValidatePassword.Image = Properties.Resources.icons8_cancel_15;
+                Validation.ToolTipShow("Password is to short!", "v është i shkurtër!", picPassword);
             }
+        }
+
+        private void picValidatePassword_MouseHover(object sender, EventArgs e)
+        {
+            Validation.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
@@ -200,7 +213,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             else
             {
-                picFirstName.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picFirstName);
             }
         }
 
@@ -212,7 +225,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             else
             {
-                picLastName.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picLastName);
             }
         }
 
@@ -224,7 +237,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             else
             {
-                picUsername.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picUsername);
             }
         }
 
@@ -236,7 +249,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             else
             {
-                picRole.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picRole);
             }
         }
 
@@ -248,7 +261,19 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             else
             {
-                picPassword.Image = Properties.Resources.icons8_cancel_15;
+                Validation.SetImageVisibility(picPassword);
+            }
+        }
+
+        private void txtConfirmPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == txtConfirmPass.Text)
+            {
+                picValidatePassword.Image = Properties.Resources.icons8_ok_15;
+            }
+            else
+            {
+                Validation.SetImageVisibility(picValidatePassword);
             }
         }
         #endregion

@@ -175,17 +175,38 @@ namespace MenaxhimiDitarit
         #region ErrorProvider
         private void picSubjectTitle_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("A title is required!", "Emri i lëndës duhet të plotësohet!", picSubjectTitle);
+            if (txtSubjectTitle.Text == null)
+            {
+                Validation.ToolTipShow("A title is required!", "Emri i lëndës duhet të plotësohet!", picSubjectTitle);
+            }
+            else if (txtSubjectTitle.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Title is to short!", "Emri i lëndës është i shkurtë!", picSubjectTitle);
+            }
         }
 
         private void picBook_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("A book is required!", "Një libër duhet të plotësohet!", picBook);
+            if (txtSubjectTitle.Text == null)
+            {
+                Validation.ToolTipShow("A book is required!", "Një libër duhet të plotësohet!", picBook);
+            }
+            else if (txtSubjectTitle.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Book is to short!", "Libër është i shkurtë!", picBook);
+            }
         }
 
         private void picBAuthor_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("An author is required!", "Autori i librit duhet të plotësohet!", picBAuthor);
+            if (txtSubjectTitle.Text == null)
+            {
+                Validation.ToolTipShow("An author is required!", "Autori i librit duhet të plotësohet!", picBAuthor);
+            }
+            else if (txtSubjectTitle.Text.Length < 2)
+            {
+                Validation.ToolTipShow("Author is to short!", "Autori i librit është i shkurtë!", picBAuthor);
+            }
         }
 
         private void picTeacher_MouseHover(object sender, EventArgs e)
@@ -200,7 +221,9 @@ namespace MenaxhimiDitarit
                 picSubjectTitle.Visible = false;
             }
             else
-                picSubjectTitle.Image = Properties.Resources.icons8_cancel_15;
+            {
+                Validation.SetImageVisibility(picSubjectTitle);
+            }
         }
 
         private void txtSubjectBook_TextChanged(object sender, EventArgs e)
@@ -210,7 +233,9 @@ namespace MenaxhimiDitarit
                 picBook.Visible = false;
             }
             else
-                picBook.Image = Properties.Resources.icons8_cancel_15;
+            {
+                Validation.SetImageVisibility(picBook);
+            }
         }
 
         private void txtBookAuthor_TextChanged(object sender, EventArgs e)
@@ -220,7 +245,9 @@ namespace MenaxhimiDitarit
                 picBAuthor.Visible = false;
             }
             else
-                picBAuthor.Image = Properties.Resources.icons8_cancel_15;
+            {
+                Validation.SetImageVisibility(picBAuthor);
+            }
         }
 
         private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,7 +257,9 @@ namespace MenaxhimiDitarit
                 picTeacher.Visible = false;
             }
             else
-                picTeacher.Image = Properties.Resources.icons8_cancel_15;
+            {
+                Validation.SetImageVisibility(picTeacher);
+            }
         }
         #endregion
     }
