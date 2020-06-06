@@ -119,16 +119,16 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 177</value>
+    <value>399, 181</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 198</value>
+    <value>426, 202</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 177</value>
+    <value>426, 181</value>
   </data>
   <data name="lblBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 233</value>
+    <value>387, 237</value>
   </data>
   <data name="lblBook.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 16</value>
@@ -137,7 +137,7 @@
     <value>Libri</value>
   </data>
   <data name="lblSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 205</value>
+    <value>374, 209</value>
   </data>
   <data name="lblSubjectTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 16</value>
@@ -146,19 +146,19 @@
     <value>Lënda</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 254</value>
+    <value>426, 258</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 226</value>
+    <value>426, 230</value>
   </data>
   <data name="txtSubjectBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 233</value>
+    <value>426, 237</value>
   </data>
   <data name="txtSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 205</value>
+    <value>426, 209</value>
   </data>
   <data name="lblBookAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 261</value>
+    <value>341, 265</value>
   </data>
   <data name="lblBookAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 16</value>
@@ -167,19 +167,25 @@
     <value>Autori i Librit</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 282</value>
+    <value>426, 286</value>
   </data>
   <data name="txtBookAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 261</value>
+    <value>426, 265</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 342</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 342</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
   <data name="lblAssignTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 292</value>
+    <value>308, 296</value>
   </data>
   <data name="lblAssignTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 16</value>
@@ -188,10 +194,22 @@
     <value>Zgjedh Arsimtarin</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 319</value>
+    <value>426, 323</value>
   </data>
   <data name="cmbTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 289</value>
+    <value>426, 293</value>
+  </data>
+  <data name="picSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 209</value>
+  </data>
+  <data name="picBook.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 237</value>
+  </data>
+  <data name="picBAuthor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 267</value>
+  </data>
+  <data name="picTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>613, 297</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

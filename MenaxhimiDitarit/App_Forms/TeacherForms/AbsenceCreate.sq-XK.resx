@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 275</value>
+    <value>355, 275</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -134,7 +134,7 @@
     <value>Zgjedh Datën</value>
   </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 346</value>
+    <value>331, 346</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 16</value>
@@ -143,7 +143,7 @@
     <value>Numri i Nxënësve</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 166</value>
+    <value>350, 166</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -152,7 +152,7 @@
     <value>Zgjedh Klasën</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>265, 203</value>
+    <value>346, 203</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 16</value>
@@ -167,7 +167,7 @@
     <value>E Paarsyeshme</value>
   </data>
   <data name="lblReasoning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 312</value>
+    <value>381, 312</value>
   </data>
   <data name="lblReasoning.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 16</value>
@@ -176,7 +176,7 @@
     <value>Arsyetimi</value>
   </data>
   <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 240</value>
+    <value>362, 240</value>
   </data>
   <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 16</value>

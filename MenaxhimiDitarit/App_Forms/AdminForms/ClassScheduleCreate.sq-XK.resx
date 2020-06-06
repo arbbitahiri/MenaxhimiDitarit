@@ -119,16 +119,16 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 251</value>
+    <value>421, 251</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 213</value>
+    <value>421, 213</value>
   </data>
   <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 176</value>
+    <value>421, 176</value>
   </data>
   <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 254</value>
+    <value>338, 254</value>
   </data>
   <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 16</value>
@@ -137,16 +137,16 @@
     <value>Zgjidh Orën</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 281</value>
+    <value>421, 281</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>332, 148</value>
+    <value>394, 149</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 169</value>
+    <value>421, 169</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 149</value>
+    <value>421, 149</value>
   </data>
   <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 16</value>
@@ -155,7 +155,7 @@
     <value>Zgjidh Lëndën</value>
   </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 179</value>
+    <value>326, 179</value>
   </data>
   <data name="lblClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -164,10 +164,10 @@
     <value>Zgjidh Klasën</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 243</value>
+    <value>421, 243</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 206</value>
+    <value>421, 206</value>
   </data>
   <data name="cmbSelectDate.Items" xml:space="preserve">
     <value>E Hënë</value>
@@ -185,10 +185,10 @@
     <value>E Premte</value>
   </data>
   <data name="cmbSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 288</value>
+    <value>421, 288</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 291</value>
+    <value>383, 291</value>
   </data>
   <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 16</value>
@@ -197,10 +197,10 @@
     <value>Dita</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 318</value>
+    <value>421, 318</value>
   </data>
   <data name="lblYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 325</value>
+    <value>389, 325</value>
   </data>
   <data name="lblYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 16</value>
@@ -209,16 +209,28 @@
     <value>Viti</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 345</value>
+    <value>421, 345</value>
   </data>
   <data name="txtYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 325</value>
+    <value>421, 325</value>
   </data>
   <data name="btnSubmitClass.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 178</value>
+  </data>
+  <data name="picSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 215</value>
+  </data>
+  <data name="picTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 253</value>
+  </data>
+  <data name="picDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 290</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -66,9 +66,9 @@
             // 
             // cmbSelectTime
             // 
+            resources.ApplyResources(this.cmbSelectTime, "cmbSelectTime");
             this.cmbSelectTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectTime.DisplayMember = "RoomType";
-            resources.ApplyResources(this.cmbSelectTime, "cmbSelectTime");
             this.cmbSelectTime.ForeColor = System.Drawing.Color.White;
             this.cmbSelectTime.FormattingEnabled = true;
             this.cmbSelectTime.Items.AddRange(new object[] {
@@ -84,10 +84,10 @@
             // 
             // cmbSelectSubject
             // 
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectSubject.DataSource = this.bsrcSubject;
             this.cmbSelectSubject.DisplayMember = "SubjectTitle";
-            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
             this.cmbSelectSubject.Name = "cmbSelectSubject";
@@ -100,10 +100,10 @@
             // 
             // cmbSelectClass
             // 
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectClass.DataSource = this.bsrcClass;
             this.cmbSelectClass.DisplayMember = "ClassNo";
-            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
             this.cmbSelectClass.Name = "cmbSelectClass";
@@ -122,8 +122,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel3.Name = "panel3";
             // 
             // lblID
@@ -134,15 +134,15 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -161,21 +161,21 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel2.Name = "panel2";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Name = "panel1";
             // 
             // cmbSelectDate
             // 
+            resources.ApplyResources(this.cmbSelectDate, "cmbSelectDate");
             this.cmbSelectDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectDate.DisplayMember = "RoomType";
-            resources.ApplyResources(this.cmbSelectDate, "cmbSelectDate");
             this.cmbSelectDate.ForeColor = System.Drawing.Color.White;
             this.cmbSelectDate.FormattingEnabled = true;
             this.cmbSelectDate.Items.AddRange(new object[] {
@@ -196,8 +196,8 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel4.Name = "panel4";
             // 
             // lblYear
@@ -208,24 +208,24 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel5.Name = "panel5";
             // 
             // txtYear
             // 
+            resources.ApplyResources(this.txtYear, "txtYear");
             this.txtYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtYear, "txtYear");
             this.txtYear.ForeColor = System.Drawing.Color.White;
             this.txtYear.Name = "txtYear";
             // 
             // btnSubmitClass
             // 
+            resources.ApplyResources(this.btnSubmitClass, "btnSubmitClass");
             this.btnSubmitClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmitClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitClass.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSubmitClass, "btnSubmitClass");
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
@@ -233,10 +233,10 @@
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -244,32 +244,32 @@
             // 
             // picClass
             // 
-            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picClass, "picClass");
+            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             this.picClass.MouseHover += new System.EventHandler(this.picClass_MouseHover);
             // 
             // picSubject
             // 
-            this.picSubject.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picSubject, "picSubject");
+            this.picSubject.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picSubject.Name = "picSubject";
             this.picSubject.TabStop = false;
             this.picSubject.MouseHover += new System.EventHandler(this.picSubject_MouseHover);
             // 
             // picTime
             // 
-            this.picTime.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picTime, "picTime");
+            this.picTime.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picTime.Name = "picTime";
             this.picTime.TabStop = false;
             this.picTime.MouseHover += new System.EventHandler(this.picTime_MouseHover);
             // 
             // picDate
             // 
-            this.picDate.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picDate, "picDate");
+            this.picDate.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picDate.Name = "picDate";
             this.picDate.TabStop = false;
             this.picDate.MouseHover += new System.EventHandler(this.picDate_MouseHover);

@@ -33,11 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pnlReview = new System.Windows.Forms.Panel();
-            this.btnReviewComments = new System.Windows.Forms.Button();
             this.btnReview = new System.Windows.Forms.Button();
-            this.pnlRoles = new System.Windows.Forms.Panel();
-            this.btnRolesList = new System.Windows.Forms.Button();
             this.btnRoles = new System.Windows.Forms.Button();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.btnAddNUser = new System.Windows.Forms.Button();
@@ -60,8 +56,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlReview.SuspendLayout();
-            this.pnlRoles.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.pnlTeachers.SuspendLayout();
             this.pnlPic.SuspendLayout();
@@ -75,9 +69,7 @@
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.pnlMain.Controls.Add(this.panel1);
-            this.pnlMain.Controls.Add(this.pnlReview);
             this.pnlMain.Controls.Add(this.btnReview);
-            this.pnlMain.Controls.Add(this.pnlRoles);
             this.pnlMain.Controls.Add(this.btnRoles);
             this.pnlMain.Controls.Add(this.pnlUsers);
             this.pnlMain.Controls.Add(this.btnUsers);
@@ -111,47 +103,15 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // pnlReview
-            // 
-            this.pnlReview.Controls.Add(this.btnReviewComments);
-            resources.ApplyResources(this.pnlReview, "pnlReview");
-            this.pnlReview.Name = "pnlReview";
-            // 
-            // btnReviewComments
-            // 
-            this.btnReviewComments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnReviewComments, "btnReviewComments");
-            this.btnReviewComments.FlatAppearance.BorderSize = 0;
-            this.btnReviewComments.ForeColor = System.Drawing.Color.White;
-            this.btnReviewComments.Name = "btnReviewComments";
-            this.btnReviewComments.UseVisualStyleBackColor = false;
-            this.btnReviewComments.Click += new System.EventHandler(this.btnReviewComments_Click);
-            // 
             // btnReview
             // 
             resources.ApplyResources(this.btnReview, "btnReview");
             this.btnReview.FlatAppearance.BorderSize = 0;
             this.btnReview.ForeColor = System.Drawing.Color.White;
-            this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_survey_25;
+            this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_chat_20;
             this.btnReview.Name = "btnReview";
             this.btnReview.UseVisualStyleBackColor = true;
             this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
-            // 
-            // pnlRoles
-            // 
-            this.pnlRoles.Controls.Add(this.btnRolesList);
-            resources.ApplyResources(this.pnlRoles, "pnlRoles");
-            this.pnlRoles.Name = "pnlRoles";
-            // 
-            // btnRolesList
-            // 
-            this.btnRolesList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.btnRolesList, "btnRolesList");
-            this.btnRolesList.FlatAppearance.BorderSize = 0;
-            this.btnRolesList.ForeColor = System.Drawing.Color.White;
-            this.btnRolesList.Name = "btnRolesList";
-            this.btnRolesList.UseVisualStyleBackColor = false;
-            this.btnRolesList.Click += new System.EventHandler(this.btnRolesList_Click);
             // 
             // btnRoles
             // 
@@ -325,8 +285,6 @@
             this.Shown += new System.EventHandler(this.DirectorMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.pnlReview.ResumeLayout(false);
-            this.pnlRoles.ResumeLayout(false);
             this.pnlUsers.ResumeLayout(false);
             this.pnlTeachers.ResumeLayout(false);
             this.pnlPic.ResumeLayout(false);
@@ -348,8 +306,6 @@
         private System.Windows.Forms.Label lblDirector;
         private System.Windows.Forms.Panel pnlTeachers;
         private System.Windows.Forms.Button btnTeachers;
-        private System.Windows.Forms.Panel pnlRoles;
-        private System.Windows.Forms.Button btnRolesList;
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Panel pnlUsers;
         private System.Windows.Forms.Button btnAddNUser;
@@ -359,8 +315,6 @@
         private System.Windows.Forms.Button btnListTeachers;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.PictureBox picSchool;
-        private System.Windows.Forms.Panel pnlReview;
-        private System.Windows.Forms.Button btnReviewComments;
         private System.Windows.Forms.Button btnReview;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblUser;

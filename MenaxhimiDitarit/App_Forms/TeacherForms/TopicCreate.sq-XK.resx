@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>202, 231</value>
+    <value>264, 230</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -134,7 +134,7 @@
     <value>Zgjedh Datën</value>
   </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 328</value>
+    <value>280, 327</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 16</value>
@@ -143,7 +143,7 @@
     <value>Përmbajtja</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 192</value>
+    <value>255, 191</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 16</value>
@@ -152,7 +152,7 @@
     <value>Zgjedh Lëndën</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 155</value>
+    <value>259, 154</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -161,7 +161,7 @@
     <value>Zgjedh Klasën</value>
   </data>
   <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 264</value>
+    <value>278, 263</value>
   </data>
   <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 16</value>

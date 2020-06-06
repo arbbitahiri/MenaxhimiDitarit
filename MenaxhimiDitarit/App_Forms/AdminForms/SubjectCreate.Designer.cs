@@ -67,15 +67,15 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -94,30 +94,30 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel2.Name = "panel2";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Name = "panel1";
             // 
             // txtSubjectBook
             // 
+            resources.ApplyResources(this.txtSubjectBook, "txtSubjectBook");
             this.txtSubjectBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSubjectBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtSubjectBook, "txtSubjectBook");
             this.txtSubjectBook.ForeColor = System.Drawing.Color.White;
             this.txtSubjectBook.Name = "txtSubjectBook";
             this.txtSubjectBook.TextChanged += new System.EventHandler(this.txtSubjectBook_TextChanged);
             // 
             // txtSubjectTitle
             // 
+            resources.ApplyResources(this.txtSubjectTitle, "txtSubjectTitle");
             this.txtSubjectTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSubjectTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtSubjectTitle, "txtSubjectTitle");
             this.txtSubjectTitle.ForeColor = System.Drawing.Color.White;
             this.txtSubjectTitle.Name = "txtSubjectTitle";
             this.txtSubjectTitle.TextChanged += new System.EventHandler(this.txtSubjectTitle_TextChanged);
@@ -130,15 +130,15 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel3.Name = "panel3";
             // 
             // txtBookAuthor
             // 
+            resources.ApplyResources(this.txtBookAuthor, "txtBookAuthor");
             this.txtBookAuthor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtBookAuthor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtBookAuthor, "txtBookAuthor");
             this.txtBookAuthor.ForeColor = System.Drawing.Color.White;
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.TextChanged += new System.EventHandler(this.txtBookAuthor_TextChanged);
@@ -146,10 +146,10 @@
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -157,10 +157,10 @@
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -174,16 +174,16 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel4.Name = "panel4";
             // 
             // cmbTeacher
             // 
+            resources.ApplyResources(this.cmbTeacher, "cmbTeacher");
             this.cmbTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbTeacher.DataSource = this.bsrcTeacher;
             this.cmbTeacher.DisplayMember = "FullName";
-            resources.ApplyResources(this.cmbTeacher, "cmbTeacher");
             this.cmbTeacher.ForeColor = System.Drawing.Color.White;
             this.cmbTeacher.FormattingEnabled = true;
             this.cmbTeacher.Name = "cmbTeacher";
@@ -196,32 +196,32 @@
             // 
             // picSubjectTitle
             // 
-            this.picSubjectTitle.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picSubjectTitle, "picSubjectTitle");
+            this.picSubjectTitle.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picSubjectTitle.Name = "picSubjectTitle";
             this.picSubjectTitle.TabStop = false;
             this.picSubjectTitle.MouseHover += new System.EventHandler(this.picSubjectTitle_MouseHover);
             // 
             // picBook
             // 
-            this.picBook.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picBook, "picBook");
+            this.picBook.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picBook.Name = "picBook";
             this.picBook.TabStop = false;
             this.picBook.MouseHover += new System.EventHandler(this.picBook_MouseHover);
             // 
             // picBAuthor
             // 
-            this.picBAuthor.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picBAuthor, "picBAuthor");
+            this.picBAuthor.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picBAuthor.Name = "picBAuthor";
             this.picBAuthor.TabStop = false;
             this.picBAuthor.MouseHover += new System.EventHandler(this.picBAuthor_MouseHover);
             // 
             // picTeacher
             // 
-            this.picTeacher.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picTeacher, "picTeacher");
+            this.picTeacher.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picTeacher.Name = "picTeacher";
             this.picTeacher.TabStop = false;
             this.picTeacher.MouseHover += new System.EventHandler(this.picTeacher_MouseHover);

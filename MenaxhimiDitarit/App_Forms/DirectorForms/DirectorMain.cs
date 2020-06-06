@@ -26,8 +26,6 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             pnlTeachers.Visible = false;
             pnlUsers.Visible = false;
-            pnlRoles.Visible = false;
-            pnlReview.Visible = false;
         }
 
         //Fshehim Panelin pasi te klkojm ne njerin nga Button-at qe jane ne Panel
@@ -38,12 +36,6 @@ namespace MenaxhimiDitarit.DirectorForms
 
             if (pnlUsers.Visible == true)
                 pnlUsers.Visible = false;
-
-            if (pnlRoles.Visible == true)
-                pnlRoles.Visible = false;
-
-            if (pnlReview.Visible == true)
-                pnlReview.Visible = false;
         }
 
         //Shfaqim Panel-in ne Side Menu
@@ -121,33 +113,15 @@ namespace MenaxhimiDitarit.DirectorForms
 
         #endregion
 
-        #region Roles
         private void btnRoles_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlRoles);
-        }
-
-        private void btnRolesList_Click(object sender, EventArgs e)
-        {
             OpenChildForm(new RoleList());
-
-            HideSubMenu();
         }
-        #endregion
 
-        #region Review
         private void btnReview_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(pnlReview);
-        }
-
-        private void btnReviewComments_Click(object sender, EventArgs e)
-        {
             OpenChildForm(new ReviewComment());
-
-            HideSubMenu();
         }
-        #endregion
 
         private void DirectorMainForm_Shown(object sender, EventArgs e)
         {

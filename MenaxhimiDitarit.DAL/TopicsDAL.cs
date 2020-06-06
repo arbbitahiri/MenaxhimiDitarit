@@ -303,6 +303,34 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
+        public bool UpdateComment(Topic model)
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Review";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "topicID", model.TopicID);
+                        DataConnection.AddParameter(command, "review", model.Review);
+                        DataConnection.AddParameter(command, "reviewdate", model.ReviewDate);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                string t = e.Message;
+                return false;
+            }
+        }
+
         public List<Topic> GetAllComment()
         {
             try
@@ -330,6 +358,40 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
                 return MyComments;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public List<Topic> GetAllReview()
+        {
+            try
+            {
+                List<Topic> MyReviews = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Review_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            MyReviews = new List<Topic>();
+                            while (reader.Read())
+                            {
+                                var topic = ToObjectComment(reader);
+                                if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
+                                {
+                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                }
+                                MyReviews.Add(topic);
+                            }
+                        }
+                    }
+                }
+                return MyReviews;
             }
             catch (Exception)
             {
@@ -411,11 +473,6 @@ namespace MenaxhimiDitarit.DAL
 
 
         public Topic GetAbsence(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool UpdateComment(Topic model)
         {
             throw new NotImplementedException();
         }

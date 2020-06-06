@@ -269,9 +269,6 @@
     <EmbeddedResource Include="App_Forms\AdminForms\AdminMain.sq-XK.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.aa.resx">
-      <DependentUpon>ClassCreate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\AdminForms\ClassCreate.resx">
       <DependentUpon>ClassCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -690,6 +687,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-outline-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inspection-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

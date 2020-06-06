@@ -75,15 +75,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Name = "panel1";
             // 
             // txtFirstName
             // 
+            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
@@ -97,9 +97,9 @@
             // 
             // txtLastName
             // 
+            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.ForeColor = System.Drawing.Color.White;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
@@ -107,8 +107,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel2.Name = "panel2";
             // 
             // lblLastName
@@ -119,9 +119,9 @@
             // 
             // grbGender
             // 
+            resources.ApplyResources(this.grbGender, "grbGender");
             this.grbGender.Controls.Add(this.rbtnFemale);
             this.grbGender.Controls.Add(this.rbtnMale);
-            resources.ApplyResources(this.grbGender, "grbGender");
             this.grbGender.ForeColor = System.Drawing.Color.White;
             this.grbGender.Name = "grbGender";
             this.grbGender.TabStop = false;
@@ -148,15 +148,15 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel3.Name = "panel3";
             // 
             // txtCity
             // 
+            resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.ForeColor = System.Drawing.Color.White;
             this.txtCity.Name = "txtCity";
             this.txtCity.TextChanged += new System.EventHandler(this.txtCity_TextChanged);
@@ -170,15 +170,15 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel4.Name = "panel4";
             // 
             // txtQualification
             // 
+            resources.ApplyResources(this.txtQualification, "txtQualification");
             this.txtQualification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtQualification.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtQualification, "txtQualification");
             this.txtQualification.ForeColor = System.Drawing.Color.White;
             this.txtQualification.Name = "txtQualification";
             this.txtQualification.TextChanged += new System.EventHandler(this.txtQualification_TextChanged);
@@ -191,8 +191,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel5.Name = "panel5";
             // 
             // dtpBirthday
@@ -211,15 +211,15 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel6.Name = "panel6";
             // 
             // txtEmail
             // 
+            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.ForeColor = System.Drawing.Color.White;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
@@ -232,15 +232,15 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel7.Name = "panel7";
             // 
             // txtPhoneNo
             // 
+            resources.ApplyResources(this.txtPhoneNo, "txtPhoneNo");
             this.txtPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtPhoneNo, "txtPhoneNo");
             this.txtPhoneNo.ForeColor = System.Drawing.Color.White;
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.TextChanged += new System.EventHandler(this.txtPhoneNo_TextChanged);
@@ -254,25 +254,25 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
             // btnCancel
             // 
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -280,10 +280,10 @@
             // 
             // btnSubmit
             // 
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -291,48 +291,48 @@
             // 
             // picFirstName
             // 
-            this.picFirstName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picFirstName, "picFirstName");
+            this.picFirstName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picFirstName.Name = "picFirstName";
             this.picFirstName.TabStop = false;
             this.picFirstName.MouseHover += new System.EventHandler(this.picFirstName_MouseHover);
             // 
             // picLastName
             // 
-            this.picLastName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picLastName, "picLastName");
+            this.picLastName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picLastName.Name = "picLastName";
             this.picLastName.TabStop = false;
             this.picLastName.MouseHover += new System.EventHandler(this.picLastName_MouseHover);
             // 
             // picCity
             // 
-            this.picCity.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picCity, "picCity");
+            this.picCity.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picCity.Name = "picCity";
             this.picCity.TabStop = false;
             this.picCity.MouseHover += new System.EventHandler(this.picCity_MouseHover);
             // 
             // picQualification
             // 
-            this.picQualification.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picQualification, "picQualification");
+            this.picQualification.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picQualification.Name = "picQualification";
             this.picQualification.TabStop = false;
             this.picQualification.MouseHover += new System.EventHandler(this.picQualification_MouseHover);
             // 
             // picEmail
             // 
-            this.picEmail.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picEmail, "picEmail");
+            this.picEmail.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picEmail.Name = "picEmail";
             this.picEmail.TabStop = false;
             this.picEmail.MouseHover += new System.EventHandler(this.picEmail_MouseHover);
             // 
             // picPhoneNo
             // 
-            this.picPhoneNo.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             resources.ApplyResources(this.picPhoneNo, "picPhoneNo");
+            this.picPhoneNo.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
             this.picPhoneNo.Name = "picPhoneNo";
             this.picPhoneNo.TabStop = false;
             this.picPhoneNo.MouseHover += new System.EventHandler(this.picPhoneNo_MouseHover);

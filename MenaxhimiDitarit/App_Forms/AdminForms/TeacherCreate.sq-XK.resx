@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 156</value>
+    <value>427, 156</value>
   </data>
   <data name="txtFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 135</value>
+    <value>427, 135</value>
   </data>
   <data name="lblEmri.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 135</value>
+    <value>386, 135</value>
   </data>
   <data name="lblEmri.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 16</value>
@@ -134,13 +134,13 @@
     <value>Emri</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 163</value>
+    <value>427, 163</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 184</value>
+    <value>427, 184</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>302, 163</value>
+    <value>365, 163</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 16</value>
@@ -149,7 +149,7 @@
     <value>Mbiemri</value>
   </data>
   <data name="grbGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 191</value>
+    <value>353, 191</value>
   </data>
   <data name="grbGender.Text" xml:space="preserve">
     <value>Gjinia</value>
@@ -166,9 +166,6 @@
   <data name="rbtnMale.Text" xml:space="preserve">
     <value>Mashkull</value>
   </data>
-  <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 258</value>
-  </data>
   <data name="lblCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 16</value>
   </data>
@@ -176,13 +173,13 @@
     <value>Qyteti</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 279</value>
+    <value>429, 279</value>
   </data>
   <data name="txtCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 258</value>
+    <value>429, 258</value>
   </data>
   <data name="lblQualification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 286</value>
+    <value>350, 286</value>
   </data>
   <data name="lblQualification.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 16</value>
@@ -191,13 +188,13 @@
     <value>Kualifikimi</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 307</value>
+    <value>427, 307</value>
   </data>
   <data name="txtQualification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 286</value>
+    <value>427, 286</value>
   </data>
   <data name="lblBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>294, 319</value>
+    <value>357, 319</value>
   </data>
   <data name="lblBirthday.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 16</value>
@@ -206,22 +203,22 @@
     <value>Ditëlindja</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 342</value>
+    <value>429, 342</value>
   </data>
   <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 314</value>
+    <value>429, 314</value>
   </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 349</value>
+    <value>375, 349</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 370</value>
+    <value>427, 370</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 349</value>
+    <value>427, 349</value>
   </data>
   <data name="lblPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 377</value>
+    <value>317, 377</value>
   </data>
   <data name="lblPhoneNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 16</value>
@@ -230,25 +227,43 @@
     <value>Numri i Telefonit</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 398</value>
+    <value>427, 398</value>
   </data>
   <data name="txtPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 377</value>
+    <value>427, 377</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 107</value>
+    <value>400, 107</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 128</value>
+    <value>427, 128</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 107</value>
+    <value>427, 107</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
+  </data>
+  <data name="picFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 135</value>
+  </data>
+  <data name="picLastName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 163</value>
+  </data>
+  <data name="picCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 256</value>
+  </data>
+  <data name="picQualification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 285</value>
+  </data>
+  <data name="picEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 347</value>
+  </data>
+  <data name="picPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>614, 376</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

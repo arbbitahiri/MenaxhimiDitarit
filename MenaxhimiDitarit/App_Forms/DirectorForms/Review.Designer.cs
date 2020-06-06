@@ -35,7 +35,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtRoomNo = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblComment = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -43,11 +43,16 @@
             this.txtReview = new System.Windows.Forms.TextBox();
             this.lblDay = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCommentDay = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.picReview = new System.Windows.Forms.PictureBox();
+            this.dtpReviewDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtComment
@@ -92,14 +97,14 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // txtRoomNo
+            // txtSubject
             // 
-            this.txtRoomNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtRoomNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.txtRoomNo, "txtRoomNo");
-            this.txtRoomNo.ForeColor = System.Drawing.Color.White;
-            this.txtRoomNo.Name = "txtRoomNo";
-            this.txtRoomNo.ReadOnly = true;
+            this.txtSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtSubject, "txtSubject");
+            this.txtSubject.ForeColor = System.Drawing.Color.White;
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.ReadOnly = true;
             // 
             // panel3
             // 
@@ -146,11 +151,11 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // dateTimePicker1
+            // dtpCommentDay
             // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Name = "dateTimePicker1";
+            resources.ApplyResources(this.dtpCommentDay, "dtpCommentDay");
+            this.dtpCommentDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCommentDay.Name = "dtpCommentDay";
             // 
             // btnSubmit
             // 
@@ -161,6 +166,7 @@
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -171,6 +177,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // picReview
             // 
@@ -180,15 +187,45 @@
             this.picReview.TabStop = false;
             this.picReview.MouseHover += new System.EventHandler(this.picReview_MouseHover);
             // 
+            // dtpReviewDate
+            // 
+            resources.ApplyResources(this.dtpReviewDate, "dtpReviewDate");
+            this.dtpReviewDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpReviewDate.Name = "dtpReviewDate";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.picReview_MouseHover);
+            // 
             // Review
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.dtpReviewDate);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picReview);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpCommentDay);
             this.Controls.Add(this.lblDay);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -201,11 +238,12 @@
             this.Controls.Add(this.lblComment);
             this.Controls.Add(this.lblRoomNo);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtRoomNo);
+            this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.txtComment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Review";
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,7 +257,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblRoomNo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtRoomNo;
+        private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Panel panel2;
@@ -227,9 +265,13 @@
         private System.Windows.Forms.TextBox txtReview;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpCommentDay;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox picReview;
+        private System.Windows.Forms.DateTimePicker dtpReviewDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

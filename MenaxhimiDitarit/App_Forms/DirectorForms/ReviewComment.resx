@@ -125,6 +125,9 @@
   <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
+  <data name="btnSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>326, 67</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="btnViewAll.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnViewAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnViewAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>172, 67</value>
@@ -237,6 +243,9 @@
   <data name="lblSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
+  <data name="lblSelectSubject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 30</value>
   </data>
@@ -266,6 +275,9 @@
   </data>
   <data name="lblSelectDay.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblSelectDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lblSelectDay.Location" type="System.Drawing.Point, System.Drawing">
     <value>317, 30</value>
@@ -358,55 +370,115 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;grbSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="radGridView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="radGridView1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="dgvReviewCommentList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
-  <data name="radGridView1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="dgvReviewCommentList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="radGridView1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dgvReviewCommentList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
-  <data name="radGridView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
+    <value>TopicID</value>
+  </data>
+  <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
+    <value>ClassID</value>
+  </data>
+  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
+    <value>SubjectID</value>
+  </data>
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Reasoning</value>
+  </data>
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+    <value>NoStudents</value>
+  </data>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
+    <value>ReviewDate</value>
+  </data>
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+    <value>InsertBy</value>
+  </data>
+  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
+    <value>InsertDate</value>
+  </data>
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+    <value>LUB</value>
+  </data>
+  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
+    <value>LUD</value>
+  </data>
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+    <value>LUN</value>
+  </data>
+  <metadata name="bsrcReview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <data name="dgvReviewCommentList.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="radGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 426</value>
+  <data name="dgvReviewCommentList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>805, 426</value>
   </data>
-  <data name="radGridView1.TabIndex" type="System.Int32, mscorlib">
+  <data name="dgvReviewCommentList.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;radGridView1.Name" xml:space="preserve">
-    <value>radGridView1</value>
+  <data name="&gt;&gt;dgvReviewCommentList.Name" xml:space="preserve">
+    <value>dgvReviewCommentList</value>
   </data>
-  <data name="&gt;&gt;radGridView1.Type" xml:space="preserve">
+  <data name="&gt;&gt;dgvReviewCommentList.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;radGridView1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dgvReviewCommentList.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;radGridView1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;dgvReviewCommentList.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="cmsReviewComment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>309, 17</value>
+    <value>284, 17</value>
   </metadata>
   <data name="reviewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
+    <value>112, 22</value>
   </data>
   <data name="reviewToolStripMenuItem.Text" xml:space="preserve">
     <value>Review</value>
   </data>
+  <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
+  </data>
+  <data name="updateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
   <data name="cmsReviewComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 26</value>
+    <value>113, 48</value>
   </data>
   <data name="&gt;&gt;cmsReviewComment.Name" xml:space="preserve">
     <value>cmsReviewComment</value>
@@ -414,8 +486,356 @@
   <data name="&gt;&gt;cmsReviewComment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
+  <data name="btnExportPDF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExportPDF.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExportPDF.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExportPDF.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExportPDF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 291</value>
+  </data>
+  <data name="btnExportPDF.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnExportPDF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnExportPDF.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btnExportPDF.Text" xml:space="preserve">
+    <value>Export PDF</value>
+  </data>
+  <data name="btnExportPDF.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExportPDF.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Name" xml:space="preserve">
+    <value>btnExportPDF</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnExportPDF.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnExportExcel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnExportExcel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnExportExcel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnExportExcel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnExportExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExportExcel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnExportExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 251</value>
+  </data>
+  <data name="btnExportExcel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnExportExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnExportExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnExportExcel.Text" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
+  <data name="btnExportExcel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnExportExcel.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Name" xml:space="preserve">
+    <value>btnExportExcel</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnExportExcel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnPrint.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnPrint.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnPrint.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 211</value>
+  </data>
+  <data name="btnPrint.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="btnPrint.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnUpdate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnUpdate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 171</value>
+  </data>
+  <data name="btnUpdate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnUpdate.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnReview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnReview.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnReview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
+  <data name="btnReview.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnReview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnReview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 131</value>
+  </data>
+  <data name="btnReview.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnReview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 40</value>
+  </data>
+  <data name="btnReview.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnReview.Text" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="btnReview.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnReview.Name" xml:space="preserve">
+    <value>btnReview</value>
+  </data>
+  <data name="&gt;&gt;btnReview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReview.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnReview.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblComment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lblComment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 103</value>
+  </data>
+  <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="lblComment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblComment.Text" xml:space="preserve">
+    <value>Review List</value>
+  </data>
+  <data name="&gt;&gt;lblComment.Name" xml:space="preserve">
+    <value>lblComment</value>
+  </data>
+  <data name="&gt;&gt;lblComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblComment.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;lblComment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 100</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
+    <value>picClass</value>
+  </data>
+  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlPicture.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 131</value>
+  </data>
+  <data name="pnlPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Name" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlClassMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlClassMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>805, 0</value>
+  </data>
+  <data name="pnlClassMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 563</value>
+  </data>
+  <data name="pnlClassMain.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Name" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="printDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -424,7 +844,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 563</value>
+    <value>950, 563</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1420,6 +1840,12 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Review Comment</value>
   </data>
+  <data name="&gt;&gt;bsrcReview.Name" xml:space="preserve">
+    <value>bsrcReview</value>
+  </data>
+  <data name="&gt;&gt;bsrcReview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;crystalDarkTheme1.Name" xml:space="preserve">
     <value>crystalDarkTheme1</value>
   </data>
@@ -1432,11 +1858,17 @@
   <data name="&gt;&gt;reviewToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bindingSource1.Name" xml:space="preserve">
-    <value>bindingSource1</value>
+  <data name="&gt;&gt;updateToolStripMenuItem.Name" xml:space="preserve">
+    <value>updateToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;bindingSource1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;updateToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Name" xml:space="preserve">
+    <value>printDocument</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ReviewComment</value>

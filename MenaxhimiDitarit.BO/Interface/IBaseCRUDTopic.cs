@@ -25,6 +25,7 @@ namespace MenaxhimiDitarit.BO.Interface
         bool UpdateComment(T model);
 
         List<T> GetAllComment();
+        List<T> GetAllReview();
         T GetComment(int id);
     }
 }

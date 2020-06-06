@@ -125,13 +125,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSelectRoom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 291</value>
+    <value>334, 291</value>
   </data>
   <data name="lblSelectRoom.Text" xml:space="preserve">
     <value>Zgjidh Sallën</value>
   </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 253</value>
+    <value>334, 253</value>
   </data>
   <data name="lblClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -140,7 +140,7 @@
     <value>Zgjidh Klasën</value>
   </data>
   <data name="lblMainTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 216</value>
+    <value>356, 216</value>
   </data>
   <data name="lblMainTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 16</value>

@@ -18,20 +18,15 @@ namespace MenaxhimiDitarit.BLL
             topicsDAL = new TopicsDAL();
         }
 
-
+        #region Absence
         public bool AddAbsence(Topic model)
         {
             return topicsDAL.AddAbsence(model);
         }
 
-        public bool AddComment(Topic model)
+        public bool UpdateAbsence(Topic model)
         {
-            return topicsDAL.AddComment(model);
-        }
-
-        public bool AddTopic(Topic model)
-        {
-            return topicsDAL.AddTopic(model);
+            throw new NotImplementedException();
         }
 
         public Topic GetAbsence(int id)
@@ -44,14 +39,21 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.GetAllAbsence();
         }
 
-        public List<Topic> GetAllComment()
+        public List<Topic> GetAllReview()
         {
-            return topicsDAL.GetAllComment();
+            return topicsDAL.GetAllReview();
+        }
+        #endregion
+
+        #region Comment
+        public bool AddComment(Topic model)
+        {
+            return topicsDAL.AddComment(model);
         }
 
-        public List<Topic> GetAllTopic()
+        public bool UpdateComment(Topic model)
         {
-            return topicsDAL.GetAllTopic();
+            return topicsDAL.UpdateComment(model);
         }
 
         public Topic GetComment(int id)
@@ -59,7 +61,19 @@ namespace MenaxhimiDitarit.BLL
             throw new NotImplementedException();
         }
 
-        public Topic GetTopic(int id)
+        public List<Topic> GetAllComment()
+        {
+            return topicsDAL.GetAllComment();
+        }
+        #endregion
+
+        #region Topic
+        public bool AddTopic(Topic model)
+        {
+            return topicsDAL.AddTopic(model);
+        }
+
+        public bool UpdateTopic(Topic model)
         {
             throw new NotImplementedException();
         }
@@ -69,19 +83,15 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.RemoveTopic(id);
         }
 
-        public bool UpdateAbsence(Topic model)
+        public Topic GetTopic(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateComment(Topic model)
+        public List<Topic> GetAllTopic()
         {
-            throw new NotImplementedException();
+            return topicsDAL.GetAllTopic();
         }
-
-        public bool UpdateTopic(Topic model)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

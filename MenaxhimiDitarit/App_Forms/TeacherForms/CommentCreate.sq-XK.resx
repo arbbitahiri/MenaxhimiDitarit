@@ -119,37 +119,31 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 186</value>
+    <value>374, 186</value>
   </data>
-  <data name="cmbMainTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 149</value>
-  </data>
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 403</value>
+  <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 149</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 403</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>272, 121</value>
+    <value>347, 121</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 142</value>
+    <value>374, 142</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 121</value>
+    <value>374, 121</value>
   </data>
-  <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 260</value>
+  <data name="dtpSelectDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 260</value>
   </data>
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 265</value>
+    <value>279, 265</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 16</value>
@@ -158,10 +152,10 @@
     <value>Zgjedh Datën</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 288</value>
+    <value>374, 288</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 325</value>
+    <value>295, 325</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 16</value>
@@ -170,13 +164,13 @@
     <value>Përmbajtja</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 377</value>
+    <value>374, 377</value>
   </data>
   <data name="txtComent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 295</value>
+    <value>374, 295</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 189</value>
+    <value>270, 189</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 16</value>
@@ -185,7 +179,7 @@
     <value>Zgjedh Lëndën</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 152</value>
+    <value>274, 152</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -194,16 +188,16 @@
     <value>Zgjedh Klasën</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 216</value>
+    <value>374, 216</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 179</value>
+    <value>374, 179</value>
   </data>
   <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 223</value>
+    <value>374, 223</value>
   </data>
   <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 226</value>
+    <value>286, 226</value>
   </data>
   <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 16</value>
@@ -212,7 +206,7 @@
     <value>Zgjedh Orën</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 253</value>
+    <value>374, 253</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

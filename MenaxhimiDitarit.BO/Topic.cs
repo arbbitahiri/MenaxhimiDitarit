@@ -18,6 +18,7 @@ namespace MenaxhimiDitarit.BO
         public int NoStudents { get; set; }
         public string Comment { get; set; }
         public string Review { get; set; }
+        public DateTime ReviewDate { get; set; }
 
         public virtual Class Class { get; set; }
         public virtual Subject Subject { get; set; }

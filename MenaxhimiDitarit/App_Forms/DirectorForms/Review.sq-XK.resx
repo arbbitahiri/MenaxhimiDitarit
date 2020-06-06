@@ -118,8 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 208</value>
+  </data>
+  <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 117</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 138</value>
+  </data>
+  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 117</value>
+  </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 143</value>
+    <value>292, 145</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 16</value>
@@ -127,8 +139,17 @@
   <data name="lblRoomNo.Text" xml:space="preserve">
     <value>Lënda</value>
   </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 166</value>
+  </data>
+  <data name="txtRoomNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 145</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 290</value>
+  </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 236</value>
+    <value>284, 238</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 16</value>
@@ -136,8 +157,11 @@
   <data name="lblComment.Text" xml:space="preserve">
     <value>Vërejtja</value>
   </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 379</value>
+  </data>
   <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 325</value>
+    <value>275, 327</value>
   </data>
   <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 16</value>
@@ -145,8 +169,8 @@
   <data name="lblReview.Text" xml:space="preserve">
     <value>Shqyrtimi</value>
   </data>
-  <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 176</value>
+  <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 297</value>
   </data>
   <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 16</value>
@@ -154,10 +178,25 @@
   <data name="lblDay.Text" xml:space="preserve">
     <value>Dita</value>
   </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 201</value>
+  </data>
+  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 173</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 406</value>
+  </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 406</value>
+  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
+  </data>
+  <data name="picReview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 329</value>
   </data>
 </root>

@@ -41,7 +41,6 @@ namespace MenaxhimiDitarit
             Application.Exit();
         }
 
-        //Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -99,24 +98,29 @@ namespace MenaxhimiDitarit
                     }
                 }
                 else
+                {
                     MessageBox.Show("Ju lutem zgjidheni gjuhën!\nPlease choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
+            {
                 MessageBox.Show("Ju lutem plotësoni të gjitha fushat!\nPlease fill your credentials!",
                     "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
             {
                 txtPassword.UseSystemPasswordChar = false;
             }
-            else
-                txtPassword.UseSystemPasswordChar = true;
-        }
 
+            if (!chbShowPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
@@ -133,7 +137,9 @@ namespace MenaxhimiDitarit
                 btnLogin.Enabled = true;
             }
             else
+            {
                 btnLogin.Enabled = false;
+            }
         }
 
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
