@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="txtSearchUserByNU.Text" xml:space="preserve">
-    <value>Kërko sipas emrit ose përdoruesit</value>
+    <value>Kërko sipas emrit ose nofkës</value>
   </data>
   <data name="btnSearch.Text" xml:space="preserve">
     <value>Kërko</value>
@@ -129,56 +129,8 @@
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Përdoruesin</value>
   </data>
-  <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
-    <value>PërdID</value>
-  </data>
-  <data name="gridViewTextBoxColumn25.HeaderText" xml:space="preserve">
-    <value>Emri</value>
-  </data>
-  <data name="gridViewTextBoxColumn26.HeaderText" xml:space="preserve">
-    <value>Mbemri</value>
-  </data>
-  <data name="gridViewTextBoxColumn27.HeaderText" xml:space="preserve">
-    <value>Përdoruesi</value>
-  </data>
-  <data name="gridViewTextBoxColumn28.HeaderText" xml:space="preserve">
-    <value>Fjalëkalimi</value>
-  </data>
-  <data name="gridViewDateTimeColumn12.HeaderText" xml:space="preserve">
-    <value>Data e Skadimit</value>
-  </data>
-  <data name="gridViewDecimalColumn11.HeaderText" xml:space="preserve">
-    <value>RoleID</value>
-  </data>
-  <data name="gridViewDateTimeColumn13.HeaderText" xml:space="preserve">
-    <value>Data e Fundit e Qasjes</value>
-  </data>
-  <data name="gridViewDateTimeColumn14.HeaderText" xml:space="preserve">
-    <value>LastPasswordChangeDate</value>
-  </data>
-  <data name="gridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
-    <value>IsPasswordChanged</value>
-  </data>
-  <data name="gridViewTextBoxColumn29.HeaderText" xml:space="preserve">
-    <value>Roli</value>
-  </data>
-  <data name="gridViewTextBoxColumn30.HeaderText" xml:space="preserve">
-    <value>FullName</value>
-  </data>
-  <data name="gridViewTextBoxColumn31.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn15.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn32.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn16.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn12.HeaderText" xml:space="preserve">
-    <value>LUN</value>
+  <data name="MasterTemplate.MasterTemplate.Caption" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblAdmin.Location" type="System.Drawing.Point, System.Drawing">
@@ -207,6 +159,60 @@
   </data>
   <data name="btnDeleteU.Text" xml:space="preserve">
     <value>Fshi</value>
+  </data>
+  <data name="dgvUserList.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+    <value>PërdID</value>
+  </data>
+  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+    <value>Emri</value>
+  </data>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Mbiemri</value>
+  </data>
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Nofka</value>
+  </data>
+  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>Fjalëkalimi</value>
+  </data>
+  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
+    <value>Data e Skadimit</value>
+  </data>
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+    <value>RoleID</value>
+  </data>
+  <data name="gridViewDateTimeColumn5.HeaderText" xml:space="preserve">
+    <value>Dita e Fundit e Kyçjes</value>
+  </data>
+  <data name="gridViewDateTimeColumn6.HeaderText" xml:space="preserve">
+    <value>LastPasswordChangeDate</value>
+  </data>
+  <data name="gridViewCheckBoxColumn1.HeaderText" xml:space="preserve">
+    <value>IsPasswordChanged</value>
+  </data>
+  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>Roli</value>
+  </data>
+  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
+    <value>InsertBy</value>
+  </data>
+  <data name="gridViewDateTimeColumn7.HeaderText" xml:space="preserve">
+    <value>InsertDate</value>
+  </data>
+  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
+    <value>LUB</value>
+  </data>
+  <data name="gridViewDateTimeColumn8.HeaderText" xml:space="preserve">
+    <value>LUD</value>
+  </data>
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+    <value>LUN</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

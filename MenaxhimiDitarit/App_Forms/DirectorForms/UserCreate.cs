@@ -75,7 +75,7 @@ namespace MenaxhimiDitarit.DirectorForms
                             ExpiresDate = dtpExpireDate.Value,
                             RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString()),
                             UserName = txtUsername.Text,
-                            UserPassword = txtPassword.Text,
+                            UserPassword = Validation.CalculateHash(txtPassword.Text),
                             InsertBy = UserSession.GetUser.UserName,
                             LUB = UserSession.GetUser.UserName
                         };

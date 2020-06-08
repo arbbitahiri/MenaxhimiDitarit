@@ -295,12 +295,15 @@ namespace MenaxhimiDitarit.DirectorForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addUser.ShowDialog();
+            RefreshList();
         }
 
         #region Update
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlUpdate);
+
+            HideSubMenu();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
