@@ -101,6 +101,18 @@ namespace MenaxhimiDitarit.TeacherForms
             Validation.InitializePrintDocument(printDocument, "Absence List", "Lista e Mungesës");
         }
 
+        #region Grid Formatting
+        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Reason", "Arsyeja");
+        }
+
+        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Reason", "Arsyeja");
+        }
+        #endregion
+
         #region Button
         private void btnViewAll_Click(object sender, EventArgs e)
         {

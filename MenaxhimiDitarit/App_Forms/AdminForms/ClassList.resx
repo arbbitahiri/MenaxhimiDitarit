@@ -117,95 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;txtSearchClass.Name" xml:space="preserve">
-    <value>txtSearchClass</value>
-  </data>
-  <data name="&gt;&gt;txtSearchClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtSearchClass.Parent" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;txtSearchClass.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnViewAllClass.Name" xml:space="preserve">
-    <value>btnViewAllClass</value>
-  </data>
-  <data name="&gt;&gt;btnViewAllClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnViewAllClass.Parent" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;btnViewAllClass.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="grbSearchClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="grbSearchClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 12</value>
-  </data>
-  <data name="grbSearchClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 111</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="grbSearchClass.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grbSearchClass.Text" xml:space="preserve">
-    <value>Search Class</value>
-  </data>
-  <data name="&gt;&gt;grbSearchClass.Name" xml:space="preserve">
-    <value>grbSearchClass</value>
-  </data>
-  <data name="&gt;&gt;grbSearchClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grbSearchClass.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grbSearchClass.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="txtSearchClass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
@@ -215,6 +127,7 @@
   <data name="txtSearchClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>312, 15</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtSearchClass.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -339,18 +252,36 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="grbSearchClass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="grbSearchClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 12</value>
+  </data>
+  <data name="grbSearchClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 111</value>
+  </data>
+  <data name="grbSearchClass.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grbSearchClass.Text" xml:space="preserve">
+    <value>Search Class</value>
+  </data>
+  <data name="&gt;&gt;grbSearchClass.Name" xml:space="preserve">
+    <value>grbSearchClass</value>
+  </data>
+  <data name="&gt;&gt;grbSearchClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbSearchClass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbSearchClass.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="cmsClassContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>292, 17</value>
   </metadata>
-  <data name="cmsClassContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 70</value>
-  </data>
-  <data name="&gt;&gt;cmsClassContext.Name" xml:space="preserve">
-    <value>cmsClassContext</value>
-  </data>
-  <data name="&gt;&gt;cmsClassContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAV5JREFUOE+9
@@ -391,6 +322,15 @@
   <data name="viewScheduleToolStripMenuItem.Text" xml:space="preserve">
     <value>View Schedule</value>
   </data>
+  <data name="cmsClassContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 70</value>
+  </data>
+  <data name="&gt;&gt;cmsClassContext.Name" xml:space="preserve">
+    <value>cmsClassContext</value>
+  </data>
+  <data name="&gt;&gt;cmsClassContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>137, 17</value>
   </metadata>
@@ -403,37 +343,37 @@
   <data name="dgvClassesList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>ClassID</value>
   </data>
-  <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
     <value>TeacherID</value>
   </data>
-  <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
     <value>ClassNo</value>
   </data>
-  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
     <value>RoomID</value>
   </data>
-  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Teacher</value>
   </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Room</value>
   </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>InsertBy</value>
   </data>
-  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
     <value>InsertDate</value>
   </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>LUB</value>
   </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
     <value>LUD</value>
   </data>
-  <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
     <value>LUN</value>
   </data>
   <metadata name="bsrcClassList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -745,6 +685,27 @@
   <data name="&gt;&gt;btnAddClass.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lblAdmin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAdmin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="lblAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 103</value>
+  </data>
+  <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 24</value>
+  </data>
+  <data name="lblAdmin.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblAdmin.Text" xml:space="preserve">
+    <value>Class List</value>
+  </data>
   <data name="&gt;&gt;lblAdmin.Name" xml:space="preserve">
     <value>lblAdmin</value>
   </data>
@@ -755,6 +716,21 @@
     <value>pnlPicture</value>
   </data>
   <data name="&gt;&gt;lblAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 100</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;picClass.Name" xml:space="preserve">
@@ -815,66 +791,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblAdmin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblAdmin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="lblAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 103</value>
-  </data>
-  <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
-  </data>
-  <data name="lblAdmin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblAdmin.Text" xml:space="preserve">
-    <value>Class List</value>
-  </data>
-  <data name="&gt;&gt;lblAdmin.Name" xml:space="preserve">
-    <value>lblAdmin</value>
-  </data>
-  <data name="&gt;&gt;lblAdmin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblAdmin.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;lblAdmin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 100</value>
-  </data>
-  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
-    <value>picClass</value>
-  </data>
-  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="printDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1880,9 +1796,6 @@
         ///wAAAA////////////////8AAAAP////////////////AAAAA=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Class List</value>
   </data>
@@ -1910,17 +1823,17 @@
   <data name="&gt;&gt;crystalDarkTheme1.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.CrystalDarkTheme, Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;printDocument.Name" xml:space="preserve">
-    <value>printDocument</value>
-  </data>
-  <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;bsrcClassList.Name" xml:space="preserve">
     <value>bsrcClassList</value>
   </data>
   <data name="&gt;&gt;bsrcClassList.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Name" xml:space="preserve">
+    <value>printDocument</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ClassList</value>

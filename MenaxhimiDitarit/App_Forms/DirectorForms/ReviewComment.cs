@@ -102,6 +102,20 @@ namespace MenaxhimiDitarit.DirectorForms
             Validation.InitializePrintDocument(printDocument, "Review List", "Lista e Shqyrtimeve të Vërejtjeve");
         }
 
+        #region Grid Formatting
+        private void dgvReviewCommentList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Comment", "Vërejtja");
+            Validation.CellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        private void dgvReviewCommentList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
+            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
+        }
+        #endregion
+
         #region Button
         private void btnViewAll_Click(object sender, EventArgs e)
         {

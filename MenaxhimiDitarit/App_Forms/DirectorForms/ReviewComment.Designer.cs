@@ -319,6 +319,8 @@
             this.dgvReviewCommentList.Name = "dgvReviewCommentList";
             this.dgvReviewCommentList.ReadOnly = true;
             this.dgvReviewCommentList.ThemeName = "CrystalDark";
+            this.dgvReviewCommentList.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.dgvReviewCommentList_CellFormatting);
+            this.dgvReviewCommentList.PrintCellFormatting += new Telerik.WinControls.UI.PrintCellFormattingEventHandler(this.dgvReviewCommentList_PrintCellFormatting);
             // 
             // bsrcReview
             // 

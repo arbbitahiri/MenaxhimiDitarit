@@ -99,6 +99,20 @@ namespace MenaxhimiDitarit.TeacherForms
             Validation.InitializePrintDocument(printDocument, "Comment List", "Lista e Vërejtjes");
         }
 
+        #region Grid Formatting
+        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Comment", "Vërejtja");
+            Validation.CellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
+            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
+        }
+        #endregion
+
         #region Button
         private void btnViewAll_Click(object sender, EventArgs e)
         {

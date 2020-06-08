@@ -156,7 +156,7 @@
     <value>Time</value>
   </data>
   <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Reasoning</value>
+    <value>Reason</value>
   </data>
   <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
     <value>NoStudents</value>
@@ -1822,17 +1822,17 @@
   <data name="&gt;&gt;crystalDarkTheme1.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.CrystalDarkTheme, Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;printDocument.Name" xml:space="preserve">
-    <value>printDocument</value>
-  </data>
-  <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;bsrcSubject.Name" xml:space="preserve">
     <value>bsrcSubject</value>
   </data>
   <data name="&gt;&gt;bsrcSubject.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Name" xml:space="preserve">
+    <value>printDocument</value>
+  </data>
+  <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AbsenceList</value>
