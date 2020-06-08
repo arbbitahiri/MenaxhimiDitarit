@@ -79,9 +79,9 @@
             // 
             // pnlPicture
             // 
+            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Controls.Add(this.lblAdmin);
             this.pnlPicture.Controls.Add(this.picAdmin);
-            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Name = "pnlPicture";
             // 
             // lblAdmin
@@ -92,8 +92,8 @@
             // 
             // picAdmin
             // 
-            this.picAdmin.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_admin_100;
             resources.ApplyResources(this.picAdmin, "picAdmin");
+            this.picAdmin.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_microsoft_admin_100;
             this.picAdmin.Name = "picAdmin";
             this.picAdmin.TabStop = false;
             // 
@@ -109,15 +109,15 @@
             // 
             // pnlTeachers
             // 
+            resources.ApplyResources(this.pnlTeachers, "pnlTeachers");
             this.pnlTeachers.Controls.Add(this.btnAddNTacher);
             this.pnlTeachers.Controls.Add(this.btnListTeachers);
-            resources.ApplyResources(this.pnlTeachers, "pnlTeachers");
             this.pnlTeachers.Name = "pnlTeachers";
             // 
             // btnAddNTacher
             // 
-            this.btnAddNTacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnAddNTacher, "btnAddNTacher");
+            this.btnAddNTacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnAddNTacher.FlatAppearance.BorderSize = 0;
             this.btnAddNTacher.ForeColor = System.Drawing.Color.White;
             this.btnAddNTacher.Name = "btnAddNTacher";
@@ -126,8 +126,8 @@
             // 
             // btnListTeachers
             // 
-            this.btnListTeachers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnListTeachers, "btnListTeachers");
+            this.btnListTeachers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnListTeachers.FlatAppearance.BorderSize = 0;
             this.btnListTeachers.ForeColor = System.Drawing.Color.White;
             this.btnListTeachers.Name = "btnListTeachers";
@@ -154,15 +154,15 @@
             // 
             // pnlSchedule
             // 
+            resources.ApplyResources(this.pnlSchedule, "pnlSchedule");
             this.pnlSchedule.Controls.Add(this.btnAddSchedule);
             this.pnlSchedule.Controls.Add(this.btnListSchedules);
-            resources.ApplyResources(this.pnlSchedule, "pnlSchedule");
             this.pnlSchedule.Name = "pnlSchedule";
             // 
             // btnAddSchedule
             // 
-            this.btnAddSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnAddSchedule, "btnAddSchedule");
+            this.btnAddSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnAddSchedule.FlatAppearance.BorderSize = 0;
             this.btnAddSchedule.ForeColor = System.Drawing.Color.White;
             this.btnAddSchedule.Name = "btnAddSchedule";
@@ -171,8 +171,8 @@
             // 
             // btnListSchedules
             // 
-            this.btnListSchedules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnListSchedules, "btnListSchedules");
+            this.btnListSchedules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnListSchedules.FlatAppearance.BorderSize = 0;
             this.btnListSchedules.ForeColor = System.Drawing.Color.White;
             this.btnListSchedules.Name = "btnListSchedules";
@@ -191,9 +191,9 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btnSignOut
@@ -216,15 +216,15 @@
             // 
             // pnlRoom
             // 
+            resources.ApplyResources(this.pnlRoom, "pnlRoom");
             this.pnlRoom.Controls.Add(this.btnAddNewRoom);
             this.pnlRoom.Controls.Add(this.btnListRooms);
-            resources.ApplyResources(this.pnlRoom, "pnlRoom");
             this.pnlRoom.Name = "pnlRoom";
             // 
             // btnAddNewRoom
             // 
-            this.btnAddNewRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnAddNewRoom, "btnAddNewRoom");
+            this.btnAddNewRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnAddNewRoom.FlatAppearance.BorderSize = 0;
             this.btnAddNewRoom.ForeColor = System.Drawing.Color.White;
             this.btnAddNewRoom.Name = "btnAddNewRoom";
@@ -233,8 +233,8 @@
             // 
             // btnListRooms
             // 
-            this.btnListRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnListRooms, "btnListRooms");
+            this.btnListRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnListRooms.FlatAppearance.BorderSize = 0;
             this.btnListRooms.ForeColor = System.Drawing.Color.White;
             this.btnListRooms.Name = "btnListRooms";
@@ -253,15 +253,15 @@
             // 
             // pnlClassR
             // 
+            resources.ApplyResources(this.pnlClassR, "pnlClassR");
             this.pnlClassR.Controls.Add(this.btnAddNewClass);
             this.pnlClassR.Controls.Add(this.btnListClass);
-            resources.ApplyResources(this.pnlClassR, "pnlClassR");
             this.pnlClassR.Name = "pnlClassR";
             // 
             // btnAddNewClass
             // 
-            this.btnAddNewClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnAddNewClass, "btnAddNewClass");
+            this.btnAddNewClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnAddNewClass.FlatAppearance.BorderSize = 0;
             this.btnAddNewClass.ForeColor = System.Drawing.Color.White;
             this.btnAddNewClass.Name = "btnAddNewClass";
@@ -270,8 +270,8 @@
             // 
             // btnListClass
             // 
-            this.btnListClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnListClass, "btnListClass");
+            this.btnListClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnListClass.FlatAppearance.BorderSize = 0;
             this.btnListClass.ForeColor = System.Drawing.Color.White;
             this.btnListClass.Name = "btnListClass";
@@ -290,15 +290,15 @@
             // 
             // pnlSubjects
             // 
+            resources.ApplyResources(this.pnlSubjects, "pnlSubjects");
             this.pnlSubjects.Controls.Add(this.btnAddNSubject);
             this.pnlSubjects.Controls.Add(this.btnListSubjects);
-            resources.ApplyResources(this.pnlSubjects, "pnlSubjects");
             this.pnlSubjects.Name = "pnlSubjects";
             // 
             // btnAddNSubject
             // 
-            this.btnAddNSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnAddNSubject, "btnAddNSubject");
+            this.btnAddNSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnAddNSubject.FlatAppearance.BorderSize = 0;
             this.btnAddNSubject.ForeColor = System.Drawing.Color.White;
             this.btnAddNSubject.Name = "btnAddNSubject";
@@ -307,8 +307,8 @@
             // 
             // btnListSubjects
             // 
-            this.btnListSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.btnListSubjects, "btnListSubjects");
+            this.btnListSubjects.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnListSubjects.FlatAppearance.BorderSize = 0;
             this.btnListSubjects.ForeColor = System.Drawing.Color.White;
             this.btnListSubjects.Name = "btnListSubjects";
@@ -327,10 +327,10 @@
             // 
             // pnlChildForm
             // 
+            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.pnlChildForm.Controls.Add(this.lblSDM);
             this.pnlChildForm.Controls.Add(this.picSchool);
-            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.Name = "pnlChildForm";
             // 
             // lblSDM

@@ -166,9 +166,6 @@
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>374, 377</value>
   </data>
-  <data name="txtComent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 295</value>
-  </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>270, 189</value>
   </data>

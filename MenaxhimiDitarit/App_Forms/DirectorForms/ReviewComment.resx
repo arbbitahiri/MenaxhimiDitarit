@@ -247,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 30</value>
+    <value>13, 31</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 16</value>
@@ -280,7 +280,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 30</value>
+    <value>312, 32</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 16</value>
@@ -384,27 +384,6 @@
   <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>TopicID</value>
   </data>
-  <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
-    <value>ClassID</value>
-  </data>
-  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
-    <value>SubjectID</value>
-  </data>
-  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Content</value>
-  </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Reasoning</value>
-  </data>
-  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
-    <value>NoStudents</value>
-  </data>
   <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Comment</value>
   </data>
@@ -412,28 +391,13 @@
     <value>Review</value>
   </data>
   <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
-    <value>ReviewDate</value>
+    <value> Review Date</value>
   </data>
   <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>Class</value>
   </data>
   <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Subject</value>
-  </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>LUN</value>
   </data>
   <metadata name="bsrcReview.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
@@ -736,7 +700,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 103</value>
+    <value>20, 103</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 24</value>

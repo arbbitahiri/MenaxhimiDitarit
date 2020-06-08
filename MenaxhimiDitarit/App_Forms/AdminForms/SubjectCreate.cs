@@ -216,6 +216,11 @@ namespace MenaxhimiDitarit
 
         private void txtSubjectTitle_TextChanged(object sender, EventArgs e)
         {
+            if (txtSubjectTitle.Text.Length > 0)
+            {
+                Validation.Capitalize(txtSubjectTitle);
+            }
+
             if (txtSubjectTitle.Text != null && txtSubjectTitle.Text.Length > 2)
             {
                 picSubjectTitle.Visible = false;
@@ -240,6 +245,11 @@ namespace MenaxhimiDitarit
 
         private void txtBookAuthor_TextChanged(object sender, EventArgs e)
         {
+            if (txtBookAuthor.Text.Length > 0)
+            {
+                Validation.Capitalize(txtBookAuthor);
+            }
+
             if (txtBookAuthor.Text != null && txtBookAuthor.Text.Length > 2)
             {
                 picBAuthor.Visible = false;

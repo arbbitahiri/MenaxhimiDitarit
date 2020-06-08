@@ -207,6 +207,16 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
+            if (txtFirstName.Text.Length > 0)
+            {
+                Validation.Capitalize(txtFirstName);
+            }
+
+            if (txtFirstName.Text.Length > 0)
+            {
+                Validation.Capitalize(txtFirstName);
+            }
+
             if (txtFirstName.Text != null && txtFirstName.Text.Length > 2)
             {
                 picFirstName.Visible = false;
@@ -219,6 +229,11 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
+            if (txtLastName.Text.Length > 0)
+            {
+                Validation.Capitalize(txtLastName);
+            }
+
             if (txtLastName.Text != null && txtLastName.Text.Length > 2)
             {
                 picLastName.Visible = false;
@@ -277,5 +292,15 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
         #endregion
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
     }
 }

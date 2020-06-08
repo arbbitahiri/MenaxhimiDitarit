@@ -343,21 +343,6 @@
   <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Teacher</value>
   </data>
-  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
-    <value>LUN</value>
-  </data>
   <metadata name="bsrcSubjectList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>328, 17</value>
   </metadata>

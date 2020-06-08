@@ -276,7 +276,9 @@ namespace MenaxhimiDitarit.DirectorForms
         private void txtSearchUserByNU_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 btnSearch_Click(this, new EventArgs());
+            }
         }
 
         private void txtSearchUserByNU_KeyPress(object sender, KeyPressEventArgs e)

@@ -118,11 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>22</value>
+  <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="&gt;&gt;cmbSelectTime.Name" xml:space="preserve">
     <value>cmbSelectTime</value>
@@ -131,18 +128,18 @@
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
   </data>
-  <data name="&gt;&gt;picTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="picTime.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
   <data name="cmbSelectSubject.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <data name="&gt;&gt;cmbSelectClass.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bsrcClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="txtYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 325</value>
   </data>
   <data name="cmbSelectDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 288</value>
@@ -153,9 +150,6 @@
   <data name="lblID.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 1</value>
-  </data>
   <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
@@ -163,6 +157,12 @@
     <value>Flat</value>
   </data>
   <data name="&gt;&gt;lblDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="picSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmbSelectDate.ZOrder" xml:space="preserve">
@@ -186,14 +186,14 @@
   <data name="&gt;&gt;picTime.Name" xml:space="preserve">
     <value>picTime</value>
   </data>
-  <data name="cmbSelectTime.Items3" xml:space="preserve">
-    <value>4</value>
+  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 15</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>379, 291</value>
   </data>
-  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbSelectTime.Items5" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="cmbSelectTime.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -204,17 +204,17 @@
   <data name="cmbSelectDate.Items1" xml:space="preserve">
     <value>Tuesday</value>
   </data>
-  <data name="btnSubmitClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 375</value>
-  </data>
   <data name="lblClass.Text" xml:space="preserve">
     <value>Select Class</value>
   </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
-  </data>
   <data name="&gt;&gt;cmbSelectTime.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>950, 563</value>
+  </data>
+  <data name="cmbSelectTime.Items4" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
     <value>395, 148</value>
@@ -237,26 +237,20 @@
   <data name="lblSubject.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 16</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Create Class Schedule</value>
   </data>
   <data name="&gt;&gt;lblTime.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 149</value>
   </data>
-  <data name="&gt;&gt;picSubject.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmbSelectSubject.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="btnSubmitClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="&gt;&gt;cmbSelectSubject.Name" xml:space="preserve">
     <value>cmbSelectSubject</value>
@@ -267,14 +261,11 @@
   <data name="&gt;&gt;lblYear.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;picDate.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblID.Name" xml:space="preserve">
     <value>lblID</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1282,10 +1273,16 @@
         ///wAAAA////////////////8AAAAP////////////////AAAAA=
 </value>
   </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
+  <data name="picDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
   </data>
-  <data name="&gt;&gt;bsrcSubject.Type" xml:space="preserve">
+  <data name="cmbSelectTime.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;picDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bsrcClass.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
@@ -1294,14 +1291,20 @@
   <data name="cmbSelectDate.Items3" xml:space="preserve">
     <value>Thursday</value>
   </data>
-  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 206</value>
   </data>
   <data name="&gt;&gt;lblClass.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
   <data name="picTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
+  </data>
+  <data name="&gt;&gt;picSubject.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblYear.Location" type="System.Drawing.Point, System.Drawing">
     <value>379, 325</value>
@@ -1321,8 +1324,11 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 178</value>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="txtYear.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;lblDate.Name" xml:space="preserve">
     <value>lblDate</value>
@@ -1339,8 +1345,17 @@
   <data name="&gt;&gt;picTime.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;bsrcSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="picSubject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 251</value>
   </data>
   <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1351,11 +1366,17 @@
   <data name="cmbSelectDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
+  <data name="picDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblID.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;bsrcSubject.Name" xml:space="preserve">
-    <value>bsrcSubject</value>
+  <data name="picTime.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="picTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="cmbSelectClass.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1372,9 +1393,6 @@
   <data name="&gt;&gt;txtYear.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 206</value>
-  </data>
   <data name="lblID.Text" xml:space="preserve">
     <value>ID</value>
   </data>
@@ -1384,17 +1402,17 @@
   <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;picDate.Name" xml:space="preserve">
-    <value>picDate</value>
+  <data name="&gt;&gt;lblTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="picDate.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ClassScheduleCreate</value>
+  </data>
+  <data name="&gt;&gt;lblSubject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
@@ -1414,11 +1432,17 @@
   <data name="&gt;&gt;picClass.Name" xml:space="preserve">
     <value>picClass</value>
   </data>
-  <data name="picDate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnSubmitClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>478, 375</value>
   </data>
   <data name="cmbSelectTime.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;picDate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bsrcSubject.Name" xml:space="preserve">
+    <value>bsrcSubject</value>
   </data>
   <data name="&gt;&gt;cmbSelectDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1426,17 +1450,14 @@
   <data name="&gt;&gt;lblYear.Name" xml:space="preserve">
     <value>lblYear</value>
   </data>
-  <data name="lblClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="txtID.Text" xml:space="preserve">
+    <value>-1</value>
   </data>
   <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1447,14 +1468,11 @@
   <data name="&gt;&gt;panel4.Name" xml:space="preserve">
     <value>panel4</value>
   </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 169</value>
+  <data name="cmbSelectDate.Items2" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbSelectDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 24</value>
   </data>
   <data name="&gt;&gt;cmbSelectTime.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1462,14 +1480,14 @@
   <data name="lblDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="lblSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 216</value>
-  </data>
   <data name="&gt;&gt;lblID.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtID.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1477,8 +1495,8 @@
   <data name="lblYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 16</value>
   </data>
-  <data name="cmbSelectTime.Items4" xml:space="preserve">
-    <value>5</value>
+  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 16</value>
   </data>
   <data name="picDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>609, 290</value>
@@ -1492,8 +1510,8 @@
   <data name="cmbSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;bsrcClass.Name" xml:space="preserve">
-    <value>bsrcClass</value>
+  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
   </data>
   <data name="cmbSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -1504,14 +1522,23 @@
   <data name="&gt;&gt;txtYear.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="txtYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 325</value>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="picTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 253</value>
+  <data name="lblClass.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="btnSubmitClass.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 16</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1522,14 +1549,23 @@
   <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;picDate.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="picDate.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="lblYear.Text" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="lblYear.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
+    <value>cmbSelectClass</value>
   </data>
   <data name="btnSubmitClass.Text" xml:space="preserve">
     <value>Submit</value>
   </data>
-  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
   </data>
   <data name="&gt;&gt;lblTime.Name" xml:space="preserve">
     <value>lblTime</value>
@@ -1540,14 +1576,11 @@
   <data name="&gt;&gt;btnSubmitClass.Name" xml:space="preserve">
     <value>btnSubmitClass</value>
   </data>
-  <data name="&gt;&gt;lblYear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cmbSelectDate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="lblClass.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="picTime.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnSubmitClass.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;picSubject.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1555,14 +1588,11 @@
   <data name="cmbSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
   </data>
-  <data name="picTime.TabIndex" type="System.Int32, mscorlib">
-    <value>103</value>
+  <data name="btnSubmitClass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
-  <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 251</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="cmbSelectTime.Items2" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -1572,9 +1602,6 @@
   </data>
   <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="&gt;&gt;lblYear.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1600,14 +1627,14 @@
   <data name="lblDate.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
+  <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 16</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cmbSelectTime.Items1" xml:space="preserve">
-    <value>2</value>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 281</value>
   </data>
   <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 16</value>
@@ -1624,20 +1651,11 @@
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 243</value>
   </data>
-  <data name="cmbSelectDate.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="cmbSelectDate.Items2" xml:space="preserve">
-    <value>Wednesday</value>
-  </data>
-  <data name="cmbSelectDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 24</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 1</value>
-  </data>
-  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="cmbSelectTime.Items1" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cmbSelectClass.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1651,11 +1669,11 @@
   <data name="&gt;&gt;btnSubmitClass.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 1</value>
   </data>
-  <data name="picDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>609, 178</value>
   </data>
   <data name="&gt;&gt;lblClass.Name" xml:space="preserve">
     <value>lblClass</value>
@@ -1666,32 +1684,23 @@
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 281</value>
-  </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 179</value>
   </data>
-  <data name="lblYear.Text" xml:space="preserve">
-    <value>Year</value>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 169</value>
   </data>
-  <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+  <data name="&gt;&gt;lblDate.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
-    <value>cmbSelectClass</value>
-  </data>
-  <data name="&gt;&gt;lblSubject.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="cmbSelectTime.Items5" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;bsrcClass.Name" xml:space="preserve">
+    <value>bsrcClass</value>
   </data>
   <data name="lblYear.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
+  <data name="&gt;&gt;picDate.Name" xml:space="preserve">
+    <value>picDate</value>
   </data>
   <data name="txtYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
@@ -1702,23 +1711,20 @@
   <data name="lblYear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="txtID.Text" xml:space="preserve">
-    <value>-1</value>
+  <data name="picTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>609, 253</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 213</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>950, 563</value>
+  <data name="&gt;&gt;txtID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblYear.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 1</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="lblSubject.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="txtYear.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1729,17 +1735,14 @@
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
   </data>
-  <data name="picSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
+  <data name="lblSubject.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="picClass.TabIndex" type="System.Int32, mscorlib">
     <value>101</value>
-  </data>
-  <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
   </data>
   <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
     <value>336, 254</value>
@@ -1750,8 +1753,8 @@
   <data name="lblClass.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="txtYear.MaxLength" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="lblClass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 375</value>
@@ -1774,11 +1777,8 @@
   <data name="&gt;&gt;panel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="picTime.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="cmbSelectTime.Items2" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;lblYear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="picSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>609, 215</value>
@@ -1786,8 +1786,8 @@
   <data name="cmbSelectSubject.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="&gt;&gt;picTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>422, 345</value>
@@ -1804,17 +1804,17 @@
   <data name="lblTime.Text" xml:space="preserve">
     <value>Select Time</value>
   </data>
-  <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 216</value>
   </data>
   <data name="&gt;&gt;txtYear.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="bsrcSubject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="bsrcClass.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>131, 17</value>

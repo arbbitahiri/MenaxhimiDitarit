@@ -39,8 +39,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblComment = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblReview = new System.Windows.Forms.Label();
-            this.txtReview = new System.Windows.Forms.TextBox();
             this.lblDay = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtpCommentDay = new System.Windows.Forms.DateTimePicker();
@@ -52,6 +50,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.cmbSelectSubject = new System.Windows.Forms.ComboBox();
             this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
+            this.txtReview = new System.Windows.Forms.TextBox();
+            this.lblReview = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             this.txtComment.ForeColor = System.Drawing.Color.White;
             this.txtComment.Name = "txtComment";
             this.txtComment.ReadOnly = true;
+            this.txtComment.TextChanged += new System.EventHandler(this.txtComment_TextChanged);
             // 
             // lblID
             // 
@@ -115,21 +116,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
-            // 
-            // lblReview
-            // 
-            resources.ApplyResources(this.lblReview, "lblReview");
-            this.lblReview.ForeColor = System.Drawing.Color.White;
-            this.lblReview.Name = "lblReview";
-            // 
-            // txtReview
-            // 
-            this.txtReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.txtReview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtReview, "txtReview");
-            this.txtReview.ForeColor = System.Drawing.Color.White;
-            this.txtReview.Name = "txtReview";
-            this.txtReview.TextChanged += new System.EventHandler(this.txtReview_TextChanged);
             // 
             // lblDay
             // 
@@ -212,6 +198,21 @@
             // 
             this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
+            // txtReview
+            // 
+            this.txtReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtReview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txtReview, "txtReview");
+            this.txtReview.ForeColor = System.Drawing.Color.White;
+            this.txtReview.Name = "txtReview";
+            this.txtReview.TextChanged += new System.EventHandler(this.txtReview_TextChanged);
+            // 
+            // lblReview
+            // 
+            resources.ApplyResources(this.lblReview, "lblReview");
+            this.lblReview.ForeColor = System.Drawing.Color.White;
+            this.lblReview.Name = "lblReview";
+            // 
             // Review
             // 
             resources.ApplyResources(this, "$this");
@@ -258,8 +259,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblReview;
-        private System.Windows.Forms.TextBox txtReview;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DateTimePicker dtpCommentDay;
@@ -271,5 +270,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ComboBox cmbSelectSubject;
         private System.Windows.Forms.BindingSource bsrcSubject;
+        private System.Windows.Forms.TextBox txtReview;
+        private System.Windows.Forms.Label lblReview;
     }
 }

@@ -249,6 +249,11 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void txtComent_TextChanged(object sender, EventArgs e)
         {
+            if (txtComment.Text.Length > 0)
+            {
+                Validation.Capitalize(txtComment);
+            }
+
             if (txtComment.Text != null && txtComment.Text.Length > 4)
             {
                 picComment.Visible = false;

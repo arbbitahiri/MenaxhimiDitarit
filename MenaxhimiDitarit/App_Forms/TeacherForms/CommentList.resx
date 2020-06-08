@@ -397,7 +397,7 @@
     <value>0, 137</value>
   </data>
   <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
-    <value>CommentID</value>
+    <value>TopicID</value>
   </data>
   <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
     <value>Date</value>

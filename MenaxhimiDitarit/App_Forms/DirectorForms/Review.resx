@@ -357,66 +357,6 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="lblReview.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblReview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="lblReview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 271</value>
-  </data>
-  <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 16</value>
-  </data>
-  <data name="lblReview.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="lblReview.Text" xml:space="preserve">
-    <value>Review</value>
-  </data>
-  <data name="&gt;&gt;lblReview.Name" xml:space="preserve">
-    <value>lblReview</value>
-  </data>
-  <data name="&gt;&gt;lblReview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblReview.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblReview.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="txtReview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 226</value>
-  </data>
-  <data name="txtReview.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtReview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 98</value>
-  </data>
-  <data name="txtReview.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="&gt;&gt;txtReview.Name" xml:space="preserve">
-    <value>txtReview</value>
-  </data>
-  <data name="&gt;&gt;txtReview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtReview.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtReview.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="lblDay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -695,6 +635,66 @@
   </data>
   <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtReview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>562, 226</value>
+  </data>
+  <data name="txtReview.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtReview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 98</value>
+  </data>
+  <data name="txtReview.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;txtReview.Name" xml:space="preserve">
+    <value>txtReview</value>
+  </data>
+  <data name="&gt;&gt;txtReview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtReview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtReview.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblReview.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblReview.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblReview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>503, 271</value>
+  </data>
+  <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 16</value>
+  </data>
+  <data name="lblReview.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="lblReview.Text" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="&gt;&gt;lblReview.Name" xml:space="preserve">
+    <value>lblReview</value>
+  </data>
+  <data name="&gt;&gt;lblReview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblReview.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblReview.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

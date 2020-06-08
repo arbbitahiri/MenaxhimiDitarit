@@ -139,6 +139,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void txtReview_TextChanged(object sender, EventArgs e)
         {
+            if (txtReview.Text.Length > 0)
+            {
+                Validation.Capitalize(txtReview);
+            }
+
             if (txtReview.Text != null && txtReview.Text.Length > 5)
             {
                 picReview.Visible = false;
@@ -149,5 +154,10 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
         #endregion
+
+        private void txtComment_TextChanged(object sender, EventArgs e)
+        {
+            Validation.Capitalize(txtComment);
+        }
     }
 }

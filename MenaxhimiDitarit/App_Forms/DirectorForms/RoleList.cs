@@ -83,6 +83,11 @@ namespace MenaxhimiDitarit.DirectorForms
         #endregion
 
         #region Search Textbox
+        private void txtSearchUser_TextChanged(object sender, EventArgs e)
+        {
+            Validation.Capitalize(txtSearchUser);
+        }
+
         private void txtSearchUser_Click(object sender, EventArgs e)
         {
             txtSearchUser.Text = "";
@@ -91,7 +96,9 @@ namespace MenaxhimiDitarit.DirectorForms
         private void txtSearchUser_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 btnSearch_Click(this, new EventArgs());
+            }
         }
 
         private void txtSearchUser_KeyPress(object sender, KeyPressEventArgs e)

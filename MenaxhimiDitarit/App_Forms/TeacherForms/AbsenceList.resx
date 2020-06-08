@@ -156,7 +156,7 @@
     <value>Time</value>
   </data>
   <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Reason</value>
+    <value>Reasoning</value>
   </data>
   <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
     <value>NoStudents</value>

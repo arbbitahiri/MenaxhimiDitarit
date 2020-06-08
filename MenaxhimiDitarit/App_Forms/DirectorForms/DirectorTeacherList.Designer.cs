@@ -135,6 +135,7 @@
             this.txtSearchName.ForeColor = System.Drawing.Color.White;
             this.txtSearchName.Name = "txtSearchName";
             this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
+            this.txtSearchName.TextChanged += new System.EventHandler(this.txtSearchName_TextChanged);
             this.txtSearchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchName_KeyDown);
             this.txtSearchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchName_KeyPress);
             // 

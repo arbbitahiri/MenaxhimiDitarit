@@ -170,7 +170,7 @@
     <value>Lëndët</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 327</value>
+    <value>288, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 31</value>
@@ -183,6 +183,9 @@
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Përdoruesi:</value>
+  </data>
+  <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1000, 566</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 16</value>

@@ -329,25 +329,10 @@
     <value>RoomID</value>
   </data>
   <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
-    <value>Room Number</value>
+    <value>RoomNo</value>
   </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Room Type</value>
-  </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
-    <value>LUN</value>
+    <value>RoomType</value>
   </data>
   <metadata name="bsrcRoomList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>

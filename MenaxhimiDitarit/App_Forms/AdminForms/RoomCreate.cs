@@ -180,6 +180,11 @@ namespace MenaxhimiDitarit
 
         private void txtRoomType_TextChanged(object sender, EventArgs e)
         {
+            if (txtRoomType.Text.Length > 0)
+            {
+                Validation.Capitalize(txtRoomType);
+            }
+
             if (txtRoomType.Text != null && txtRoomType.Text.Length > 2)
             {
                 picRoomType.Visible = false;

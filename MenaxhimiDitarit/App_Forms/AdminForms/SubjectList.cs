@@ -175,6 +175,14 @@ namespace MenaxhimiDitarit
         #endregion
 
         #region Search Textbox
+        private void txtSearchSubject_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchSubject.Text.Length > 0)
+            {
+                Validation.Capitalize(txtSearchSubject);
+            }
+        }
+
         private void txtSearchNameSubject_Click(object sender, EventArgs e)
         {
             txtSearchSubject.Text = "";
@@ -183,7 +191,9 @@ namespace MenaxhimiDitarit
         private void txtSearchSubject_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
+            {
                 btnSearchSubject_Click(this, new EventArgs());
+            }
         }
 
         private void txtSearchSubject_KeyPress(object sender, KeyPressEventArgs e)

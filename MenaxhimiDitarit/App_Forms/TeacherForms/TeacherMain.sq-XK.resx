@@ -117,20 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnComments.Text" xml:space="preserve">
-    <value>Vërejtet</value>
-  </data>
-  <data name="btnAbsences.Text" xml:space="preserve">
-    <value>Mungesat</value>
-  </data>
-  <data name="btnTopics.Text" xml:space="preserve">
-    <value>Tema</value>
-  </data>
   <data name="btnAddNewComment.Text" xml:space="preserve">
     <value>Shto Vërejtjen</value>
   </data>
   <data name="btnListComments.Text" xml:space="preserve">
     <value>Listo Vërejtet</value>
+  </data>
+  <data name="btnComments.Text" xml:space="preserve">
+    <value>Vërejtet</value>
   </data>
   <data name="btnAddNAbsence.Text" xml:space="preserve">
     <value>Shto Mungesën</value>
@@ -138,11 +132,17 @@
   <data name="btnListAbsences.Text" xml:space="preserve">
     <value>Listo Mungesat</value>
   </data>
+  <data name="btnAbsences.Text" xml:space="preserve">
+    <value>Mungesat</value>
+  </data>
   <data name="btnAddNTopic.Text" xml:space="preserve">
     <value>Shto Temën</value>
   </data>
   <data name="btnListTopics.Text" xml:space="preserve">
     <value>Listo Temat</value>
+  </data>
+  <data name="btnTopics.Text" xml:space="preserve">
+    <value>Tema</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
@@ -152,7 +152,7 @@
     <value>Arsimtari</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 327</value>
+    <value>288, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 31</value>
@@ -165,6 +165,12 @@
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Përdoruesi:</value>
+  </data>
+  <data name="lblWelcomeName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1077, 566</value>
+  </data>
+  <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1002, 566</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 16</value>

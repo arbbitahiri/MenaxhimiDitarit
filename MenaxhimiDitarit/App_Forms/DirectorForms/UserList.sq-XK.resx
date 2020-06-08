@@ -129,56 +129,14 @@
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Përdoruesin</value>
   </data>
-  <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
-    <value>UserID</value>
-  </data>
-  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
-    <value>FirstName</value>
-  </data>
-  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
-    <value>LastName</value>
-  </data>
-  <data name="gridViewTextBoxColumn19.HeaderText" xml:space="preserve">
-    <value>UserName</value>
-  </data>
-  <data name="gridViewTextBoxColumn20.HeaderText" xml:space="preserve">
-    <value>UserPassword</value>
-  </data>
-  <data name="gridViewDateTimeColumn9.HeaderText" xml:space="preserve">
-    <value>ExpiresDate</value>
-  </data>
-  <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
-    <value>RoleID</value>
-  </data>
-  <data name="gridViewTextBoxColumn21.HeaderText" xml:space="preserve">
-    <value>Roles</value>
-  </data>
-  <data name="gridViewTextBoxColumn22.HeaderText" xml:space="preserve">
-    <value>FullName</value>
-  </data>
-  <data name="gridViewTextBoxColumn23.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn10.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn24.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn11.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
-    <value>LUN</value>
-  </data>
   <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
-    <value>PërdoruesiID</value>
+    <value>PërdID</value>
   </data>
   <data name="gridViewTextBoxColumn25.HeaderText" xml:space="preserve">
     <value>Emri</value>
   </data>
   <data name="gridViewTextBoxColumn26.HeaderText" xml:space="preserve">
-    <value>Mbiemri</value>
+    <value>Mbemri</value>
   </data>
   <data name="gridViewTextBoxColumn27.HeaderText" xml:space="preserve">
     <value>Përdoruesi</value>
@@ -193,13 +151,13 @@
     <value>RoleID</value>
   </data>
   <data name="gridViewDateTimeColumn13.HeaderText" xml:space="preserve">
-    <value>Last Login Date</value>
+    <value>Data e Fundit e Qasjes</value>
   </data>
   <data name="gridViewDateTimeColumn14.HeaderText" xml:space="preserve">
-    <value>Last Password Change Date</value>
+    <value>LastPasswordChangeDate</value>
   </data>
   <data name="gridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Is Password Changed</value>
+    <value>IsPasswordChanged</value>
   </data>
   <data name="gridViewTextBoxColumn29.HeaderText" xml:space="preserve">
     <value>Roli</value>
@@ -223,6 +181,33 @@
     <value>LUN</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 103</value>
+  </data>
+  <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="lblAdmin.Text" xml:space="preserve">
+    <value>Përdoruesit</value>
+  </data>
+  <data name="btnAddUser.Text" xml:space="preserve">
+    <value>Shto të re</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Përditëso</value>
+  </data>
+  <data name="btnChangePassword.Text" xml:space="preserve">
+    <value>Fjalëkalimin</value>
+  </data>
+  <data name="btnUpdateUser.Text" xml:space="preserve">
+    <value>Përdoruesin</value>
+  </data>
+  <data name="btnPrintUser.Text" xml:space="preserve">
+    <value>Printo</value>
+  </data>
+  <data name="btnDeleteU.Text" xml:space="preserve">
+    <value>Fshi</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAEBAAAAEAIABoBAAAVgAAABgYAAABACAAiAkAAL4EAAAgIAAAAQAgAKgQAABGDgAAMDAAAAEA
