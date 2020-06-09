@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSearch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -157,7 +157,7 @@
     <value>Flat</value>
   </data>
   <data name="btnViewAll.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnViewAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -193,7 +193,7 @@
     <value>397, 29</value>
   </data>
   <data name="dtpSelectDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>181, 25</value>
   </data>
   <data name="dtpSelectDay.TabIndex" type="System.Int32, mscorlib">
     <value>78</value>
@@ -214,13 +214,13 @@
     <value>Flat</value>
   </data>
   <data name="cmbSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>113, 27</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 24</value>
+    <value>181, 25</value>
   </data>
   <data name="cmbSelectSubject.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -241,7 +241,7 @@
     <value>True</value>
   </data>
   <data name="lblSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectSubject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -250,7 +250,7 @@
     <value>13, 31</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+    <value>88, 17</value>
   </data>
   <data name="lblSelectSubject.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
@@ -274,7 +274,7 @@
     <value>True</value>
   </data>
   <data name="lblSelectDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -283,7 +283,7 @@
     <value>312, 32</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 16</value>
+    <value>68, 17</value>
   </data>
   <data name="lblSelectDay.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -346,7 +346,7 @@
     <value>7</value>
   </data>
   <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 12</value>
@@ -373,7 +373,7 @@
     <value>3</value>
   </data>
   <data name="dgvReviewCommentList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="dgvReviewCommentList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -460,7 +460,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -511,7 +511,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportExcel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -562,7 +562,7 @@
     <value>Flat</value>
   </data>
   <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -607,7 +607,7 @@
     <value>Flat</value>
   </data>
   <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -652,7 +652,7 @@
     <value>Flat</value>
   </data>
   <data name="btnReview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnReview.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -694,7 +694,7 @@
     <value>True</value>
   </data>
   <data name="lblComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblComment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -703,7 +703,7 @@
     <value>20, 103</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
+    <value>103, 25</value>
   </data>
   <data name="lblComment.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

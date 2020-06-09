@@ -210,6 +210,8 @@ namespace MenaxhimiDitarit
                 StartPosition = FormStartPosition.CenterParent
             };
             addSubject.ShowDialog();
+
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

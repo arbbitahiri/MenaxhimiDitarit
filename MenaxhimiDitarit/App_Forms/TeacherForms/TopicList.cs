@@ -223,6 +223,8 @@ namespace MenaxhimiDitarit.TeacherForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addTopic.ShowDialog();
+
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

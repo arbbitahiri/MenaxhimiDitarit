@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtSearchClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSearchClass.Location" type="System.Drawing.Point, System.Drawing">
     <value>49, 31</value>
   </data>
   <data name="txtSearchClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 15</value>
+    <value>312, 18</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtSearchClass.TabIndex" type="System.Int32, mscorlib">
@@ -253,7 +253,7 @@
     <value>4</value>
   </data>
   <data name="grbSearchClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="grbSearchClass.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 12</value>
@@ -335,7 +335,7 @@
     <value>137, 17</value>
   </metadata>
   <data name="dgvClassesList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="dgvClassesList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -347,7 +347,7 @@
     <value>ClassID</value>
   </data>
   <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
-    <value>Class No</value>
+    <value>ClassNo</value>
   </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Teacher</value>
@@ -389,7 +389,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -440,7 +440,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExport.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -491,7 +491,7 @@
     <value>Flat</value>
   </data>
   <data name="btnPrintM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnPrintM.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -536,7 +536,7 @@
     <value>Flat</value>
   </data>
   <data name="btnDelete.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnDelete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -581,7 +581,7 @@
     <value>Flat</value>
   </data>
   <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -626,7 +626,7 @@
     <value>Flat</value>
   </data>
   <data name="btnAddClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnAddClass.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -668,7 +668,7 @@
     <value>True</value>
   </data>
   <data name="lblAdmin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -677,7 +677,7 @@
     <value>29, 103</value>
   </data>
   <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>88, 25</value>
   </data>
   <data name="lblAdmin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

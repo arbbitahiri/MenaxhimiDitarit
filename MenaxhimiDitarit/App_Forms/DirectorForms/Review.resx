@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 217</value>
@@ -150,7 +150,7 @@
     <value>True</value>
   </data>
   <data name="lblID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -160,7 +160,7 @@
     <value>254, 154</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 16</value>
+    <value>20, 17</value>
   </data>
   <data name="lblID.TabIndex" type="System.Int32, mscorlib">
     <value>92</value>
@@ -202,13 +202,13 @@
     <value>15</value>
   </data>
   <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 154</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
@@ -232,7 +232,7 @@
     <value>True</value>
   </data>
   <data name="lblRoomNo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblRoomNo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -241,7 +241,7 @@
     <value>503, 157</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 16</value>
+    <value>50, 17</value>
   </data>
   <data name="lblRoomNo.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
@@ -307,7 +307,7 @@
     <value>True</value>
   </data>
   <data name="lblComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblComment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -316,7 +316,7 @@
     <value>210, 247</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 16</value>
+    <value>64, 17</value>
   </data>
   <data name="lblComment.TabIndex" type="System.Int32, mscorlib">
     <value>90</value>
@@ -361,7 +361,7 @@
     <value>True</value>
   </data>
   <data name="lblDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblDay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -370,7 +370,7 @@
     <value>178, 187</value>
   </data>
   <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 16</value>
+    <value>95, 17</value>
   </data>
   <data name="lblDay.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
@@ -415,13 +415,13 @@
     <value>dd MMMM yyyy</value>
   </data>
   <data name="dtpCommentDay.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpCommentDay.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 182</value>
   </data>
   <data name="dtpCommentDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>181, 25</value>
   </data>
   <data name="dtpCommentDay.TabIndex" type="System.Int32, mscorlib">
     <value>100</value>
@@ -442,7 +442,7 @@
     <value>Flat</value>
   </data>
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
     <value>522, 369</value>
@@ -472,7 +472,7 @@
     <value>Flat</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 369</value>
@@ -529,13 +529,13 @@
     <value>dd MMMM yyyy</value>
   </data>
   <data name="dtpReviewDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpReviewDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 191</value>
   </data>
   <data name="dtpReviewDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>181, 25</value>
   </data>
   <data name="dtpReviewDate.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
@@ -556,7 +556,7 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -565,7 +565,7 @@
     <value>471, 196</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 16</value>
+    <value>79, 17</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -613,13 +613,13 @@
     <value>Flat</value>
   </data>
   <data name="cmbSelectSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 154</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 24</value>
+    <value>181, 25</value>
   </data>
   <data name="cmbSelectSubject.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -637,7 +637,7 @@
     <value>0</value>
   </data>
   <data name="txtReview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
     <value>562, 226</value>
@@ -667,7 +667,7 @@
     <value>True</value>
   </data>
   <data name="lblReview.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblReview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -676,7 +676,7 @@
     <value>503, 271</value>
   </data>
   <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 16</value>
+    <value>48, 17</value>
   </data>
   <data name="lblReview.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>

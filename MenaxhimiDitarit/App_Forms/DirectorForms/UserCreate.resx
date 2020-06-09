@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
     <value>478, 394</value>
@@ -154,7 +154,7 @@
     <value>Flat</value>
   </data>
   <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 394</value>
@@ -184,13 +184,13 @@
     <value>True</value>
   </data>
   <data name="lblID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
     <value>406, 130</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 16</value>
+    <value>20, 17</value>
   </data>
   <data name="lblID.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -232,13 +232,13 @@
     <value>25</value>
   </data>
   <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 130</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -262,13 +262,13 @@
     <value>True</value>
   </data>
   <data name="lblRole.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
     <value>389, 250</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
+    <value>34, 17</value>
   </data>
   <data name="lblRole.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -316,13 +316,13 @@
     <value>Flat</value>
   </data>
   <data name="cmbRoles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbRoles.Location" type="System.Drawing.Point, System.Drawing">
     <value>432, 247</value>
   </data>
   <data name="cmbRoles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 24</value>
+    <value>181, 25</value>
   </data>
   <data name="cmbRoles.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -339,17 +339,14 @@
   <data name="&gt;&gt;cmbRoles.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <metadata name="bsrcRole.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="txtFirstName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtFirstName.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 158</value>
   </data>
   <data name="txtFirstName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtFirstName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -367,13 +364,13 @@
     <value>32</value>
   </data>
   <data name="txtLastName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 186</value>
   </data>
   <data name="txtLastName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtLastName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -436,13 +433,13 @@
     <value>True</value>
   </data>
   <data name="lblFirstName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 158</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 16</value>
+    <value>71, 17</value>
   </data>
   <data name="lblFirstName.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -466,13 +463,13 @@
     <value>True</value>
   </data>
   <data name="lblLastName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 186</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 16</value>
+    <value>70, 17</value>
   </data>
   <data name="lblLastName.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -496,13 +493,13 @@
     <value>True</value>
   </data>
   <data name="lblPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>359, 312</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 16</value>
+    <value>64, 17</value>
   </data>
   <data name="lblPassword.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -526,13 +523,13 @@
     <value>True</value>
   </data>
   <data name="lblUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>356, 284</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
+    <value>67, 17</value>
   </data>
   <data name="lblUsername.TabIndex" type="System.Int32, mscorlib">
     <value>77</value>
@@ -595,7 +592,7 @@
     <value>16</value>
   </data>
   <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 312</value>
@@ -604,7 +601,7 @@
     <value>10</value>
   </data>
   <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -622,13 +619,13 @@
     <value>17</value>
   </data>
   <data name="txtUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 284</value>
   </data>
   <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -649,13 +646,13 @@
     <value>True</value>
   </data>
   <data name="chbShowPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="chbShowPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 368</value>
   </data>
   <data name="chbShowPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 20</value>
+    <value>118, 21</value>
   </data>
   <data name="chbShowPassword.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -679,13 +676,13 @@
     <value>True</value>
   </data>
   <data name="lblExpireDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>348, 219</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 16</value>
+    <value>75, 17</value>
   </data>
   <data name="lblExpireDate.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
@@ -730,13 +727,13 @@
     <value>ddMMMMyyyy</value>
   </data>
   <data name="dtpExpireDate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpExpireDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 214</value>
   </data>
   <data name="dtpExpireDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>180, 25</value>
   </data>
   <data name="dtpExpireDate.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -757,13 +754,13 @@
     <value>True</value>
   </data>
   <data name="lblConfirmPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
     <value>311, 340</value>
   </data>
   <data name="lblConfirmPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 16</value>
+    <value>114, 17</value>
   </data>
   <data name="lblConfirmPass.TabIndex" type="System.Int32, mscorlib">
     <value>83</value>
@@ -805,7 +802,7 @@
     <value>7</value>
   </data>
   <data name="txtConfirmPass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 340</value>
@@ -814,7 +811,7 @@
     <value>10</value>
   </data>
   <data name="txtConfirmPass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 15</value>
+    <value>181, 18</value>
   </data>
   <data name="txtConfirmPass.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>

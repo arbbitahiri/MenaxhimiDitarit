@@ -141,13 +141,13 @@
     <value>0</value>
   </data>
   <data name="txtSearchUserByNU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSearchUserByNU.Location" type="System.Drawing.Point, System.Drawing">
     <value>49, 31</value>
   </data>
   <data name="txtSearchUserByNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 15</value>
+    <value>312, 18</value>
   </data>
   <data name="txtSearchUserByNU.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -244,7 +244,7 @@
     <value>4</value>
   </data>
   <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 12</value>
@@ -340,7 +340,7 @@
     <value>True</value>
   </data>
   <data name="lblAdmin.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -349,7 +349,7 @@
     <value>32, 103</value>
   </data>
   <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
+    <value>83, 25</value>
   </data>
   <data name="lblAdmin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -427,7 +427,7 @@
     <value>Flat</value>
   </data>
   <data name="btnAddUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnAddUser.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -472,7 +472,7 @@
     <value>Flat</value>
   </data>
   <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -919,7 +919,7 @@
     <value>Flat</value>
   </data>
   <data name="btnChangePassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="btnChangePassword.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -964,7 +964,7 @@
     <value>Flat</value>
   </data>
   <data name="btnUpdateUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="btnUpdateUser.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1039,7 +1039,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1090,7 +1090,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportExcel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1141,7 +1141,7 @@
     <value>Flat</value>
   </data>
   <data name="btnPrintUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnPrintUser.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1186,7 +1186,7 @@
     <value>Flat</value>
   </data>
   <data name="btnDeleteU.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnDeleteU.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -1255,7 +1255,7 @@
     <value>Bottom</value>
   </data>
   <data name="dgvUserList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="dgvUserList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

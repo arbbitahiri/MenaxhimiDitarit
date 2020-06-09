@@ -141,13 +141,13 @@
     <value>3</value>
   </data>
   <data name="txtSearchName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSearchName.Location" type="System.Drawing.Point, System.Drawing">
     <value>49, 31</value>
   </data>
   <data name="txtSearchName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 15</value>
+    <value>312, 18</value>
   </data>
   <data name="txtSearchName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -244,7 +244,7 @@
     <value>2</value>
   </data>
   <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 12</value>
@@ -294,14 +294,8 @@
   <data name="updateToolStripMenuItem.Text" xml:space="preserve">
     <value>Update</value>
   </data>
-  <data name="exportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 22</value>
-  </data>
-  <data name="exportToolStripMenuItem.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
   <data name="cmsTeacherContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 48</value>
+    <value>113, 26</value>
   </data>
   <data name="&gt;&gt;cmsTeacherContext.Name" xml:space="preserve">
     <value>cmsTeacherContext</value>
@@ -310,7 +304,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dgvTeacherList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="dgvTeacherList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -343,7 +337,7 @@
     <value>Email</value>
   </data>
   <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Phone Number</value>
+    <value>Phone No</value>
   </data>
   <metadata name="bsrcTeacherList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>173, 19</value>
@@ -379,7 +373,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -430,7 +424,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportExcel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -481,7 +475,7 @@
     <value>Flat</value>
   </data>
   <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -526,7 +520,7 @@
     <value>Flat</value>
   </data>
   <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnUpdate.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -571,7 +565,7 @@
     <value>Flat</value>
   </data>
   <data name="btnAddClass.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnAddClass.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -613,7 +607,7 @@
     <value>True</value>
   </data>
   <data name="lblTeacher.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblTeacher.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -622,7 +616,7 @@
     <value>16, 103</value>
   </data>
   <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+    <value>110, 25</value>
   </data>
   <data name="lblTeacher.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1733,12 +1727,6 @@
     <value>updateToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;updateToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;exportToolStripMenuItem.Name" xml:space="preserve">
-    <value>exportToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;exportToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;bsrcTeacherList.Name" xml:space="preserve">

@@ -55,7 +55,6 @@
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.cmsTeacherContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvTeacherList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcTeacherList = new System.Windows.Forms.BindingSource(this.components);
             this.pnlClassMain = new System.Windows.Forms.Panel();
@@ -140,8 +139,7 @@
             // cmsTeacherContext
             // 
             this.cmsTeacherContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem,
-            this.exportToolStripMenuItem});
+            this.updateToolStripMenuItem});
             this.cmsTeacherContext.Name = "cmsTeacherContext";
             resources.ApplyResources(this.cmsTeacherContext, "cmsTeacherContext");
             // 
@@ -150,11 +148,6 @@
             resources.ApplyResources(this.updateToolStripMenuItem, "updateToolStripMenuItem");
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            resources.ApplyResources(this.exportToolStripMenuItem, "exportToolStripMenuItem");
             // 
             // dgvTeacherList
             // 
@@ -421,7 +414,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private Telerik.WinControls.UI.RadGridView dgvTeacherList;
         private System.Windows.Forms.BindingSource bsrcTeacherList;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.Panel pnlClassMain;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAddClass;

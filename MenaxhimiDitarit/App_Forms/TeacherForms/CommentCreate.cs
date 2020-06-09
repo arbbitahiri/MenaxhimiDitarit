@@ -115,49 +115,61 @@ namespace MenaxhimiDitarit.TeacherForms
                     else if (update)
                         comment.LUN = ++_comment.LUN;
 
-                    if (!update)
-                    {
-                        var checkComment = MySchedules.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
-                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())
-                        && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
+                    var checkSchedule = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                    && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
+                    && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
 
-                        if (checkComment.Count > 0)
+                    if (checkSchedule.Count > 0)
+                    {
+                        if (!update)
                         {
-                            Validation.MessageBoxShow($"Comment exists for subject: {comment.Subject.SubjectTitle} in {comment.Time} hour for class {comment.Class.ClassNo}", "Exists",
-                                $"Vërejtja ekziston për lëndën: {comment.Subject.SubjectTitle} në orën e {comment.Time} për klasën {comment.Class.ClassNo}!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            var checkComment = MyComments.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                            && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
+                            && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
+
+                            if (checkComment.Count > 0)
+                            {
+                                Validation.MessageBoxShow("Comment exists!", "Exists",
+                                    "Comment ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                bool isRegistred = _commentBLL.AddComment(comment);
+
+                                if (isRegistred)
+                                {
+                                    Validation.MessageBoxShow("Cooment registered successfully!", "Registered",
+                                        "Vërejtja u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                        "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                         }
                         else
                         {
-                            bool isRegistred = _commentBLL.AddComment(comment);
+                            bool isUpdated = _commentBLL.AddComment(comment);
 
-                            if (isRegistred)
+                            if (isUpdated)
                             {
-                                Validation.MessageBoxShow("Cooment registered successfully!", "Registered",
-                                    "Vërejtja u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow("Comment updated", "Updated",
+                                    "Vërejtja u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
-                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Validation.MessageBoxShow("Update failed!", "Error",
+                                    "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        bool isUpdated = _commentBLL.AddComment(comment);
-
-                        if (isUpdated)
-                        {
-                            Validation.MessageBoxShow("Comment updated", "Updated",
-                                "Vërejtja u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                        {
-                            Validation.MessageBoxShow("Update failed!", "Error",
-                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        Validation.MessageBoxShow("Can't create comment for that time!", "Error",
+                            "Nuk mund të krijojë vërejtje për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

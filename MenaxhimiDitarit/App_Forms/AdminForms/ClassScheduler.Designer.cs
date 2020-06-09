@@ -90,50 +90,50 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // lblMonday
@@ -180,20 +180,20 @@
             // 
             // panel9
             // 
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // panel10
             // 
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
             // panel11
             // 
-            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
             // lblTuesday
@@ -216,8 +216,8 @@
             // 
             // panel12
             // 
-            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
             // lblFriday
@@ -228,296 +228,296 @@
             // 
             // panel13
             // 
-            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
             // txtMonday1
             // 
-            resources.ApplyResources(this.txtMonday1, "txtMonday1");
-            this.txtMonday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday1, "txtMonday1");
             this.txtMonday1.ForeColor = System.Drawing.Color.White;
             this.txtMonday1.Name = "txtMonday1";
             this.txtMonday1.ReadOnly = true;
             // 
             // txtWednesday1
             // 
-            resources.ApplyResources(this.txtWednesday1, "txtWednesday1");
-            this.txtWednesday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday1, "txtWednesday1");
             this.txtWednesday1.ForeColor = System.Drawing.Color.White;
             this.txtWednesday1.Name = "txtWednesday1";
             this.txtWednesday1.ReadOnly = true;
             // 
             // txtThursday1
             // 
-            resources.ApplyResources(this.txtThursday1, "txtThursday1");
-            this.txtThursday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday1, "txtThursday1");
             this.txtThursday1.ForeColor = System.Drawing.Color.White;
             this.txtThursday1.Name = "txtThursday1";
             this.txtThursday1.ReadOnly = true;
             // 
             // txtFriday1
             // 
-            resources.ApplyResources(this.txtFriday1, "txtFriday1");
-            this.txtFriday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday1, "txtFriday1");
             this.txtFriday1.ForeColor = System.Drawing.Color.White;
             this.txtFriday1.Name = "txtFriday1";
             this.txtFriday1.ReadOnly = true;
             // 
             // txtTuesday1
             // 
-            resources.ApplyResources(this.txtTuesday1, "txtTuesday1");
-            this.txtTuesday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday1, "txtTuesday1");
             this.txtTuesday1.ForeColor = System.Drawing.Color.White;
             this.txtTuesday1.Name = "txtTuesday1";
             this.txtTuesday1.ReadOnly = true;
             // 
             // txtFriday2
             // 
-            resources.ApplyResources(this.txtFriday2, "txtFriday2");
-            this.txtFriday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday2, "txtFriday2");
             this.txtFriday2.ForeColor = System.Drawing.Color.White;
             this.txtFriday2.Name = "txtFriday2";
             this.txtFriday2.ReadOnly = true;
             // 
             // txtThursday2
             // 
-            resources.ApplyResources(this.txtThursday2, "txtThursday2");
-            this.txtThursday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday2, "txtThursday2");
             this.txtThursday2.ForeColor = System.Drawing.Color.White;
             this.txtThursday2.Name = "txtThursday2";
             this.txtThursday2.ReadOnly = true;
             // 
             // txtTuesday2
             // 
-            resources.ApplyResources(this.txtTuesday2, "txtTuesday2");
-            this.txtTuesday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday2, "txtTuesday2");
             this.txtTuesday2.ForeColor = System.Drawing.Color.White;
             this.txtTuesday2.Name = "txtTuesday2";
             this.txtTuesday2.ReadOnly = true;
             // 
             // txtWednesday2
             // 
-            resources.ApplyResources(this.txtWednesday2, "txtWednesday2");
-            this.txtWednesday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday2, "txtWednesday2");
             this.txtWednesday2.ForeColor = System.Drawing.Color.White;
             this.txtWednesday2.Name = "txtWednesday2";
             this.txtWednesday2.ReadOnly = true;
             // 
             // txtMonday2
             // 
-            resources.ApplyResources(this.txtMonday2, "txtMonday2");
-            this.txtMonday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday2, "txtMonday2");
             this.txtMonday2.ForeColor = System.Drawing.Color.White;
             this.txtMonday2.Name = "txtMonday2";
             this.txtMonday2.ReadOnly = true;
             // 
             // txtFriday3
             // 
-            resources.ApplyResources(this.txtFriday3, "txtFriday3");
-            this.txtFriday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday3, "txtFriday3");
             this.txtFriday3.ForeColor = System.Drawing.Color.White;
             this.txtFriday3.Name = "txtFriday3";
             this.txtFriday3.ReadOnly = true;
             // 
             // txtThursday3
             // 
-            resources.ApplyResources(this.txtThursday3, "txtThursday3");
-            this.txtThursday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday3, "txtThursday3");
             this.txtThursday3.ForeColor = System.Drawing.Color.White;
             this.txtThursday3.Name = "txtThursday3";
             this.txtThursday3.ReadOnly = true;
             // 
             // txtTuesday3
             // 
-            resources.ApplyResources(this.txtTuesday3, "txtTuesday3");
-            this.txtTuesday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday3, "txtTuesday3");
             this.txtTuesday3.ForeColor = System.Drawing.Color.White;
             this.txtTuesday3.Name = "txtTuesday3";
             this.txtTuesday3.ReadOnly = true;
             // 
             // txtWednesday3
             // 
-            resources.ApplyResources(this.txtWednesday3, "txtWednesday3");
-            this.txtWednesday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday3, "txtWednesday3");
             this.txtWednesday3.ForeColor = System.Drawing.Color.White;
             this.txtWednesday3.Name = "txtWednesday3";
             this.txtWednesday3.ReadOnly = true;
             // 
             // txtMonday3
             // 
-            resources.ApplyResources(this.txtMonday3, "txtMonday3");
-            this.txtMonday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday3, "txtMonday3");
             this.txtMonday3.ForeColor = System.Drawing.Color.White;
             this.txtMonday3.Name = "txtMonday3";
             this.txtMonday3.ReadOnly = true;
             // 
             // txtFriday4
             // 
-            resources.ApplyResources(this.txtFriday4, "txtFriday4");
-            this.txtFriday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday4, "txtFriday4");
             this.txtFriday4.ForeColor = System.Drawing.Color.White;
             this.txtFriday4.Name = "txtFriday4";
             this.txtFriday4.ReadOnly = true;
             // 
             // txtThursday4
             // 
-            resources.ApplyResources(this.txtThursday4, "txtThursday4");
-            this.txtThursday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday4, "txtThursday4");
             this.txtThursday4.ForeColor = System.Drawing.Color.White;
             this.txtThursday4.Name = "txtThursday4";
             this.txtThursday4.ReadOnly = true;
             // 
             // txtTuesday4
             // 
-            resources.ApplyResources(this.txtTuesday4, "txtTuesday4");
-            this.txtTuesday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday4, "txtTuesday4");
             this.txtTuesday4.ForeColor = System.Drawing.Color.White;
             this.txtTuesday4.Name = "txtTuesday4";
             this.txtTuesday4.ReadOnly = true;
             // 
             // txtWednesday4
             // 
-            resources.ApplyResources(this.txtWednesday4, "txtWednesday4");
-            this.txtWednesday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday4, "txtWednesday4");
             this.txtWednesday4.ForeColor = System.Drawing.Color.White;
             this.txtWednesday4.Name = "txtWednesday4";
             this.txtWednesday4.ReadOnly = true;
             // 
             // txtMonday4
             // 
-            resources.ApplyResources(this.txtMonday4, "txtMonday4");
-            this.txtMonday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday4, "txtMonday4");
             this.txtMonday4.ForeColor = System.Drawing.Color.White;
             this.txtMonday4.Name = "txtMonday4";
             this.txtMonday4.ReadOnly = true;
             // 
             // txtFriday5
             // 
-            resources.ApplyResources(this.txtFriday5, "txtFriday5");
-            this.txtFriday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday5, "txtFriday5");
             this.txtFriday5.ForeColor = System.Drawing.Color.White;
             this.txtFriday5.Name = "txtFriday5";
             this.txtFriday5.ReadOnly = true;
             // 
             // txtThursday5
             // 
-            resources.ApplyResources(this.txtThursday5, "txtThursday5");
-            this.txtThursday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday5, "txtThursday5");
             this.txtThursday5.ForeColor = System.Drawing.Color.White;
             this.txtThursday5.Name = "txtThursday5";
             this.txtThursday5.ReadOnly = true;
             // 
             // txtTuesday5
             // 
-            resources.ApplyResources(this.txtTuesday5, "txtTuesday5");
-            this.txtTuesday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday5, "txtTuesday5");
             this.txtTuesday5.ForeColor = System.Drawing.Color.White;
             this.txtTuesday5.Name = "txtTuesday5";
             this.txtTuesday5.ReadOnly = true;
             // 
             // txtWednesday5
             // 
-            resources.ApplyResources(this.txtWednesday5, "txtWednesday5");
-            this.txtWednesday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday5, "txtWednesday5");
             this.txtWednesday5.ForeColor = System.Drawing.Color.White;
             this.txtWednesday5.Name = "txtWednesday5";
             this.txtWednesday5.ReadOnly = true;
             // 
             // txtMonday5
             // 
-            resources.ApplyResources(this.txtMonday5, "txtMonday5");
-            this.txtMonday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday5, "txtMonday5");
             this.txtMonday5.ForeColor = System.Drawing.Color.White;
             this.txtMonday5.Name = "txtMonday5";
             this.txtMonday5.ReadOnly = true;
             // 
             // txtFriday6
             // 
-            resources.ApplyResources(this.txtFriday6, "txtFriday6");
-            this.txtFriday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFriday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFriday6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFriday6, "txtFriday6");
             this.txtFriday6.ForeColor = System.Drawing.Color.White;
             this.txtFriday6.Name = "txtFriday6";
             this.txtFriday6.ReadOnly = true;
             // 
             // txtThursday6
             // 
-            resources.ApplyResources(this.txtThursday6, "txtThursday6");
-            this.txtThursday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtThursday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtThursday6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtThursday6, "txtThursday6");
             this.txtThursday6.ForeColor = System.Drawing.Color.White;
             this.txtThursday6.Name = "txtThursday6";
             this.txtThursday6.ReadOnly = true;
             // 
             // txtTuesday6
             // 
-            resources.ApplyResources(this.txtTuesday6, "txtTuesday6");
-            this.txtTuesday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtTuesday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtTuesday6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtTuesday6, "txtTuesday6");
             this.txtTuesday6.ForeColor = System.Drawing.Color.White;
             this.txtTuesday6.Name = "txtTuesday6";
             this.txtTuesday6.ReadOnly = true;
             // 
             // txtWednesday6
             // 
-            resources.ApplyResources(this.txtWednesday6, "txtWednesday6");
-            this.txtWednesday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtWednesday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtWednesday6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtWednesday6, "txtWednesday6");
             this.txtWednesday6.ForeColor = System.Drawing.Color.White;
             this.txtWednesday6.Name = "txtWednesday6";
             this.txtWednesday6.ReadOnly = true;
             // 
             // txtMonday6
             // 
-            resources.ApplyResources(this.txtMonday6, "txtMonday6");
-            this.txtMonday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtMonday6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtMonday6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtMonday6, "txtMonday6");
             this.txtMonday6.ForeColor = System.Drawing.Color.White;
             this.txtMonday6.Name = "txtMonday6";
             this.txtMonday6.ReadOnly = true;
             // 
             // panel14
             // 
-            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
             // panel15
             // 
-            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
             // 
             // btnClose
             // 
-            resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_35;
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -527,7 +527,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel14);

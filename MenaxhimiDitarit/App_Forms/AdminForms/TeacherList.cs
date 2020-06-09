@@ -178,6 +178,7 @@ namespace MenaxhimiDitarit
                 StartPosition = FormStartPosition.CenterParent
             };
             addTeacher.ShowDialog();
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -193,29 +194,21 @@ namespace MenaxhimiDitarit
         #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            try
+            Thread thread = new Thread((ThreadStart)(() =>
             {
-                Thread thread = new Thread((ThreadStart)(() =>
-                {
-                    var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx");
+                 var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx");
 
-                    saveFileDialog.ShowDialog();
+                 saveFileDialog.ShowDialog();
 
-                    Validation.ExportToExcel(dgvTeacherList, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
+                 Validation.ExportToExcel(dgvTeacherList, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
 
-                    Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }));
+                 Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }));
 
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
-                thread.Join();
-            }
-            catch (Exception)
-            {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
-                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)

@@ -181,38 +181,11 @@
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
     <value>Data e Skadimit</value>
   </data>
-  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
-    <value>RoleID</value>
-  </data>
   <data name="gridViewDateTimeColumn5.HeaderText" xml:space="preserve">
     <value>Dita e Fundit e Kyçjes</value>
   </data>
-  <data name="gridViewDateTimeColumn6.HeaderText" xml:space="preserve">
-    <value>LastPasswordChangeDate</value>
-  </data>
-  <data name="gridViewCheckBoxColumn1.HeaderText" xml:space="preserve">
-    <value>IsPasswordChanged</value>
-  </data>
   <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
     <value>Roli</value>
-  </data>
-  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>FullName</value>
-  </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn7.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn8.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>LUN</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

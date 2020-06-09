@@ -56,10 +56,12 @@ namespace MenaxhimiDitarit.TeacherForms
             _absenceBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
+            _scheduleBLL = new ClassScheduleBLL();
 
             MyAbsences = _absenceBLL.GetAllAbsence();
             MySubjects = _subjectBLL.GetAll();
             MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
 
             _absence = absence;
 
@@ -112,49 +114,61 @@ namespace MenaxhimiDitarit.TeacherForms
                     else if (update)
                         absence.LUN = ++_absence.LUN;
 
-                    if (!update)
-                    {
-                        var checkAbsence = MySchedules.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
-                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())
+                    var checkSchedule = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                        && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                         && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
 
-                        if (checkAbsence.Count > 0)
+                    if (checkSchedule.Count > 0)
+                    {
+                        if (!update)
                         {
-                            Validation.MessageBoxShow($"Absence exists for subject: {absence.Subject.SubjectTitle} in {absence.Time} hour for class {absence.Class.ClassNo}", "Exists",
-                                $"Mungesa ekziston për lëndën: {absence.Subject.SubjectTitle} në orën e {absence.Time} për klasën {absence.Class.ClassNo}!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            var checkAbsence = MyAbsences.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                            && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
+                            && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
+
+                            if (checkAbsence.Count > 0)
+                            {
+                                Validation.MessageBoxShow("Absence exists!", "Exists",
+                                    "Mungesa ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                bool isRegistred = _absenceBLL.AddAbsence(absence);
+
+                                if (isRegistred)
+                                {
+                                    Validation.MessageBoxShow("Absence registered successfully!", "Registered",
+                                        "Mungesa u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                        "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                         }
                         else
                         {
-                            bool isRegistred = _absenceBLL.AddAbsence(absence);
+                            bool isUpdated = _absenceBLL.AddAbsence(absence);
 
-                            if (isRegistred)
+                            if (isUpdated)
                             {
-                                Validation.MessageBoxShow("Absence registered successfully!", "Registered",
-                                    "Mungesa u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Validation.MessageBoxShow("Absence updated", "Updated",
+                                    "Mungesa u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
-                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Validation.MessageBoxShow("Update failed!", "Error",
+                                    "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        bool isUpdated = _absenceBLL.AddAbsence(absence);
-
-                        if (isUpdated)
-                        {
-                            Validation.MessageBoxShow("Absence updated", "Updated",
-                                "Mungesa u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                        {
-                            Validation.MessageBoxShow("Update failed!", "Error",
-                                "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        Validation.MessageBoxShow("Can't create absence for that time!", "Error",
+                            "Nuk mund të krijojë mungesë për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -163,8 +177,9 @@ namespace MenaxhimiDitarit.TeacherForms
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                string eee = ex.Message;
                 Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

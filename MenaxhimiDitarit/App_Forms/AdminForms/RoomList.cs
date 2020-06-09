@@ -207,6 +207,8 @@ namespace MenaxhimiDitarit.AdminForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addRoom.ShowDialog();
+
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

@@ -83,9 +83,9 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btnSignOut
@@ -108,15 +108,15 @@
             // 
             // pnlComments
             // 
-            resources.ApplyResources(this.pnlComments, "pnlComments");
             this.pnlComments.Controls.Add(this.btnAddNewComment);
             this.pnlComments.Controls.Add(this.btnListComments);
+            resources.ApplyResources(this.pnlComments, "pnlComments");
             this.pnlComments.Name = "pnlComments";
             // 
             // btnAddNewComment
             // 
-            resources.ApplyResources(this.btnAddNewComment, "btnAddNewComment");
             this.btnAddNewComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddNewComment, "btnAddNewComment");
             this.btnAddNewComment.FlatAppearance.BorderSize = 0;
             this.btnAddNewComment.ForeColor = System.Drawing.Color.White;
             this.btnAddNewComment.Name = "btnAddNewComment";
@@ -125,8 +125,8 @@
             // 
             // btnListComments
             // 
-            resources.ApplyResources(this.btnListComments, "btnListComments");
             this.btnListComments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListComments, "btnListComments");
             this.btnListComments.FlatAppearance.BorderSize = 0;
             this.btnListComments.ForeColor = System.Drawing.Color.White;
             this.btnListComments.Name = "btnListComments";
@@ -145,15 +145,15 @@
             // 
             // pnlAbsences
             // 
-            resources.ApplyResources(this.pnlAbsences, "pnlAbsences");
             this.pnlAbsences.Controls.Add(this.btnAddNAbsence);
             this.pnlAbsences.Controls.Add(this.btnListAbsences);
+            resources.ApplyResources(this.pnlAbsences, "pnlAbsences");
             this.pnlAbsences.Name = "pnlAbsences";
             // 
             // btnAddNAbsence
             // 
-            resources.ApplyResources(this.btnAddNAbsence, "btnAddNAbsence");
             this.btnAddNAbsence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddNAbsence, "btnAddNAbsence");
             this.btnAddNAbsence.FlatAppearance.BorderSize = 0;
             this.btnAddNAbsence.ForeColor = System.Drawing.Color.White;
             this.btnAddNAbsence.Name = "btnAddNAbsence";
@@ -162,8 +162,8 @@
             // 
             // btnListAbsences
             // 
-            resources.ApplyResources(this.btnListAbsences, "btnListAbsences");
             this.btnListAbsences.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListAbsences, "btnListAbsences");
             this.btnListAbsences.FlatAppearance.BorderSize = 0;
             this.btnListAbsences.ForeColor = System.Drawing.Color.White;
             this.btnListAbsences.Name = "btnListAbsences";
@@ -182,15 +182,15 @@
             // 
             // pnlTopics
             // 
-            resources.ApplyResources(this.pnlTopics, "pnlTopics");
             this.pnlTopics.Controls.Add(this.btnAddNTopic);
             this.pnlTopics.Controls.Add(this.btnListTopics);
+            resources.ApplyResources(this.pnlTopics, "pnlTopics");
             this.pnlTopics.Name = "pnlTopics";
             // 
             // btnAddNTopic
             // 
-            resources.ApplyResources(this.btnAddNTopic, "btnAddNTopic");
             this.btnAddNTopic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddNTopic, "btnAddNTopic");
             this.btnAddNTopic.FlatAppearance.BorderSize = 0;
             this.btnAddNTopic.ForeColor = System.Drawing.Color.White;
             this.btnAddNTopic.Name = "btnAddNTopic";
@@ -199,8 +199,8 @@
             // 
             // btnListTopics
             // 
-            resources.ApplyResources(this.btnListTopics, "btnListTopics");
             this.btnListTopics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListTopics, "btnListTopics");
             this.btnListTopics.FlatAppearance.BorderSize = 0;
             this.btnListTopics.ForeColor = System.Drawing.Color.White;
             this.btnListTopics.Name = "btnListTopics";
@@ -219,9 +219,9 @@
             // 
             // pnlPicture
             // 
-            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Controls.Add(this.lblTeacher);
             this.pnlPicture.Controls.Add(this.picTeacher);
+            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Name = "pnlPicture";
             // 
             // lblTeacher
@@ -232,17 +232,17 @@
             // 
             // picTeacher
             // 
-            resources.ApplyResources(this.picTeacher, "picTeacher");
             this.picTeacher.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_user_100;
+            resources.ApplyResources(this.picTeacher, "picTeacher");
             this.picTeacher.Name = "picTeacher";
             this.picTeacher.TabStop = false;
             // 
             // pnlChildForm
             // 
-            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.pnlChildForm.Controls.Add(this.lblSDM);
             this.pnlChildForm.Controls.Add(this.picSchool);
+            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.Name = "pnlChildForm";
             // 
             // lblSDM

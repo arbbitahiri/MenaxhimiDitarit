@@ -217,13 +217,13 @@
     <value>3</value>
   </data>
   <data name="txtSearchUser.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSearchUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>49, 31</value>
   </data>
   <data name="txtSearchUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 15</value>
+    <value>312, 18</value>
   </data>
   <data name="txtSearchUser.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -244,7 +244,7 @@
     <value>4</value>
   </data>
   <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+    <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 12</value>
@@ -271,7 +271,7 @@
     <value>2</value>
   </data>
   <data name="dgvRoleList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="dgvRoleList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -283,7 +283,7 @@
     <value>RoleID</value>
   </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>RoleName</value>
+    <value>Role Name</value>
   </data>
   <metadata name="bsrcRoleList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>172, 17</value>
@@ -322,7 +322,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportPDF.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportPDF.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -373,7 +373,7 @@
     <value>Flat</value>
   </data>
   <data name="btnExportExcel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnExportExcel.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -424,7 +424,7 @@
     <value>Flat</value>
   </data>
   <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
+    <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnPrint.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -466,7 +466,7 @@
     <value>True</value>
   </data>
   <data name="lblRole.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblRole.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -475,7 +475,7 @@
     <value>32, 103</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
+    <value>81, 25</value>
   </data>
   <data name="lblRole.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

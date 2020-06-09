@@ -208,6 +208,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addTeacher.ShowDialog();
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

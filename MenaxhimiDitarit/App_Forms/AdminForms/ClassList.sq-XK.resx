@@ -174,7 +174,7 @@
     <value>Shiko Orarin</value>
   </data>
   <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>ClassID</value>
+    <value>KlasaID</value>
   </data>
   <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
     <value>Klasa</value>

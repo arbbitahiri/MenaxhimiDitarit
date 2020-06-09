@@ -124,7 +124,6 @@ namespace MenaxhimiDitarit.TeacherForms
                     {
                         if (!update)
                         {
-                            //Shikojme nese Tema eshte shkruar me pare
                             var checkTopic = MyTopics.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                             && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                             && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();

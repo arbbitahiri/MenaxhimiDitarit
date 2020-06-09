@@ -166,6 +166,8 @@ namespace MenaxhimiDitarit.TeacherForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addAbsence.ShowDialog();
+
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

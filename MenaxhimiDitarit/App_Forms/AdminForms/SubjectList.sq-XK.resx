@@ -167,21 +167,6 @@
   <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
     <value>Arsimtari</value>
   </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn3.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>LUN</value>
-  </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Printo</value>
   </data>

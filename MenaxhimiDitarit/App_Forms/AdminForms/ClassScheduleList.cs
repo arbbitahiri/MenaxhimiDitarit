@@ -154,6 +154,7 @@ namespace MenaxhimiDitarit.AdminForms
                 StartPosition = FormStartPosition.CenterParent
             };
             addSchedule.ShowDialog();
+            RefreshList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

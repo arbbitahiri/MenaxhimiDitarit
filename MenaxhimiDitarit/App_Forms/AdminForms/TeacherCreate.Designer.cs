@@ -81,7 +81,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
@@ -97,7 +97,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.ForeColor = System.Drawing.Color.White;
@@ -145,6 +145,7 @@
             resources.ApplyResources(this.lblCity, "lblCity");
             this.lblCity.ForeColor = System.Drawing.Color.White;
             this.lblCity.Name = "lblCity";
+            this.lblCity.Click += new System.EventHandler(this.lblCity_Click);
             // 
             // panel3
             // 
@@ -154,7 +155,7 @@
             // 
             // txtCity
             // 
-            this.txtCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtCity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.ForeColor = System.Drawing.Color.White;
@@ -176,7 +177,7 @@
             // 
             // txtQualification
             // 
-            this.txtQualification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtQualification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtQualification.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtQualification, "txtQualification");
             this.txtQualification.ForeColor = System.Drawing.Color.White;
@@ -217,7 +218,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.ForeColor = System.Drawing.Color.White;
@@ -238,7 +239,7 @@
             // 
             // txtPhoneNo
             // 
-            this.txtPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtPhoneNo, "txtPhoneNo");
             this.txtPhoneNo.ForeColor = System.Drawing.Color.White;
@@ -260,7 +261,7 @@
             // 
             // txtID
             // 
-            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
@@ -341,7 +342,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.picPhoneNo);
             this.Controls.Add(this.picEmail);
             this.Controls.Add(this.picQualification);
@@ -377,6 +378,7 @@
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherCreate";
+            this.Load += new System.EventHandler(this.TeacherCreate_Load);
             this.grbGender.ResumeLayout(false);
             this.grbGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).EndInit();
