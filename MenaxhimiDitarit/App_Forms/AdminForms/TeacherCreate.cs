@@ -76,7 +76,7 @@ namespace MenaxhimiDitarit
             try
             {
                 bool isEmail = Validation.IsValid(@"^([\w\.\-]+)@([\w\-]+)\.([\w]+)$", txtEmail);
-                bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
+                bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{3}", txtPhoneNo);
 
                 if (!isPhone)
                 {
@@ -235,25 +235,6 @@ namespace MenaxhimiDitarit
                     "Arsimtari nuk duhet të jetë më i vogël se 18 vjet!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void TeacherCreate_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                if (!txtCity.Text.Equals(""))
-                {
-                    var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                        "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                    if (result == DialogResult.Yes)
-                        e.Cancel = true;
-                    else
-                        e.Cancel = false;
-                }
-                else
-                    e.Cancel = true;
-            }
-        }
         #endregion
 
         #region KeyPress
@@ -350,22 +331,22 @@ namespace MenaxhimiDitarit
 
         private void picPhoneNo_MouseHover(object sender, EventArgs e)
         {
-            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
+            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{3}", txtPhoneNo);
 
             if (txtPhoneNo.Text == null)
             {
-                Validation.ToolTipShow("Phone number is required! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
-                    "Numri i telefonit duhet të plotësohet Ju lutem shkruani në formë korrekte:\n555 (044) 444 444\n444-(044)-444-444", picPhoneNo);
+                Validation.ToolTipShow("Phone number is required! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                    "Numri i telefonit duhet të plotësohet Ju lutem shkruani në formë korrekte:\n555 044 444 444\n444-044-444-444", picPhoneNo);
             }
             else if(txtPhoneNo.Text.Length < 8)
             {
-                Validation.ToolTipShow("Phone number is to short! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
-                    "Numri i telefonit duhet të plotësohet! Ju lutem shkruani në formë korrekte:\n444 (044) 444 444\n444-(044)-444-444", picPhoneNo);
+                Validation.ToolTipShow("Phone number is to short! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                    "Numri i telefonit duhet të plotësohet! Ju lutem shkruani në formë korrekte:\n444 044 444 444\n444-044-444-444", picPhoneNo);
             }
             else if (!isPhone)
             {
-                Validation.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n444 (044) 444 444\n444-(044)-444-444",
-                    "Numri i telefonit është në format të gabuar. Ju lutem shkruani në formë korrekte:\n444 (044) 444 444\n444-(044)-444-444", picPhoneNo);
+                Validation.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                    "Numri i telefonit është në format të gabuar. Ju lutem shkruani në formë korrekte:\n444 044 444 444\n444-044-444-444", picPhoneNo);
             }
         }
 
@@ -453,7 +434,7 @@ namespace MenaxhimiDitarit
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
         {
-            bool isPhone = Validation.IsValid(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$", txtPhoneNo);
+            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
 
             if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 8 && isPhone)
             {

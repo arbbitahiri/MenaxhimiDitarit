@@ -27,6 +27,9 @@ namespace MenaxhimiDitarit.TeacherForms
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;
 
+        private readonly ClassScheduleBLL _scheduleBLL;
+        private List<ClassSchedule> MySchedules;
+
         public AbsenceCreate()
         {
             InitializeComponent();
@@ -34,12 +37,14 @@ namespace MenaxhimiDitarit.TeacherForms
             _absenceBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
-
-            MyAbsences = _absenceBLL.GetAllAbsence();
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
+            _scheduleBLL = new ClassScheduleBLL();
 
             update = false;
+
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+            MyAbsences = _absenceBLL.GetAllTopic();
 
             CustomizeDesign();
         }
@@ -109,9 +114,9 @@ namespace MenaxhimiDitarit.TeacherForms
 
                     if (!update)
                     {
-                        var checkAbsence = MyAbsences.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
-                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                        && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
+                        var checkAbsence = MySchedules.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
+                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())
+                        && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
 
                         if (checkAbsence.Count > 0)
                         {

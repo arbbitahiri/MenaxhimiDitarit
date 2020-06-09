@@ -128,9 +128,13 @@ namespace MenaxhimiDitarit.AdminForms
 
                             if (isRegistred)
                             {
-                                Validation.MessageBoxShow("Schedule registred successfully", "Registered",
-                                    "Orari u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                this.Close();
+                                var result = Validation.MessageBoxShow("Schedule registred successfully. Do you want to continue?", "Registered",
+                                    "Orari u regjistrua me sukses. Doni të vazhdoni?", "U regjistrua", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                                if (result != DialogResult.Yes)
+                                {
+                                    this.Close();
+                                }
                             }
                             else
                             {

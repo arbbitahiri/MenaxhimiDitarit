@@ -169,21 +169,6 @@
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 206</value>
   </data>
-  <data name="cmbSelectDate.Items" xml:space="preserve">
-    <value>E Hënë</value>
-  </data>
-  <data name="cmbSelectDate.Items1" xml:space="preserve">
-    <value>E Martë</value>
-  </data>
-  <data name="cmbSelectDate.Items2" xml:space="preserve">
-    <value>E Mërkurë</value>
-  </data>
-  <data name="cmbSelectDate.Items3" xml:space="preserve">
-    <value>E Enjte</value>
-  </data>
-  <data name="cmbSelectDate.Items4" xml:space="preserve">
-    <value>E Premte</value>
-  </data>
   <data name="cmbSelectDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 288</value>
   </data>

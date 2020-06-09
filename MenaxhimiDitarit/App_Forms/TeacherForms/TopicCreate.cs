@@ -118,7 +118,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     //Shikojme nese Tema per klasen, lenden, oren dhe diten ekziston ne Orar
                     var checkSchedule = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
-                    && t.Day == dtpSelectDate.Value.ToString("dddd")).ToList();
+                    && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
 
                     if (checkSchedule.Count > 0)
                     {

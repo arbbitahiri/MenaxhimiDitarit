@@ -27,6 +27,9 @@ namespace MenaxhimiDitarit.TeacherForms
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;
 
+        private readonly ClassScheduleBLL _scheduleBLL;
+        private List<ClassSchedule> MySchedules;
+
         public CommentCreate()
         {
             InitializeComponent();
@@ -34,12 +37,14 @@ namespace MenaxhimiDitarit.TeacherForms
             _commentBLL = new TopicBLL();
             _subjectBLL = new SubjectBLL();
             _classBLL = new ClassBLL();
-
-            MyComments = _commentBLL.GetAllComment();
-            MySubjects = _subjectBLL.GetAll();
-            MyClasses = _classBLL.GetAll();
+            _scheduleBLL = new ClassScheduleBLL();
 
             update = false;
+
+            MySubjects = _subjectBLL.GetAll();
+            MyClasses = _classBLL.GetAll();
+            MySchedules = _scheduleBLL.GetAll();
+            MyComments = _commentBLL.GetAllTopic();
 
             CustomizeDesign();
         }
@@ -112,9 +117,9 @@ namespace MenaxhimiDitarit.TeacherForms
 
                     if (!update)
                     {
-                        var checkComment = MyComments.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
-                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                        && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())).ToList();
+                        var checkComment = MySchedules.Where(t => t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedItem.ToString())
+                        && t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && t.Time == Convert.ToInt32(cmbSelectTime.SelectedValue.ToString())
+                        && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
 
                         if (checkComment.Count > 0)
                         {
