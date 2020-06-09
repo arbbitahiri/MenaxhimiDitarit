@@ -133,7 +133,6 @@ namespace MenaxhimiDitarit.AdminForms
                 {
                     if (txtSearchSubject.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte RoomType
                         var findRoom = MyRooms.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
 
                         dgvRoomList.DataSource = findRoom;
@@ -141,7 +140,7 @@ namespace MenaxhimiDitarit.AdminForms
                     else
                     {
                         Validation.MessageBoxShow("Please write a room type!", "Empty",
-                            "Ju lutem shkruani llojin e sallës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem shkruani llojin e sallës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -236,14 +235,14 @@ namespace MenaxhimiDitarit.AdminForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvRoomList, saveFileDialog.FileName, "RoomList", "ListaESallës");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -255,14 +254,14 @@ namespace MenaxhimiDitarit.AdminForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvRoomList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

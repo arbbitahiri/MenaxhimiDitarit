@@ -592,7 +592,7 @@
     <value>Segoe UI, 14.25pt</value>
   </data>
   <data name="lblDirector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 103</value>
+    <value>60, 103</value>
   </data>
   <data name="lblDirector.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 25</value>
@@ -700,7 +700,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>309, 327</value>
+    <value>310, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 37</value>

@@ -126,7 +126,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 177</value>
+    <value>399, 165</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 17</value>
@@ -150,7 +150,7 @@
     <value>12</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 198</value>
+    <value>426, 188</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -174,7 +174,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 177</value>
+    <value>426, 164</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -204,7 +204,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 233</value>
+    <value>383, 227</value>
   </data>
   <data name="lblBook.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 17</value>
@@ -234,7 +234,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 205</value>
+    <value>342, 196</value>
   </data>
   <data name="lblSubjectTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 17</value>
@@ -258,7 +258,7 @@
     <value>16</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 254</value>
+    <value>426, 250</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -279,7 +279,7 @@
     <value>17</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 226</value>
+    <value>426, 219</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -303,7 +303,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSubjectBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 233</value>
+    <value>426, 226</value>
   </data>
   <data name="txtSubjectBook.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -327,7 +327,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 205</value>
+    <value>426, 195</value>
   </data>
   <data name="txtSubjectTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -354,7 +354,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblBookAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 261</value>
+    <value>339, 258</value>
   </data>
   <data name="lblBookAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 17</value>
@@ -378,7 +378,7 @@
     <value>9</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 282</value>
+    <value>426, 281</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -402,7 +402,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtBookAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 261</value>
+    <value>425, 257</value>
   </data>
   <data name="txtBookAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -430,7 +430,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 336</value>
+    <value>478, 361</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -460,7 +460,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 336</value>
+    <value>303, 361</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -490,7 +490,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblAssignTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 292</value>
+    <value>324, 292</value>
   </data>
   <data name="lblAssignTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
@@ -544,7 +544,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>426, 289</value>
+    <value>426, 288</value>
   </data>
   <data name="cmbTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -568,7 +568,7 @@
     <value>NoControl</value>
   </data>
   <data name="picSubjectTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 203</value>
+    <value>613, 194</value>
   </data>
   <data name="picSubjectTitle.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -595,7 +595,7 @@
     <value>NoControl</value>
   </data>
   <data name="picBook.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 231</value>
+    <value>613, 225</value>
   </data>
   <data name="picBook.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -622,7 +622,7 @@
     <value>NoControl</value>
   </data>
   <data name="picBAuthor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 261</value>
+    <value>613, 256</value>
   </data>
   <data name="picBAuthor.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -649,7 +649,7 @@
     <value>NoControl</value>
   </data>
   <data name="picTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>613, 291</value>
+    <value>613, 290</value>
   </data>
   <data name="picTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>

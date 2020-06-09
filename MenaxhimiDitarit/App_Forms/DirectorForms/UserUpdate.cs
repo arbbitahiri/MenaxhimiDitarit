@@ -148,6 +148,16 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+
         #region ErrorProvider
         private void picFirstName_MouseHover(object sender, EventArgs e)
         {
@@ -248,15 +258,5 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
         #endregion
-
-        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validation.NoNumber(e);
-        }
-
-        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validation.NoNumber(e);
-        }
     }
 }

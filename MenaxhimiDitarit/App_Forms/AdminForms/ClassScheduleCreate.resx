@@ -144,7 +144,7 @@
     <value>6</value>
   </data>
   <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 251</value>
+    <value>422, 253</value>
   </data>
   <data name="cmbSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -175,7 +175,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 213</value>
+    <value>422, 215</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -205,7 +205,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 176</value>
+    <value>422, 177</value>
   </data>
   <data name="cmbSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -232,7 +232,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 254</value>
+    <value>342, 257</value>
   </data>
   <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
@@ -256,7 +256,7 @@
     <value>15</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 281</value>
+    <value>422, 284</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -283,7 +283,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 148</value>
+    <value>395, 147</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 17</value>
@@ -307,7 +307,7 @@
     <value>17</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 169</value>
+    <value>422, 170</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -331,7 +331,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 149</value>
+    <value>422, 146</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -361,7 +361,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 216</value>
+    <value>328, 219</value>
   </data>
   <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
@@ -391,7 +391,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 179</value>
+    <value>340, 181</value>
   </data>
   <data name="lblClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 17</value>
@@ -415,7 +415,7 @@
     <value>21</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 243</value>
+    <value>422, 246</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -436,7 +436,7 @@
     <value>22</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 206</value>
+    <value>422, 208</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -478,7 +478,7 @@
     <value>Friday</value>
   </data>
   <data name="cmbSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 288</value>
+    <value>422, 290</value>
   </data>
   <data name="cmbSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -505,7 +505,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 291</value>
+    <value>381, 294</value>
   </data>
   <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 17</value>
@@ -529,7 +529,7 @@
     <value>10</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 318</value>
+    <value>422, 321</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -556,7 +556,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 325</value>
+    <value>383, 329</value>
   </data>
   <data name="lblYear.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 17</value>
@@ -580,7 +580,7 @@
     <value>6</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 345</value>
+    <value>422, 348</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -604,7 +604,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 325</value>
+    <value>422, 328</value>
   </data>
   <data name="txtYear.MaxLength" type="System.Int32, mscorlib">
     <value>4</value>
@@ -637,7 +637,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmitClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 375</value>
+    <value>478, 378</value>
   </data>
   <data name="btnSubmitClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -667,7 +667,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 375</value>
+    <value>303, 378</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -694,7 +694,7 @@
     <value>NoControl</value>
   </data>
   <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 178</value>
+    <value>609, 179</value>
   </data>
   <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -721,7 +721,7 @@
     <value>NoControl</value>
   </data>
   <data name="picSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 215</value>
+    <value>609, 217</value>
   </data>
   <data name="picSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -748,7 +748,7 @@
     <value>NoControl</value>
   </data>
   <data name="picTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 253</value>
+    <value>609, 255</value>
   </data>
   <data name="picTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -775,7 +775,7 @@
     <value>NoControl</value>
   </data>
   <data name="picDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 290</value>
+    <value>609, 292</value>
   </data>
   <data name="picDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>

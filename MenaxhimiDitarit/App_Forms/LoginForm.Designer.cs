@@ -41,6 +41,7 @@
             this.chbShowPassword = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbLanguage = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -147,11 +148,18 @@
             this.cmbLanguage.Name = "cmbLanguage";
             this.cmbLanguage.SelectedIndexChanged += new System.EventHandler(this.cmbLanguage_SelectedIndexChanged);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
             // LoginForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.cmbLanguage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chbShowPassword);
@@ -190,5 +198,6 @@
         private System.Windows.Forms.CheckBox chbShowPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbLanguage;
+        private System.Windows.Forms.Panel panel3;
     }
 }

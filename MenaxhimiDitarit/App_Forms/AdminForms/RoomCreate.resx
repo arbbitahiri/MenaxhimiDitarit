@@ -126,7 +126,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 309</value>
+    <value>478, 326</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -157,7 +157,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 309</value>
+    <value>303, 326</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -187,7 +187,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 215</value>
+    <value>402, 199</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 17</value>
@@ -211,7 +211,7 @@
     <value>4</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 236</value>
+    <value>429, 222</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -235,7 +235,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 215</value>
+    <value>429, 198</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -265,7 +265,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblRoomType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 271</value>
+    <value>343, 264</value>
   </data>
   <data name="lblRoomType.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>
@@ -295,7 +295,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 243</value>
+    <value>354, 233</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -319,7 +319,7 @@
     <value>8</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 292</value>
+    <value>429, 284</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -340,7 +340,7 @@
     <value>9</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 264</value>
+    <value>429, 253</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -364,7 +364,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtRoomType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 271</value>
+    <value>429, 260</value>
   </data>
   <data name="txtRoomType.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -388,7 +388,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 243</value>
+    <value>428, 229</value>
   </data>
   <data name="txtRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -412,7 +412,7 @@
     <value>NoControl</value>
   </data>
   <data name="picRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 241</value>
+    <value>616, 231</value>
   </data>
   <data name="picRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -439,7 +439,7 @@
     <value>NoControl</value>
   </data>
   <data name="picRoomType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 270</value>
+    <value>616, 262</value>
   </data>
   <data name="picRoomType.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>

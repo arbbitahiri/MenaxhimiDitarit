@@ -93,7 +93,7 @@
             // 
             // txtSearchClass
             // 
-            this.txtSearchClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
+            this.txtSearchClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.txtSearchClass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtSearchClass, "txtSearchClass");
             this.txtSearchClass.ForeColor = System.Drawing.Color.White;

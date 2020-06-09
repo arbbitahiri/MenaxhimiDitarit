@@ -436,7 +436,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>323, 30</value>
+    <value>329, 31</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -520,7 +520,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 30</value>
+    <value>29, 31</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 17</value>
@@ -563,102 +563,6 @@
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnExportPDF.Name" xml:space="preserve">
-    <value>btnExportPDF</value>
-  </data>
-  <data name="&gt;&gt;btnExportPDF.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExportPDF.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;btnExportPDF.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnExportExcel.Name" xml:space="preserve">
-    <value>btnExportExcel</value>
-  </data>
-  <data name="&gt;&gt;btnExportExcel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExportExcel.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;btnExportExcel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
-    <value>btnPrint</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
-    <value>btnUpdate</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnAddClass.Name" xml:space="preserve">
-    <value>btnAddClass</value>
-  </data>
-  <data name="&gt;&gt;btnAddClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddClass.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;btnAddClass.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Name" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pnlClassMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="pnlClassMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>805, 0</value>
-  </data>
-  <data name="pnlClassMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 563</value>
-  </data>
-  <data name="pnlClassMain.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;pnlClassMain.Name" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;pnlClassMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlClassMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="btnExportPDF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -900,54 +804,6 @@
   <data name="&gt;&gt;btnAddClass.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;lblSchedule.Name" xml:space="preserve">
-    <value>lblSchedule</value>
-  </data>
-  <data name="&gt;&gt;lblSchedule.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSchedule.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;lblSchedule.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
-    <value>picClass</value>
-  </data>
-  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlPicture.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlPicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pnlPicture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 131</value>
-  </data>
-  <data name="pnlPicture.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Name" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.Parent" xml:space="preserve">
-    <value>pnlClassMain</value>
-  </data>
-  <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="lblSchedule.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1006,6 +862,54 @@
     <value>pnlPicture</value>
   </data>
   <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlPicture.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 131</value>
+  </data>
+  <data name="pnlPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Name" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlClassMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlClassMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>805, 0</value>
+  </data>
+  <data name="pnlClassMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 563</value>
+  </data>
+  <data name="pnlClassMain.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Name" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="printDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

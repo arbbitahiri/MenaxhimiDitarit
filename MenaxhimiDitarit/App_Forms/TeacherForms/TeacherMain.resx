@@ -121,23 +121,6 @@
   <data name="pnlMain.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnSignOut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="btnSignOut.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSignOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 0</value>
-  </data>
-  <data name="btnSignOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 65</value>
-  </data>
-  <data name="btnSignOut.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;btnSignOut.Name" xml:space="preserve">
     <value>btnSignOut</value>
   </data>
@@ -149,21 +132,6 @@
   </data>
   <data name="&gt;&gt;btnSignOut.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 65</value>
-  </data>
-  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
     <value>btnExit</value>
@@ -177,9 +145,11 @@
   <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 520</value>
   </data>
@@ -201,33 +171,6 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnAddNewComment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnAddNewComment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAddNewComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnAddNewComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
-  </data>
-  <data name="btnAddNewComment.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnAddNewComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnAddNewComment.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnAddNewComment.Text" xml:space="preserve">
-    <value>Add New Comment</value>
-  </data>
-  <data name="btnAddNewComment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;btnAddNewComment.Name" xml:space="preserve">
     <value>btnAddNewComment</value>
   </data>
@@ -239,33 +182,6 @@
   </data>
   <data name="&gt;&gt;btnAddNewComment.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnListComments.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnListComments.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnListComments.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnListComments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnListComments.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnListComments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnListComments.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnListComments.Text" xml:space="preserve">
-    <value>List Comments</value>
-  </data>
-  <data name="btnListComments.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnListComments.Name" xml:space="preserve">
     <value>btnListComments</value>
@@ -348,33 +264,6 @@
   <data name="&gt;&gt;btnComments.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btnAddNAbsence.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnAddNAbsence.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAddNAbsence.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnAddNAbsence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
-  </data>
-  <data name="btnAddNAbsence.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnAddNAbsence.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnAddNAbsence.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnAddNAbsence.Text" xml:space="preserve">
-    <value>Add New Subject</value>
-  </data>
-  <data name="btnAddNAbsence.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;btnAddNAbsence.Name" xml:space="preserve">
     <value>btnAddNAbsence</value>
   </data>
@@ -386,33 +275,6 @@
   </data>
   <data name="&gt;&gt;btnAddNAbsence.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnListAbsences.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnListAbsences.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnListAbsences.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnListAbsences.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnListAbsences.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnListAbsences.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnListAbsences.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnListAbsences.Text" xml:space="preserve">
-    <value>List Absences</value>
-  </data>
-  <data name="btnListAbsences.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnListAbsences.Name" xml:space="preserve">
     <value>btnListAbsences</value>
@@ -495,33 +357,6 @@
   <data name="&gt;&gt;btnAbsences.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnAddNTopic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnAddNTopic.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAddNTopic.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnAddNTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 35</value>
-  </data>
-  <data name="btnAddNTopic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnAddNTopic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnAddNTopic.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnAddNTopic.Text" xml:space="preserve">
-    <value>Add New Topic</value>
-  </data>
-  <data name="btnAddNTopic.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;btnAddNTopic.Name" xml:space="preserve">
     <value>btnAddNTopic</value>
   </data>
@@ -533,33 +368,6 @@
   </data>
   <data name="&gt;&gt;btnAddNTopic.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnListTopics.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="btnListTopics.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnListTopics.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnListTopics.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnListTopics.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>25, 0, 0, 0</value>
-  </data>
-  <data name="btnListTopics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 35</value>
-  </data>
-  <data name="btnListTopics.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnListTopics.Text" xml:space="preserve">
-    <value>List Topics</value>
-  </data>
-  <data name="btnListTopics.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnListTopics.Name" xml:space="preserve">
     <value>btnListTopics</value>
@@ -642,24 +450,6 @@
   <data name="&gt;&gt;btnTopics.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="lblTeacher.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTeacher.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 103</value>
-  </data>
-  <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 25</value>
-  </data>
-  <data name="lblTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblTeacher.Text" xml:space="preserve">
-    <value>Teacher</value>
-  </data>
   <data name="&gt;&gt;lblTeacher.Name" xml:space="preserve">
     <value>lblTeacher</value>
   </data>
@@ -670,18 +460,6 @@
     <value>pnlPicture</value>
   </data>
   <data name="&gt;&gt;lblTeacher.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="picTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="picTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
-  </data>
-  <data name="picTeacher.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="picTeacher.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;picTeacher.Name" xml:space="preserve">
@@ -744,6 +522,348 @@
   <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="btnSignOut.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnSignOut.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSignOut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 0</value>
+  </data>
+  <data name="btnSignOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 65</value>
+  </data>
+  <data name="btnSignOut.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnSignOut.Name" xml:space="preserve">
+    <value>btnSignOut</value>
+  </data>
+  <data name="&gt;&gt;btnSignOut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSignOut.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnSignOut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnExit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 65</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddNewComment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAddNewComment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddNewComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnAddNewComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="btnAddNewComment.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnAddNewComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnAddNewComment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnAddNewComment.Text" xml:space="preserve">
+    <value>Add New Comment</value>
+  </data>
+  <data name="btnAddNewComment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewComment.Name" xml:space="preserve">
+    <value>btnAddNewComment</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewComment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewComment.Parent" xml:space="preserve">
+    <value>pnlComments</value>
+  </data>
+  <data name="&gt;&gt;btnAddNewComment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnListComments.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnListComments.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnListComments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnListComments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnListComments.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnListComments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnListComments.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnListComments.Text" xml:space="preserve">
+    <value>List Comments</value>
+  </data>
+  <data name="btnListComments.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnListComments.Name" xml:space="preserve">
+    <value>btnListComments</value>
+  </data>
+  <data name="&gt;&gt;btnListComments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnListComments.Parent" xml:space="preserve">
+    <value>pnlComments</value>
+  </data>
+  <data name="&gt;&gt;btnListComments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddNAbsence.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAddNAbsence.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddNAbsence.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnAddNAbsence.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="btnAddNAbsence.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnAddNAbsence.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnAddNAbsence.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnAddNAbsence.Text" xml:space="preserve">
+    <value>Add New Subject</value>
+  </data>
+  <data name="btnAddNAbsence.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnAddNAbsence.Name" xml:space="preserve">
+    <value>btnAddNAbsence</value>
+  </data>
+  <data name="&gt;&gt;btnAddNAbsence.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddNAbsence.Parent" xml:space="preserve">
+    <value>pnlAbsences</value>
+  </data>
+  <data name="&gt;&gt;btnAddNAbsence.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnListAbsences.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnListAbsences.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnListAbsences.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnListAbsences.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnListAbsences.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnListAbsences.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnListAbsences.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnListAbsences.Text" xml:space="preserve">
+    <value>List Absences</value>
+  </data>
+  <data name="btnListAbsences.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnListAbsences.Name" xml:space="preserve">
+    <value>btnListAbsences</value>
+  </data>
+  <data name="&gt;&gt;btnListAbsences.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnListAbsences.Parent" xml:space="preserve">
+    <value>pnlAbsences</value>
+  </data>
+  <data name="&gt;&gt;btnListAbsences.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnAddNTopic.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnAddNTopic.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddNTopic.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnAddNTopic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="btnAddNTopic.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnAddNTopic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnAddNTopic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnAddNTopic.Text" xml:space="preserve">
+    <value>Add New Topic</value>
+  </data>
+  <data name="btnAddNTopic.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnAddNTopic.Name" xml:space="preserve">
+    <value>btnAddNTopic</value>
+  </data>
+  <data name="&gt;&gt;btnAddNTopic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddNTopic.Parent" xml:space="preserve">
+    <value>pnlTopics</value>
+  </data>
+  <data name="&gt;&gt;btnAddNTopic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnListTopics.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnListTopics.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnListTopics.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnListTopics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnListTopics.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>25, 0, 0, 0</value>
+  </data>
+  <data name="btnListTopics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 35</value>
+  </data>
+  <data name="btnListTopics.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnListTopics.Text" xml:space="preserve">
+    <value>List Topics</value>
+  </data>
+  <data name="btnListTopics.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnListTopics.Name" xml:space="preserve">
+    <value>btnListTopics</value>
+  </data>
+  <data name="&gt;&gt;btnListTopics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnListTopics.Parent" xml:space="preserve">
+    <value>pnlTopics</value>
+  </data>
+  <data name="&gt;&gt;btnListTopics.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblTeacher.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTeacher.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 103</value>
+  </data>
+  <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 25</value>
+  </data>
+  <data name="lblTeacher.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblTeacher.Text" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Name" xml:space="preserve">
+    <value>lblTeacher</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="picTeacher.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picTeacher.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picTeacher.Name" xml:space="preserve">
+    <value>picTeacher</value>
+  </data>
+  <data name="&gt;&gt;picTeacher.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picTeacher.Parent" xml:space="preserve">
+    <value>pnlPicture</value>
+  </data>
+  <data name="&gt;&gt;picTeacher.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblSDM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -751,7 +871,7 @@
     <value>Segoe UI, 20.25pt</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>309, 327</value>
+    <value>310, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 37</value>
@@ -859,7 +979,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 566</value>
+    <value>210, 566</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>

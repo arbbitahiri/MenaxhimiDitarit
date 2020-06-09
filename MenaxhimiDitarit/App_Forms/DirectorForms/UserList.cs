@@ -42,9 +42,9 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void HideSubMenu()
         {
-            if (pnlPrint.Visible == true)
+            if (pnlUpdate.Visible == true)
             {
-                pnlPrint.Visible = false;
+                pnlUpdate.Visible = false;
             }
         }
 
@@ -216,7 +216,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     else
                     {
                         Validation.MessageBoxShow("Please write a name!", "Empty",
-                            "Ju lutem shkruani emrin apo mbiemrin e përdoruesit!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem shkruani emrin apo mbiemrin e përdoruesit!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -302,8 +302,6 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             ShowSubMenu(pnlUpdate);
-
-            HideSubMenu();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
@@ -337,14 +335,14 @@ namespace MenaxhimiDitarit.DirectorForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvUserList, saveFileDialog.FileName, "UserList", "ListaEPërdoruesve");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -356,14 +354,14 @@ namespace MenaxhimiDitarit.DirectorForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvUserList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

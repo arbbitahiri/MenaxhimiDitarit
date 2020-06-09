@@ -64,7 +64,6 @@ namespace MenaxhimiDitarit
             txtID.Enabled = false;
         }
 
-        //Popullimi i TextBox-ave dhe ComboBox-it me te dhenat nga Subject
         private void PopulateForm(Subject subject)
         {
             txtID.Text = subject.SubjectID.ToString();
@@ -98,7 +97,6 @@ namespace MenaxhimiDitarit
 
                     if (!update)
                     {
-                        //Shikojme nese eksiston nje lend e till
                         var checkSubjects = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
                         if (checkSubjects.Count > 0)

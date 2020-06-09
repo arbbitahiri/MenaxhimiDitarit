@@ -184,7 +184,7 @@
     <value>ddMMMMyyyy</value>
   </data>
   <data name="dtpSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 64</value>
+    <value>126, 62</value>
   </data>
   <data name="dtpSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -214,7 +214,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 25</value>
+    <value>441, 24</value>
   </data>
   <data name="cmbSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -241,7 +241,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 28</value>
+    <value>359, 28</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 17</value>
@@ -295,7 +295,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 25</value>
+    <value>126, 24</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -322,7 +322,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 28</value>
+    <value>32, 28</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
@@ -352,7 +352,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 65</value>
+    <value>52, 66</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -376,7 +376,7 @@
     <value>8</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 92</value>
+    <value>126, 93</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -845,7 +845,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 103</value>
+    <value>28, 103</value>
   </data>
   <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 25</value>

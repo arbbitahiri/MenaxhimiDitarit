@@ -146,7 +146,7 @@ namespace MenaxhimiDitarit.DirectorForms
                     else
                     {
                         Validation.MessageBoxShow("Please write a name!", "Empty",
-                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -236,14 +236,14 @@ namespace MenaxhimiDitarit.DirectorForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvTeacherListD, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -255,14 +255,14 @@ namespace MenaxhimiDitarit.DirectorForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvTeacherListD, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

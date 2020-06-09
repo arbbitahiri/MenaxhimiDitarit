@@ -77,7 +77,6 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
-        //Popullimi i TextBox-it dhe ComboBox-ave me te dhenat nga ClassSchedule
         private void PopulateForm(ClassSchedule schedule)
         {
             txtID.Text = schedule.ScheduleID.ToString();
@@ -113,14 +112,13 @@ namespace MenaxhimiDitarit.AdminForms
 
                     if (!update)
                     {
-                        //Shikojme nese ekziton orari i till
                         var checkSchedules = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                         && t.Day == cmbSelectDate.SelectedItem.ToString() && t.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
 
                         if (checkSchedules.Count > 0)
                         {
                             Validation.MessageBoxShow("Schedule exists in that period!", "Exists",
-                                   "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                   "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -163,13 +161,13 @@ namespace MenaxhimiDitarit.AdminForms
                 else
                 {
                     Validation.MessageBoxShow("Please fill all fields!", "Error",
-                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
                 Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
-                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

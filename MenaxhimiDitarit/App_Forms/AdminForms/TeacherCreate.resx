@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 156</value>
+    <value>413, 153</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -144,7 +144,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 135</value>
+    <value>415, 129</value>
   </data>
   <data name="txtFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -171,7 +171,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblEmri.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 135</value>
+    <value>336, 130</value>
   </data>
   <data name="lblEmri.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
@@ -198,7 +198,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 163</value>
+    <value>413, 160</value>
   </data>
   <data name="txtLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -219,7 +219,7 @@
     <value>31</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 184</value>
+    <value>413, 184</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -246,7 +246,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 162</value>
+    <value>334, 161</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>
@@ -268,6 +268,57 @@
   </data>
   <data name="&gt;&gt;lblLastName.ZOrder" xml:space="preserve">
     <value>27</value>
+  </data>
+  <data name="&gt;&gt;rbtnFemale.Name" xml:space="preserve">
+    <value>rbtnFemale</value>
+  </data>
+  <data name="&gt;&gt;rbtnFemale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtnFemale.Parent" xml:space="preserve">
+    <value>grbGender</value>
+  </data>
+  <data name="&gt;&gt;rbtnFemale.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;rbtnMale.Name" xml:space="preserve">
+    <value>rbtnMale</value>
+  </data>
+  <data name="&gt;&gt;rbtnMale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbtnMale.Parent" xml:space="preserve">
+    <value>grbGender</value>
+  </data>
+  <data name="&gt;&gt;rbtnMale.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grbGender.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="grbGender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 191</value>
+  </data>
+  <data name="grbGender.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 61</value>
+  </data>
+  <data name="grbGender.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grbGender.Text" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="&gt;&gt;grbGender.Name" xml:space="preserve">
+    <value>grbGender</value>
+  </data>
+  <data name="&gt;&gt;grbGender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbGender.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbGender.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="rbtnFemale.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -329,33 +380,6 @@
   <data name="&gt;&gt;rbtnMale.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="grbGender.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="grbGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 191</value>
-  </data>
-  <data name="grbGender.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 61</value>
-  </data>
-  <data name="grbGender.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="grbGender.Text" xml:space="preserve">
-    <value>Gender</value>
-  </data>
-  <data name="&gt;&gt;grbGender.Name" xml:space="preserve">
-    <value>grbGender</value>
-  </data>
-  <data name="&gt;&gt;grbGender.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grbGender.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grbGender.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
   <data name="lblCity.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -363,7 +387,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 258</value>
+    <value>377, 259</value>
   </data>
   <data name="lblCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 16</value>
@@ -387,7 +411,7 @@
     <value>23</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 279</value>
+    <value>413, 282</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -411,7 +435,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 258</value>
+    <value>413, 258</value>
   </data>
   <data name="txtCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -438,7 +462,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblQualification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 286</value>
+    <value>324, 290</value>
   </data>
   <data name="lblQualification.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 17</value>
@@ -462,7 +486,7 @@
     <value>20</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 307</value>
+    <value>411, 313</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -486,7 +510,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtQualification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 286</value>
+    <value>411, 289</value>
   </data>
   <data name="txtQualification.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -513,7 +537,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 319</value>
+    <value>331, 324</value>
   </data>
   <data name="lblBirthday.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 17</value>
@@ -537,7 +561,7 @@
     <value>18</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 342</value>
+    <value>411, 351</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -571,7 +595,7 @@
     <value>Off</value>
   </data>
   <data name="dtpBirthday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>417, 314</value>
+    <value>411, 320</value>
   </data>
   <data name="dtpBirthday.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -598,7 +622,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 349</value>
+    <value>359, 356</value>
   </data>
   <data name="lblEmail.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 17</value>
@@ -622,7 +646,7 @@
     <value>14</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 370</value>
+    <value>411, 379</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -646,7 +670,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 349</value>
+    <value>411, 355</value>
   </data>
   <data name="txtEmail.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -673,7 +697,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 377</value>
+    <value>336, 387</value>
   </data>
   <data name="lblPhoneNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
@@ -697,7 +721,7 @@
     <value>11</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 398</value>
+    <value>413, 410</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -721,7 +745,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 377</value>
+    <value>413, 386</value>
   </data>
   <data name="txtPhoneNo.MaxLength" type="System.Int32, mscorlib">
     <value>16</value>
@@ -751,7 +775,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 107</value>
+    <value>386, 99</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 17</value>
@@ -775,7 +799,7 @@
     <value>8</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 128</value>
+    <value>413, 122</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -799,7 +823,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 107</value>
+    <value>413, 98</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -829,7 +853,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 417</value>
+    <value>301, 429</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -859,7 +883,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 417</value>
+    <value>476, 429</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -886,7 +910,7 @@
     <value>NoControl</value>
   </data>
   <data name="picFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 135</value>
+    <value>600, 128</value>
   </data>
   <data name="picFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -913,7 +937,7 @@
     <value>NoControl</value>
   </data>
   <data name="picLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 163</value>
+    <value>600, 159</value>
   </data>
   <data name="picLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -940,7 +964,7 @@
     <value>NoControl</value>
   </data>
   <data name="picCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 256</value>
+    <value>598, 257</value>
   </data>
   <data name="picCity.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -967,7 +991,7 @@
     <value>NoControl</value>
   </data>
   <data name="picQualification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 285</value>
+    <value>598, 288</value>
   </data>
   <data name="picQualification.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -994,7 +1018,7 @@
     <value>NoControl</value>
   </data>
   <data name="picEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 347</value>
+    <value>598, 354</value>
   </data>
   <data name="picEmail.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -1021,7 +1045,7 @@
     <value>NoControl</value>
   </data>
   <data name="picPhoneNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 376</value>
+    <value>600, 385</value>
   </data>
   <data name="picPhoneNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>

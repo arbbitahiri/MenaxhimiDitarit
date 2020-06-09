@@ -23,7 +23,6 @@ namespace MenaxhimiDitarit
         }
 
         #region Metodat per Panel-at
-        //Nuk i shfaqim Panel-et e Side Menus
         private void CustomizeDesign()
         {
             pnlTeachers.Visible = false;
@@ -33,7 +32,6 @@ namespace MenaxhimiDitarit
             pnlSchedule.Visible = false;
         }
 
-        //Fshehim Panelin pasi te klkojm ne njerin nga Button-at qe jane ne Panel
         private void HideSubMenu()
         {
             if (pnlTeachers.Visible == true)
@@ -52,7 +50,6 @@ namespace MenaxhimiDitarit
                 pnlSchedule.Visible = false;
         }
 
-        //Shfaqim Panel-in ne Side Menu
         private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false) {
@@ -63,7 +60,6 @@ namespace MenaxhimiDitarit
                 subMenu.Visible = false;
         }
 
-        //Hapim format ne Panel-in kryesor
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)

@@ -134,7 +134,6 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchClass.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte ClassNo
                         var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
 
                         dgvClassesList.DataSource = findClass;
@@ -142,7 +141,7 @@ namespace MenaxhimiDitarit
                     else
                     {
                         Validation.MessageBoxShow("Please write a class number!", "Empty",
-                            "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -247,14 +246,14 @@ namespace MenaxhimiDitarit
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvClassesList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -266,14 +265,14 @@ namespace MenaxhimiDitarit
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvClassesList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

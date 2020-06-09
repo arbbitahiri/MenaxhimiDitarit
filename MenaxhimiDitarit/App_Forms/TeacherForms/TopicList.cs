@@ -169,7 +169,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     else
                     {
                         Validation.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
-                            "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -252,14 +252,14 @@ namespace MenaxhimiDitarit.TeacherForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvTopicList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -271,14 +271,14 @@ namespace MenaxhimiDitarit.TeacherForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvTopicList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

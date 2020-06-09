@@ -157,7 +157,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 154</value>
+    <value>255, 149</value>
   </data>
   <data name="lblID.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 17</value>
@@ -181,7 +181,7 @@
     <value>14</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 175</value>
+    <value>281, 172</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -205,7 +205,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 154</value>
+    <value>281, 148</value>
   </data>
   <data name="txtID.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -238,7 +238,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 157</value>
+    <value>506, 154</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -262,7 +262,7 @@
     <value>18</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 184</value>
+    <value>562, 181</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -313,7 +313,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 247</value>
+    <value>211, 262</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -367,7 +367,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 187</value>
+    <value>180, 183</value>
   </data>
   <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 17</value>
@@ -418,7 +418,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpCommentDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 182</value>
+    <value>281, 179</value>
   </data>
   <data name="dtpCommentDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -445,7 +445,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>522, 369</value>
+    <value>535, 393</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -475,7 +475,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 369</value>
+    <value>307, 393</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -502,7 +502,7 @@
     <value>NoControl</value>
   </data>
   <data name="picReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 269</value>
+    <value>750, 265</value>
   </data>
   <data name="picReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -532,7 +532,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpReviewDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 191</value>
+    <value>562, 188</value>
   </data>
   <data name="dtpReviewDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -562,7 +562,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 196</value>
+    <value>477, 192</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 17</value>
@@ -616,7 +616,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>562, 154</value>
+    <value>562, 150</value>
   </data>
   <data name="cmbSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -636,6 +636,9 @@
   <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="bsrcSubject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="txtReview.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
@@ -673,7 +676,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 271</value>
+    <value>508, 267</value>
   </data>
   <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>

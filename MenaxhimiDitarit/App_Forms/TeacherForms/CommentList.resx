@@ -184,7 +184,7 @@
     <value>ddMMMMyyyy</value>
   </data>
   <data name="dtpSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 29</value>
+    <value>397, 26</value>
   </data>
   <data name="dtpSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -241,7 +241,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 30</value>
+    <value>19, 31</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
@@ -271,7 +271,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblSelectDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 30</value>
+    <value>323, 30</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 17</value>
@@ -694,7 +694,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 103</value>
+    <value>9, 103</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 25</value>

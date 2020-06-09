@@ -135,7 +135,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     else
                     {
                         Validation.MessageBoxShow("Please select a subject and a day!", "Empty",
-                            "Ju lutemi zgjidhni një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutemi zgjidhni një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

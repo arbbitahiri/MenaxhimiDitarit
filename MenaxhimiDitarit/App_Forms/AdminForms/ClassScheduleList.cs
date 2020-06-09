@@ -15,7 +15,6 @@ using Telerik.WinControls.UI;
 
 namespace MenaxhimiDitarit.AdminForms
 {
-    //todo get(id) select all, view schedule
     public partial class ClassScheduletList : Form
     {
         private readonly ClassScheduleBLL _scheduleBLL;
@@ -177,14 +176,14 @@ namespace MenaxhimiDitarit.AdminForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToExcel(dgvScheduleList, saveFileDialog.FileName, "ClassScheduleList", "ListaEOraritTëKlasës");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -196,14 +195,14 @@ namespace MenaxhimiDitarit.AdminForms
                 saveFileDialog.ShowDialog();
 
                 Validation.ExportToPDF(dgvScheduleList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }));
 
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             thread.Join();
+
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 

@@ -38,7 +38,6 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
 
             DisableTextbox();
             PopulateForm(_class);
-            //PopulateFormXK(_class);
         }
 
         private void DisableTextbox()
@@ -51,7 +50,6 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
             }
         }
 
-        //Popullimi i TextBox-ave me te dhenat nga Class
         private void PopulateForm(Class classes)
         {
             txtMonday1.Text = GetDayTime(classes, "Monday", 1); txtTuesday1.Text = GetDayTime(classes, "Tuesday", 1);
@@ -76,7 +74,6 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
             txtThursday6.Text = GetDayTime(classes, "Thursday", 6); txtFriday6.Text = GetDayTime(classes, "Friday", 6);
         }
 
-        //Marrim emrin e lendes varesisht nga te dhenat e klases, diten dhe oren
         private string GetDayTime(Class classes, string day, int time)
         {
             foreach (var subject in MySubjects)

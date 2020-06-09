@@ -142,8 +142,18 @@ namespace MenaxhimiDitarit.DirectorForms
             if (expireDate < DateTime.Now)
             {
                 Validation.MessageBoxShow("Invalid date. Please select a date that isn't in the past!", "Error",
-                    "Data e pavlefshme. Ju lutemi zgjidhni një datë që nuk është në të kaluarën!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Data e pavlefshme. Ju lutemi zgjidhni një datë që nuk është në të kaluarën!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
         }
 
         #region ErrorProvider
@@ -292,15 +302,5 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
         #endregion
-
-        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validation.NoNumber(e);
-        }
-
-        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validation.NoNumber(e);
-        }
     }
 }

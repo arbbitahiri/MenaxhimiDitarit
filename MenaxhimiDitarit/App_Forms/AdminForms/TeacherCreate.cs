@@ -56,7 +56,6 @@ namespace MenaxhimiDitarit
             rbtnMale.Checked = true;
         }
 
-        //Popullimi i TextBox-ave dhe DateTimePicker me te dhenat nga Teacher
         private void PopulateForm(Teacher teacher)
         {
             txtID.Text = teacher.TeacherID.ToString();
@@ -434,7 +433,7 @@ namespace MenaxhimiDitarit
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
         {
-            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{4}", txtPhoneNo);
+            bool isPhone = Validation.IsValid(@"[0-9]{3}[\)-\..\s]\([0-9]{3}\)[\)-\..\s][0-9]{3}[\)-\..\s][0-9]{3}", txtPhoneNo);
 
             if (txtPhoneNo.Text != null && txtPhoneNo.Text.Length > 8 && isPhone)
             {
@@ -446,15 +445,5 @@ namespace MenaxhimiDitarit
             }
         }
         #endregion
-
-        private void TeacherCreate_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCity_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

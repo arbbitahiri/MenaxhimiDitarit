@@ -34,14 +34,12 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
-        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
             txtUsername.Text = user.UserName;
         }
 
-        //Show/Hide Password
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)

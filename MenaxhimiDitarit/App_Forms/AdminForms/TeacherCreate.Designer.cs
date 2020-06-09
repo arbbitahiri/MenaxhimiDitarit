@@ -145,7 +145,6 @@
             resources.ApplyResources(this.lblCity, "lblCity");
             this.lblCity.ForeColor = System.Drawing.Color.White;
             this.lblCity.Name = "lblCity";
-            this.lblCity.Click += new System.EventHandler(this.lblCity_Click);
             // 
             // panel3
             // 
@@ -378,7 +377,6 @@
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TeacherCreate";
-            this.Load += new System.EventHandler(this.TeacherCreate_Load);
             this.grbGender.ResumeLayout(false);
             this.grbGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).EndInit();

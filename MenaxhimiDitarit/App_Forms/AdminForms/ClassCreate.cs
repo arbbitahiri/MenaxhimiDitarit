@@ -73,7 +73,6 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectRoom.DataSource = MyRooms;
         }
 
-        //Popullimi i TextBox-it dhe ComboBox-ave me te dhenat nga Class
         private void PopulateForm(Class classes)
         {
             txtID.Text = classes.ClassID.ToString();
