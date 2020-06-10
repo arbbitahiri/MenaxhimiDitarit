@@ -12,6 +12,11 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.TeacherForms;
 using MenaxhimiDitarit.DirectorForms;
 using MenaxhimiDitarit.App_Code;
+using Telerik.WinControls;
+using System.Threading;
+using DevExpress.XtraEditors.Drawing;
+using Telerik.WinControls.UI;
+using MenaxhimiDitarit.App_Forms;
 
 namespace MenaxhimiDitarit
 {
@@ -151,6 +156,14 @@ namespace MenaxhimiDitarit
             else if (cmbLanguage.SelectedIndex == 1)
             {
                 TranslateForm.ChangeLanguages("sq-XK");
+            }
+        }
+
+        void SaveData()
+        {
+            for (int i = 0; i <= 500; i++)
+            {
+                Thread.Sleep(10);
             }
         }
     }

@@ -73,6 +73,7 @@
     <Reference Include="Telerik.WinControls.SpellChecker, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
