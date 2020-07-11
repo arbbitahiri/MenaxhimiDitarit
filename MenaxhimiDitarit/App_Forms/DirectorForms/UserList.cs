@@ -37,7 +37,7 @@ namespace MenaxhimiDitarit.DirectorForms
         #region Menu
         private void CustomizeDesign()
         {
-            pnlPrint.Visible = false;
+            pnlUpdate.Visible = false;
         }
 
         private void HideSubMenu()

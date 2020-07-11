@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectorMain));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnReview = new System.Windows.Forms.Button();
+            this.btnRoles = new System.Windows.Forms.Button();
+            this.pnlStaff = new System.Windows.Forms.Panel();
+            this.btnAddAbsenceStaff = new System.Windows.Forms.Button();
+            this.btnListStaff = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnReview = new System.Windows.Forms.Button();
-            this.btnRoles = new System.Windows.Forms.Button();
             this.pnlUsers = new System.Windows.Forms.Panel();
             this.btnAddNUser = new System.Windows.Forms.Button();
             this.btnListUsers = new System.Windows.Forms.Button();
@@ -55,6 +59,7 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
+            this.pnlStaff.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlUsers.SuspendLayout();
             this.pnlTeachers.SuspendLayout();
@@ -68,15 +73,72 @@
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.btnReview);
             this.pnlMain.Controls.Add(this.btnRoles);
+            this.pnlMain.Controls.Add(this.pnlStaff);
+            this.pnlMain.Controls.Add(this.btnStaff);
+            this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlUsers);
             this.pnlMain.Controls.Add(this.btnUsers);
             this.pnlMain.Controls.Add(this.pnlTeachers);
             this.pnlMain.Controls.Add(this.btnTeachers);
             this.pnlMain.Controls.Add(this.pnlPic);
             this.pnlMain.Name = "pnlMain";
+            // 
+            // btnReview
+            // 
+            resources.ApplyResources(this.btnReview, "btnReview");
+            this.btnReview.FlatAppearance.BorderSize = 0;
+            this.btnReview.ForeColor = System.Drawing.Color.White;
+            this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_chat_20;
+            this.btnReview.Name = "btnReview";
+            this.btnReview.UseVisualStyleBackColor = true;
+            // 
+            // btnRoles
+            // 
+            resources.ApplyResources(this.btnRoles, "btnRoles");
+            this.btnRoles.FlatAppearance.BorderSize = 0;
+            this.btnRoles.ForeColor = System.Drawing.Color.White;
+            this.btnRoles.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_people_25;
+            this.btnRoles.Name = "btnRoles";
+            this.btnRoles.UseVisualStyleBackColor = true;
+            // 
+            // pnlStaff
+            // 
+            this.pnlStaff.Controls.Add(this.btnAddAbsenceStaff);
+            this.pnlStaff.Controls.Add(this.btnListStaff);
+            resources.ApplyResources(this.pnlStaff, "pnlStaff");
+            this.pnlStaff.Name = "pnlStaff";
+            // 
+            // btnAddAbsenceStaff
+            // 
+            this.btnAddAbsenceStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddAbsenceStaff, "btnAddAbsenceStaff");
+            this.btnAddAbsenceStaff.FlatAppearance.BorderSize = 0;
+            this.btnAddAbsenceStaff.ForeColor = System.Drawing.Color.White;
+            this.btnAddAbsenceStaff.Name = "btnAddAbsenceStaff";
+            this.btnAddAbsenceStaff.UseVisualStyleBackColor = false;
+            this.btnAddAbsenceStaff.Click += new System.EventHandler(this.btnAddAbsenceStaff_Click);
+            // 
+            // btnListStaff
+            // 
+            this.btnListStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListStaff, "btnListStaff");
+            this.btnListStaff.FlatAppearance.BorderSize = 0;
+            this.btnListStaff.ForeColor = System.Drawing.Color.White;
+            this.btnListStaff.Name = "btnListStaff";
+            this.btnListStaff.UseVisualStyleBackColor = false;
+            this.btnListStaff.Click += new System.EventHandler(this.btnListStaff_Click);
+            // 
+            // btnStaff
+            // 
+            resources.ApplyResources(this.btnStaff, "btnStaff");
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.ForeColor = System.Drawing.Color.White;
+            this.btnStaff.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_staff_25;
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // panel1
             // 
@@ -102,26 +164,6 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnReview
-            // 
-            resources.ApplyResources(this.btnReview, "btnReview");
-            this.btnReview.FlatAppearance.BorderSize = 0;
-            this.btnReview.ForeColor = System.Drawing.Color.White;
-            this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_chat_20;
-            this.btnReview.Name = "btnReview";
-            this.btnReview.UseVisualStyleBackColor = true;
-            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
-            // 
-            // btnRoles
-            // 
-            resources.ApplyResources(this.btnRoles, "btnRoles");
-            this.btnRoles.FlatAppearance.BorderSize = 0;
-            this.btnRoles.ForeColor = System.Drawing.Color.White;
-            this.btnRoles.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_people_25;
-            this.btnRoles.Name = "btnRoles";
-            this.btnRoles.UseVisualStyleBackColor = true;
-            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
             // pnlUsers
             // 
@@ -284,6 +326,7 @@
             this.Name = "DirectorMain";
             this.Shown += new System.EventHandler(this.DirectorMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
+            this.pnlStaff.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlUsers.ResumeLayout(false);
             this.pnlTeachers.ResumeLayout(false);
@@ -306,7 +349,6 @@
         private System.Windows.Forms.Label lblDirector;
         private System.Windows.Forms.Panel pnlTeachers;
         private System.Windows.Forms.Button btnTeachers;
-        private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Panel pnlUsers;
         private System.Windows.Forms.Button btnAddNUser;
         private System.Windows.Forms.Button btnListUsers;
@@ -315,7 +357,6 @@
         private System.Windows.Forms.Button btnListTeachers;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.PictureBox picSchool;
-        private System.Windows.Forms.Button btnReview;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel1;
@@ -325,5 +366,11 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblSDM;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Panel pnlStaff;
+        private System.Windows.Forms.Button btnAddAbsenceStaff;
+        private System.Windows.Forms.Button btnListStaff;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnReview;
+        private System.Windows.Forms.Button btnRoles;
     }
 }

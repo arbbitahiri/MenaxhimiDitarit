@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MenaxhimiDitarit.App_Forms.DirectorForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             pnlTeachers.Visible = false;
             pnlUsers.Visible = false;
+            pnlStaff.Visible = false;
         }
 
         private void HideSubMenu()
@@ -34,6 +36,9 @@ namespace MenaxhimiDitarit.DirectorForms
 
             if (pnlUsers.Visible == true)
                 pnlUsers.Visible = false;
+
+            if (pnlStaff.Visible == true)
+                pnlStaff.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -107,6 +112,27 @@ namespace MenaxhimiDitarit.DirectorForms
             HideSubMenu();
         }
 
+        #endregion
+
+        #region Staff
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlStaff);
+        }
+
+        private void btnListStaff_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new StaffAbsenceList());
+
+            HideSubMenu();
+        }
+
+        private void btnAddAbsenceStaff_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new StaffAbsence());
+
+            HideSubMenu();
+        }
         #endregion
 
         private void btnRoles_Click(object sender, EventArgs e)

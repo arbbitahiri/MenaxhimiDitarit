@@ -200,13 +200,13 @@ namespace MenaxhimiDitarit.DAL
                             MyAbsences = new List<Topic>();
                             while (reader.Read())
                             {
-                                var topic = ToObjectAbsence(reader);
+                                var absence = ToObjectAbsence(reader);
                                 if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
                                 {
-                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
-                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                    absence.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    absence.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
                                 }
-                                MyAbsences.Add(topic);
+                                MyAbsences.Add(absence);
                             }
                         }
                     }
@@ -223,45 +223,45 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
-                var topic = new Topic();
+                var absence = new Topic();
 
                 if (reader["TopicID"] != DBNull.Value)
-                    topic.TopicID = int.Parse(reader["TopicID"].ToString());
+                    absence.TopicID = int.Parse(reader["TopicID"].ToString());
 
                 if (reader["ClassID"] != DBNull.Value)
-                    topic.ClassID = int.Parse(reader["ClassID"].ToString());
+                    absence.ClassID = int.Parse(reader["ClassID"].ToString());
 
                 if (reader["SubjectID"] != DBNull.Value)
-                    topic.SubjectID = int.Parse(reader["SubjectID"].ToString());
+                    absence.SubjectID = int.Parse(reader["SubjectID"].ToString());
 
                 if (reader["Date"] != DBNull.Value)
-                    topic.Date = DateTime.Parse(reader["Date"].ToString());
+                    absence.Date = DateTime.Parse(reader["Date"].ToString());
 
                 if (reader["Time"] != DBNull.Value)
-                    topic.Time = int.Parse(reader["Time"].ToString());
+                    absence.Time = int.Parse(reader["Time"].ToString());
 
                 if (reader["AbsenceReasoning"] != DBNull.Value)
-                    topic.Reasoning = reader["AbsenceReasoning"].ToString();
+                    absence.Reasoning = reader["AbsenceReasoning"].ToString();
 
                 if (reader["NoStudents_Absence"] != DBNull.Value)
-                    topic.NoStudents = int.Parse(reader["NoStudents_Absence"].ToString());
+                    absence.NoStudents = int.Parse(reader["NoStudents_Absence"].ToString());
 
                 if (reader["InsertBy"] != DBNull.Value)
-                    topic.InsertBy = reader["InsertBy"].ToString();
+                    absence.InsertBy = reader["InsertBy"].ToString();
 
                 if (reader["InsertDate"] != DBNull.Value)
-                    topic.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+                    absence.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
 
                 if (reader["LUB"] != DBNull.Value)
-                    topic.LUB = reader["LUB"].ToString();
+                    absence.LUB = reader["LUB"].ToString();
 
                 if (reader["LUD"] != DBNull.Value)
-                    topic.LUD = DateTime.Parse(reader["LUD"].ToString());
+                    absence.LUD = DateTime.Parse(reader["LUD"].ToString());
 
                 if (reader["LUN"] != DBNull.Value)
-                    topic.LUN = int.Parse(reader["LUN"].ToString());
+                    absence.LUN = int.Parse(reader["LUN"].ToString());
 
-                return topic;
+                return absence;
             }
             catch (Exception)
             {
@@ -346,13 +346,13 @@ namespace MenaxhimiDitarit.DAL
                             MyComments = new List<Topic>();
                             while (reader.Read())
                             {
-                                var topic = ToObjectComment(reader);
+                                var comment = ToObjectComment(reader);
                                 if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
                                 {
-                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
-                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                    comment.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    comment.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
                                 }
-                                MyComments.Add(topic);
+                                MyComments.Add(comment);
                             }
                         }
                     }
@@ -380,13 +380,13 @@ namespace MenaxhimiDitarit.DAL
                             MyReviews = new List<Topic>();
                             while (reader.Read())
                             {
-                                var topic = ToObjectComment(reader);
+                                var review = ToObjectComment(reader);
                                 if (reader["Class_No"] != DBNull.Value && reader["Subject_Title"] != DBNull.Value)
                                 {
-                                    topic.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
-                                    topic.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
+                                    review.Class = new Class { ClassNo = int.Parse(reader["Class_No"].ToString()) };
+                                    review.Subject = new Subject { SubjectTitle = reader["Subject_Title"].ToString() };
                                 }
-                                MyReviews.Add(topic);
+                                MyReviews.Add(review);
                             }
                         }
                     }
@@ -403,45 +403,45 @@ namespace MenaxhimiDitarit.DAL
         {
             try
             {
-                var topic = new Topic();
+                var comment = new Topic();
 
                 if (reader["TopicID"] != DBNull.Value)
-                    topic.TopicID = int.Parse(reader["TopicID"].ToString());
+                    comment.TopicID = int.Parse(reader["TopicID"].ToString());
 
                 if (reader["ClassID"] != DBNull.Value)
-                    topic.ClassID = int.Parse(reader["ClassID"].ToString());
+                    comment.ClassID = int.Parse(reader["ClassID"].ToString());
 
                 if (reader["SubjectID"] != DBNull.Value)
-                    topic.SubjectID = int.Parse(reader["SubjectID"].ToString());
+                    comment.SubjectID = int.Parse(reader["SubjectID"].ToString());
 
                 if (reader["Date"] != DBNull.Value)
-                    topic.Date = DateTime.Parse(reader["Date"].ToString());
+                    comment.Date = DateTime.Parse(reader["Date"].ToString());
 
                 if (reader["Time"] != DBNull.Value)
-                    topic.Time = int.Parse(reader["Time"].ToString());
+                    comment.Time = int.Parse(reader["Time"].ToString());
 
                 if (reader["Comment"] != DBNull.Value)
-                    topic.Comment = reader["Comment"].ToString();
+                    comment.Comment = reader["Comment"].ToString();
 
                 if (reader["Review"] != DBNull.Value)
-                    topic.Review = reader["Review"].ToString();
+                    comment.Review = reader["Review"].ToString();
 
                 if (reader["InsertBy"] != DBNull.Value)
-                    topic.InsertBy = reader["InsertBy"].ToString();
+                    comment.InsertBy = reader["InsertBy"].ToString();
 
                 if (reader["InsertDate"] != DBNull.Value)
-                    topic.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+                    comment.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
 
                 if (reader["LUB"] != DBNull.Value)
-                    topic.LUB = reader["LUB"].ToString();
+                    comment.LUB = reader["LUB"].ToString();
 
                 if (reader["LUD"] != DBNull.Value)
-                    topic.LUD = DateTime.Parse(reader["LUD"].ToString());
+                    comment.LUD = DateTime.Parse(reader["LUD"].ToString());
 
                 if (reader["LUN"] != DBNull.Value)
-                    topic.LUN = int.Parse(reader["LUN"].ToString());
+                    comment.LUN = int.Parse(reader["LUN"].ToString());
 
-                return topic;
+                return comment;
             }
             catch (Exception)
             {
@@ -451,35 +451,110 @@ namespace MenaxhimiDitarit.DAL
         }
         #endregion
 
-        public bool UpdateTopic(Topic model)
+        #region Staff Absence
+        public bool AddStaffAbsence(Topic model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Staff_Absence";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "topicID", model.TopicID);
+                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "reasoning", model.StaffAbsenceReasoning);
+                        DataConnection.AddParameter(command, "userID", model.UserID);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
-        public Topic GetTopic(int id)
+        public List<Topic> GetAllStaffAbsence()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Topic> MyAbsences = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Staf_Absence_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            MyAbsences = new List<Topic>();
+                            while (reader.Read())
+                            {
+                                var staffAbsence = ToObjectAbsence(reader);
+                                if (reader["First_Name"] != DBNull.Value && reader["Last_Name"] != DBNull.Value)
+                                {
+                                    staffAbsence.User = new User { FirstName = reader["First_Name"].ToString(), LastName = reader["Last_Name"].ToString() };
+                                }
+                                MyAbsences.Add(staffAbsence);
+                            }
+                        }
+                    }
+                }
+                return MyAbsences;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
-        public bool RemoveAbsence(int id)
+        public Topic ToObjectStaff(SqlDataReader reader)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                var staffAbsence = new Topic();
 
-        public bool UpdateAbsence(Topic model)
-        {
-            throw new NotImplementedException();
-        }
+                if (reader["TopicID"] != DBNull.Value)
+                    staffAbsence.TopicID = int.Parse(reader["TopicID"].ToString());
 
+                if (reader["Date"] != DBNull.Value)
+                    staffAbsence.Date = DateTime.Parse(reader["Date"].ToString());
 
-        public Topic GetAbsence(int id)
-        {
-            throw new NotImplementedException();
-        }
+                if (reader["InsertBy"] != DBNull.Value)
+                    staffAbsence.InsertBy = reader["InsertBy"].ToString();
 
-        public Topic GetComment(int id)
-        {
-            throw new NotImplementedException();
+                if (reader["InsertDate"] != DBNull.Value)
+                    staffAbsence.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+
+                if (reader["LUB"] != DBNull.Value)
+                    staffAbsence.LUB = reader["LUB"].ToString();
+
+                if (reader["LUD"] != DBNull.Value)
+                    staffAbsence.LUD = DateTime.Parse(reader["LUD"].ToString());
+
+                if (reader["LUN"] != DBNull.Value)
+                    staffAbsence.LUN = int.Parse(reader["LUN"].ToString());
+                
+                if (reader["UserID"] != DBNull.Value)
+                    staffAbsence.UserID = int.Parse(reader["UserID"].ToString());
+
+                if (reader["StaffAbsenceReason"] != DBNull.Value)
+                    staffAbsence.StaffAbsenceReasoning = reader["StaffAbsenceReason"].ToString();
+
+                return staffAbsence;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
+        #endregion
     }
 }

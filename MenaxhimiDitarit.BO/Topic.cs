@@ -19,8 +19,11 @@ namespace MenaxhimiDitarit.BO
         public string Comment { get; set; }
         public string Review { get; set; }
         public DateTime ReviewDate { get; set; }
+        public int UserID { get; set; }
+        public string StaffAbsenceReasoning { get; set; }
 
         public virtual Class Class { get; set; }
         public virtual Subject Subject { get; set; }
+        public virtual User User { get; set; }
     }
 }

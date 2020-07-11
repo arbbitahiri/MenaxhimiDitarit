@@ -160,6 +160,18 @@
     <Compile Include="App_Forms\DirectorForms\RoleList.Designer.cs">
       <DependentUpon>RoleList.cs</DependentUpon>
     </Compile>
+    <Compile Include="App_Forms\DirectorForms\StaffAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\StaffAbsence.Designer.cs">
+      <DependentUpon>StaffAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\StaffAbsenceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Forms\DirectorForms\StaffAbsenceList.Designer.cs">
+      <DependentUpon>StaffAbsenceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="App_Forms\DirectorForms\UserCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\RoleList.sq-XK.resx">
       <DependentUpon>RoleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsence.resx">
+      <DependentUpon>StaffAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsenceList.resx">
+      <DependentUpon>StaffAbsenceList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserCreate.resx">
       <DependentUpon>UserCreate.cs</DependentUpon>
@@ -697,6 +715,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-chat-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
