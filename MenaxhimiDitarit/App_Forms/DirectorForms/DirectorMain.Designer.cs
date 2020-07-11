@@ -93,15 +93,17 @@
             this.btnReview.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_chat_20;
             this.btnReview.Name = "btnReview";
             this.btnReview.UseVisualStyleBackColor = true;
+            this.btnReview.Click += new System.EventHandler(this.btnReview_Click_1);
             // 
             // btnRoles
             // 
             resources.ApplyResources(this.btnRoles, "btnRoles");
             this.btnRoles.FlatAppearance.BorderSize = 0;
             this.btnRoles.ForeColor = System.Drawing.Color.White;
-            this.btnRoles.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_people_25;
+            this.btnRoles.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_black_tie_25;
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.UseVisualStyleBackColor = true;
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click_1);
             // 
             // pnlStaff
             // 

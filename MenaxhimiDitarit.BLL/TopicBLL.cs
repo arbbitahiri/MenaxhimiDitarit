@@ -24,16 +24,6 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.AddAbsence(model);
         }
 
-        public bool UpdateAbsence(Topic model)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Topic GetAbsence(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Topic> GetAllAbsence()
         {
             return topicsDAL.GetAllAbsence();
@@ -56,11 +46,6 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.UpdateComment(model);
         }
 
-        public Topic GetComment(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Topic> GetAllComment()
         {
             return topicsDAL.GetAllComment();
@@ -73,24 +58,26 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.AddTopic(model);
         }
 
-        public bool UpdateTopic(Topic model)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool RemoveTopic(int id)
         {
             return topicsDAL.RemoveTopic(id);
         }
 
-        public Topic GetTopic(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Topic> GetAllTopic()
         {
             return topicsDAL.GetAllTopic();
+        }
+        #endregion
+
+        #region Staff Absence
+        public bool AddStaffAbsence(Topic model)
+        {
+            return topicsDAL.AddStaffAbsence(model);
+        }
+
+        public List<Topic> GetAllStaffAbsence()
+        {
+            return topicsDAL.GetAllStaffAbsence();
         }
         #endregion
     }

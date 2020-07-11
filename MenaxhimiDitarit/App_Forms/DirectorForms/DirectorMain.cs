@@ -135,12 +135,12 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        private void btnRoles_Click(object sender, EventArgs e)
+        private void btnRoles_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new RoleList());
         }
 
-        private void btnReview_Click(object sender, EventArgs e)
+        private void btnReview_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new ReviewComment());
         }

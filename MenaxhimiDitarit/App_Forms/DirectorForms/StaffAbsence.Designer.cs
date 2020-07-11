@@ -34,6 +34,7 @@
             this.lblExpireDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cmbStaff = new System.Windows.Forms.ComboBox();
+            this.bsrcUser = new System.Windows.Forms.BindingSource(this.components);
             this.lblRole = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -45,10 +46,9 @@
             this.cmbReasoning = new System.Windows.Forms.ComboBox();
             this.lblReasoning = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bsrcUser = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picStaff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).BeginInit();
             this.SuspendLayout();
             // 
             // picStaff
@@ -61,6 +61,7 @@
             this.picStaff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picStaff.TabIndex = 122;
             this.picStaff.TabStop = false;
+            this.picStaff.MouseHover += new System.EventHandler(this.picStaff_MouseHover);
             // 
             // dtpAbsenceDate
             // 
@@ -106,6 +107,11 @@
             this.cmbStaff.Size = new System.Drawing.Size(181, 25);
             this.cmbStaff.TabIndex = 95;
             this.cmbStaff.ValueMember = "UserID";
+            this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
+            // 
+            // bsrcUser
+            // 
+            this.bsrcUser.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
             // lblRole
             // 
@@ -142,6 +148,7 @@
             this.btnSubmit.TabIndex = 99;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -158,6 +165,7 @@
             this.btnCancel.TabIndex = 100;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblID
             // 
@@ -202,6 +210,7 @@
             this.picReasoning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picReasoning.TabIndex = 126;
             this.picReasoning.TabStop = false;
+            this.picReasoning.MouseHover += new System.EventHandler(this.picReasoning_MouseHover);
             // 
             // cmbReasoning
             // 
@@ -217,6 +226,7 @@
             this.cmbReasoning.Name = "cmbReasoning";
             this.cmbReasoning.Size = new System.Drawing.Size(181, 25);
             this.cmbReasoning.TabIndex = 125;
+            this.cmbReasoning.SelectedIndexChanged += new System.EventHandler(this.cmbReasoning_SelectedIndexChanged);
             // 
             // lblReasoning
             // 
@@ -237,10 +247,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 123;
-            // 
-            // bsrcUser
-            // 
-            this.bsrcUser.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
             // StaffAbsence
             // 
@@ -268,8 +274,8 @@
             this.Name = "StaffAbsence";
             this.Text = "StaffAbsence";
             ((System.ComponentModel.ISupportInitialize)(this.picStaff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -462,7 +462,7 @@ namespace MenaxhimiDitarit.DAL
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         DataConnection.AddParameter(command, "topicID", model.TopicID);
-                        DataConnection.AddParameter(command, "date", model.Date);
+                        DataConnection.AddParameter(command, "absencedate", model.Date);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
@@ -474,9 +474,9 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                string eee = e.Message;
                 return false;
             }
         }
@@ -496,7 +496,7 @@ namespace MenaxhimiDitarit.DAL
                             MyAbsences = new List<Topic>();
                             while (reader.Read())
                             {
-                                var staffAbsence = ToObjectAbsence(reader);
+                                var staffAbsence = ToObjectStaff(reader);
                                 if (reader["First_Name"] != DBNull.Value && reader["Last_Name"] != DBNull.Value)
                                 {
                                     staffAbsence.User = new User { FirstName = reader["First_Name"].ToString(), LastName = reader["Last_Name"].ToString() };
@@ -551,7 +551,6 @@ namespace MenaxhimiDitarit.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

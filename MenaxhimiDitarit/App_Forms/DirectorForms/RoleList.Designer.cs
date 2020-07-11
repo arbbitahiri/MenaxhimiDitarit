@@ -257,7 +257,7 @@
             // 
             // picClass
             // 
-            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_people_100;
+            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_black_tie_100;
             resources.ApplyResources(this.picClass, "picClass");
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;

@@ -149,7 +149,6 @@ namespace MenaxhimiDitarit.TeacherForms
                 Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         #endregion
 
