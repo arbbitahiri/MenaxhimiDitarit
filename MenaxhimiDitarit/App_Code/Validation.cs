@@ -12,7 +12,6 @@ using System.Drawing;
 using Telerik.WinControls;
 using System.Security.Cryptography;
 using System.Collections.Generic;
-using DevExpress.ClipboardSource.SpreadsheetML;
 using System.Linq;
 
 namespace MenaxhimiDitarit.App_Code

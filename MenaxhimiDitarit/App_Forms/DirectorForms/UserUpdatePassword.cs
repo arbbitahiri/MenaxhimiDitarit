@@ -63,7 +63,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     User user = new User();
 
                     user.UserID = int.Parse(txtID.Text);
-                    user.UserPassword = txtPassword.Text;
+                    user.UserPassword = Validation.CalculateHash(txtPassword.Text);
                     user.LUB = UserSession.GetUser.UserName;
                     user.LUN = ++_user.LUN;
                     user.IsPasswordChanged = true;

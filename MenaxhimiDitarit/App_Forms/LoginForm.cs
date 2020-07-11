@@ -14,7 +14,6 @@ using MenaxhimiDitarit.DirectorForms;
 using MenaxhimiDitarit.App_Code;
 using Telerik.WinControls;
 using System.Threading;
-using DevExpress.XtraEditors.Drawing;
 using Telerik.WinControls.UI;
 using MenaxhimiDitarit.App_Forms;
 
@@ -49,6 +48,7 @@ namespace MenaxhimiDitarit
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
+            //string password = txtPassword.Text;
             string password = Validation.CalculateHash(txtPassword.Text);
 
             if (username.Trim() != "" && password != "")
