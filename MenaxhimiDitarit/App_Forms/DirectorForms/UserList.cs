@@ -62,7 +62,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void RefreshList()
         {
-            MyUsers = _usersBLL.GetAll();
+            MyUsers = _usersBLL.GetAllUser();
             dgvUserList.DataSource = MyUsers;
         }
 
@@ -142,7 +142,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
                             if (result == DialogResult.Yes)
                             {
-                                _usersBLL.Remove(user.UserID);
+                                _usersBLL.RemoveUser(user.UserID);
 
                                 Validation.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
                                     $"Përdoruesi: {user.UserName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -185,14 +185,14 @@ namespace MenaxhimiDitarit.DirectorForms
             Validation.InitializePrintDocument(printDocument, "User List", "Lista e Përdoruesve");
         }
 
-        private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex == 4 && e.CellElement.Text != null)
-            {
-                dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
-                e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
-            }
-        }
+        //private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
+        //{
+        //    if (e.ColumnIndex == 4 && e.CellElement.Text != null)
+        //    {
+        //        dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
+        //        e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
+        //    }
+        //}
 
         #region Button
         private void btnViewAllUsers_Click(object sender, EventArgs e)

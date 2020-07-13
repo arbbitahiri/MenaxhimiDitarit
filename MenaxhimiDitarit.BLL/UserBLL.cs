@@ -9,38 +9,47 @@ using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
 {
-    public class UserBLL : IBaseCRUD<User>
+    public class UserBLL : IBaseCRUDUser<User>
     {
-        private UserDAL dal;
+        private UserDAL userDAL;
 
         public UserBLL()
         {
-            dal = new UserDAL();
+            userDAL = new UserDAL();
         }
 
-        public bool Add(User model)
+        #region User
+        public bool AddUser(User model)
         {
-            return dal.Add(model);
+            return userDAL.AddUser(model);
         }
 
-        public User Get(int id)
+        public List<User> GetAllUser()
         {
-            return dal.Get(id);
+            return userDAL.GetAllUser();
         }
 
-        public List<User> GetAll()
+        public bool RemoveUser(int id)
         {
-            return dal.GetAll();
+            return userDAL.RemoveUser(id);
         }
 
-        public bool Remove(int id)
+        public bool UpdateUser(User model)
         {
-            return dal.Remove(id);
+            return userDAL.UpdateUser(model);
+        }
+        #endregion
+
+        #region Staff Absence
+        public bool AddStaffAbsence(User model)
+        {
+            return userDAL.AddStaffAbsence(model);
         }
 
-        public bool Update(User model)
+        public List<User> GetAllStaffAbsence()
         {
-            return dal.Update(model);
+            return userDAL.GetAllStaffAbsence();
         }
+        #endregion
     }
 }

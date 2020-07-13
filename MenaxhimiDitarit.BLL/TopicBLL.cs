@@ -68,17 +68,5 @@ namespace MenaxhimiDitarit.BLL
             return topicsDAL.GetAllTopic();
         }
         #endregion
-
-        #region Staff Absence
-        public bool AddStaffAbsence(Topic model)
-        {
-            return topicsDAL.AddStaffAbsence(model);
-        }
-
-        public List<Topic> GetAllStaffAbsence()
-        {
-            return topicsDAL.GetAllStaffAbsence();
-        }
-        #endregion
     }
 }

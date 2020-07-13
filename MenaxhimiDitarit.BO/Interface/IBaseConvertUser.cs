@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace MenaxhimiDitarit.BO.Interface
 {
-    public interface IBaseConvertTopic<T>
+    public interface IBaseConvertUser<T>
     {
-        T ToObjectTopic(SqlDataReader reader);
-        T ToObjectAbsence(SqlDataReader reader);
-        T ToObjectComment(SqlDataReader reader);
+        T ToObjectUser(SqlDataReader reader);
+        T ToObjectStaff(SqlDataReader reader);
     }
 }

@@ -34,7 +34,6 @@
             this.lblExpireDate = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cmbStaff = new System.Windows.Forms.ComboBox();
-            this.bsrcUser = new System.Windows.Forms.BindingSource(this.components);
             this.lblRole = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -46,9 +45,10 @@
             this.cmbReasoning = new System.Windows.Forms.ComboBox();
             this.lblReasoning = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bsrcUser = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picStaff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).BeginInit();
             this.SuspendLayout();
             // 
             // picStaff
@@ -108,10 +108,6 @@
             this.cmbStaff.TabIndex = 95;
             this.cmbStaff.ValueMember = "UserID";
             this.cmbStaff.SelectedIndexChanged += new System.EventHandler(this.cmbStaff_SelectedIndexChanged);
-            // 
-            // bsrcUser
-            // 
-            this.bsrcUser.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
             // lblRole
             // 
@@ -248,6 +244,10 @@
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 123;
             // 
+            // bsrcUser
+            // 
+            this.bsrcUser.DataSource = typeof(MenaxhimiDitarit.BO.User);
+            // 
             // StaffAbsence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,8 +274,8 @@
             this.Name = "StaffAbsence";
             this.Text = "StaffAbsence";
             ((System.ComponentModel.ISupportInitialize)(this.picStaff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picReasoning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

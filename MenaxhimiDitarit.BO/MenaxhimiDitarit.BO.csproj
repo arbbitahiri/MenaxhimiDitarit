@@ -49,7 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\IBaseConvertTopic.cs" />
+    <Compile Include="Interface\IBaseConvertUser.cs" />
     <Compile Include="Interface\IBaseCRUDTopic.cs" />
+    <Compile Include="Interface\IBaseCRUDUser.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="BaseAuditObject.cs" />
     <Compile Include="Topic.cs" />

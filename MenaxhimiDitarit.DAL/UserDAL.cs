@@ -10,7 +10,7 @@ using MenaxhimiDitarit.BO.Interface;
 
 namespace MenaxhimiDitarit.DAL
 {
-    public class UserDAL : IBaseConvert<User>, IBaseCRUD<User>
+    public class UserDAL : IBaseConvertUser<User>, IBaseCRUDUser<User>
     {
         public User Login(string username, string password)
         {
@@ -28,7 +28,7 @@ namespace MenaxhimiDitarit.DAL
                         {
                             User result = null;
                             while (reader.Read())
-                                result = ToObject(reader);
+                                result = ToObjectUser(reader);
 
                             return result;
                         }
@@ -41,7 +41,8 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public bool Add(User model)
+        #region User
+        public bool AddUser(User model)
         {
             try
             {
@@ -72,7 +73,7 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public List<User> GetAll()
+        public List<User> GetAllUser()
         {
             try
             {
@@ -87,7 +88,7 @@ namespace MenaxhimiDitarit.DAL
                             MyUsers = new List<User>();
                             while (reader.Read())
                             {
-                                var user = ToObject(reader);
+                                var user = ToObjectUser(reader);
                                 if (reader["RoleName"] != DBNull.Value)
                                 {
                                     user.Roles = new Role { RoleName = reader["RoleName"].ToString() };
@@ -106,7 +107,57 @@ namespace MenaxhimiDitarit.DAL
             }
         }
 
-        public User ToObject(SqlDataReader reader)
+        public bool RemoveUser(int id)
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Users_Delete";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "UserID", id);
+
+                        int result = command.ExecuteNonQuery();
+
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateUser(User model)
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_User_ChangePassword";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "userID", model.UserID);
+                        DataConnection.AddParameter(command, "userpass", model.UserPassword);
+                        DataConnection.AddParameter(command, "ispasswordchanged", model.IsPasswordChanged);
+                        DataConnection.AddParameter(command, "lastpasswordchangedate", model.LastPasswordChangeDate);
+                        DataConnection.AddParameter(command, "LUN", model.LUN);
+                        DataConnection.AddParameter(command, "LUB", model.LUB);
+
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public User ToObjectUser(SqlDataReader reader)
         {
             try
             {
@@ -165,60 +216,118 @@ namespace MenaxhimiDitarit.DAL
                 throw;
             }
         }
+        #endregion
 
-        public bool Remove(int id)
+        #region Staff Absence
+        public bool AddStaffAbsence(User model)
         {
             try
             {
                 using (var connection = DataConnection.GetConnection())
                 {
-                    string sqlproc = "dbo.usp_Users_Delete";
+                    string sqlproc = "dbo.usp_Staff_Create_Absence";
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "UserID", id);
-
-                        int result = command.ExecuteNonQuery();
-
-                        return result > 0;
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public bool Update(User model)
-        {
-            try
-            {
-                using (var connection = DataConnection.GetConnection())
-                {
-                    string sqlproc = "dbo.usp_User_ChangePassword";
-                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
-                    {
-                        DataConnection.AddParameter(command, "userID", model.UserID);
-                        DataConnection.AddParameter(command, "userpass", model.UserPassword);
-                        DataConnection.AddParameter(command, "ispasswordchanged", model.IsPasswordChanged);
-                        DataConnection.AddParameter(command, "lastpasswordchangedate", model.LastPasswordChangeDate);
+                        DataConnection.AddParameter(command, "userid", model.UserID);
+                        DataConnection.AddParameter(command, "firstname", model.FirstName);
+                        DataConnection.AddParameter(command, "lastname", model.LastName);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
+                        DataConnection.AddParameter(command, "insertby", model.InsertBy);
+                        DataConnection.AddParameter(command, "absencedate", model.StaffAbsenceDate);
+                        DataConnection.AddParameter(command, "abreasoning", model.StaffAbsenceReasoning);
 
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                string eee = e.Message;
                 return false;
             }
         }
 
-        public User Get(int id)
+        public List<User> GetAllStaffAbsence()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<User> MyStaffAbsences = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    string sqlproc = "dbo.usp_Staff_Absence_ViewAll";
+                    using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            MyStaffAbsences = new List<User>();
+                            while (reader.Read())
+                            {
+                                var staffAbsence = ToObjectStaff(reader);
+                                if (reader["RoleName"] != DBNull.Value)
+                                {
+                                    staffAbsence.Roles = new Role { RoleName = reader["RoleName"].ToString() };
+                                }
+                                MyStaffAbsences.Add(staffAbsence);
+                            }
+                        }
+                    }
+                }
+                return MyStaffAbsences;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
+        public User ToObjectStaff(SqlDataReader reader)
+        {
+            try
+            {
+                var staffAbsence = new User();
+
+                if (reader["UserID"] != DBNull.Value)
+                    staffAbsence.UserID = int.Parse(reader["UserID"].ToString());
+
+                if (reader["RoleID"] != DBNull.Value)
+                    user.RoleID = int.Parse(reader["RoleID"].ToString());
+
+                if (reader["InsertBy"] != DBNull.Value)
+                    staffAbsence.InsertBy = reader["InsertBy"].ToString();
+
+                if (reader["InsertDate"] != DBNull.Value)
+                    staffAbsence.InsertDate = DateTime.Parse(reader["InsertDate"].ToString());
+
+                if (reader["LUB"] != DBNull.Value)
+                    staffAbsence.LUB = reader["LUB"].ToString();
+
+                if (reader["LUD"] != DBNull.Value)
+                    staffAbsence.LUD = DateTime.Parse(reader["LUD"].ToString());
+
+                if (reader["LUN"] != DBNull.Value)
+                    staffAbsence.LUN = int.Parse(reader["LUN"].ToString());
+
+                if (reader["First_Name"] != DBNull.Value)
+                    staffAbsence.FirstName = reader["First_Name"].ToString();
+
+                if (reader["Last_Name"] != DBNull.Value)
+                    staffAbsence.LastName = reader["Last_Name"].ToString();
+
+                if (reader["AbsenceDate"] != DBNull.Value)
+                    staffAbsence.StaffAbsenceDate = DateTime.Parse(reader["AbsenceDate"].ToString());
+
+                if (reader["AbsenceReasoning"] != DBNull.Value)
+                    staffAbsence.StaffAbsenceReasoning = reader["AbsenceReasoning"].ToString();
+
+                return staffAbsence;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
     }
 }

@@ -93,7 +93,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                             LUN = ++_user.LUN
                         };
 
-                        bool isUpdated = _userBLL.Add(user);
+                        bool isUpdated = _userBLL.AddUser(user);
 
                         if (isUpdated)
                         {

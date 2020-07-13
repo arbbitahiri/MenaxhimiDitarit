@@ -15,9 +15,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 {
     public partial class StaffAbsence : Form
     {
-        private readonly TopicBLL _staffAbsenceBLL;
-        private Topic _staffAbsence;
-        private List<Topic> MyStaffAbsences;
+        private readonly UserBLL _staffAbsenceBLL;
+        private User _staffAbsence;
+        private List<User> MyStaffAbsences;
 
         private bool update = false;
 
@@ -28,28 +28,28 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             InitializeComponent();
 
-            _staffAbsenceBLL = new TopicBLL();
+            _staffAbsenceBLL = new UserBLL();
             _userBLL = new UserBLL();
 
             update = false;
 
             MyStaffAbsences = _staffAbsenceBLL.GetAllStaffAbsence();
-            MyUsers = _userBLL.GetAll();
+            MyUsers = _userBLL.GetAllUser();
 
             cmbStaff.DataSource = MyUsers;
 
             CustomizeDesign();
         }
 
-        public StaffAbsence(Topic staffAbsence)
+        public StaffAbsence(User staffAbsence)
         {
             InitializeComponent();
 
-            _staffAbsenceBLL = new TopicBLL();
+            _staffAbsenceBLL = new UserBLL();
             _userBLL = new UserBLL();
 
             MyStaffAbsences = _staffAbsenceBLL.GetAllStaffAbsence();
-            MyUsers = _userBLL.GetAll();
+            MyUsers = _userBLL.GetAllUser();
 
             _staffAbsence = staffAbsence;
 
@@ -66,11 +66,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dtpAbsenceDate.Enabled = false;
         }
 
-        private void PopulateForm(Topic staffAbsence)
+        private void PopulateForm(User staffAbsence)
         {
-            txtID.Text = staffAbsence.TopicID.ToString();
+            txtID.Text = staffAbsence.UserID.ToString();
             cmbStaff.SelectedItem = MyUsers.FirstOrDefault(f => f.UserID == staffAbsence.UserID);
-            dtpAbsenceDate.Value = staffAbsence.Date;
+            dtpAbsenceDate.Value = staffAbsence.StaffAbsenceDate;
         }
         #endregion
 
@@ -78,12 +78,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             try
             {
-                Topic staffAbsence = new Topic
+                User staffAbsence = new User
                 {
-                    TopicID = int.Parse(txtID.Text),
-                    UserID = Convert.ToInt32(cmbStaff.SelectedValue.ToString()),
+                    UserID = int.Parse(txtID.Text),
                     StaffAbsenceReasoning = cmbReasoning.SelectedItem.ToString(),
-                    Date = dtpAbsenceDate.Value,
+                    StaffAbsenceDate = dtpAbsenceDate.Value,
                     InsertBy = UserSession.GetUser.UserName,
                     LUB = UserSession.GetUser.UserName
                 };
@@ -94,7 +93,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     staffAbsence.LUN = ++_staffAbsence.LUN;
 
                 var checkStaffAbsence = MyStaffAbsences.Where(t => t.UserID == Convert.ToInt32(cmbStaff.SelectedValue.ToString())
-                && t.Date == DateTime.Parse(dtpAbsenceDate.Value.ToShortDateString())).ToList();
+                && t.StaffAbsenceDate == DateTime.Parse(dtpAbsenceDate.Value.ToShortDateString())).ToList();
 
                 if (checkStaffAbsence.Count > 0)
                 {

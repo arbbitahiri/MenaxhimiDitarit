@@ -17,8 +17,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 {
     public partial class StaffAbsenceList : Form
     {
-        private readonly TopicBLL _staffAbsenceBLL;
-        private List<Topic> MyStaffAbsences;
+        private readonly UserBLL _staffAbsenceBLL;
+        private List<User> MyStaffAbsences;
 
         private readonly UserBLL _userBLL;
         private List<User> MyUsers;
@@ -27,10 +27,10 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             InitializeComponent();
 
-            _staffAbsenceBLL = new TopicBLL();
+            _staffAbsenceBLL = new UserBLL();
             _userBLL = new UserBLL();
 
-            MyUsers = _userBLL.GetAll();
+            MyUsers = _userBLL.GetAllUser();
         }
 
         #region Metodat
@@ -40,15 +40,17 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dgvStaffAbsenceList.DataSource = MyStaffAbsences;
         }
 
-        private Topic GetStaffAbsence(GridViewRowInfo staffAbsenceRow)
+        private User GetStaffAbsence(GridViewRowInfo staffAbsenceRow)
         {
             try
             {
-                Topic staffAbsence = new Topic
+                User staffAbsence = new User
                 {
-                    TopicID = (int)staffAbsenceRow.Cells["TopicID"].Value,
-                    Date = (DateTime)staffAbsenceRow.Cells["Date"].Value,
                     UserID = (int)staffAbsenceRow.Cells["UserID"].Value,
+                    FirstName = (string)staffAbsenceRow.Cells["FirstName"].Value,
+                    LastName = (string)staffAbsenceRow.Cells["LastName"].Value,
+                    RoleID = (int)staffAbsenceRow.Cells["RoleID"].Value,
+                    StaffAbsenceDate = (DateTime)staffAbsenceRow.Cells["StaffAbsenceDate"].Value,
                     StaffAbsenceReasoning = (string)staffAbsenceRow.Cells["StaffAbsenceReasoning"].Value,
                     InsertBy = (string)staffAbsenceRow.Cells["InsertBy"].Value,
                     InsertDate = (DateTime)staffAbsenceRow.Cells["InsertDate"].Value,
@@ -110,7 +112,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 {
                     if (txtSearchName.Text.Trim().Length > 0)
                     {
-                        var findStaffAbsence = MyUsers.Where(f => f.FirstName.Contains(txtSearchName.Text) && f.LastName.Contains(txtSearchName.Text)).ToList();
+                        var findStaffAbsence = MyUsers.Where(f => f.FirstName.Contains(txtSearchName.Text) && f.LastName.Contains(txtSearchName.Text)
+                        && f.FullName.Contains(txtSearchName.Text)).ToList();
 
                         dgvStaffAbsenceList.DataSource = findStaffAbsence;
                     }
@@ -202,9 +205,24 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         #endregion
 
-        private void txtSearchName_TextChanged(object sender, EventArgs e)
+        #region Search Textbox
+        private void txtSearchName_Click(object sender, EventArgs e)
         {
-
+            txtSearchName.Text = "";
         }
+
+        private void txtSearchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearchTeachers_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtSearchName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
     }
 }
