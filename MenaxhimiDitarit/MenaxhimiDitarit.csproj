@@ -366,7 +366,13 @@
     <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsence.resx">
       <DependentUpon>StaffAbsence.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsence.sq-XK.resx">
+      <DependentUpon>StaffAbsence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsenceList.resx">
+      <DependentUpon>StaffAbsenceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Forms\DirectorForms\StaffAbsenceList.sq-XK.resx">
       <DependentUpon>StaffAbsenceList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App_Forms\DirectorForms\UserCreate.resx">
@@ -730,6 +736,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-black-tie-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -119,43 +119,49 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblMonday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 13</value>
+    <value>86, 13</value>
   </data>
   <data name="lblMonday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
+    <value>58, 21</value>
   </data>
   <data name="lblMonday.Text" xml:space="preserve">
     <value>E Hënë</value>
   </data>
+  <data name="lbl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 65</value>
+  </data>
   <data name="lblTuesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 13</value>
+    <value>209, 13</value>
   </data>
   <data name="lblTuesday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+    <value>63, 21</value>
   </data>
   <data name="lblTuesday.Text" xml:space="preserve">
     <value>E Martë</value>
   </data>
   <data name="lblWednesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>324, 13</value>
+    <value>325, 13</value>
   </data>
   <data name="lblWednesday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 20</value>
+    <value>81, 21</value>
   </data>
   <data name="lblWednesday.Text" xml:space="preserve">
     <value>E Mërkurë</value>
   </data>
+  <data name="lblThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 13</value>
+  </data>
   <data name="lblThursday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+    <value>56, 21</value>
   </data>
   <data name="lblThursday.Text" xml:space="preserve">
     <value>E Enjte</value>
   </data>
   <data name="lblFriday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>578, 13</value>
+    <value>574, 13</value>
   </data>
   <data name="lblFriday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+    <value>72, 21</value>
   </data>
   <data name="lblFriday.Text" xml:space="preserve">
     <value>E Premte</value>

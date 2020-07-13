@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 24</value>
+    <value>119, 25</value>
   </data>
   <data name="lblAdmin.Text" xml:space="preserve">
     <value>Administrata</value>
@@ -170,16 +170,16 @@
     <value>Lëndët</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 327</value>
+    <value>287, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 31</value>
+    <value>377, 37</value>
   </data>
   <data name="lblSDM.Text" xml:space="preserve">
     <value>Menaxhimi i Ditarit të Shkollës</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
+    <value>74, 17</value>
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Përdoruesi:</value>
@@ -188,7 +188,7 @@
     <value>1000, 566</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 16</value>
+    <value>75, 17</value>
   </data>
   <data name="lblWelcome.Text" xml:space="preserve">
     <value>Mirë se vini</value>

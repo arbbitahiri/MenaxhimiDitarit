@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -97,7 +93,7 @@ namespace MenaxhimiDitarit
             Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
         }
 
-        #region Button
+        #region Buttons
         private void btnViewAllTeachers_Click(object sender, EventArgs e)
         {
             RefreshList();

@@ -117,104 +117,89 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Printo</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Përditëso</value>
+  </data>
+  <data name="btnAddTeacher.Text" xml:space="preserve">
+    <value>Shto Mungesë</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 242</value>
+  <data name="lblStaff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 25</value>
   </data>
-  <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 174</value>
+  <data name="lblStaff.Text" xml:space="preserve">
+    <value>Stafi</value>
   </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 197</value>
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+    <value>Përdoruesi ID</value>
   </data>
-  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 173</value>
+  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+    <value>Emri</value>
   </data>
-  <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>510, 180</value>
+  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
+    <value>Mbiemri</value>
   </data>
-  <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
+  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
+    <value>UserName</value>
   </data>
-  <data name="lblRoomNo.Text" xml:space="preserve">
-    <value>Lënda</value>
+  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>UserPassword</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 206</value>
+  <data name="gridViewDateTimeColumn7.HeaderText" xml:space="preserve">
+    <value>ExpiresDate</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 355</value>
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+    <value>RoleID</value>
   </data>
-  <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 287</value>
+  <data name="gridViewDateTimeColumn8.HeaderText" xml:space="preserve">
+    <value>LastLoginDate</value>
   </data>
-  <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 17</value>
+  <data name="gridViewDateTimeColumn9.HeaderText" xml:space="preserve">
+    <value>LastPasswordChangeDate</value>
   </data>
-  <data name="lblComment.Text" xml:space="preserve">
-    <value>Vërejtja</value>
+  <data name="gridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
+    <value>IsPasswordChanged</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 352</value>
+  <data name="gridViewDateTimeColumn10.HeaderText" xml:space="preserve">
+    <value>Data e Mungesës</value>
   </data>
-  <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 208</value>
+  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
+    <value>Arsyeja e Mungesës</value>
   </data>
-  <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 17</value>
+  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
+    <value>Roli</value>
   </data>
-  <data name="lblDay.Text" xml:space="preserve">
-    <value>Dita</value>
+  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
+    <value>FullName</value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 235</value>
+  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>InsertBy</value>
   </data>
-  <data name="dtpCommentDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 204</value>
+  <data name="gridViewDateTimeColumn11.HeaderText" xml:space="preserve">
+    <value>InsertDate</value>
   </data>
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>507, 390</value>
+  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
+    <value>LUB</value>
   </data>
-  <data name="btnSubmit.Text" xml:space="preserve">
-    <value>Ruaj</value>
+  <data name="gridViewDateTimeColumn12.HeaderText" xml:space="preserve">
+    <value>LUD</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 390</value>
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+    <value>LUN</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Anulo</value>
+  <data name="grbSearch.Text" xml:space="preserve">
+    <value>Kërko stafin</value>
   </data>
-  <data name="picReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 290</value>
+  <data name="btnSearchTeachers.Text" xml:space="preserve">
+    <value>Kërko</value>
   </data>
-  <data name="dtpReviewDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 213</value>
+  <data name="btnViewAll.Text" xml:space="preserve">
+    <value>Shiko të gjitha</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 217</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 17</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Dita e Shyrtimit</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 244</value>
-  </data>
-  <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 176</value>
-  </data>
-  <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 251</value>
-  </data>
-  <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 292</value>
-  </data>
-  <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 17</value>
-  </data>
-  <data name="lblReview.Text" xml:space="preserve">
-    <value>Shqyrtimi</value>
+  <data name="txtSearchName.Text" xml:space="preserve">
+    <value>Kërko sipas emrit ose mbiemrit...</value>
   </data>
 </root>

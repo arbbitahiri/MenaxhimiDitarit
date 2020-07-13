@@ -283,6 +283,26 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_inspection_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-inspection-20", resourceCulture);

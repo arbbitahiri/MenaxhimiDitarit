@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.BO;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.TeacherForms;
 using MenaxhimiDitarit.DirectorForms;
 using MenaxhimiDitarit.App_Code;
-using Telerik.WinControls;
 using System.Threading;
-using Telerik.WinControls.UI;
-using MenaxhimiDitarit.App_Forms;
 
 namespace MenaxhimiDitarit
 {
@@ -29,6 +19,7 @@ namespace MenaxhimiDitarit
             btnLogin.Enabled = false;
         }
 
+        #region TextBox
         private void txtUsername_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
@@ -40,6 +31,28 @@ namespace MenaxhimiDitarit
             txtPassword.UseSystemPasswordChar = true;
         }
 
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "")
+            {
+                btnLogin.Enabled = true;
+            }
+            else
+            {
+                btnLogin.Enabled = false;
+            }
+        }
+        #endregion
+
+        #region Buttons
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -113,6 +126,7 @@ namespace MenaxhimiDitarit
                     "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
 
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -127,26 +141,6 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin_Click(this, new EventArgs());
-            }
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            if (txtPassword.Text != "")
-            {
-                btnLogin.Enabled = true;
-            }
-            else
-            {
-                btnLogin.Enabled = false;
-            }
-        }
-
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbLanguage.SelectedIndex == 0)
@@ -156,14 +150,6 @@ namespace MenaxhimiDitarit
             else if (cmbLanguage.SelectedIndex == 1)
             {
                 TranslateForm.ChangeLanguages("sq-XK");
-            }
-        }
-
-        void SaveData()
-        {
-            for (int i = 0; i <= 500; i++)
-            {
-                Thread.Sleep(10);
             }
         }
     }

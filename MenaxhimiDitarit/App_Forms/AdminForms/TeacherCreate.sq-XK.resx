@@ -148,12 +148,6 @@
   <data name="lblLastName.Text" xml:space="preserve">
     <value>Mbiemri</value>
   </data>
-  <data name="grbGender.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 185</value>
-  </data>
-  <data name="grbGender.Text" xml:space="preserve">
-    <value>Gjinia</value>
-  </data>
   <data name="rbtnFemale.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 21</value>
   </data>
@@ -165,6 +159,12 @@
   </data>
   <data name="rbtnMale.Text" xml:space="preserve">
     <value>Mashkull</value>
+  </data>
+  <data name="grbGender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 185</value>
+  </data>
+  <data name="grbGender.Text" xml:space="preserve">
+    <value>Gjinia</value>
   </data>
   <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
     <value>381, 253</value>

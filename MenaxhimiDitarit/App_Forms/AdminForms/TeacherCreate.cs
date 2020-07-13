@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
-using System.Threading;
 using MenaxhimiDitarit.App_Code;
 
 namespace MenaxhimiDitarit

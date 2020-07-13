@@ -3,12 +3,8 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MenaxhimiDitarit.TeacherForms
@@ -92,6 +88,7 @@ namespace MenaxhimiDitarit.TeacherForms
         }
         #endregion
 
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -200,6 +197,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 this.Close();
             }
         }
+        #endregion
 
         #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)

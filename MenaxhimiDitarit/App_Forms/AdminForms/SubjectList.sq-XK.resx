@@ -152,19 +152,22 @@
         4ULGD2hqR3KbXED4bdiZwpz7BnQKWLjMK3COAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+  <data name="dgvSubjectList.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>LëndaID</value>
   </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Lënda</value>
   </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Libri</value>
   </data>
-  <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Autori i Librit</value>
   </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Arsimtari</value>
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
@@ -183,7 +186,7 @@
     <value>1, 103</value>
   </data>
   <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 24</value>
+    <value>140, 25</value>
   </data>
   <data name="lblSubject.Text" xml:space="preserve">
     <value>Lista e Lëndëve</value>

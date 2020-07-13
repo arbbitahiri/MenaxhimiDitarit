@@ -172,9 +172,6 @@
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
     <value>Ditëlindja</value>
   </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>Email</value>
-  </data>
   <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
     <value>Nr Telefonit</value>
   </data>
@@ -191,7 +188,7 @@
     <value>26, 103</value>
   </data>
   <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
+    <value>99, 25</value>
   </data>
   <data name="lblTeacher.Text" xml:space="preserve">
     <value>Arsimtarët</value>

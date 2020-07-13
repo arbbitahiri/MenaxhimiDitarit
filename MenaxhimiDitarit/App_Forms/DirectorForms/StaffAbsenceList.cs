@@ -3,13 +3,9 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
@@ -99,6 +95,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             Validation.InitializePrintDocument(printDocument, "Staff Absence List", "Lista e Mungesës të Stafit");
         }
 
+        #region Buttons
         private void btnViewAll_Click(object sender, EventArgs e)
         {
             RefreshList();
@@ -135,6 +132,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

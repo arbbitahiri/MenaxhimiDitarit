@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -52,6 +48,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -134,6 +131,7 @@ namespace MenaxhimiDitarit.DirectorForms
                 this.Close();
             }
         }
+        #endregion
 
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {

@@ -119,46 +119,46 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 254</value>
+    <value>322, 239</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 16</value>
+    <value>99, 17</value>
   </data>
   <data name="lblExpireDate.Text" xml:space="preserve">
     <value>Data e Skadimit</value>
   </data>
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 285</value>
+    <value>391, 277</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 16</value>
+    <value>30, 17</value>
   </data>
   <data name="lblRole.Text" xml:space="preserve">
     <value>Roli</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 221</value>
+    <value>365, 205</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
+    <value>57, 17</value>
   </data>
   <data name="lblLastName.Text" xml:space="preserve">
     <value>Mbiemri</value>
   </data>
   <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 193</value>
+    <value>388, 174</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 16</value>
+    <value>34, 17</value>
   </data>
   <data name="lblFirstName.Text" xml:space="preserve">
     <value>Emri</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 319</value>
+    <value>351, 312</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 16</value>
+    <value>71, 17</value>
   </data>
   <data name="lblUsername.Text" xml:space="preserve">
     <value>Përdoruesi</value>

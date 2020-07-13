@@ -123,11 +123,20 @@
   <data name="btnRoles.Text" xml:space="preserve">
     <value>Rolet</value>
   </data>
+  <data name="btnStaff.Text" xml:space="preserve">
+    <value>Mungesat e Stafit</value>
+  </data>
   <data name="btnUsers.Text" xml:space="preserve">
     <value>Përdoruesit</value>
   </data>
   <data name="btnTeachers.Text" xml:space="preserve">
     <value>Arsimtarët</value>
+  </data>
+  <data name="btnAddAbsenceStaff.Text" xml:space="preserve">
+    <value>Shto Mungesë</value>
+  </data>
+  <data name="btnListStaff.Text" xml:space="preserve">
+    <value>Lista e Mungesave</value>
   </data>
   <data name="btnAddNUser.Text" xml:space="preserve">
     <value>Shto Përdoruesin</value>
@@ -143,22 +152,22 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblDirector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>76, 25</value>
   </data>
   <data name="lblDirector.Text" xml:space="preserve">
     <value>Drejtori</value>
   </data>
   <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 327</value>
+    <value>287, 327</value>
   </data>
   <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 31</value>
+    <value>377, 37</value>
   </data>
   <data name="lblSDM.Text" xml:space="preserve">
     <value>Menaxhimi i Ditarit të Shkollës</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
+    <value>74, 17</value>
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Përdoruesi:</value>
@@ -167,7 +176,7 @@
     <value>1004, 566</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 16</value>
+    <value>78, 17</value>
   </data>
   <data name="lblWelcome.Text" xml:space="preserve">
     <value>Mirë se vini:</value>

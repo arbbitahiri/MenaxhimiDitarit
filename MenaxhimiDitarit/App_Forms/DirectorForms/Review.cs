@@ -3,12 +3,7 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MenaxhimiDitarit.App_Forms.DirectorForms
@@ -47,6 +42,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_review);
         }
 
+        #region Metodat
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -64,7 +60,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dtpCommentDay.Value = review.Date;
             txtComment.Text = review.Comment;
         }
+        #endregion
 
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -123,6 +121,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 this.Close();
             }
         }
+        #endregion
 
         #region ErrorProvider
         private void picReview_MouseHover(object sender, EventArgs e)

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -80,7 +76,6 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
-        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(Topic topic)
         {
             txtID.Text = topic.TopicID.ToString();
@@ -92,6 +87,7 @@ namespace MenaxhimiDitarit.TeacherForms
         }
         #endregion
 
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -115,7 +111,6 @@ namespace MenaxhimiDitarit.TeacherForms
                     else if (update)
                         topic.LUN = ++_topics.LUN;
 
-                    //Shikojme nese Tema per klasen, lenden, oren dhe diten ekziston ne Orar
                     var checkSchedule = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                     && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
                     && t.Day == dtpSelectDate.Value.DayOfWeek.ToString()).ToList();
@@ -201,6 +196,7 @@ namespace MenaxhimiDitarit.TeacherForms
                 this.Close();
             }
         }
+        #endregion
 
         #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)

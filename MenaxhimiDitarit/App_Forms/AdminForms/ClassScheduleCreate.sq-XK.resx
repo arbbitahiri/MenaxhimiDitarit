@@ -128,10 +128,10 @@
     <value>421, 176</value>
   </data>
   <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 254</value>
+    <value>338, 255</value>
   </data>
   <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
+    <value>77, 17</value>
   </data>
   <data name="lblTime.Text" xml:space="preserve">
     <value>Zgjidh Orën</value>
@@ -148,17 +148,20 @@
   <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 149</value>
   </data>
+  <data name="lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 217</value>
+  </data>
   <data name="lblSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 16</value>
+    <value>90, 17</value>
   </data>
   <data name="lblSubject.Text" xml:space="preserve">
     <value>Zgjidh Lëndën</value>
   </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 179</value>
+    <value>329, 180</value>
   </data>
   <data name="lblClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
+    <value>86, 17</value>
   </data>
   <data name="lblClass.Text" xml:space="preserve">
     <value>Zgjidh Klasën</value>
@@ -173,31 +176,31 @@
     <value>421, 288</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>383, 291</value>
+    <value>384, 292</value>
   </data>
   <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 16</value>
+    <value>31, 17</value>
   </data>
   <data name="lblDate.Text" xml:space="preserve">
     <value>Dita</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 318</value>
+    <value>421, 319</value>
   </data>
   <data name="lblYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>389, 325</value>
+    <value>389, 327</value>
   </data>
   <data name="lblYear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 16</value>
+    <value>26, 17</value>
   </data>
   <data name="lblYear.Text" xml:space="preserve">
     <value>Viti</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 345</value>
+    <value>421, 350</value>
   </data>
   <data name="txtYear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>421, 325</value>
+    <value>421, 326</value>
   </data>
   <data name="btnSubmitClass.Text" xml:space="preserve">
     <value>Ruaj</value>

@@ -294,7 +294,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblMonday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 13</value>
+    <value>82, 13</value>
   </data>
   <data name="lblMonday.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 21</value>
@@ -328,7 +328,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 67</value>
+    <value>15, 65</value>
   </data>
   <data name="lbl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 32</value>
@@ -571,7 +571,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblTuesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 13</value>
+    <value>207, 13</value>
   </data>
   <data name="lblTuesday.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 21</value>
@@ -601,7 +601,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblWednesday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 13</value>
+    <value>320, 13</value>
   </data>
   <data name="lblWednesday.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 21</value>
@@ -631,7 +631,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblThursday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 13</value>
+    <value>451, 13</value>
   </data>
   <data name="lblThursday.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 21</value>
@@ -682,7 +682,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="lblFriday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>586, 13</value>
+    <value>584, 13</value>
   </data>
   <data name="lblFriday.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 21</value>

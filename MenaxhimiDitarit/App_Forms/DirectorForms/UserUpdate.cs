@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -38,8 +33,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
-        #region Metodat
-        //Popullimi i TextBox-ave dhe ComboBox-ave me te dhenat nga Topic
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
@@ -50,22 +43,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
-        //Shikojme nese TextBox-at jane te mbushur me te dhena
-        private bool CheckTextbox()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox)
-                {
-                    TextBox txtb = ctrl as TextBox;
-                    if (txtb.Text == string.Empty)
-                        return false;
-                }
-            }
-            return true;
-        }
-        #endregion
-
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -136,6 +114,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 this.Close();
             }
         }
+        #endregion
 
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {

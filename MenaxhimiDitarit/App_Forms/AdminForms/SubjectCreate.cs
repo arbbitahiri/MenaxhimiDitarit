@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -55,13 +51,11 @@ namespace MenaxhimiDitarit
 
             update = _subject != null;
 
-            txtSubjectTitle.Enabled = false;
-
             PopulateForm(_subject);
 
             cmbTeacher.DataSource = MyTeachers;
-
             txtID.Enabled = false;
+            txtSubjectTitle.Enabled = false;
         }
 
         private void PopulateForm(Subject subject)
@@ -73,6 +67,7 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
+        #region Buttons
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -164,6 +159,7 @@ namespace MenaxhimiDitarit
                 this.Close();
             }
         }
+        #endregion
 
         private void txtBookAuthor_KeyPress(object sender, KeyPressEventArgs e)
         {

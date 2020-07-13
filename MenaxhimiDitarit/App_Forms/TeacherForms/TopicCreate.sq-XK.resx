@@ -125,49 +125,46 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 229</value>
+    <value>330, 218</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
+    <value>86, 17</value>
   </data>
   <data name="lblSelectDate.Text" xml:space="preserve">
     <value>Zgjedh Datën</value>
   </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 328</value>
+    <value>346, 320</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 16</value>
+    <value>70, 17</value>
   </data>
   <data name="lblContent.Text" xml:space="preserve">
     <value>Përmbajtja</value>
   </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>318, 193</value>
+    <value>322, 180</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 16</value>
+    <value>94, 17</value>
   </data>
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Zgjedh Lëndën</value>
   </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 156</value>
+    <value>326, 142</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+    <value>90, 17</value>
   </data>
   <data name="lblSelectClass.Text" xml:space="preserve">
     <value>Zgjedh Klasën</value>
   </data>
-  <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>341, 265</value>
-  </data>
-  <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 16</value>
-  </data>
   <data name="lblSelectTime.Text" xml:space="preserve">
     <value>Zgjedh Ora</value>
+  </data>
+  <data name="picSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>609, 178</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
