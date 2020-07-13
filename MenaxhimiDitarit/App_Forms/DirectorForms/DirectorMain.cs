@@ -15,6 +15,9 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods for Panels
+        /// <summary>
+        /// Hides all the panels in Menu
+        /// </summary>
         private void CustomizeDesign()
         {
             pnlTeachers.Visible = false;
@@ -22,6 +25,9 @@ namespace MenaxhimiDitarit.DirectorForms
             pnlStaff.Visible = false;
         }
 
+        /// <summary>
+        /// Hides other submenu in Menu when it's button is clicked
+        /// </summary>
         private void HideSubMenu()
         {
             if (pnlTeachers.Visible == true)
@@ -34,6 +40,10 @@ namespace MenaxhimiDitarit.DirectorForms
                 pnlStaff.Visible = false;
         }
 
+        /// <summary>
+        /// Shows the submenu when the button is clicked
+        /// </summary>
+        /// <param name="subMenu">The panel we want to show</param>
         private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -45,6 +55,10 @@ namespace MenaxhimiDitarit.DirectorForms
                 subMenu.Visible = false;
         }
 
+        /// <summary>
+        /// Opens the form in the panel on the right
+        /// </summary>
+        /// <param name="childForm"></param>
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)

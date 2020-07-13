@@ -43,6 +43,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables textbox and datetimepicker, and gets data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -53,6 +56,10 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="review"></param>
         private void PopulateForm(Topic review)
         {
             txtID.Text = review.TopicID.ToString();
@@ -61,6 +68,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             txtComment.Text = review.Comment;
         }
 
+        /// <summary>
+        /// Creates or updates the review, depending on ID
+        /// </summary>
         private void CreateReview()
         {
             try
@@ -104,6 +114,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

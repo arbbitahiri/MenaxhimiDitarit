@@ -56,12 +56,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables txtID and dtpAbsenceDate (textbox and datetimepicker)
+        /// </summary>
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
             dtpAbsenceDate.Enabled = false;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="staffAbsence"></param>
         private void PopulateForm(User staffAbsence)
         {
             txtID.Text = staffAbsence.UserID.ToString();
@@ -69,6 +76,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dtpAbsenceDate.Value = staffAbsence.StaffAbsenceDate;
         }
 
+        /// <summary>
+        /// Creates or updates the absence of staff, depending on ID
+        /// </summary>
         private void CreateStaffAbsence()
         {
             try
@@ -141,6 +151,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

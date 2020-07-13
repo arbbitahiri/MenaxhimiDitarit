@@ -68,6 +68,9 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables textbox and datetimepicker, and gets data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             dtpSelectDate.Enabled = false;
@@ -76,6 +79,10 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="topic"></param>
         private void PopulateForm(Topic topic)
         {
             txtID.Text = topic.TopicID.ToString();
@@ -86,6 +93,9 @@ namespace MenaxhimiDitarit.TeacherForms
             txtContent.Text = topic.Content;
         }
 
+        /// <summary>
+        /// Creates or updates the topic, depending on ID
+        /// </summary>
         private void CreateTopic()
         {
             try
@@ -179,6 +189,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

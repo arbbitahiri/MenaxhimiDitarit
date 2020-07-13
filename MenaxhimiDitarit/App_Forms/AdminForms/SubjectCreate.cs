@@ -59,6 +59,10 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="subject"></param>
         private void PopulateForm(Subject subject)
         {
             txtID.Text = subject.SubjectID.ToString();
@@ -68,6 +72,9 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
+        /// <summary>
+        /// Creates or updates the subject, depending on ID
+        /// </summary>
         private void CreateSubject()
         {
             try
@@ -144,6 +151,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Closes the form depending on if we want
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

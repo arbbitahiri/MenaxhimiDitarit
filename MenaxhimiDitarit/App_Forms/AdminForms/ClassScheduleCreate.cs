@@ -62,6 +62,9 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         #region Methods
+        /// <summary>
+        /// Puts default value in txtYear, disables txtID and txtYear, and gets the data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             txtYear.Text = DateTime.Now.Year.ToString();
@@ -73,6 +76,10 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="schedule"></param>
         private void PopulateForm(ClassSchedule schedule)
         {
             txtID.Text = schedule.ScheduleID.ToString();
@@ -82,6 +89,9 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectDate.SelectedItem = schedule.Day;
         }
 
+        /// <summary>
+        /// Creates or updates the schedule, depending on ID
+        /// </summary>
         private void CreateSchedule()
         {
             try

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition.Primitives;
 using System.Data;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using MenaxhimiDitarit.App_Code;
 using MenaxhimiDitarit.BLL;
@@ -41,12 +39,20 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyTopics = _topicBLL.GetAllTopic();
             dgvTopicList.DataSource = MyTopics;
         }
 
+        /// <summary>
+        /// Gets the topic data, that we select in GridView
+        /// </summary>
+        /// <param name="topicRow">The selected row</param>
+        /// <returns>The data of topic</returns>
         private Topic GetTopic(GridViewRowInfo topicRow)
         {
             try
@@ -76,6 +82,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Searches the topic
+        /// </summary>
         private void SearchTopic()
         {
             try
@@ -108,6 +117,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the topic
+        /// </summary>
         private void UpdateTopic()
         {
             if (dgvTopicList.SelectedRows.Count > 0)
@@ -129,6 +141,9 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the topic
+        /// </summary>
         private void DeleteTopic()
         {
             if (dgvTopicList.SelectedRows.Count > 0)
@@ -156,6 +171,9 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Shows the full content
+        /// </summary>
         private void ShowFullContent()
         {
             if (dgvTopicList.SelectedRows.Count > 0)

@@ -24,12 +24,20 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
             dgvTeacherListD.DataSource = MyTeachers;
         }
 
+        /// <summary>
+        /// Gets the teacher data, that we select in GridView
+        /// </summary>
+        /// <param name="teacherRow">The selected row</param>
+        /// <returns>The data of teacher</returns>
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
         {
             try
@@ -62,6 +70,9 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the teacher
+        /// </summary>
         private void UpdateTeacher()
         {
             if (dgvTeacherListD.SelectedRows.Count > 0)
@@ -83,6 +94,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the teacher
+        /// </summary>
         private void DeleteTeacher()
         {
             if (dgvTeacherListD.SelectedRows.Count > 0)
@@ -111,6 +125,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the teacher, by Name
+        /// </summary>
         private void SearchTeacher()
         {
             try

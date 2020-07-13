@@ -35,6 +35,9 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Creates the user
+        /// </summary>
         private void CreateUser()
         {
             try
@@ -102,6 +105,9 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

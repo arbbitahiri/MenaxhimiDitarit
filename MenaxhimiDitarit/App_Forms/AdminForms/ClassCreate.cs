@@ -62,6 +62,9 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables txtID, and gets data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -69,6 +72,10 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectRoom.DataSource = MyRooms;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="classes"></param>
         private void PopulateForm(Class classes)
         {
             txtID.Text = classes.ClassID.ToString();
@@ -77,6 +84,9 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectRoom.SelectedItem = MyRooms.FirstOrDefault(f => f.RoomID == classes.RoomID);
         }
 
+        /// <summary>
+        /// Creates or updates the class, depending on ID
+        /// </summary>
         private void CreateClass()
         {
             try
@@ -154,6 +164,9 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
+        /// <summary>
+        /// Closese Form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckComboBox(this))

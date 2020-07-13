@@ -68,6 +68,9 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables textbox and datetimepicker, and gets data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -76,6 +79,10 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="absence"></param>
         private void PopulateForm(Topic absence)
         {
             txtID.Text = absence.TopicID.ToString();
@@ -85,6 +92,9 @@ namespace MenaxhimiDitarit.TeacherForms
             txtNoStudents.Text = absence.NoStudents.ToString();
         }
 
+        /// <summary>
+        /// Creates or updates the absence, depending on ID
+        /// </summary>
         private void CreateAbsence()
         {
             try
@@ -180,6 +190,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

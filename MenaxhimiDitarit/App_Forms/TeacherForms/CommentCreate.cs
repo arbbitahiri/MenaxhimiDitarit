@@ -70,6 +70,9 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Disables textbox and datetimepicker, and gets data to combobox
+        /// </summary>
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -78,6 +81,10 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="comment"></param>
         private void PopulateForm(Topic comment)
         {
             txtID.Text = comment.TopicID.ToString();
@@ -87,6 +94,9 @@ namespace MenaxhimiDitarit.TeacherForms
             txtComment.Text = comment.Comment;
         }
 
+        /// <summary>
+        /// Creates or updates the comment, depending on ID
+        /// </summary>
         private void CreateComment()
         {
             try
@@ -180,6 +190,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

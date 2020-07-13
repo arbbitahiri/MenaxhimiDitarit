@@ -30,12 +30,20 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyStaffAbsences = _staffAbsenceBLL.GetAllStaffAbsence();
             dgvStaffAbsenceList.DataSource = MyStaffAbsences;
         }
 
+        /// <summary>
+        /// Gets the staff data, that we select in GridView
+        /// </summary>
+        /// <param name="staffAbsenceRow">The selected row</param>
+        /// <returns>The data of staff</returns>
         private User GetStaffAbsence(GridViewRowInfo staffAbsenceRow)
         {
             try
@@ -66,6 +74,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         }
 
+        /// <summary>
+        /// Opens the form to update the absence of staff
+        /// </summary>
         private void UpdateStaffAbsence()
         {
             if (dgvStaffAbsenceList.SelectedRows.Count > 0)
@@ -87,6 +98,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches for absences staff, by Name
+        /// </summary>
         private void SearchStaffAbsence()
         {
             try

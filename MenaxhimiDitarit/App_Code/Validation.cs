@@ -1,17 +1,11 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
-using Excel = Microsoft.Office.Interop.Excel;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using System.Drawing;
 using Telerik.WinControls;
 using System.Security.Cryptography;
-using System.Threading;
 
 namespace MenaxhimiDitarit.App_Code
 {
@@ -20,6 +14,11 @@ namespace MenaxhimiDitarit.App_Code
         static ToolTip toolTip = new ToolTip();
         static int language = TranslateForm.CheckLanguage();
 
+        /// <summary>
+        /// Calculates hash for password
+        /// </summary>
+        /// <param name="password">Password we type</param>
+        /// <returns></returns>
         public static string CalculateHash(string password)
         {
             var inputBuffer = Encoding.Unicode.GetBytes(password);
@@ -33,6 +32,16 @@ namespace MenaxhimiDitarit.App_Code
             return BitConverter.ToString(hashedBytes).Replace("-", string.Empty);
         }
 
+        /// <summary>
+        /// Shows MessageBox depending on the language
+        /// </summary>
+        /// <param name="message">Message in English</param>
+        /// <param name="title">Title in English</param>
+        /// <param name="mesazhi">Message in Albanian(XK)</param>
+        /// <param name="titulli">Title in Albanian(XK)</param>
+        /// <param name="buttons"></param>
+        /// <param name="icon"></param>
+        /// <returns></returns>
         public static DialogResult MessageBoxShow(string message, string title, string mesazhi, string titulli,
             MessageBoxButtons buttons, MessageBoxIcon icon)
         {
@@ -48,6 +57,12 @@ namespace MenaxhimiDitarit.App_Code
                 return MessageBox.Show("null");
         }
 
+        /// <summary>
+        /// ToolTip to show info when hovering the picture
+        /// </summary>
+        /// <param name="message">Message in English</param>
+        /// <param name="mesazhi">Message in Albanian(XK)</param>
+        /// <param name="pictureBox"></param>
         public static void ToolTipShow(string message, string mesazhi, PictureBox pictureBox)
         {
             int language = TranslateForm.CheckLanguage();
@@ -62,6 +77,10 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Capitalizes word when typing in textbox
+        /// </summary>
+        /// <param name="textBox">The textbox we are writing</param>
         public static void Capitalize(TextBox textBox)
         {
             StringBuilder stringBuilder = new StringBuilder(textBox.Text.Length);
@@ -75,12 +94,20 @@ namespace MenaxhimiDitarit.App_Code
             textBox.Select(textBox.Text.Length, 0);
         }
 
+        /// <summary>
+        /// Sets the image visibility
+        /// </summary>
+        /// <param name="pictureBox"></param>
         public static void SetImageVisibility(PictureBox pictureBox)
         {
             pictureBox.Image = Properties.Resources.icons8_cancel_15;
             pictureBox.Visible = true;
         }
 
+        /// <summary>
+        /// Doesn't let numbers in textbox
+        /// </summary>
+        /// <param name="e"></param>
         public static void NoNumber(KeyPressEventArgs e)
         {
             char c = e.KeyChar;
@@ -88,6 +115,10 @@ namespace MenaxhimiDitarit.App_Code
                 e.Handled = true;
         }
 
+        /// <summary>
+        /// Doesn't let letters in textbox
+        /// </summary>
+        /// <param name="e"></param>
         public static void NoLetter(KeyPressEventArgs e)
         {
             char c = e.KeyChar;
@@ -95,6 +126,11 @@ namespace MenaxhimiDitarit.App_Code
                 e.Handled = true;
         }
 
+        /// <summary>
+        /// Checks textboxes if they are empty
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         public static bool CheckTextbox(Form form)
         {
             foreach (Control ctrl in form.Controls)
@@ -109,6 +145,11 @@ namespace MenaxhimiDitarit.App_Code
             return true;
         }
 
+        /// <summary>
+        /// Checks combobox if they are selected
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
         public static bool CheckComboBox(Form form)
         {
             foreach (Control ctrl in form.Controls)
@@ -123,6 +164,11 @@ namespace MenaxhimiDitarit.App_Code
             return false;
         }
 
+        /// <summary>
+        /// Gets text in radio buttons
+        /// </summary>
+        /// <param name="groupBox">Groupbox in wich the radio buttons are in</param>
+        /// <returns></returns>
         public static string GetSelectedRBTN(GroupBox groupBox)
         {
             foreach (Control ctrl in groupBox.Controls)
@@ -133,6 +179,12 @@ namespace MenaxhimiDitarit.App_Code
             return null;
         }
 
+        /// <summary>
+        /// Checks if the textbox is valid depending on Regex
+        /// </summary>
+        /// <param name="reg">The regex we write</param>
+        /// <param name="textBox"></param>
+        /// <returns></returns>
         public static bool IsValid(string reg, TextBox textBox)
         {
             Regex regex = new Regex(reg);
@@ -143,6 +195,11 @@ namespace MenaxhimiDitarit.App_Code
                 return false;
         }
 
+        /// <summary>
+        /// Gets age
+        /// </summary>
+        /// <param name="birthDate"></param>
+        /// <returns></returns>
         public static int GetAge(DateTime birthDate)
         {
             DateTime today = DateTime.Today;
@@ -152,6 +209,14 @@ namespace MenaxhimiDitarit.App_Code
             return age;
         }
 
+        /// <summary>
+        /// Saves file depending on the language
+        /// </summary>
+        /// <param name="fileName">Filename in English</param>
+        /// <param name="emriFiles">Filename in Albanian(XK)</param>
+        /// <param name="defaultExt">Default extension</param>
+        /// <param name="filter">Filters the dialog</param>
+        /// <returns></returns>
         public static SaveFileDialog SaveFile(string fileName, string emriFiles, string defaultExt, string filter)
         {
             if (language == 2)
@@ -186,6 +251,12 @@ namespace MenaxhimiDitarit.App_Code
 
         static System.Drawing.Font italicFont = new System.Drawing.Font("Segoe UI", 9f, FontStyle.Italic);
 
+        /// <summary>
+        /// Formats cell in GridView
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="columnName">Column name in English</param>
+        /// <param name="emriKolones">Column name in Albanian(XK)</param>
         public static void CellFormatting(CellFormattingEventArgs e, string columnName, string emriKolones)
         {
             if (language == 2)
@@ -198,6 +269,12 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Formats cell when we want to print
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="columnName">Column name in English</param>
+        /// <param name="emriKolones">Column name in Albanian(XK)</param>
         public static void PrintCellFormatting(PrintCellFormattingEventArgs e, string columnName, string emriKolones)
         {
             if (language == 2)
@@ -210,6 +287,11 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Formats the cell in ItalicFont
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="columnName">Column name where we want to format the cell</param>
         private static void ToCellFormatting(CellFormattingEventArgs e, string columnName)
         {
             GridDataCellElement cell = e.CellElement as GridDataCellElement;
@@ -229,6 +311,11 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Formats the cell in ItalicFont
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="columnName">Column name where we want to format the cell</param>
         private static void ToPrintCellFormatting(PrintCellFormattingEventArgs e, string columnName)
         {
             if (e.Column != null && e.Column.Name == columnName && e.Row is GridViewRowInfo)
@@ -238,6 +325,12 @@ namespace MenaxhimiDitarit.App_Code
         }
         #endregion
 
+        /// <summary>
+        /// Initializes the print document depending on the language
+        /// </summary>
+        /// <param name="printDocument"></param>
+        /// <param name="header">Header in English</param>
+        /// <param name="headerXK">Header in Albanian(XK)</param>
         public static void InitializePrintDocument(RadPrintDocument printDocument, string header, string headerXK)
         {
             if (language == 2)

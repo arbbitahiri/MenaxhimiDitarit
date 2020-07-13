@@ -14,14 +14,18 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods for Panels
-        //Nuk i shfaqim Panel-et e Side Menus
+        /// <summary>
+        /// Hides all the panels in Menu
+        /// </summary>
         private void CustomizeDesign() {
             pnlTopics.Visible = false;
             pnlAbsences.Visible = false;
             pnlComments.Visible = false;
         }
 
-        //Fshehim Panelin pasi te klkojm ne njerin nga Button-at qe jane ne Panel
+        /// <summary>
+        /// Hides other submenu in Menu when it's button is clicked
+        /// </summary>
         private void HideSubMenu() {
             if (pnlTopics.Visible == true)
                 pnlTopics.Visible = false;
@@ -33,7 +37,10 @@ namespace MenaxhimiDitarit.TeacherForms
                 pnlComments.Visible = false;
         }
 
-        //Shfaqim Panel-in ne Side Menu
+        /// <summary>
+        /// Shows the submenu when the button is clicked
+        /// </summary>
+        /// <param name="subMenu">The panel we want to show</param>
         private void ShowSubMenu(Panel subMenu) {
             if (subMenu.Visible == false) {
                 HideSubMenu();
@@ -43,7 +50,10 @@ namespace MenaxhimiDitarit.TeacherForms
                 subMenu.Visible = false;
         }
 
-        //Hapim format ne Panel-in kryesor
+        /// <summary>
+        /// Opens the form in the panel on the right
+        /// </summary>
+        /// <param name="childForm"></param>
         private void OpenChildForm(Form childForm) {
             if (activeForm != null)
                 activeForm.Close();

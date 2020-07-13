@@ -26,12 +26,20 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
             dgvTeacherList.DataSource = MyTeachers;
         }
 
+        /// <summary>
+        /// Gets the teacher data, that we select in GridView
+        /// </summary>
+        /// <param name="teacherRow">The selected row</param>
+        /// <returns>The data of teacher</returns>
         private Teacher GetTeacher(GridViewRowInfo teacherRow)
         {
             try
@@ -64,6 +72,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the teacher
+        /// </summary>
         private void UpdateTeacher()
         {
             if (dgvTeacherList.SelectedRows.Count > 0)
@@ -85,6 +96,9 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the teacher, by Name
+        /// </summary>
         private void SearchTeacher()
         {
             try
@@ -93,7 +107,6 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchName.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte FirstName apo LastName apo te gjithe emrin FullName
                         var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text)
                         || f.LastName.Contains(txtSearchName.Text) || f.FullName.Contains(txtSearchName.Text)).ToList();
 

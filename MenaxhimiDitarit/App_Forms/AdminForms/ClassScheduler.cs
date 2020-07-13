@@ -34,6 +34,9 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
             PopulateForm(_class);
         }
 
+        /// <summary>
+        /// Disables all textoxes in the form
+        /// </summary>
         private void DisableTextbox()
         {
             foreach (Control ctrl in this.Controls) {
@@ -44,31 +47,42 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
             }
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="classes"></param>
         private void PopulateForm(Class classes)
         {
-            txtMonday1.Text = GetDayTime(classes, "Monday", 1); txtTuesday1.Text = GetDayTime(classes, "Tuesday", 1);
-            txtMonday2.Text = GetDayTime(classes, "Monday", 2); txtTuesday2.Text = GetDayTime(classes, "Tuesday", 2);
-            txtMonday3.Text = GetDayTime(classes, "Monday", 3); txtTuesday3.Text = GetDayTime(classes, "Tuesday", 3);
-            txtMonday4.Text = GetDayTime(classes, "Monday", 4); txtTuesday4.Text = GetDayTime(classes, "Tuesday", 4);
-            txtMonday5.Text = GetDayTime(classes, "Monday", 5); txtTuesday5.Text = GetDayTime(classes, "Tuesday", 5);
-            txtMonday6.Text = GetDayTime(classes, "Monday", 6); txtTuesday6.Text = GetDayTime(classes, "Tuesday", 6);
+            txtMonday1.Text = GetSubjectTitle(classes, "Monday", 1); txtTuesday1.Text = GetSubjectTitle(classes, "Tuesday", 1);
+            txtMonday2.Text = GetSubjectTitle(classes, "Monday", 2); txtTuesday2.Text = GetSubjectTitle(classes, "Tuesday", 2);
+            txtMonday3.Text = GetSubjectTitle(classes, "Monday", 3); txtTuesday3.Text = GetSubjectTitle(classes, "Tuesday", 3);
+            txtMonday4.Text = GetSubjectTitle(classes, "Monday", 4); txtTuesday4.Text = GetSubjectTitle(classes, "Tuesday", 4);
+            txtMonday5.Text = GetSubjectTitle(classes, "Monday", 5); txtTuesday5.Text = GetSubjectTitle(classes, "Tuesday", 5);
+            txtMonday6.Text = GetSubjectTitle(classes, "Monday", 6); txtTuesday6.Text = GetSubjectTitle(classes, "Tuesday", 6);
 
-            txtWednesday1.Text = GetDayTime(classes, "Wednesday", 1);
-            txtWednesday2.Text = GetDayTime(classes, "Wednesday", 2);
-            txtWednesday3.Text = GetDayTime(classes, "Wednesday", 3);
-            txtWednesday4.Text = GetDayTime(classes, "Wednesday", 4);
-            txtWednesday5.Text = GetDayTime(classes, "Wednesday", 5);
-            txtWednesday6.Text = GetDayTime(classes, "Wednesday", 6);
+            txtWednesday1.Text = GetSubjectTitle(classes, "Wednesday", 1);
+            txtWednesday2.Text = GetSubjectTitle(classes, "Wednesday", 2);
+            txtWednesday3.Text = GetSubjectTitle(classes, "Wednesday", 3);
+            txtWednesday4.Text = GetSubjectTitle(classes, "Wednesday", 4);
+            txtWednesday5.Text = GetSubjectTitle(classes, "Wednesday", 5);
+            txtWednesday6.Text = GetSubjectTitle(classes, "Wednesday", 6);
 
-            txtThursday1.Text = GetDayTime(classes, "Thursday", 1); txtFriday1.Text = GetDayTime(classes, "Friday", 1);
-            txtThursday2.Text = GetDayTime(classes, "Thursday", 2); txtFriday2.Text = GetDayTime(classes, "Friday", 2);
-            txtThursday3.Text = GetDayTime(classes, "Thursday", 3); txtFriday3.Text = GetDayTime(classes, "Friday", 3);
-            txtThursday4.Text = GetDayTime(classes, "Thursday", 4); txtFriday4.Text = GetDayTime(classes, "Friday", 4);
-            txtThursday5.Text = GetDayTime(classes, "Thursday", 5); txtFriday5.Text = GetDayTime(classes, "Friday", 5);
-            txtThursday6.Text = GetDayTime(classes, "Thursday", 6); txtFriday6.Text = GetDayTime(classes, "Friday", 6);
+            txtThursday1.Text = GetSubjectTitle(classes, "Thursday", 1); txtFriday1.Text = GetSubjectTitle(classes, "Friday", 1);
+            txtThursday2.Text = GetSubjectTitle(classes, "Thursday", 2); txtFriday2.Text = GetSubjectTitle(classes, "Friday", 2);
+            txtThursday3.Text = GetSubjectTitle(classes, "Thursday", 3); txtFriday3.Text = GetSubjectTitle(classes, "Friday", 3);
+            txtThursday4.Text = GetSubjectTitle(classes, "Thursday", 4); txtFriday4.Text = GetSubjectTitle(classes, "Friday", 4);
+            txtThursday5.Text = GetSubjectTitle(classes, "Thursday", 5); txtFriday5.Text = GetSubjectTitle(classes, "Friday", 5);
+            txtThursday6.Text = GetSubjectTitle(classes, "Thursday", 6); txtFriday6.Text = GetSubjectTitle(classes, "Friday", 6);
         }
 
-        private string GetDayTime(Class classes, string day, int time)
+        /// <summary>
+        /// Gets the SubjectTitle depending on day and time
+        /// </summary>
+        /// <param name="classes"></param>
+        /// <param name="day">Day of the subject</param>
+        /// <param name="time">Time of the subject</param>
+        /// <returns>The subject title</returns>
+        private string GetSubjectTitle(Class classes, string day, int time)
         {
             foreach (var subject in MySubjects)
             {

@@ -26,12 +26,20 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyRooms = _roomBLL.GetAll();
             dgvRoomList.DataSource = MyRooms;
         }
 
+        /// <summary>
+        /// Gets the room data, that we select in GridView
+        /// </summary>
+        /// <param name="roomRow">The selected row</param>
+        /// <returns>The data of room</returns>
         private Room GetRoom(GridViewRowInfo roomRow)
         {
             try
@@ -58,6 +66,9 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the subject
+        /// </summary>
         private void UpdateRoom()
         {
             if (dgvRoomList.SelectedRows.Count > 0)
@@ -79,6 +90,9 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the subject
+        /// </summary>
         private void DeleteRoom()
         {
             if (dgvRoomList.SelectedRows.Count > 0)
@@ -107,6 +121,9 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the subject
+        /// </summary>
         private void SearchSubject()
         {
             try

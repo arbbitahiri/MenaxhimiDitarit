@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
@@ -32,12 +31,20 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyReview = _reviewBLL.GetAllComment();
             dgvReviewCommentList.DataSource = MyReview;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="reviewRow"></param>
+        /// <returns></returns>
         private Topic GetReview(GridViewRowInfo reviewRow)
         {
             try
@@ -69,6 +76,9 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the review
+        /// </summary>
         private void UpdateReview()
         {
             if (dgvReviewCommentList.SelectedRows.Count > 0)
@@ -90,6 +100,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the review
+        /// </summary>
         private void SearchReview()
         {
             try

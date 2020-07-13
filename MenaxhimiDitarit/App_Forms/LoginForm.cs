@@ -19,7 +19,9 @@ namespace MenaxhimiDitarit
             btnLogin.Enabled = false;
         }
 
-        #region Methods
+        /// <summary>
+        /// Logs in the user
+        /// </summary>
         private void Login()
         {
             string username = txtUsername.Text;
@@ -88,7 +90,6 @@ namespace MenaxhimiDitarit
                     "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
 
         #region Events
         // TextBoxes

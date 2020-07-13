@@ -44,12 +44,19 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Disables textbox and checks the radio button (default)
+        /// </summary>
         private void CostumizeDesign()
         {
             txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="teacher"></param>
         private void PopulateForm(Teacher teacher)
         {
             txtID.Text = teacher.TeacherID.ToString();
@@ -62,6 +69,9 @@ namespace MenaxhimiDitarit
             txtPhoneNo.Text = teacher.PhoneNo;
         }
 
+        /// <summary>
+        /// Creates or updates the teacher, depending on ID
+        /// </summary>
         private void CreateTeacher()
         {
             try
@@ -118,7 +128,6 @@ namespace MenaxhimiDitarit
 
                                 if (!update)
                                 {
-                                    //Shikojme nese ekziston nje Emer i tille
                                     var checkTeacher = MyTeachers.Where(t => t.FirstName == txtFirstName.Text).ToList();
 
                                     if (checkTeacher.Count > 0)
@@ -199,6 +208,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Closes the form depending on if we want
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

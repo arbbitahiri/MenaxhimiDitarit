@@ -33,12 +33,20 @@ namespace MenaxhimiDitarit.AdminForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MySchedules = _scheduleBLL.GetAll();
             dgvScheduleList.DataSource = MySchedules;
         }
 
+        /// <summary>
+        /// Gets the schedule data, that we select in GridView
+        /// </summary>
+        /// <param name="scheduleRow">The selected row</param>
+        /// <returns>The data of schedule</returns>
         private ClassSchedule GetSchedule(GridViewRowInfo scheduleRow)
         {
             try
@@ -68,6 +76,9 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the schedule
+        /// </summary>
         private void UpdateSchedule()
         {
             if (dgvScheduleList.SelectedRows.Count > 0)
@@ -89,6 +100,9 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the class
+        /// </summary>
         private void SearchClass()
         {
             try

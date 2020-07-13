@@ -29,7 +29,9 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods
-
+        /// <summary>
+        /// Methods for menu in the right
+        /// </summary>
         #region Menu
         private void CustomizeDesign()
         {
@@ -56,12 +58,20 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyUsers = _usersBLL.GetAllUser();
             dgvUserList.DataSource = MyUsers;
         }
 
+        /// <summary>
+        /// Gets the user data, that we select in GridView
+        /// </summary>
+        /// <param name="userRow">The selected row</param>
+        /// <returns>The data of user</returns>
         private User GetUser(GridViewRowInfo userRow)
         {
             try
@@ -95,6 +105,9 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the user
+        /// </summary>
         private void UpdateUser()
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -116,6 +129,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the user
+        /// </summary>
         private void DeleteUser()
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -152,6 +168,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Opens the form to change the password, depending on the selected row
+        /// </summary>
         private void ChangePassword()
         {
             if (dgvUserList.SelectedRows.Count > 0)
@@ -173,6 +192,9 @@ namespace MenaxhimiDitarit.DirectorForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches user by Name
+        /// </summary>
         private void SearchUser()
         {
             try

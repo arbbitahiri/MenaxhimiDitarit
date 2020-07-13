@@ -26,12 +26,20 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MySubjects = _subjectBLL.GetAll();
             dgvSubjectList.DataSource = MySubjects;
         }
 
+        /// <summary>
+        /// Gets the subject data, that we select in GridView
+        /// </summary>
+        /// <param name="subjectRow">The selected row</param>
+        /// <returns>The data of subject</returns>
         private Subject GetSubject(GridViewRowInfo subjectRow)
         {
             try
@@ -60,6 +68,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the subject
+        /// </summary>
         private void UpdateSubject()
         {
             if (dgvSubjectList.SelectedRows.Count > 0)
@@ -81,6 +92,9 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the subject
+        /// </summary>
         private void DeleteSubject()
         {
             if (dgvSubjectList.SelectedRows.Count > 0)
@@ -109,6 +123,9 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the subject
+        /// </summary>
         private void SearchSubject()
         {
             try

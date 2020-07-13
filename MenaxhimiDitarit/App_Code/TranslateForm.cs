@@ -11,6 +11,10 @@ namespace MenaxhimiDitarit.App_Code
     public class TranslateForm
     {
         public static int checkLanguage = 0;
+        /// <summary>
+        /// Checks the language
+        /// </summary>
+        /// <returns>If it's English it returns 1, Albanian(XK) returns 2, else 0</returns>
         public static int CheckLanguage()
         {
             if (checkLanguage == 1)
@@ -27,6 +31,10 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Changes the language
+        /// </summary>
+        /// <param name="langCode">Language code</param>
         public static void ChangeLanguages(string langCode)
         {
             foreach (Form openForm in Application.OpenForms)
@@ -51,6 +59,11 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Changes the language of the form
+        /// </summary>
+        /// <param name="languange">The language we type</param>
+        /// <param name="actualForm">The form we want to change the language</param>
         private static void ChangeLanguage(string languange, Form actualForm)
         {
             CultureInfo cultureInfo = new CultureInfo(languange);
@@ -72,6 +85,12 @@ namespace MenaxhimiDitarit.App_Code
             TranslateControls(actualForm.Controls, cultureInfo, resources);
         }
 
+        /// <summary>
+        /// Translates controls in form
+        /// </summary>
+        /// <param name="controls"></param>
+        /// <param name="cultureInfo"></param>
+        /// <param name="resources"></param>
         private static void TranslateControls(Control.ControlCollection controls, CultureInfo cultureInfo, ComponentResourceManager resources)
         {
             foreach (Control control in controls)
@@ -123,6 +142,12 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Translates the tool strip items
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="cultureInfo"></param>
+        /// <param name="resources"></param>
         public static void ToolStripItemTranslate(ToolStripItem item, CultureInfo cultureInfo, ComponentResourceManager resources)
         {
             if (item is ToolStripMenuItem menuItem)

@@ -31,12 +31,20 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyComments = _commentBLL.GetAllComment();
             dgvCommentList.DataSource = MyComments;
         }
 
+        /// <summary>
+        /// Gets the comment data, that we select in GridView
+        /// </summary>
+        /// <param name="commentRow">The selected row</param>
+        /// <returns>The data of comment</returns>
         private Topic GetComment(GridViewRowInfo commentRow)
         {
             try
@@ -67,6 +75,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the comment
+        /// </summary>
         private void UpdateComment()
         {
             if (dgvCommentList.SelectedRows.Count > 0)
@@ -88,6 +99,9 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the comment
+        /// </summary>
         private void SearchComment()
         {
             try
@@ -120,6 +134,9 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
+        /// <summary>
+        /// Shows full comment
+        /// </summary>
         private void ShowComment()
         {
             if (dgvCommentList.SelectedRows.Count > 0)

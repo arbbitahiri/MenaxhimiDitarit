@@ -31,12 +31,20 @@ namespace MenaxhimiDitarit.TeacherForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyAbsences = _absenceBLL.GetAllAbsence();
             dgvAbsenceList.DataSource = MyAbsences;
         }
 
+        /// <summary>
+        /// Gets the absence data, that we select in GridView
+        /// </summary>
+        /// <param name="absenceRow">The selected row</param>
+        /// <returns>The data of absence</returns>
         private Topic GetAbsence(GridViewRowInfo absenceRow)
         {
             try
@@ -68,6 +76,9 @@ namespace MenaxhimiDitarit.TeacherForms
 
         }
 
+        /// <summary>
+        /// Opens the form to update the absence
+        /// </summary>
         private void UpdateAbsence()
         {
             if (dgvAbsenceList.SelectedRows.Count > 0)
@@ -89,6 +100,9 @@ namespace MenaxhimiDitarit.TeacherForms
             RefreshList();
         }
 
+        /// <summary>
+        /// Searches the absence
+        /// </summary>
         private void SearchAbsence()
         {
             try

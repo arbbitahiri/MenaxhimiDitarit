@@ -1,16 +1,9 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
 using Telerik.WinControls.UI;
 using Excel = Microsoft.Office.Interop.Excel;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System.Drawing;
-using Telerik.WinControls;
-using System.Security.Cryptography;
 using System.Threading;
 
 namespace MenaxhimiDitarit.App_Code
@@ -19,7 +12,14 @@ namespace MenaxhimiDitarit.App_Code
     {
         static int language = TranslateForm.CheckLanguage();
 
-        public static void ExportToExcel(RadGridView radGridView, string filePath, string sheetName, string sheetNameXK)
+        /// <summary>
+        /// Exports the file to Excel depending on the language
+        /// </summary>
+        /// <param name="radGridView">GridView we want to export</param>
+        /// <param name="filePath">Path of the file</param>
+        /// <param name="sheetName">SheetName in English</param>
+        /// <param name="sheetNameXK">SheetName in Albanian(XK)</param>
+        private static void ExportToExcel(RadGridView radGridView, string filePath, string sheetName, string sheetNameXK)
         {
             if (language == 2)
             {
@@ -31,6 +31,12 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// Exports the file to Excel depending on the language
+        /// </summary>
+        /// <param name="radGridView">GridView we want to export</param>
+        /// <param name="filePath">Path of the file</param>
+        /// <param name="sheetName">SheetName in English</param>
         private static void ToExcel(RadGridView radGridView, string filePath, string sheetName)
         {
             if (radGridView.Rows.Count > 0)
@@ -67,7 +73,12 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
-        public static void ExportToPDF(RadGridView radGridView, string filePath)
+        /// <summary>
+        /// Exports the file to PDF depending on the language
+        /// </summary>
+        /// <param name="radGridView">GridView we want to export</param>
+        /// <param name="filePath">Path of the file</param>
+        private static void ExportToPDF(RadGridView radGridView, string filePath)
         {
             BaseFont baseFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             PdfPTable pdfTable = new PdfPTable(radGridView.Columns.Count);
@@ -106,6 +117,14 @@ namespace MenaxhimiDitarit.App_Code
             }
         }
 
+        /// <summary>
+        /// This method is used in events
+        /// </summary>
+        /// <param name="fileName">Filename in English</param>
+        /// <param name="emriFiles">Filename in Albanian(XK)</param>
+        /// <param name="defaultExt">Default extension</param>
+        /// <param name="filter">Filters the dialog</param>
+        /// <param name="gridView"></param>
         public static void ExportExcel(string fileName, string emriFiles, string defaultExt, string filter, RadGridView gridView)
         {
             Thread thread = new Thread(() =>
@@ -122,6 +141,14 @@ namespace MenaxhimiDitarit.App_Code
             thread.Join();
         }
 
+        /// <summary>
+        /// This method is used in events
+        /// </summary>
+        /// <param name="fileName">Filename in English</param>
+        /// <param name="emriFiles">Filename in Albanian(XK)</param>
+        /// <param name="defaultExt">Default extension</param>
+        /// <param name="filter">Filters the dialog</param>
+        /// <param name="gridView"></param>
         public static void ExportPDF(string fileName, string emriFiles, string defaultExt, string filter, RadGridView gridView)
         {
             Thread thread = new Thread(() =>

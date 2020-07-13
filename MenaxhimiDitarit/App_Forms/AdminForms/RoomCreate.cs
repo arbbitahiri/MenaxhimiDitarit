@@ -42,6 +42,10 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="room"></param>
         private void PopulateForm(Room room)
         {
             txtID.Text = room.RoomID.ToString();
@@ -49,6 +53,9 @@ namespace MenaxhimiDitarit
             txtRoomType.Text = room.RoomType;
         }
 
+        /// <summary>
+        /// Creates or updates the room, depending on ID
+        /// </summary>
         private void CreateRoom()
         {
             try
@@ -122,6 +129,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

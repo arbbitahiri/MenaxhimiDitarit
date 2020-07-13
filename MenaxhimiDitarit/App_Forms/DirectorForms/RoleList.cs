@@ -27,12 +27,18 @@ namespace MenaxhimiDitarit.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyRoles = _rolesBLL.GetAll();
             dgvRoleList.DataSource = MyRoles;
         }
 
+        /// <summary>
+        /// Searches the role, by Rolename
+        /// </summary>
         private void SearchRole()
         {
             try
@@ -41,7 +47,6 @@ namespace MenaxhimiDitarit.DirectorForms
                 {
                     if (dgvRoleList.SelectedRows.Count > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte RoleName
                         var findRole = MyRoles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
 
                         dgvRoleList.DataSource = findRole;

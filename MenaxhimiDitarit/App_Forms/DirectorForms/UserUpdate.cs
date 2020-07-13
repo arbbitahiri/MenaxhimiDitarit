@@ -34,6 +34,10 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
 
         #region Methods
+        /// <summary>
+        /// Populates the form with the adequate data from the list form
+        /// </summary>
+        /// <param name="user"></param>
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
@@ -44,6 +48,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
+        /// <summary>
+        /// Updates the user
+        /// </summary>
         private void UpdateUser()
         {
             try
@@ -99,6 +106,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        /// <summary>
+        /// Closes the form
+        /// </summary>
         private void CloseForm()
         {
             if (Validation.CheckTextbox(this))

@@ -28,12 +28,20 @@ namespace MenaxhimiDitarit
         }
 
         #region Methods
+        /// <summary>
+        /// Refreshes the list
+        /// </summary>
         private void RefreshList()
         {
             MyClasses = _classBLL.GetAll();
             dgvClassesList.DataSource = MyClasses;
         }
 
+        /// <summary>
+        /// Gets the class data, that we select in GridView
+        /// </summary>
+        /// <param name="classRow">The selected row</param>
+        /// <returns>The data of class</returns>
         private Class GetClass(GridViewRowInfo classRow)
         {
             try
@@ -61,6 +69,9 @@ namespace MenaxhimiDitarit
             }
         }
 
+        /// <summary>
+        /// Opens the form to update the class
+        /// </summary>
         private void UpdateClass()
         {
             if (dgvClassesList.SelectedRows.Count > 0)
@@ -82,6 +93,9 @@ namespace MenaxhimiDitarit
             RefreshList();
         }
 
+        /// <summary>
+        /// Deletes the class
+        /// </summary>
         private void DeleteClass()
         {
             if (dgvClassesList.SelectedRows.Count > 0)
