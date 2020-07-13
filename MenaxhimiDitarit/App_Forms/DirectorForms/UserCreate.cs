@@ -28,7 +28,7 @@ namespace MenaxhimiDitarit.DirectorForms
             _userBLL = new UserBLL();
             _roleBLL = new RoleBLL();
 
-            MyUsers = _userBLL.GetAll();
+            MyUsers = _userBLL.GetAllUser();
             MyRoles = _roleBLL.GetAll();
 
             cmbRoles.DataSource = MyRoles;
@@ -90,7 +90,7 @@ namespace MenaxhimiDitarit.DirectorForms
                         }
                         else
                         {
-                            bool isRegistred = _userBLL.Add(user);
+                            bool isRegistred = _userBLL.AddUser(user);
 
                             if (isRegistred)
                             {

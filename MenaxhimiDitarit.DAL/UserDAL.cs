@@ -229,6 +229,7 @@ namespace MenaxhimiDitarit.DAL
                     using (var command = DataConnection.GetCommand(connection, sqlproc, CommandType.StoredProcedure))
                     {
                         DataConnection.AddParameter(command, "userid", model.UserID);
+                        DataConnection.AddParameter(command, "roleID", model.RoleID);
                         DataConnection.AddParameter(command, "firstname", model.FirstName);
                         DataConnection.AddParameter(command, "lastname", model.LastName);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
@@ -291,8 +292,20 @@ namespace MenaxhimiDitarit.DAL
                 if (reader["UserID"] != DBNull.Value)
                     staffAbsence.UserID = int.Parse(reader["UserID"].ToString());
 
+                if (reader["First_Name"] != DBNull.Value)
+                    staffAbsence.FirstName = reader["First_Name"].ToString();
+
+                if (reader["Last_Name"] != DBNull.Value)
+                    staffAbsence.LastName = reader["Last_Name"].ToString();
+
                 if (reader["RoleID"] != DBNull.Value)
-                    user.RoleID = int.Parse(reader["RoleID"].ToString());
+                    staffAbsence.RoleID = int.Parse(reader["RoleID"].ToString());
+
+                if (reader["AbsenceDate"] != DBNull.Value)
+                    staffAbsence.StaffAbsenceDate = DateTime.Parse(reader["AbsenceDate"].ToString());
+
+                if (reader["AbsenceReasoning"] != DBNull.Value)
+                    staffAbsence.StaffAbsenceReasoning = reader["AbsenceReasoning"].ToString();
 
                 if (reader["InsertBy"] != DBNull.Value)
                     staffAbsence.InsertBy = reader["InsertBy"].ToString();
@@ -308,18 +321,6 @@ namespace MenaxhimiDitarit.DAL
 
                 if (reader["LUN"] != DBNull.Value)
                     staffAbsence.LUN = int.Parse(reader["LUN"].ToString());
-
-                if (reader["First_Name"] != DBNull.Value)
-                    staffAbsence.FirstName = reader["First_Name"].ToString();
-
-                if (reader["Last_Name"] != DBNull.Value)
-                    staffAbsence.LastName = reader["Last_Name"].ToString();
-
-                if (reader["AbsenceDate"] != DBNull.Value)
-                    staffAbsence.StaffAbsenceDate = DateTime.Parse(reader["AbsenceDate"].ToString());
-
-                if (reader["AbsenceReasoning"] != DBNull.Value)
-                    staffAbsence.StaffAbsenceReasoning = reader["AbsenceReasoning"].ToString();
 
                 return staffAbsence;
             }

@@ -68,7 +68,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     user.LUN = ++_user.LUN;
                     user.IsPasswordChanged = true;
 
-                    bool isUpdated = _userBLL.Update(user);
+                    bool isUpdated = _userBLL.UpdateUser(user);
 
                     if (isUpdated)
                     {

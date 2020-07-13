@@ -81,6 +81,9 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 User staffAbsence = new User
                 {
                     UserID = int.Parse(txtID.Text),
+                    RoleID = UserSession.GetUser.RoleID,
+                    FirstName = UserSession.GetUser.FirstName,
+                    LastName = UserSession.GetUser.LastName,
                     StaffAbsenceReasoning = cmbReasoning.SelectedItem.ToString(),
                     StaffAbsenceDate = dtpAbsenceDate.Value,
                     InsertBy = UserSession.GetUser.UserName,
