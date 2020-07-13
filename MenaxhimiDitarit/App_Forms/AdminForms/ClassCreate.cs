@@ -61,7 +61,7 @@ namespace MenaxhimiDitarit.AdminForms
             CustomizeDesign();
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -76,10 +76,8 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.SelectedItem = classes.ClassNo.ToString();
             cmbSelectRoom.SelectedItem = MyRooms.FirstOrDefault(f => f.RoomID == classes.RoomID);
         }
-        #endregion
 
-        #region Eventet
-        private void btnSubmitClass_Click(object sender, EventArgs e)
+        private void CreateClass()
         {
             try
             {
@@ -156,7 +154,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckComboBox(this))
             {
@@ -170,6 +168,19 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmitClass_Click(object sender, EventArgs e)
+        {
+            CreateClass();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

@@ -25,7 +25,7 @@ namespace MenaxhimiDitarit.AdminForms
             _roomBLL = new RoomBLL();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyRooms = _roomBLL.GetAll();
@@ -58,6 +58,27 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
+        private void UpdateRoom()
+        {
+            if (dgvRoomList.SelectedRows.Count > 0)
+            {
+                var row = dgvRoomList.SelectedRows[0].Index;
+                if (row >= 0)
+                {
+                    var room = GetRoom(dgvRoomList.Rows[row]);
+                    if (room != null)
+                    {
+                        RoomCreate roomUpdate = new RoomCreate(room)
+                        {
+                            StartPosition = FormStartPosition.CenterParent
+                        };
+                        roomUpdate.ShowDialog();
+                    }
+                }
+            }
+            RefreshList();
+        }
+
         private void DeleteRoom()
         {
             if (dgvRoomList.SelectedRows.Count > 0)
@@ -86,42 +107,7 @@ namespace MenaxhimiDitarit.AdminForms
             RefreshList();
         }
 
-        private void UpdateRoom()
-        {
-            if (dgvRoomList.SelectedRows.Count > 0)
-            {
-                var row = dgvRoomList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var room = GetRoom(dgvRoomList.Rows[row]);
-                    if (room != null)
-                    {
-                        RoomCreate roomUpdate = new RoomCreate(room)
-                        {
-                            StartPosition = FormStartPosition.CenterParent
-                        };
-                        roomUpdate.ShowDialog();
-                    }
-                }
-            }
-            RefreshList();
-        }
-        #endregion
-
-        private void RoomListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Room List", "Lista e Sallës");
-        }
-
-        #region Buttons
-        private void btnViewAllSubjects_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearchSubject_Click(object sender, EventArgs e)
+        private void SearchSubject()
         {
             try
             {
@@ -153,7 +139,27 @@ namespace MenaxhimiDitarit.AdminForms
         }
         #endregion
 
-        #region Tool Strip Menu
+        #region Events
+        // Form
+        private void RoomListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Room List", "Lista e Sallës");
+        }
+
+        // Buttons
+        private void btnViewAllSubjects_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearchSubject_Click(object sender, EventArgs e)
+        {
+            SearchSubject();
+        }
+
+        // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateRoom();
@@ -163,9 +169,8 @@ namespace MenaxhimiDitarit.AdminForms
         {
             DeleteRoom();
         }
-        #endregion
 
-        #region Search Textbox
+        // Search Textbox
         private void txtSearchSubject_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchSubject.Text.Length > 0)
@@ -221,21 +226,9 @@ namespace MenaxhimiDitarit.AdminForms
             dgvRoomList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("RoomList", "ListaESallës", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvRoomList, saveFileDialog.FileName, "RoomList", "ListaESallës");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("RoomList", "ListaESallës", ".xlsx", "Excel Workbook |*.xlsx", dgvRoomList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -243,24 +236,11 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("RoomList", "ListaESallës", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvRoomList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("RoomList", "ListaESallës", ".pdf", "Pdf Files|*.pdf", dgvRoomList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

@@ -42,7 +42,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_review);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -60,10 +60,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dtpCommentDay.Value = review.Date;
             txtComment.Text = review.Comment;
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateReview()
         {
             try
             {
@@ -106,7 +104,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -120,6 +118,25 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateReview();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // TextBox
+        private void txtComment_TextChanged(object sender, EventArgs e)
+        {
+            Validation.Capitalize(txtComment);
         }
         #endregion
 
@@ -153,10 +170,5 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
         #endregion
-
-        private void txtComment_TextChanged(object sender, EventArgs e)
-        {
-            Validation.Capitalize(txtComment);
-        }
     }
 }

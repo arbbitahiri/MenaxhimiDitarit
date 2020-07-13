@@ -25,7 +25,7 @@ namespace MenaxhimiDitarit
             _subjectBLL = new SubjectBLL();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MySubjects = _subjectBLL.GetAll();
@@ -108,22 +108,8 @@ namespace MenaxhimiDitarit
             }
             RefreshList();
         }
-        #endregion
 
-        private void SubjectListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Subject List", "Lista e Lëndës");
-        }
-
-        #region Buttons
-        private void btnViewAllSubjects_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearchSubject_Click(object sender, EventArgs e)
+        private void SearchSubject()
         {
             try
             {
@@ -158,7 +144,27 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
-        #region Tool Strip Menu
+        #region Events
+        // Form
+        private void SubjectListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Subject List", "Lista e Lëndës");
+        }
+
+        // Buttons
+        private void btnViewAllSubjects_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearchSubject_Click(object sender, EventArgs e)
+        {
+            SearchSubject();
+        }
+
+        // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateSubject();
@@ -168,9 +174,8 @@ namespace MenaxhimiDitarit
         {
             DeleteSubject();
         }
-        #endregion
 
-        #region Search Textbox
+        // Textboxes
         private void txtSearchSubject_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchSubject.Text.Length > 0)
@@ -225,21 +230,9 @@ namespace MenaxhimiDitarit
             dgvSubjectList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("SubjectList", "ListaELëndëve", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvSubjectList, saveFileDialog.FileName, "SubjectList", "ListaELëndëve");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("SubjectList", "ListaELëndëve", ".xlsx", "Excel Workbook |*.xlsx", dgvSubjectList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -247,24 +240,11 @@ namespace MenaxhimiDitarit
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("SubjectList", "ListaELëndëve", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvSubjectList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("SubjectList", "ListaELëndëve", ".pdf", "Pdf Files|*.pdf", dgvSubjectList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

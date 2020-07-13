@@ -23,7 +23,7 @@ namespace MenaxhimiDitarit.DirectorForms
             _teacherBLL = new TeacherBLL();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
@@ -110,22 +110,8 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void DirectorTeacherListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
-        }
-
-        #region Button
-        private void btnViewAllTeachers_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        private void SearchTeacher()
         {
             try
             {
@@ -158,7 +144,27 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        #region Tool Strip Menu
+        #region Events
+        // Form
+        private void DirectorTeacherListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
+        }
+
+        // Buttons
+        private void btnViewAllTeachers_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        {
+            SearchTeacher();
+        }
+
+        // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateTeacher();
@@ -168,9 +174,8 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             DeleteTeacher();
         }
-        #endregion
 
-        #region Search Textbox
+        // Textbox
         private void txtSearchName_TextChanged(object sender, EventArgs e)
         {
             Validation.Capitalize(txtSearchName);
@@ -221,21 +226,9 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvTeacherListD.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvTeacherListD, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx", dgvTeacherListD);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -243,24 +236,11 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvTeacherListD, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf", dgvTeacherListD);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

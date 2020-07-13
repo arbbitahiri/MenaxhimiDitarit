@@ -31,7 +31,7 @@ namespace MenaxhimiDitarit.DirectorForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyReview = _reviewBLL.GetAllComment();
@@ -89,36 +89,8 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void ReviewComment_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Review List", "Lista e Shqyrtimeve të Vërejtjeve");
-        }
-
-        #region Grid Formatting
-        private void dgvReviewCommentList_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            Validation.CellFormatting(e, "Comment", "Vërejtja");
-            Validation.CellFormatting(e, "Review", "Shqyrtimi");
-        }
-
-        private void dgvReviewCommentList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
-        {
-            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
-            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
-        }
-        #endregion
-
-        #region Button
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchReview()
         {
             try
             {
@@ -151,7 +123,40 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        #region Tool Strip Menu
+        #region Events
+        // Form
+        private void ReviewComment_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Review List", "Lista e Shqyrtimeve të Vërejtjeve");
+        }
+
+        // Grid Formattings
+        private void dgvReviewCommentList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Comment", "Vërejtja");
+            Validation.CellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        private void dgvReviewCommentList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
+            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        // Buttons
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchReview();
+        }
+
+        // Tool Strip Menus
         private void reviewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateReview();
@@ -179,21 +184,9 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvReviewCommentList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ReviewList", "ListaEShqyrtimeveTëVërejtjeve", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvReviewCommentList, saveFileDialog.FileName, "ReviewList", "ListaEShqyrtimeveTëVërejtjeve");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("UserList", "ListaEPërdoruesve", ".xlsx", "Excel Workbook |*.xlsx", dgvReviewCommentList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -201,24 +194,11 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ReviewList", "ListaEShqyrtimeveTëVërejtjeve", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvReviewCommentList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ReviewList", "ListaEShqyrtimeveTëVërejtjeve", ".pdf", "Pdf Files|*.pdf", dgvReviewCommentList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

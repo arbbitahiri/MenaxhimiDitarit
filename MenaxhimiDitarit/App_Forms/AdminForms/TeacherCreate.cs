@@ -43,7 +43,7 @@ namespace MenaxhimiDitarit
             CostumizeDesign();
         }
 
-        #region Metodat
+        #region Methods
         private void CostumizeDesign()
         {
             txtID.Enabled = false;
@@ -61,10 +61,8 @@ namespace MenaxhimiDitarit
             txtEmail.Text = teacher.Email;
             txtPhoneNo.Text = teacher.PhoneNo;
         }
-        #endregion
 
-        #region Eventet
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateTeacher()
         {
             try
             {
@@ -201,7 +199,7 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -216,7 +214,21 @@ namespace MenaxhimiDitarit
                 this.Close();
             }
         }
+        #endregion
 
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateTeacher();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // DateTimePicker
         private void dtpBirthday_CloseUp(object sender, EventArgs e)
         {
             DateTime birthdate = Convert.ToDateTime(dtpBirthday.Text);
@@ -228,9 +240,8 @@ namespace MenaxhimiDitarit
                     "Arsimtari nuk duhet të jetë më i vogël se 18 vjet!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        #endregion
 
-        #region KeyPress
+        // TextBoxes
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoNumber(e);

@@ -74,7 +74,6 @@
             this.cmsUserContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.MasterTemplate = new Telerik.WinControls.UI.RadGridView();
@@ -183,7 +182,6 @@
             this.cmsUserContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.showPasswordToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.cmsUserContext.Name = "cmsUserContext";
             resources.ApplyResources(this.cmsUserContext, "cmsUserContext");
@@ -201,13 +199,6 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // showPasswordToolStripMenuItem
-            // 
-            this.showPasswordToolStripMenuItem.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_show_password_15;
-            this.showPasswordToolStripMenuItem.Name = "showPasswordToolStripMenuItem";
-            resources.ApplyResources(this.showPasswordToolStripMenuItem, "showPasswordToolStripMenuItem");
-            this.showPasswordToolStripMenuItem.Click += new System.EventHandler(this.showPasswordToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -741,7 +732,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private Telerik.WinControls.UI.GridViewTemplate gridViewTemplate1;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showPasswordToolStripMenuItem;
         private System.Windows.Forms.Panel pnlPicture;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.PictureBox picClass;

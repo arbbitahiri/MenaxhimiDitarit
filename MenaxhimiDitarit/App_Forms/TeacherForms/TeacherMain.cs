@@ -13,7 +13,7 @@ namespace MenaxhimiDitarit.TeacherForms
             CustomizeDesign();
         }
 
-        #region Methodat per Panel-et
+        #region Methods for Panels
         //Nuk i shfaqim Panel-et e Side Menus
         private void CustomizeDesign() {
             pnlTopics.Visible = false;

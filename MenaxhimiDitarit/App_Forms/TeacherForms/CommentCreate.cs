@@ -69,7 +69,7 @@ namespace MenaxhimiDitarit.TeacherForms
             PopulateForm(_comment);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -86,10 +86,8 @@ namespace MenaxhimiDitarit.TeacherForms
             dtpSelectDate.Value = comment.Date;
             txtComment.Text = comment.Comment;
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateComment()
         {
             try
             {
@@ -182,7 +180,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -196,6 +194,19 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        //Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateComment();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

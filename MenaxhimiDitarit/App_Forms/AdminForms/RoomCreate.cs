@@ -41,6 +41,7 @@ namespace MenaxhimiDitarit
             txtID.Enabled = false;
         }
 
+        #region Methods
         private void PopulateForm(Room room)
         {
             txtID.Text = room.RoomID.ToString();
@@ -48,8 +49,7 @@ namespace MenaxhimiDitarit
             txtRoomType.Text = room.RoomType;
         }
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateRoom()
         {
             try
             {
@@ -122,7 +122,7 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -136,6 +136,19 @@ namespace MenaxhimiDitarit
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateRoom();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

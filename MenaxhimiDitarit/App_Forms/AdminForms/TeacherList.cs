@@ -25,7 +25,7 @@ namespace MenaxhimiDitarit
             _teacherBLL = new TeacherBLL();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyTeachers = _teacherBLL.GetAll();
@@ -84,22 +84,8 @@ namespace MenaxhimiDitarit
             }
             RefreshList();
         }
-        #endregion
 
-        private void TeacherListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
-        }
-
-        #region Buttons
-        private void btnViewAllTeachers_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        private void SearchTeacher()
         {
             try
             {
@@ -133,12 +119,33 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
+        #region Events
+        // Form
+        private void TeacherListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Teacher List", "Lista e Arsimtarit");
+        }
+
+        // Buttons
+        private void btnViewAllTeachers_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        {
+            SearchTeacher();
+        }
+
+        // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateTeacher();
         }
 
-        #region Search Textbox
+        // Textboxes
         private void txtSearchName_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchName.Text.Length > 0)
@@ -187,21 +194,9 @@ namespace MenaxhimiDitarit
             dgvTeacherList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                 var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx");
-
-                 saveFileDialog.ShowDialog();
-
-                 Validation.ExportToExcel(dgvTeacherList, saveFileDialog.FileName, "TeacherList", "ListaEArsimtarit");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx", dgvTeacherList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -209,24 +204,11 @@ namespace MenaxhimiDitarit
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvTeacherList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf", dgvTeacherList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

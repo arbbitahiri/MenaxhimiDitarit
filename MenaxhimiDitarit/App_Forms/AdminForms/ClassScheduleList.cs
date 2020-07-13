@@ -32,7 +32,7 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MySchedules = _scheduleBLL.GetAll();
@@ -88,22 +88,8 @@ namespace MenaxhimiDitarit.AdminForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void ClassScheduletList_Load_1(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Class Schedule List", "Lista e Orarit të Klasës");
-        }
-
-        #region Button
-        private void btnViewAll_Click_1(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click_1(object sender, EventArgs e)
+        private void SearchClass()
         {
             try
             {
@@ -136,10 +122,32 @@ namespace MenaxhimiDitarit.AdminForms
         }
         #endregion
 
+        #region Events
+        // Form
+        private void ClassScheduletList_Load_1(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Class Schedule List", "Lista e Orarit të Klasës");
+        }
+
+        // Buttons
+        private void btnViewAll_Click_1(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            SearchClass();
+        }
+
+        // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateSchedule();
         }
+        #endregion
 
         #region Menu
         private void btnAddClass_Click(object sender, EventArgs e)
@@ -162,21 +170,9 @@ namespace MenaxhimiDitarit.AdminForms
             dgvScheduleList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassScheduleList", "ListaEOraritTëKlasës", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvScheduleList, saveFileDialog.FileName, "ClassScheduleList", "ListaEOraritTëKlasës");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ClassScheduleList", "ListaEOraritTëKlasës", ".xlsx", "Excel Workbook |*.xlsx", dgvScheduleList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,24 +180,11 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassScheduleList", "ListaEOraritTëKlasës", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvScheduleList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ClassScheduleList", "ListaEOraritTëKlasës", ".pdf", "Pdf Files|*.pdf", dgvScheduleList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

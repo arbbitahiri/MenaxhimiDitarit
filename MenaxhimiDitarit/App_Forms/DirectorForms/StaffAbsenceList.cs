@@ -29,7 +29,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             MyUsers = _userBLL.GetAllUser();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyStaffAbsences = _staffAbsenceBLL.GetAllStaffAbsence();
@@ -86,22 +86,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void StaffAbsenceList_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Staff Absence List", "Lista e Mungesës të Stafit");
-        }
-
-        #region Buttons
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        private void SearchStaffAbsence()
         {
             try
             {
@@ -134,10 +120,51 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
         #endregion
 
+        #region Events
+        // Form
+        private void StaffAbsenceList_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Staff Absence List", "Lista e Mungesës të Stafit");
+        }
+
+        // Buttons
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearchTeachers_Click(object sender, EventArgs e)
+        {
+            SearchStaffAbsence();
+        }
+
+        // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateStaffAbsence();
         }
+
+        // Textboxes
+        private void txtSearchName_Click(object sender, EventArgs e)
+        {
+            txtSearchName.Text = "";
+        }
+
+        private void txtSearchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearchTeachers_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtSearchName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validation.NoNumber(e);
+        }
+        #endregion
 
         #region Menu
         private void btnAddTeacher_Click(object sender, EventArgs e)
@@ -161,65 +188,20 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             dgvStaffAbsenceList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("StaffAbsenceList", "ListaEMungesësStafit", ".xlsx", "Excel Workbook |*.xlsx");
+            ExportFile.ExportExcel("StaffAbsenceList", "ListaEMungesësStafit", ".xlsx", "Excel Workbook |*.xlsx", dgvStaffAbsenceList);
 
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvStaffAbsenceList, saveFileDialog.FileName, "StaffAbsenceList", "ListaEMungesësStafit");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("StaffAbsenceList", "ListaEMungesësStafit", ".pdf", "Pdf Files|*.pdf");
+            ExportFile.ExportExcel("StaffAbsenceList", "ListaEMungesësStafit", ".pdf", "Pdf Files|*.pdf", dgvStaffAbsenceList);
 
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvStaffAbsenceList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
-        }
-        #endregion
-
-        #endregion
-
-        #region Search Textbox
-        private void txtSearchName_Click(object sender, EventArgs e)
-        {
-            txtSearchName.Text = "";
-        }
-
-        private void txtSearchName_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnSearchTeachers_Click(this, new EventArgs());
-            }
-        }
-
-        private void txtSearchName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Validation.NoNumber(e);
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
     }

@@ -34,22 +34,8 @@ namespace MenaxhimiDitarit.DirectorForms
             txtConfirmPass.UseSystemPasswordChar = true;
         }
 
-        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbShowPassword.Checked)
-            {
-                txtConfirmPass.UseSystemPasswordChar = false;
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-                txtConfirmPass.UseSystemPasswordChar = true;
-            }
-        }
-
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        #region Methods
+        private void CreateUser()
         {
             try
             {
@@ -116,7 +102,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -133,6 +119,19 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateUser();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // DateTimePicker
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
@@ -144,6 +143,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
         }
 
+        // TextBoxes
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoNumber(e);
@@ -153,6 +153,22 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             Validation.NoNumber(e);
         }
+
+        // CheckBox
+        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbShowPassword.Checked)
+            {
+                txtConfirmPass.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                txtConfirmPass.UseSystemPasswordChar = true;
+            }
+        }
+        #endregion
 
         #region ErrorProvider
         private void picFirstName_MouseHover(object sender, EventArgs e)

@@ -61,7 +61,7 @@ namespace MenaxhimiDitarit.AdminForms
             PopulateForm(_schedule);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtYear.Text = DateTime.Now.Year.ToString();
@@ -81,10 +81,8 @@ namespace MenaxhimiDitarit.AdminForms
             cmbSelectTime.SelectedItem = schedule.Time;
             cmbSelectDate.SelectedItem = schedule.Day;
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmitClass_Click(object sender, EventArgs e)
+        private void CreateSchedule()
         {
             try
             {
@@ -168,7 +166,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -182,6 +180,19 @@ namespace MenaxhimiDitarit.AdminForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmitClass_Click(object sender, EventArgs e)
+        {
+            CreateSchedule();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

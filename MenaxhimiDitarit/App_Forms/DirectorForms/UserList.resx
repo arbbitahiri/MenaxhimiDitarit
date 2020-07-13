@@ -285,12 +285,6 @@
   <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="showPasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 22</value>
-  </data>
-  <data name="showPasswordToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show Password</value>
-  </data>
   <data name="changePasswordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
   </data>
@@ -298,7 +292,7 @@
     <value>Change Password</value>
   </data>
   <data name="cmsUserContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 92</value>
+    <value>169, 70</value>
   </data>
   <data name="&gt;&gt;cmsUserContext.Name" xml:space="preserve">
     <value>cmsUserContext</value>
@@ -2324,12 +2318,6 @@
     <value>deleteToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;deleteToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showPasswordToolStripMenuItem.Name" xml:space="preserve">
-    <value>showPasswordToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;showPasswordToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;changePasswordToolStripMenuItem.Name" xml:space="preserve">

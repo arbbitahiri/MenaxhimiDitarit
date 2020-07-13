@@ -28,7 +28,7 @@ namespace MenaxhimiDitarit.DirectorForms
             CustomizeDesign();
         }
 
-        #region Metodat
+        #region Methods
 
         #region Menu
         private void CustomizeDesign()
@@ -172,31 +172,8 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void UserListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "User List", "Lista e Përdoruesve");
-        }
-
-        //private void dgvUserList_CellFormatting(object sender, CellFormattingEventArgs e)
-        //{
-        //    if (e.ColumnIndex == 4 && e.CellElement.Text != null)
-        //    {
-        //        dgvUserList.Rows[e.RowIndex].Tag = e.CellElement.Text;
-        //        e.CellElement.Text = new string('\u25CF', e.CellElement.ToString().Length);
-        //    }
-        //}
-
-        #region Button
-        private void btnViewAllUsers_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchUser()
         {
             try
             {
@@ -229,7 +206,27 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        #region Tool Strip Menu
+        #region Events
+        // Form
+        private void UserListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "User List", "Lista e Përdoruesve");
+        }
+
+        // Buttons
+        private void btnViewAllUsers_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchUser();
+        }
+
+        // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateUser();
@@ -245,25 +242,7 @@ namespace MenaxhimiDitarit.DirectorForms
             ChangePassword();
         }
 
-        private void showPasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvUserList.SelectedRows.Count > 0)
-            {
-                var row = dgvUserList.SelectedRows[0].Index;
-                if (row >= 0)
-                {
-                    var user = GetUser(dgvUserList.Rows[row]);
-                    if (user != null)
-                    {
-                        Validation.MessageBoxShow($"Username:\t{user.UserName}\nPassword:\t{user.UserPassword}", "Password",
-                            $"Nofka:\t{user.UserName}\nFjalëkalimi:\t{user.UserPassword}?", "Fjalëkalimi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
-        }
-        #endregion
-
-        #region Search Textbox
+        // Textboxes
         private void txtSearchUserByNU_Click(object sender, EventArgs e)
         {
             txtSearchUserByNU.Text = "";
@@ -321,21 +300,9 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvUserList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("UserList", "ListaEPërdoruesve", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvUserList, saveFileDialog.FileName, "UserList", "ListaEPërdoruesve");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("UserList", "ListaEPërdoruesve", ".xlsx", "Excel Workbook |*.xlsx", dgvUserList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -343,24 +310,11 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("UserList", "ListaEPërdoruesve", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvUserList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("UserList", "ListaEPërdoruesve", ".pdf", "Pdf Files|*.pdf", dgvUserList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

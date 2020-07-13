@@ -14,7 +14,7 @@ namespace MenaxhimiDitarit.DirectorForms
             CustomizeDesign();
         }
 
-        #region Methodat per Panel-et
+        #region Methods for Panels
         private void CustomizeDesign()
         {
             pnlTeachers.Visible = false;

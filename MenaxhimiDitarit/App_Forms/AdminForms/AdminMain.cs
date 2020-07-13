@@ -15,7 +15,7 @@ namespace MenaxhimiDitarit
             CustomizeDesign();
         }
 
-        #region Metodat per Panel-at
+        #region Methods for Panels
         private void CustomizeDesign()
         {
             pnlTeachers.Visible = false;

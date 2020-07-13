@@ -67,7 +67,7 @@ namespace MenaxhimiDitarit.TeacherForms
             PopulateForm(topic);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             dtpSelectDate.Enabled = false;
@@ -85,10 +85,8 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectTime.SelectedItem = topic.Time;
             txtContent.Text = topic.Content;
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateTopic()
         {
             try
             {
@@ -181,7 +179,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -195,6 +193,19 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateTopic();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

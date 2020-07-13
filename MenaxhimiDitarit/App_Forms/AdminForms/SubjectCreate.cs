@@ -58,6 +58,7 @@ namespace MenaxhimiDitarit
             txtSubjectTitle.Enabled = false;
         }
 
+        #region Methods
         private void PopulateForm(Subject subject)
         {
             txtID.Text = subject.SubjectID.ToString();
@@ -67,8 +68,7 @@ namespace MenaxhimiDitarit
             cmbTeacher.SelectedItem = MyTeachers.FirstOrDefault(f => f.TeacherID == subject.TeacherID);
         }
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateSubject()
         {
             try
             {
@@ -144,7 +144,7 @@ namespace MenaxhimiDitarit
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -161,10 +161,24 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateSubject();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // TextBoxes
         private void txtBookAuthor_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoNumber(e);
         }
+        #endregion
 
         #region ErrorProvider
         private void picSubjectTitle_MouseHover(object sender, EventArgs e)

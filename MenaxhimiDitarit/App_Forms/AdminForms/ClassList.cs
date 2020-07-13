@@ -27,7 +27,7 @@ namespace MenaxhimiDitarit
             _classBLL = new ClassBLL();
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyClasses = _classBLL.GetAll();
@@ -109,6 +109,8 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
+        #region Events
+        // Form
         private void ClassListForm_Load(object sender, EventArgs e)
         {
             RefreshList();
@@ -116,7 +118,7 @@ namespace MenaxhimiDitarit
             Validation.InitializePrintDocument(printDocument, "Class List", "Lista e Klasës");
         }
 
-        #region Button
+        // Buttons
         private void btnViewAllClass_Click(object sender, EventArgs e)
         {
             RefreshList();
@@ -152,9 +154,8 @@ namespace MenaxhimiDitarit
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
 
-        #region Tool Strip Menu
+        // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateClass();
@@ -184,9 +185,8 @@ namespace MenaxhimiDitarit
                 }
             };
         }
-        #endregion
 
-        #region Search Textbox
+        // Textboxes
         private void txtSearchClass_Click(object sender, EventArgs e)
         {
             txtSearchClass.Text = "";
@@ -232,21 +232,9 @@ namespace MenaxhimiDitarit
             dgvClassesList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExport_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvClassesList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx", dgvClassesList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -254,24 +242,11 @@ namespace MenaxhimiDitarit
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvClassesList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf", dgvClassesList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

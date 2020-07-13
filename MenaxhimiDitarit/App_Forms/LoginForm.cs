@@ -19,46 +19,8 @@ namespace MenaxhimiDitarit
             btnLogin.Enabled = false;
         }
 
-        #region TextBox
-        private void txtUsername_Click(object sender, EventArgs e)
-        {
-            txtUsername.Clear();
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-            txtPassword.Clear();
-            txtPassword.UseSystemPasswordChar = true;
-        }
-
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnLogin_Click(this, new EventArgs());
-            }
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            if (txtPassword.Text != "")
-            {
-                btnLogin.Enabled = true;
-            }
-            else
-            {
-                btnLogin.Enabled = false;
-            }
-        }
-        #endregion
-
-        #region Buttons
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        #region Methods
+        private void Login()
         {
             string username = txtUsername.Text;
             //string password = txtPassword.Text;
@@ -128,6 +90,51 @@ namespace MenaxhimiDitarit
         }
         #endregion
 
+        #region Events
+        // TextBoxes
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "")
+            {
+                btnLogin.Enabled = true;
+            }
+            else
+            {
+                btnLogin.Enabled = false;
+            }
+        }
+
+        // Buttons
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+
+        // CheckBox
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chbShowPassword.Checked)
@@ -141,6 +148,7 @@ namespace MenaxhimiDitarit
             }
         }
 
+        // ComboBox
         private void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbLanguage.SelectedIndex == 0)
@@ -152,5 +160,6 @@ namespace MenaxhimiDitarit
                 TranslateForm.ChangeLanguages("sq-XK");
             }
         }
+        #endregion
     }
 }

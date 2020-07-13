@@ -67,7 +67,7 @@ namespace MenaxhimiDitarit.TeacherForms
             PopulateForm(absence);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -84,10 +84,8 @@ namespace MenaxhimiDitarit.TeacherForms
             dtpSelectDate.Value = absence.Date;
             txtNoStudents.Text = absence.NoStudents.ToString();
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateAbsence()
         {
             try
             {
@@ -182,7 +180,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -196,6 +194,19 @@ namespace MenaxhimiDitarit.TeacherForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateAbsence();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

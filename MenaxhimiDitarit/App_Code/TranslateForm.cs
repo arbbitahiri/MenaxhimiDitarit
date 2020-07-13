@@ -1,13 +1,8 @@
 ﻿using MenaxhimiDitarit.DirectorForms;
 using MenaxhimiDitarit.TeacherForms;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 
@@ -81,7 +76,6 @@ namespace MenaxhimiDitarit.App_Code
         {
             foreach (Control control in controls)
             {
-                //localize c# winform current winform
                 if (control.Controls.Count > 0) TranslateControls(control.Controls, cultureInfo, resources);
                 if (control is ToolStrip)
                 {

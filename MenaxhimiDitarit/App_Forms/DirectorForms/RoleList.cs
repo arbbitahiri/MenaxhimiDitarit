@@ -26,26 +26,14 @@ namespace MenaxhimiDitarit.DirectorForms
             MyRoles = _rolesBLL.GetAll();
         }
 
+        #region Methods
         private void RefreshList()
         {
             MyRoles = _rolesBLL.GetAll();
             dgvRoleList.DataSource = MyRoles;
         }
 
-        private void RoleListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Role List", "Lista e Roleve");
-        }
-
-        #region Button
-        private void btnViewAllRoles_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchRole()
         {
             try
             {
@@ -78,7 +66,27 @@ namespace MenaxhimiDitarit.DirectorForms
         }
         #endregion
 
-        #region Search Textbox
+        #region Events
+        // Form
+        private void RoleListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Role List", "Lista e Roleve");
+        }
+
+        // Buttons
+        private void btnViewAllRoles_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchRole();
+        }
+
+        // Textboxes
         private void txtSearchUser_TextChanged(object sender, EventArgs e)
         {
             Validation.Capitalize(txtSearchUser);
@@ -109,21 +117,9 @@ namespace MenaxhimiDitarit.DirectorForms
             dgvRoleList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("RoleList", "ListaERoleve", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvRoleList, saveFileDialog.FileName, "RoleList", "ListaERoleve");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("RoleList", "ListaERoleve", ".xlsx", "Excel Workbook |*.xlsx", dgvRoleList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -131,24 +127,11 @@ namespace MenaxhimiDitarit.DirectorForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("RoleList", "ListaERoleve", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvRoleList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("RoleList", "ListaERoleve", ".pdf", "Pdf Files|*.pdf", dgvRoleList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

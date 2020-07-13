@@ -3,6 +3,7 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition.Primitives;
 using System.Data;
 using System.Linq;
 using System.Threading;
@@ -29,7 +30,7 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyComments = _commentBLL.GetAllComment();
@@ -86,36 +87,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void CommentList_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Comment List", "Lista e Vërejtjes");
-        }
-
-        #region Grid Formatting
-        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            Validation.CellFormatting(e, "Comment", "Vërejtja");
-            Validation.CellFormatting(e, "Review", "Shqyrtimi");
-        }
-
-        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
-        {
-            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
-            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
-        }
-        #endregion
-
-        #region Button
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchComment()
         {
             try
             {
@@ -146,15 +119,8 @@ namespace MenaxhimiDitarit.TeacherForms
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
 
-        #region Tool Strip Menu
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UpdateComment();
-        }
-
-        private void showCommentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowComment()
         {
             if (dgvCommentList.SelectedRows.Count > 0)
             {
@@ -180,6 +146,50 @@ namespace MenaxhimiDitarit.TeacherForms
         }
         #endregion
 
+        #region Events
+        private void CommentList_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Comment List", "Lista e Vërejtjes");
+        }
+
+        // Grid Formattings
+        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Comment", "Vërejtja");
+            Validation.CellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Comment", "Vërejtja");
+            Validation.PrintCellFormatting(e, "Review", "Shqyrtimi");
+        }
+
+        // Buttons
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchComment();
+        }
+
+        // Tool Strip Menus
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateComment();
+        }
+
+        private void showCommentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowComment();
+        }
+        #endregion
+
         #region Menu
         private void btnAddComment_Click(object sender, EventArgs e)
         {
@@ -202,21 +212,9 @@ namespace MenaxhimiDitarit.TeacherForms
             dgvCommentList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("CommentList", "ListaEVërejtjes", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvCommentList, saveFileDialog.FileName, "CommentList", "ListaEVërejtjes");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("CommentList", "ListaEVërejtjes", ".xlsx", "Excel Workbook |*.xlsx", dgvCommentList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -224,24 +222,11 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("CommentList", "ListaEVërejtjes", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvCommentList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportPDF("CommentList", "ListaEVërejtjes", ".pdf", "Pdf Files|*.pdf", dgvCommentList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

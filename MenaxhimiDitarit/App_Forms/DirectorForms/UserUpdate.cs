@@ -33,6 +33,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
+        #region Methods
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
@@ -43,8 +44,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbRoles.SelectedItem = MyRoles.FirstOrDefault(f => f.RoleID == user.RoleID);
         }
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void UpdateUser()
         {
             try
             {
@@ -99,7 +99,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -116,6 +116,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         }
         #endregion
 
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            UpdateUser();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // DateTimePicker
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {
             DateTime expireDate = Convert.ToDateTime(dtpExpireDate.Text);
@@ -127,6 +140,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
+        // TextBoxes
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validation.NoNumber(e);
@@ -136,6 +150,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             Validation.NoNumber(e);
         }
+        #endregion
 
         #region ErrorProvider
         private void picFirstName_MouseHover(object sender, EventArgs e)

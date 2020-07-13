@@ -27,28 +27,14 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(_user);
         }
 
+        #region Methods
         private void PopulateForm(User user)
         {
             txtID.Text = user.UserID.ToString();
             txtUsername.Text = user.UserName;
         }
 
-        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbShowPassword.Checked)
-            {
-                txtConfirmPass.UseSystemPasswordChar = false;
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-                txtConfirmPass.UseSystemPasswordChar = true;
-            }
-        }
-
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void ChangePassword()
         {
             try
             {
@@ -89,7 +75,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -102,6 +88,34 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             else
             {
                 this.Close();
+            }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            ChangePassword();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
+        }
+
+        // CheckBox
+        private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbShowPassword.Checked)
+            {
+                txtConfirmPass.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                txtConfirmPass.UseSystemPasswordChar = true;
             }
         }
         #endregion

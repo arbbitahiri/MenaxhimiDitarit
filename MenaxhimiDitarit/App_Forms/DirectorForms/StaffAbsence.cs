@@ -55,7 +55,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             PopulateForm(staffAbsence);
         }
 
-        #region Metodat
+        #region Methods
         private void CustomizeDesign()
         {
             txtID.Enabled = false;
@@ -68,10 +68,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             cmbStaff.SelectedItem = MyUsers.FirstOrDefault(f => f.UserID == staffAbsence.UserID);
             dtpAbsenceDate.Value = staffAbsence.StaffAbsenceDate;
         }
-        #endregion
 
-        #region Buttons
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void CreateStaffAbsence()
         {
             try
             {
@@ -136,15 +134,14 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string eee = ex.Message;
                 Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void CloseForm()
         {
             if (Validation.CheckTextbox(this))
             {
@@ -158,6 +155,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             {
                 this.Close();
             }
+        }
+        #endregion
+
+        #region Events
+        // Buttons
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            CreateStaffAbsence();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CloseForm();
         }
         #endregion
 

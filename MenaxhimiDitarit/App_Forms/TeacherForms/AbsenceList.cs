@@ -30,7 +30,7 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.DataSource = MySubjects;
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyAbsences = _absenceBLL.GetAllAbsence();
@@ -88,34 +88,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void AbsenceList_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Absence List", "Lista e Mungesës");
-        }
-
-        #region Grid Formatting
-        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            Validation.CellFormatting(e, "Reason", "Arsyeja");
-        }
-
-        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
-        {
-            Validation.PrintCellFormatting(e, "Reason", "Arsyeja");
-        }
-        #endregion
-
-        #region Button
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void SearchAbsence()
         {
             try
             {
@@ -148,10 +122,43 @@ namespace MenaxhimiDitarit.TeacherForms
         }
         #endregion
 
+        #region Events
+        // Form
+        private void AbsenceList_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Absence List", "Lista e Mungesës");
+        }
+
+        // Grid Formatting
+        private void MasterTemplate_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Reason", "Arsyeja");
+        }
+
+        private void MasterTemplate_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Reason", "Arsyeja");
+        }
+
+        // Buttons
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchAbsence();
+        }
+
+        // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateAbsence();
         }
+        #endregion
 
         #region Menu
         private void btnAddComment_Click(object sender, EventArgs e)
@@ -175,46 +182,21 @@ namespace MenaxhimiDitarit.TeacherForms
             dgvAbsenceList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("AbsenceList", "ListaEMungesës", ".xlsx", "Excel Workbook |*.xlsx");
+            ExportFile.ExportExcel("AbsenceList", "ListaEMungesës", ".xlsx", "Excel Workbook |*.xlsx", dgvAbsenceList);
 
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvAbsenceList, saveFileDialog.FileName, "AbsenceList", "ListaEMungesës");
-
-                Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("AbsenceList", "ListaEMungesës", ".pdf", "Pdf Files|*.pdf");
+            ExportFile.ExportExcel("AbsenceList", "ListaEMungesës", ".pdf", "Pdf Files|*.pdf", dgvAbsenceList);
 
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvAbsenceList, saveFileDialog.FileName);
-
-                Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }

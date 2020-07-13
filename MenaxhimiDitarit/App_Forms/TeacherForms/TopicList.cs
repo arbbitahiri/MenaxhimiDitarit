@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition.Primitives;
 using System.Data;
 using System.Linq;
 using System.Threading;
@@ -39,7 +40,7 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectClass.DataSource = MyClasses;
         }
 
-        #region Metodat
+        #region Methods
         private void RefreshList()
         {
             MyTopics = _topicBLL.GetAllTopic();
@@ -72,6 +73,38 @@ namespace MenaxhimiDitarit.TeacherForms
                 Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
+            }
+        }
+
+        private void SearchTopic()
+        {
+            try
+            {
+                if (_topicBLL != null)
+                {
+                    if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
+                    {
+                        var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
+                        && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
+
+                        dgvTopicList.DataSource = findTopic;
+                    }
+                    else
+                    {
+                        Validation.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
+                            "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    Validation.MessageBoxShow("Topic does not exist!", "Doesn't exist",
+                        "Tema nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,78 +155,8 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             RefreshList();
         }
-        #endregion
 
-        private void TopicListForm_Load(object sender, EventArgs e)
-        {
-            RefreshList();
-
-            Validation.InitializePrintDocument(printDocument, "Topic List", "Lista e Temave");
-        }
-
-        #region Grid Formatting
-        private void dgvTopicList_CellFormatting(object sender, CellFormattingEventArgs e)
-        {
-            Validation.CellFormatting(e, "Content", "Përmbajtja");
-        }
-
-        private void dgvTopicList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
-        {
-            Validation.PrintCellFormatting(e, "Content", "Përmbajtja");
-        }
-        #endregion
-
-        #region Button
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            RefreshList();
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (_topicBLL != null)
-                {
-                    if (cmbSelectSubject.SelectedIndex != -1 && cmbSelectClass.SelectedIndex != -1)
-                    {
-                        var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
-                        && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
-
-                        dgvTopicList.DataSource = findTopic;
-                    }
-                    else
-                    {
-                        Validation.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
-                            "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    Validation.MessageBoxShow("Topic does not exist!", "Doesn't exist",
-                        "Tema nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception)
-            {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
-                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
-        #region Tool Strip Menu
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UpdateTopic();
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DeleteTopic();
-        }
-
-        private void showContentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowFullContent()
         {
             if (dgvTopicList.SelectedRows.Count > 0)
             {
@@ -208,6 +171,54 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                 }
             }
+        }
+        #endregion
+
+        #region Events
+        // Form
+        private void TopicListForm_Load(object sender, EventArgs e)
+        {
+            RefreshList();
+
+            Validation.InitializePrintDocument(printDocument, "Topic List", "Lista e Temave");
+        }
+
+        // Grid Formattings
+        private void dgvTopicList_CellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            Validation.CellFormatting(e, "Content", "Përmbajtja");
+        }
+
+        private void dgvTopicList_PrintCellFormatting(object sender, PrintCellFormattingEventArgs e)
+        {
+            Validation.PrintCellFormatting(e, "Content", "Përmbajtja");
+        }
+
+        // Buttons
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchTopic();
+        }
+
+        // Tool Strip Menus
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateTopic();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteTopic();
+        }
+
+        private void showContentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowFullContent();
         }
         #endregion
 
@@ -238,21 +249,9 @@ namespace MenaxhimiDitarit.TeacherForms
             dgvTopicList.PrintPreview(printDocument);
         }
 
-        #region Export
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToExcel(dgvTopicList, saveFileDialog.FileName, "ClassList", "ListaEKlasës");
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx", dgvTopicList);
 
             Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -260,24 +259,11 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread((ThreadStart)(() =>
-            {
-                var saveFileDialog = Validation.SaveFile("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf");
-
-                saveFileDialog.ShowDialog();
-
-                Validation.ExportToPDF(dgvTopicList, saveFileDialog.FileName);
-            }));
-
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
+            ExportFile.ExportPDF("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf", dgvTopicList);
 
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
-
         #endregion
     }
 }
