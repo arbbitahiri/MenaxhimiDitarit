@@ -4,14 +4,11 @@ using System.Windows.Forms;
 using MenaxhimiDitarit.BO;
 using MenaxhimiDitarit.BLL;
 
-
-
 namespace MenaxhimiDitarit.App_Forms.AdminForms
 {
     public partial class ClassScheduler : Form
     {
         private Class _class;
-        private Topic _topic;
 
         private readonly ClassBLL _classBLL;
         private List<Class> MyClasses;

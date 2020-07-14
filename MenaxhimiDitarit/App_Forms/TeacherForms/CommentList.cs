@@ -1,13 +1,10 @@
 ﻿using MenaxhimiDitarit.App_Code;
-using MenaxhimiDitarit.App_Forms.AdminForms;
 using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.BO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition.Primitives;
 using System.Data;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
 

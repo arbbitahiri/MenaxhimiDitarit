@@ -5,7 +5,6 @@ using MenaxhimiDitarit.BLL;
 using MenaxhimiDitarit.TeacherForms;
 using MenaxhimiDitarit.DirectorForms;
 using MenaxhimiDitarit.App_Code;
-using System.Threading;
 
 namespace MenaxhimiDitarit
 {

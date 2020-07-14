@@ -7,8 +7,6 @@ using System.Windows.Forms;
 using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
 using MenaxhimiDitarit.App_Code;
-using System.Threading;
-using MenaxhimiDitarit.App_Forms.AdminForms;
 
 namespace MenaxhimiDitarit.TeacherForms
 {

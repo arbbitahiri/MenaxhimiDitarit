@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Security.Cryptography;
-using MenaxhimiDitarit.BO;
+﻿using MenaxhimiDitarit.BO;
 using MenaxhimiDitarit.DAL;
 
 namespace MenaxhimiDitarit.BLL
