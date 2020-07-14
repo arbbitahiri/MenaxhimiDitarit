@@ -52,6 +52,8 @@
             this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
             this.txtReview = new System.Windows.Forms.TextBox();
             this.lblReview = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHELP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picReview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).BeginInit();
             this.SuspendLayout();
@@ -213,11 +215,32 @@
             this.lblReview.ForeColor = System.Drawing.Color.White;
             this.lblReview.Name = "lblReview";
             // 
+            // btnExit
+            // 
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_35;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // Review
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHELP);
             this.Controls.Add(this.cmbSelectSubject);
             this.Controls.Add(this.dtpReviewDate);
             this.Controls.Add(this.label1);
@@ -272,5 +295,7 @@
         private System.Windows.Forms.BindingSource bsrcSubject;
         private System.Windows.Forms.TextBox txtReview;
         private System.Windows.Forms.Label lblReview;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

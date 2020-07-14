@@ -56,6 +56,7 @@
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.btnHELP = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlComments.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlMain.Controls.Add(this.btnHELP);
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Controls.Add(this.pnlComments);
             this.pnlMain.Controls.Add(this.btnComments);
@@ -288,6 +290,15 @@
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Name = "lblDate";
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // TeacherMain
             // 
             resources.ApplyResources(this, "$this");
@@ -304,6 +315,7 @@
             this.Name = "TeacherMain";
             this.Shown += new System.EventHandler(this.TeacherMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pnlComments.ResumeLayout(false);
             this.pnlAbsences.ResumeLayout(false);
@@ -348,5 +360,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblSDM;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

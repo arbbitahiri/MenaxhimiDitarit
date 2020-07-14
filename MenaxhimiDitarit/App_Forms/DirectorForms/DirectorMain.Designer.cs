@@ -58,6 +58,7 @@
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
+            this.btnHELP = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.pnlStaff.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.pnlMain.Controls.Add(this.btnHELP);
             this.pnlMain.Controls.Add(this.btnReview);
             this.pnlMain.Controls.Add(this.btnRoles);
             this.pnlMain.Controls.Add(this.pnlStaff);
@@ -107,15 +109,15 @@
             // 
             // pnlStaff
             // 
-            resources.ApplyResources(this.pnlStaff, "pnlStaff");
             this.pnlStaff.Controls.Add(this.btnAddAbsenceStaff);
             this.pnlStaff.Controls.Add(this.btnListStaff);
+            resources.ApplyResources(this.pnlStaff, "pnlStaff");
             this.pnlStaff.Name = "pnlStaff";
             // 
             // btnAddAbsenceStaff
             // 
-            resources.ApplyResources(this.btnAddAbsenceStaff, "btnAddAbsenceStaff");
             this.btnAddAbsenceStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddAbsenceStaff, "btnAddAbsenceStaff");
             this.btnAddAbsenceStaff.FlatAppearance.BorderSize = 0;
             this.btnAddAbsenceStaff.ForeColor = System.Drawing.Color.White;
             this.btnAddAbsenceStaff.Name = "btnAddAbsenceStaff";
@@ -124,8 +126,8 @@
             // 
             // btnListStaff
             // 
-            resources.ApplyResources(this.btnListStaff, "btnListStaff");
             this.btnListStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListStaff, "btnListStaff");
             this.btnListStaff.FlatAppearance.BorderSize = 0;
             this.btnListStaff.ForeColor = System.Drawing.Color.White;
             this.btnListStaff.Name = "btnListStaff";
@@ -144,9 +146,9 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.btnSignOut);
             this.panel1.Controls.Add(this.btnExit);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // btnSignOut
@@ -169,15 +171,15 @@
             // 
             // pnlUsers
             // 
-            resources.ApplyResources(this.pnlUsers, "pnlUsers");
             this.pnlUsers.Controls.Add(this.btnAddNUser);
             this.pnlUsers.Controls.Add(this.btnListUsers);
+            resources.ApplyResources(this.pnlUsers, "pnlUsers");
             this.pnlUsers.Name = "pnlUsers";
             // 
             // btnAddNUser
             // 
-            resources.ApplyResources(this.btnAddNUser, "btnAddNUser");
             this.btnAddNUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddNUser, "btnAddNUser");
             this.btnAddNUser.FlatAppearance.BorderSize = 0;
             this.btnAddNUser.ForeColor = System.Drawing.Color.White;
             this.btnAddNUser.Name = "btnAddNUser";
@@ -186,8 +188,8 @@
             // 
             // btnListUsers
             // 
-            resources.ApplyResources(this.btnListUsers, "btnListUsers");
             this.btnListUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListUsers, "btnListUsers");
             this.btnListUsers.FlatAppearance.BorderSize = 0;
             this.btnListUsers.ForeColor = System.Drawing.Color.White;
             this.btnListUsers.Name = "btnListUsers";
@@ -206,15 +208,15 @@
             // 
             // pnlTeachers
             // 
-            resources.ApplyResources(this.pnlTeachers, "pnlTeachers");
             this.pnlTeachers.Controls.Add(this.btnAddNTeacher);
             this.pnlTeachers.Controls.Add(this.btnListTeachers);
+            resources.ApplyResources(this.pnlTeachers, "pnlTeachers");
             this.pnlTeachers.Name = "pnlTeachers";
             // 
             // btnAddNTeacher
             // 
-            resources.ApplyResources(this.btnAddNTeacher, "btnAddNTeacher");
             this.btnAddNTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnAddNTeacher, "btnAddNTeacher");
             this.btnAddNTeacher.FlatAppearance.BorderSize = 0;
             this.btnAddNTeacher.ForeColor = System.Drawing.Color.White;
             this.btnAddNTeacher.Name = "btnAddNTeacher";
@@ -223,8 +225,8 @@
             // 
             // btnListTeachers
             // 
-            resources.ApplyResources(this.btnListTeachers, "btnListTeachers");
             this.btnListTeachers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.btnListTeachers, "btnListTeachers");
             this.btnListTeachers.FlatAppearance.BorderSize = 0;
             this.btnListTeachers.ForeColor = System.Drawing.Color.White;
             this.btnListTeachers.Name = "btnListTeachers";
@@ -243,9 +245,9 @@
             // 
             // pnlPic
             // 
-            resources.ApplyResources(this.pnlPic, "pnlPic");
             this.pnlPic.Controls.Add(this.lblDirector);
             this.pnlPic.Controls.Add(this.picDirector);
+            resources.ApplyResources(this.pnlPic, "pnlPic");
             this.pnlPic.Name = "pnlPic";
             // 
             // lblDirector
@@ -263,10 +265,10 @@
             // 
             // pnlChildForm
             // 
-            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.pnlChildForm.Controls.Add(this.lblSDM);
             this.pnlChildForm.Controls.Add(this.picSchool);
+            resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.Name = "pnlChildForm";
             // 
             // lblSDM
@@ -312,6 +314,15 @@
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Name = "lblDate";
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // DirectorMain
             // 
             resources.ApplyResources(this, "$this");
@@ -328,6 +339,7 @@
             this.Name = "DirectorMain";
             this.Shown += new System.EventHandler(this.DirectorMainForm_Shown);
             this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.pnlStaff.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.pnlUsers.ResumeLayout(false);
@@ -374,5 +386,6 @@
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnReview;
         private System.Windows.Forms.Button btnRoles;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

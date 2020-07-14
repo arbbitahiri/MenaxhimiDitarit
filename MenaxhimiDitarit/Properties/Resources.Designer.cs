@@ -63,6 +63,16 @@ namespace MenaxhimiDitarit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_schools {
+            get {
+                object obj = ResourceManager.GetObject("icon-schools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_1_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-1-20", resourceCulture);

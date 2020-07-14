@@ -49,6 +49,8 @@
             this.picMainTeacher = new System.Windows.Forms.PictureBox();
             this.picClass = new System.Windows.Forms.PictureBox();
             this.picRoom = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHELP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainTeacher)).BeginInit();
@@ -58,10 +60,10 @@
             // 
             // btnSubmitClass
             // 
-            resources.ApplyResources(this.btnSubmitClass, "btnSubmitClass");
             this.btnSubmitClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmitClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmitClass.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSubmitClass, "btnSubmitClass");
             this.btnSubmitClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmitClass.Name = "btnSubmitClass";
             this.btnSubmitClass.UseVisualStyleBackColor = false;
@@ -69,10 +71,10 @@
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -86,8 +88,8 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // lblID
@@ -98,15 +100,15 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -125,22 +127,22 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // cmbMainTeacher
             // 
-            resources.ApplyResources(this.cmbMainTeacher, "cmbMainTeacher");
             this.cmbMainTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.cmbMainTeacher.DataSource = this.bsrcTeacher;
             this.cmbMainTeacher.DisplayMember = "FullName";
+            resources.ApplyResources(this.cmbMainTeacher, "cmbMainTeacher");
             this.cmbMainTeacher.ForeColor = System.Drawing.Color.White;
             this.cmbMainTeacher.FormattingEnabled = true;
             this.cmbMainTeacher.Name = "cmbMainTeacher";
@@ -153,8 +155,8 @@
             // 
             // cmbSelectClass
             // 
-            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
             this.cmbSelectClass.Items.AddRange(new object[] {
@@ -172,10 +174,10 @@
             // 
             // cmbSelectRoom
             // 
-            resources.ApplyResources(this.cmbSelectRoom, "cmbSelectRoom");
             this.cmbSelectRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.cmbSelectRoom.DataSource = this.bsrcRoom;
             this.cmbSelectRoom.DisplayMember = "RoomType";
+            resources.ApplyResources(this.cmbSelectRoom, "cmbSelectRoom");
             this.cmbSelectRoom.ForeColor = System.Drawing.Color.White;
             this.cmbSelectRoom.FormattingEnabled = true;
             this.cmbSelectRoom.Name = "cmbSelectRoom";
@@ -188,33 +190,54 @@
             // 
             // picMainTeacher
             // 
-            resources.ApplyResources(this.picMainTeacher, "picMainTeacher");
             this.picMainTeacher.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picMainTeacher, "picMainTeacher");
             this.picMainTeacher.Name = "picMainTeacher";
             this.picMainTeacher.TabStop = false;
             this.picMainTeacher.MouseHover += new System.EventHandler(this.picMainTeacher_MouseHover);
             // 
             // picClass
             // 
-            resources.ApplyResources(this.picClass, "picClass");
             this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picClass, "picClass");
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             this.picClass.MouseHover += new System.EventHandler(this.picClass_MouseHover);
             // 
             // picRoom
             // 
-            resources.ApplyResources(this.picRoom, "picRoom");
             this.picRoom.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picRoom, "picRoom");
             this.picRoom.Name = "picRoom";
             this.picRoom.TabStop = false;
             this.picRoom.MouseHover += new System.EventHandler(this.picRoom_MouseHover);
+            // 
+            // btnExit
+            // 
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_35;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
             // 
             // ClassCreate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHELP);
             this.Controls.Add(this.picRoom);
             this.Controls.Add(this.picClass);
             this.Controls.Add(this.picMainTeacher);
@@ -265,5 +288,7 @@
         private System.Windows.Forms.PictureBox picMainTeacher;
         private System.Windows.Forms.PictureBox picClass;
         private System.Windows.Forms.PictureBox picRoom;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

@@ -55,6 +55,8 @@
             this.picLastName = new System.Windows.Forms.PictureBox();
             this.picRole = new System.Windows.Forms.PictureBox();
             this.picUsername = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnHELP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLastName)).BeginInit();
@@ -77,16 +79,16 @@
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // cmbRoles
             // 
-            resources.ApplyResources(this.cmbRoles, "cmbRoles");
             this.cmbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.cmbRoles.DataSource = this.bsrcRole;
             this.cmbRoles.DisplayMember = "RoleName";
+            resources.ApplyResources(this.cmbRoles, "cmbRoles");
             this.cmbRoles.ForeColor = System.Drawing.Color.White;
             this.cmbRoles.FormattingEnabled = true;
             this.cmbRoles.Name = "cmbRoles";
@@ -105,8 +107,8 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // lblID
@@ -117,15 +119,15 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // txtID
             // 
-            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtID, "txtID");
             this.txtID.ForeColor = System.Drawing.Color.White;
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -144,21 +146,21 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // txtLastName
             // 
-            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtLastName, "txtLastName");
             this.txtLastName.ForeColor = System.Drawing.Color.White;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
@@ -166,9 +168,9 @@
             // 
             // txtFirstName
             // 
-            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtFirstName, "txtFirstName");
             this.txtFirstName.ForeColor = System.Drawing.Color.White;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
@@ -182,25 +184,25 @@
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // txtUsername
             // 
-            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnSubmit
             // 
-            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -208,10 +210,10 @@
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -219,41 +221,62 @@
             // 
             // picFirstName
             // 
-            resources.ApplyResources(this.picFirstName, "picFirstName");
             this.picFirstName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picFirstName, "picFirstName");
             this.picFirstName.Name = "picFirstName";
             this.picFirstName.TabStop = false;
             this.picFirstName.MouseHover += new System.EventHandler(this.picFirstName_MouseHover);
             // 
             // picLastName
             // 
-            resources.ApplyResources(this.picLastName, "picLastName");
             this.picLastName.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picLastName, "picLastName");
             this.picLastName.Name = "picLastName";
             this.picLastName.TabStop = false;
             this.picLastName.MouseHover += new System.EventHandler(this.picLastName_MouseHover);
             // 
             // picRole
             // 
-            resources.ApplyResources(this.picRole, "picRole");
             this.picRole.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picRole, "picRole");
             this.picRole.Name = "picRole";
             this.picRole.TabStop = false;
             this.picRole.MouseHover += new System.EventHandler(this.picRole_MouseHover);
             // 
             // picUsername
             // 
-            resources.ApplyResources(this.picUsername, "picUsername");
             this.picUsername.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_cancel_15;
+            resources.ApplyResources(this.picUsername, "picUsername");
             this.picUsername.Name = "picUsername";
             this.picUsername.TabStop = false;
             this.picUsername.MouseHover += new System.EventHandler(this.picUsername_MouseHover);
+            // 
+            // btnExit
+            // 
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_35;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
             // 
             // UserUpdate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHELP);
             this.Controls.Add(this.picUsername);
             this.Controls.Add(this.picRole);
             this.Controls.Add(this.picLastName);
@@ -317,5 +340,7 @@
         private System.Windows.Forms.PictureBox picLastName;
         private System.Windows.Forms.PictureBox picRole;
         private System.Windows.Forms.PictureBox picUsername;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnHELP;
     }
 }
