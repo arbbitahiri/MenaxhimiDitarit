@@ -450,6 +450,51 @@
   <data name="&gt;&gt;cmsReviewComment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="btnHELP.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnHELP.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="btnHELP.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnHELP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="btnHELP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnHELP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 507</value>
+  </data>
+  <data name="btnHELP.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 0, 0</value>
+  </data>
+  <data name="btnHELP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 56</value>
+  </data>
+  <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnHELP.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnHELP.Name" xml:space="preserve">
+    <value>btnHELP</value>
+  </data>
+  <data name="&gt;&gt;btnHELP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnHELP.Parent" xml:space="preserve">
+    <value>pnlClassMain</value>
+  </data>
+  <data name="&gt;&gt;btnHELP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnExportPDF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -499,7 +544,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;btnExportPDF.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnExportExcel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -550,7 +595,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;btnExportExcel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnPrint.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -598,7 +643,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnUpdate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -643,7 +688,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnReview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -688,7 +733,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;btnReview.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblComment.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -772,7 +817,7 @@
     <value>pnlClassMain</value>
   </data>
   <data name="&gt;&gt;pnlPicture.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pnlClassMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>

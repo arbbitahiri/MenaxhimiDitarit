@@ -304,11 +304,15 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
             UpdateUser();
+
+            HideSubMenu();
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword();
+
+            HideSubMenu();
         }
         #endregion
 

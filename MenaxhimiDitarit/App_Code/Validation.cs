@@ -6,6 +6,7 @@ using Telerik.WinControls.UI;
 using System.Drawing;
 using Telerik.WinControls;
 using System.Security.Cryptography;
+using MenaxhimiDitarit.App_Forms.AdminForms;
 
 namespace MenaxhimiDitarit.App_Code
 {
@@ -75,6 +76,18 @@ namespace MenaxhimiDitarit.App_Code
             {
                 toolTip.Show(mesazhi, pictureBox);
             }
+        }
+
+        /// <summary>
+        /// Shows class schedule depending on selected class
+        /// </summary>
+        public static void ShowClassSchedule(int classNo)
+        {
+            ClassScheduler viewSchedule = new ClassScheduler(classNo)
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            viewSchedule.ShowDialog();
         }
 
         /// <summary>

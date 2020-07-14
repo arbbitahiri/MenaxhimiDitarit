@@ -104,6 +104,7 @@
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
             this.dgvUserList = new Telerik.WinControls.UI.RadGridView();
             this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
+            this.btnHELP = new System.Windows.Forms.Button();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.cmsUserContext.SuspendLayout();
@@ -481,6 +482,7 @@
             // pnlUserMain
             // 
             resources.ApplyResources(this.pnlUserMain, "pnlUserMain");
+            this.pnlUserMain.Controls.Add(this.btnHELP);
             this.pnlUserMain.Controls.Add(this.btnExportPDF);
             this.pnlUserMain.Controls.Add(this.btnExportExcel);
             this.pnlUserMain.Controls.Add(this.btnPrintUser);
@@ -683,6 +685,15 @@
             // 
             this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // UserList
             // 
             resources.ApplyResources(this, "$this");
@@ -758,5 +769,6 @@
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnPrintUser;
         private System.Windows.Forms.Button btnDeleteU;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

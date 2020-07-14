@@ -151,7 +151,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 520</value>
+    <value>0, 575</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 65</value>
@@ -505,7 +505,7 @@
     <value>0, 0</value>
   </data>
   <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 585</value>
+    <value>200, 640</value>
   </data>
   <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -864,6 +864,54 @@
   <data name="&gt;&gt;picTeacher.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;lblSDM.Name" xml:space="preserve">
+    <value>lblSDM</value>
+  </data>
+  <data name="&gt;&gt;lblSDM.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSDM.Parent" xml:space="preserve">
+    <value>pnlChildForm</value>
+  </data>
+  <data name="&gt;&gt;lblSDM.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;picSchool.Name" xml:space="preserve">
+    <value>picSchool</value>
+  </data>
+  <data name="&gt;&gt;picSchool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picSchool.Parent" xml:space="preserve">
+    <value>pnlChildForm</value>
+  </data>
+  <data name="&gt;&gt;picSchool.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlChildForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlChildForm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 0</value>
+  </data>
+  <data name="pnlChildForm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>950, 615</value>
+  </data>
+  <data name="pnlChildForm.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlChildForm.Name" xml:space="preserve">
+    <value>pnlChildForm</value>
+  </data>
+  <data name="&gt;&gt;pnlChildForm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlChildForm.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlChildForm.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="lblSDM.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -898,7 +946,7 @@
     <value>None</value>
   </data>
   <data name="picSchool.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 205</value>
+    <value>418, 231</value>
   </data>
   <data name="picSchool.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 99</value>
@@ -921,30 +969,6 @@
   <data name="&gt;&gt;picSchool.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pnlChildForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="pnlChildForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 0</value>
-  </data>
-  <data name="pnlChildForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 563</value>
-  </data>
-  <data name="pnlChildForm.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlChildForm.Name" xml:space="preserve">
-    <value>pnlChildForm</value>
-  </data>
-  <data name="&gt;&gt;pnlChildForm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlChildForm.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlChildForm.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -952,7 +976,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 566</value>
+    <value>280, 620</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -979,7 +1003,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblUser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 566</value>
+    <value>210, 620</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>
@@ -1009,7 +1033,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblWelcomeName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1082, 566</value>
+    <value>1084, 619</value>
   </data>
   <data name="lblWelcomeName.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -1036,7 +1060,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1016, 566</value>
+    <value>1023, 619</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -1066,7 +1090,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 566</value>
+    <value>675, 620</value>
   </data>
   <data name="lblDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -1093,7 +1117,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1150, 585</value>
+    <value>1150, 640</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -70,6 +70,7 @@
             this.lblSchedule = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
+            this.btnHELP = new System.Windows.Forms.Button();
             this.cmsScheduleContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvScheduleList.MasterTemplate)).BeginInit();
@@ -316,6 +317,7 @@
             // 
             // pnlClassMain
             // 
+            this.pnlClassMain.Controls.Add(this.btnHELP);
             this.pnlClassMain.Controls.Add(this.btnExportPDF);
             this.pnlClassMain.Controls.Add(this.btnExportExcel);
             this.pnlClassMain.Controls.Add(this.btnPrint);
@@ -401,6 +403,15 @@
             this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.Watermark = radPrintWatermark1;
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // ClassScheduletList
             // 
             resources.ApplyResources(this, "$this");
@@ -454,5 +465,6 @@
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnPrint;
         private Telerik.WinControls.UI.RadPrintDocument printDocument;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

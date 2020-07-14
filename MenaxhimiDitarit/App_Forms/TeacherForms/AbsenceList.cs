@@ -8,6 +8,7 @@ using MenaxhimiDitarit.BO;
 using Telerik.WinControls.UI;
 using MenaxhimiDitarit.App_Code;
 using System.Threading;
+using MenaxhimiDitarit.App_Forms.AdminForms;
 
 namespace MenaxhimiDitarit.TeacherForms
 {
@@ -28,9 +29,46 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MySubjects = _subjectBLL.GetAll();
             cmbSelectSubject.DataSource = MySubjects;
+
+            CustomizeDesign();
         }
 
         #region Methods
+
+        #region Methods for Panels
+        /// <summary>
+        /// Hides all the panels in Menu
+        /// </summary>
+        private void CustomizeDesign()
+        {
+            pnlClassSchedules.Visible = false;
+        }
+
+        /// <summary>
+        /// Hides other submenu in Menu when it's button is clicked
+        /// </summary>
+        private void HideSubMenu()
+        {
+            if (pnlClassSchedules.Visible == true)
+                pnlClassSchedules.Visible = false;
+        }
+
+        /// <summary>
+        /// Shows the submenu when the button is clicked
+        /// </summary>
+        /// <param name="subMenu">The panel we want to show</param>
+        private void ShowSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                HideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        #endregion
+
         /// <summary>
         /// Refreshes the list
         /// </summary>
@@ -211,6 +249,59 @@ namespace MenaxhimiDitarit.TeacherForms
             Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        #region Class Schedules
+        private void btnClassSchedule_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlClassSchedules);
+        }
+
+        private void btnClass1_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(1);
+        }
+
+        private void btnClass2_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(2);
+        }
+
+        private void btnClass3_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(3);
+        }
+
+        private void btnClass4_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(4);
+        }
+
+        private void btnClass5_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(5);
+        }
+
+        private void btnClass6_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(6);
+        }
+
+        private void btnClass7_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(7);
+        }
+
+        private void btnClass8_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(8);
+        }
+
+        private void btnClass9_Click(object sender, EventArgs e)
+        {
+            Validation.ShowClassSchedule(9);
+        }
+        #endregion
+
         #endregion
     }
 }

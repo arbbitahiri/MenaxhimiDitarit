@@ -67,6 +67,7 @@
             this.lblAdmin = new System.Windows.Forms.Label();
             this.picClass = new System.Windows.Forms.PictureBox();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
+            this.btnHELP = new System.Windows.Forms.Button();
             this.grbSearchClass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsClassContext.SuspendLayout();
@@ -277,6 +278,7 @@
             // 
             // pnlClassMain
             // 
+            this.pnlClassMain.Controls.Add(this.btnHELP);
             this.pnlClassMain.Controls.Add(this.btnExportPDF);
             this.pnlClassMain.Controls.Add(this.btnExport);
             this.pnlClassMain.Controls.Add(this.btnPrintM);
@@ -373,6 +375,15 @@
             this.printDocument.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printDocument.Watermark = radPrintWatermark1;
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // ClassList
             // 
             resources.ApplyResources(this, "$this");
@@ -425,5 +436,6 @@
         private Telerik.WinControls.UI.RadPrintDocument printDocument;
         private System.Windows.Forms.Button btnExportPDF;
         private System.Windows.Forms.Button btnPrintM;
+        private System.Windows.Forms.Button btnHELP;
     }
 }

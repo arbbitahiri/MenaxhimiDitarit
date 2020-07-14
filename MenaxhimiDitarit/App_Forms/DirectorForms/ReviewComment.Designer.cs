@@ -76,6 +76,7 @@
             this.picClass = new System.Windows.Forms.PictureBox();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
             this.bsrcSubject = new System.Windows.Forms.BindingSource(this.components);
+            this.btnHELP = new System.Windows.Forms.Button();
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReviewCommentList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReviewCommentList.MasterTemplate)).BeginInit();
@@ -336,6 +337,7 @@
             // 
             // pnlClassMain
             // 
+            this.pnlClassMain.Controls.Add(this.btnHELP);
             this.pnlClassMain.Controls.Add(this.btnExportPDF);
             this.pnlClassMain.Controls.Add(this.btnExportExcel);
             this.pnlClassMain.Controls.Add(this.btnPrint);
@@ -425,6 +427,15 @@
             // 
             this.bsrcSubject.DataSource = typeof(MenaxhimiDitarit.BO.Subject);
             // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
+            // 
             // ReviewComment
             // 
             resources.ApplyResources(this, "$this");
@@ -479,5 +490,6 @@
         private System.Windows.Forms.BindingSource bsrcSubject;
         private System.Windows.Forms.ComboBox cmbSelectSubject;
         private System.Windows.Forms.Label lblSelectSubject;
+        private System.Windows.Forms.Button btnHELP;
     }
 }
