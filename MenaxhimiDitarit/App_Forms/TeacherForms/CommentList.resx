@@ -117,135 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Name" xml:space="preserve">
-    <value>btnViewAll</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Name" xml:space="preserve">
-    <value>dtpSelectDay</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Name" xml:space="preserve">
-    <value>cmbSelectSubject</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Name" xml:space="preserve">
-    <value>lblSelectSubject</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Name" xml:space="preserve">
-    <value>lblSelectDay</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 12</value>
-  </data>
-  <data name="grbSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>606, 111</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="grbSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="grbSearch.Text" xml:space="preserve">
-    <value>Search Comment</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Name" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt</value>
   </data>
@@ -255,6 +131,7 @@
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 32</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
@@ -357,9 +234,6 @@
   <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="bsrcSubject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>561, 17</value>
-  </metadata>
   <data name="lblSelectSubject.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -462,9 +336,48 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 12</value>
+  </data>
+  <data name="grbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>606, 111</value>
+  </data>
+  <data name="grbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grbSearch.Text" xml:space="preserve">
+    <value>Search Comment</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Name" xml:space="preserve">
+    <value>grbSearch</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="cmsComment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>300, 17</value>
   </metadata>
+  <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 22</value>
+  </data>
+  <data name="updateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="showCommentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 22</value>
+  </data>
+  <data name="showCommentToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Comment and Review</value>
+  </data>
   <data name="cmsComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 48</value>
   </data>
@@ -483,25 +396,25 @@
   <data name="dgvCommentList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
-  <data name="gridViewDecimalColumn55.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>CommentID</value>
   </data>
-  <data name="gridViewDateTimeColumn28.HeaderText" xml:space="preserve">
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="gridViewDecimalColumn58.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
     <value>Time</value>
   </data>
-  <data name="gridViewTextBoxColumn75.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Comment</value>
   </data>
-  <data name="gridViewTextBoxColumn76.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Review</value>
   </data>
-  <data name="gridViewTextBoxColumn77.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>Class</value>
   </data>
-  <data name="gridViewTextBoxColumn78.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Subject</value>
   </data>
   <metadata name="bsrcComment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -527,18 +440,6 @@
   </data>
   <data name="&gt;&gt;dgvCommentList.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="updateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
-  </data>
-  <data name="updateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="showCommentToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 22</value>
-  </data>
-  <data name="showCommentToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show Comment and Review</value>
   </data>
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1203,6 +1104,27 @@
   <data name="&gt;&gt;btnAddComment.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lblComment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblComment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="lblComment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 103</value>
+  </data>
+  <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 25</value>
+  </data>
+  <data name="lblComment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblComment.Text" xml:space="preserve">
+    <value>Comment List</value>
+  </data>
   <data name="&gt;&gt;lblComment.Name" xml:space="preserve">
     <value>lblComment</value>
   </data>
@@ -1213,6 +1135,21 @@
     <value>pnlPicture</value>
   </data>
   <data name="&gt;&gt;lblComment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 100</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;picClass.Name" xml:space="preserve">
@@ -1273,66 +1210,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lblComment.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblComment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="lblComment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 103</value>
-  </data>
-  <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 25</value>
-  </data>
-  <data name="lblComment.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblComment.Text" xml:space="preserve">
-    <value>Comment List</value>
-  </data>
-  <data name="&gt;&gt;lblComment.Name" xml:space="preserve">
-    <value>lblComment</value>
-  </data>
-  <data name="&gt;&gt;lblComment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblComment.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;lblComment.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 100</value>
-  </data>
-  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
-    <value>picClass</value>
-  </data>
-  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="printDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

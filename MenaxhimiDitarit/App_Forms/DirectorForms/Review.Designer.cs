@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Review));
             this.txtComment = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblRoomNo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,24 +66,12 @@
             this.txtComment.ReadOnly = true;
             this.txtComment.TextChanged += new System.EventHandler(this.txtComment_TextChanged);
             // 
-            // lblID
-            // 
-            resources.ApplyResources(this.lblID, "lblID");
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Name = "lblID";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtID, "txtID");
-            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
@@ -255,8 +241,6 @@
             this.Controls.Add(this.lblReview);
             this.Controls.Add(this.txtReview);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblComment);
             this.Controls.Add(this.lblRoomNo);
@@ -274,8 +258,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtComment;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblRoomNo;
         private System.Windows.Forms.Panel panel1;

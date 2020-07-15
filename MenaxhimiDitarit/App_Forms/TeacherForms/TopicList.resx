@@ -117,171 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Name" xml:space="preserve">
-    <value>btnViewAll</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;btnViewAll.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Name" xml:space="preserve">
-    <value>dtpSelectDay</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;dtpSelectDay.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
-    <value>cmbSelectClass</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectClass.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblSelectClass.Name" xml:space="preserve">
-    <value>lblSelectClass</value>
-  </data>
-  <data name="&gt;&gt;lblSelectClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectClass.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;lblSelectClass.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Name" xml:space="preserve">
-    <value>cmbSelectSubject</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Name" xml:space="preserve">
-    <value>lblSelectSubject</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;lblSelectSubject.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Name" xml:space="preserve">
-    <value>lblSelectDay</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;lblSelectDay.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 12</value>
-  </data>
-  <data name="grbSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>649, 111</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="grbSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grbSearch.Text" xml:space="preserve">
-    <value>Search Topic</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Name" xml:space="preserve">
-    <value>grbSearch</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grbSearch.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnSearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt</value>
   </data>
@@ -291,6 +131,7 @@
   <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 32</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -393,9 +234,6 @@
   <data name="&gt;&gt;cmbSelectClass.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="bsrcClass.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>553, 17</value>
-  </metadata>
   <data name="lblSelectClass.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -477,9 +315,6 @@
   <data name="&gt;&gt;cmbSelectSubject.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="bsrcSubject.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>439, 17</value>
-  </metadata>
   <data name="lblSelectSubject.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -582,69 +417,36 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="grbSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="grbSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 12</value>
+  </data>
+  <data name="grbSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 111</value>
+  </data>
+  <data name="grbSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grbSearch.Text" xml:space="preserve">
+    <value>Search Topic</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Name" xml:space="preserve">
+    <value>grbSearch</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbSearch.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="cmsTopicContext.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>294, 17</value>
   </metadata>
-  <data name="cmsTopicContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 70</value>
-  </data>
-  <data name="&gt;&gt;cmsTopicContext.Name" xml:space="preserve">
-    <value>cmsTopicContext</value>
-  </data>
-  <data name="&gt;&gt;cmsTopicContext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dgvTopicList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
-  </data>
-  <data name="dgvTopicList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="dgvTopicList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 137</value>
-  </data>
-  <data name="gridViewDecimalColumn46.HeaderText" xml:space="preserve">
-    <value>TopicID</value>
-  </data>
-  <data name="gridViewDateTimeColumn28.HeaderText" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="gridViewDecimalColumn49.HeaderText" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="gridViewTextBoxColumn46.HeaderText" xml:space="preserve">
-    <value>Content</value>
-  </data>
-  <data name="gridViewTextBoxColumn47.HeaderText" xml:space="preserve">
-    <value>Class</value>
-  </data>
-  <data name="gridViewTextBoxColumn48.HeaderText" xml:space="preserve">
-    <value>Subject</value>
-  </data>
-  <metadata name="bsrcTopicList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
-  <data name="dgvTopicList.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="dgvTopicList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>805, 478</value>
-  </data>
-  <data name="dgvTopicList.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dgvTopicList.Name" xml:space="preserve">
-    <value>dgvTopicList</value>
-  </data>
-  <data name="&gt;&gt;dgvTopicList.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;dgvTopicList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgvTopicList.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAV5JREFUOE+9
@@ -685,11 +487,92 @@
   <data name="showContentToolStripMenuItem.Text" xml:space="preserve">
     <value>Show Content</value>
   </data>
+  <data name="cmsTopicContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 70</value>
+  </data>
+  <data name="&gt;&gt;cmsTopicContext.Name" xml:space="preserve">
+    <value>cmsTopicContext</value>
+  </data>
+  <data name="&gt;&gt;cmsTopicContext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dgvTopicList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="dgvTopicList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="dgvTopicList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 137</value>
+  </data>
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
+    <value>TopicID</value>
+  </data>
+  <data name="gridViewDateTimeColumn1.HeaderText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <metadata name="bsrcTopicList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <data name="dgvTopicList.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="dgvTopicList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>805, 478</value>
+  </data>
+  <data name="dgvTopicList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgvTopicList.Name" xml:space="preserve">
+    <value>dgvTopicList</value>
+  </data>
+  <data name="&gt;&gt;dgvTopicList.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;dgvTopicList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvTopicList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="pnlClassSchedules.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="btnClass9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 98</value>
+  </data>
+  <data name="btnClass9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass9.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnClass9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnClass9.Name" xml:space="preserve">
     <value>btnClass9</value>
@@ -703,6 +586,27 @@
   <data name="&gt;&gt;btnClass9.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnClass8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 98</value>
+  </data>
+  <data name="btnClass8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 49</value>
+  </data>
+  <data name="btnClass8.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnClass8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;btnClass8.Name" xml:space="preserve">
     <value>btnClass8</value>
   </data>
@@ -714,6 +618,27 @@
   </data>
   <data name="&gt;&gt;btnClass8.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="btnClass7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 98</value>
+  </data>
+  <data name="btnClass7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnClass7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnClass7.Name" xml:space="preserve">
     <value>btnClass7</value>
@@ -727,6 +652,27 @@
   <data name="&gt;&gt;btnClass7.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnClass6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 49</value>
+  </data>
+  <data name="btnClass6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnClass6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;btnClass6.Name" xml:space="preserve">
     <value>btnClass6</value>
   </data>
@@ -738,6 +684,27 @@
   </data>
   <data name="&gt;&gt;btnClass6.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="btnClass5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 49</value>
+  </data>
+  <data name="btnClass5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnClass5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnClass5.Name" xml:space="preserve">
     <value>btnClass5</value>
@@ -751,6 +718,27 @@
   <data name="&gt;&gt;btnClass5.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnClass4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="btnClass4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnClass4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;btnClass4.Name" xml:space="preserve">
     <value>btnClass4</value>
   </data>
@@ -762,6 +750,27 @@
   </data>
   <data name="&gt;&gt;btnClass4.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="btnClass3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 0</value>
+  </data>
+  <data name="btnClass3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnClass3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnClass3.Name" xml:space="preserve">
     <value>btnClass3</value>
@@ -775,6 +784,27 @@
   <data name="&gt;&gt;btnClass3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="btnClass2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 0</value>
+  </data>
+  <data name="btnClass2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 49</value>
+  </data>
+  <data name="btnClass2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnClass2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="&gt;&gt;btnClass2.Name" xml:space="preserve">
     <value>btnClass2</value>
   </data>
@@ -786,6 +816,27 @@
   </data>
   <data name="&gt;&gt;btnClass2.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="btnClass1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClass1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="btnClass1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnClass1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnClass1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 49</value>
+  </data>
+  <data name="btnClass1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnClass1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;btnClass1.Name" xml:space="preserve">
     <value>btnClass1</value>
@@ -1204,6 +1255,27 @@
   <data name="&gt;&gt;btnAddTopic.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="lblTopic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTopic.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14.25pt</value>
+  </data>
+  <data name="lblTopic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTopic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 103</value>
+  </data>
+  <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 25</value>
+  </data>
+  <data name="lblTopic.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblTopic.Text" xml:space="preserve">
+    <value>Topic List</value>
+  </data>
   <data name="&gt;&gt;lblTopic.Name" xml:space="preserve">
     <value>lblTopic</value>
   </data>
@@ -1214,6 +1286,21 @@
     <value>pnlPicture</value>
   </data>
   <data name="&gt;&gt;lblTopic.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 100</value>
+  </data>
+  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;picClass.Name" xml:space="preserve">
@@ -1274,363 +1361,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlClassMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnClass9.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 98</value>
-  </data>
-  <data name="btnClass9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass9.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="btnClass9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass9.Name" xml:space="preserve">
-    <value>btnClass9</value>
-  </data>
-  <data name="&gt;&gt;btnClass9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass9.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="btnClass8.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 98</value>
-  </data>
-  <data name="btnClass8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 49</value>
-  </data>
-  <data name="btnClass8.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btnClass8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass8.Name" xml:space="preserve">
-    <value>btnClass8</value>
-  </data>
-  <data name="&gt;&gt;btnClass8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass8.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass8.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnClass7.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 98</value>
-  </data>
-  <data name="btnClass7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass7.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btnClass7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass7.Name" xml:space="preserve">
-    <value>btnClass7</value>
-  </data>
-  <data name="&gt;&gt;btnClass7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass7.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnClass6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 49</value>
-  </data>
-  <data name="btnClass6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass6.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="btnClass6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass6.Name" xml:space="preserve">
-    <value>btnClass6</value>
-  </data>
-  <data name="&gt;&gt;btnClass6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass6.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass6.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnClass5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 49</value>
-  </data>
-  <data name="btnClass5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="btnClass5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass5.Name" xml:space="preserve">
-    <value>btnClass5</value>
-  </data>
-  <data name="&gt;&gt;btnClass5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass5.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnClass4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
-  </data>
-  <data name="btnClass4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnClass4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass4.Name" xml:space="preserve">
-    <value>btnClass4</value>
-  </data>
-  <data name="&gt;&gt;btnClass4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass4.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnClass3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 0</value>
-  </data>
-  <data name="btnClass3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnClass3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass3.Name" xml:space="preserve">
-    <value>btnClass3</value>
-  </data>
-  <data name="&gt;&gt;btnClass3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass3.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass3.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btnClass2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 0</value>
-  </data>
-  <data name="btnClass2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 49</value>
-  </data>
-  <data name="btnClass2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnClass2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass2.Name" xml:space="preserve">
-    <value>btnClass2</value>
-  </data>
-  <data name="&gt;&gt;btnClass2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass2.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btnClass1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnClass1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="btnClass1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnClass1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="btnClass1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 49</value>
-  </data>
-  <data name="btnClass1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnClass1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnClass1.Name" xml:space="preserve">
-    <value>btnClass1</value>
-  </data>
-  <data name="&gt;&gt;btnClass1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClass1.Parent" xml:space="preserve">
-    <value>pnlClassSchedules</value>
-  </data>
-  <data name="&gt;&gt;btnClass1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblTopic.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTopic.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
-  </data>
-  <data name="lblTopic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblTopic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 103</value>
-  </data>
-  <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 25</value>
-  </data>
-  <data name="lblTopic.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblTopic.Text" xml:space="preserve">
-    <value>Topic List</value>
-  </data>
-  <data name="&gt;&gt;lblTopic.Name" xml:space="preserve">
-    <value>lblTopic</value>
-  </data>
-  <data name="&gt;&gt;lblTopic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTopic.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;lblTopic.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="picClass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="picClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 100</value>
-  </data>
-  <data name="picClass.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="picClass.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picClass.Name" xml:space="preserve">
-    <value>picClass</value>
-  </data>
-  <data name="&gt;&gt;picClass.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picClass.Parent" xml:space="preserve">
-    <value>pnlPicture</value>
-  </data>
-  <data name="&gt;&gt;picClass.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="printDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

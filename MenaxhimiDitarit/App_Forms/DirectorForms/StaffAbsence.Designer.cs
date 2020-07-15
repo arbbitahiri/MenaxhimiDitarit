@@ -40,8 +40,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblID = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.picReasoning = new System.Windows.Forms.PictureBox();
             this.cmbReasoning = new System.Windows.Forms.ComboBox();
@@ -130,24 +128,12 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblID
-            // 
-            resources.ApplyResources(this.lblID, "lblID");
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Name = "lblID";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtID, "txtID");
-            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
@@ -222,8 +208,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffAbsence";
@@ -246,8 +230,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox picReasoning;
         private System.Windows.Forms.ComboBox cmbReasoning;

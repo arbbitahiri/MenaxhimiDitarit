@@ -53,8 +53,6 @@
             this.lblPhoneNo = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -248,24 +246,12 @@
             this.txtPhoneNo.TextChanged += new System.EventHandler(this.txtPhoneNo_TextChanged);
             this.txtPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNo_KeyPress);
             // 
-            // lblID
-            // 
-            resources.ApplyResources(this.lblID, "lblID");
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Name = "lblID";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtID, "txtID");
-            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
@@ -373,8 +359,6 @@
             this.Controls.Add(this.picFirstName);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblPhoneNo);
             this.Controls.Add(this.panel7);
@@ -439,8 +423,6 @@
         private System.Windows.Forms.Label lblPhoneNo;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtPhoneNo;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;

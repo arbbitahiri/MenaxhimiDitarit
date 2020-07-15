@@ -37,8 +37,6 @@
             this.bsrcClass = new System.Windows.Forms.BindingSource(this.components);
             this.lblTime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblID = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblSubject = new System.Windows.Forms.Label();
             this.lblClass = new System.Windows.Forms.Label();
@@ -128,24 +126,12 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
-            // lblID
-            // 
-            resources.ApplyResources(this.lblID, "lblID");
-            this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Name = "lblID";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.txtID, "txtID");
-            this.txtID.ForeColor = System.Drawing.Color.White;
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             // 
@@ -300,14 +286,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnHELP);
-            this.Controls.Add(this.picDate);
-            this.Controls.Add(this.picTime);
-            this.Controls.Add(this.picSubject);
-            this.Controls.Add(this.picClass);
-            this.Controls.Add(this.btnSubmitClass);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.txtYear);
@@ -319,13 +297,19 @@
             this.Controls.Add(this.cmbSelectClass);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblSubject);
             this.Controls.Add(this.lblClass);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHELP);
+            this.Controls.Add(this.picDate);
+            this.Controls.Add(this.picTime);
+            this.Controls.Add(this.picSubject);
+            this.Controls.Add(this.picClass);
+            this.Controls.Add(this.btnSubmitClass);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClassScheduleCreate";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcSubject)).EndInit();
@@ -346,8 +330,6 @@
         private System.Windows.Forms.ComboBox cmbSelectClass;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label lblClass;
