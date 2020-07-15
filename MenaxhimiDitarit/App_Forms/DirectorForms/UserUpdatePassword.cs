@@ -58,25 +58,25 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                     if (isUpdated)
                     {
-                        Validation.MessageBoxShow("Password changed successfully!", "Updated",
+                        MessageDialog.MessageBoxShow("Password changed successfully!", "Updated",
                             "Fjalëkalimi u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Update failed!", "Error",
+                        MessageDialog.MessageBoxShow("Update failed!", "Error",
                             "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -120,11 +120,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             if (txtUsername.Text == null)
             {
-                Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+                MessageDialog.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
             }
             else if (txtUsername.Text.Length < 2)
             {
-                Validation.ToolTipShow("Username is to short!", "Nofka është shumë i vogël!", picPassword);
+                MessageDialog.ToolTipShow("Username is to short!", "Nofka është shumë i vogël!", picPassword);
             }
         }
 
@@ -132,17 +132,17 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             if (txtPassword.Text == null)
             {
-                Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
+                MessageDialog.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
             }
             else if (txtPassword.Text.Length < 2)
             {
-                Validation.ToolTipShow("Password is to short!", "Fjalëkalimi është shumë i vogël!", picPassword);
+                MessageDialog.ToolTipShow("Password is to short!", "Fjalëkalimi është shumë i vogël!", picPassword);
             }
         }
 
         private void picValidatePassword_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
+            MessageDialog.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

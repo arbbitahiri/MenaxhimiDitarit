@@ -99,7 +99,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -144,19 +144,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     {
                         if (UserSession.GetUser.UserName == user.UserName)
                         {
-                            Validation.MessageBoxShow("You cannot delete your user account!", "Warning",
+                            MessageDialog.MessageBoxShow("You cannot delete your user account!", "Warning",
                                 "Nuk mund ta fshini llogarinë tënde!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
-                            var result = Validation.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
+                            var result = MessageDialog.MessageBoxShow($"Are you sure you want to delete {user.UserName}?", "Sure?",
                                 $"A je i/e sigurt që do ta fshini përdoruesin: {user.UserName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                             if (result == DialogResult.Yes)
                             {
                                 _usersBLL.RemoveUser(user.UserID);
 
-                                Validation.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
+                                MessageDialog.MessageBoxShow($"Username: {user.UserName} has been deleted successfully!", "Deleted",
                                     $"Përdoruesi: {user.UserName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 RefreshList();
@@ -210,19 +210,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a name!", "Empty",
                             "Ju lutem shkruani emrin apo mbiemrin e përdoruesit!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("User does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("User does not exist!", "Doesn't exist",
                         "Përdoruesi nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -330,7 +330,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("UserList", "ListaEPërdoruesve", ".xlsx", "Excel Workbook |*.xlsx", dgvUserList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -338,7 +338,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("UserList", "ListaEPërdoruesve", ".pdf", "Pdf Files|*.pdf", dgvUserList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

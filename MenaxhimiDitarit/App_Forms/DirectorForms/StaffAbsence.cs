@@ -104,7 +104,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                 if (checkStaffAbsence.Count > 0)
                 {
-                    Validation.MessageBoxShow("Can't create absence for that time!", "Error",
+                    MessageDialog.MessageBoxShow("Can't create absence for that time!", "Error",
                         "Nuk mund të krijojë mungesë për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -115,11 +115,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                         if (isRegistred)
                         {
-                            Validation.DoYouWantToContinue(this, "Absence", "Mungesa");
+                            MessageDialog.DoYouWantToContinue(this, "Absence", "Mungesa");
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Registration failed!", "Error",
+                            MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                 "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -129,13 +129,13 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                         if (isUpdated)
                         {
-                            Validation.MessageBoxShow("Absence updated", "Updated",
+                            MessageDialog.MessageBoxShow("Absence updated", "Updated",
                                 "Mungesa u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Update failed!", "Error",
+                            MessageDialog.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -143,7 +143,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -170,12 +170,12 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         #region Error Providers
         private void picStaff_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Staff is required!", "Stafi duhet të plotësohet!", picStaff);
+            MessageDialog.ToolTipShow("Staff is required!", "Stafi duhet të plotësohet!", picStaff);
         }
 
         private void picReasoning_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Reason is required!", "Arsyeja duhet të plotësohet!", picReasoning);
+            MessageDialog.ToolTipShow("Reason is required!", "Arsyeja duhet të plotësohet!", picReasoning);
         }
 
         private void cmbStaff_SelectedIndexChanged(object sender, EventArgs e)

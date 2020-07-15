@@ -59,7 +59,7 @@ namespace MenaxhimiDitarit.AdminForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -102,14 +102,14 @@ namespace MenaxhimiDitarit.AdminForms
                     var room = GetRoom(dgvRoomList.Rows[row]);
                     if (room != null)
                     {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?",
+                        var result = MessageDialog.MessageBoxShow($"Are you sure you want to delete {room.RoomNo} - {room.RoomType}?", "Sure?",
                             $"A je i/e sigurt që do ta fshini sallën: {room.RoomNo} - {room.RoomType}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
                         {
                             _roomBLL.Remove(room.RoomID);
 
-                            Validation.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
+                            MessageDialog.MessageBoxShow($"Room: {room.RoomNo} has been deleted successfully!", "Deleted",
                                 $"Salla: {room.RoomNo} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
@@ -137,19 +137,19 @@ namespace MenaxhimiDitarit.AdminForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a room type!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a room type!", "Empty",
                             "Ju lutem shkruani llojin e sallës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Room type does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Room type does not exist!", "Doesn't exist",
                         "Lloji i sallës nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -246,7 +246,7 @@ namespace MenaxhimiDitarit.AdminForms
         {
             ExportFile.ExportExcel("RoomList", "ListaESallës", ".xlsx", "Excel Workbook |*.xlsx", dgvRoomList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -254,7 +254,7 @@ namespace MenaxhimiDitarit.AdminForms
         {
             ExportFile.ExportExcel("RoomList", "ListaESallës", ".pdf", "Pdf Files|*.pdf", dgvRoomList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

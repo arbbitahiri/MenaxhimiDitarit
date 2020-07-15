@@ -104,7 +104,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -152,19 +152,19 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please select a subject and a day!", "Empty",
+                        MessageDialog.MessageBoxShow("Please select a subject and a day!", "Empty",
                             "Ju lutemi zgjidhni një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Comment does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Comment does not exist!", "Doesn't exist",
                         "Vërejtja nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -184,12 +184,12 @@ namespace MenaxhimiDitarit.TeacherForms
                     {
                         if (comment.Review != "NONE")
                         {
-                            Validation.MessageBoxShow($"Comment: {comment.Comment}\nReview: {comment.Review}", "Comment",
+                            MessageDialog.MessageBoxShow($"Comment: {comment.Comment}\nReview: {comment.Review}", "Comment",
                                 $"Vërejtja: {comment.Comment}\nShqyrtimi: {comment.Review}", "Vërejtja", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            Validation.MessageBoxShow($"Comment: {comment.Content}", "Comment",
+                            MessageDialog.MessageBoxShow($"Comment: {comment.Content}", "Comment",
                                 $"Vërejtja: {comment.Content}", "Vërejtja", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
@@ -268,7 +268,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             ExportFile.ExportExcel("CommentList", "ListaEVërejtjes", ".xlsx", "Excel Workbook |*.xlsx", dgvCommentList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -276,7 +276,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             ExportFile.ExportPDF("CommentList", "ListaEVërejtjes", ".pdf", "Pdf Files|*.pdf", dgvCommentList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

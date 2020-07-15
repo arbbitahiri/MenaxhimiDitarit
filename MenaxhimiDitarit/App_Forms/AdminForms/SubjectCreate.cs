@@ -99,19 +99,21 @@ namespace MenaxhimiDitarit
                         var checkSubjects = MySubjects.Where(t => t.SubjectTitle == txtSubjectTitle.Text).ToList();
 
                         if (checkSubjects.Count > 0)
-                            Validation.MessageBoxShow("Subject exists!", "Exists",
+                        {
+                            MessageDialog.MessageBoxShow("Subject exists!", "Exists",
                                 "Lënda ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _subjectBLL.Add(subject);
 
                             if (isRegistred)
                             {
-                                Validation.DoYouWantToContinue(this, $"Subject: {subject.SubjectTitle}", $"Lënda: {subject.SubjectTitle}");
+                                MessageDialog.DoYouWantToContinue(this, $"Subject: {subject.SubjectTitle}", $"Lënda: {subject.SubjectTitle}");
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
@@ -122,26 +124,26 @@ namespace MenaxhimiDitarit
 
                         if (isUpdated)
                         {
-                            Validation.MessageBoxShow($"Subject: {subject.SubjectTitle} updated", "Updated",
+                            MessageDialog.MessageBoxShow($"Subject: {subject.SubjectTitle} updated", "Updated",
                                 $"Lënda: {subject.SubjectTitle} u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Update failed!", "Error",
+                            MessageDialog.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -176,11 +178,11 @@ namespace MenaxhimiDitarit
         {
             if (txtSubjectTitle.Text == null)
             {
-                Validation.ToolTipShow("A title is required!", "Emri i lëndës duhet të plotësohet!", picSubjectTitle);
+                MessageDialog.ToolTipShow("A title is required!", "Emri i lëndës duhet të plotësohet!", picSubjectTitle);
             }
             else if (txtSubjectTitle.Text.Length < 2)
             {
-                Validation.ToolTipShow("Title is to short!", "Emri i lëndës është i shkurtë!", picSubjectTitle);
+                MessageDialog.ToolTipShow("Title is to short!", "Emri i lëndës është i shkurtë!", picSubjectTitle);
             }
         }
 
@@ -188,11 +190,11 @@ namespace MenaxhimiDitarit
         {
             if (txtSubjectTitle.Text == null)
             {
-                Validation.ToolTipShow("A book is required!", "Një libër duhet të plotësohet!", picBook);
+                MessageDialog.ToolTipShow("A book is required!", "Një libër duhet të plotësohet!", picBook);
             }
             else if (txtSubjectTitle.Text.Length < 2)
             {
-                Validation.ToolTipShow("Book is to short!", "Libër është i shkurtë!", picBook);
+                MessageDialog.ToolTipShow("Book is to short!", "Libër është i shkurtë!", picBook);
             }
         }
 
@@ -200,17 +202,17 @@ namespace MenaxhimiDitarit
         {
             if (txtSubjectTitle.Text == null)
             {
-                Validation.ToolTipShow("An author is required!", "Autori i librit duhet të plotësohet!", picBAuthor);
+                MessageDialog.ToolTipShow("An author is required!", "Autori i librit duhet të plotësohet!", picBAuthor);
             }
             else if (txtSubjectTitle.Text.Length < 2)
             {
-                Validation.ToolTipShow("Author is to short!", "Autori i librit është i shkurtë!", picBAuthor);
+                MessageDialog.ToolTipShow("Author is to short!", "Autori i librit është i shkurtë!", picBAuthor);
             }
         }
 
         private void picTeacher_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a teacher!", "Zgjedh arsimtarin!", picTeacher);
+            MessageDialog.ToolTipShow("Please select a teacher!", "Zgjedh arsimtarin!", picTeacher);
         }
 
         private void txtSubjectTitle_TextChanged(object sender, EventArgs e)

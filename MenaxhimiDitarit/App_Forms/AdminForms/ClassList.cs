@@ -62,7 +62,7 @@ namespace MenaxhimiDitarit
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -105,19 +105,53 @@ namespace MenaxhimiDitarit
                     var classes = GetClass(dgvClassesList.Rows[row]);
                     if (classes != null)
                     {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete class: {classes.ClassNo}", "Sure?",
+                        var result = MessageDialog.MessageBoxShow($"Are you sure you want to delete class: {classes.ClassNo}", "Sure?",
                             $"A je i/e sigurt që do ta fshini klasën: {classes.ClassNo}", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
                             _classBLL.Remove(classes.ClassID);
 
-                            Validation.MessageBoxShow($"Class: {classes.ClassNo} has been deleted successfully!", "Deleted",
+                            MessageDialog.MessageBoxShow($"Class: {classes.ClassNo} has been deleted successfully!", "Deleted",
                                $"Klasa: {classes.ClassNo} është fshirë me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
                         }
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Searches for classNo
+        /// </summary>
+        private void SearchClass()
+        {
+            try
+            {
+                if (_classBLL != null)
+                {
+                    if (txtSearchClass.Text.Trim().Length > 0)
+                    {
+                        var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
+
+                        dgvClassesList.DataSource = findClass;
+                    }
+                    else
+                    {
+                        MessageDialog.MessageBoxShow("Please write a class number!", "Empty",
+                            "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageDialog.MessageBoxShow("Class number does not exist!", "Doesn't exist",
+                            "Klasa nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -139,33 +173,7 @@ namespace MenaxhimiDitarit
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (_classBLL != null)
-                {
-                    if (txtSearchClass.Text.Trim().Length > 0)
-                    {
-                        var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
-
-                        dgvClassesList.DataSource = findClass;
-                    }
-                    else
-                    {
-                        Validation.MessageBoxShow("Please write a class number!", "Empty",
-                            "Ju lutem shkruani numrin e klasës!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    Validation.MessageBoxShow("Class number does not exist!", "Doesn't exist",
-                            "Klasa nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception)
-            {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
-                            "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            SearchClass();
         }
 
         // Tool Strip Menus
@@ -249,7 +257,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx", dgvClassesList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -257,7 +265,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf", dgvClassesList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

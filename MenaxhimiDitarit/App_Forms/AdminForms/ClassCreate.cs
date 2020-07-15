@@ -113,7 +113,7 @@ namespace MenaxhimiDitarit.AdminForms
 
                         if (checkClasses.Count > 0)
                         {
-                            Validation.MessageBoxShow("Class exists!", "Warning",
+                            MessageDialog.MessageBoxShow("Class exists!", "Warning",
                                     "Klasa ekziston", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
@@ -122,11 +122,11 @@ namespace MenaxhimiDitarit.AdminForms
 
                             if (isRegistred)
                             {
-                                Validation.DoYouWantToContinue(this, "Class", "Klasa");
+                                MessageDialog.DoYouWantToContinue(this, "Class", "Klasa");
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
@@ -137,26 +137,26 @@ namespace MenaxhimiDitarit.AdminForms
 
                         if (isUpdated)
                         {
-                            Validation.MessageBoxShow($"Class: {classes.ClassNo} updated", "Updated",
+                            MessageDialog.MessageBoxShow($"Class: {classes.ClassNo} updated", "Updated",
                                    $"Klasa: {classes.ClassNo} u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Update failed!", "Error",
+                            MessageDialog.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Warning",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Warning",
                         "Ju lutem plotësoni të gjitha fushat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occured while registering data.", "Problem",
+                MessageDialog.MessageBoxShow("A problem occured while registering data.", "Problem",
                        "Ndodhi një problem gjatë regjistrimit të të dhënave.", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -183,17 +183,17 @@ namespace MenaxhimiDitarit.AdminForms
         #region ErrorProvider
         private void picMainTeacher_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a teacher!", "Zgjedheni kujdestarin!", picMainTeacher);
+            MessageDialog.ToolTipShow("Please select a teacher!", "Zgjedheni kujdestarin!", picMainTeacher);
         }
 
         private void picClass_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a class!", "Zgjedheni klasën!", picMainTeacher);
+            MessageDialog.ToolTipShow("Please select a class!", "Zgjedheni klasën!", picMainTeacher);
         }
 
         private void picRoom_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a room!", "Zgjedheni sallën!", picMainTeacher);
+            MessageDialog.ToolTipShow("Please select a room!", "Zgjedheni sallën!", picMainTeacher);
         }
 
         private void cmbMainTeacher_SelectedIndexChanged(object sender, EventArgs e)

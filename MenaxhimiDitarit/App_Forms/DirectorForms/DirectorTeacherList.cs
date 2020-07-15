@@ -63,7 +63,7 @@ namespace MenaxhimiDitarit.DirectorForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -106,14 +106,14 @@ namespace MenaxhimiDitarit.DirectorForms
                     var teacher = GetTeacher(dgvTeacherListD.Rows[row]);
                     if (teacher != null)
                     {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
+                        var result = MessageDialog.MessageBoxShow($"Are you sure you want to delete {teacher.FullName}?", "Sure?",
                             $"A je i/e sigurt që do ta fshini: {teacher.FullName}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
                         {
                             _teacherBLL.Remove(teacher.TeacherID);
 
-                            Validation.MessageBoxShow($"Teacher: {teacher.FullName} has been deleted successfully!", "Deleted",
+                            MessageDialog.MessageBoxShow($"Teacher: {teacher.FullName} has been deleted successfully!", "Deleted",
                                 $"Arsimtari: {teacher.FullName} u fshi!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
@@ -142,19 +142,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a name!", "Empty",
                             "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
                         "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -246,7 +246,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx", dgvTeacherListD);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -254,7 +254,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf", dgvTeacherListD);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

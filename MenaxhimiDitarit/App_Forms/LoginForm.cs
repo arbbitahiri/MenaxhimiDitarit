@@ -18,6 +18,7 @@ namespace MenaxhimiDitarit
             btnLogin.Enabled = false;
         }
 
+        #region Methods
         /// <summary>
         /// Logs in the user
         /// </summary>
@@ -62,19 +63,19 @@ namespace MenaxhimiDitarit
                             }
                             else
                             {
-                                Validation.MessageBoxShow("You don't have access!", "Access denied",
+                                MessageDialog.MessageBoxShow("You don't have access!", "Access denied",
                                     "Ju nuk keni qasje!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Your user has expired!", "Access denied",
+                            MessageDialog.MessageBoxShow("Your user has expired!", "Access denied",
                                     "Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Username or Password is incorrect!", "Incorrect",
+                        MessageDialog.MessageBoxShow("Username or Password is incorrect!", "Incorrect",
                                     "Nofka apo fjalëkalimi janë të gabuara!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -89,6 +90,7 @@ namespace MenaxhimiDitarit
                     "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        #endregion
 
         #region Events
         // TextBoxes

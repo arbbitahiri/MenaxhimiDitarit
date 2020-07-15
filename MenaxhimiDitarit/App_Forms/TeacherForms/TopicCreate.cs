@@ -132,7 +132,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
                             if (checkTopic.Count > 0)
                             {
-                                Validation.MessageBoxShow($"Topic exists for day: {topic.Date.ToShortDateString()}", "Exists",
+                                MessageDialog.MessageBoxShow($"Topic exists for day: {topic.Date.ToShortDateString()}", "Exists",
                                    $"Tema ekziston për ditën: {topic.Date.ToShortDateString()}", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
@@ -141,11 +141,11 @@ namespace MenaxhimiDitarit.TeacherForms
 
                                 if (isRegistred)
                                 {
-                                    Validation.DoYouWantToContinue(this, "Topic", "Tema");
+                                    MessageDialog.DoYouWantToContinue(this, "Topic", "Tema");
                                 }
                                 else
                                 {
-                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                    MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                         "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
@@ -156,32 +156,32 @@ namespace MenaxhimiDitarit.TeacherForms
 
                             if (isUpdated)
                             {
-                                Validation.MessageBoxShow("Topic updated", "Updated",
+                                MessageDialog.MessageBoxShow("Topic updated", "Updated",
                                     "Tema u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Update failed!", "Error",
+                                MessageDialog.MessageBoxShow("Update failed!", "Error",
                                     "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Can't create topic for that time!", "Error",
+                        MessageDialog.MessageBoxShow("Can't create topic for that time!", "Error",
                             "Nuk mund të krijojë temë për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -208,22 +208,22 @@ namespace MenaxhimiDitarit.TeacherForms
         #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
+            MessageDialog.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
         }
 
         private void picSubject_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
+            MessageDialog.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
         }
 
         private void picTime_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
+            MessageDialog.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
         }
 
         private void picContent_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Content is required!", "Vërejtja duhet të plotësohet!", picContent);
+            MessageDialog.ToolTipShow("Content is required!", "Vërejtja duhet të plotësohet!", picContent);
         }
 
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)

@@ -90,25 +90,25 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
                     if (isUpdated)
                     {
-                        Validation.MessageBoxShow("Comment reviewed", "Reviewed",
+                        MessageDialog.MessageBoxShow("Comment reviewed", "Reviewed",
                             "Vërejtja u shqyrtua!", "U shqyrtua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Update failed!", "Error",
+                        MessageDialog.MessageBoxShow("Update failed!", "Error",
                             "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -143,11 +143,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             if (txtReview.Text == null)
             {
-                Validation.ToolTipShow("Review is required!", "Shqyrtimi duhet të plotësohet!", picReview);
+                MessageDialog.ToolTipShow("Review is required!", "Shqyrtimi duhet të plotësohet!", picReview);
             }
             else if (txtReview.Text.Length < 4)
             {
-                Validation.ToolTipShow("Review is to short!", "Shqyrtimi është i shkurtë!", picReview);
+                MessageDialog.ToolTipShow("Review is to short!", "Shqyrtimi është i shkurtë!", picReview);
             }
         }
 

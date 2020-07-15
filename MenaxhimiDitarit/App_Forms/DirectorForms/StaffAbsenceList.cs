@@ -67,7 +67,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -116,19 +116,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a name or surname!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a name or surname!", "Empty",
                             "Ju lutemi shkruani emrin ose mbiemrin!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Absence does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Absence does not exist!", "Doesn't exist",
                         "Mungesa nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -206,7 +206,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             ExportFile.ExportExcel("StaffAbsenceList", "ListaEMungesësStafit", ".xlsx", "Excel Workbook |*.xlsx", dgvStaffAbsenceList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -214,7 +214,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             ExportFile.ExportExcel("StaffAbsenceList", "ListaEMungesësStafit", ".pdf", "Pdf Files|*.pdf", dgvStaffAbsenceList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

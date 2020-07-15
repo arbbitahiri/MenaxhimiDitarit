@@ -66,7 +66,7 @@ namespace MenaxhimiDitarit
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -114,19 +114,19 @@ namespace MenaxhimiDitarit
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a name!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a name!", "Empty",
                             "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Teacher does not exist!", "Doesn't exist",
                         "Arsimtari nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -211,7 +211,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".xlsx", "Excel Workbook |*.xlsx", dgvTeacherList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -219,7 +219,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("TeacherList", "ListaEArsimtarit", ".pdf", "Pdf Files|*.pdf", dgvTeacherList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

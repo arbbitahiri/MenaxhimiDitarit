@@ -52,19 +52,19 @@ namespace MenaxhimiDitarit.DirectorForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a role!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a role!", "Empty",
                             "Ju lutem shkruani rolin!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Role does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Role does not exist!", "Doesn't exist",
                         "Roli nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -125,7 +125,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("RoleList", "ListaERoleve", ".xlsx", "Excel Workbook |*.xlsx", dgvRoleList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -133,7 +133,7 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             ExportFile.ExportExcel("RoleList", "ListaERoleve", ".pdf", "Pdf Files|*.pdf", dgvRoleList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

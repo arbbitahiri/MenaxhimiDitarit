@@ -80,14 +80,14 @@ namespace MenaxhimiDitarit
 
                 if (!isPhone)
                 {
-                    Validation.MessageBoxShow("The phone number you entered is not valid!", "Warning",
+                    MessageDialog.MessageBoxShow("The phone number you entered is not valid!", "Warning",
                                     "Numri i telefonit nuk është valid", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     if (!isEmail)
                     {
-                        Validation.MessageBoxShow("The email you entered is not valid!", "Warning",
+                        MessageDialog.MessageBoxShow("The email you entered is not valid!", "Warning",
                                        "Emaili nuk është valid!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
@@ -97,7 +97,7 @@ namespace MenaxhimiDitarit
                         var age = Validation.GetAge(birthdate);
                         if (age < 18)
                         {
-                            Validation.MessageBoxShow("Teacher must be older than 18 years old!", "Error",
+                            MessageDialog.MessageBoxShow("Teacher must be older than 18 years old!", "Error",
                                 "Arsimtari nuk duhet të jetë më i vogël se 18 vjet!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
@@ -131,7 +131,7 @@ namespace MenaxhimiDitarit
 
                                     if (checkTeacher.Count > 0)
                                     {
-                                        var result = Validation.MessageBoxShow($"There is already a teacher called {teacher.FirstName}. Do you still want to continue?", "Warning",
+                                        var result = MessageDialog.MessageBoxShow($"There is already a teacher called {teacher.FirstName}. Do you still want to continue?", "Warning",
                                            $"Ekziston një arsimtarë me emrin {teacher.FirstName}. Doni të vazhdoni?", "Paralajmërim", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                                         if (result == DialogResult.No)
                                         {
@@ -146,11 +146,11 @@ namespace MenaxhimiDitarit
 
                                             if (isRegistred)
                                             {
-                                                Validation.DoYouWantToContinue(this, $"Teacher {teacher.FullName}", $"Arsimtari {teacher.FullName}");
+                                                MessageDialog.DoYouWantToContinue(this, $"Teacher {teacher.FullName}", $"Arsimtari {teacher.FullName}");
                                             }
                                             else
                                             {
-                                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             }
                                         }
@@ -161,13 +161,13 @@ namespace MenaxhimiDitarit
 
                                         if (isRegistred)
                                         {
-                                            Validation.MessageBoxShow($"Teacher {teacher.FullName} registred successfully!", "Completed",
+                                            MessageDialog.MessageBoxShow($"Teacher {teacher.FullName} registred successfully!", "Completed",
                                                 $"Arsimtari {teacher.FullName} u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                             this.Close();
                                         }
                                         else
                                         {
-                                            Validation.MessageBoxShow("Registration failed!", "Error",
+                                            MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                                 "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         }
                                     }
@@ -178,20 +178,20 @@ namespace MenaxhimiDitarit
 
                                     if (isUpdated)
                                     {
-                                        Validation.MessageBoxShow($"Teacher {teacher.FullName} updated!", "Updated",
+                                        MessageDialog.MessageBoxShow($"Teacher {teacher.FullName} updated!", "Updated",
                                             $"Arsimtari {teacher.FullName} u përditësua me sukses!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         this.Close();
                                     }
                                     else
                                     {
-                                        Validation.MessageBoxShow("Update failed!", "Error",
+                                        MessageDialog.MessageBoxShow("Update failed!", "Error",
                                             "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     }
                                 }
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Please fill all fields!", "Error",
+                                MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                                     "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
@@ -200,7 +200,7 @@ namespace MenaxhimiDitarit
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -231,7 +231,7 @@ namespace MenaxhimiDitarit
             var age = Validation.GetAge(birthdate);
             if (age < 18)
             {
-                Validation.MessageBoxShow("Teacher must be older than 18 years old!", "Error",
+                MessageDialog.MessageBoxShow("Teacher must be older than 18 years old!", "Error",
                     "Arsimtari nuk duhet të jetë më i vogël se 18 vjet!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -263,11 +263,11 @@ namespace MenaxhimiDitarit
         {
             if (txtFirstName.Text == null)
             {
-                Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+                MessageDialog.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
             }
             else if (txtFirstName.Text.Length < 2)
             {
-                Validation.ToolTipShow("First name is to short!", "Emri është i shkurtë!", picFirstName);
+                MessageDialog.ToolTipShow("First name is to short!", "Emri është i shkurtë!", picFirstName);
             }
         }
 
@@ -275,11 +275,11 @@ namespace MenaxhimiDitarit
         {
             if (txtLastName.Text == null)
             {
-                Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+                MessageDialog.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
             }
             else if (txtLastName.Text.Length < 2)
             {
-                Validation.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtë!", picLastName);
+                MessageDialog.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtë!", picLastName);
             }
         }
 
@@ -287,11 +287,11 @@ namespace MenaxhimiDitarit
         {
             if (txtCity.Text == null)
             {
-                Validation.ToolTipShow("City is required!", "Qyteti duhet të plotësohet!", picCity);
+                MessageDialog.ToolTipShow("City is required!", "Qyteti duhet të plotësohet!", picCity);
             }
             else if (txtCity.Text.Length < 2)
             {
-                Validation.ToolTipShow("City is to short!", "Qyteti është i shkurtë!", picCity);
+                MessageDialog.ToolTipShow("City is to short!", "Qyteti është i shkurtë!", picCity);
             }
         }
 
@@ -299,11 +299,11 @@ namespace MenaxhimiDitarit
         {
             if (txtQualification.Text == null)
             {
-                Validation.ToolTipShow("Qualification is required!", "Kualifikimi duhet të plotësohet!", picQualification);
+                MessageDialog.ToolTipShow("Qualification is required!", "Kualifikimi duhet të plotësohet!", picQualification);
             }
             else if (txtQualification.Text.Length < 4)
             {
-                Validation.ToolTipShow("Qualification is to short!", "Kualifikimi është i shkurtë!", picQualification);
+                MessageDialog.ToolTipShow("Qualification is to short!", "Kualifikimi është i shkurtë!", picQualification);
             }
         }
 
@@ -313,17 +313,17 @@ namespace MenaxhimiDitarit
 
             if (txtEmail.Text == null)
             {
-                Validation.ToolTipShow("E-mail is required! Please write in correct format:\nexample@gmail.com",
+                MessageDialog.ToolTipShow("E-mail is required! Please write in correct format:\nexample@gmail.com",
                     "Email duhet të plotësohet. Ju lutem shkruani në formë korrekte:\nexample@gmail.com", picEmail);
             }
             else if (txtEmail.Text.Length < 10)
             {
-                Validation.ToolTipShow("E-mail is to short! Please write in correct format:\nexample@gmail.com",
+                MessageDialog.ToolTipShow("E-mail is to short! Please write in correct format:\nexample@gmail.com",
                     "Email është i shkurtë. Ju lutem shkruani në formë korrekte:\nexample@gmail.com", picEmail);
             }
             else if (!isEmail)
             {
-                Validation.ToolTipShow("E-mail is in wrong format. Please write in correct format:\nexample@gmail.com",
+                MessageDialog.ToolTipShow("E-mail is in wrong format. Please write in correct format:\nexample@gmail.com",
                     "Email është në format të gabuar. Ju lutem shkruani në formë korrekte:\nexample@gmail.com", picEmail);
             }
         }
@@ -334,17 +334,17 @@ namespace MenaxhimiDitarit
 
             if (txtPhoneNo.Text == null)
             {
-                Validation.ToolTipShow("Phone number is required! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                MessageDialog.ToolTipShow("Phone number is required! Please write in correct format:\n444 044 444 444\n444-044-444-444",
                     "Numri i telefonit duhet të plotësohet Ju lutem shkruani në formë korrekte:\n555 044 444 444\n444-044-444-444", picPhoneNo);
             }
             else if(txtPhoneNo.Text.Length < 8)
             {
-                Validation.ToolTipShow("Phone number is to short! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                MessageDialog.ToolTipShow("Phone number is to short! Please write in correct format:\n444 044 444 444\n444-044-444-444",
                     "Numri i telefonit duhet të plotësohet! Ju lutem shkruani në formë korrekte:\n444 044 444 444\n444-044-444-444", picPhoneNo);
             }
             else if (!isPhone)
             {
-                Validation.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n444 044 444 444\n444-044-444-444",
+                MessageDialog.ToolTipShow("Phone number is in wrong format! Please write in correct format:\n444 044 444 444\n444-044-444-444",
                     "Numri i telefonit është në format të gabuar. Ju lutem shkruani në formë korrekte:\n444 044 444 444\n444-044-444-444", picPhoneNo);
             }
         }

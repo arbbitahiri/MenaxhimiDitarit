@@ -113,7 +113,7 @@ namespace MenaxhimiDitarit.TeacherForms
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -137,19 +137,19 @@ namespace MenaxhimiDitarit.TeacherForms
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
+                        MessageDialog.MessageBoxShow("Please select a class, a subject and a day!", "Empty",
                             "Ju lutemi zgjidhni një klasë, një lëndë dhe një ditë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Topic does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Topic does not exist!", "Doesn't exist",
                         "Tema nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -191,13 +191,13 @@ namespace MenaxhimiDitarit.TeacherForms
                     var topic = GetTopic(dgvTopicList.Rows[row]);
                     if (topic != null)
                     {
-                        var result = Validation.MessageBoxShow("Are you sure you want to delete?", "Sure?",
+                        var result = MessageDialog.MessageBoxShow("Are you sure you want to delete?", "Sure?",
                             "A je i/e sigurt që do ta fshini?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
                             _topicBLL.RemoveTopic(topic.TopicID);
 
-                            Validation.MessageBoxShow("The selected topic has been deleted successfully!", "Deleted",
+                            MessageDialog.MessageBoxShow("The selected topic has been deleted successfully!", "Deleted",
                                 "Tema u fshi me sukses!", "U fshi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             RefreshList();
@@ -221,7 +221,7 @@ namespace MenaxhimiDitarit.TeacherForms
                     var topic = GetTopic(dgvTopicList.Rows[row]);
                     if (topic != null)
                     {
-                        Validation.MessageBoxShow($"Content: {topic.Content}", "Content",
+                        MessageDialog.MessageBoxShow($"Content: {topic.Content}", "Content",
                             $"Tema: {topic.Content}", "Tema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -308,7 +308,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             ExportFile.ExportExcel("ClassList", "ListaEKlasës", ".xlsx", "Excel Workbook |*.xlsx", dgvTopicList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -316,7 +316,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             ExportFile.ExportPDF("ClassList", "ListaEKlasës", ".pdf", "Pdf Files|*.pdf", dgvTopicList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

@@ -61,7 +61,7 @@ namespace MenaxhimiDitarit
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while getting those data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while getting those data!", "Problem",
                             "Ndodhi një problem gjatë marrjes së këtyre të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
@@ -104,14 +104,14 @@ namespace MenaxhimiDitarit
                     var subject = GetSubject(dgvSubjectList.Rows[row]);
                     if (subject != null)
                     {
-                        var result = Validation.MessageBoxShow($"Are you sure you want to delete subject: {subject.SubjectTitle}?", "Sure?",
+                        var result = MessageDialog.MessageBoxShow($"Are you sure you want to delete subject: {subject.SubjectTitle}?", "Sure?",
                             $"A je i/e sigurt që do ta fshini lëndën: {subject.SubjectTitle}?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (result == DialogResult.Yes)
                         {
                             _subjectBLL.Remove(subject.SubjectID);
 
-                            Validation.MessageBoxShow($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted",
+                            MessageDialog.MessageBoxShow($"Subject {subject.SubjectTitle} has been deleted successfully!", "Deleted",
                                 $"Lënda: {subject.SubjectTitle} u fshi!", "U fshi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                             RefreshList();
@@ -133,7 +133,6 @@ namespace MenaxhimiDitarit
                 {
                     if (txtSearchSubject.Text.Trim().Length > 0)
                     {
-                        //Shikojme nese teksti i shkruar ne TextBox eshte emri i lendes apo emri i arsimtarit
                         var findSubject = MySubjects.Where(f => f.SubjectTitle.Contains(txtSearchSubject.Text)
                         || f.Teacher.FirstName.Contains(txtSearchSubject.Text) || f.Teacher.LastName.Contains(txtSearchSubject.Text)
                         || f.Teacher.FullName.Contains(txtSearchSubject.Text)).ToList();
@@ -142,19 +141,19 @@ namespace MenaxhimiDitarit
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please write a subject title or a teacher name!", "Empty",
+                        MessageDialog.MessageBoxShow("Please write a subject title or a teacher name!", "Empty",
                             "Ju lutemi shkruani një lëndën ose një arsimtarë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Subject title or teacher you're trying to search does not exist!", "Doesn't exist",
+                    MessageDialog.MessageBoxShow("Subject title or teacher you're trying to search does not exist!", "Doesn't exist",
                         "Lënda ose arsimtari që po përpiqeni të kërkoni nuk ekziston!", "Nuk ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while searching data!", "Problem",
+                MessageDialog.MessageBoxShow("A problem occurred while searching data!", "Problem",
                             "Ndodhi një problem gjatë kërkimit të të dhënave!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -250,7 +249,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("SubjectList", "ListaELëndëve", ".xlsx", "Excel Workbook |*.xlsx", dgvSubjectList);
 
-            Validation.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -258,7 +257,7 @@ namespace MenaxhimiDitarit
         {
             ExportFile.ExportExcel("SubjectList", "ListaELëndëve", ".pdf", "Pdf Files|*.pdf", dgvSubjectList);
 
-            Validation.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
+            MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion

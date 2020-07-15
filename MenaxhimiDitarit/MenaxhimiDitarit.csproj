@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\ExportFile.cs" />
+    <Compile Include="App_Code\MessageDialog.cs" />
     <Compile Include="App_Code\TranslateForm.cs" />
     <Compile Include="App_Code\Validation.cs" />
     <Compile Include="App_Forms\AdminForms\AdminMain.cs">

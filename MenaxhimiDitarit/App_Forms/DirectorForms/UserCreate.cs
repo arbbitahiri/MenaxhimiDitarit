@@ -45,7 +45,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
                 if (expireDate < DateTime.Now)
                 {
-                    Validation.MessageBoxShow($"Expire date can't be from: {dtpExpireDate.Value}", "Error",
+                    MessageDialog.MessageBoxShow($"Expire date can't be from: {dtpExpireDate.Value}", "Error",
                         $"Data e skadimit nuk mund të jetë nga {dtpExpireDate.Value}", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -70,7 +70,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
                         if (checkUsers.Count > 0)
                         {
-                            Validation.MessageBoxShow("Username exists!", "Exists",
+                            MessageDialog.MessageBoxShow("Username exists!", "Exists",
                                 "Nofka ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
@@ -79,25 +79,25 @@ namespace MenaxhimiDitarit.DirectorForms
 
                             if (isRegistred)
                             {
-                                Validation.DoYouWantToContinue(this, "User", "Përdoruesi");
+                                MessageDialog.DoYouWantToContinue(this, "User", "Përdoruesi");
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Please fill all fields!", "Error",
+                        MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                             "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -127,7 +127,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
             if (expireDate < DateTime.Now)
             {
-                Validation.MessageBoxShow("Invalid date. Please select a date that isn't in the past!", "Error",
+                MessageDialog.MessageBoxShow("Invalid date. Please select a date that isn't in the past!", "Error",
                     "Data e pavlefshme. Ju lutemi zgjidhni një datë që nuk është në të kaluarën!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -164,58 +164,58 @@ namespace MenaxhimiDitarit.DirectorForms
         {
             if (txtFirstName.Text == null)
             {
-                Validation.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
+                MessageDialog.ToolTipShow("First name is required!", "Emri duhet të plotësohet!", picFirstName);
             }
             else if (txtFirstName.Text.Length < 2)
             {
-                Validation.ToolTipShow("First name is to short!", "Emri është i shkurtër!", picFirstName);
+                MessageDialog.ToolTipShow("First name is to short!", "Emri është i shkurtër!", picFirstName);
             }
         }
 
         private void picLastName_MouseHover(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == null)
+            if (txtLastName.Text == null)
             {
-                Validation.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
+                MessageDialog.ToolTipShow("Last name is required!", "Mbiemri duhet të plotësohet!", picLastName);
             }
-            else if (txtFirstName.Text.Length < 2)
+            else if (txtLastName.Text.Length < 2)
             {
-                Validation.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtër!", picLastName);
+                MessageDialog.ToolTipShow("Last name is to short!", "Mbiemri është i shkurtër!", picLastName);
             }
         }
 
         private void picUsername_MouseHover(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == null)
+            if (txtUsername.Text == null)
             {
-                Validation.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
+                MessageDialog.ToolTipShow("Username is required!", "Nofka duhet të plotësohet!", picUsername);
             }
-            else if (txtFirstName.Text.Length < 2)
+            else if (txtUsername.Text.Length < 2)
             {
-                Validation.ToolTipShow("Username is to short!", "Nofka është i shkurtër!", picUsername);
+                MessageDialog.ToolTipShow("Username is to short!", "Nofka është i shkurtër!", picUsername);
             }
         }
 
         private void picRole_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Role is required!", "Roli duhet të plotësohet!", picRole);
+            MessageDialog.ToolTipShow("Role is required!", "Roli duhet të plotësohet!", picRole);
         }
 
         private void picPassword_MouseHover(object sender, EventArgs e)
         {
-            if (txtFirstName.Text == null)
+            if (txtPassword.Text == null)
             {
-                Validation.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
+                MessageDialog.ToolTipShow("Password is required!", "Fjalëkalimi duhet të plotësohet!", picPassword);
             }
-            else if (txtFirstName.Text.Length < 2)
+            else if (txtPassword.Text.Length < 2)
             {
-                Validation.ToolTipShow("Password is to short!", "v është i shkurtër!", picPassword);
+                MessageDialog.ToolTipShow("Password is to short!", "v është i shkurtër!", picPassword);
             }
         }
 
         private void picValidatePassword_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
+            MessageDialog.ToolTipShow("Password does not match!", "Fjalëkalimi nuk përputhet!", picValidatePassword);
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)

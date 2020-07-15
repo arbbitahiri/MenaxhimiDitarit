@@ -76,19 +76,21 @@ namespace MenaxhimiDitarit
                     {
                         var checkRooms = MyRooms.Where(t => t.RoomNo == int.Parse(txtRoomNo.Text)).ToList();
                         if (checkRooms.Count > 0)
-                            Validation.MessageBoxShow("Room exists!", "Exists",
+                        {
+                            MessageDialog.MessageBoxShow("Room exists!", "Exists",
                                 "Salla ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             bool isRegistred = _roomBLL.Add(room);
 
                             if (isRegistred)
                             {
-                                Validation.DoYouWantToContinue(this, "Room", "Salla");
+                                MessageDialog.DoYouWantToContinue(this, "Room", "Salla");
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
+                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                     "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
@@ -99,26 +101,26 @@ namespace MenaxhimiDitarit
 
                         if (isUpdated)
                         {
-                            Validation.MessageBoxShow($"Room No: {room.RoomNo} updated", "Updated",
+                            MessageDialog.MessageBoxShow($"Room No: {room.RoomNo} updated", "Updated",
                                 $"Salla: {room.RoomNo} u përditësua!", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Update failed!", "Error",
+                            MessageDialog.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -147,11 +149,11 @@ namespace MenaxhimiDitarit
         {
             if (txtRoomNo.Text == null)
             {
-                Validation.ToolTipShow("Room number is required!", "Numri i sallës duhet të plotësohet!", picRoomNo);
+                MessageDialog.ToolTipShow("Room number is required!", "Numri i sallës duhet të plotësohet!", picRoomNo);
             }
             else if (txtRoomNo.Text.Length < 2)
             {
-                Validation.ToolTipShow("Room number is to short!", "Numri i sallës është i vogël!", picRoomNo);
+                MessageDialog.ToolTipShow("Room number is to short!", "Numri i sallës është i vogël!", picRoomNo);
             }
         }
 
@@ -159,11 +161,11 @@ namespace MenaxhimiDitarit
         {
             if (txtRoomType.Text == null)
             {
-                Validation.ToolTipShow("Room type is required!", "Lloji i sallës duhet të plotësohet!", picRoomType);
+                MessageDialog.ToolTipShow("Room type is required!", "Lloji i sallës duhet të plotësohet!", picRoomType);
             }
             else if (txtRoomType.Text.Length < 2)
             {
-                Validation.ToolTipShow("Room type is to short!", "Lloji i sallës është i vogël!", picRoomNo);
+                MessageDialog.ToolTipShow("Room type is to short!", "Lloji i sallës është i vogël!", picRoomNo);
             }
         }
 

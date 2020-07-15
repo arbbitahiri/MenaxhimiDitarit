@@ -132,7 +132,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
                             if (checkAbsence.Count > 0)
                             {
-                                Validation.MessageBoxShow("Absence exists!", "Exists",
+                                MessageDialog.MessageBoxShow("Absence exists!", "Exists",
                                     "Mungesa ekziston!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
@@ -141,11 +141,11 @@ namespace MenaxhimiDitarit.TeacherForms
 
                                 if (isRegistred)
                                 {
-                                    Validation.DoYouWantToContinue(this, "Absence", "Mungesa");
+                                    MessageDialog.DoYouWantToContinue(this, "Absence", "Mungesa");
                                 }
                                 else
                                 {
-                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                    MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                         "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
@@ -156,33 +156,32 @@ namespace MenaxhimiDitarit.TeacherForms
 
                             if (isUpdated)
                             {
-                                Validation.MessageBoxShow("Absence updated", "Updated",
+                                MessageDialog.MessageBoxShow("Absence updated", "Updated",
                                     "Mungesa u përditësua", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Update failed!", "Error",
+                                MessageDialog.MessageBoxShow("Update failed!", "Error",
                                     "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     else
                     {
-                        Validation.MessageBoxShow("Can't create absence for that time!", "Error",
+                        MessageDialog.MessageBoxShow("Can't create absence for that time!", "Error",
                             "Nuk mund të krijojë mungesë për atë kohë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                string eee = ex.Message;
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -213,27 +212,27 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void picClass_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
+            MessageDialog.ToolTipShow("Class is required!", "Klasa duhet të plotësohet!", picClass);
         }
 
         private void picSubjetct_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
+            MessageDialog.ToolTipShow("Subject is required!", "Lënda duhet të plotësohet!", picSubject);
         }
 
         private void picTime_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
+            MessageDialog.ToolTipShow("Time is required!", "Ora duhet të plotësohet!", picTime);
         }
 
         private void picReasoning_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Select a reason!", "Zgjedh arsyen!", picReasoning);
+            MessageDialog.ToolTipShow("Select a reason!", "Zgjedh arsyen!", picReasoning);
         }
 
         private void picNoStudents_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Write numbers of students that are absence!", "Shkruaj numrat e studentëve që mungojnë!", picNoStudents);
+            MessageDialog.ToolTipShow("Write numbers of students that are absence!", "Shkruaj numrat e studentëve që mungojnë!", picNoStudents);
         }
 
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)

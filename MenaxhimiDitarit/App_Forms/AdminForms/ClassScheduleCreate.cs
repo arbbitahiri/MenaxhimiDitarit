@@ -121,7 +121,7 @@ namespace MenaxhimiDitarit.AdminForms
 
                         if (checkSchedules.Count > 0)
                         {
-                            Validation.MessageBoxShow("Schedule exists in that period!", "Exists",
+                            MessageDialog.MessageBoxShow("Schedule exists in that period!", "Exists",
                                    "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
@@ -132,7 +132,7 @@ namespace MenaxhimiDitarit.AdminForms
 
                             if (checkSchedules2.Count > 0)
                             {
-                                Validation.MessageBoxShow("Schedule exists in that period!", "Exists",
+                                MessageDialog.MessageBoxShow("Schedule exists in that period!", "Exists",
                                    "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
@@ -141,11 +141,11 @@ namespace MenaxhimiDitarit.AdminForms
 
                                 if (isRegistred)
                                 {
-                                    Validation.DoYouWantToContinue(this, "Schedule", "Orari");
+                                    MessageDialog.DoYouWantToContinue(this, "Schedule", "Orari");
                                 }
                                 else
                                 {
-                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                    MessageDialog.MessageBoxShow("Registration failed!", "Error",
                                         "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
@@ -157,26 +157,26 @@ namespace MenaxhimiDitarit.AdminForms
 
                         if (isUpdated)
                         {
-                            Validation.MessageBoxShow("Schedule updated.", "Information",
+                            MessageDialog.MessageBoxShow("Schedule updated.", "Information",
                                 "Orari u përditësua.", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             this.Close();
                         }
                         else
                         {
-                            Validation.MessageBoxShow("Update failed!", "Error",
+                            MessageDialog.MessageBoxShow("Update failed!", "Error",
                                 "Përditësimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 else
                 {
-                    Validation.MessageBoxShow("Please fill all fields!", "Error",
+                    MessageDialog.MessageBoxShow("Please fill all fields!", "Error",
                         "Ju lutem plotësoni të gjitha fushat!", "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
-                Validation.MessageBoxShow("A problem occurred while registering data!", "Error",
+                MessageDialog.MessageBoxShow("A problem occurred while registering data!", "Error",
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -203,22 +203,22 @@ namespace MenaxhimiDitarit.AdminForms
         #region ErrorProvider
         private void picClass_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a class!", "Zgjedheni një klasën!", picClass);
+            MessageDialog.ToolTipShow("Please select a class!", "Zgjedheni një klasën!", picClass);
         }
 
         private void picSubject_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a subject!", "Zgjedheni një lëndë!", picSubject);
+            MessageDialog.ToolTipShow("Please select a subject!", "Zgjedheni një lëndë!", picSubject);
         }
 
         private void picTime_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a time!", "Zgjedheni një orë!", picTime);
+            MessageDialog.ToolTipShow("Please select a time!", "Zgjedheni një orë!", picTime);
         }
 
         private void picDate_MouseHover(object sender, EventArgs e)
         {
-            Validation.ToolTipShow("Please select a date!", "Zgjedheni një datë!", picDate);
+            MessageDialog.ToolTipShow("Please select a date!", "Zgjedheni një datë!", picDate);
         }
 
         private void cmbSelectClass_SelectedIndexChanged(object sender, EventArgs e)
