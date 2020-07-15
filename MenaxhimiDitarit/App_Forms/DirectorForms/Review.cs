@@ -48,7 +48,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         /// </summary>
         private void CustomizeDesign()
         {
-            //txtID.Enabled = false;
             cmbSelectSubject.Enabled = false;
             dtpCommentDay.Enabled = false;
             txtComment.Enabled = false;
@@ -113,25 +112,6 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// Closes the form
-        /// </summary>
-        private void CloseForm()
-        {
-            if (Validation.CheckTextbox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -143,7 +123,12 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
 
         // TextBox

@@ -67,7 +67,6 @@ namespace MenaxhimiDitarit.AdminForms
         /// </summary>
         private void CustomizeDesign()
         {
-            //txtID.Enabled = false;
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;
         }
@@ -123,9 +122,7 @@ namespace MenaxhimiDitarit.AdminForms
 
                             if (isRegistred)
                             {
-                                Validation.MessageBoxShow("Class registered successfully", "Registered",
-                                   "Klasa u regjistrua me sukses", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
+                                Validation.DoYouWantToContinue(this, "Class", "Klasa");
                             }
                             else
                             {
@@ -163,25 +160,6 @@ namespace MenaxhimiDitarit.AdminForms
                        "Ndodhi një problem gjatë regjistrimit të të dhënave.", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// Closese Form
-        /// </summary>
-        private void CloseForm()
-        {
-            if (Validation.CheckComboBox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -193,7 +171,12 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
         #endregion
 

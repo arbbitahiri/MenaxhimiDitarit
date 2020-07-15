@@ -74,7 +74,6 @@ namespace MenaxhimiDitarit.TeacherForms
         private void CustomizeDesign()
         {
             dtpSelectDate.Enabled = false;
-            //txtID.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
             cmbSelectSubject.DataSource = MySubjects;
         }
@@ -142,9 +141,7 @@ namespace MenaxhimiDitarit.TeacherForms
 
                                 if (isRegistred)
                                 {
-                                    Validation.MessageBoxShow("Topic registered successfully!", "Registered",
-                                        "Tema u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Close();
+                                    Validation.DoYouWantToContinue(this, "Topic", "Tema");
                                 }
                                 else
                                 {
@@ -188,25 +185,6 @@ namespace MenaxhimiDitarit.TeacherForms
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// Closes the form
-        /// </summary>
-        private void CloseForm()
-        {
-            if (Validation.CheckTextbox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -218,7 +196,12 @@ namespace MenaxhimiDitarit.TeacherForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
         #endregion
 

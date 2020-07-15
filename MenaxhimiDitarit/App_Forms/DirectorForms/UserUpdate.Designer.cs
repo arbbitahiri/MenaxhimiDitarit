@@ -246,6 +246,7 @@
             this.btnExit.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_delete_35;
             this.btnExit.Name = "btnExit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnHELP
             // 

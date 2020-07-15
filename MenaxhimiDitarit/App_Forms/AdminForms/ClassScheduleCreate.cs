@@ -69,7 +69,6 @@ namespace MenaxhimiDitarit.AdminForms
         {
             txtYear.Text = DateTime.Now.Year.ToString();
 
-            //txtID.Enabled = false;
             txtYear.Enabled = false;
 
             cmbSelectSubject.DataSource = MySubjects;
@@ -127,22 +126,28 @@ namespace MenaxhimiDitarit.AdminForms
                         }
                         else
                         {
-                            bool isRegistred = _scheduleBLL.Add(schedule);
+                            var checkSchedules2 = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
+                            && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Day == cmbSelectDate.SelectedItem.ToString()
+                            && t.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
 
-                            if (isRegistred)
+                            if (checkSchedules2.Count > 0)
                             {
-                                var result = Validation.MessageBoxShow("Schedule registred successfully. Do you want to continue?", "Registered",
-                                    "Orari u regjistrua me sukses. Doni të vazhdoni?", "U regjistrua", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                                if (result != DialogResult.Yes)
-                                {
-                                    this.Close();
-                                }
+                                Validation.MessageBoxShow("Schedule exists in that period!", "Exists",
+                                   "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                Validation.MessageBoxShow("Registration failed!", "Error",
-                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                bool isRegistred = _scheduleBLL.Add(schedule);
+
+                                if (isRegistred)
+                                {
+                                    Validation.DoYouWantToContinue(this, "Schedule", "Orari");
+                                }
+                                else
+                                {
+                                    Validation.MessageBoxShow("Registration failed!", "Error",
+                                        "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
                             }
                         }
                     }
@@ -175,22 +180,6 @@ namespace MenaxhimiDitarit.AdminForms
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void CloseForm()
-        {
-            if (Validation.CheckTextbox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -202,7 +191,12 @@ namespace MenaxhimiDitarit.AdminForms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
         #endregion
 

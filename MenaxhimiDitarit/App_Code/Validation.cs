@@ -59,6 +59,40 @@ namespace MenaxhimiDitarit.App_Code
         }
 
         /// <summary>
+        /// Shows a MessageBox dialog with a message, if you want to continue
+        /// with the dialog or not
+        /// </summary>
+        /// <param name="form">The form, this MSGB dialog will appear</param>
+        /// <param name="message">The message in English</param>
+        /// <param name="mesazhi">The message in Albanian(XK)</param>
+        public static void DoYouWantToContinue(Form form, string message, string mesazhi)
+        {
+            var result = MessageBoxShow($"{message} registred successfully. Do you want to continue?", "Registered",
+                $"{mesazhi} u regjistrua me sukses. Doni të vazhdoni?", "U regjistrua", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result != DialogResult.Yes)
+            {
+                form.Close();
+            }
+        }
+
+        public static void CloseForm(Form form)
+        {
+            if (CheckTextbox(form))
+            {
+                var result = MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
+                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                    form.Close();
+            }
+            else
+            {
+                form.Close();
+            }
+        }
+
+        /// <summary>
         /// ToolTip to show info when hovering the picture
         /// </summary>
         /// <param name="message">Message in English</param>

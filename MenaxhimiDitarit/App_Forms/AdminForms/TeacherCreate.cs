@@ -49,7 +49,6 @@ namespace MenaxhimiDitarit
         /// </summary>
         private void CostumizeDesign()
         {
-            //txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 
@@ -147,9 +146,7 @@ namespace MenaxhimiDitarit
 
                                             if (isRegistred)
                                             {
-                                                Validation.MessageBoxShow($"Teacher {teacher.FullName} registred successfully!", "Completed",
-                                                    $"Arsimtari {teacher.FullName} u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                                this.Close();
+                                                Validation.DoYouWantToContinue(this, $"Teacher {teacher.FullName}", $"Arsimtari {teacher.FullName}");
                                             }
                                             else
                                             {
@@ -207,25 +204,6 @@ namespace MenaxhimiDitarit
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        /// <summary>
-        /// Closes the form depending on if we want
-        /// </summary>
-        private void CloseForm()
-        {
-            if (Validation.CheckTextbox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -237,7 +215,12 @@ namespace MenaxhimiDitarit
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
 
         // DateTimePicker

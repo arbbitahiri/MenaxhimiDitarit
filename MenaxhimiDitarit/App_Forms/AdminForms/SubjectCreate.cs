@@ -33,8 +33,6 @@ namespace MenaxhimiDitarit
             cmbTeacher.DataSource = MyTeachers;
 
             update = false;
-
-            //txtID.Enabled = false;
         }
 
         public SubjectCreate(Subject subject)
@@ -54,7 +52,6 @@ namespace MenaxhimiDitarit
             PopulateForm(_subject);
 
             cmbTeacher.DataSource = MyTeachers;
-            //txtID.Enabled = false;
             txtSubjectTitle.Enabled = false;
         }
 
@@ -110,9 +107,7 @@ namespace MenaxhimiDitarit
 
                             if (isRegistred)
                             {
-                                Validation.MessageBoxShow($"Subject: {subject.SubjectTitle} registred successfully", "Registered",
-                                    $"Lënda: {subject.SubjectTitle} u regjistrua me sukses", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
+                                Validation.DoYouWantToContinue(this, $"Subject: {subject.SubjectTitle}", $"Lënda: {subject.SubjectTitle}");
                             }
                             else
                             {
@@ -150,25 +145,6 @@ namespace MenaxhimiDitarit
                     "Ndodhi një problem gjatë regjistrimit të të dhënave!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        /// <summary>
-        /// Closes the form depending on if we want
-        /// </summary>
-        private void CloseForm()
-        {
-            if (Validation.CheckTextbox(this))
-            {
-                var result = Validation.MessageBoxShow("You have something written. Are you sure you want to exit form?", "Sure?",
-                    "Keni të shkruar diçka. A je i/e sigurt që do të largoheni nga forma?", "Sigurt?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                    this.Close();
-            }
-            else
-            {
-                this.Close();
-            }
-        }
         #endregion
 
         #region Events
@@ -180,7 +156,12 @@ namespace MenaxhimiDitarit
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            Validation.CloseForm(this);
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Validation.CloseForm(this);
         }
 
         // TextBoxes
