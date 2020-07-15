@@ -136,7 +136,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmbSelectClass.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
     <value>cmbSelectClass</value>
@@ -163,7 +163,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
+    <value>6</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Submit</value>
@@ -193,7 +193,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
+    <value>7</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -256,7 +256,7 @@
     <value>181, 25</value>
   </data>
   <data name="dtpSelectDate.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;dtpSelectDate.Name" xml:space="preserve">
     <value>dtpSelectDate</value>
@@ -436,7 +436,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtNoStudents.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;txtNoStudents.Name" xml:space="preserve">
     <value>txtNoStudents</value>
@@ -517,7 +517,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbSelectSubject.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cmbSelectSubject.Name" xml:space="preserve">
     <value>cmbSelectSubject</value>
@@ -550,7 +550,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbReasoning.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cmbReasoning.Name" xml:space="preserve">
     <value>cmbReasoning</value>
@@ -649,7 +649,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbSelectTime.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cmbSelectTime.Name" xml:space="preserve">
     <value>cmbSelectTime</value>
@@ -871,7 +871,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
+    <value>9</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -910,7 +910,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
+    <value>8</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

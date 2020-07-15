@@ -262,7 +262,7 @@
     <value>205, 39</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnLogin.Text" xml:space="preserve">
     <value>Log In</value>
@@ -292,7 +292,7 @@
     <value>205, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -364,7 +364,7 @@
     <value>118, 21</value>
   </data>
   <data name="chbShowPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>5</value>
   </data>
   <data name="chbShowPassword.Text" xml:space="preserve">
     <value>Show Password</value>
@@ -430,7 +430,7 @@
     <value>178, 25</value>
   </data>
   <data name="cmbLanguage.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cmbLanguage.Name" xml:space="preserve">
     <value>cmbLanguage</value>
@@ -442,54 +442,6 @@
     <value>pnlLogoMain</value>
   </data>
   <data name="&gt;&gt;cmbLanguage.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
-    <value>btnExit</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
-    <value>pnlLogoMain</value>
-  </data>
-  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnHELP.Name" xml:space="preserve">
-    <value>btnHELP</value>
-  </data>
-  <data name="&gt;&gt;btnHELP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnHELP.Parent" xml:space="preserve">
-    <value>pnlLogoMain</value>
-  </data>
-  <data name="&gt;&gt;btnHELP.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pnlLogoMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="pnlLogoMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>575, 0</value>
-  </data>
-  <data name="pnlLogoMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>575, 585</value>
-  </data>
-  <data name="pnlLogoMain.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pnlLogoMain.Name" xml:space="preserve">
-    <value>pnlLogoMain</value>
-  </data>
-  <data name="&gt;&gt;pnlLogoMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlLogoMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlLogoMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="btnExit.AutoSize" type="System.Boolean, mscorlib">
@@ -511,7 +463,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>7</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -550,7 +502,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>6</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -569,6 +521,30 @@
   </data>
   <data name="&gt;&gt;btnHELP.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="pnlLogoMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlLogoMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>575, 0</value>
+  </data>
+  <data name="pnlLogoMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>575, 585</value>
+  </data>
+  <data name="pnlLogoMain.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pnlLogoMain.Name" xml:space="preserve">
+    <value>pnlLogoMain</value>
+  </data>
+  <data name="&gt;&gt;pnlLogoMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLogoMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlLogoMain.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="picLogoMain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

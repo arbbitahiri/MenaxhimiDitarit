@@ -129,7 +129,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>9</value>
   </data>
   <data name="txtID.Text" xml:space="preserve">
     <value>-1</value>
@@ -258,7 +258,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtSubjectBook.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtSubjectBook.Name" xml:space="preserve">
     <value>txtSubjectBook</value>
@@ -282,7 +282,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtSubjectTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtSubjectTitle.Name" xml:space="preserve">
     <value>txtSubjectTitle</value>
@@ -357,7 +357,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtBookAuthor.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtBookAuthor.Name" xml:space="preserve">
     <value>txtBookAuthor</value>
@@ -385,7 +385,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Submit</value>
@@ -415,7 +415,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -499,7 +499,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cmbTeacher.Name" xml:space="preserve">
     <value>cmbTeacher</value>
@@ -640,7 +640,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
+    <value>7</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -679,7 +679,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
+    <value>6</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

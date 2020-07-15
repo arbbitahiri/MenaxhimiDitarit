@@ -133,7 +133,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSubmitClass.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnSubmitClass.Text" xml:space="preserve">
     <value>Submit</value>
@@ -163,7 +163,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -376,7 +376,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbMainTeacher.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;cmbMainTeacher.Name" xml:space="preserve">
     <value>cmbMainTeacher</value>
@@ -430,7 +430,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbSelectClass.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cmbSelectClass.Name" xml:space="preserve">
     <value>cmbSelectClass</value>
@@ -460,7 +460,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbSelectRoom.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cmbSelectRoom.Name" xml:space="preserve">
     <value>cmbSelectRoom</value>
@@ -574,7 +574,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
+    <value>6</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -613,7 +613,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
+    <value>5</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

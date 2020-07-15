@@ -61,7 +61,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         /// </summary>
         private void CustomizeDesign()
         {
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             dtpAbsenceDate.Enabled = false;
         }
 

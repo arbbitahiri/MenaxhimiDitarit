@@ -27,7 +27,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
             _user = user;
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             cmbRoles.DataSource = MyRoles;
 
             PopulateForm(_user);

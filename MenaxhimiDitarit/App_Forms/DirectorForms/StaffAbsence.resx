@@ -160,7 +160,7 @@
     <value>181, 25</value>
   </data>
   <data name="dtpAbsenceDate.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;dtpAbsenceDate.Name" xml:space="preserve">
     <value>dtpAbsenceDate</value>
@@ -244,7 +244,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbStaff.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;cmbStaff.Name" xml:space="preserve">
     <value>cmbStaff</value>
@@ -328,7 +328,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
+    <value>3</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Submit</value>
@@ -361,7 +361,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
+    <value>4</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -451,7 +451,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbReasoning.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;cmbReasoning.Name" xml:space="preserve">
     <value>cmbReasoning</value>
@@ -538,7 +538,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
+    <value>6</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -577,7 +577,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
+    <value>5</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

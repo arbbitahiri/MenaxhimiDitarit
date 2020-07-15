@@ -67,7 +67,7 @@ namespace MenaxhimiDitarit.AdminForms
         /// </summary>
         private void CustomizeDesign()
         {
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             cmbMainTeacher.DataSource = MyTeachers;
             cmbSelectRoom.DataSource = MyRooms;
         }

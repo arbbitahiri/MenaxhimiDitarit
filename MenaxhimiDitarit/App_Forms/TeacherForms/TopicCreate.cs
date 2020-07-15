@@ -74,7 +74,7 @@ namespace MenaxhimiDitarit.TeacherForms
         private void CustomizeDesign()
         {
             dtpSelectDate.Enabled = false;
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
             cmbSelectSubject.DataSource = MySubjects;
         }

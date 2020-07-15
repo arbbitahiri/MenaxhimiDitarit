@@ -29,7 +29,7 @@ namespace MenaxhimiDitarit.DirectorForms
 
             cmbRoles.DataSource = MyRoles;
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             txtPassword.UseSystemPasswordChar = true;
             txtConfirmPass.UseSystemPasswordChar = true;
         }

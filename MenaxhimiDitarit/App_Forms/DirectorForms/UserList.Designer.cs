@@ -57,12 +57,14 @@
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn5 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn6 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn7 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn7 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn8 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn9 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.grbSearch = new System.Windows.Forms.GroupBox();
@@ -77,6 +79,7 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.MasterTemplate = new Telerik.WinControls.UI.RadGridView();
+            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewTemplate1 = new Telerik.WinControls.UI.GridViewTemplate();
             this.pnlPicture = new System.Windows.Forms.Panel();
             this.lblAdmin = new System.Windows.Forms.Label();
@@ -104,12 +107,12 @@
             this.btnDeleteU = new System.Windows.Forms.Button();
             this.printDocument = new Telerik.WinControls.UI.RadPrintDocument();
             this.dgvUserList = new Telerik.WinControls.UI.RadGridView();
-            this.bsrcUserList = new System.Windows.Forms.BindingSource(this.components);
             this.grbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.cmsUserContext.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).BeginInit();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClass)).BeginInit();
@@ -118,8 +121,7 @@
             this.pnlPrint.SuspendLayout();
             this.pnlUserMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSearch
@@ -310,10 +312,15 @@
             gridViewTextBoxColumn8,
             gridViewDateTimeColumn3,
             gridViewDecimalColumn3});
+            this.MasterTemplate.MasterTemplate.DataSource = this.bsrcUserList;
             this.MasterTemplate.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.MasterTemplate.Name = "MasterTemplate";
             this.MasterTemplate.ReadOnly = true;
             this.MasterTemplate.ThemeName = "CrystalDark";
+            // 
+            // bsrcUserList
+            // 
+            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
             // gridViewTemplate1
             // 
@@ -557,8 +564,8 @@
             // 
             // 
             // 
-            this.MasterTemplate.MasterTemplate.AllowAddNewRow = false;
-            this.MasterTemplate.MasterTemplate.AllowColumnReorder = false;
+            this.dgvUserList.MasterTemplate.AllowAddNewRow = false;
+            this.dgvUserList.MasterTemplate.AllowColumnReorder = false;
             gridViewDecimalColumn4.DataType = typeof(int);
             gridViewDecimalColumn4.EnableExpressionEditor = false;
             gridViewDecimalColumn4.FieldName = "UserID";
@@ -566,8 +573,6 @@
             gridViewDecimalColumn4.IsAutoGenerated = true;
             gridViewDecimalColumn4.IsVisible = false;
             gridViewDecimalColumn4.Name = "UserID";
-            gridViewDecimalColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDecimalColumn4.Width = 75;
             gridViewTextBoxColumn9.EnableExpressionEditor = false;
             gridViewTextBoxColumn9.FieldName = "FirstName";
             resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
@@ -602,10 +607,11 @@
             gridViewDateTimeColumn4.IsAutoGenerated = true;
             gridViewDateTimeColumn4.Name = "ExpiresDate";
             gridViewDateTimeColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn4.Width = 160;
+            gridViewDateTimeColumn4.Width = 165;
             gridViewDecimalColumn5.DataType = typeof(int);
             gridViewDecimalColumn5.EnableExpressionEditor = false;
             gridViewDecimalColumn5.FieldName = "RoleID";
+            resources.ApplyResources(gridViewDecimalColumn5, "gridViewDecimalColumn5");
             gridViewDecimalColumn5.IsAutoGenerated = true;
             gridViewDecimalColumn5.IsVisible = false;
             gridViewDecimalColumn5.Name = "RoleID";
@@ -613,61 +619,80 @@
             gridViewDateTimeColumn5.FieldName = "LastLoginDate";
             resources.ApplyResources(gridViewDateTimeColumn5, "gridViewDateTimeColumn5");
             gridViewDateTimeColumn5.IsAutoGenerated = true;
+            gridViewDateTimeColumn5.IsVisible = false;
             gridViewDateTimeColumn5.Name = "LastLoginDate";
-            gridViewDateTimeColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewDateTimeColumn5.Width = 165;
             gridViewDateTimeColumn6.EnableExpressionEditor = false;
             gridViewDateTimeColumn6.FieldName = "LastPasswordChangeDate";
+            resources.ApplyResources(gridViewDateTimeColumn6, "gridViewDateTimeColumn6");
             gridViewDateTimeColumn6.IsAutoGenerated = true;
             gridViewDateTimeColumn6.IsVisible = false;
             gridViewDateTimeColumn6.Name = "LastPasswordChangeDate";
             gridViewCheckBoxColumn1.EnableExpressionEditor = false;
             gridViewCheckBoxColumn1.FieldName = "IsPasswordChanged";
+            resources.ApplyResources(gridViewCheckBoxColumn1, "gridViewCheckBoxColumn1");
             gridViewCheckBoxColumn1.IsAutoGenerated = true;
             gridViewCheckBoxColumn1.IsVisible = false;
             gridViewCheckBoxColumn1.MinWidth = 20;
             gridViewCheckBoxColumn1.Name = "IsPasswordChanged";
-            gridViewTextBoxColumn13.DataType = typeof(MenaxhimiDitarit.BO.Role);
-            gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "Roles";
-            resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
-            gridViewTextBoxColumn13.IsAutoGenerated = true;
-            gridViewTextBoxColumn13.Name = "Roles";
-            gridViewTextBoxColumn13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn13.Width = 120;
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "FullName";
-            gridViewTextBoxColumn14.IsAutoGenerated = true;
-            gridViewTextBoxColumn14.IsVisible = false;
-            gridViewTextBoxColumn14.Name = "FullName";
-            gridViewTextBoxColumn14.ReadOnly = true;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "InsertBy";
-            gridViewTextBoxColumn15.IsAutoGenerated = true;
-            gridViewTextBoxColumn15.IsVisible = false;
-            gridViewTextBoxColumn15.Name = "InsertBy";
             gridViewDateTimeColumn7.EnableExpressionEditor = false;
-            gridViewDateTimeColumn7.FieldName = "InsertDate";
+            gridViewDateTimeColumn7.FieldName = "StaffAbsenceDate";
+            resources.ApplyResources(gridViewDateTimeColumn7, "gridViewDateTimeColumn7");
             gridViewDateTimeColumn7.IsAutoGenerated = true;
             gridViewDateTimeColumn7.IsVisible = false;
-            gridViewDateTimeColumn7.Name = "InsertDate";
+            gridViewDateTimeColumn7.Name = "StaffAbsenceDate";
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.FieldName = "StaffAbsenceReasoning";
+            resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
+            gridViewTextBoxColumn13.IsAutoGenerated = true;
+            gridViewTextBoxColumn13.IsVisible = false;
+            gridViewTextBoxColumn13.Name = "StaffAbsenceReasoning";
+            gridViewTextBoxColumn14.DataType = typeof(MenaxhimiDitarit.BO.Role);
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.FieldName = "Roles";
+            resources.ApplyResources(gridViewTextBoxColumn14, "gridViewTextBoxColumn14");
+            gridViewTextBoxColumn14.IsAutoGenerated = true;
+            gridViewTextBoxColumn14.Name = "Roles";
+            gridViewTextBoxColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn14.Width = 120;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.FieldName = "FullName";
+            resources.ApplyResources(gridViewTextBoxColumn15, "gridViewTextBoxColumn15");
+            gridViewTextBoxColumn15.IsAutoGenerated = true;
+            gridViewTextBoxColumn15.IsVisible = false;
+            gridViewTextBoxColumn15.Name = "FullName";
+            gridViewTextBoxColumn15.ReadOnly = true;
             gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "LUB";
+            gridViewTextBoxColumn16.FieldName = "InsertBy";
+            resources.ApplyResources(gridViewTextBoxColumn16, "gridViewTextBoxColumn16");
             gridViewTextBoxColumn16.IsAutoGenerated = true;
             gridViewTextBoxColumn16.IsVisible = false;
-            gridViewTextBoxColumn16.Name = "LUB";
+            gridViewTextBoxColumn16.Name = "InsertBy";
             gridViewDateTimeColumn8.EnableExpressionEditor = false;
-            gridViewDateTimeColumn8.FieldName = "LUD";
+            gridViewDateTimeColumn8.FieldName = "InsertDate";
+            resources.ApplyResources(gridViewDateTimeColumn8, "gridViewDateTimeColumn8");
             gridViewDateTimeColumn8.IsAutoGenerated = true;
             gridViewDateTimeColumn8.IsVisible = false;
-            gridViewDateTimeColumn8.Name = "LUD";
+            gridViewDateTimeColumn8.Name = "InsertDate";
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.FieldName = "LUB";
+            resources.ApplyResources(gridViewTextBoxColumn17, "gridViewTextBoxColumn17");
+            gridViewTextBoxColumn17.IsAutoGenerated = true;
+            gridViewTextBoxColumn17.IsVisible = false;
+            gridViewTextBoxColumn17.Name = "LUB";
+            gridViewDateTimeColumn9.EnableExpressionEditor = false;
+            gridViewDateTimeColumn9.FieldName = "LUD";
+            resources.ApplyResources(gridViewDateTimeColumn9, "gridViewDateTimeColumn9");
+            gridViewDateTimeColumn9.IsAutoGenerated = true;
+            gridViewDateTimeColumn9.IsVisible = false;
+            gridViewDateTimeColumn9.Name = "LUD";
             gridViewDecimalColumn6.DataType = typeof(int);
             gridViewDecimalColumn6.EnableExpressionEditor = false;
             gridViewDecimalColumn6.FieldName = "LUN";
+            resources.ApplyResources(gridViewDecimalColumn6, "gridViewDecimalColumn6");
             gridViewDecimalColumn6.IsAutoGenerated = true;
             gridViewDecimalColumn6.IsVisible = false;
             gridViewDecimalColumn6.Name = "LUN";
-            this.MasterTemplate.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            this.dgvUserList.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewDecimalColumn4,
             gridViewTextBoxColumn9,
             gridViewTextBoxColumn10,
@@ -678,22 +703,20 @@
             gridViewDateTimeColumn5,
             gridViewDateTimeColumn6,
             gridViewCheckBoxColumn1,
+            gridViewDateTimeColumn7,
             gridViewTextBoxColumn13,
             gridViewTextBoxColumn14,
             gridViewTextBoxColumn15,
-            gridViewDateTimeColumn7,
             gridViewTextBoxColumn16,
             gridViewDateTimeColumn8,
+            gridViewTextBoxColumn17,
+            gridViewDateTimeColumn9,
             gridViewDecimalColumn6});
-            this.MasterTemplate.MasterTemplate.DataSource = this.bsrcUserList;
-            this.MasterTemplate.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dgvUserList.MasterTemplate.DataSource = this.bsrcUserList;
+            this.dgvUserList.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dgvUserList.Name = "dgvUserList";
             this.dgvUserList.ReadOnly = true;
             this.dgvUserList.ThemeName = "CrystalDark";
-            // 
-            // bsrcUserList
-            // 
-            this.bsrcUserList.DataSource = typeof(MenaxhimiDitarit.BO.User);
             // 
             // UserList
             // 
@@ -712,6 +735,7 @@
             this.cmsUserContext.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTemplate1)).EndInit();
             this.pnlPicture.ResumeLayout(false);
             this.pnlPicture.PerformLayout();
@@ -722,9 +746,8 @@
             this.pnlPrint.ResumeLayout(false);
             this.pnlUserMain.ResumeLayout(false);
             this.pnlUserMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MasterTemplate.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserList.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsrcUserList)).EndInit();
             this.ResumeLayout(false);
 
         }

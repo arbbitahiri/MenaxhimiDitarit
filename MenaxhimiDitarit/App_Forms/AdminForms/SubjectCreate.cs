@@ -34,7 +34,7 @@ namespace MenaxhimiDitarit
 
             update = false;
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
         }
 
         public SubjectCreate(Subject subject)
@@ -54,7 +54,7 @@ namespace MenaxhimiDitarit
             PopulateForm(_subject);
 
             cmbTeacher.DataSource = MyTeachers;
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             txtSubjectTitle.Enabled = false;
         }
 

@@ -37,6 +37,7 @@
             this.btnAddNTacher = new System.Windows.Forms.Button();
             this.btnListTeachers = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnHELP = new System.Windows.Forms.Button();
             this.pnlSchedule = new System.Windows.Forms.Panel();
             this.btnAddSchedule = new System.Windows.Forms.Button();
             this.btnListSchedules = new System.Windows.Forms.Button();
@@ -57,14 +58,14 @@
             this.btnListSubjects = new System.Windows.Forms.Button();
             this.btnSubjects = new System.Windows.Forms.Button();
             this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.lblSDM = new System.Windows.Forms.Label();
-            this.picSchool = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.btnHELP = new System.Windows.Forms.Button();
+            this.lblManagement = new System.Windows.Forms.Label();
+            this.lblSchoolDiary = new System.Windows.Forms.Label();
+            this.picLogoMain = new System.Windows.Forms.PictureBox();
             this.pnlPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdmin)).BeginInit();
             this.pnlTeachers.SuspendLayout();
@@ -75,7 +76,7 @@
             this.pnlClassR.SuspendLayout();
             this.pnlSubjects.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSchool)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPicture
@@ -153,6 +154,15 @@
             this.pnlMain.Controls.Add(this.btnTeachers);
             this.pnlMain.Controls.Add(this.pnlPicture);
             this.pnlMain.Name = "pnlMain";
+            // 
+            // btnHELP
+            // 
+            resources.ApplyResources(this.btnHELP, "btnHELP");
+            this.btnHELP.FlatAppearance.BorderSize = 0;
+            this.btnHELP.ForeColor = System.Drawing.Color.White;
+            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
+            this.btnHELP.Name = "btnHELP";
+            this.btnHELP.UseVisualStyleBackColor = true;
             // 
             // pnlSchedule
             // 
@@ -330,23 +340,11 @@
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.pnlChildForm.Controls.Add(this.lblSDM);
-            this.pnlChildForm.Controls.Add(this.picSchool);
+            this.pnlChildForm.Controls.Add(this.lblManagement);
+            this.pnlChildForm.Controls.Add(this.lblSchoolDiary);
+            this.pnlChildForm.Controls.Add(this.picLogoMain);
             resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.Name = "pnlChildForm";
-            // 
-            // lblSDM
-            // 
-            resources.ApplyResources(this.lblSDM, "lblSDM");
-            this.lblSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.lblSDM.Name = "lblSDM";
-            // 
-            // picSchool
-            // 
-            resources.ApplyResources(this.picSchool, "picSchool");
-            this.picSchool.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_university_100__2_;
-            this.picSchool.Name = "picSchool";
-            this.picSchool.TabStop = false;
             // 
             // lblUser
             // 
@@ -378,14 +376,24 @@
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Name = "lblDate";
             // 
-            // btnHELP
+            // lblManagement
             // 
-            resources.ApplyResources(this.btnHELP, "btnHELP");
-            this.btnHELP.FlatAppearance.BorderSize = 0;
-            this.btnHELP.ForeColor = System.Drawing.Color.White;
-            this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
-            this.btnHELP.Name = "btnHELP";
-            this.btnHELP.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.lblManagement, "lblManagement");
+            this.lblManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblManagement.Name = "lblManagement";
+            // 
+            // lblSchoolDiary
+            // 
+            resources.ApplyResources(this.lblSchoolDiary, "lblSchoolDiary");
+            this.lblSchoolDiary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblSchoolDiary.Name = "lblSchoolDiary";
+            // 
+            // picLogoMain
+            // 
+            this.picLogoMain.Image = global::MenaxhimiDitarit.Properties.Resources.icon_schools;
+            resources.ApplyResources(this.picLogoMain, "picLogoMain");
+            this.picLogoMain.Name = "picLogoMain";
+            this.picLogoMain.TabStop = false;
             // 
             // AdminMain
             // 
@@ -415,7 +423,7 @@
             this.pnlSubjects.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
             this.pnlChildForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picSchool)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,7 +445,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblAdmin;
         private System.Windows.Forms.Panel pnlChildForm;
-        private System.Windows.Forms.PictureBox picSchool;
         private System.Windows.Forms.Panel pnlClassR;
         private System.Windows.Forms.Button btnAddNewClass;
         private System.Windows.Forms.Button btnListClass;
@@ -456,8 +463,10 @@
         private System.Windows.Forms.Button btnAddSchedule;
         private System.Windows.Forms.Button btnListSchedules;
         private System.Windows.Forms.Button btnSchedule;
-        private System.Windows.Forms.Label lblSDM;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnHELP;
+        private System.Windows.Forms.Label lblManagement;
+        private System.Windows.Forms.Label lblSchoolDiary;
+        private System.Windows.Forms.PictureBox picLogoMain;
     }
 }

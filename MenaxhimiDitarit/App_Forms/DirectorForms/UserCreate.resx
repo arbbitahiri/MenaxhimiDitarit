@@ -133,7 +133,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSubmit.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Submit</value>
@@ -163,7 +163,7 @@
     <value>169, 39</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -190,7 +190,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>22</value>
   </data>
   <data name="txtID.Text" xml:space="preserve">
     <value>-1</value>
@@ -274,7 +274,7 @@
     <value>181, 25</value>
   </data>
   <data name="cmbRoles.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cmbRoles.Name" xml:space="preserve">
     <value>cmbRoles</value>
@@ -298,7 +298,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtFirstName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtFirstName.Name" xml:space="preserve">
     <value>txtFirstName</value>
@@ -322,7 +322,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtLastName.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtLastName.Name" xml:space="preserve">
     <value>txtLastName</value>
@@ -556,7 +556,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
     <value>txtPassword</value>
@@ -580,7 +580,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;txtUsername.Name" xml:space="preserve">
     <value>txtUsername</value>
@@ -688,7 +688,7 @@
     <value>181, 25</value>
   </data>
   <data name="dtpExpireDate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;dtpExpireDate.Name" xml:space="preserve">
     <value>dtpExpireDate</value>
@@ -766,7 +766,7 @@
     <value>181, 18</value>
   </data>
   <data name="txtConfirmPass.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtConfirmPass.Name" xml:space="preserve">
     <value>txtConfirmPass</value>
@@ -958,7 +958,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
+    <value>10</value>
   </data>
   <data name="btnExit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -997,7 +997,7 @@
     <value>56, 56</value>
   </data>
   <data name="btnHELP.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
+    <value>9</value>
   </data>
   <data name="btnHELP.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

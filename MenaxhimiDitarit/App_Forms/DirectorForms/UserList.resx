@@ -315,6 +315,9 @@
   <data name="MasterTemplate.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 137</value>
   </data>
+  <metadata name="bsrcUserList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="MasterTemplate.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -1318,17 +1321,47 @@
     <value>Password</value>
   </data>
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>Expires Date</value>
+    <value>Expire Date</value>
+  </data>
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
+    <value>RoleID</value>
   </data>
   <data name="gridViewDateTimeColumn5.HeaderText" xml:space="preserve">
-    <value>Last Login Date</value>
+    <value>LastLoginDate</value>
+  </data>
+  <data name="gridViewDateTimeColumn6.HeaderText" xml:space="preserve">
+    <value>LastPasswordChangeDate</value>
+  </data>
+  <data name="gridViewCheckBoxColumn1.HeaderText" xml:space="preserve">
+    <value>IsPasswordChanged</value>
+  </data>
+  <data name="gridViewDateTimeColumn7.HeaderText" xml:space="preserve">
+    <value>StaffAbsenceDate</value>
   </data>
   <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
+    <value>StaffAbsenceReasoning</value>
+  </data>
+  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
     <value>Role</value>
   </data>
-  <metadata name="bsrcUserList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
+    <value>InsertBy</value>
+  </data>
+  <data name="gridViewDateTimeColumn8.HeaderText" xml:space="preserve">
+    <value>InsertDate</value>
+  </data>
+  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>LUB</value>
+  </data>
+  <data name="gridViewDateTimeColumn9.HeaderText" xml:space="preserve">
+    <value>LUD</value>
+  </data>
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
+    <value>LUN</value>
+  </data>
   <data name="dgvUserList.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -2377,6 +2410,12 @@
   <data name="&gt;&gt;crystalDarkTheme1.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.CrystalDarkTheme, Telerik.WinControls.Themes.CrystalDark, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;bsrcUserList.Name" xml:space="preserve">
+    <value>bsrcUserList</value>
+  </data>
+  <data name="&gt;&gt;bsrcUserList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;gridViewTemplate1.Name" xml:space="preserve">
     <value>gridViewTemplate1</value>
   </data>
@@ -2388,12 +2427,6 @@
   </data>
   <data name="&gt;&gt;printDocument.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadPrintDocument, Telerik.WinControls.UI, Version=2020.1.113.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;bsrcUserList.Name" xml:space="preserve">
-    <value>bsrcUserList</value>
-  </data>
-  <data name="&gt;&gt;bsrcUserList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UserList</value>

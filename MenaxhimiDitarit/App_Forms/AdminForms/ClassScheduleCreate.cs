@@ -69,7 +69,7 @@ namespace MenaxhimiDitarit.AdminForms
         {
             txtYear.Text = DateTime.Now.Year.ToString();
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             txtYear.Enabled = false;
 
             cmbSelectSubject.DataSource = MySubjects;

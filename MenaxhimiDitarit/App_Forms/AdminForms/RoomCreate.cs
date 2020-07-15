@@ -25,7 +25,7 @@ namespace MenaxhimiDitarit
             MyRooms = _roomBLL.GetAll();
             update = false;
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
         }
 
         public RoomCreate(Room room)
@@ -38,7 +38,7 @@ namespace MenaxhimiDitarit
             update = room != null;
             PopulateForm(_room);
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
         }
 
         #region Methods

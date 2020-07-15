@@ -19,7 +19,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
             _user = user;
 
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             txtPassword.UseSystemPasswordChar = true;
             txtConfirmPass.UseSystemPasswordChar = true;
             txtUsername.Enabled = false;

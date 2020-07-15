@@ -49,7 +49,7 @@ namespace MenaxhimiDitarit
         /// </summary>
         private void CostumizeDesign()
         {
-            txtID.Enabled = false;
+            //txtID.Enabled = false;
             rbtnMale.Checked = true;
         }
 

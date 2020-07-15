@@ -1071,29 +1071,104 @@
   <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;lblSDM.Name" xml:space="preserve">
-    <value>lblSDM</value>
+  <data name="lblManagement.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;lblSDM.Type" xml:space="preserve">
+  <data name="lblManagement.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 36pt</value>
+  </data>
+  <data name="lblManagement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 472</value>
+  </data>
+  <data name="lblManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 65</value>
+  </data>
+  <data name="lblManagement.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblManagement.Text" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="lblManagement.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblManagement.Name" xml:space="preserve">
+    <value>lblManagement</value>
+  </data>
+  <data name="&gt;&gt;lblManagement.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblSDM.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblManagement.Parent" xml:space="preserve">
     <value>pnlChildForm</value>
   </data>
-  <data name="&gt;&gt;lblSDM.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblManagement.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;picSchool.Name" xml:space="preserve">
-    <value>picSchool</value>
+  <data name="lblSchoolDiary.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;picSchool.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblSchoolDiary.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 36pt</value>
   </data>
-  <data name="&gt;&gt;picSchool.Parent" xml:space="preserve">
+  <data name="lblSchoolDiary.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSchoolDiary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 409</value>
+  </data>
+  <data name="lblSchoolDiary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 65</value>
+  </data>
+  <data name="lblSchoolDiary.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblSchoolDiary.Text" xml:space="preserve">
+    <value>School Diary</value>
+  </data>
+  <data name="lblSchoolDiary.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lblSchoolDiary.Name" xml:space="preserve">
+    <value>lblSchoolDiary</value>
+  </data>
+  <data name="&gt;&gt;lblSchoolDiary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSchoolDiary.Parent" xml:space="preserve">
     <value>pnlChildForm</value>
   </data>
-  <data name="&gt;&gt;picSchool.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblSchoolDiary.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="picLogoMain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="picLogoMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 26</value>
+  </data>
+  <data name="picLogoMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 340</value>
+  </data>
+  <data name="picLogoMain.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="picLogoMain.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;picLogoMain.Name" xml:space="preserve">
+    <value>picLogoMain</value>
+  </data>
+  <data name="&gt;&gt;picLogoMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picLogoMain.Parent" xml:space="preserve">
+    <value>pnlChildForm</value>
+  </data>
+  <data name="&gt;&gt;picLogoMain.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pnlChildForm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1118,66 +1193,6 @@
   </data>
   <data name="&gt;&gt;pnlChildForm.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="lblSDM.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSDM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
-  </data>
-  <data name="lblSDM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 327</value>
-  </data>
-  <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>331, 37</value>
-  </data>
-  <data name="lblSDM.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblSDM.Text" xml:space="preserve">
-    <value>School Diary Management</value>
-  </data>
-  <data name="&gt;&gt;lblSDM.Name" xml:space="preserve">
-    <value>lblSDM</value>
-  </data>
-  <data name="&gt;&gt;lblSDM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSDM.Parent" xml:space="preserve">
-    <value>pnlChildForm</value>
-  </data>
-  <data name="&gt;&gt;lblSDM.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="picSchool.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="picSchool.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 205</value>
-  </data>
-  <data name="picSchool.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 99</value>
-  </data>
-  <data name="picSchool.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="picSchool.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;picSchool.Name" xml:space="preserve">
-    <value>picSchool</value>
-  </data>
-  <data name="&gt;&gt;picSchool.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;picSchool.Parent" xml:space="preserve">
-    <value>pnlChildForm</value>
-  </data>
-  <data name="&gt;&gt;picSchool.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="lblUser.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
