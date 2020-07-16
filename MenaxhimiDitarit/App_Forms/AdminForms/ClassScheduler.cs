@@ -167,15 +167,16 @@ namespace MenaxhimiDitarit.App_Forms.AdminForms
                             return subject.SubjectTitle;
                         }
                     }
-                    else
-                    {
-                        return "No data available!";
-                    }
                 }
             }
             return null;
         }
 
+        /// <summary>
+        /// Gets the class ID depending on the Class Number
+        /// </summary>
+        /// <param name="classNo">The class number</param>
+        /// <returns>The class ID</returns>
         private int GetClassID(int classNo)
         {
             foreach (var id in MyClasses)

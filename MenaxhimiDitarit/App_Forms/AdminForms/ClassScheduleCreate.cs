@@ -126,28 +126,16 @@ namespace MenaxhimiDitarit.AdminForms
                         }
                         else
                         {
-                            var checkSchedules2 = MySchedules.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
-                            && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Day == cmbSelectDate.SelectedItem.ToString()
-                            && t.Time == Convert.ToInt32(cmbSelectTime.SelectedItem.ToString())).ToList();
+                            bool isRegistred = _scheduleBLL.Add(schedule);
 
-                            if (checkSchedules2.Count > 0)
+                            if (isRegistred)
                             {
-                                MessageDialog.MessageBoxShow("Schedule exists in that period!", "Exists",
-                                   "Orari ekziston për atë periudhë!", "Ekziston", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageDialog.DoYouWantToContinue(this, "Schedule", "Orari");
                             }
                             else
                             {
-                                bool isRegistred = _scheduleBLL.Add(schedule);
-
-                                if (isRegistred)
-                                {
-                                    MessageDialog.DoYouWantToContinue(this, "Schedule", "Orari");
-                                }
-                                else
-                                {
-                                    MessageDialog.MessageBoxShow("Registration failed!", "Error",
-                                        "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                MessageDialog.MessageBoxShow("Registration failed!", "Error",
+                                    "Regjistrimi dështoi!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }

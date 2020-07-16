@@ -53,6 +53,7 @@ namespace MenaxhimiDitarit.DAL
                         DataConnection.AddParameter(command, "userpassword", model.UserPassword);
                         DataConnection.AddParameter(command, "expiresdate", model.ExpiresDate);
                         DataConnection.AddParameter(command, "roleID", model.RoleID);
+                        DataConnection.AddParameter(command, "teacherID", model.TeacherID);
                         DataConnection.AddParameter(command, "insertby", model.InsertBy);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
                         DataConnection.AddParameter(command, "LUN", model.LUN);
@@ -64,8 +65,9 @@ namespace MenaxhimiDitarit.DAL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                string ee = e.Message;
                 return false;
             }
         }
@@ -189,6 +191,9 @@ namespace MenaxhimiDitarit.DAL
 
                 if (reader["LUN"] != DBNull.Value)
                     user.LUN = int.Parse(reader["LUN"].ToString());
+
+                if (reader["TeacherID"] != DBNull.Value)
+                    user.TeacherID = int.Parse(reader["TeacherID"].ToString());
 
                 if (reader["First_Name"] != DBNull.Value)
                     user.FirstName = reader["First_Name"].ToString();

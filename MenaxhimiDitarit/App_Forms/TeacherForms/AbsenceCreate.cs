@@ -75,7 +75,8 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             dtpSelectDate.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
-            cmbSelectSubject.DataSource = MySubjects;
+            //cmbSelectSubject.DataSource = MySubjects;
+            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects);
         }
 
         /// <summary>
@@ -89,6 +90,20 @@ namespace MenaxhimiDitarit.TeacherForms
             cmbSelectSubject.SelectedItem = MySubjects.FirstOrDefault(f => f.SubjectID == absence.SubjectID);
             dtpSelectDate.Value = absence.Date;
             txtNoStudents.Text = absence.NoStudents.ToString();
+        }
+
+        private List<Subject> GetSubjects(int teacherID)
+        {
+            List<Subject> Subjects = new List<Subject>();
+            foreach (var teacher in MySubjects)
+            {
+                if (teacherID == teacher.TeacherID)
+                {
+                    Subjects.Add(teacher);
+                    //return Subjects;
+                }
+            }
+            return Subjects;
         }
 
         /// <summary>

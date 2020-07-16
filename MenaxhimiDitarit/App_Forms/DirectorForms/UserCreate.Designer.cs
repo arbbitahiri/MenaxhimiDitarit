@@ -64,6 +64,10 @@
             this.picRole = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnHELP = new System.Windows.Forms.Button();
+            this.cmbTeacher = new System.Windows.Forms.ComboBox();
+            this.lblTeacher = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picValidatePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).BeginInit();
@@ -71,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -334,18 +339,54 @@
             this.btnHELP.Name = "btnHELP";
             this.btnHELP.UseVisualStyleBackColor = true;
             // 
+            // cmbTeacher
+            // 
+            this.cmbTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.cmbTeacher.DataSource = this.bsrcTeacher;
+            this.cmbTeacher.DisplayMember = "FullName";
+            resources.ApplyResources(this.cmbTeacher, "cmbTeacher");
+            this.cmbTeacher.ForeColor = System.Drawing.Color.White;
+            this.cmbTeacher.FormattingEnabled = true;
+            this.cmbTeacher.Name = "cmbTeacher";
+            this.cmbTeacher.ValueMember = "TeacherID";
+            // 
+            // lblTeacher
+            // 
+            resources.ApplyResources(this.lblTeacher, "lblTeacher");
+            this.lblTeacher.ForeColor = System.Drawing.Color.White;
+            this.lblTeacher.Name = "lblTeacher";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
+            // 
             // UserCreate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.cmbTeacher);
+            this.Controls.Add(this.lblTeacher);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.btnHELP);
+            this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.picRole);
-            this.Controls.Add(this.picPassword);
-            this.Controls.Add(this.picUsername);
             this.Controls.Add(this.picLastName);
+            this.Controls.Add(this.picPassword);
             this.Controls.Add(this.picFirstName);
+            this.Controls.Add(this.picUsername);
             this.Controls.Add(this.picValidatePassword);
             this.Controls.Add(this.lblConfirmPass);
             this.Controls.Add(this.panel7);
@@ -366,12 +407,6 @@
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserCreate";
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).EndInit();
@@ -381,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsrcTeacher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,5 +458,9 @@
         private System.Windows.Forms.PictureBox picRole;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnHELP;
+        private System.Windows.Forms.ComboBox cmbTeacher;
+        private System.Windows.Forms.Label lblTeacher;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.BindingSource bsrcTeacher;
     }
 }

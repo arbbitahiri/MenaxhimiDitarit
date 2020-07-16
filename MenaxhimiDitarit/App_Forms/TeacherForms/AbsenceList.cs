@@ -26,7 +26,7 @@ namespace MenaxhimiDitarit.TeacherForms
             _subjectBLL = new SubjectBLL();
 
             MySubjects = _subjectBLL.GetAll();
-            cmbSelectSubject.DataSource = MySubjects;
+            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects); ;
 
             CustomizeDesign();
         }

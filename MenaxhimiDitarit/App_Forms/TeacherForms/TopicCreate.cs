@@ -75,7 +75,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             dtpSelectDate.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
-            cmbSelectSubject.DataSource = MySubjects;
+            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects); ;
         }
 
         /// <summary>

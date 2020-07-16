@@ -7,6 +7,9 @@ using System.Drawing;
 using Telerik.WinControls;
 using System.Security.Cryptography;
 using MenaxhimiDitarit.App_Forms.AdminForms;
+using iTextSharp.text;
+using MenaxhimiDitarit.BO;
+using System.Collections.Generic;
 
 namespace MenaxhimiDitarit.App_Code
 {
@@ -195,6 +198,50 @@ namespace MenaxhimiDitarit.App_Code
             if (birthDate > today.AddYears(-age))
                 age--;
             return age;
+        }
+
+        /// <summary>
+        /// Gets the subject depending on the teacher
+        /// </summary>
+        /// <param name="teacherID">The teachers ID</param>
+        /// <param name="MySubjects">The list of all subjects in database</param>
+        /// <returns>The list with all subjects that the teacher teaches</returns>
+        public static List<Subject> GetSubjects(int teacherID, List<Subject> MySubjects)
+        {
+            List<Subject> Subjects = new List<Subject>();
+            foreach (var teacher in MySubjects)
+            {
+                if (teacherID == teacher.TeacherID)
+                {
+                    Subjects.Add(teacher);
+                }
+            }
+            return Subjects;
+        }
+
+        /// <summary>
+        /// Gets the teacher depending on the teachers ID
+        /// </summary>
+        /// <param name="teacherID">The teachers ID</param>
+        /// <param name="MyTeachers">The list of all teachers in database</param>
+        /// <returns>The list with all teachers that matches with the ID</returns>
+        public static string GetTeacher(int teacherID, List<Teacher> MyTeachers, string name)
+        {
+            foreach (var teacher in MyTeachers)
+            {
+                if (teacherID == teacher.TeacherID)
+                {
+                    if (name == "FirstName")
+                    {
+                        return teacher.FirstName;
+                    }
+                    else if (name == "LastName")
+                    {
+                        return teacher.LastName;
+                    }
+                }
+            }
+            return null;
         }
 
         /// <summary>

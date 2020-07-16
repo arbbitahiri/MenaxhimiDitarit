@@ -126,7 +126,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 414</value>
+    <value>478, 433</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>33</value>
   </data>
   <data name="btnCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -157,7 +157,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 414</value>
+    <value>303, 433</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 39</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>34</value>
   </data>
   <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
@@ -205,7 +205,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtID.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>35</value>
   </data>
   <data name="lblRole.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -214,7 +214,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>401, 213</value>
+    <value>401, 94</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 17</value>
@@ -235,10 +235,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblRole.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>31</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 240</value>
+    <value>441, 121</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -256,7 +256,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>32</value>
   </data>
   <metadata name="bsrcRole.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -268,7 +268,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="cmbRoles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 209</value>
+    <value>441, 90</value>
   </data>
   <data name="cmbRoles.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -286,13 +286,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmbRoles.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>30</value>
   </data>
+  <metadata name="bsrcRole.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="txtFirstName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 110</value>
+    <value>441, 128</value>
   </data>
   <data name="txtFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -310,13 +313,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtFirstName.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>2</value>
   </data>
   <data name="txtLastName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 141</value>
+    <value>441, 159</value>
   </data>
   <data name="txtLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -334,10 +337,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtLastName.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>3</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 134</value>
+    <value>441, 152</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -355,10 +358,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>6</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 165</value>
+    <value>441, 183</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -376,7 +379,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>0</value>
   </data>
   <data name="lblFirstName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -385,7 +388,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 111</value>
+    <value>364, 129</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
@@ -406,7 +409,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblFirstName.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>8</value>
   </data>
   <data name="lblLastName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -415,7 +418,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 142</value>
+    <value>365, 160</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>
@@ -436,7 +439,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblLastName.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>10</value>
   </data>
   <data name="lblPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,7 +451,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>371, 279</value>
+    <value>371, 298</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 17</value>
@@ -469,7 +472,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPassword.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>24</value>
   </data>
   <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -478,7 +481,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 248</value>
+    <value>368, 267</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -499,10 +502,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>25</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 302</value>
+    <value>441, 321</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -520,10 +523,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>26</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 271</value>
+    <value>441, 290</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -541,13 +544,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>27</value>
   </data>
   <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 278</value>
+    <value>441, 297</value>
   </data>
   <data name="txtPassword.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -568,13 +571,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>28</value>
   </data>
   <data name="txtUsername.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 247</value>
+    <value>441, 266</value>
   </data>
   <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 18</value>
@@ -592,7 +595,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>29</value>
   </data>
   <data name="chbShowPassword.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -601,7 +604,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="chbShowPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 340</value>
+    <value>511, 359</value>
   </data>
   <data name="chbShowPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 21</value>
@@ -622,7 +625,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chbShowPassword.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>23</value>
   </data>
   <data name="lblExpireDate.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -631,7 +634,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 176</value>
+    <value>360, 232</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -652,10 +655,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblExpireDate.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>21</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 203</value>
+    <value>441, 259</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -673,7 +676,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>22</value>
   </data>
   <data name="dtpExpireDate.CustomFormat" xml:space="preserve">
     <value>ddMMMMyyyy</value>
@@ -682,7 +685,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="dtpExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 172</value>
+    <value>441, 228</value>
   </data>
   <data name="dtpExpireDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 25</value>
@@ -700,7 +703,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dtpExpireDate.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>20</value>
   </data>
   <data name="lblConfirmPass.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -709,7 +712,7 @@
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="lblConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 310</value>
+    <value>321, 329</value>
   </data>
   <data name="lblConfirmPass.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 17</value>
@@ -730,10 +733,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblConfirmPass.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>17</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 333</value>
+    <value>441, 352</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 1</value>
@@ -751,13 +754,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>18</value>
   </data>
   <data name="txtConfirmPass.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
   <data name="txtConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 309</value>
+    <value>441, 328</value>
   </data>
   <data name="txtConfirmPass.MaxLength" type="System.Int32, mscorlib">
     <value>10</value>
@@ -778,10 +781,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtConfirmPass.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>19</value>
   </data>
   <data name="picValidatePassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 308</value>
+    <value>628, 327</value>
   </data>
   <data name="picValidatePassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -802,13 +805,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picValidatePassword.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>16</value>
   </data>
   <data name="picFirstName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 109</value>
+    <value>628, 127</value>
   </data>
   <data name="picFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -829,13 +832,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picFirstName.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>14</value>
   </data>
   <data name="picLastName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 140</value>
+    <value>628, 158</value>
   </data>
   <data name="picLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -856,13 +859,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picLastName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>12</value>
   </data>
   <data name="picUsername.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 246</value>
+    <value>628, 265</value>
   </data>
   <data name="picUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -883,13 +886,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picUsername.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>15</value>
   </data>
   <data name="picPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 277</value>
+    <value>628, 296</value>
   </data>
   <data name="picPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -910,13 +913,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picPassword.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>13</value>
   </data>
   <data name="picRole.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="picRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>628, 211</value>
+    <value>628, 92</value>
   </data>
   <data name="picRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -937,7 +940,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;picRole.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>11</value>
   </data>
   <data name="btnExit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -976,7 +979,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="btnHELP.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1015,8 +1018,95 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnHELP.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="bsrcTeacher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
+  <data name="cmbTeacher.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmbTeacher.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="cmbTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 190</value>
+  </data>
+  <data name="cmbTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 25</value>
+  </data>
+  <data name="cmbTeacher.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;cmbTeacher.Name" xml:space="preserve">
+    <value>cmbTeacher</value>
+  </data>
+  <data name="&gt;&gt;cmbTeacher.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbTeacher.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbTeacher.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblTeacher.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTeacher.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="lblTeacher.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 194</value>
+  </data>
+  <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
+  <data name="lblTeacher.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="lblTeacher.Text" xml:space="preserve">
+    <value>Teacher</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Name" xml:space="preserve">
+    <value>lblTeacher</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTeacher.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 221</value>
+  </data>
+  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 1</value>
+  </data>
+  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="bsrcTeacher.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2024,6 +2114,12 @@
     <value>bsrcRole</value>
   </data>
   <data name="&gt;&gt;bsrcRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bsrcTeacher.Name" xml:space="preserve">
+    <value>bsrcTeacher</value>
+  </data>
+  <data name="&gt;&gt;bsrcTeacher.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

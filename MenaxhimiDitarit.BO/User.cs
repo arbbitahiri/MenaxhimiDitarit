@@ -16,7 +16,9 @@ namespace MenaxhimiDitarit.BO
         public bool IsPasswordChanged { get; set; }
         public DateTime StaffAbsenceDate { get; set; }
         public string StaffAbsenceReasoning { get; set; }
+        public int TeacherID { get; set; }
 
+        public virtual Teacher Teachers { get; set; }
         public virtual Role Roles { get; set; }
 
         public string FullName {

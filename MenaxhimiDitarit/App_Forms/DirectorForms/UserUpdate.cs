@@ -16,14 +16,19 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private readonly RoleBLL _roleBLL;
         private readonly List<Role> MyRoles;
 
+        private readonly TeacherBLL _teacherBLL;
+        private List<Teacher> MyTeachers;
+
         public UserUpdate(User user)
         {
             InitializeComponent();
 
             _userBLL = new UserBLL();
-
+            _teacherBLL = new TeacherBLL();
             _roleBLL = new RoleBLL();
+
             MyRoles = _roleBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
 
             _user = user;
 
@@ -68,14 +73,24 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                         User user = new User
                         {
                             UserID = int.Parse(txtID.Text),
-                            FirstName = txtFirstName.Text,
-                            LastName = txtLastName.Text,
                             ExpiresDate = dtpExpireDate.Value,
                             RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString()),
                             UserName = txtUsername.Text,
                             LUB = UserSession.GetUser.UserName,
-                            LUN = ++_user.LUN
+                            LUN = ++_user.LUN,
+                            TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString())
                         };
+
+                        if (cmbTeacher.SelectedIndex != -1)
+                        {
+                            user.FirstName = Validation.GetTeacher(Convert.ToInt32(cmbTeacher.SelectedValue.ToString()), MyTeachers, "FirstName");
+                            user.LastName = Validation.GetTeacher(Convert.ToInt32(cmbTeacher.SelectedValue.ToString()), MyTeachers, "LastName");
+                        }
+                        else
+                        {
+                            user.FirstName = txtFirstName.Text;
+                            user.LastName = txtLastName.Text;
+                        }
 
                         bool isUpdated = _userBLL.AddUser(user);
 
@@ -232,6 +247,32 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             else
             {
                 Validation.SetImageVisibility(picRole);
+            }
+
+            if (cmbRoles.SelectedIndex != 1)
+            {
+                txtFirstName.Enabled = true;
+                txtLastName.Enabled = true;
+                cmbTeacher.Enabled = false;
+
+                List<string> EmptyStrings = new List<string>();
+                EmptyStrings.Add("NONE");
+
+                cmbTeacher.DataSource = EmptyStrings;
+
+                txtFirstName.Text = string.Empty;
+                txtLastName.Text = string.Empty;
+            }
+            else
+            {
+                txtFirstName.Enabled = false;
+                txtLastName.Enabled = false;
+                cmbTeacher.Enabled = true;
+
+                cmbTeacher.DataSource = MyTeachers;
+
+                txtFirstName.Text = "NONE";
+                txtLastName.Text = "NONE";
             }
         }
 

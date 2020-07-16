@@ -32,7 +32,7 @@ namespace MenaxhimiDitarit.TeacherForms
             _classBLL = new ClassBLL();
 
             MySubjects = _subjectBLL.GetAll();
-            cmbSelectSubject.DataSource = MySubjects;
+            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects);
 
             MyClasses = _classBLL.GetAll();
             cmbSelectClass.DataSource = MyClasses;

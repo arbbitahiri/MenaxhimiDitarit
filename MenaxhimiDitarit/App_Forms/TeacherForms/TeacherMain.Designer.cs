@@ -50,14 +50,14 @@
             this.lblTeacher = new System.Windows.Forms.Label();
             this.picTeacher = new System.Windows.Forms.PictureBox();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.lblManagement = new System.Windows.Forms.Label();
+            this.lblSchoolDiary = new System.Windows.Forms.Label();
+            this.picLogoMain = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblWelcomeName = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblManagement = new System.Windows.Forms.Label();
-            this.lblSchoolDiary = new System.Windows.Forms.Label();
-            this.picLogoMain = new System.Windows.Forms.PictureBox();
             this.pnlMain.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlComments.SuspendLayout();
@@ -258,6 +258,25 @@
             resources.ApplyResources(this.pnlChildForm, "pnlChildForm");
             this.pnlChildForm.Name = "pnlChildForm";
             // 
+            // lblManagement
+            // 
+            resources.ApplyResources(this.lblManagement, "lblManagement");
+            this.lblManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblManagement.Name = "lblManagement";
+            // 
+            // lblSchoolDiary
+            // 
+            resources.ApplyResources(this.lblSchoolDiary, "lblSchoolDiary");
+            this.lblSchoolDiary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.lblSchoolDiary.Name = "lblSchoolDiary";
+            // 
+            // picLogoMain
+            // 
+            this.picLogoMain.Image = global::MenaxhimiDitarit.Properties.Resources.icon_schools;
+            resources.ApplyResources(this.picLogoMain, "picLogoMain");
+            this.picLogoMain.Name = "picLogoMain";
+            this.picLogoMain.TabStop = false;
+            // 
             // lblUsername
             // 
             resources.ApplyResources(this.lblUsername, "lblUsername");
@@ -287,25 +306,6 @@
             resources.ApplyResources(this.lblDate, "lblDate");
             this.lblDate.ForeColor = System.Drawing.Color.White;
             this.lblDate.Name = "lblDate";
-            // 
-            // lblManagement
-            // 
-            resources.ApplyResources(this.lblManagement, "lblManagement");
-            this.lblManagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.lblManagement.Name = "lblManagement";
-            // 
-            // lblSchoolDiary
-            // 
-            resources.ApplyResources(this.lblSchoolDiary, "lblSchoolDiary");
-            this.lblSchoolDiary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.lblSchoolDiary.Name = "lblSchoolDiary";
-            // 
-            // picLogoMain
-            // 
-            this.picLogoMain.Image = global::MenaxhimiDitarit.Properties.Resources.icon_schools;
-            resources.ApplyResources(this.picLogoMain, "picLogoMain");
-            this.picLogoMain.Name = "picLogoMain";
-            this.picLogoMain.TabStop = false;
             // 
             // TeacherMain
             // 

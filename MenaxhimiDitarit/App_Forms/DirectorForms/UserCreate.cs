@@ -17,15 +17,20 @@ namespace MenaxhimiDitarit.DirectorForms
         private readonly RoleBLL _roleBLL;
         private List<Role> MyRoles;
 
+        private readonly TeacherBLL _teacherBLL;
+        private List<Teacher> MyTeachers;
+
         public UserCreate()
         {
             InitializeComponent();
 
             _userBLL = new UserBLL();
             _roleBLL = new RoleBLL();
+            _teacherBLL = new TeacherBLL();
 
             MyUsers = _userBLL.GetAllUser();
             MyRoles = _roleBLL.GetAll();
+            MyTeachers = _teacherBLL.GetAll();
 
             cmbRoles.DataSource = MyRoles;
 
@@ -55,16 +60,26 @@ namespace MenaxhimiDitarit.DirectorForms
                         User user = new User
                         {
                             UserID = int.Parse(txtID.Text),
-                            FirstName = txtFirstName.Text,
-                            LastName = txtLastName.Text,
                             ExpiresDate = dtpExpireDate.Value,
                             RoleID = Convert.ToInt32(cmbRoles.SelectedValue.ToString()),
                             UserName = txtUsername.Text,
                             UserPassword = Validation.CalculateHash(txtPassword.Text),
                             InsertBy = UserSession.GetUser.UserName,
-                            LUB = UserSession.GetUser.UserName
+                            LUB = UserSession.GetUser.UserName,
+                            TeacherID = Convert.ToInt32(cmbTeacher.SelectedValue.ToString())
                         };
                         user.LUN++;
+
+                        if (cmbTeacher.SelectedIndex != -1)
+                        {
+                            user.FirstName = Validation.GetTeacher(Convert.ToInt32(cmbTeacher.SelectedValue.ToString()), MyTeachers, "FirstName");
+                            user.LastName = Validation.GetTeacher(Convert.ToInt32(cmbTeacher.SelectedValue.ToString()), MyTeachers, "LastName");
+                        }
+                        else
+                        {
+                            user.FirstName = txtFirstName.Text;
+                            user.LastName = txtLastName.Text;
+                        }
 
                         var checkUsers = MyUsers.Where(t => t.UserName == txtUsername.Text).ToList();
 
@@ -278,6 +293,32 @@ namespace MenaxhimiDitarit.DirectorForms
             else
             {
                 Validation.SetImageVisibility(picRole);
+            }
+
+            if (cmbRoles.SelectedIndex != 1)
+            {
+                txtFirstName.Enabled = true;
+                txtLastName.Enabled = true;
+                cmbTeacher.Enabled = false;
+
+                List<string> EmptyStrings = new List<string>();
+                EmptyStrings.Add("NONE");
+
+                cmbTeacher.DataSource = EmptyStrings;
+
+                txtFirstName.Text = string.Empty;
+                txtLastName.Text = string.Empty;
+            }
+            else
+            {
+                txtFirstName.Enabled = false;
+                txtLastName.Enabled = false;
+                cmbTeacher.Enabled = true;
+
+                cmbTeacher.DataSource = MyTeachers;
+
+                txtFirstName.Text = "NONE";
+                txtLastName.Text = "NONE";
             }
         }
 
