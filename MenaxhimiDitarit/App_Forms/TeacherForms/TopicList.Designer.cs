@@ -104,6 +104,7 @@
             // 
             // grbSearch
             // 
+            resources.ApplyResources(this.grbSearch, "grbSearch");
             this.grbSearch.Controls.Add(this.btnSearch);
             this.grbSearch.Controls.Add(this.btnViewAll);
             this.grbSearch.Controls.Add(this.dtpSelectDay);
@@ -115,17 +116,16 @@
             this.grbSearch.Controls.Add(this.lblSelectDay);
             this.grbSearch.Controls.Add(this.panel1);
             this.grbSearch.Controls.Add(this.panel3);
-            resources.ApplyResources(this.grbSearch, "grbSearch");
             this.grbSearch.ForeColor = System.Drawing.Color.White;
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.TabStop = false;
             // 
             // btnSearch
             // 
+            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -133,10 +133,10 @@
             // 
             // btnViewAll
             // 
+            resources.ApplyResources(this.btnViewAll, "btnViewAll");
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.btnViewAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAll.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnViewAll, "btnViewAll");
             this.btnViewAll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.UseVisualStyleBackColor = false;
@@ -150,10 +150,10 @@
             // 
             // cmbSelectClass
             // 
+            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectClass.DataSource = this.bsrcClass;
             this.cmbSelectClass.DisplayMember = "ClassNo";
-            resources.ApplyResources(this.cmbSelectClass, "cmbSelectClass");
             this.cmbSelectClass.ForeColor = System.Drawing.Color.White;
             this.cmbSelectClass.FormattingEnabled = true;
             this.cmbSelectClass.Name = "cmbSelectClass";
@@ -171,16 +171,16 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel4.Name = "panel4";
             // 
             // cmbSelectSubject
             // 
+            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.cmbSelectSubject.DataSource = this.bsrcSubject;
             this.cmbSelectSubject.DisplayMember = "SubjectTitle";
-            resources.ApplyResources(this.cmbSelectSubject, "cmbSelectSubject");
             this.cmbSelectSubject.ForeColor = System.Drawing.Color.White;
             this.cmbSelectSubject.FormattingEnabled = true;
             this.cmbSelectSubject.Name = "cmbSelectSubject";
@@ -204,22 +204,22 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel1.Name = "panel1";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.panel3.Name = "panel3";
             // 
             // dgvTopicList
             // 
+            resources.ApplyResources(this.dgvTopicList, "dgvTopicList");
             this.dgvTopicList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.dgvTopicList.ContextMenuStrip = this.cmsTopicContext;
             this.dgvTopicList.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.dgvTopicList, "dgvTopicList");
             this.dgvTopicList.ForeColor = System.Drawing.Color.White;
             // 
             // 
@@ -227,10 +227,11 @@
             this.dgvTopicList.MasterTemplate.AllowAddNewRow = false;
             this.dgvTopicList.MasterTemplate.AllowCellContextMenu = false;
             this.dgvTopicList.MasterTemplate.AllowColumnReorder = false;
+            this.dgvTopicList.MasterTemplate.Caption = resources.GetString("dgvTopicList.MasterTemplate.Caption");
             gridViewDecimalColumn1.DataType = typeof(int);
             gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "TopicID";
             resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
+            gridViewDecimalColumn1.FieldName = "TopicID";
             gridViewDecimalColumn1.IsAutoGenerated = true;
             gridViewDecimalColumn1.IsVisible = false;
             gridViewDecimalColumn1.Name = "TopicID";
@@ -238,60 +239,64 @@
             gridViewDecimalColumn1.Width = 75;
             gridViewDecimalColumn2.DataType = typeof(int);
             gridViewDecimalColumn2.EnableExpressionEditor = false;
+            resources.ApplyResources(gridViewDecimalColumn2, "gridViewDecimalColumn2");
             gridViewDecimalColumn2.FieldName = "ClassID";
             gridViewDecimalColumn2.IsAutoGenerated = true;
             gridViewDecimalColumn2.IsVisible = false;
             gridViewDecimalColumn2.Name = "ClassID";
             gridViewDecimalColumn3.DataType = typeof(int);
             gridViewDecimalColumn3.EnableExpressionEditor = false;
+            resources.ApplyResources(gridViewDecimalColumn3, "gridViewDecimalColumn3");
             gridViewDecimalColumn3.FieldName = "SubjectID";
             gridViewDecimalColumn3.IsAutoGenerated = true;
             gridViewDecimalColumn3.IsVisible = false;
             gridViewDecimalColumn3.Name = "SubjectID";
+            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
             gridViewDateTimeColumn1.EnableExpressionEditor = false;
             gridViewDateTimeColumn1.FieldName = "Date";
-            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
             gridViewDateTimeColumn1.IsAutoGenerated = true;
             gridViewDateTimeColumn1.Name = "Date";
             gridViewDateTimeColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDateTimeColumn1.Width = 165;
             gridViewDecimalColumn4.DataType = typeof(int);
             gridViewDecimalColumn4.EnableExpressionEditor = false;
-            gridViewDecimalColumn4.FieldName = "Time";
             resources.ApplyResources(gridViewDecimalColumn4, "gridViewDecimalColumn4");
+            gridViewDecimalColumn4.FieldName = "Time";
             gridViewDecimalColumn4.IsAutoGenerated = true;
             gridViewDecimalColumn4.Name = "Time";
             gridViewDecimalColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDecimalColumn4.Width = 85;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "Content";
             resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.FieldName = "Content";
             gridViewTextBoxColumn1.IsAutoGenerated = true;
             gridViewTextBoxColumn1.Name = "Content";
             gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn1.Width = 200;
             gridViewTextBoxColumn2.DataType = typeof(int);
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Class.ClassNo";
             resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.FieldName = "Class.ClassNo";
             gridViewTextBoxColumn2.IsAutoGenerated = true;
             gridViewTextBoxColumn2.Name = "Class";
             gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn2.Width = 85;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Subject.SubjectTitle";
             resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.FieldName = "Subject.SubjectTitle";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
             gridViewTextBoxColumn3.Name = "Subject";
             gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn3.Width = 100;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
             gridViewTextBoxColumn4.FieldName = "InsertBy";
             gridViewTextBoxColumn4.IsAutoGenerated = true;
             gridViewTextBoxColumn4.IsVisible = false;
             gridViewTextBoxColumn4.Name = "InsertBy";
             gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn4.Width = 85;
+            resources.ApplyResources(gridViewDateTimeColumn2, "gridViewDateTimeColumn2");
             gridViewDateTimeColumn2.EnableExpressionEditor = false;
             gridViewDateTimeColumn2.FieldName = "InsertDate";
             gridViewDateTimeColumn2.IsAutoGenerated = true;
@@ -300,12 +305,14 @@
             gridViewDateTimeColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDateTimeColumn2.Width = 170;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
             gridViewTextBoxColumn5.FieldName = "LUB";
             gridViewTextBoxColumn5.IsAutoGenerated = true;
             gridViewTextBoxColumn5.IsVisible = false;
             gridViewTextBoxColumn5.Name = "LUB";
             gridViewTextBoxColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn5.Width = 85;
+            resources.ApplyResources(gridViewDateTimeColumn3, "gridViewDateTimeColumn3");
             gridViewDateTimeColumn3.EnableExpressionEditor = false;
             gridViewDateTimeColumn3.FieldName = "LUD";
             gridViewDateTimeColumn3.IsAutoGenerated = true;
@@ -315,6 +322,7 @@
             gridViewDateTimeColumn3.Width = 170;
             gridViewDecimalColumn5.DataType = typeof(int);
             gridViewDecimalColumn5.EnableExpressionEditor = false;
+            resources.ApplyResources(gridViewDecimalColumn5, "gridViewDecimalColumn5");
             gridViewDecimalColumn5.FieldName = "LUN";
             gridViewDecimalColumn5.IsAutoGenerated = true;
             gridViewDecimalColumn5.IsVisible = false;
@@ -344,12 +352,12 @@
             // 
             // cmsTopicContext
             // 
+            resources.ApplyResources(this.cmsTopicContext, "cmsTopicContext");
             this.cmsTopicContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
             this.showContentToolStripMenuItem});
             this.cmsTopicContext.Name = "cmsTopicContext";
-            resources.ApplyResources(this.cmsTopicContext, "cmsTopicContext");
             // 
             // updateToolStripMenuItem
             // 
@@ -365,9 +373,9 @@
             // 
             // showContentToolStripMenuItem
             // 
+            resources.ApplyResources(this.showContentToolStripMenuItem, "showContentToolStripMenuItem");
             this.showContentToolStripMenuItem.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_eye_15;
             this.showContentToolStripMenuItem.Name = "showContentToolStripMenuItem";
-            resources.ApplyResources(this.showContentToolStripMenuItem, "showContentToolStripMenuItem");
             this.showContentToolStripMenuItem.Click += new System.EventHandler(this.showContentToolStripMenuItem_Click);
             // 
             // bsrcTopicList
@@ -376,6 +384,7 @@
             // 
             // pnlClassMain
             // 
+            resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
             this.pnlClassMain.Controls.Add(this.pnlClassSchedules);
             this.pnlClassMain.Controls.Add(this.btnClassSchedule);
             this.pnlClassMain.Controls.Add(this.btnHELP);
@@ -386,7 +395,6 @@
             this.pnlClassMain.Controls.Add(this.btnUpdate);
             this.pnlClassMain.Controls.Add(this.btnAddTopic);
             this.pnlClassMain.Controls.Add(this.pnlPicture);
-            resources.ApplyResources(this.pnlClassMain, "pnlClassMain");
             this.pnlClassMain.Name = "pnlClassMain";
             // 
             // pnlClassSchedules
@@ -405,9 +413,9 @@
             // 
             // btnClass9
             // 
+            resources.ApplyResources(this.btnClass9, "btnClass9");
             this.btnClass9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass9.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass9, "btnClass9");
             this.btnClass9.ForeColor = System.Drawing.Color.White;
             this.btnClass9.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_9_50;
             this.btnClass9.Name = "btnClass9";
@@ -416,9 +424,9 @@
             // 
             // btnClass8
             // 
+            resources.ApplyResources(this.btnClass8, "btnClass8");
             this.btnClass8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass8.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass8, "btnClass8");
             this.btnClass8.ForeColor = System.Drawing.Color.White;
             this.btnClass8.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_8_50;
             this.btnClass8.Name = "btnClass8";
@@ -427,9 +435,9 @@
             // 
             // btnClass7
             // 
+            resources.ApplyResources(this.btnClass7, "btnClass7");
             this.btnClass7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass7.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass7, "btnClass7");
             this.btnClass7.ForeColor = System.Drawing.Color.White;
             this.btnClass7.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_7_50;
             this.btnClass7.Name = "btnClass7";
@@ -438,9 +446,9 @@
             // 
             // btnClass6
             // 
+            resources.ApplyResources(this.btnClass6, "btnClass6");
             this.btnClass6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass6.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass6, "btnClass6");
             this.btnClass6.ForeColor = System.Drawing.Color.White;
             this.btnClass6.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_6_50;
             this.btnClass6.Name = "btnClass6";
@@ -449,9 +457,9 @@
             // 
             // btnClass5
             // 
+            resources.ApplyResources(this.btnClass5, "btnClass5");
             this.btnClass5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass5.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass5, "btnClass5");
             this.btnClass5.ForeColor = System.Drawing.Color.White;
             this.btnClass5.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_5_50;
             this.btnClass5.Name = "btnClass5";
@@ -460,9 +468,9 @@
             // 
             // btnClass4
             // 
+            resources.ApplyResources(this.btnClass4, "btnClass4");
             this.btnClass4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass4.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass4, "btnClass4");
             this.btnClass4.ForeColor = System.Drawing.Color.White;
             this.btnClass4.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_4_50;
             this.btnClass4.Name = "btnClass4";
@@ -471,9 +479,9 @@
             // 
             // btnClass3
             // 
+            resources.ApplyResources(this.btnClass3, "btnClass3");
             this.btnClass3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass3.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass3, "btnClass3");
             this.btnClass3.ForeColor = System.Drawing.Color.White;
             this.btnClass3.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_3_50;
             this.btnClass3.Name = "btnClass3";
@@ -482,9 +490,9 @@
             // 
             // btnClass2
             // 
+            resources.ApplyResources(this.btnClass2, "btnClass2");
             this.btnClass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass2.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass2, "btnClass2");
             this.btnClass2.ForeColor = System.Drawing.Color.White;
             this.btnClass2.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_circled_2_50;
             this.btnClass2.Name = "btnClass2";
@@ -493,9 +501,9 @@
             // 
             // btnClass1
             // 
+            resources.ApplyResources(this.btnClass1, "btnClass1");
             this.btnClass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(65)))));
             this.btnClass1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClass1, "btnClass1");
             this.btnClass1.ForeColor = System.Drawing.Color.White;
             this.btnClass1.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_1st_50;
             this.btnClass1.Name = "btnClass1";
@@ -583,9 +591,9 @@
             // 
             // pnlPicture
             // 
+            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Controls.Add(this.lblTopic);
             this.pnlPicture.Controls.Add(this.picClass);
-            resources.ApplyResources(this.pnlPicture, "pnlPicture");
             this.pnlPicture.Name = "pnlPicture";
             // 
             // lblTopic
@@ -596,8 +604,8 @@
             // 
             // picClass
             // 
-            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_outline_100;
             resources.ApplyResources(this.picClass, "picClass");
+            this.picClass.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_outline_100;
             this.picClass.Name = "picClass";
             this.picClass.TabStop = false;
             // 

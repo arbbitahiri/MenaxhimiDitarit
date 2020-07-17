@@ -124,6 +124,9 @@
     <value>Anulo</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblSelectRoom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>343, 250</value>
+  </data>
   <data name="lblSelectRoom.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 17</value>
   </data>
@@ -131,7 +134,7 @@
     <value>Zgjidh Sallën</value>
   </data>
   <data name="lblClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 254</value>
+    <value>339, 214</value>
   </data>
   <data name="lblClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -140,7 +143,7 @@
     <value>Zgjidh Klasën</value>
   </data>
   <data name="lblMainTeacher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 216</value>
+    <value>359, 176</value>
   </data>
   <data name="lblMainTeacher.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 17</value>

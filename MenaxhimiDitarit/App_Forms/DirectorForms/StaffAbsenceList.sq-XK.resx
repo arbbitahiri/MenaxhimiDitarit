@@ -133,65 +133,8 @@
   <data name="lblStaff.Text" xml:space="preserve">
     <value>Stafi</value>
   </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
-    <value>Përdoruesi ID</value>
-  </data>
-  <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Emri</value>
-  </data>
-  <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Mbiemri</value>
-  </data>
-  <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>UserName</value>
-  </data>
-  <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>UserPassword</value>
-  </data>
-  <data name="gridViewDateTimeColumn7.HeaderText" xml:space="preserve">
-    <value>ExpiresDate</value>
-  </data>
-  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
-    <value>RoleID</value>
-  </data>
-  <data name="gridViewDateTimeColumn8.HeaderText" xml:space="preserve">
-    <value>LastLoginDate</value>
-  </data>
-  <data name="gridViewDateTimeColumn9.HeaderText" xml:space="preserve">
-    <value>LastPasswordChangeDate</value>
-  </data>
-  <data name="gridViewCheckBoxColumn2.HeaderText" xml:space="preserve">
-    <value>IsPasswordChanged</value>
-  </data>
-  <data name="gridViewDateTimeColumn10.HeaderText" xml:space="preserve">
-    <value>Data e Mungesës</value>
-  </data>
-  <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>Arsyeja e Mungesës</value>
-  </data>
-  <data name="gridViewTextBoxColumn15.HeaderText" xml:space="preserve">
-    <value>Roli</value>
-  </data>
-  <data name="gridViewTextBoxColumn16.HeaderText" xml:space="preserve">
-    <value>FullName</value>
-  </data>
-  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
-    <value>InsertBy</value>
-  </data>
-  <data name="gridViewDateTimeColumn11.HeaderText" xml:space="preserve">
-    <value>InsertDate</value>
-  </data>
-  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
-    <value>LUB</value>
-  </data>
-  <data name="gridViewDateTimeColumn12.HeaderText" xml:space="preserve">
-    <value>LUD</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>LUN</value>
-  </data>
-  <data name="grbSearch.Text" xml:space="preserve">
-    <value>Kërko stafin</value>
+  <data name="dgvStaffAbsenceList.MasterTemplate.Caption" xml:space="preserve">
+    <value />
   </data>
   <data name="btnSearchTeachers.Text" xml:space="preserve">
     <value>Kërko</value>
@@ -201,5 +144,8 @@
   </data>
   <data name="txtSearchName.Text" xml:space="preserve">
     <value>Kërko sipas emrit ose mbiemrit...</value>
+  </data>
+  <data name="grbSearch.Text" xml:space="preserve">
+    <value>Kërko stafin</value>
   </data>
 </root>

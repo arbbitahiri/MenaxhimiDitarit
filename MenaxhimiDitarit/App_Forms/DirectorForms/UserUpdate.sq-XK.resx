@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 239</value>
+    <value>320, 267</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 17</value>
@@ -128,7 +128,7 @@
     <value>Data e Skadimit</value>
   </data>
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 277</value>
+    <value>389, 129</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 17</value>
@@ -137,7 +137,7 @@
     <value>Roli</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 205</value>
+    <value>362, 195</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 17</value>
@@ -146,7 +146,7 @@
     <value>Mbiemri</value>
   </data>
   <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 174</value>
+    <value>385, 164</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 17</value>
@@ -155,19 +155,28 @@
     <value>Emri</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 312</value>
+    <value>376, 302</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
+    <value>43, 17</value>
   </data>
   <data name="lblUsername.Text" xml:space="preserve">
-    <value>Përdoruesi</value>
+    <value>Nofka</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
+  </data>
+  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 229</value>
+  </data>
+  <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="lblTeacher.Text" xml:space="preserve">
+    <value>Arsimtari</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

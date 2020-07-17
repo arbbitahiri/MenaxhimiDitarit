@@ -119,19 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 242</value>
-  </data>
-  <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 174</value>
-  </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 197</value>
-  </data>
-  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 173</value>
+    <value>244, 206</value>
   </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>510, 180</value>
+    <value>357, 135</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 17</value>
@@ -140,13 +131,13 @@
     <value>Lënda</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 206</value>
+    <value>406, 161</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 355</value>
+    <value>244, 319</value>
   </data>
   <data name="lblComment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 287</value>
+    <value>187, 251</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 17</value>
@@ -155,10 +146,10 @@
     <value>Vërejtja</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 352</value>
+    <value>556, 319</value>
   </data>
   <data name="lblDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 208</value>
+    <value>207, 172</value>
   </data>
   <data name="lblDay.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 17</value>
@@ -167,31 +158,25 @@
     <value>Dita</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 235</value>
+    <value>244, 199</value>
   </data>
   <data name="dtpCommentDay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 204</value>
-  </data>
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>507, 390</value>
+    <value>244, 168</value>
   </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 390</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
   <data name="picReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>746, 290</value>
+    <value>743, 249</value>
   </data>
   <data name="dtpReviewDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 213</value>
+    <value>556, 168</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 217</value>
+    <value>454, 172</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 17</value>
@@ -200,16 +185,16 @@
     <value>Dita e Shyrtimit</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 244</value>
+    <value>556, 199</value>
   </data>
   <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 176</value>
+    <value>406, 131</value>
   </data>
   <data name="txtReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>559, 251</value>
+    <value>556, 206</value>
   </data>
   <data name="lblReview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 292</value>
+    <value>488, 251</value>
   </data>
   <data name="lblReview.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>

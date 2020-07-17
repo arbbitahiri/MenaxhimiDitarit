@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblRoomType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 261</value>
+    <value>348, 230</value>
   </data>
   <data name="lblRoomType.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
@@ -134,7 +134,7 @@
     <value>Lloji i Sallës</value>
   </data>
   <data name="lblRoomNo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 230</value>
+    <value>335, 199</value>
   </data>
   <data name="lblRoomNo.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 17</value>
@@ -142,8 +142,11 @@
   <data name="lblRoomNo.Text" xml:space="preserve">
     <value>Numri i Sallës</value>
   </data>
-  <data name="txtRoomNo.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtRoomType.Location" type="System.Drawing.Point, System.Drawing">
     <value>429, 229</value>
+  </data>
+  <data name="txtRoomNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>429, 198</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

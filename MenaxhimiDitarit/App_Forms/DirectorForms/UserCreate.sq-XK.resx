@@ -121,33 +121,18 @@
   <data name="btnSubmit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>478, 427</value>
-  </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
   </data>
   <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 427</value>
-  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
-  <data name="lblID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>409, 99</value>
-  </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 120</value>
-  </data>
-  <data name="txtID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 96</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>399, 231</value>
+    <value>399, 94</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 17</value>
@@ -156,25 +141,25 @@
     <value>Roli</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 258</value>
+    <value>435, 221</value>
   </data>
   <data name="cmbRoles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 227</value>
+    <value>435, 90</value>
   </data>
   <data name="txtFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 127</value>
+    <value>435, 128</value>
   </data>
   <data name="txtLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 158</value>
+    <value>435, 159</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 151</value>
+    <value>435, 152</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 182</value>
+    <value>435, 183</value>
   </data>
   <data name="lblFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>395, 128</value>
+    <value>395, 129</value>
   </data>
   <data name="lblFirstName.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 17</value>
@@ -183,7 +168,7 @@
     <value>Emri</value>
   </data>
   <data name="lblLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>372, 159</value>
+    <value>372, 160</value>
   </data>
   <data name="lblLastName.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 17</value>
@@ -192,7 +177,7 @@
     <value>Mbiemri</value>
   </data>
   <data name="lblPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>362, 297</value>
+    <value>362, 298</value>
   </data>
   <data name="lblPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -201,7 +186,7 @@
     <value>Fjalëkalimi</value>
   </data>
   <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 266</value>
+    <value>358, 267</value>
   </data>
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
@@ -210,19 +195,19 @@
     <value>Përdoruesi</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 320</value>
+    <value>435, 321</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 289</value>
+    <value>435, 290</value>
   </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 296</value>
+    <value>435, 297</value>
   </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 265</value>
+    <value>435, 266</value>
   </data>
   <data name="chbShowPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 358</value>
+    <value>503, 359</value>
   </data>
   <data name="chbShowPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -231,7 +216,7 @@
     <value>Shiko Fjalëkalimi</value>
   </data>
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>330, 193</value>
+    <value>330, 232</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 17</value>
@@ -240,13 +225,13 @@
     <value>Data e Skadimit</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 220</value>
+    <value>435, 259</value>
   </data>
   <data name="dtpExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 189</value>
+    <value>435, 228</value>
   </data>
   <data name="lblConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 328</value>
+    <value>304, 329</value>
   </data>
   <data name="lblConfirmPass.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
@@ -255,28 +240,43 @@
     <value>Konfirmo Fjalëkalimi</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 351</value>
+    <value>435, 352</value>
   </data>
   <data name="txtConfirmPass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>435, 327</value>
+    <value>435, 328</value>
   </data>
   <data name="picValidatePassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 326</value>
+    <value>622, 327</value>
   </data>
   <data name="picFirstName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 126</value>
+    <value>622, 127</value>
   </data>
   <data name="picLastName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 157</value>
+    <value>622, 158</value>
   </data>
   <data name="picUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 264</value>
+    <value>622, 265</value>
   </data>
   <data name="picPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 295</value>
+    <value>622, 296</value>
   </data>
   <data name="picRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>622, 229</value>
+    <value>622, 192</value>
+  </data>
+  <data name="cmbTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 190</value>
+  </data>
+  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 194</value>
+  </data>
+  <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="lblTeacher.Text" xml:space="preserve">
+    <value>Arsimtari</value>
+  </data>
+  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 121</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

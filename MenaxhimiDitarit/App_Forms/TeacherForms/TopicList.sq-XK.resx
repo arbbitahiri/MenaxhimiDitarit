@@ -128,7 +128,7 @@
     <value>341, 28</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 16</value>
+    <value>90, 17</value>
   </data>
   <data name="lblSelectClass.Text" xml:space="preserve">
     <value>Zgjedh Klasën</value>
@@ -137,7 +137,7 @@
     <value>22, 28</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 16</value>
+    <value>94, 17</value>
   </data>
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Zgjedh Lëndën</value>
@@ -146,34 +146,13 @@
     <value>31, 69</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
+    <value>86, 17</value>
   </data>
   <data name="lblSelectDay.Text" xml:space="preserve">
     <value>Zgjedh Datën</value>
   </data>
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Temën</value>
-  </data>
-  <data name="cmsTopicContext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 70</value>
-  </data>
-  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
-    <value>TemaID</value>
-  </data>
-  <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
-    <value>Ora</value>
-  </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>Përmbajtja</value>
-  </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
-    <value>Klasa</value>
-  </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Lënda</value>
   </data>
   <data name="updateToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -215,6 +194,12 @@
   <data name="showContentToolStripMenuItem.Text" xml:space="preserve">
     <value>Shfaq Përmbajtjen</value>
   </data>
+  <data name="cmsTopicContext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 70</value>
+  </data>
+  <data name="btnClassSchedule.Text" xml:space="preserve">
+    <value>Orari i Klasave</value>
+  </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Printo</value>
   </data>
@@ -231,7 +216,7 @@
     <value>4, 103</value>
   </data>
   <data name="lblTopic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 24</value>
+    <value>133, 25</value>
   </data>
   <data name="lblTopic.Text" xml:space="preserve">
     <value>Lista e Temave</value>

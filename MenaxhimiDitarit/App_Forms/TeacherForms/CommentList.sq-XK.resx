@@ -128,7 +128,7 @@
     <value>9, 30</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 16</value>
+    <value>94, 17</value>
   </data>
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Zgjedh Lëndën</value>
@@ -137,7 +137,7 @@
     <value>302, 30</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
+    <value>86, 17</value>
   </data>
   <data name="lblSelectDay.Text" xml:space="preserve">
     <value>Zgjedh Datën</value>
@@ -146,25 +146,28 @@
     <value>Kërko Vërejtjen</value>
   </data>
   <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
-    <value>VërejtjaID</value>
+    <value>CommentID</value>
   </data>
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>Data</value>
+    <value>Date</value>
   </data>
   <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
-    <value>Ora</value>
+    <value>Time</value>
   </data>
   <data name="gridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Vërejtja</value>
+    <value>Comment</value>
   </data>
   <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Shqyrtimi</value>
+    <value>Review</value>
   </data>
   <data name="gridViewTextBoxColumn13.HeaderText" xml:space="preserve">
-    <value>Klasa</value>
+    <value>Class</value>
   </data>
   <data name="gridViewTextBoxColumn14.HeaderText" xml:space="preserve">
-    <value>Lënda</value>
+    <value>Subject</value>
+  </data>
+  <data name="btnClassSchedule.Text" xml:space="preserve">
+    <value>Orari i Klasave</value>
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Printo</value>
@@ -179,7 +182,7 @@
     <value>-4, 103</value>
   </data>
   <data name="lblComment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 24</value>
+    <value>153, 25</value>
   </data>
   <data name="lblComment.Text" xml:space="preserve">
     <value>Lista e Vërejtjeve</value>

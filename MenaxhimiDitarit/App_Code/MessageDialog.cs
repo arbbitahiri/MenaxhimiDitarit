@@ -97,7 +97,7 @@ namespace MenaxhimiDitarit.App_Code
 
         public static void ShowHelp(Form form, string htmlPage)
         {
-            Help.ShowHelp(form, @"C:\Users\Arb Tahiri\Desktop\Riinvest\MenaxhimiDitarit\help_MenaxhimiDitarit.chm", HelpNavigator.Topic, htmlPage);
+            Help.ShowHelp(form, @"C:\Users\Arb Tahiri\Desktop\Riinvest\Viti II\Semestri IV\TI1\Projekti TI-1\MenaxhimiDitarit\help_MenaxhimiDitarit.chm", HelpNavigator.Topic, htmlPage);
         }
     }
 }

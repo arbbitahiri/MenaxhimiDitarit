@@ -298,6 +298,8 @@ namespace MenaxhimiDitarit.DirectorForms
             };
             addUser.ShowDialog();
             RefreshList();
+
+            HideSubMenu();
         }
 
         #region Update
@@ -324,11 +326,15 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnDeleteU_Click(object sender, EventArgs e)
         {
             DeleteUser();
+
+            HideSubMenu();
         }
 
         private void btnPrintUser_Click(object sender, EventArgs e)
         {
             dgvUserList.PrintPreview(printDocument);
+
+            HideSubMenu();
         }
 
         private void btnExportExcel_Click(object sender, EventArgs e)
@@ -337,6 +343,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
             MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            HideSubMenu();
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -345,6 +353,8 @@ namespace MenaxhimiDitarit.DirectorForms
 
             MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            HideSubMenu();
         }
         #endregion
     }

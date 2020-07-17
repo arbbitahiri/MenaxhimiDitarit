@@ -139,13 +139,13 @@
   <data name="chbShowPassword.Text" xml:space="preserve">
     <value>Shfaq Fjalëkalimin</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblLanguage.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 334</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 17</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="lblLanguage.Text" xml:space="preserve">
     <value>Gjuha</value>
   </data>
   <data name="cmbLanguage.Location" type="System.Drawing.Point, System.Drawing">
@@ -154,23 +154,23 @@
   <data name="cmbLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 25</value>
   </data>
-  <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 413</value>
+  <data name="lblSchoolDiary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 413</value>
   </data>
-  <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 65</value>
+  <data name="lblSchoolDiary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 65</value>
   </data>
-  <data name="lblSDM.Text" xml:space="preserve">
-    <value>Menaxhimi i Ditarit</value>
+  <data name="lblSchoolDiary.Text" xml:space="preserve">
+    <value>Menaxhimi i</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 476</value>
+  <data name="lblManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 476</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 65</value>
+  <data name="lblManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 65</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>të Shkollës</value>
+  <data name="lblManagement.Text" xml:space="preserve">
+    <value>Ditarit</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

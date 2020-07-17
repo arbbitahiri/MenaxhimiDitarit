@@ -151,20 +151,32 @@
     <value>Listo Arsimtarët</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblDirector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 103</value>
+  </data>
   <data name="lblDirector.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 25</value>
   </data>
   <data name="lblDirector.Text" xml:space="preserve">
     <value>Drejtori</value>
   </data>
-  <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 327</value>
+  <data name="lblManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 472</value>
   </data>
-  <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 37</value>
+  <data name="lblManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 65</value>
   </data>
-  <data name="lblSDM.Text" xml:space="preserve">
-    <value>Menaxhimi i Ditarit të Shkollës</value>
+  <data name="lblManagement.Text" xml:space="preserve">
+    <value>Ditarit</value>
+  </data>
+  <data name="lblSchoolDiary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 409</value>
+  </data>
+  <data name="lblSchoolDiary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 65</value>
+  </data>
+  <data name="lblSchoolDiary.Text" xml:space="preserve">
+    <value>Menaxhimi i</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 17</value>

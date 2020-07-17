@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblExpireDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 247</value>
+    <value>316, 213</value>
   </data>
   <data name="lblExpireDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 17</value>
@@ -128,7 +128,7 @@
     <value>Data e Mungesës</value>
   </data>
   <data name="lblRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 209</value>
+    <value>393, 175</value>
   </data>
   <data name="lblRole.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 17</value>
@@ -137,7 +137,7 @@
     <value>Stafi</value>
   </data>
   <data name="lblReasoning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 285</value>
+    <value>376, 251</value>
   </data>
   <data name="lblReasoning.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>

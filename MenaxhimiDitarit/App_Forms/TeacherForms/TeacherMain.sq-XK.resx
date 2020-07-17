@@ -145,35 +145,47 @@
     <value>Tema</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTeacher.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 103</value>
+  </data>
   <data name="lblTeacher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 24</value>
+    <value>88, 25</value>
   </data>
   <data name="lblTeacher.Text" xml:space="preserve">
     <value>Arsimtari</value>
   </data>
-  <data name="lblSDM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 327</value>
+  <data name="lblManagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 498</value>
   </data>
-  <data name="lblSDM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 31</value>
+  <data name="lblManagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 65</value>
   </data>
-  <data name="lblSDM.Text" xml:space="preserve">
-    <value>Menaxhimi i Ditarit të Shkollës</value>
+  <data name="lblManagement.Text" xml:space="preserve">
+    <value>Ditarit</value>
+  </data>
+  <data name="lblSchoolDiary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 435</value>
+  </data>
+  <data name="lblSchoolDiary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 65</value>
+  </data>
+  <data name="lblSchoolDiary.Text" xml:space="preserve">
+    <value>Menaxhimi i</value>
   </data>
   <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
+    <value>74, 17</value>
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Përdoruesi:</value>
   </data>
   <data name="lblWelcomeName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1077, 566</value>
+    <value>1067, 620</value>
   </data>
   <data name="lblWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1002, 566</value>
+    <value>992, 620</value>
   </data>
   <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 16</value>
+    <value>75, 17</value>
   </data>
   <data name="lblWelcome.Text" xml:space="preserve">
     <value>Mirë se vini</value>

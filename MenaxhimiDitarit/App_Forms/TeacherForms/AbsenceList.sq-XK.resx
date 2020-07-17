@@ -118,25 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
-    <value>MungID</value>
+    <value>AbsenceID</value>
   </data>
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
-    <value>Data</value>
+    <value>Date</value>
   </data>
   <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
-    <value>Ora</value>
+    <value>Time</value>
   </data>
   <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
-    <value>Arsyeja</value>
+    <value>Reason</value>
   </data>
   <data name="gridViewDecimalColumn11.HeaderText" xml:space="preserve">
-    <value>Nr. Nxënësve</value>
+    <value>No. Students</value>
   </data>
   <data name="gridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Klasa</value>
+    <value>Class</value>
   </data>
   <data name="gridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Lënda</value>
+    <value>Subject</value>
   </data>
   <data name="grbSearch.Text" xml:space="preserve">
     <value>Kërko Mungesën</value>
@@ -151,9 +151,6 @@
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 30</value>
   </data>
-  <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 16</value>
-  </data>
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Kërko Lëndën</value>
   </data>
@@ -161,10 +158,13 @@
     <value>302, 30</value>
   </data>
   <data name="lblSelectDay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
+    <value>86, 17</value>
   </data>
   <data name="lblSelectDay.Text" xml:space="preserve">
     <value>Zgjedh Datën</value>
+  </data>
+  <data name="btnClassSchedule.Text" xml:space="preserve">
+    <value>Orari i Klasave</value>
   </data>
   <data name="btnPrint.Text" xml:space="preserve">
     <value>Printo</value>
@@ -179,7 +179,7 @@
     <value>26, 103</value>
   </data>
   <data name="lblAbsence.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
+    <value>96, 25</value>
   </data>
   <data name="lblAbsence.Text" xml:space="preserve">
     <value>Mungesat</value>

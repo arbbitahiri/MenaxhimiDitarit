@@ -257,16 +257,22 @@ namespace MenaxhimiDitarit.TeacherForms
             addComment.ShowDialog();
 
             RefreshList();
+
+            HideSubMenu();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateComment();
+
+            HideSubMenu();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
             dgvCommentList.PrintPreview(printDocument);
+
+            HideSubMenu();
         }
 
         private void btnExportExcel_Click(object sender, EventArgs e)
@@ -275,6 +281,8 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MessageDialog.MessageBoxShow("Excel file created succesfully!", "Created", "Excel file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            HideSubMenu();
         }
 
         private void btnExportPDF_Click(object sender, EventArgs e)
@@ -283,6 +291,8 @@ namespace MenaxhimiDitarit.TeacherForms
 
             MessageDialog.MessageBoxShow("PDF file created succesfully!", "Created", "PDF file u krijua me sukses!", "U krijua",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            HideSubMenu();
         }
 
         #region Class Schedules

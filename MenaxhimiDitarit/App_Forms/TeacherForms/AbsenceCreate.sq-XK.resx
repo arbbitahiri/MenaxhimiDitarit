@@ -117,15 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmbSelectClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 118</value>
+  </data>
+  <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 406</value>
+  </data>
   <data name="btnSubmit.Text" xml:space="preserve">
     <value>Ruaj</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 406</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Anulo</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dtpSelectDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 232</value>
+  </data>
   <data name="lblSelectDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 268</value>
+    <value>354, 236</value>
   </data>
   <data name="lblSelectDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -133,8 +145,11 @@
   <data name="lblSelectDate.Text" xml:space="preserve">
     <value>Zgjedh Datën</value>
   </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 263</value>
+  </data>
   <data name="lblContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 341</value>
+    <value>329, 309</value>
   </data>
   <data name="lblContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 17</value>
@@ -142,8 +157,11 @@
   <data name="lblContent.Text" xml:space="preserve">
     <value>Numri i Nxënësve</value>
   </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 332</value>
+  </data>
   <data name="lblSelectClass.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 154</value>
+    <value>350, 122</value>
   </data>
   <data name="lblSelectClass.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 17</value>
@@ -151,8 +169,17 @@
   <data name="lblSelectClass.Text" xml:space="preserve">
     <value>Zgjedh Klasën</value>
   </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 149</value>
+  </data>
+  <data name="txtNoStudents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 308</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 187</value>
+  </data>
   <data name="lblSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>343, 192</value>
+    <value>346, 160</value>
   </data>
   <data name="lblSelectSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 17</value>
@@ -160,14 +187,20 @@
   <data name="lblSelectSubject.Text" xml:space="preserve">
     <value>Zgjedh Lëndën</value>
   </data>
+  <data name="cmbSelectSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 156</value>
+  </data>
   <data name="cmbReasoning.Items" xml:space="preserve">
     <value>E Arsyeshme</value>
   </data>
   <data name="cmbReasoning.Items1" xml:space="preserve">
     <value>E Paarsyeshme</value>
   </data>
+  <data name="cmbReasoning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 270</value>
+  </data>
   <data name="lblReasoning.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 306</value>
+    <value>379, 274</value>
   </data>
   <data name="lblReasoning.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -175,14 +208,38 @@
   <data name="lblReasoning.Text" xml:space="preserve">
     <value>Arsyetimi</value>
   </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 301</value>
+  </data>
+  <data name="cmbSelectTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 194</value>
+  </data>
   <data name="lblSelectTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>356, 230</value>
+    <value>359, 198</value>
   </data>
   <data name="lblSelectTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 17</value>
   </data>
   <data name="lblSelectTime.Text" xml:space="preserve">
     <value>Zgjedh Orën</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 225</value>
+  </data>
+  <data name="picClass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 120</value>
+  </data>
+  <data name="picSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 158</value>
+  </data>
+  <data name="picTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 196</value>
+  </data>
+  <data name="picNoStudents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 307</value>
+  </data>
+  <data name="picReasoning.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, 272</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
