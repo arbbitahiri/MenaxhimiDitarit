@@ -204,6 +204,11 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             Validation.CloseForm(this);
         }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "commentcreate.html");
+        }
         #endregion
 
         #region ErrorProvider

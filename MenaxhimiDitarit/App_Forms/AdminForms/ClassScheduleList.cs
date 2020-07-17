@@ -155,6 +155,11 @@ namespace MenaxhimiDitarit.AdminForms
             SearchClass();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "schedulelist.html");
+        }
+
         // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -99,6 +99,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             Validation.CloseForm(this);
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "userchangepassword.html");
+        }
+
         // CheckBox
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {

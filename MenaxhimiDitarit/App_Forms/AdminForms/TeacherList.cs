@@ -152,6 +152,11 @@ namespace MenaxhimiDitarit
             SearchTeacher();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "teacherslist.html");
+        }
+
         // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

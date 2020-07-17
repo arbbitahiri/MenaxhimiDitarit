@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MenaxhimiDitarit.App_Code;
+using System;
 using System.Windows.Forms;
 
 namespace MenaxhimiDitarit.TeacherForms
@@ -153,6 +154,11 @@ namespace MenaxhimiDitarit.TeacherForms
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "teacherform.html");
         }
     }
 }

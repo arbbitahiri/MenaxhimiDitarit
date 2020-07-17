@@ -138,6 +138,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             Validation.CloseForm(this);
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "userupdate.html");
+        }
+
         // DateTimePicker
         private void dtpExpireDate_CloseUp(object sender, EventArgs e)
         {

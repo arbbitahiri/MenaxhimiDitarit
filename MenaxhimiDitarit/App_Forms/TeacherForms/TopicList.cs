@@ -260,6 +260,11 @@ namespace MenaxhimiDitarit.TeacherForms
             SearchTopic();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "topiclist.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using MenaxhimiDitarit.App_Forms.DirectorForms;
+﻿using MenaxhimiDitarit.App_Code;
+using MenaxhimiDitarit.App_Forms.DirectorForms;
 using System;
 using System.Windows.Forms;
 
@@ -170,6 +171,11 @@ namespace MenaxhimiDitarit.DirectorForms
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "directormenu.html");
         }
     }
 }

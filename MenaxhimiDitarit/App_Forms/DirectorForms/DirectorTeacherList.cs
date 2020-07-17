@@ -180,6 +180,11 @@ namespace MenaxhimiDitarit.DirectorForms
             SearchTeacher();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "teacherlist_director.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

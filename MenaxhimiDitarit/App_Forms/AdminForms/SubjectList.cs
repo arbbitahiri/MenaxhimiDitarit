@@ -179,6 +179,11 @@ namespace MenaxhimiDitarit
             SearchSubject();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "subjectlist.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

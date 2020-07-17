@@ -281,6 +281,7 @@
             this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
             this.btnHELP.Name = "btnHELP";
             this.btnHELP.UseVisualStyleBackColor = true;
+            this.btnHELP.Click += new System.EventHandler(this.btnHELP_Click);
             // 
             // ClassScheduleCreate
             // 

@@ -203,6 +203,11 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             Validation.CloseForm(this);
         }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "topiccreate.html");
+        }
         #endregion
 
         #region ErrorProvider

@@ -131,6 +131,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             Validation.CloseForm(this);
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "reviewcomment.html");
+        }
+
         // TextBox
         private void txtComment_TextChanged(object sender, EventArgs e)
         {

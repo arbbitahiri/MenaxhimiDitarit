@@ -175,6 +175,11 @@ namespace MenaxhimiDitarit.AdminForms
             SearchSubject();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "roomlist.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

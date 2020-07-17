@@ -248,6 +248,11 @@ namespace MenaxhimiDitarit.DirectorForms
             SearchUser();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "userlist.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

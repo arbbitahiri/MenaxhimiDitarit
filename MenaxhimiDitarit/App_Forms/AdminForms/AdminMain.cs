@@ -1,4 +1,5 @@
 ﻿using MenaxhimiDitarit.AdminForms;
+using MenaxhimiDitarit.App_Code;
 using System;
 using System.Windows.Forms;
 
@@ -208,6 +209,11 @@ namespace MenaxhimiDitarit
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "adminform.html");
         }
     }
 }

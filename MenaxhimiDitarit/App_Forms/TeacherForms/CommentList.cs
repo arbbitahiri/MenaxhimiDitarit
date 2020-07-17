@@ -230,6 +230,11 @@ namespace MenaxhimiDitarit.TeacherForms
             SearchComment();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "commentlist.html");
+        }
+
         // Tool Strip Menus
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

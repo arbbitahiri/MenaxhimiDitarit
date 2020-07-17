@@ -143,7 +143,7 @@ namespace MenaxhimiDitarit.TeacherForms
                         {
                             var checkAbsence = MyAbsences.Where(t => t.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                             && t.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString()) && t.Time == int.Parse(cmbSelectTime.Text)
-                            && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString())).ToList();
+                            && t.Date == DateTime.Parse(dtpSelectDate.Value.ToShortDateString()) && t.Reasoning == cmbReasoning.Text).ToList();
 
                             if (checkAbsence.Count > 0)
                             {
@@ -216,6 +216,11 @@ namespace MenaxhimiDitarit.TeacherForms
         private void btnExit_Click(object sender, EventArgs e)
         {
             Validation.CloseForm(this);
+        }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "absencecreate.html");
         }
         #endregion
 

@@ -57,8 +57,8 @@
             this.btnHELP = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.cmbTeacher = new System.Windows.Forms.ComboBox();
-            this.lblTeacher = new System.Windows.Forms.Label();
             this.bsrcTeacher = new System.Windows.Forms.BindingSource(this.components);
+            this.lblTeacher = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bsrcRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLastName)).BeginInit();
@@ -261,6 +261,7 @@
             this.btnHELP.Image = global::MenaxhimiDitarit.Properties.Resources.icons8_help_50;
             this.btnHELP.Name = "btnHELP";
             this.btnHELP.UseVisualStyleBackColor = true;
+            this.btnHELP.Click += new System.EventHandler(this.btnHELP_Click);
             // 
             // panel9
             // 
@@ -279,15 +280,15 @@
             this.cmbTeacher.Name = "cmbTeacher";
             this.cmbTeacher.ValueMember = "TeacherID";
             // 
+            // bsrcTeacher
+            // 
+            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
+            // 
             // lblTeacher
             // 
             resources.ApplyResources(this.lblTeacher, "lblTeacher");
             this.lblTeacher.ForeColor = System.Drawing.Color.White;
             this.lblTeacher.Name = "lblTeacher";
-            // 
-            // bsrcTeacher
-            // 
-            this.bsrcTeacher.DataSource = typeof(MenaxhimiDitarit.BO.Teacher);
             // 
             // UserUpdate
             // 

@@ -186,6 +186,11 @@ namespace MenaxhimiDitarit.AdminForms
         {
             Validation.CloseForm(this);
         }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "schedulecreate.html");
+        }
         #endregion
 
         #region ErrorProvider

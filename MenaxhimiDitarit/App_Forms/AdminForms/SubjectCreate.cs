@@ -166,6 +166,11 @@ namespace MenaxhimiDitarit
             Validation.CloseForm(this);
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "subjectcreate.html");
+        }
+
         // TextBoxes
         private void txtBookAuthor_KeyPress(object sender, KeyPressEventArgs e)
         {

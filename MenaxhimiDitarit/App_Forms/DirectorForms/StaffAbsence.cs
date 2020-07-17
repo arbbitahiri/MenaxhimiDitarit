@@ -165,6 +165,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         {
             Validation.CloseForm(this);
         }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "staffabsencecreate.html");
+        }
         #endregion
 
         #region Error Providers

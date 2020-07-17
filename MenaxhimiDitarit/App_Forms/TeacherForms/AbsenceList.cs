@@ -203,6 +203,11 @@ namespace MenaxhimiDitarit.TeacherForms
             SearchAbsence();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "absencelist.html");
+        }
+
         // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {

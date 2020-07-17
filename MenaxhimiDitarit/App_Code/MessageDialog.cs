@@ -94,5 +94,10 @@ namespace MenaxhimiDitarit.App_Code
                 toolTip.Show(mesazhi, pictureBox);
             }
         }
+
+        public static void ShowHelp(Form form, string htmlPage)
+        {
+            Help.ShowHelp(form, @"C:\Users\Arb Tahiri\Desktop\Riinvest\MenaxhimiDitarit\help_MenaxhimiDitarit.chm", HelpNavigator.Topic, htmlPage);
+        }
     }
 }

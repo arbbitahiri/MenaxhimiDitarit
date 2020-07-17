@@ -223,6 +223,11 @@ namespace MenaxhimiDitarit
             Validation.CloseForm(this);
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "teacherscreate.html");
+        }
+
         // DateTimePicker
         private void dtpBirthday_CloseUp(object sender, EventArgs e)
         {

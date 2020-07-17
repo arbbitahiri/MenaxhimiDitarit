@@ -142,6 +142,11 @@ namespace MenaxhimiDitarit
         {
             Validation.CloseForm(this);
         }
+
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "roomcreate.html");
+        }
         #endregion
 
         #region ErrorProvider

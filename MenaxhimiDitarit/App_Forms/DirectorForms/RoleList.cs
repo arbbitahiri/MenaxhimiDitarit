@@ -90,6 +90,11 @@ namespace MenaxhimiDitarit.DirectorForms
             SearchRole();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "rolelist.html");
+        }
+
         // Textboxes
         private void txtSearchUser_TextChanged(object sender, EventArgs e)
         {

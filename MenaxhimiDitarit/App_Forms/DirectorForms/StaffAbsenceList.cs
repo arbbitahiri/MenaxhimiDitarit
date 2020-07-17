@@ -154,6 +154,11 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             SearchStaffAbsence();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "staffabsencelist.html");
+        }
+
         // Tool Strip Menu
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
