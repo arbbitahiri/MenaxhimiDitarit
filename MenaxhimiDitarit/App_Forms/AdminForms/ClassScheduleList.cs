@@ -118,7 +118,7 @@ namespace MenaxhimiDitarit.AdminForms
                     else
                     {
                         MessageDialog.MessageBoxShow("Please select a class and a day!", "Empty",
-                            "Ju lutem zgjedheni një klasë dhe një datë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem zgjedheni një klasë dhe një datë!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

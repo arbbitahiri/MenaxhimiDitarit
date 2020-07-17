@@ -146,7 +146,7 @@ namespace MenaxhimiDitarit.AdminForms
                         if (isUpdated)
                         {
                             MessageDialog.MessageBoxShow("Schedule updated.", "Information",
-                                "Orari u përditësua.", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                "Orari u përditësua.", "U përditësua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                         else

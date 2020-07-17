@@ -115,7 +115,7 @@ namespace MenaxhimiDitarit
                     else
                     {
                         MessageDialog.MessageBoxShow("Please write a name!", "Empty",
-                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            "Ju lutem shkruani një emër!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

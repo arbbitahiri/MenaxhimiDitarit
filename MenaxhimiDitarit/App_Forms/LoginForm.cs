@@ -141,6 +141,11 @@ namespace MenaxhimiDitarit
             Login();
         }
 
+        private void btnHELP_Click(object sender, EventArgs e)
+        {
+            MessageDialog.ShowHelp(this, "login.html");
+        }
+
         // CheckBox
         private void chbShowPassword_CheckedChanged(object sender, EventArgs e)
         {

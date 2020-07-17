@@ -161,9 +161,8 @@ namespace MenaxhimiDitarit
 
                                         if (isRegistred)
                                         {
-                                            MessageDialog.MessageBoxShow($"Teacher {teacher.FullName} registred successfully!", "Completed",
-                                                $"Arsimtari {teacher.FullName} u regjistrua me sukses!", "U regjistrua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                            this.Close();
+                                            MessageDialog.DoYouWantToContinue(this, $"Teacher {teacher.FullName} registred successfully!",
+                                                $"Arsimtari {teacher.FullName} u regjistrua me sukses!");
                                         }
                                         else
                                         {
