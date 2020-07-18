@@ -150,7 +150,15 @@ namespace MenaxhimiDitarit.TeacherForms
                         var findAbsence = MyAbsences.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
                         && f.Date == dtpSelectDay.Value.Date).ToList();
 
-                        dgvAbsenceList.DataSource = findAbsence;
+                        if (findAbsence.Count > 0)
+                        {
+                            dgvAbsenceList.DataSource = findAbsence;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

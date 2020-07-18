@@ -206,7 +206,15 @@ namespace MenaxhimiDitarit.DirectorForms
                         var findUsers = MyUsers.Where(f => f.FirstName.Contains(txtSearchUserByNU.Text)
                         || f.UserName.Contains(txtSearchUserByNU.Text) || f.FullName.Contains(txtSearchUserByNU.Text)).ToList();
 
-                        dgvUserList.DataSource = findUsers;
+                        if (findUsers.Count > 0)
+                        {
+                            dgvUserList.DataSource = findUsers;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

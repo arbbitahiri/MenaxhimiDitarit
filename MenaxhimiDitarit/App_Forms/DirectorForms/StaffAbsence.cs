@@ -51,6 +51,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
 
             update = _staffAbsence != null;
 
+            cmbStaff.DataSource = MyUsers;
+
             CustomizeDesign();
             PopulateForm(staffAbsence);
         }
@@ -71,8 +73,37 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
         private void PopulateForm(User staffAbsence)
         {
             txtID.Text = staffAbsence.UserID.ToString();
-            cmbStaff.SelectedItem = MyUsers.FirstOrDefault(f => f.UserID == staffAbsence.UserID);
+            cmbStaff.SelectedItem = MyStaffAbsences.FirstOrDefault(f => f.UserID == staffAbsence.UserID);
             dtpAbsenceDate.Value = staffAbsence.StaffAbsenceDate;
+        }
+
+        /// <summary>
+        /// Gets the name of the user depending on his/her id
+        /// </summary>
+        /// <param name="name">First or Last name</param>
+        /// <param name="nameID">His/her id</param>
+        /// <returns>First or Last name depending on the parameter "name"</returns>
+        private string GetName(string name, int nameID)
+        {
+            foreach (var id in MyUsers)
+            {
+                if (nameID == id.UserID)
+                {
+                    if (name == "FirstName")
+                    {
+                        return id.FirstName;
+                    }
+                    else if (name == "LastName")
+                    {
+                        return id.LastName;
+                    }
+                    else
+                    {
+                        return "No data available!";
+                    }
+                }
+            }
+            return "No data available!";
         }
 
         /// <summary>
@@ -86,8 +117,8 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 {
                     UserID = int.Parse(txtID.Text),
                     RoleID = UserSession.GetUser.RoleID,
-                    FirstName = UserSession.GetUser.FirstName,
-                    LastName = UserSession.GetUser.LastName,
+                    FirstName = GetName("FirstName", Convert.ToInt32(cmbStaff.SelectedValue.ToString())),
+                    LastName = GetName("LastName", Convert.ToInt32(cmbStaff.SelectedValue.ToString())),
                     StaffAbsenceReasoning = cmbReasoning.SelectedItem.ToString(),
                     StaffAbsenceDate = dtpAbsenceDate.Value,
                     InsertBy = UserSession.GetUser.UserName,

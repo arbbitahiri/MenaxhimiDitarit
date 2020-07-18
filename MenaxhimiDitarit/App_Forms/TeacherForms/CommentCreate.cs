@@ -61,10 +61,10 @@ namespace MenaxhimiDitarit.TeacherForms
 
             update = _comment != null;
 
+            CustomizeDesign();
             cmbSelectClass.Enabled = false;
             cmbSelectSubject.Enabled = false;
             cmbSelectTime.Enabled = false;
-            CustomizeDesign();
 
             PopulateForm(_comment);
         }

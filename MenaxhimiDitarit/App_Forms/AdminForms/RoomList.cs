@@ -133,7 +133,15 @@ namespace MenaxhimiDitarit.AdminForms
                     {
                         var findRoom = MyRooms.Where(f => f.RoomType.Contains(txtSearchSubject.Text)).ToList();
 
-                        dgvRoomList.DataSource = findRoom;
+                        if (findRoom.Count > 0)
+                        {
+                            dgvRoomList.DataSource = findRoom;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

@@ -137,7 +137,15 @@ namespace MenaxhimiDitarit
                         || f.Teacher.FirstName.Contains(txtSearchSubject.Text) || f.Teacher.LastName.Contains(txtSearchSubject.Text)
                         || f.Teacher.FullName.Contains(txtSearchSubject.Text)).ToList();
 
-                        dgvSubjectList.DataSource = findSubject;
+                        if (findSubject.Count > 0)
+                        {
+                            dgvSubjectList.DataSource = findSubject;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

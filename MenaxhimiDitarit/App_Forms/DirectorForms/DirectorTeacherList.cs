@@ -138,7 +138,15 @@ namespace MenaxhimiDitarit.DirectorForms
                         var findTeacher = MyTeachers.Where(f => f.FirstName.Contains(txtSearchName.Text)
                         || f.LastName.Contains(txtSearchName.Text) || f.FullName.Contains(txtSearchName.Text)).ToList();
 
-                        dgvTeacherListD.DataSource = findTeacher;
+                        if (findTeacher.Count > 0)
+                        {
+                            dgvTeacherListD.DataSource = findTeacher;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

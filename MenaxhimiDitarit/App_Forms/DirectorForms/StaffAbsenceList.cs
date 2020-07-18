@@ -27,6 +27,7 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
             _userBLL = new UserBLL();
 
             MyUsers = _userBLL.GetAllUser();
+            MyStaffAbsences = _staffAbsenceBLL.GetAllStaffAbsence();
         }
 
         #region Methods
@@ -109,10 +110,18 @@ namespace MenaxhimiDitarit.App_Forms.DirectorForms
                 {
                     if (txtSearchName.Text.Trim().Length > 0)
                     {
-                        var findStaffAbsence = MyUsers.Where(f => f.FirstName.Contains(txtSearchName.Text) && f.LastName.Contains(txtSearchName.Text)
-                        && f.FullName.Contains(txtSearchName.Text)).ToList();
+                        var findStaffAbsence = MyStaffAbsences.Where(f => f.FirstName.Contains(txtSearchName.Text)
+                        || f.LastName.Contains(txtSearchName.Text) || f.FullName.Contains(txtSearchName.Text)).ToList();
 
-                        dgvStaffAbsenceList.DataSource = findStaffAbsence;
+                        if (findStaffAbsence.Count > 0)
+                        {
+                            dgvStaffAbsenceList.DataSource = findStaffAbsence;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

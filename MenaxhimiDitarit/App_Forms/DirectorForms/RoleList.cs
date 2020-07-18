@@ -48,7 +48,15 @@ namespace MenaxhimiDitarit.DirectorForms
                     {
                         var findRole = MyRoles.Where(f => f.RoleName.Contains(txtSearchUser.Text)).ToList();
 
-                        dgvRoleList.DataSource = findRole;
+                        if (findRole.Count > 0)
+                        {
+                            dgvRoleList.DataSource = findRole;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

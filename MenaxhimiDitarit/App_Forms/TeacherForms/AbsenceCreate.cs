@@ -64,6 +64,7 @@ namespace MenaxhimiDitarit.TeacherForms
             update = _absence != null;
 
             CustomizeDesign();
+            cmbSelectSubject.Enabled = false;
             PopulateForm(absence);
         }
 
@@ -75,7 +76,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             dtpSelectDate.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
-            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects);
+            //cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects);
         }
 
         /// <summary>

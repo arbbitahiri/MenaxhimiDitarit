@@ -113,7 +113,15 @@ namespace MenaxhimiDitarit.AdminForms
                         var findSchedule = MySchedules.Where(f => f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString())
                         && f.Day == cmbSelectDay.SelectedItem.ToString()).ToList();
 
-                        dgvScheduleList.DataSource = findSchedule;
+                        if (findSchedule.Count > 0)
+                        {
+                            dgvScheduleList.DataSource = findSchedule;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

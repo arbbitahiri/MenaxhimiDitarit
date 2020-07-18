@@ -148,7 +148,15 @@ namespace MenaxhimiDitarit.TeacherForms
                         var findComment = MyComments.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
                         && f.Date == dtpSelectDay.Value.Date).ToList();
 
-                        dgvCommentList.DataSource = findComment;
+                        if (findComment.Count > 0)
+                        {
+                            dgvCommentList.DataSource = findComment;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

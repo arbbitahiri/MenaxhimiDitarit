@@ -60,10 +60,10 @@ namespace MenaxhimiDitarit.TeacherForms
 
             _topics = topic;
 
-            CustomizeDesign();
-
             update = _topics != null;
 
+            CustomizeDesign();
+            cmbSelectSubject.Enabled = false;
             PopulateForm(topic);
         }
 
@@ -75,7 +75,7 @@ namespace MenaxhimiDitarit.TeacherForms
         {
             dtpSelectDate.Enabled = false;
             cmbSelectClass.DataSource = MyClasses;
-            cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects); ;
+            //cmbSelectSubject.DataSource = Validation.GetSubjects(UserSession.GetUser.TeacherID, MySubjects);
         }
 
         /// <summary>

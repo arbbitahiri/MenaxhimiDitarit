@@ -114,7 +114,15 @@ namespace MenaxhimiDitarit.DirectorForms
                         var findReview = MyReview.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
                         && f.Date == dtpSelectDay.Value.Date).ToList();
 
-                        dgvReviewCommentList.DataSource = findReview;
+                        if (findReview.Count > 0)
+                        {
+                            dgvReviewCommentList.DataSource = findReview;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

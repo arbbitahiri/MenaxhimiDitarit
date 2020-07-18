@@ -133,7 +133,15 @@ namespace MenaxhimiDitarit.TeacherForms
                         var findTopic = MyTopics.Where(f => f.SubjectID == Convert.ToInt32(cmbSelectSubject.SelectedValue.ToString())
                         && f.ClassID == Convert.ToInt32(cmbSelectClass.SelectedValue.ToString()) && f.Date == dtpSelectDay.Value.Date).ToList();
 
-                        dgvTopicList.DataSource = findTopic;
+                        if (findTopic.Count > 0)
+                        {
+                            dgvTopicList.DataSource = findTopic;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

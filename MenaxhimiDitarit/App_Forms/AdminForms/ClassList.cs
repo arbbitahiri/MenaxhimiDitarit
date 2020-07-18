@@ -134,7 +134,15 @@ namespace MenaxhimiDitarit
                     {
                         var findClass = MyClasses.Where(f => f.ClassNo == int.Parse(txtSearchClass.Text)).ToList();
 
-                        dgvClassesList.DataSource = findClass;
+                        if (findClass.Count > 0)
+                        {
+                            dgvClassesList.DataSource = findClass;
+                        }
+                        else
+                        {
+                            MessageDialog.MessageBoxShow("Nothing found!", "Empty",
+                                "Nuk ka rezultat!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {

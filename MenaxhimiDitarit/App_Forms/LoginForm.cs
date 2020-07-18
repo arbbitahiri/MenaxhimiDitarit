@@ -24,70 +24,79 @@ namespace MenaxhimiDitarit
         /// </summary>
         private void Login()
         {
-            string username = txtUsername.Text;
-            //string password = txtPassword.Text;
-            string password = Validation.CalculateHash(txtPassword.Text);
-
-            if (username.Trim() != "" && password != "")
+            try
             {
-                if (cmbLanguage.SelectedIndex != -1)
+                string username = txtUsername.Text;
+                //string password = txtPassword.Text;
+                string password = Validation.CalculateHash(txtPassword.Text);
+
+                if (username.Trim() != "" && password != "")
                 {
-                    User user = AdministrationBLL.Login(username, password);
-
-                    if (user != null)
+                    if (cmbLanguage.SelectedIndex != -1)
                     {
-                        UserSession.GetUser = user;
+                        User user = AdministrationBLL.Login(username, password);
 
-                        if (user.ExpiresDate > DateTime.Now)
+                        if (user != null)
                         {
-                            if (user.RoleID == 1)
+                            UserSession.GetUser = user;
+
+                            if (user.ExpiresDate > DateTime.Now)
                             {
-                                AdminMain adminForm = new AdminMain();
-                                this.Hide();
-                                adminForm.StartPosition = FormStartPosition.CenterScreen;
-                                adminForm.ShowDialog();
-                            }
-                            else if (user.RoleID == 2)
-                            {
-                                TeacherMain teacherForm = new TeacherMain();
-                                this.Hide();
-                                teacherForm.StartPosition = FormStartPosition.CenterScreen;
-                                teacherForm.ShowDialog();
-                            }
-                            else if (user.RoleID == 3)
-                            {
-                                DirectorMain directorForm = new DirectorMain();
-                                this.Hide();
-                                directorForm.StartPosition = FormStartPosition.CenterScreen;
-                                directorForm.ShowDialog();
+                                if (user.RoleID == 1)
+                                {
+                                    AdminMain adminForm = new AdminMain();
+                                    this.Hide();
+                                    adminForm.StartPosition = FormStartPosition.CenterScreen;
+                                    adminForm.ShowDialog();
+                                }
+                                else if (user.RoleID == 2)
+                                {
+                                    TeacherMain teacherForm = new TeacherMain();
+                                    this.Hide();
+                                    teacherForm.StartPosition = FormStartPosition.CenterScreen;
+                                    teacherForm.ShowDialog();
+                                }
+                                else if (user.RoleID == 3)
+                                {
+                                    DirectorMain directorForm = new DirectorMain();
+                                    this.Hide();
+                                    directorForm.StartPosition = FormStartPosition.CenterScreen;
+                                    directorForm.ShowDialog();
+                                }
+                                else
+                                {
+                                    MessageDialog.MessageBoxShow("You don't have access!", "Access denied",
+                                        "Ju nuk keni qasje!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
                             }
                             else
                             {
-                                MessageDialog.MessageBoxShow("You don't have access!", "Access denied",
-                                    "Ju nuk keni qasje!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageDialog.MessageBoxShow("Your user has expired!", "Access denied",
+                                        "Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                         else
                         {
-                            MessageDialog.MessageBoxShow("Your user has expired!", "Access denied",
-                                    "Llogaria juaj nuk është aktive!", "Hyrja ndalohet!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageDialog.MessageBoxShow("Username or Password is incorrect!", "Incorrect",
+                                        "Nofka apo fjalëkalimi janë të gabuara!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageDialog.MessageBoxShow("Username or Password is incorrect!", "Incorrect",
-                                    "Nofka apo fjalëkalimi janë të gabuara!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ju lutem zgjidheni gjuhën!\nPlease choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ju lutem zgjidheni gjuhën!\nPlease choose a language!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ju lutem plotësoni të gjitha fushat!\nPlease fill your credentials!",
+                        "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Ju lutem plotësoni të gjitha fushat!\nPlease fill your credentials!",
-                    "Kujdes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageDialog.MessageBoxShow("A connection is needed!", "Error",
+                                        "Duhet të jetë një koneksion i lidhur ne aplikacion!", "Gabim", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
