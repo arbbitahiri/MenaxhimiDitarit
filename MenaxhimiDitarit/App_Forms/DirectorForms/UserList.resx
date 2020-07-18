@@ -1320,6 +1320,9 @@
   <data name="gridViewTextBoxColumn12.HeaderText" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="gridViewDateTimeColumn4.ExcelExportFormatString" xml:space="preserve">
+    <value>dd MMMM yyyy</value>
+  </data>
   <data name="gridViewDateTimeColumn4.HeaderText" xml:space="preserve">
     <value>Expire Date</value>
   </data>

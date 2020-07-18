@@ -390,6 +390,9 @@
   <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Review</value>
   </data>
+  <data name="gridViewDateTimeColumn2.ExcelExportFormatString" xml:space="preserve">
+    <value>dd MMMM yyyy</value>
+  </data>
   <data name="gridViewDateTimeColumn2.HeaderText" xml:space="preserve">
     <value>Review Date</value>
   </data>
