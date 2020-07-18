@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\icons8_university_100__1__QAG_icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon-schools.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -783,6 +783,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-schools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon-schools.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
